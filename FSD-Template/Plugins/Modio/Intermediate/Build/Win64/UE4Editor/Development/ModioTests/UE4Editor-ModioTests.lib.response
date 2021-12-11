@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-ModioTests.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\Modio\Intermediate\Build\Win64\UE4Editor\Development\ModioTests\PCH.ModioTests.h.obj"
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\Modio\Intermediate\Build\Win64\UE4Editor\Development\ModioTests\Module.ModioTests.cpp.obj"
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\Modio\Intermediate\Build\Win64\UE4Editor\Development\ModioTests\Module.ModioTests.gen.cpp.obj"
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\Modio\Intermediate\Build\Win64\UE4Editor\Development\ModioTests\Default.rc2.res"
+/OUT:"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\Modio\Intermediate\Build\Win64\UE4Editor\Development\ModioTests\UE4Editor-ModioTests.lib"
+/INCLUDE:IMPLEMENT_MODULE_ModioTests

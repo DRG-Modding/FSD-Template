@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.FSDAnsel.cpp.obj": [
+			"FSDAnselFunctionLibrary.cpp.obj",
+			"FSDAnselModule.cpp.obj"
+		],
+		"Module.FSDAnsel.gen.cpp.obj": [
+			"EUIControlEffectTarget.gen.cpp.obj",
+			"FSDAnsel.init.gen.cpp.obj",
+			"FSDAnselFunctionLibrary.gen.cpp.obj"
+		]
+	}
+}

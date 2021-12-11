@@ -1,0 +1,19 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ModioTests.cpp.obj": [
+			"ModioTestsModule.cpp.obj",
+			"ModioTestCommandBase.cpp.obj",
+			"GetModInfoTest.cpp.obj",
+			"InitShutdownTest.cpp.obj",
+			"ListAllModsTest.cpp.obj",
+			"ModioTestValidationData.cpp.obj",
+			"ModManagementTest.cpp.obj",
+			"SubscriptionTest.cpp.obj"
+		],
+		"Module.ModioTests.gen.cpp.obj": [
+			"ModioTests.init.gen.cpp.obj",
+			"ModioTestValidationData.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-FSDAnsel.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Intermediate\Build\Win64\FSDEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\Nvidia\FSDAnsel\Intermediate\Build\Win64\UE4Editor\Development\FSDAnsel\Module.FSDAnsel.cpp.obj"
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\Nvidia\FSDAnsel\Intermediate\Build\Win64\UE4Editor\Development\FSDAnsel\Module.FSDAnsel.gen.cpp.obj"
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\Nvidia\FSDAnsel\Intermediate\Build\Win64\UE4Editor\Development\FSDAnsel\Default.rc2.res"
+/OUT:"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\Nvidia\FSDAnsel\Intermediate\Build\Win64\UE4Editor\Development\FSDAnsel\UE4Editor-FSDAnsel.lib"
+/INCLUDE:IMPLEMENT_MODULE_FSDAnsel

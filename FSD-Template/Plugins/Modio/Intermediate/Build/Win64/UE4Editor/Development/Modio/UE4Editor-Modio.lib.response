@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Modio.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\Modio\Intermediate\Build\Win64\UE4Editor\Development\Modio\PCH.Modio.h.obj"
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\Modio\Intermediate\Build\Win64\UE4Editor\Development\Modio\Module.Modio.cpp.obj"
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\Modio\Intermediate\Build\Win64\UE4Editor\Development\Modio\Module.Modio.gen.1_of_3.cpp.obj"
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\Modio\Intermediate\Build\Win64\UE4Editor\Development\Modio\Module.Modio.gen.2_of_3.cpp.obj"
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\Modio\Intermediate\Build\Win64\UE4Editor\Development\Modio\Module.Modio.gen.3_of_3.cpp.obj"
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\Modio\Intermediate\Build\Win64\UE4Editor\Development\Modio\Default.rc2.res"
+/OUT:"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\Modio\Intermediate\Build\Win64\UE4Editor\Development\Modio\UE4Editor-Modio.lib"
+/INCLUDE:IMPLEMENT_MODULE_Modio

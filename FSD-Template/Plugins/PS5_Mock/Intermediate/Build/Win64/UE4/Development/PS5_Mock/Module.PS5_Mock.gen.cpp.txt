@@ -1,0 +1,11 @@
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\PS5_Mock\Intermediate\Build\Win64\UE4\Development\PS5_Mock\Definitions.PS5_Mock.h
+F:/DRG Modding/UE4GameProjectGenerator/FSDTemplate/Plugins/PS5_Mock/Intermediate/Build/Win64/UE4/Inc/PS5_Mock/PS5_Mock.init.gen.cpp
+F:\UNEPIC GAMES\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+F:\UNEPIC GAMES\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+F:/DRG Modding/UE4GameProjectGenerator/FSDTemplate/Plugins/PS5_Mock/Intermediate/Build/Win64/UE4/Inc/PS5_Mock/PS5MockExternalEndpointSettings.gen.cpp
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\PS5_Mock\Source\PS5_Mock/Public/PS5MockExternalEndpointSettings.h
+F:\UNEPIC GAMES\UE_4.25\Engine\Source\Runtime\AudioExtensions\Public\IAudioEndpoint.h
+F:\UNEPIC GAMES\UE_4.25\Engine\Source\Runtime\SignalProcessing\Public\DSP/MultithreadedPatching.h
+F:\UNEPIC GAMES\UE_4.25\Engine\Source\Runtime\SignalProcessing\Public\DSP/Dsp.h
+F:\UNEPIC GAMES\UE_4.25\Engine\Intermediate\Build\Win64\UE4\Inc\AudioExtensions\IAudioEndpoint.generated.h
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\PS5_Mock\Intermediate\Build\Win64\UE4\Inc\PS5_Mock\PS5MockExternalEndpointSettings.generated.h

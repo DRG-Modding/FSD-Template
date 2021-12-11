@@ -1,0 +1,19 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.GoogleAnalytics.cpp.obj": [
+			"CustomDimension.cpp.obj",
+			"CustomMetric.cpp.obj",
+			"GoogleAnalyticsBlueprintLibrary.cpp.obj",
+			"GoogleAnalyticsModule.cpp.obj",
+			"GoogleAnalyticsSettings.cpp.obj"
+		],
+		"Module.GoogleAnalytics.gen.cpp.obj": [
+			"CustomDimension.gen.cpp.obj",
+			"CustomMetric.gen.cpp.obj",
+			"GoogleAnalytics.init.gen.cpp.obj",
+			"GoogleAnalyticsBlueprintLibrary.gen.cpp.obj",
+			"GoogleAnalyticsSettings.gen.cpp.obj"
+		]
+	}
+}

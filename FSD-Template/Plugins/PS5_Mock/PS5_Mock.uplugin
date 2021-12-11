@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "PS5_Mock",
+	"Description": "Mocks PS5 features so certain features don't break when not compiling with PS5 SDK",
+	"Category": "Other",
+	"CreatedBy": "Tobias",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "PS5_Mock",
+			"Type": "Runtime",
+			"LoadingPhase": "PostDefault"
+		}
+	]
+}

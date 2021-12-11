@@ -1,0 +1,11 @@
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\DiscordSDK\Intermediate\Build\Win64\UE4Editor\Development\DiscordSDK\Definitions.DiscordSDK.h
+F:/DRG Modding/UE4GameProjectGenerator/FSDTemplate/Plugins/DiscordSDK/Source/DiscordSDK/Private/DiscordSDKInterface.cpp
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\DiscordSDK\Source\DiscordSDK\Public\DiscordSDKInterface.h
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\DiscordSDK\Source\DiscordSDK\Public\DiscordUserDataSDK.h
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\DiscordSDK\Intermediate\Build\Win64\UE4Editor\Inc\DiscordSDK\DiscordUserDataSDK.generated.h
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\DiscordSDK\Intermediate\Build\Win64\UE4Editor\Inc\DiscordSDK\DiscordSDKInterface.generated.h
+F:/DRG Modding/UE4GameProjectGenerator/FSDTemplate/Plugins/DiscordSDK/Source/DiscordSDK/Private/DiscordSDKInterface_Win64.cpp
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\DiscordSDK\Source\DiscordSDK\Public\DiscordSDKInterface_Win64.h
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\DiscordSDK\Intermediate\Build\Win64\UE4Editor\Inc\DiscordSDK\DiscordSDKInterface_Win64.generated.h
+F:/DRG Modding/UE4GameProjectGenerator/FSDTemplate/Plugins/DiscordSDK/Source/DiscordSDK/Private/DiscordSDKModule.cpp
+F:/DRG Modding/UE4GameProjectGenerator/FSDTemplate/Plugins/DiscordSDK/Source/DiscordSDK/Private/DiscordUserDataSDK.cpp

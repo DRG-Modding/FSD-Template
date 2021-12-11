@@ -1,0 +1,25 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.FSDRawInput.cpp.obj": [
+			"FSDRawInputModule.cpp.obj",
+			"RawInputDeviceAxisProperties.cpp.obj",
+			"RawInputDeviceAxisToButtonProperties.cpp.obj",
+			"RawInputDeviceButtonProperties.cpp.obj",
+			"RawInputDeviceConfiguration.cpp.obj",
+			"RawInputFunctionLibrary.cpp.obj",
+			"RawInputSettings.cpp.obj",
+			"RegisteredDeviceInfo.cpp.obj"
+		],
+		"Module.FSDRawInput.gen.cpp.obj": [
+			"FSDRawInput.init.gen.cpp.obj",
+			"RawInputDeviceAxisProperties.gen.cpp.obj",
+			"RawInputDeviceAxisToButtonProperties.gen.cpp.obj",
+			"RawInputDeviceButtonProperties.gen.cpp.obj",
+			"RawInputDeviceConfiguration.gen.cpp.obj",
+			"RawInputFunctionLibrary.gen.cpp.obj",
+			"RawInputSettings.gen.cpp.obj",
+			"RegisteredDeviceInfo.gen.cpp.obj"
+		]
+	}
+}

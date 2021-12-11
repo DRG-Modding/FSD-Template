@@ -1,0 +1,14 @@
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\GoogleAnalytics\Intermediate\Build\Win64\UE4Editor\Development\GoogleAnalytics\Definitions.GoogleAnalytics.h
+F:/DRG Modding/UE4GameProjectGenerator/FSDTemplate/Plugins/GoogleAnalytics/Source/GoogleAnalytics/Private/CustomDimension.cpp
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\GoogleAnalytics\Source\GoogleAnalytics\Public\CustomDimension.h
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\GoogleAnalytics\Intermediate\Build\Win64\UE4Editor\Inc\GoogleAnalytics\CustomDimension.generated.h
+F:/DRG Modding/UE4GameProjectGenerator/FSDTemplate/Plugins/GoogleAnalytics/Source/GoogleAnalytics/Private/CustomMetric.cpp
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\GoogleAnalytics\Source\GoogleAnalytics\Public\CustomMetric.h
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\GoogleAnalytics\Intermediate\Build\Win64\UE4Editor\Inc\GoogleAnalytics\CustomMetric.generated.h
+F:/DRG Modding/UE4GameProjectGenerator/FSDTemplate/Plugins/GoogleAnalytics/Source/GoogleAnalytics/Private/GoogleAnalyticsBlueprintLibrary.cpp
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\GoogleAnalytics\Source\GoogleAnalytics\Public\GoogleAnalyticsBlueprintLibrary.h
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\GoogleAnalytics\Intermediate\Build\Win64\UE4Editor\Inc\GoogleAnalytics\GoogleAnalyticsBlueprintLibrary.generated.h
+F:/DRG Modding/UE4GameProjectGenerator/FSDTemplate/Plugins/GoogleAnalytics/Source/GoogleAnalytics/Private/GoogleAnalyticsModule.cpp
+F:/DRG Modding/UE4GameProjectGenerator/FSDTemplate/Plugins/GoogleAnalytics/Source/GoogleAnalytics/Private/GoogleAnalyticsSettings.cpp
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\GoogleAnalytics\Source\GoogleAnalytics\Public\GoogleAnalyticsSettings.h
+F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\GoogleAnalytics\Intermediate\Build\Win64\UE4Editor\Inc\GoogleAnalytics\GoogleAnalyticsSettings.generated.h

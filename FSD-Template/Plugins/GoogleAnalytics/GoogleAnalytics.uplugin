@@ -1,0 +1,34 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "2.8.1",
+	"FriendlyName": "Google Analytics Provider",
+	"Description": "Google Analytics Provider for all platforms",
+	"Category": "Analytics",
+	"CreatedBy": "gameDNA Ltd",
+	"CreatedByURL": "http://gamednastudio.com",
+	"DocsURL": "http://gamednastudio.com/plugins/docs/GoogleAnalytics_UserGuide.pdf",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/1b3f6c0fc07648b18758f7b883358b3e",
+	"SupportURL": "mailto:support@gamednastudio.com",
+	"EnabledByDefault": true,
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "GoogleAnalytics",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Win32",
+				"Linux",
+				"Mac",
+				"IOS",
+				"Android"
+			]
+		}
+	],
+	"RequiresBuildPlatform": true
+}

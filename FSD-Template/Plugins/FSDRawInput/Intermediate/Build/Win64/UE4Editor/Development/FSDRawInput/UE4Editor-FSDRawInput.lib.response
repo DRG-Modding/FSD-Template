@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-FSDRawInput.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Intermediate\Build\Win64\FSDEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\FSDRawInput\Intermediate\Build\Win64\UE4Editor\Development\FSDRawInput\Module.FSDRawInput.cpp.obj"
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\FSDRawInput\Intermediate\Build\Win64\UE4Editor\Development\FSDRawInput\Module.FSDRawInput.gen.cpp.obj"
+"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\FSDRawInput\Intermediate\Build\Win64\UE4Editor\Development\FSDRawInput\Default.rc2.res"
+/OUT:"F:\DRG Modding\UE4GameProjectGenerator\FSDTemplate\Plugins\FSDRawInput\Intermediate\Build\Win64\UE4Editor\Development\FSDRawInput\UE4Editor-FSDRawInput.lib"
+/INCLUDE:IMPLEMENT_MODULE_FSDRawInput
