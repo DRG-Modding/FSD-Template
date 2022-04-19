@@ -1,0 +1,41 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "Components/ActorComponent.h"
+#include "IsInDangerSigDelegate.h"
+#include "InDangerComponent.generated.h"
+
+class UHealthComponentBase;
+
+UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+class UInDangerComponent : public UActorComponent {
+    GENERATED_BODY()
+public:
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    FIsInDangerSig OnInDanger;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    TWeakObjectPtr<UHealthComponentBase> ParentHealthComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    float DamageTimeLimit;
+    
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    float DamageThreshold;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool RunsOnClients;
+    
+public:
+    UInDangerComponent();
+    UFUNCTION(BlueprintCallable)
+    void SetIsActive(bool aFlag);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnDamage(float Amount);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool GetIsActive() const;
+    
+};
+

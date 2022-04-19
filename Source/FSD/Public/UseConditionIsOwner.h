@@ -1,0 +1,15 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "UseConditionBase.h"
+#include "UseConditionIsOwner.generated.h"
+
+UCLASS(EditInlineNew)
+class UUseConditionIsOwner : public UUseConditionBase {
+    GENERATED_BODY()
+public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool Invert;
+    
+    UUseConditionIsOwner();
+};
+
