@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class AFlare;
 class AActor;
+class AFlare;
 
 
 void AFlare::OnRep_IsFlareOn() {

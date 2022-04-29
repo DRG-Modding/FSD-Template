@@ -7,17 +7,17 @@
 class UObject;
 class UFindFriendSessionsBlueprintCallProxy;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UFindFriendSessionsBlueprintCallProxy : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlueprintFindFriendSessionsResultDelegate OnSuccess;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlueprintFindFriendSessionsResultDelegate OnFailure;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UObject* WorldContextObject;
     
     UFindFriendSessionsBlueprintCallProxy();

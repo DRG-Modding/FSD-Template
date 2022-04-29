@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "PathCell.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FPathCell {
     GENERATED_BODY()
 public:

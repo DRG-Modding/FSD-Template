@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
-#include "BossFightInterface.h"
 #include "BossFight.h"
+#include "BossFightInterface.h"
 #include "SimpleBossFight.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class USimpleBossFight : public UObject, public IBossFightInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBossFight BossFight;
     
     USimpleBossFight();

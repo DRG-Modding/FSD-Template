@@ -6,7 +6,7 @@
 
 class UObject;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UPendingLatentActionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Curves/CurveFloat.h"
 #include "Engine/DataAsset.h"
+#include "Curves/CurveFloat.h"
 #include "RandRange.h"
 #include "AfflictionSettings.generated.h"
 
+class UPawnAffliction;
 class UStaticMesh;
 class UParticleSystem;
 class USoundCue;
-class UPawnAffliction;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UAfflictionSettings : public UDataAsset {
     GENERATED_BODY()
 public:
@@ -35,10 +35,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* EletrocutedSound;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float HeavyStaggerMinTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MediumStaggerMinTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

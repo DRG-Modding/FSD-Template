@@ -11,5 +11,6 @@ void UEffectSettings::CompileShaders() {
 }
 
 UEffectSettings::UEffectSettings() {
+    this->NiagaraParameterCollection = NULL;
 }
 

@@ -3,12 +3,12 @@
 #include "Objective.h"
 #include "RepairObjective.generated.h"
 
-class AActor;
 class UGemResourceData;
-class UDebrisPositioning;
+class AActor;
 class URepairableComponent;
+class UDebrisPositioning;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class URepairObjective : public UObjective {
     GENERATED_BODY()
 public:
@@ -31,13 +31,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 RepairResourcesPerActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float RepairResourceDistanceFromActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MinRepairObjectiveDistanceToLandingZone;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<AActor*> RepairedObjectivesList;
     
 public:

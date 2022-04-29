@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "SavableDataAsset.h"
-#include "UObject/NoExportTypes.h"
 #include "VanityNode.h"
+#include "UObject/NoExportTypes.h"
 #include "TreeOfVanity.generated.h"
 
 class UReward;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTreeOfVanity : public USavableDataAsset {
     GENERATED_BODY()
 public:

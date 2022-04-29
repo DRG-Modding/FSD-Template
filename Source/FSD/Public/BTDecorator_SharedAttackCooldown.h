@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BehaviorTree/BTDecorator.h"
 #include "RandRange.h"
-#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BTDecorator_SharedAttackCooldown.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBTDecorator_SharedAttackCooldown : public UBTDecorator {
     GENERATED_BODY()
 public:

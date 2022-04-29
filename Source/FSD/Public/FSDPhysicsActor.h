@@ -3,14 +3,14 @@
 #include "GameFramework/Actor.h"
 #include "FSDPhysicsActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class AFSDPhysicsActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MovementUpdateFrequency;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MovementUpdateEventTriggeredFrequency;
     
     AFSDPhysicsActor();

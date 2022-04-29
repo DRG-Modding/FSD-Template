@@ -2,9 +2,9 @@
 #include "Net/UnrealNetwork.h"
 #include "Components/SphereComponent.h"
 
-class USceneComponent;
 class APlayerCharacter;
 class UHealthComponentBase;
+class USceneComponent;
 
 void ACrossbowProjectileStuck::OnUsedBy(APlayerCharacter* Player, EInputKeys Key) {
 }
@@ -29,6 +29,7 @@ void ACrossbowProjectileStuck::All_OnCavePointRemoved_Implementation(USceneCompo
 void ACrossbowProjectileStuck::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
+    DOREPLIFETIME(ACrossbowProjectileStuck, StatusEffectTime);
     DOREPLIFETIME(ACrossbowProjectileStuck, BaseProjectile);
 }
 

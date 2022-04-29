@@ -3,7 +3,7 @@
 #include "DamageCondition.h"
 #include "MultiDamageCondition.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UMultiDamageCondition : public UDamageCondition {
     GENERATED_BODY()
 public:

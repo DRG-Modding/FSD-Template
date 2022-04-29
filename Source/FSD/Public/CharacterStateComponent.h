@@ -4,19 +4,19 @@
 #include "PlaySoundInterface.h"
 #include "CharacterStateComponent.generated.h"
 
-class UDialogDataAsset;
 class APlayerCharacter;
+class UDialogDataAsset;
 class UPlayerMovementComponent;
 
-UCLASS(Abstract, Blueprintable, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCharacterStateComponent : public UActorComponent, public IPlaySoundInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     uint8 StateId;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     APlayerCharacter* Character;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -29,13 +29,13 @@ protected:
     UDialogDataAsset* AttentionShout;
     
 private:
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UPlayerMovementComponent* PlayerMovement;
     
 public:
     UCharacterStateComponent();
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void ReceiveStateTick(float DeltaTime);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -51,10 +51,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasAuthority() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetStateTime() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     uint8 GetStateID() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

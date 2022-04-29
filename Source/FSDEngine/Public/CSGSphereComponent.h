@@ -4,7 +4,7 @@
 #include "CSGSphereProperties.h"
 #include "CSGSphereComponent.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCSGSphereComponent : public UConvexMeshWithCachedTreeComponent {
     GENERATED_BODY()
 public:

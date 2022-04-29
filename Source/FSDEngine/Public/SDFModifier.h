@@ -4,7 +4,7 @@
 #include "SDFModifierProperties.h"
 #include "SDFModifier.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSDENGINE_API USDFModifier : public USDFSingleChildBase {
     GENERATED_BODY()
 public:

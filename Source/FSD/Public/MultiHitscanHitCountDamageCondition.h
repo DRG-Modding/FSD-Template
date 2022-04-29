@@ -3,7 +3,7 @@
 #include "DamageCondition.h"
 #include "MultiHitscanHitCountDamageCondition.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UMultiHitscanHitCountDamageCondition : public UDamageCondition {
     GENERATED_BODY()
 public:

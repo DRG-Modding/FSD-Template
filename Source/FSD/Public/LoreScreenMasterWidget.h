@@ -6,7 +6,7 @@
 
 class UTexture2D;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class ULoreScreenMasterWidget : public UUserWidget {
     GENERATED_BODY()
 public:

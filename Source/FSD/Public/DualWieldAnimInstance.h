@@ -3,7 +3,7 @@
 #include "Animation/AnimInstance.h"
 #include "DualWieldAnimInstance.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UDualWieldAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:

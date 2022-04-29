@@ -1,8 +1,8 @@
 #include "VanitySettings.h"
 
-class UTexture2D;
 class UObject;
 class UPlayerCharacterID;
+class UTexture2D;
 
 bool UVanitySettings::HasNewVanityNotification(UObject* WorldContextObject, EVanitySlot Slot, UPlayerCharacterID* characterID) {
     return false;
@@ -17,5 +17,6 @@ void UVanitySettings::GetUnlockedStoreVanityCount(UObject* WorldContextObject, E
 
 UVanitySettings::UVanitySettings() {
     this->MedbayArmorItem = NULL;
+    this->AlwaysLockedDLC = NULL;
 }
 

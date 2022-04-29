@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DynamicIcon.h"
 #include "UObject/NoExportTypes.h"
+#include "DynamicIcon.h"
 #include "TwoFacetDynamicIcon.generated.h"
 
-class UMaterialInstanceDynamic;
 class UTexture2D;
+class UMaterialInstanceDynamic;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UTwoFacetDynamicIcon : public UDynamicIcon {
     GENERATED_BODY()
 public:
@@ -21,10 +21,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UTexture2D> Primary1Texture;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Primary1Texture_BasePoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Primary1Texture_Contrast;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -36,10 +36,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UTexture2D> Primary2Texture;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Primary2Texture_BasePoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Primary2Texture_Contrast;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

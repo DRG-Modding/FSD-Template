@@ -6,7 +6,7 @@
 
 class UStatusEffect;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class ULockCountSTEBonus : public UDamageBonusBase {
     GENERATED_BODY()
 public:

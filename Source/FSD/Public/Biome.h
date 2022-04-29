@@ -3,38 +3,38 @@
 #include "Templates/SubclassOf.h"
 #include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "HeatSource.h"
 #include "RandRange.h"
+#include "HeatSource.h"
 #include "BiomeEnemyEntry.h"
 #include "BiomeNoiseItem.h"
 #include "ResourceSpawner.h"
 #include "Sound/ReverbSettings.h"
+#include "UObject/NoExportTypes.h"
 #include "Biome.generated.h"
 
+class UPillarSettings;
 class UParticleSystem;
-class UEnemyDescriptor;
+class USoundCue;
 class UFileMediaSource;
-class UObject;
 class UTexture2D;
 class UUserWidget;
-class UMissionStat;
+class UDetailNoise;
 class UCaveScriptComponent;
 class UDebrisSet;
 class ADebrisDataActor;
 class AActor;
 class UTerrainMaterial;
 class UMaterialInstance;
+class UMissionStat;
 class UFloodFillSettings;
-class ULevelSequence;
-class UDetailNoise;
-class UPillarSettings;
 class UTunnelSetting;
+class UEnemyDescriptor;
 class UCritterDescriptor;
-class USoundCue;
 class UReverbEffect;
+class ULevelSequence;
+class UObject;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class FSD_API UBiome : public UDataAsset {
     GENERATED_BODY()
 public:
@@ -93,7 +93,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSoftClassPtr<UCaveScriptComponent>> CaveScriptComponents;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ExtraCaveSize;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -123,22 +123,22 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMissionStat* MissionCompleted;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFloodFillSettings* CeilingNoise;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDetailNoise* CeilingDetailNoise;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFloodFillSettings* WallNoise;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDetailNoise* WallDetailNoise;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFloodFillSettings* FloorNoise;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDetailNoise* FloorDetailNoise;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -186,19 +186,19 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FReverbSettings ReverbSettings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float SmallCaveReverbVolume;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UReverbEffect* SmallCaveReverb;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MediumCaveReverbVolume;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UReverbEffect* MediumCaveReverb;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float LargeCaveReverbVolume;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -216,7 +216,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FText> Quotes;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float PlanetZoneSelectionWeight;
     
 public:

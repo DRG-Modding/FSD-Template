@@ -6,7 +6,7 @@
 
 class AProjectile;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AHomingFireModule : public AHostileTargetingGuntowerModule {
     GENERATED_BODY()
 public:
@@ -17,7 +17,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AProjectile> HomingProjectileClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float TimeBetweenShots;
     
 public:

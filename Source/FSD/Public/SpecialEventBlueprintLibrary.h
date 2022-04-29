@@ -9,7 +9,7 @@ class UObject;
 class USchematic;
 class UPlayerCharacterID;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class USpecialEventBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

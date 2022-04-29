@@ -4,7 +4,7 @@
 #include "EFrozenBitsSize.h"
 #include "BurningAfflictionEffect.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UBurningAfflictionEffect : public UAfflictionEffect {
     GENERATED_BODY()
 public:

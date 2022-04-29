@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Perception/AIPerceptionTypes.h"
 #include "FSDAIController.h"
+#include "Perception/AIPerceptionTypes.h"
 #include "FacilityTurretController.generated.h"
 
 class UAIPerceptionComponent;
 class UHealthComponentBase;
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AFacilityTurretController : public AFSDAIController {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UAIPerceptionComponent* Perception;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float RememberTargetTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float RetargetOnAttackChance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

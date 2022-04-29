@@ -3,12 +3,12 @@
 #include "GemResourceCreator.h"
 #include "DistributedGemResourceCreator.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UDistributedGemResourceCreator : public UGemResourceCreator {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MinDistanceBetweenGems;
     
 public:

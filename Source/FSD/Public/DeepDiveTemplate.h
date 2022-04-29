@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RandInterval.h"
 #include "SavableDataAsset.h"
-#include "ESchematicType.h"
+#include "RandInterval.h"
 #include "DeepDiveTemplateItem.h"
+#include "ESchematicType.h"
 #include "DeepDiveTemplate.generated.h"
 
 class UDifficultySetting;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UDeepDiveTemplate : public USavableDataAsset {
     GENERATED_BODY()
 public:
@@ -33,7 +33,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 XPPerSecondaryObjective;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float HazardBonus;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

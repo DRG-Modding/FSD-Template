@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayTagContainer.h"
-#include "Engine/DataAsset.h"
 #include "RoomGeneratorGroupInstance.h"
+#include "Engine/DataAsset.h"
+#include "GameplayTagContainer.h"
 #include "UObject/NoExportTypes.h"
 #include "RoomGeneratorGroup.generated.h"
 
 class URoomGenerator;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class URoomGeneratorGroup : public UDataAsset {
     GENERATED_BODY()
 public:

@@ -5,10 +5,10 @@
 #include "BakeSettings.h"
 #include "CSGPreviewScene.generated.h"
 
-class ACSGBuilder;
 class UTerrainMaterialCore;
+class ACSGBuilder;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UCSGPreviewScene : public UDataAsset {
     GENERATED_BODY()
 public:

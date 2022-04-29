@@ -3,7 +3,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "TreasureFunctionLibrary.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTreasureFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

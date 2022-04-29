@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ResourceSpawner.h"
 #include "Engine/DataAsset.h"
+#include "ResourceSpawner.h"
 #include "GlobalMissionParameters.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UGlobalMissionParameters : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FResourceSpawner> DefaultResources;
     
 public:

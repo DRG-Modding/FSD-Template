@@ -5,14 +5,14 @@
 #include "Engine/EngineTypes.h"
 #include "FlyingEnemyDeepPathfinderCharacter.generated.h"
 
-class UPrimitiveComponent;
-class UPhysicalMaterial;
-class UPhysicsAsset;
 class UParticleSystem;
 class USoundCue;
+class UPhysicalMaterial;
+class UPrimitiveComponent;
+class UPhysicsAsset;
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AFlyingEnemyDeepPathfinderCharacter : public AEnemyDeepPathfinderCharacter {
     GENERATED_BODY()
 public:

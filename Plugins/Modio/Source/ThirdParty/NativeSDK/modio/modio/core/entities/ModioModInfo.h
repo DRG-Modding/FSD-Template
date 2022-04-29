@@ -18,11 +18,10 @@
 #include "modio/core/entities/ModioURLList.h"
 #include "modio/core/entities/ModioUser.h"
 #include "modio/detail/entities/ModioGalleryList.h"
+#include "modio/detail/entities/ModioLogo.h"
 #include <nlohmann/json.hpp>
 #include <string>
 #include <vector>
-
-#include <iostream>
 
 namespace Modio
 {
@@ -56,6 +55,13 @@ namespace Modio
 	MODIO_IMPL void from_json(const nlohmann::json& Json, Modio::Metadata& Metadata);
 	MODIO_IMPL void to_json(nlohmann::json& Json, const Modio::Metadata& Metadata);
 
+	enum class ModServerSideStatus : std::uint8_t
+	{
+		NotAccepted = 0,
+		Accepted = 1,
+		Deleted = 3
+	};
+
 	/// @docpublic
 	/// @brief Full mod profile including current release information, media links, and stats
 	struct ModInfo
@@ -88,7 +94,7 @@ namespace Modio
 		/// @brief Metadata stored by the game developer.
 		std::string MetadataBlob = "";
 		/// @brief Information about the mod's most recent public release
-		Modio::FileMetadata FileInfo = {};
+		Modio::Optional<Modio::FileMetadata> FileInfo = {};
 		/// @brief Arbitrary key-value metadata set for this mod
 		std::vector<Modio::Metadata> MetadataKvp;
 		/// @brief Tags this mod has set
@@ -103,6 +109,12 @@ namespace Modio
 		Modio::SketchfabURLList SketchfabURLs;
 		/// @brief Stats and rating information for the mod
 		Modio::ModStats Stats;
+		/// @brief Media data related to the mod logo
+		Modio::Detail::Logo ModLogo;
+		/// @brief The current ModInfo version. This property is updated when changes to the class happen.
+		std::string Version = "1.0";
+		/// @brief The current ModStatus on the server: Accepted, NotAccepted, or Deleted.
+		Modio::ModServerSideStatus ModStatus = Modio::ModServerSideStatus::NotAccepted;
 
 		friend bool operator==(const Modio::ModInfo& A, const Modio::ModInfo& B)
 		{
@@ -113,10 +125,30 @@ namespace Modio
 				(A.ProfileDescriptionPlaintext == B.ProfileDescriptionPlaintext) && (A.ProfileURL == B.ProfileURL) &&
 				(A.ProfileSubmittedBy == B.ProfileSubmittedBy) && (A.ProfileDateAdded == B.ProfileDateAdded) &&
 				(A.ProfileDateUpdated == B.ProfileDateUpdated) && (A.ProfileDateLive == B.ProfileDateLive) &&
-				(A.MetadataBlob == B.MetadataBlob) && (A.FileInfo == B.FileInfo) && (A.MetadataKvp == B.MetadataKvp) &&
-				(A.Tags == B.Tags) && (A.YoutubeURLs == B.YoutubeURLs) && (A.Stats == B.Stats))
+				(A.MetadataBlob == B.MetadataBlob) && (A.MetadataKvp == B.MetadataKvp) && (A.Tags == B.Tags) &&
+				(A.YoutubeURLs == B.YoutubeURLs) && (A.Stats == B.Stats) && (A.ModLogo == B.ModLogo) &&
+				(A.ModStatus == B.ModStatus))
 			{
-				return true;
+				if (A.FileInfo.has_value() && B.FileInfo.has_value())
+				{
+					if ((A.FileInfo.value() == B.FileInfo.value()))
+					{
+						return true;
+					}
+					else
+					{
+						return false;
+					}
+				}
+				else if ((A.FileInfo.has_value() && !B.FileInfo.has_value()) ||
+						 (!A.FileInfo.has_value() && B.FileInfo.has_value()))
+				{
+					return false;
+				}
+				else
+				{
+					return true;
+				}
 			}
 			else
 			{

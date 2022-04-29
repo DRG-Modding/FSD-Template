@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UpgradeValues.h"
 #include "StandardItemUpgrade.h"
 #include "EBoscoUpgrades.h"
-#include "UpgradeValues.h"
 #include "BoscoUpgrade.generated.h"
 
-class AActor;
 class AFSDPlayerState;
+class AActor;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UBoscoUpgrade : public UStandardItemUpgrade {
     GENERATED_BODY()
 public:

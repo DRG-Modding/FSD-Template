@@ -5,7 +5,7 @@
 
 class UDialogDataAsset;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UUsableComponent : public UUsableComponentBase {
     GENERATED_BODY()
 public:

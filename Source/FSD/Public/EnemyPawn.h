@@ -1,44 +1,44 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "FSDPawn.h"
-#include "NetMontageAble.h"
 #include "QueuedMontage.h"
+#include "NetMontageAble.h"
 #include "EnemyPawn.generated.h"
 
 class UPawnStatsComponent;
 class UEnemyHealthComponent;
+class UMaterialInterface;
 class UEnemyPawnAfflictionComponent;
 class UEnemyComponent;
-class UMaterialInterface;
 class UMeshComponent;
 class USkeletalMeshComponent;
 class UAnimMontage;
 class UAnimInstance;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class AEnemyPawn : public AFSDPawn, public INetMontageAble {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UEnemyHealthComponent* Health;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UPawnStatsComponent* Stats;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UEnemyPawnAfflictionComponent* Affliction;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UEnemyComponent* enemy;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName CenterMassSocketName;
     
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_QueuedMontage, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_QueuedMontage, meta=(AllowPrivateAccess=true))
     FQueuedMontage QueuedMontage;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UMaterialInterface*> CachedMaterials;
     
 public:

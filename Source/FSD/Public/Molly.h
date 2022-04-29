@@ -1,35 +1,35 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MULE.h"
 #include "DelegateDelegate.h"
+#include "MULE.h"
 #include "UObject/NoExportTypes.h"
 #include "Molly.generated.h"
 
-class UDialogDataAsset;
 class UResourceBank;
 class APlayerCharacter;
 class UOutlineComponent;
+class UDialogDataAsset;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class FSD_API AMolly : public AMULE {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCalledByDelegate, APlayerCharacter*, InPlayer);
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCalledByDelegate OnCalledByChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UResourceBank* ResourceBank;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UOutlineComponent* OutlineComponent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDelegate OnReachedDropShip;
     
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_CalledBy, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_CalledBy)
     TWeakObjectPtr<APlayerCharacter> CalledBy;
     
 public:

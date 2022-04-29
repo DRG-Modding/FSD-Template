@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "PathDebugNode.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FPathDebugNode {
     GENERATED_BODY()
 public:

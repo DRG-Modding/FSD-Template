@@ -5,17 +5,17 @@
 
 class URoomGeneratorBase;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRoomGeneratorItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     URoomGeneratorBase* RoomGenerator;
     
-    UPROPERTY(Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FVector Position;
     
-    UPROPERTY(Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     float Rotation;
     
     FSD_API FRoomGeneratorItem();

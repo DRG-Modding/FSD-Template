@@ -7,10 +7,10 @@
 #include "StatusEffectEnemies.generated.h"
 
 class UEnemyDescriptor;
-class APawn;
 class UStatusEffect;
+class APawn;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UStatusEffectEnemies : public URunningMissionBP {
     GENERATED_BODY()
 public:
@@ -24,7 +24,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagQuery AllowedQuery;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ChanceToApply;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

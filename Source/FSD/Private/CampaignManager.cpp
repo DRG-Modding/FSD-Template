@@ -2,9 +2,9 @@
 #include "Templates/SubclassOf.h"
 
 class UCampaign;
-class AFSDPlayerController;
 class UObject;
 class UFSDSaveGame;
+class AFSDPlayerController;
 class UGeneratedMission;
 class UDifficultySetting;
 

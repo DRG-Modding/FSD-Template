@@ -5,7 +5,7 @@
 
 class UDLCBase;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class FSD_API UDLCBase : public UDataAsset {
     GENERATED_BODY()
 public:

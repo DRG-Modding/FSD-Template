@@ -5,12 +5,12 @@
 
 class UWeaponIconSceneCaptureComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIconGenerationWeapon : public AIconGenerationBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TArray<UWeaponIconSceneCaptureComponent*> CaptureComponents;
     
 public:

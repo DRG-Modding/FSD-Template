@@ -3,7 +3,7 @@
 #include "Animation/AnimNotifies/AnimNotify.h"
 #include "EnemyMeleeAttackAnimNotify.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class UEnemyMeleeAttackAnimNotify : public UAnimNotify {
     GENERATED_BODY()
 public:

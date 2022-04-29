@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EPreciousMaterialOptions.h"
 #include "ECarveFilterType.h"
-#include "MatrixWithExactSync.h"
 #include "CarveOptionsCellSize.h"
+#include "EPreciousMaterialOptions.h"
+#include "MatrixWithExactSync.h"
 #include "CarveWithColliderOperationData.generated.h"
 
 class UStaticMesh;
@@ -28,7 +28,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMatrixWithExactSync Transform;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ExpensiveNoise;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

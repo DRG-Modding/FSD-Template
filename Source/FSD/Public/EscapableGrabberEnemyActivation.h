@@ -5,7 +5,7 @@
 
 class AActor;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UEscapableGrabberEnemyActivation : public UFloatPerkActivation {
     GENERATED_BODY()
 public:

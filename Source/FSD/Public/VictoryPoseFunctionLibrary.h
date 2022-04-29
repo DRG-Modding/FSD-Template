@@ -7,7 +7,7 @@ class UObject;
 class UVictoryPose;
 class UPlayerCharacterID;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UVictoryPoseFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

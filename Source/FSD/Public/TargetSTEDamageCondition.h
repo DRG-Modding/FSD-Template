@@ -6,7 +6,7 @@
 
 class UStatusEffect;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTargetSTEDamageCondition : public UDamageCondition {
     GENERATED_BODY()
 public:

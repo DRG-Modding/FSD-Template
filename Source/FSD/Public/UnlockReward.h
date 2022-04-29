@@ -3,7 +3,7 @@
 #include "Reward.h"
 #include "UnlockReward.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UUnlockReward : public UReward {
     GENERATED_BODY()
 public:

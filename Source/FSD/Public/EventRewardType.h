@@ -6,7 +6,7 @@
 
 class UTexture2D;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UEventRewardType : public UDataAsset {
     GENERATED_BODY()
 public:

@@ -3,11 +3,11 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "BTDecorator_RandomChance.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBTDecorator_RandomChance : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Chance;
     
     UBTDecorator_RandomChance();

@@ -5,7 +5,7 @@
 #include "GameActivitySubTask.h"
 #include "GameActivityType.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UGameActivityType : public UDataAsset {
     GENERATED_BODY()
 public:

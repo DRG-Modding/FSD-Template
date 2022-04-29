@@ -3,7 +3,7 @@
 #include "Engine/DataAsset.h"
 #include "CaveInfluencer.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UCaveInfluencer : public UDataAsset {
     GENERATED_BODY()
 public:

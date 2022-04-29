@@ -6,7 +6,7 @@
 
 class UDebrisItemComponent;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UCaveItemsMutator : public UMutator {
     GENERATED_BODY()
 public:

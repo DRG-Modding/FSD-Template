@@ -5,7 +5,7 @@
 
 class UPrimitiveComponent;
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UGravityChangedComponent : public UActorComponent {
     GENERATED_BODY()
 public:
@@ -13,13 +13,13 @@ public:
     bool bAwakeOnGravityChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TArray<UPrimitiveComponent*> PrimitiveComponents;
     
 public:
     UGravityChangedComponent();
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnGravityChanged(float Gravity, float Change);
     
 };

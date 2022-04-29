@@ -4,7 +4,7 @@
 #include "CSGRandomizeTransformProperties.h"
 #include "CSGRandomizeTransform.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UCSGRandomizeTransform : public UCSGSingleChildBase {
     GENERATED_BODY()
 public:

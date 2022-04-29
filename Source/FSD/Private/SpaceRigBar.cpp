@@ -1,10 +1,10 @@
 #include "SpaceRigBar.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/BoxComponent.h"
 #include "InstantUsable.h"
+#include "Components/BoxComponent.h"
 
-class UDrinkableDataAsset;
 class APlayerCharacter;
+class UDrinkableDataAsset;
 
 void ASpaceRigBar::SpawnDrinkables(UDrinkableDataAsset* Drinkable, APlayerCharacter* User) {
 }

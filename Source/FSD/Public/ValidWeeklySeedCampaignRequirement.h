@@ -3,7 +3,7 @@
 #include "CampaignRequirement.h"
 #include "ValidWeeklySeedCampaignRequirement.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UValidWeeklySeedCampaignRequirement : public UCampaignRequirement {
     GENERATED_BODY()
 public:

@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FSpawnEffectsArray : public FFastArraySerializer {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSpawnEffectItem> Items;
     
     FSD_API FSpawnEffectsArray();

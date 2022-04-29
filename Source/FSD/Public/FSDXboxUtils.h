@@ -5,7 +5,7 @@
 
 class UObject;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UFSDXboxUtils : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

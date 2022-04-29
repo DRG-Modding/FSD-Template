@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UDebrisCarveMesh.h"
 #include "DebrisBase.h"
 #include "EDebrisCarvedType.h"
-#include "ECarveFilterType.h"
-#include "UDebrisCarveMesh.h"
-#include "DebrisInfluence.h"
 #include "CarveOptionsCellSize.h"
+#include "DebrisInfluence.h"
+#include "ECarveFilterType.h"
 #include "DebrisCarved.generated.h"
 
-class UTerrainMaterial;
 class AActor;
+class UTerrainMaterial;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UDebrisCarved : public UDebrisBase {
     GENERATED_BODY()
 public:
@@ -31,7 +31,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ECarveFilterType Filter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ExpensiveNoise;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -43,13 +43,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxNumCarves;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float CarveOffsetRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> SpawnAttachClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float AttachSpawnOffsetDistance;
     
     UDebrisCarved();

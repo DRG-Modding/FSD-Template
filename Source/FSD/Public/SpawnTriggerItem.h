@@ -6,7 +6,7 @@
 
 class AActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ASpawnTriggerItem : public AGenerationItem {
     GENERATED_BODY()
 public:

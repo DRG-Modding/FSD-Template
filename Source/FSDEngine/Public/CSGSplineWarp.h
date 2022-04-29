@@ -1,32 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "CSGWarped.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "SplineWarpProperties.h"
+#include "UObject/NoExportTypes.h"
 #include "Components/SplineComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "CSGSplineWarp.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UCSGSplineWarp : public UCSGWarped {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSplineWarpProperties SplineProperties;
     
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FSplineCurves SplineCurves;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FBox> AABBs;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<float> Keys;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVector4> planes;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBox TotalAABB;
     
     UCSGSplineWarp();

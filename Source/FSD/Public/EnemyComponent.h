@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SimpleObjectInfoComponent.h"
 #include "MixerEnemyNameChangeDelegate.h"
+#include "SimpleObjectInfoComponent.h"
 #include "EnemyComponent.generated.h"
 
-class UEnemyFamily;
 class UTexture2D;
+class UEnemyFamily;
 class UDialogDataAsset;
 class UEnemyID;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UEnemyComponent : public USimpleObjectInfoComponent {
     GENERATED_BODY()
 public:
@@ -23,10 +23,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnemyID* EnemyID;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString mixerName;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMixerEnemyNameChange OnMixerNameChange;
     
 public:

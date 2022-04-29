@@ -4,11 +4,11 @@
 
 class UItemID;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FItemSkinOwners {
     GENERATED_BODY()
 public:
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UItemID*> Items;
     
     FSD_API FItemSkinOwners();

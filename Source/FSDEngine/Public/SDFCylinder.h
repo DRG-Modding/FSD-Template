@@ -4,7 +4,7 @@
 #include "SDFCylinderProperties.h"
 #include "SDFCylinder.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSDENGINE_API USDFCylinder : public USDFBaseWithTransform {
     GENERATED_BODY()
 public:

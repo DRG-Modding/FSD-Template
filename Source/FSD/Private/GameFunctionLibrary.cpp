@@ -1,10 +1,9 @@
 #include "GameFunctionLibrary.h"
 
-class UFSDGameInstance;
 class UObject;
-class APlayerCharacter;
-class UAudioComponent;
 class UWindowWidget;
+class UAudioComponent;
+class APlayerCharacter;
 class USoundBase;
 class UWindowManager;
 class UGoogleAnalyticsWrapper;
@@ -12,6 +11,7 @@ class AFSDGameModeSpaceRig;
 class UFSDSaveGame;
 class AFSDGameState;
 class AFSDGameMode;
+class UFSDGameInstance;
 class UGameData;
 class UDeepDiveManager;
 class ADeepCSGWorld;

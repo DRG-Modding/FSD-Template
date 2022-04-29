@@ -5,7 +5,7 @@
 #include "EProspectorRobotState.h"
 #include "ProspectorAnimInstance.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UProspectorAnimInstance : public UEnemyAnimInstance {
     GENERATED_BODY()
 public:
@@ -19,7 +19,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     EProspectorRobotState ProspectorState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     float ArmBusyness;
     
 public:

@@ -3,7 +3,7 @@
 #include "Engine/DataAsset.h"
 #include "SeamlessTravelEventKey.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class USeamlessTravelEventKey : public UDataAsset {
     GENERATED_BODY()
 public:

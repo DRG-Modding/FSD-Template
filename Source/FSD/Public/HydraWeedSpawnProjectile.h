@@ -4,12 +4,12 @@
 #include "UObject/NoExportTypes.h"
 #include "HydraWeedSpawnProjectile.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class AHydraWeedSpawnProjectile : public AProjectile {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector TargetLocation;
     
 public:

@@ -6,7 +6,7 @@
 class AFSDPlayerController;
 class UCampaign;
 
-UCLASS(Abstract, BlueprintType, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class FSD_API UCampaignRequirement : public UObject {
     GENERATED_BODY()
 public:

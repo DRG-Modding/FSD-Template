@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UpgradeValues.h"
 #include "StandardItemUpgrade.h"
 #include "ELineCutterProjectileUpgradeType.h"
-#include "UpgradeValues.h"
 #include "LineCutterProjectileUpgrade.generated.h"
 
 class AFSDPlayerState;
 class AActor;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class ULineCutterProjectileUpgrade : public UStandardItemUpgrade {
     GENERATED_BODY()
 public:

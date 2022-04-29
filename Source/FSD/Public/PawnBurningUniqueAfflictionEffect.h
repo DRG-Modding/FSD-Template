@@ -3,7 +3,7 @@
 #include "AfflictionEffect.h"
 #include "PawnBurningUniqueAfflictionEffect.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UPawnBurningUniqueAfflictionEffect : public UAfflictionEffect {
     GENERATED_BODY()
 public:

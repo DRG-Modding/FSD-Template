@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/EngineTypes.h"
 #include "NiagaraComponent.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "FirstPersonNiagaraComponent.generated.h"
 
-class USceneComponent;
 class UNiagaraSystem;
+class USceneComponent;
 
-UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFirstPersonNiagaraComponent : public UNiagaraComponent {
     GENERATED_BODY()
 public:

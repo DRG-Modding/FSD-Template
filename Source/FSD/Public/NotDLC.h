@@ -3,7 +3,7 @@
 #include "DLCBase.h"
 #include "NotDLC.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UNotDLC : public UDLCBase {
     GENERATED_BODY()
 public:

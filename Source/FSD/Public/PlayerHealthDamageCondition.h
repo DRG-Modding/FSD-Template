@@ -4,12 +4,12 @@
 #include "UObject/NoExportTypes.h"
 #include "PlayerHealthDamageCondition.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UPlayerHealthDamageCondition : public UDamageCondition {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FFloatInterval HealthPercentageRequired;
     
 public:

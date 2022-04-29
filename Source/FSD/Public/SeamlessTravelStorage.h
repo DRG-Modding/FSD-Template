@@ -3,34 +3,34 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "SeamlessTravelStorage.generated.h"
 
-class UDifficultySetting;
 class USeamlessTravelEventKey;
-class UPlayer;
+class UDifficultySetting;
 class UResourceData;
+class UPlayer;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class USeamlessTravelStorage : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UDifficultySetting* ChosenDifficulty;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TMap<UPlayer*, bool> PlayerShouldStartInMedbay;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     TMap<UResourceData*, float> Resources;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     float MissionTime;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     TMap<FName, float> StoredFloatValues;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TMap<FName, int32> StoredIntValues;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TSet<USeamlessTravelEventKey*> EventKeys;
     
     USeamlessTravelStorage();

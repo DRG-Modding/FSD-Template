@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "DeepPathFinderType.h"
+#include "Engine/DataAsset.h"
 #include "BaseCritterDescriptor.generated.h"
 
 class UDebrisPositioning;
 class AFSDPawn;
 class UBiome;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UBaseCritterDescriptor : public UDataAsset {
     GENERATED_BODY()
 public:

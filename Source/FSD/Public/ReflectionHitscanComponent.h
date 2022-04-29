@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HitscanBaseComponent.h"
 #include "ReflectiveHitscanHit.h"
+#include "HitscanBaseComponent.h"
 #include "ReflectionHitscanComponent.generated.h"
 
 class UTerrainType;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UReflectionHitscanComponent : public UHitscanBaseComponent {
     GENERATED_BODY()
 public:
@@ -23,7 +23,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bDamageOnReflections;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float StraightenReflectionFactor;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

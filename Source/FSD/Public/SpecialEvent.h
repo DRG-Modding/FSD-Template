@@ -5,11 +5,11 @@
 
 class USpecialEventSpawner;
 
-UCLASS()
+UCLASS(Blueprintable)
 class USpecialEvent : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Weight;
     
 protected:

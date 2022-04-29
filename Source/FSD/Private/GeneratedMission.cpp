@@ -1,10 +1,10 @@
 #include "GeneratedMission.h"
 #include "Templates/SubclassOf.h"
 
-class AFSDPlayerController;
-class UMissionDNA;
 class UMutator;
+class AFSDPlayerController;
 class UGeneratedMission;
+class UMissionDNA;
 class AProceduralSetup;
 
 

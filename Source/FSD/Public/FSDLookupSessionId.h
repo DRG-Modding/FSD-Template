@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Net/OnlineBlueprintCallProxyBase.h"
-#include "Net/OnlineBlueprintCallProxyBase.h"
 #include "FoundSessionResultDelegate.h"
+#include "Net/OnlineBlueprintCallProxyBase.h"
+#include "Net/OnlineBlueprintCallProxyBase.h"
 #include "FSDLookupSessionId.generated.h"
 
-class UFSDLookupSessionId;
 class UObject;
+class UFSDLookupSessionId;
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UFSDLookupSessionId : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFoundSessionResult OnSuccess;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEmptyOnlineDelegate OnFailure;
     
 public:

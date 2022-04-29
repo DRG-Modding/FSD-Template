@@ -3,7 +3,7 @@
 #include "Animation/AnimNotifies/AnimNotify.h"
 #include "AnimNotify_CycleItemComplete.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class UAnimNotify_CycleItemComplete : public UAnimNotify {
     GENERATED_BODY()
 public:

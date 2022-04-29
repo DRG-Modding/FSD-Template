@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RejoinListener.h"
 #include "CapacityBasedItemAggregator.h"
 #include "Upgradable.h"
+#include "RejoinListener.h"
 #include "CapacityHoldingItemAggregator.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCapacityHoldingItemAggregator : public UCapacityBasedItemAggregator, public IUpgradable, public IRejoinListener {
     GENERATED_BODY()
 public:
@@ -13,7 +13,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_MaxAmmo, meta=(AllowPrivateAccess=true))
     int32 MaxAmmo;
     
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_AmmoCount, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_AmmoCount, meta=(AllowPrivateAccess=true))
     int32 AmmoCount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

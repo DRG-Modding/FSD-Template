@@ -6,7 +6,7 @@
 
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBoscoSpawnActorAbillity : public UBoscoAbillity {
     GENERATED_BODY()
 public:

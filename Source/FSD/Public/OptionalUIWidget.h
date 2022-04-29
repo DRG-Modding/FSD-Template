@@ -6,7 +6,7 @@
 
 class UOptionalUICategory;
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UOptionalUIWidget : public UUserWidget {
     GENERATED_BODY()
 public:

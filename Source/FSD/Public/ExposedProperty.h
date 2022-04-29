@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ExposedProperty.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FExposedProperty {
     GENERATED_BODY()
 public:

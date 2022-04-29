@@ -7,12 +7,12 @@
 
 class UPerkAsset;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UPerkUsageComponent : public UActorComponent, public IRejoinListener {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_PerkUsageReplicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_PerkUsageReplicated, meta=(AllowPrivateAccess=true))
     TArray<FPerkUsage> PerkUsageReplicated;
     
 public:

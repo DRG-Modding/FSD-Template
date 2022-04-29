@@ -5,7 +5,7 @@
 
 class UShowroomCameraKey;
 
-UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UShowroomSceneCaptureComponent : public USceneCaptureComponent2D {
     GENERATED_BODY()
 public:

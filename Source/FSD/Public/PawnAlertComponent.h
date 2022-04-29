@@ -7,11 +7,11 @@
 
 class APawn;
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPawnAlertComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintAuthorityOnly, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintAuthorityOnly, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDelegate OnAlertedFromDamage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -20,7 +20,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ShouldAlertNearby;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float AlertRadius;
     
     UPawnAlertComponent();
@@ -31,7 +31,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnPawnSeen(APawn* Pawn);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnHit(float Damage, const FDamageData& DamageData, bool anyHealthLost);
     
     UFUNCTION(BlueprintCallable)

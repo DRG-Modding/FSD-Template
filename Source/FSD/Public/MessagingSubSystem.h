@@ -5,11 +5,11 @@
 #include "FSDChatMessage.h"
 #include "MessagingSubSystem.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UMessagingSubSystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNewMessageSig OnNewMessage;
     
     UMessagingSubSystem();

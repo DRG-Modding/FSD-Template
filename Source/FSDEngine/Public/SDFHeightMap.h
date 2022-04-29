@@ -6,14 +6,14 @@
 
 class UHeightMapWithMinMaxQuadTree;
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSDENGINE_API USDFHeightMap : public USDFBase {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDFHeightMaproperties Properties;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UHeightMapWithMinMaxQuadTree* Heightmap;
     
     USDFHeightMap();

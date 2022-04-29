@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
+#include "DeepPathFinderSize.h"
 #include "FakeMoverTarget.h"
 #include "FakeMoverPropulsion.h"
-#include "DeepPathFinderSize.h"
 #include "FakeMoverSettings.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UFakeMoverSettings : public UDataAsset {
     GENERATED_BODY()
 public:
@@ -19,16 +19,16 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool AlignRotationToSurface;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float AirFriction;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float SurfaceFriction;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Gravity;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float AirGravity;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

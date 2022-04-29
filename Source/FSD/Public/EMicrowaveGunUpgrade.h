@@ -14,5 +14,6 @@ enum class EMicrowaveGunUpgrade : uint8 {
     EHeatsink,
     BlisteringNecrosis,
     EGammaContaminationZone,
+    ETemperatureAmplifier,
 };
 

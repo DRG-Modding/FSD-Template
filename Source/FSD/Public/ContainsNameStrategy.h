@@ -3,7 +3,7 @@
 #include "SimpleNameStrategy.h"
 #include "ContainsNameStrategy.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API UContainsNameStrategy : public USimpleNameStrategy {
     GENERATED_BODY()
 public:

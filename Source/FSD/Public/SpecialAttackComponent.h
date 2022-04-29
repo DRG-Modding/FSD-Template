@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "NameDelegateDelegate.h"
 #include "AttackBaseComponent.h"
+#include "NameDelegateDelegate.h"
 #include "SpecialAttackComponent.generated.h"
 
 class UAnimMontage;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USpecialAttackComponent : public UAttackBaseComponent {
     GENERATED_BODY()
 public:
@@ -14,7 +14,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UAnimMontage*> Montages;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNameDelegate OnAttackActionNotify;
     
 public:

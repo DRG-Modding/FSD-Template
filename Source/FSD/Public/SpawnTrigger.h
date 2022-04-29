@@ -3,11 +3,11 @@
 #include "GameFramework/Actor.h"
 #include "SpawnTrigger.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ASpawnTrigger : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Message;
     
     ASpawnTrigger();

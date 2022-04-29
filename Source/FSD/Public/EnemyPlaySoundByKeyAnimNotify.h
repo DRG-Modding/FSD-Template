@@ -5,7 +5,7 @@
 
 class UEnemyPlaySoundKey;
 
-UCLASS(CollapseCategories, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, MinimalAPI)
 class UEnemyPlaySoundByKeyAnimNotify : public UAnimNotify {
     GENERATED_BODY()
 public:
@@ -13,10 +13,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnemyPlaySoundKey* SoundKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float VolumeMultiplier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float PitchMultiplier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -1,10 +1,10 @@
 #include "FSDPawn.h"
 #include "Net/UnrealNetwork.h"
-#include "EnemyTemperatureComponent.h"
 #include "StatusEffectsComponent.h"
+#include "EnemyTemperatureComponent.h"
 
-class USkeletalMeshComponent;
 class AActor;
+class USkeletalMeshComponent;
 class UHealthComponentBase;
 class AFSDAIController;
 

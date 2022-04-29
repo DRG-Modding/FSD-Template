@@ -3,7 +3,7 @@
 #include "Engine/DataAsset.h"
 #include "NewsTextHeadlines.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UNewsTextHeadlines : public UDataAsset {
     GENERATED_BODY()
 public:

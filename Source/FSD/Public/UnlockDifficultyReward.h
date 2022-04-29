@@ -5,7 +5,7 @@
 
 class UDifficultySetting;
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UUnlockDifficultyReward : public UUnlockReward {
     GENERATED_BODY()
 public:

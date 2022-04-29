@@ -1,14 +1,14 @@
 #include "CryosprayItem.h"
 #include "Net/UnrealNetwork.h"
-#include "ProjectileLauncherComponent.h"
 #include "DamageComponent.h"
 #include "StickyFlameSpawner.h"
+#include "ProjectileLauncherComponent.h"
 #include "MotionAudioController.h"
 #include "FSDAudioComponent.h"
 
+class AProjectileBase;
 class UHealthComponentBase;
 class UPrimitiveComponent;
-class AProjectileBase;
 class UFSDPhysicalMaterial;
 
 void ACryosprayItem::ServerDoDamage_Implementation(FVector_NetQuantize Start, FVector_NetQuantize End, uint8 Power) {

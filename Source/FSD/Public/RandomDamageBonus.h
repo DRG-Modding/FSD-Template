@@ -4,7 +4,7 @@
 #include "RandRange.h"
 #include "RandomDamageBonus.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class URandomDamageBonus : public UDamageBonusBase {
     GENERATED_BODY()
 public:

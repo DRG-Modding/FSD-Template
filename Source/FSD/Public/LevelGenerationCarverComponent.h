@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/PrimitiveComponent.h"
-#include "CarveOptionsCellSize.h"
 #include "ECarveFilterType.h"
+#include "CarveOptionsCellSize.h"
 #include "LevelGenerationCarverComponent.generated.h"
 
+class UStaticMesh;
 class UTerrainMaterialBase;
 class USTLMeshCarver;
-class UStaticMesh;
 class UStaticMeshCarver;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ULevelGenerationCarverComponent : public UPrimitiveComponent {
     GENERATED_BODY()
 public:
@@ -29,7 +29,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ECarveFilterType Filter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ConvexExpensiveNoise;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

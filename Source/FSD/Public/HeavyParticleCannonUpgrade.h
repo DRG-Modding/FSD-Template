@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "StandardItemUpgrade.h"
-#include "EHeavyParticleCannonUpgrade.h"
 #include "UpgradeValues.h"
+#include "EHeavyParticleCannonUpgrade.h"
+#include "StandardItemUpgrade.h"
 #include "HeavyParticleCannonUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AItem;
+class AFSDPlayerState;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UHeavyParticleCannonUpgrade : public UStandardItemUpgrade {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "CharacterStateComponent.h"
 #include "GrabbedStateComponent.generated.h"
 
-UCLASS(MinimalAPI, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UGrabbedStateComponent : public UCharacterStateComponent {
     GENERATED_BODY()
 public:

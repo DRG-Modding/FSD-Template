@@ -5,7 +5,7 @@
 
 class URadarPointComponent;
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UFSDMainHUDWidget : public UUserWidget {
     GENERATED_BODY()
 public:

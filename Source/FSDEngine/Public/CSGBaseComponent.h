@@ -4,7 +4,7 @@
 #include "MeshBaseProperties.h"
 #include "CSGBaseComponent.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCSGBaseComponent : public UCSGBuilderBaseSceneComponent {
     GENERATED_BODY()
 public:

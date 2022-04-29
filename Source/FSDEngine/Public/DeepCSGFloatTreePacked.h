@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FDeepCSGFloatTreePacked {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDeepCSGNode Root;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> encplanes;
     
     FSDENGINE_API FDeepCSGFloatTreePacked();

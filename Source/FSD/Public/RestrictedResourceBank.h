@@ -5,7 +5,7 @@
 
 class UResourceData;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class URestrictedResourceBank : public UResourceBank {
     GENERATED_BODY()
 public:

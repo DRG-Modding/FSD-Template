@@ -6,7 +6,7 @@
 
 class AActor;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UOverclockingUnlockReward : public UUnlockReward {
     GENERATED_BODY()
 public:

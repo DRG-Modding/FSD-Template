@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "SavableDataAsset.h"
-#include "Curves/CurveFloat.h"
 #include "SeasonLevel.h"
 #include "UnassignedReward.h"
+#include "Curves/CurveFloat.h"
 #include "SeasonalEventEntry.h"
 #include "UObject/NoExportTypes.h"
 #include "Season.generated.h"
@@ -14,7 +14,7 @@ class UMissionStat;
 class UMissionWarning;
 class UReward;
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API USeason : public USavableDataAsset {
     GENERATED_BODY()
 public:
@@ -54,7 +54,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMissionWarning* SeasonWarning;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FInt32Interval SeasonWarningCount;
     
     USeason();

@@ -5,14 +5,14 @@
 
 class AMiningPod;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AFlareGunProjectile : public AProjectile {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Replicated)
     float Duration;
     
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_IsFlareOn, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_IsFlareOn, meta=(AllowPrivateAccess=true))
     bool IsFlareOn;
     
     AFlareGunProjectile();

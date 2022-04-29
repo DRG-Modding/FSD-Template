@@ -29,9 +29,10 @@ SOFTWARE.
 
 #include "doctest_compatibility.h"
 
-#define JSON_TESTS_PRIVATE
+#define private public
 #include <nlohmann/json.hpp>
 using nlohmann::json;
+#undef private
 
 TEST_CASE("iterators 1")
 {

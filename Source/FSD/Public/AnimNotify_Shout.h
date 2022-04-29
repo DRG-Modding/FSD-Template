@@ -5,7 +5,7 @@
 
 class UDialogDataAsset;
 
-UCLASS(CollapseCategories, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, MinimalAPI)
 class UAnimNotify_Shout : public UAnimNotify {
     GENERATED_BODY()
 public:
@@ -15,7 +15,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ShoutNetworked;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float LocalShoutVolumeMultiplier;
     
     UAnimNotify_Shout();

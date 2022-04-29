@@ -3,7 +3,7 @@
 #include "UseConditionBase.h"
 #include "UseConditionGrounded.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UUseConditionGrounded : public UUseConditionBase {
     GENERATED_BODY()
 public:

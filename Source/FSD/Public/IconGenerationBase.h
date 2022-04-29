@@ -3,15 +3,15 @@
 #include "GameFramework/Actor.h"
 #include "IconGenerationBase.generated.h"
 
-class UMaterialInterface;
 class USceneCaptureComponent2D;
+class UMaterialInterface;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIconGenerationBase : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     USceneCaptureComponent2D* ActiveCaptureComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -3,11 +3,11 @@
 #include "FSDServerListEntryModel.h"
 #include "FSDServerListResponse.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FFSDServerListResponse {
     GENERATED_BODY()
 public:
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FFSDServerListEntryModel> Lobbies;
     
     FSD_API FFSDServerListResponse();

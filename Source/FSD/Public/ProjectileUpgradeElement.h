@@ -5,7 +5,7 @@
 
 class UParticleSystem;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UProjectileUpgradeElement : public UItemUpgradeElement {
     GENERATED_BODY()
 public:

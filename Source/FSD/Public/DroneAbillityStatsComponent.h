@@ -3,7 +3,7 @@
 #include "Components/ActorComponent.h"
 #include "DroneAbillityStatsComponent.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UDroneAbillityStatsComponent : public UActorComponent {
     GENERATED_BODY()
 public:

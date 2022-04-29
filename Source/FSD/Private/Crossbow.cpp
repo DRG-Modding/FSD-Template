@@ -12,6 +12,9 @@ class UAnimMontage;
 void ACrossbow::StartAmmoSwitch() {
 }
 
+void ACrossbow::Server_UpdateRetrievableArrows_Implementation(const int32& defaultAmmo, const int32& specialAmmo) {
+}
+
 void ACrossbow::Server_CallSwitchAmmoType_Implementation(UProjectileLauncherBaseComponent* projectileLauncher) {
 }
 

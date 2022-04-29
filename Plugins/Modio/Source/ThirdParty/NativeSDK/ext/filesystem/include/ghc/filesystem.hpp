@@ -301,7 +301,7 @@
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // ghc::filesystem version in decimal (major * 10000 + minor * 100 + patch)
-#define GHC_FILESYSTEM_VERSION 10509L
+#define GHC_FILESYSTEM_VERSION 10506L
 
 #if !defined(GHC_WITH_EXCEPTIONS) && (defined(__EXCEPTIONS) || defined(__cpp_exceptions) || defined(_CPPUNWIND))
 #define GHC_WITH_EXCEPTIONS
@@ -595,7 +595,6 @@ private:
     friend void swap(path& lhs, path& rhs) noexcept;
     friend size_t hash_value(const path& p) noexcept;
     friend path canonical(const path& p, std::error_code& ec);
-    friend bool create_directories(const path& p, std::error_code& ec) noexcept;
     string_type::size_type root_name_length() const noexcept;
     void postprocess_path_with_format(format fmt);
     void check_long_path();
@@ -1895,9 +1894,9 @@ GHC_INLINE void create_symlink(const path& target_name, const path& new_symlink,
 #pragma GCC diagnostic pop
 #endif
     if (api_call) {
-        if (api_call(GHC_NATIVEWP(new_symlink), GHC_NATIVEWP(target_name), to_directory ? 1 : 0) == 0) {
+        if (api_call(detail::fromUtf8<std::wstring>(new_symlink.u8string()).c_str(), detail::fromUtf8<std::wstring>(target_name.u8string()).c_str(), to_directory ? 1 : 0) == 0) {
             auto result = ::GetLastError();
-            if (result == ERROR_PRIVILEGE_NOT_HELD && api_call(GHC_NATIVEWP(new_symlink), GHC_NATIVEWP(target_name), to_directory ? 3 : 2) != 0) {
+            if (result == ERROR_PRIVILEGE_NOT_HELD && api_call(detail::fromUtf8<std::wstring>(new_symlink.u8string()).c_str(), detail::fromUtf8<std::wstring>(target_name.u8string()).c_str(), to_directory ? 3 : 2) != 0) {
                 return;
             }
             ec = detail::make_system_error(result);
@@ -3901,36 +3900,35 @@ GHC_INLINE bool create_directories(const path& p, std::error_code& ec) noexcept
     path current;
     ec.clear();
     bool didCreate = false;
-    auto rootPathLen = p._prefixLength + p.root_name_length() + (p.has_root_directory() ? 1 : 0);
-    current = p.native().substr(0, rootPathLen);
-    path folders(p._path.substr(rootPathLen));
-    for (path::string_type part : folders) {
+    for (path::string_type part : p) {
         current /= part;
-        std::error_code tec;
-        auto fs = status(current, tec);
-        if (tec && fs.type() != file_type::not_found) {
-            ec = tec;
-            return false;
-        }
-        if (!exists(fs)) {
-            create_directory(current, ec);
-            if (ec) {
-                std::error_code tmp_ec;
-                if (is_directory(current, tmp_ec)) {
-                    ec.clear();
-                }
-                else {
-                    return false;
-                }
+        if (current != p.root_name() && current != p.root_path()) {
+            std::error_code tec;
+            auto fs = status(current, tec);
+            if (tec && fs.type() != file_type::not_found) {
+                ec = tec;
+                return false;
             }
-            didCreate = true;
-        }
+            if (!exists(fs)) {
+                create_directory(current, ec);
+                if (ec) {
+                    std::error_code tmp_ec;
+                    if (is_directory(current, tmp_ec)) {
+                        ec.clear();
+                    }
+                    else {
+                        return false;
+                    }
+                }
+                didCreate = true;
+            }
 #ifndef LWG_2935_BEHAVIOUR
-        else if (!is_directory(fs)) {
-            ec = detail::make_error_code(detail::portable_error::exists);
-            return false;
-        }
+            else if (!is_directory(fs)) {
+                ec = detail::make_error_code(detail::portable_error::exists);
+                return false;
+            }
 #endif
+        }
     }
     return didCreate;
 }

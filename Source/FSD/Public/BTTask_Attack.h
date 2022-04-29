@@ -6,7 +6,7 @@
 
 class UBehaviorTreeComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBTTask_Attack : public UBTTaskNode {
     GENERATED_BODY()
 public:

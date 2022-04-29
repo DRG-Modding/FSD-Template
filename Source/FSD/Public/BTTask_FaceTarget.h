@@ -4,7 +4,7 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BTTask_FaceTarget.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBTTask_FaceTarget : public UBTTaskNode {
     GENERATED_BODY()
 public:
@@ -12,7 +12,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector TargetKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MinAngle;
     
 public:

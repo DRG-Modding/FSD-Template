@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FCoilMaterial {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UMaterialInstanceDynamic* Material;
     
     FSD_API FCoilMaterial();

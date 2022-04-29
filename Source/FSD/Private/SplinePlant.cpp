@@ -1,8 +1,8 @@
 #include "SplinePlant.h"
 #include "Net/UnrealNetwork.h"
 #include "Components/SplineComponent.h"
-#include "Components/AudioComponent.h"
 #include "Components/SceneComponent.h"
+#include "Components/AudioComponent.h"
 
 void ASplinePlant::SetTargetPlantLengthPercent(float InTargetPercent, float InPercentPerSecond, float InEaseExp) {
 }

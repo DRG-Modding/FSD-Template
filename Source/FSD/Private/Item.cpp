@@ -4,9 +4,9 @@
 #include "UpgradableItemComponent.h"
 
 class USoundBase;
+class USoundAttenuation;
 class USceneComponent;
 class UAudioComponent;
-class USoundAttenuation;
 class USoundConcurrency;
 class AActor;
 class UTexture2D;

@@ -5,7 +5,7 @@
 
 class UPlayerCharacterID;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class FSD_API URetirementCampaignRequirement : public UCampaignRequirement {
     GENERATED_BODY()
 public:

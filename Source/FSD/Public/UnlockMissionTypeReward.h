@@ -5,7 +5,7 @@
 
 class UMissionTemplate;
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UUnlockMissionTypeReward : public UUnlockReward {
     GENERATED_BODY()
 public:

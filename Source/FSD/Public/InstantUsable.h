@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UsableChangedSignatureDelegate.h"
 #include "UsableComponent.h"
 #include "UsedBySignatureDelegate.h"
-#include "UsableChangedSignatureDelegate.h"
 #include "InstantUsable.generated.h"
 
 class USoundCue;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UInstantUsable : public UUsableComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FUsedBySignature OnUsedBy;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FUsableChangedSignature OnUsableChanged;
     
 protected:

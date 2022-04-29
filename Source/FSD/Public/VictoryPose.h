@@ -4,13 +4,13 @@
 #include "Aquisitionable.h"
 #include "VictoryPose.generated.h"
 
-class AActor;
-class UAnimSequence;
-class UItemAquisitionBase;
 class UObject;
+class AActor;
+class UItemAquisitionBase;
+class UAnimSequence;
 class UPlayerCharacterID;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UVictoryPose : public USavablePrimaryDataAsset, public IAquisitionable {
     GENERATED_BODY()
 public:
@@ -24,7 +24,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UItemAquisitionBase* Aquisition;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UnlockedFromStart;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

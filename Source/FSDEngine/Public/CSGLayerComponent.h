@@ -5,7 +5,7 @@
 #include "GeneralTerrainMaterialCombiner.h"
 #include "CSGLayerComponent.generated.h"
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCSGLayerComponent : public UCSGGroupComponent {
     GENERATED_BODY()
 public:

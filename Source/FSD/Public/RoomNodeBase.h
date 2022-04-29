@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "RoomNodeBase.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRoomNodeBase {
     GENERATED_BODY()
 public:

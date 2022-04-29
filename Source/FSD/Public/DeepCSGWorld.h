@@ -3,50 +3,50 @@
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
 #include "VisualLogger/VisualLoggerDebugSnapshotInterface.h"
-#include "UObject/NoExportTypes.h"
+#include "TerrainBaseDoneDelegate.h"
 #include "CSGRaycastHitInfo.h"
 #include "DebrisWhenCarving.h"
-#include "PickaxeDigOperationData.h"
-#include "Engine/LatentActionManager.h"
-#include "TerrainBaseDoneDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "CSGBuildOperationData.h"
 #include "TerrainLateJoinData.h"
 #include "EncodedChunkId.h"
+#include "PickaxeDigOperationData.h"
 #include "RemoveFloatingIslandOperationData.h"
-#include "UObject/NoExportTypes.h"
 #include "MeltOperationData.h"
-#include "CarveWithColliderOperationData.h"
 #include "GrenadeExplodeOperationData.h"
 #include "DrillOperationData.h"
 #include "CarveWithSTLMeshOperationData.h"
 #include "CarveSplineSegment.h"
 #include "SplineSegmentCarveOperationData.h"
+#include "CarveWithColliderOperationData.h"
 #include "UObject/NoExportTypes.h"
 #include "ELandscapeCellFilter.h"
-#include "EPreciousMaterialOptions.h"
 #include "ECarveFilterType.h"
+#include "UObject/NoExportTypes.h"
+#include "EPreciousMaterialOptions.h"
+#include "Engine/LatentActionManager.h"
 #include "CarveOptionsCellSize.h"
 #include "DeepCSGWorld.generated.h"
 
-class ACSGBuilder;
-class UMaterialInterface;
-class UTerrainMaterialsCollection;
+class UDebrisSet;
+class AProceduralSetup;
 class UTerrainMaterial;
 class UTerrainType;
-class UDebrisSet;
+class UTerrainMaterialsCollection;
 class UDebrisBase;
+class UMaterialInterface;
+class ACSGBuilder;
 class ADebrisDataActor;
-class AProceduralSetup;
-class UAsyncPathRequests;
 class UObject;
-class ADeepCSGWorld;
+class UAsyncPathRequests;
 class UDebrisInstances;
 class UPrimitiveComponent;
 class USTLMeshCarver;
-class UStaticMesh;
 class UStaticMeshCarver;
+class ADeepCSGWorld;
+class UStaticMesh;
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API ADeepCSGWorld : public AActor, public IVisualLoggerDebugSnapshotInterface {
     GENERATED_BODY()
 public:
@@ -107,75 +107,75 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UDebrisSet*> StandardDebrisSets;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UDebrisBase*> AddedDebris;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UDebrisBase*> DebrisLevelGenerationCarved;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UDebrisBase*> DebrisLargeCarved;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UDebrisBase*> DebrisSmallCarved;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UDebrisBase*> DebrisMeshes;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInterface* DefaultScannerMaterial;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ADebrisDataActor* DebrisActorInstance;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 DebrisActorIndex;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AProceduralSetup* ProceduralSetup;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UObject*> TerrainMaterialAssets;
     
 private:
-    UPROPERTY(BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UAsyncPathRequests* AsyncPathRequests;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTerrainBaseDone OnBaseLayerCommitDone;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTerrainBaseDone OnBaseLayerFinalCommitDone;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<AActor*> TerrainAttachedActors;
     
-    UPROPERTY(Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     TArray<TWeakObjectPtr<UObject>> TerrainListeners;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UDebrisBase*> RegisteredDebrisList;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FDebrisWhenCarving> DebrisWhenCarvingList;
     
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TArray<UDebrisInstances*> DebrisInstanceList;
     
-    UPROPERTY(Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Export, Transient)
     TArray<TWeakObjectPtr<UPrimitiveComponent>> ShowAlwaysScannerComponents;
     
-    UPROPERTY(Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Export, Transient)
     TArray<TWeakObjectPtr<UPrimitiveComponent>> FogOfWarScannerComponents;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UDebrisBase*> DebrisHandles;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FTerrainLateJoinData LateJoinData;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FEncodedChunkId> VisibleChunks;
     
 public:
@@ -236,7 +236,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void RegisterScannerComponent(UPrimitiveComponent* Component, bool useFogOfWar);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool Raycast(FVector Start, FVector Direction, float MaxDistance, FCSGRaycastHitInfo& HitInfo, ELandscapeCellFilter Filter) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

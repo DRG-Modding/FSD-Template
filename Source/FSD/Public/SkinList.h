@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FSkinList {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<FGuid> Skins;
     
     FSD_API FSkinList();

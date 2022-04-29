@@ -3,7 +3,7 @@
 #include "StatusEffectItem.h"
 #include "EnemyDetonationStatusEffectItem.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UEnemyDetonationStatusEffectItem : public UStatusEffectItem {
     GENERATED_BODY()
 public:

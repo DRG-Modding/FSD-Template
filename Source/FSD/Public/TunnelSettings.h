@@ -7,7 +7,7 @@
 class UTerrainMaterial;
 class UFloodFillSettings;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UTunnelSettings : public UDataAsset {
     GENERATED_BODY()
 public:

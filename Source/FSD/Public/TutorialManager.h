@@ -3,17 +3,17 @@
 #include "GameFramework/Actor.h"
 #include "TutorialManager.generated.h"
 
-class UFSDSaveGame;
 class AFSDPlayerController;
 class APlayerCharacter;
+class UFSDSaveGame;
 class UTutorialComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATutorialManager : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MinimumTimeBetweenTutorials;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -22,19 +22,19 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ShowTutorialsDebug;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<AFSDPlayerController> PlayerController;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<APlayerCharacter> PlayerCharacter;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<UFSDSaveGame> SaveGame;
     
-    UPROPERTY(Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Export, Transient)
     TArray<TWeakObjectPtr<UTutorialComponent>> Tutorials;
     
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<UTutorialComponent> ActiveTutorial;
     
 public:

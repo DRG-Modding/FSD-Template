@@ -7,7 +7,7 @@ class UItemUpgrade;
 class UItemID;
 class UUpgradableGearComponent;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UOverclockShematicItem : public USchematicItem {
     GENERATED_BODY()
 public:

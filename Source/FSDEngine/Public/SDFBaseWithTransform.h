@@ -3,7 +3,7 @@
 #include "SDFBase.h"
 #include "SDFBaseWithTransform.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class USDFBaseWithTransform : public USDFBase {
     GENERATED_BODY()
 public:

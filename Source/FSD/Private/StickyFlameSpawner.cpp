@@ -18,6 +18,7 @@ UStickyFlameSpawner::UStickyFlameSpawner() {
     this->StickyFlameActor = NULL;
     this->FlameLifetime = 2.00f;
     this->StickyFlameIntervals = 2.00f;
+    this->StickyMaxSpawnPerSecond = 50.00f;
     this->StickyFlameMinDistance = 50.00f;
     this->StickyFlameLastTime = 0.00f;
 }

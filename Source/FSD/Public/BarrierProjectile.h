@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "BarrierProjectile.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API ABarrierProjectile : public AActor {
     GENERATED_BODY()
 public:

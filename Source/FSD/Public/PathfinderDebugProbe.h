@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "PathfinderDebugProbe.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class APathfinderDebugProbe : public AActor {
     GENERATED_BODY()
 public:

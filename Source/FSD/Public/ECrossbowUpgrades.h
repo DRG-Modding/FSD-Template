@@ -12,6 +12,8 @@ enum class ECrossbowUpgrades : uint8 {
     RadioModule,
     Ricochet,
     VelocityChange,
+    DamageDefault,
+    RadialDamageDefault,
     Trifork,
     Pentafork,
     BattleFrenzy,

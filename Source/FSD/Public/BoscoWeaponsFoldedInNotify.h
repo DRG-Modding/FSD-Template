@@ -3,7 +3,7 @@
 #include "Animation/AnimNotifies/AnimNotify.h"
 #include "BoscoWeaponsFoldedInNotify.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class UBoscoWeaponsFoldedInNotify : public UAnimNotify {
     GENERATED_BODY()
 public:

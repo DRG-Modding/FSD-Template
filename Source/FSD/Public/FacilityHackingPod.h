@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "RessuplyPod.h"
-#include "HackingPod_DelegateDelegate.h"
 #include "EHackingPodState.h"
+#include "HackingPod_DelegateDelegate.h"
 #include "FacilityHackingPod.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API AFacilityHackingPod : public ARessuplyPod {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHackingPod_Delegate OnHackingPodStateChanged;
     
 protected:

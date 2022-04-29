@@ -6,7 +6,7 @@
 
 class UTargetValidator;
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API UBTService_FindClosest : public UBTService {
     GENERATED_BODY()
 public:
@@ -23,7 +23,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool OwnerIsMultiTargeter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float TargetingRange;
     
 public:

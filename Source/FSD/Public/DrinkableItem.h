@@ -5,7 +5,7 @@
 
 class UDrinkableDataAsset;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ADrinkableItem : public AAnimatedItem {
     GENERATED_BODY()
 public:

@@ -2,9 +2,9 @@
 
 class AActor;
 class UParticleSystem;
+class UDamageClass;
 class UHealth;
 class IHealth;
-class UDamageClass;
 class UPrimitiveComponent;
 
 float UHealthComponentBase::TakeRadialDamage(float damageAmount, FVector BlastCenter, float BlastRadius, float MaxDamageRadius, float MinDamagePct, FDamageData& DamageData) {

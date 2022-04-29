@@ -2,35 +2,35 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "FSDPlayerControllerBase.h"
-#include "OnPlayerCharacterPossesedDelegate.h"
 #include "PendingRewardsStats.h"
+#include "OnPlayerCharacterPossesedDelegate.h"
 #include "ChatOpenedDelegateDelegate.h"
 #include "ESpacerigStartType.h"
-#include "EChatSenderType.h"
 #include "PendingRewards.h"
+#include "EChatSenderType.h"
 #include "FSDPlayerController.generated.h"
 
+class UPickaxePart;
 class UTexture2D;
-class APlayerCharacter;
 class UTutorialContentWidget;
-class AFSDPlayerState;
-class UVanityItem;
+class USoundCue;
+class UPlayerCharacterID;
 class UPerkUsageComponent;
 class UTerrainLatejoinComponent;
 class USoundMix;
 class UFSDWidgetEffectsComponent;
 class AActor;
+class UVanityItem;
 class UFSDAchievement;
 class UTemporaryBuff;
-class UPlayerCharacterID;
-class USoundCue;
+class APlayerCharacter;
+class AFSDPlayerState;
 class UTreasureRewarder;
 class UVictoryPose;
 class UItemSkin;
 class UItemID;
-class UPickaxePart;
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API AFSDPlayerController : public AFSDPlayerControllerBase {
     GENERATED_BODY()
 public:
@@ -42,38 +42,38 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnChangeTutorialHintDuration, float, NewDuration);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FLevelFinishedSignature);
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FReceivedEndLevelDelegate OnEndLevelReceived;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FReceivingVoiceSignature OnReceiveVoiceChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FReceivingVoiceSignature OnTransmitVoiceChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLevelFinishedSignature OnLevelFinished;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnShowTutorialHint OnShowTutorialHint;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnChangeTutorialWidget OnShowTutorialWidget;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnChangeTutorialHintDuration OnChangeTutorialHintDuration;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnHideTutorialHint OnHideCurrentTutorialHint;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnPlayerCharacterPossesed OnPlayerCharacterPossesed;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UPerkUsageComponent* PerkUsageComponent;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTerrainLatejoinComponent* LateJoinComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -85,16 +85,16 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundMix*> InitialSoundMixes;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool ServerTravelDone;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FChatOpenedDelegate OnChatOpened;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UFSDWidgetEffectsComponent* WidgetEffects;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ESpacerigStartType SpacerigSpawnType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -135,7 +135,7 @@ public:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void Server_SetGenerationDone();
     
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void Server_SetExtraEndScreenTime(float extraTime);
     
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
@@ -182,7 +182,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnSaveGameCreditsChanged(int32 Credits);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnSaveGameCharacterProgressChanged(TSubclassOf<APlayerCharacter> CharacterClass, int32 Level, float Progress);
     
     UFUNCTION(BlueprintCallable)

@@ -5,13 +5,13 @@
 
 class UTutorialContentWidget;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTutorialContentWidget : public UFSDUserWidget {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnTutorialFinished, UTutorialContentWidget*, TutorialWidget);
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnTutorialFinished OnTutorialFinished;
     
     UTutorialContentWidget();

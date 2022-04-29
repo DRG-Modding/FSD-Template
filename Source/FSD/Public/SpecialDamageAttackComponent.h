@@ -5,7 +5,7 @@
 
 class UDamageComponent;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USpecialDamageAttackComponent : public USpecialAttackComponent {
     GENERATED_BODY()
 public:

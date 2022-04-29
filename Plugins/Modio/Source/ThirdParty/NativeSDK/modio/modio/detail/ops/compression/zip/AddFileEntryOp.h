@@ -46,6 +46,8 @@ namespace Modio
 			template<typename CoroType>
 			void operator()(CoroType& Self, Modio::ErrorCode ec = {})
 			{
+				constexpr std::size_t ChunkOfBytes = 64 * 1024;
+				const std::size_t FileSize = InputFile->GetFileSize();
 				std::shared_ptr<Modio::ModProgressInfo> PinnedProgressInfo = ProgressInfo.lock();
 				if (PinnedProgressInfo == nullptr)
 				{
@@ -63,10 +65,13 @@ namespace Modio
 					OutputFile->Seek(Modio::FileOffset(GetLocalFileHeaderSize()), SeekDirection::Forward);
 					FileDataOffset = OutputFile->Tell();
 
-					while (BytesProcessed < InputFile->GetFileSize())
+					while (BytesProcessed < FileSize)
 					{
+						// Set a property to the maximum bytes to read. If the file is smaller than "ChunkOfBytes",
+						// it is better to just read FileSize. It also applies to the last part of the file.
+						MaxBytesToRead = (BytesProcessed + ChunkOfBytes) < FileSize ? ChunkOfBytes : FileSize - BytesProcessed;
 						// Read in a chunk from the file we're compressing
-						yield InputFile->ReadAsync(64 * 1024, InputFileBuffer, std::move(Self));
+						yield InputFile->ReadAsync(MaxBytesToRead, InputFileBuffer, std::move(Self));
 						if (ec)
 						{
 							Self.complete(ec);
@@ -76,12 +81,12 @@ namespace Modio
 						BytesProcessed += Modio::FileSize(InputFileBuffer.size());
 						PinnedProgressInfo->CurrentlyExtractedBytes += Modio::FileSize(InputFileBuffer.size());
 						// Doing this in a loop in case ReadAsync stored multiple sub-buffers
-						while (NextBuf = InputFileBuffer.TakeInternalBuffer())
+						while ((NextBuf = InputFileBuffer.TakeInternalBuffer()))
 						{
 							// Compress the current sub-buffer
 							CompressionState.avail_in = NextBuf->GetSize();
 							CompressionState.next_in = NextBuf->Data();
-							CompressedOutputBuffer = Modio::Detail::Buffer(64 * 1024);
+							CompressedOutputBuffer = Modio::Detail::Buffer(MaxBytesToRead);
 							CompressionState.avail_out = CompressedOutputBuffer.GetSize();
 							CompressionState.next_out = CompressedOutputBuffer.Data();
 							CompressionStream.write(CompressionState, boost::beast::zlib::Flush::none, ec);
@@ -119,7 +124,7 @@ namespace Modio
 					{
 						CompressionState.avail_in = 0;
 						CompressionState.next_in = nullptr;
-						CompressedOutputBuffer = Modio::Detail::Buffer(64 * 1024);
+						CompressedOutputBuffer = Modio::Detail::Buffer(ChunkOfBytes);
 						CompressionState.avail_out = CompressedOutputBuffer.GetSize();
 						CompressionState.next_out = CompressedOutputBuffer.Data();
 						CompressionStream.write(CompressionState, boost::beast::zlib::Flush::finish, ec);
@@ -190,7 +195,8 @@ namespace Modio
 		private:
 			boost::beast::zlib::z_params CompressionState;
 			boost::beast::zlib::deflate_stream CompressionStream;
-			constexpr static uint32_t LocalHeaderMagic = 0x04034b50;
+            // This variable had troubles as a constexpr when compiling on macOS + g++11
+			const uint32_t LocalHeaderMagic = 0x04034b50;
 			std::shared_ptr<Modio::Detail::ArchiveFileImplementation> ArchiveFile;
 			std::unique_ptr<Modio::Detail::File> InputFile;
 			std::unique_ptr<Modio::Detail::File> OutputFile;
@@ -202,6 +208,7 @@ namespace Modio
 			Modio::FileOffset LocalHeaderOffset;
 			Modio::FileOffset FileDataOffset;
 			Modio::FileOffset EndOffset;
+			std::size_t MaxBytesToRead = 0;
 			std::uint32_t InputCRC = 0;
 			asio::coroutine CoroutineState;
 			Modio::Optional<Modio::Detail::Buffer> NextBuf;

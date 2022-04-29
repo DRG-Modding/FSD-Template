@@ -1,7 +1,7 @@
 #include "PatrolBot.h"
 #include "Net/UnrealNetwork.h"
-#include "HackingUsableComponent.h"
 #include "Perception/PawnSensingComponent.h"
+#include "HackingUsableComponent.h"
 #include "Components/SphereComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "EnemyComponent.h"
@@ -12,9 +12,9 @@
 #include "Components/AudioComponent.h"
 #include "ProjectileAttackComponent.h"
 
-class AActor;
 class UHealthComponentBase;
 class UPrimitiveComponent;
+class AActor;
 
 void APatrolBot::SetIsPatrolling(bool patroling) {
 }

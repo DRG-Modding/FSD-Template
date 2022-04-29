@@ -4,7 +4,7 @@
 #include "WarpedProperties.h"
 #include "CSGWarped.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UCSGWarped : public UCSGSingleChildBase {
     GENERATED_BODY()
 public:

@@ -4,7 +4,7 @@
 #include "BinaryTerrainMaterialCombiner.h"
 #include "SimpleMeshWithCachedTreeComponent.generated.h"
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USimpleMeshWithCachedTreeComponent : public UCSGBaseComponent {
     GENERATED_BODY()
 public:

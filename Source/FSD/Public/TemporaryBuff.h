@@ -7,7 +7,7 @@ class AFSDPlayerController;
 class UTexture2D;
 class APlayerCharacter;
 
-UCLASS(Abstract, BlueprintType)
+UCLASS(Abstract, Blueprintable)
 class UTemporaryBuff : public UDataAsset {
     GENERATED_BODY()
 public:

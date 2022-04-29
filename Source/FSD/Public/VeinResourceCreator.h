@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RandRange.h"
 #include "ResourceCreator.h"
+#include "RandRange.h"
 #include "ECarveFilterType.h"
 #include "VeinResourceCreator.generated.h"
 
-class UDebrisBase;
 class UVeinResourceData;
 class UDebrisPositioning;
 class UFloodFillSettings;
+class UDebrisBase;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UVeinResourceCreator : public UResourceCreator {
     GENERATED_BODY()
 public:
@@ -23,13 +23,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ECarveFilterType CarveType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float SegmentMaxDot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float VeinWorldHorizontalMaxDot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float VeinWorldHorizontalMinDot;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -38,10 +38,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFloodFillSettings* Noise;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float range;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float NoiseRange;
     
 protected:

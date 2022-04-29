@@ -3,23 +3,23 @@
 #include "BackendNotification.h"
 #include "FSDEventsResponse.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FFSDEventsResponse {
     GENERATED_BODY()
 public:
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FString> ActiveEvents;
     
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString SeasonExpirationTimeSteam;
     
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString SeasonExpirationTimeSony;
     
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString SeasonExpirationTimeGDK;
     
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FBackendNotification> Notifications;
     
     FSD_API FFSDEventsResponse();

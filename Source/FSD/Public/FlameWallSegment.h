@@ -5,12 +5,12 @@
 
 class USphereComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class AFlameWallSegment : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USphereComponent* CollisionComponent;
     
 public:

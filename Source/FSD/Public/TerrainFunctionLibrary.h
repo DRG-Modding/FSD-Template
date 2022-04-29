@@ -7,7 +7,7 @@
 class UObject;
 class UTerrainMaterial;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UTerrainFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

@@ -8,12 +8,12 @@ class UStatusEffect;
 class UDamageClass;
 class AActor;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UStatusEffectsFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UStatusEffectsFunctionLibrary();
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetMaxResistance(TSubclassOf<UStatusEffect> StatusEffect);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

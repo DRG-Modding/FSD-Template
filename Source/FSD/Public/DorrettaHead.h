@@ -6,15 +6,15 @@
 class UCarriableInstantUsable;
 class UCarriableComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ADorrettaHead : public ACarriableItem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UCarriableInstantUsable* Usable;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UCarriableComponent* CarriableComponent;
     
 public:

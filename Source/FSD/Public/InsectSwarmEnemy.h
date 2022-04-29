@@ -5,12 +5,12 @@
 
 class UParticleSystemComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class AInsectSwarmEnemy : public AEnemyDeepPathfinderCharacter {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* SwarmParticles;
     
 public:

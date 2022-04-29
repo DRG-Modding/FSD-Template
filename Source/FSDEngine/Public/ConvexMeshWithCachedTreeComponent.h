@@ -4,7 +4,7 @@
 #include "ConvexNoiseProperties.h"
 #include "ConvexMeshWithCachedTreeComponent.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UConvexMeshWithCachedTreeComponent : public USimpleMeshWithCachedTreeComponent {
     GENERATED_BODY()
 public:

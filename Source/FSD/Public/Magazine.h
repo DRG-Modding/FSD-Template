@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
 #include "Skinnable.h"
 #include "Engine/EngineTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Magazine.generated.h"
 
 class USoundCue;
 class USkinEffect;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AMagazine : public AActor, public ISkinnable {
     GENERATED_BODY()
 public:

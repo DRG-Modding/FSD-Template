@@ -3,7 +3,7 @@
 #include "SDFBaseWithTransform.h"
 #include "SDFPlane.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSDENGINE_API USDFPlane : public USDFBaseWithTransform {
     GENERATED_BODY()
 public:

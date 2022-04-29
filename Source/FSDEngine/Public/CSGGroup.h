@@ -3,11 +3,11 @@
 #include "CSGBase.h"
 #include "CSGGroup.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UCSGGroup : public UCSGBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UCSGBase*> Children;
     
     UCSGGroup();

@@ -4,7 +4,7 @@
 #include "GameplayTagContainer.h"
 #include "TargetTagsDamageCondition.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTargetTagsDamageCondition : public UDamageCondition {
     GENERATED_BODY()
 public:

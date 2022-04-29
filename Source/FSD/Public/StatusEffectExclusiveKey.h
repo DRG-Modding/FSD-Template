@@ -3,7 +3,7 @@
 #include "Engine/DataAsset.h"
 #include "StatusEffectExclusiveKey.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UStatusEffectExclusiveKey : public UDataAsset {
     GENERATED_BODY()
 public:

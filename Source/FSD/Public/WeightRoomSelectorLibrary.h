@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "UObject/NoExportTypes.h"
 #include "WeightedRoomSelector.h"
+#include "UObject/NoExportTypes.h"
 #include "WeightRoomSelectorLibrary.generated.h"
 
 class URoomGenerator;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UWeightRoomSelectorLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

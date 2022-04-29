@@ -5,7 +5,7 @@
 
 class UDialogDataAsset;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UShoutStatusEffectItem : public UStatusEffectItem {
     GENERATED_BODY()
 public:

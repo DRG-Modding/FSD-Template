@@ -6,7 +6,7 @@
 class UResourceData;
 class USphereComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ASpawnResourceGenerationItem : public AGenerationItem {
     GENERATED_BODY()
 public:
@@ -14,10 +14,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UResourceData* Resource;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float BaseAmount;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USphereComponent* Sphere;
     
 public:

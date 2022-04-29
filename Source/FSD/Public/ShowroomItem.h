@@ -5,7 +5,7 @@
 
 class AShowroomStage;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class AShowroomItem : public AActor {
     GENERATED_BODY()
 public:

@@ -7,7 +7,7 @@ class USeason;
 class USeasonChallenge;
 class UCurveFloat;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class USeasonSettings : public UDataAsset {
     GENERATED_BODY()
 public:
@@ -29,7 +29,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 TreeOfVanitySnapSize;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float SpecialChallengeChange;
     
     USeasonSettings();

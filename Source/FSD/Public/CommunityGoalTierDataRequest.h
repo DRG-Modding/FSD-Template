@@ -2,11 +2,11 @@
 #include "CoreMinimal.h"
 #include "CommunityGoalTierDataRequest.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FCommunityGoalTierDataRequest {
     GENERATED_BODY()
 public:
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString GoalID;
     
     FSD_API FCommunityGoalTierDataRequest();

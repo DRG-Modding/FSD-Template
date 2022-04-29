@@ -3,7 +3,7 @@
 #include "IAudioEndpoint.h"
 #include "PS5MockExternalEndpointSettings.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UPS5MockExternalEndpointSettings : public UAudioEndpointSettingsBase {
     GENERATED_BODY()
 public:

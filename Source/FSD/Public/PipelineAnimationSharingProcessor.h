@@ -3,7 +3,7 @@
 #include "AnimationSharingTypes.h"
 #include "PipelineAnimationSharingProcessor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UPipelineAnimationSharingProcessor : public UAnimationSharingStateProcessor {
     GENERATED_BODY()
 public:

@@ -2,8 +2,8 @@
 #include "Templates/SubclassOf.h"
 
 class AItem;
-class UActorComponent;
 class AFSDPlayerState;
+class UActorComponent;
 
 bool UAddComponentUpgrade::GetUpgradedValue(TSubclassOf<AItem> Item, AFSDPlayerState* Player, TSubclassOf<UActorComponent> NewComponentClass, bool includePreview) {
     return false;

@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CSGBaseComponent.h"
 #include "CSGCircleDuplicatorProperties.h"
+#include "CSGBaseComponent.h"
 #include "CSGCircleDuplicatorComponent.generated.h"
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCSGCircleDuplicatorComponent : public UCSGBaseComponent {
     GENERATED_BODY()
 public:

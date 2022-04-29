@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct FBossFight {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<AActor> BossActor;
     
-    UPROPERTY(BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Export)
     TWeakObjectPtr<UEnemyComponent> EnemyComponent;
     
-    UPROPERTY(BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Export)
     TWeakObjectPtr<UEnemyHealthComponent> HealthComponent;
     
     FSD_API FBossFight();

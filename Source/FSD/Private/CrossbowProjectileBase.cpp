@@ -1,8 +1,8 @@
 #include "CrossbowProjectileBase.h"
 #include "Net/UnrealNetwork.h"
 
-class USceneComponent;
 class APlayerCharacter;
+class USceneComponent;
 
 void ACrossbowProjectileBase::OnUsedBy(APlayerCharacter* Player, EInputKeys Key) {
 }
@@ -56,6 +56,7 @@ ACrossbowProjectileBase::ACrossbowProjectileBase() {
     this->CanEverBePickedUp = true;
     this->Penetrates = false;
     this->ImpactSound = NULL;
+    this->IsASpecialProjectile = false;
     this->ProjectileMesh = NULL;
     this->KillTrailAfterTime = 3.00f;
 }

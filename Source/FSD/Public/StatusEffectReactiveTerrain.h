@@ -6,7 +6,7 @@
 
 class UStatusEffect;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UStatusEffectReactiveTerrain : public UReactiveTerrain {
     GENERATED_BODY()
 public:

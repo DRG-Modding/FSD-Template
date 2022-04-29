@@ -4,7 +4,7 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BTService_UpdateMoveToTarget.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBTService_UpdateMoveToTarget : public UBTService {
     GENERATED_BODY()
 public:
@@ -15,10 +15,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector TargetLocationKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float LookAheadTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float VerticalOffset;
     
 public:

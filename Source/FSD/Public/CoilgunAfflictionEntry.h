@@ -6,14 +6,14 @@
 class UStatusEffect;
 class UStatusEffectsComponent;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FCoilgunAfflictionEntry {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UStatusEffect>> PushedAfflictions;
     
-    UPROPERTY(Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UStatusEffectsComponent* Target;
     
     FSD_API FCoilgunAfflictionEntry();

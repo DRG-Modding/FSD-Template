@@ -3,10 +3,10 @@
 #include "UObject/Object.h"
 #include "DynamicIcon.generated.h"
 
-class UMaterialInstanceDynamic;
 class UMaterialInterface;
+class UMaterialInstanceDynamic;
 
-UCLASS(Abstract, BlueprintType, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class FSD_API UDynamicIcon : public UObject {
     GENERATED_BODY()
 public:

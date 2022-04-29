@@ -3,7 +3,7 @@
 #include "InstantUsable.h"
 #include "CarriableInstantUsable.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCarriableInstantUsable : public UInstantUsable {
     GENERATED_BODY()
 public:

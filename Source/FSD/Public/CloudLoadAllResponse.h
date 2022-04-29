@@ -3,11 +3,11 @@
 #include "CloudLoadEntry.h"
 #include "CloudLoadAllResponse.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FCloudLoadAllResponse {
     GENERATED_BODY()
 public:
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCloudLoadEntry> savegames;
     
     FSD_API FCloudLoadAllResponse();

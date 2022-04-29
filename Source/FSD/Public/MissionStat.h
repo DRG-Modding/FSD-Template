@@ -6,25 +6,25 @@
 #include "EMissionStatType.h"
 #include "MissionStat.generated.h"
 
-class UMissionStat;
-class UTexture2D;
-class UObject;
 class UMissionStatCategory;
+class UObject;
+class UMissionStat;
 class UFSDAchievement;
 class APlayerCharacter;
 class UPlayerCharacterID;
+class UTexture2D;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UMissionStat : public UDataAsset {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FStatCountChanged, UObject*, WorldContext, UMissionStat*, MissionStat, float, Value);
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FStatCountChanged OnCountChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid SavegameID;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -50,31 +50,31 @@ protected:
     
 public:
     UMissionStat();
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FText MissionStatToText(EMissionStatType StatType, float Value);
     
     UFUNCTION(BlueprintCallable)
     static void Increment(UObject* WorldContext, UMissionStat* Stat, TSubclassOf<APlayerCharacter> CharacterClass, float Amount);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetStatMinCount(UObject* WorldContext);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetStatMaxCount(UObject* WorldContext);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FText GetStatCountTotalAsText(UObject* WorldContext);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetStatCountTotal(UObject* WorldContext);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetStatCountPct(UObject* WorldContext, TSubclassOf<APlayerCharacter> CharacterClass);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FText GetStatCountAsText(UObject* WorldContext, UPlayerCharacterID* characterID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetStatCount(UObject* WorldContext, UPlayerCharacterID* characterID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

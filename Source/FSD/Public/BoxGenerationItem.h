@@ -5,11 +5,11 @@
 
 class UBoxGenerationComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ABoxGenerationItem : public AGenerationItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UBoxGenerationComponent* BoxComponent;
     
     ABoxGenerationItem();

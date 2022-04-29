@@ -6,7 +6,7 @@
 
 class AProjectileBase;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UProjectileClassFilterItemUpgradeCondition : public UItemUpgradeCondition {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "SentryAttachment.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ASentryAttachment : public AActor {
     GENERATED_BODY()
 public:

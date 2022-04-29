@@ -5,38 +5,38 @@
 #include "PipelineStart.generated.h"
 
 class APipelineStart;
-class APipelineSegment;
 class AFSDRefinery;
-class UTrackBuilderUsable;
 class APipelineFinish;
+class UTrackBuilderUsable;
+class APipelineSegment;
 class ATrackBuilderSegment;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class FSD_API APipelineStart : public AActor {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FPipelineStartStateDelegate, APipelineStart*, InPipelineStart, EPipelineBuildState, InPipelineState);
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FPipelineStartStateDelegate OnBuildStateChanged;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PipelineID;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTrackBuilderUsable* PipelineStartUsable;
     
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_BuildState, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_BuildState, meta=(AllowPrivateAccess=true))
     EPipelineBuildState BuildState;
     
-    UPROPERTY(BlueprintReadWrite, Replicated, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     APipelineFinish* PipelineFinish;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AFSDRefinery* Refinery;
     
-    UPROPERTY(Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     TArray<TWeakObjectPtr<APipelineSegment>> BrokenSegments;
     
 public:

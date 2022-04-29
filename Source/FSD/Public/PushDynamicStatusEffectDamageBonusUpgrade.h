@@ -9,7 +9,7 @@ class AFSDPlayerState;
 class UStatusEffectItem;
 class AActor;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UPushDynamicStatusEffectDamageBonusUpgrade : public UItemUpgrade {
     GENERATED_BODY()
 public:

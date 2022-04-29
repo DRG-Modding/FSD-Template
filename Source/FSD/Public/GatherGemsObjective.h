@@ -6,7 +6,7 @@
 class UGemResourceData;
 class UCappedResource;
 
-UCLASS(Abstract, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UGatherGemsObjective : public UResourceBasedObjective {
     GENERATED_BODY()
 public:
@@ -14,10 +14,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 GemsRequired;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float GemsSpawnedModifier;
     
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_GemsCollected, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_GemsCollected, meta=(AllowPrivateAccess=true))
     int32 GemsCollected;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -28,7 +28,7 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnResourceChanged(UCappedResource* CappedResource, float Amount);
     
     UFUNCTION(BlueprintCallable)

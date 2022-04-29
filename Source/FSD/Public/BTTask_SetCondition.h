@@ -4,7 +4,7 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BTTask_SetCondition.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBTTask_SetCondition : public UBTTaskNode {
     GENERATED_BODY()
 public:

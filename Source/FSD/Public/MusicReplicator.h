@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ActiveMusicItem.h"
 #include "GameFramework/Actor.h"
+#include "ActiveMusicItem.h"
 #include "MusicReplicator.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class AMusicReplicator : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_ActiveMusic, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_ActiveMusic, meta=(AllowPrivateAccess=true))
     TArray<FActiveMusicItem> ActiveMusic;
     
 public:

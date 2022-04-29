@@ -1,22 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
+#include "UObject/NoExportTypes.h"
 #include "ESchematicType.h"
 #include "SchematicType.h"
 #include "SchematicSettings.generated.h"
 
+class USchematicRarity;
+class UDataTable;
 class UItemSkinSchematicCollection;
 class USchematic;
-class UDataTable;
 class UOverclockBank;
 class USchematicBank;
 class USchematicBankBase;
 class USchematicCategory;
 class USchematicPricingTier;
-class USchematicRarity;
+class UItemID;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class USchematicSettings : public UDataAsset {
     GENERATED_BODY()
 public:
@@ -44,13 +45,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USchematicBank* EndlessSchematics;
     
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<USchematicCategory*> Categories;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USchematicCategory*> OverclockCategories;
     
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USchematicCategory*> VanityCategories;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -98,11 +99,14 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USchematicCategory* VanityCatVictoryPose;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UDataTable* SchematicGATable;
+    
 protected:
-    UPROPERTY(BlueprintReadWrite, Transient, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TMap<FGuid, USchematic*> AllSchematicsMap;
     
-    UPROPERTY(BlueprintReadWrite, Transient, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TSet<USchematic*> AllSchematics;
     
 public:
@@ -115,6 +119,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     TSet<USchematic*> GetSchematics() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UOverclockBank* GetOverclocksForItem(UItemID* Item) const;
     
 };
 

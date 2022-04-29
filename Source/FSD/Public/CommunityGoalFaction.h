@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EFSDFaction.h"
 #include "Engine/DataAsset.h"
 #include "Styling/SlateColor.h"
-#include "EFSDFaction.h"
 #include "CommunityGoalFaction.generated.h"
 
 class UTexture2D;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UCommunityGoalFaction : public UDataAsset {
     GENERATED_BODY()
 public:

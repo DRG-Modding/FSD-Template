@@ -4,7 +4,7 @@
 #include "EncounterSpecialItem.h"
 #include "EncounterSpecialEventSpawner.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UEncounterSpecialEventSpawner : public USpecialEventSpawner {
     GENERATED_BODY()
 public:

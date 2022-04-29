@@ -3,7 +3,7 @@
 #include "Engine/DataAsset.h"
 #include "MineralTradeData.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UMineralTradeData : public UDataAsset {
     GENERATED_BODY()
 public:

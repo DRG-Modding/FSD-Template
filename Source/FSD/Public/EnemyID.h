@@ -3,7 +3,7 @@
 #include "SavableDataAsset.h"
 #include "EnemyID.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API UEnemyID : public USavableDataAsset {
     GENERATED_BODY()
 public:

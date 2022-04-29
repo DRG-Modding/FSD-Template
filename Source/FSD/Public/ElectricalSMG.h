@@ -7,13 +7,13 @@
 #include "ElectricalSMG.generated.h"
 
 class UPrimitiveComponent;
+class UFSDPhysicalMaterial;
 class UStatusEffect;
 class USoundCue;
 class UParticleSystem;
 class UHealthComponentBase;
-class UFSDPhysicalMaterial;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AElectricalSMG : public AAmmoDrivenWeapon {
     GENERATED_BODY()
 public:
@@ -27,16 +27,16 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* AoESound;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float AoEStatusEffectChance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float AoEStatusEffectRange;
     
 public:
     AElectricalSMG();
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial);
     
     UFUNCTION(BlueprintCallable)

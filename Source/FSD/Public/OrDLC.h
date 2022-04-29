@@ -3,7 +3,7 @@
 #include "DLCBase.h"
 #include "OrDLC.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UOrDLC : public UDLCBase {
     GENERATED_BODY()
 public:

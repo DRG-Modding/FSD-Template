@@ -3,12 +3,12 @@
 #include "MatrixWithExactSync.generated.h"
 
 USTRUCT(BlueprintType)
-struct FMatrixWithExactSync {
+struct FSDENGINE_API FMatrixWithExactSync {
     GENERATED_BODY()
 public:
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Values[16];
     
-    FSDENGINE_API FMatrixWithExactSync();
+    FMatrixWithExactSync();
 };
 

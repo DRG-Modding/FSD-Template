@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
-#include "FadeData.h"
 #include "FadingDoneDelegate.h"
+#include "FadeData.h"
 #include "FadeScreenSubSystem.generated.h"
 
-class UTexture;
 class UObject;
+class UTexture;
 
-UCLASS(Abstract, BlueprintType)
+UCLASS(Abstract, Blueprintable)
 class FSD_API UFadeScreenSubSystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFadingDone OnFadeInComplete;
     
 protected:
@@ -30,7 +30,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsScreenFading(UObject* WorldContext);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetCurrentFadeAmount() const;
     
     UFUNCTION(BlueprintCallable)

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "PostDataModel.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FPostDataModel {
     GENERATED_BODY()
 public:

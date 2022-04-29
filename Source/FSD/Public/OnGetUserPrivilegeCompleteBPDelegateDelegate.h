@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EBlueprintableUserPrivileges.h"
 #include "EBlueprintablePrivilegeResults.h"
+#include "EBlueprintableUserPrivileges.h"
 #include "OnGetUserPrivilegeCompleteBPDelegateDelegate.generated.h"
 
 class APlayerState;

@@ -4,7 +4,7 @@
 #include "MovementModeCombo.h"
 #include "UseConditionMovementMode.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UUseConditionMovementMode : public UUseConditionBase {
     GENERATED_BODY()
 public:

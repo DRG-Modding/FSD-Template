@@ -1,11 +1,11 @@
 #include "CommunicationComponent.h"
 #include "Templates/SubclassOf.h"
 
-class UObject;
 class UDialogDataAsset;
-class UAudioComponent;
-class APlayerCharacter;
+class UObject;
 class USoundBase;
+class APlayerCharacter;
+class UAudioComponent;
 
 void UCommunicationComponent::ShoutCustomOrDefault(UDialogDataAsset* CustomShout, EShoutType DefaultShout) {
 }
@@ -27,20 +27,8 @@ void UCommunicationComponent::SetMissionControlPaused(bool IsPaused) {
 
 void UCommunicationComponent::ServerShout_Implementation(UDialogDataAsset* NewShout) {
 }
-bool UCommunicationComponent::ServerShout_Validate(UDialogDataAsset* NewShout) {
-    return true;
-}
-
-void UCommunicationComponent::ServerMixerAnnouncement_Implementation(const FMixerAnnouncement& Announcement) {
-}
-bool UCommunicationComponent::ServerMixerAnnouncement_Validate(const FMixerAnnouncement& Announcement) {
-    return true;
-}
 
 void UCommunicationComponent::ServerMissionShout_Implementation(UDialogDataAsset* NewShout, int32 Index, bool bPriority) {
-}
-bool UCommunicationComponent::ServerMissionShout_Validate(UDialogDataAsset* NewShout, int32 Index, bool bPriority) {
-    return true;
 }
 
 UAudioComponent* UCommunicationComponent::PlayPitchedByClass(UObject* WorldContextObject, TSubclassOf<APlayerCharacter> CharacterClass, USoundBase* Sound, UDialogDataAsset* NewShout, EShoutType ShoutType, UAudioComponent* AudioComponent) {
@@ -52,12 +40,6 @@ void UCommunicationComponent::PlayPitchedAsync(UDialogDataAsset* NewShout, EShou
 
 UAudioComponent* UCommunicationComponent::PlayPitched(USoundBase* Sound, UDialogDataAsset* NewShout, EShoutType ShoutType, bool IgnoreCoolDown, UAudioComponent* AudioComponent, UObject* WorldContextObject) {
     return NULL;
-}
-
-void UCommunicationComponent::MixerAnnouncementLocalOnly(UObject* WorldContext, const FMixerAnnouncement& Announcement) {
-}
-
-void UCommunicationComponent::MixerAnnouncement(UObject* WorldContext, const FMixerAnnouncement& Announcement) {
 }
 
 int32 UCommunicationComponent::MissionShoutLocally(UObject* WorldContext, UDialogDataAsset* NewShout) {
@@ -73,20 +55,8 @@ bool UCommunicationComponent::IsMissionControlSpeaking() const {
 
 void UCommunicationComponent::ClientShout_Implementation(APlayerCharacter* Sender, UDialogDataAsset* NewShout, int32 Index) {
 }
-bool UCommunicationComponent::ClientShout_Validate(APlayerCharacter* Sender, UDialogDataAsset* NewShout, int32 Index) {
-    return true;
-}
-
-void UCommunicationComponent::ClientMixerAnnouncement_Implementation(const FMixerAnnouncement& Announcement) {
-}
-bool UCommunicationComponent::ClientMixerAnnouncement_Validate(const FMixerAnnouncement& Announcement) {
-    return true;
-}
 
 void UCommunicationComponent::ClientMissionShout_Implementation(UDialogDataAsset* NewShout, int32 Index, bool bPriority) {
-}
-bool UCommunicationComponent::ClientMissionShout_Validate(UDialogDataAsset* NewShout, int32 Index, bool bPriority) {
-    return true;
 }
 
 UCommunicationComponent::UCommunicationComponent() {
@@ -100,6 +70,5 @@ UCommunicationComponent::UCommunicationComponent() {
     this->MissionControlAudioComponent = NULL;
     this->Character = NULL;
     this->LastShout = NULL;
-    this->ShoutAudioComponent = NULL;
 }
 

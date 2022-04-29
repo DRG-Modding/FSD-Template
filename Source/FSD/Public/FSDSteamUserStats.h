@@ -3,7 +3,7 @@
 #include "Components/ActorComponent.h"
 #include "FSDSteamUserStats.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFSDSteamUserStats : public UActorComponent {
     GENERATED_BODY()
 public:

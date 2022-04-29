@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
 #include "SaveGameIDInterface.h"
+#include "UObject/NoExportTypes.h"
 #include "CategoryID.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API UCategoryID : public UDataAsset, public ISaveGameIDInterface {
     GENERATED_BODY()
 public:

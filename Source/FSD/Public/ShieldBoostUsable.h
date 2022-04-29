@@ -6,7 +6,7 @@
 
 class APlayerCharacter;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UShieldBoostUsable : public UInstantUsable {
     GENERATED_BODY()
 public:

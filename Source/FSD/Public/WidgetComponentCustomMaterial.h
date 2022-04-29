@@ -5,7 +5,7 @@
 
 class UMaterialInterface;
 
-UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UWidgetComponentCustomMaterial : public UWidgetComponent {
     GENERATED_BODY()
 public:

@@ -6,7 +6,7 @@
 
 class AProjectileBase;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UProjectileLauncherComponent : public UProjectileLauncherBaseComponent {
     GENERATED_BODY()
 public:

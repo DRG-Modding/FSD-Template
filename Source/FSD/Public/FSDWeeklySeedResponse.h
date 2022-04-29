@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "FSDWeeklySeedResponse.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FFSDWeeklySeedResponse {
     GENERATED_BODY()
 public:
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     uint32 Seed;
     
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString ExpirationTime;
     
     FSD_API FFSDWeeklySeedResponse();

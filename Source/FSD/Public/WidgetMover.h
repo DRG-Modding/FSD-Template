@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FWidgetMover {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Export)
     TWeakObjectPtr<UWidget> Widget;
     
     FSD_API FWidgetMover();

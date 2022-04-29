@@ -6,7 +6,7 @@
 
 class APlayerController;
 
-UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFirstPersonSkeletalMeshComponent : public USkeletalMeshComponent {
     GENERATED_BODY()
 public:

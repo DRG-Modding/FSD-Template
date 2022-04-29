@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Perception/AIPerceptionTypes.h"
 #include "FSDAIController.h"
+#include "Perception/AIPerceptionTypes.h"
 #include "HostileGuntowerModuleController.generated.h"
 
 class UAIPerceptionComponent;
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AHostileGuntowerModuleController : public AFSDAIController {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UAIPerceptionComponent* Perception;
     
     AHostileGuntowerModuleController();

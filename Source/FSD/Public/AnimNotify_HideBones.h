@@ -3,7 +3,7 @@
 #include "Animation/AnimNotifies/AnimNotify.h"
 #include "AnimNotify_HideBones.generated.h"
 
-UCLASS(CollapseCategories, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, MinimalAPI)
 class UAnimNotify_HideBones : public UAnimNotify {
     GENERATED_BODY()
 public:

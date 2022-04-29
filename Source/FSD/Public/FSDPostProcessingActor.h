@@ -5,15 +5,15 @@
 #include "Engine/Scene.h"
 #include "FSDPostProcessingActor.generated.h"
 
+class UMaterialInterface;
+class UPostProcessComponent;
+class APostProcessingManager;
 class UBlendableInterface;
 class IBlendableInterface;
 class UObject;
-class UPostProcessComponent;
 class UMaterialInstanceDynamic;
-class APostProcessingManager;
-class UMaterialInterface;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class AFSDPostProcessingActor : public AActor {
     GENERATED_BODY()
 public:
@@ -21,10 +21,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EPostProcessingType PostProcessingType;
     
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UPostProcessComponent* PostProcessComponent;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FWeightedBlendables InitialBlendables;
     
 public:

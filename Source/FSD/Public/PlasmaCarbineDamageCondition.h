@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EPlasmaCarbineConditions.h"
 #include "DamageCondition.h"
+#include "EPlasmaCarbineConditions.h"
 #include "PlasmaCarbineDamageCondition.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UPlasmaCarbineDamageCondition : public UDamageCondition {
     GENERATED_BODY()
 public:

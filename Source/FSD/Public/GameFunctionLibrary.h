@@ -3,25 +3,25 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "GameFunctionLibrary.generated.h"
 
-class UFSDGameInstance;
 class UObject;
-class APlayerCharacter;
-class UAudioComponent;
+class UFSDSaveGame;
 class UWindowWidget;
+class UAudioComponent;
+class APlayerCharacter;
 class USoundBase;
 class UWindowManager;
 class UGoogleAnalyticsWrapper;
 class AFSDGameModeSpaceRig;
-class UFSDSaveGame;
 class AFSDGameState;
 class AFSDGameMode;
+class UFSDGameInstance;
 class UGameData;
 class UDeepDiveManager;
 class ADeepCSGWorld;
 class UCampaignManager;
 class UAsyncManager;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class FSD_API UGameFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -77,7 +77,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static UGoogleAnalyticsWrapper* GetGoogleAnalyticsWrapper(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetGlobalGravityZ(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

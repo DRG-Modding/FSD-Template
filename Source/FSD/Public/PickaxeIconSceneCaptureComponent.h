@@ -4,7 +4,7 @@
 #include "EPickaxePartLocation.h"
 #include "PickaxeIconSceneCaptureComponent.generated.h"
 
-UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPickaxeIconSceneCaptureComponent : public USceneCaptureComponent2D {
     GENERATED_BODY()
 public:

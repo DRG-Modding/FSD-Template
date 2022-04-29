@@ -7,7 +7,7 @@
 
 class UFloodFillSettings;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API ULineSegmentFillerComponent : public UGenerationComponent {
     GENERATED_BODY()
 public:

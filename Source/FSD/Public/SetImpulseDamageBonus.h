@@ -5,7 +5,7 @@
 
 class UDamageImpulse;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class USetImpulseDamageBonus : public UDamageBonusBase {
     GENERATED_BODY()
 public:

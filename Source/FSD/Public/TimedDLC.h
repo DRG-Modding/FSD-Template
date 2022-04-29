@@ -4,7 +4,7 @@
 #include "UObject/NoExportTypes.h"
 #include "TimedDLC.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTimedDLC : public UDLCBase {
     GENERATED_BODY()
 public:

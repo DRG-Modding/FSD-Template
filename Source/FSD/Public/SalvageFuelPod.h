@@ -6,7 +6,7 @@
 class AFuelLineEndPoint;
 class AFuelLineSegment;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ASalvageFuelPod : public ARessuplyPod {
     GENERATED_BODY()
 public:

@@ -7,7 +7,7 @@
 
 class UBiome;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ADeepDiveTester : public AActor {
     GENERATED_BODY()
 public:

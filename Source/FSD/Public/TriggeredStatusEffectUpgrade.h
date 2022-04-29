@@ -6,11 +6,11 @@
 #include "UpgradeValues.h"
 #include "TriggeredStatusEffectUpgrade.generated.h"
 
+class AFSDPlayerState;
 class UStatusEffect;
 class AActor;
-class AFSDPlayerState;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UTriggeredStatusEffectUpgrade : public UItemUpgrade {
     GENERATED_BODY()
 public:
@@ -21,7 +21,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETriggeredStatusEffectType upgradeType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float AoERange;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -4,7 +4,7 @@
 #include "ESchematicType.h"
 #include "ForginSettings.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UForginSettings : public UDataAsset {
     GENERATED_BODY()
 public:

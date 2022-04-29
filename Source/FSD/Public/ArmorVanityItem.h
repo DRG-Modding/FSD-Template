@@ -4,13 +4,13 @@
 #include "TattooArmorItem.h"
 #include "ArmorVanityItem.generated.h"
 
-class UAnimInstance;
-class USkeletalMesh;
-class UMaterialInterface;
 class UArmorMaterialVanityItem;
+class USkeletalMesh;
 class AFSDPlayerState;
+class UAnimInstance;
+class UMaterialInterface;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UArmorVanityItem : public UVanityItem {
     GENERATED_BODY()
 public:
@@ -30,7 +30,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool CropBeard;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ArmorThickness;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

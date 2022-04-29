@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "FSDPlatformHelper.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FFSDPlatformHelper {
     GENERATED_BODY()
 public:

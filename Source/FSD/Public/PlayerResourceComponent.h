@@ -6,7 +6,7 @@
 class UPlayerResourceComponent;
 class APlayerCharacter;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPlayerResourceComponent : public UResourcesComponent {
     GENERATED_BODY()
 public:

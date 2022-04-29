@@ -3,7 +3,7 @@
 #include "Engine/DataAsset.h"
 #include "EnemyPlaySoundKey.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UEnemyPlaySoundKey : public UDataAsset {
     GENERATED_BODY()
 public:

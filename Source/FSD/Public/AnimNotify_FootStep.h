@@ -3,7 +3,7 @@
 #include "Animation/AnimNotifies/AnimNotify.h"
 #include "AnimNotify_FootStep.generated.h"
 
-UCLASS(CollapseCategories, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, MinimalAPI)
 class UAnimNotify_FootStep : public UAnimNotify {
     GENERATED_BODY()
 public:

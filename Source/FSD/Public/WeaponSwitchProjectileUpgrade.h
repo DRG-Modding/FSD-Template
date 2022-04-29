@@ -2,15 +2,15 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "ItemUpgrade.h"
-#include "ProjectileSwitch.h"
 #include "UpgradeValues.h"
+#include "ProjectileSwitch.h"
 #include "WeaponSwitchProjectileUpgrade.generated.h"
 
-class UWeaponHitCounterComponent;
 class AFSDPlayerState;
 class AActor;
+class UWeaponHitCounterComponent;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UWeaponSwitchProjectileUpgrade : public UItemUpgrade {
     GENERATED_BODY()
 public:

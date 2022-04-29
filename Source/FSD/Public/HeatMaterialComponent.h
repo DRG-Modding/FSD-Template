@@ -5,7 +5,7 @@
 
 class UMaterialInstanceDynamic;
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UHeatMaterialComponent : public UActorComponent {
     GENERATED_BODY()
 public:
@@ -13,16 +13,16 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ParameterName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MaxEffect;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UMaterialInstanceDynamic*> MaterialIntances;
     
 public:
     UHeatMaterialComponent();
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnTemperatureChanged(float Temperature, bool Overheated);
     
 public:

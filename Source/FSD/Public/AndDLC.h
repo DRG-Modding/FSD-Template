@@ -3,7 +3,7 @@
 #include "DLCBase.h"
 #include "AndDLC.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UAndDLC : public UDLCBase {
     GENERATED_BODY()
 public:

@@ -5,7 +5,7 @@
 
 class UMaterialInstance;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UDynamicIconSettings : public UDataAsset {
     GENERATED_BODY()
 public:

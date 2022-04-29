@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FOxygenCallback {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOxygenTriggerDelegate Delegate;
     
     FSD_API FOxygenCallback();

@@ -4,7 +4,7 @@
 #include "CSGSTLProperties.h"
 #include "CSGSTL.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UCSGSTL : public USimpleMeshWithCachedTree {
     GENERATED_BODY()
 public:

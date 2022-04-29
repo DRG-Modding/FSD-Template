@@ -6,16 +6,16 @@
 #include "UObject/NoExportTypes.h"
 #include "TerrainMaterial.generated.h"
 
-class UMaterialInstance;
-class UFXSystemAsset;
+class USoundCue;
 class UDialogDataAsset;
 class UResourceData;
+class UMaterialInstance;
 class UTerrainType;
-class USoundCue;
+class UFXSystemAsset;
 class UFXSystemComponent;
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API UTerrainMaterial : public UTerrainMaterialCore {
     GENERATED_BODY()
 public:
@@ -49,7 +49,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool CanHaveDecals;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float PickAxeDigSize;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

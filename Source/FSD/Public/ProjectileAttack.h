@@ -4,21 +4,21 @@
 #include "UObject/NoExportTypes.h"
 #include "ProjectileAttack.generated.h"
 
-UCLASS(Abstract, DefaultToInstanced, EditInlineNew)
+UCLASS(Abstract, Blueprintable, DefaultToInstanced, EditInlineNew)
 class UProjectileAttack : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FFloatInterval Delay;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool TriggerOnEvent;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FFloatInterval HorizontalAngleOffset;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FFloatInterval VerticalAngleOffset;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

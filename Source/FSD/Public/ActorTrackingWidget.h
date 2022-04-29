@@ -1,29 +1,29 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "FSDUserWidget.h"
 #include "UObject/NoExportTypes.h"
+#include "FSDUserWidget.h"
 #include "UObject/NoExportTypes.h"
 #include "Layout/Margin.h"
 #include "ActorTrackingWidget.generated.h"
 
-class USceneComponent;
-class APlayerController;
 class AActor;
+class USceneComponent;
 class UActorTrackingWidget;
+class APlayerController;
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UActorTrackingWidget : public UFSDUserWidget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<USceneComponent> TargetComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float WorldHeightOffset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ScaleBy;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -50,7 +50,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnTargetSet(AActor* NewTarget);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnTargetDistanceChanged(float Distance);
     
 public:
@@ -58,7 +58,7 @@ public:
     void OnShow();
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnInViewChanged(bool inView, float Angle);
     
 public:
@@ -68,7 +68,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector2D GetRenderTranslation() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool FindScreenPosition(APlayerController* PlayerController, FVector WorldLocation, FMargin Margin, FVector& ScreenCord, float& Angle);
     
     UFUNCTION(BlueprintCallable)

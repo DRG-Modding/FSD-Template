@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EMinersManualSection.h"
 #include "UObject/Interface.h"
 #include "EMinersManualSinglePage.h"
+#include "EMinersManualSection.h"
 #include "UObject/NoExportTypes.h"
 #include "MinersManualHandler.generated.h"
 

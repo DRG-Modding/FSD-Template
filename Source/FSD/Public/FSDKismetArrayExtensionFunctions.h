@@ -3,7 +3,7 @@
 #include "Kismet/KismetArrayLibrary.h"
 #include "FSDKismetArrayExtensionFunctions.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UFSDKismetArrayExtensionFunctions : public UKismetArrayLibrary {
     GENERATED_BODY()
 public:

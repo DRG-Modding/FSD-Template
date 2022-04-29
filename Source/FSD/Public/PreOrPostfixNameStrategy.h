@@ -3,7 +3,7 @@
 #include "SimpleNameStrategy.h"
 #include "PreOrPostfixNameStrategy.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API UPreOrPostfixNameStrategy : public USimpleNameStrategy {
     GENERATED_BODY()
 public:

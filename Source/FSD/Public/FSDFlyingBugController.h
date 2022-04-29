@@ -5,7 +5,7 @@
 
 class UBehaviorTree;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AFSDFlyingBugController : public AFSDAIController {
     GENERATED_BODY()
 public:
@@ -13,10 +13,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UBehaviorTree* BehaviourTree;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float UpdateLosInterval;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool SetTargetOnAlert;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

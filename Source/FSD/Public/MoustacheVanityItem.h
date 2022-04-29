@@ -6,7 +6,7 @@
 class USkeletalMesh;
 class UVanityAnimInstance;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UMoustacheVanityItem : public UVanityItem {
     GENERATED_BODY()
 public:

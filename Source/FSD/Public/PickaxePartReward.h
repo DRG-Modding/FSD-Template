@@ -5,7 +5,7 @@
 
 class UPickaxePart;
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UPickaxePartReward : public UUnlockReward {
     GENERATED_BODY()
 public:

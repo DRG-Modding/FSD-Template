@@ -5,7 +5,7 @@
 
 class UCarvedResourceCreator;
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API UCarvedResourceData : public UResourceData {
     GENERATED_BODY()
 public:
@@ -13,7 +13,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UCarvedResourceCreator> CarvedResourceCreator;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float UnitsPerCarver;
     
 public:

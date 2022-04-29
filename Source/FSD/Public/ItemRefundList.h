@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
 #include "ItemRefundListItem.h"
+#include "UObject/NoExportTypes.h"
 #include "ItemRefundList.generated.h"
 
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UItemRefundList : public UDataAsset {
     GENERATED_BODY()
 public:

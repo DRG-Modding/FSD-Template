@@ -1,8 +1,8 @@
 #include "ElectroBeam.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/AudioComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/AudioComponent.h"
 
 class USceneComponent;
 class AActor;

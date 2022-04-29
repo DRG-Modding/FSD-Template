@@ -1,29 +1,29 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
-#include "WeaponFireOwner.h"
-#include "Steerable.h"
 #include "UObject/NoExportTypes.h"
+#include "GameFramework/Actor.h"
+#include "Steerable.h"
+#include "WeaponFireOwner.h"
 #include "UObject/NoExportTypes.h"
 #include "MountedGun.generated.h"
 
+class UGunLogicComponent;
+class UWeaponFireComponent;
 class USkeletalMeshComponent;
 class APlayerCharacter;
-class UWeaponFireComponent;
-class UGunLogicComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AMountedGun : public AActor, public ISteerable, public IWeaponFireOwner {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* Mesh;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UWeaponFireComponent* WeaponFire;
     
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UGunLogicComponent* GunLogic;
     
 public:

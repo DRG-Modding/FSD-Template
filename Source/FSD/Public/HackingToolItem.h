@@ -5,12 +5,12 @@
 
 class UHackingUsableComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class FSD_API AHackingToolItem : public AAnimatedItem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, Transient, ReplicatedUsing=OnRep_HackingUsable, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Export, Transient, ReplicatedUsing=OnRep_HackingUsable)
     TWeakObjectPtr<UHackingUsableComponent> HackingUsable;
     
 public:

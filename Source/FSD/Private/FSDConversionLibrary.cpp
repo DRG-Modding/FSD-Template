@@ -1,7 +1,7 @@
 #include "FSDConversionLibrary.h"
 
-class USceneComponent;
 class AActor;
+class USceneComponent;
 
 FVector_NetQuantizeNormal UFSDConversionLibrary::VectorToNetQuantizeNormal(FVector Vec) {
     return FVector_NetQuantizeNormal{};

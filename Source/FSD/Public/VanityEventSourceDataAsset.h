@@ -4,7 +4,7 @@
 #include "Engine/DataAsset.h"
 #include "VanityEventSourceDataAsset.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UVanityEventSourceDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:

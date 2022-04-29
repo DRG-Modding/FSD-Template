@@ -4,7 +4,7 @@
 #include "CSGConeProperties.h"
 #include "CSGCone.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UCSGCone : public UConvexMeshWithCachedTree {
     GENERATED_BODY()
 public:

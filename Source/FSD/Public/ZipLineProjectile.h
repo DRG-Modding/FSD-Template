@@ -1,41 +1,41 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
 #include "Components/TimelineComponent.h"
-#include "UObject/NoExportTypes.h"
 #include "ZipLineProjectile.generated.h"
 
-class UPointLightComponent;
-class UMaterialInstanceDynamic;
 class UTimelineComponent;
 class UStatusEffect;
 class UCurveFloat;
+class UMaterialInstanceDynamic;
+class UPointLightComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class AZipLineProjectile : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTimelineComponent* Timeline;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float LightIntensity;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MaterialGlow;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnTimelineFloat Callback;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* LightCurve;
     
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TArray<UPointLightComponent*> PointLights;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UMaterialInstanceDynamic*> MaterialInstances;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -47,7 +47,7 @@ protected:
 public:
     AZipLineProjectile();
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnTimelineTick(float NewValue);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

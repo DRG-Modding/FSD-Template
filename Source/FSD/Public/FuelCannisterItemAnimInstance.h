@@ -3,7 +3,7 @@
 #include "Animation/AnimInstance.h"
 #include "FuelCannisterItemAnimInstance.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UFuelCannisterItemAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:

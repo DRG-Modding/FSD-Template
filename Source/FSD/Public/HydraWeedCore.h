@@ -3,10 +3,10 @@
 #include "EnemyPawn.h"
 #include "HydraWeedCore.generated.h"
 
-class AHydraWeedHealer;
 class AHydraWeedShooter;
+class AHydraWeedHealer;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AHydraWeedCore : public AEnemyPawn {
     GENERATED_BODY()
 public:

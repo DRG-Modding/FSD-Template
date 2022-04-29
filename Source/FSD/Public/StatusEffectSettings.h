@@ -6,7 +6,7 @@
 
 class UStatusEffect;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UStatusEffectSettings : public UDataAsset {
     GENERATED_BODY()
 public:

@@ -7,7 +7,7 @@
 class UFloodFillSettings;
 class UTunnelSegmentSetting;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UTunnelSetting : public UDataAsset {
     GENERATED_BODY()
 public:
@@ -29,7 +29,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTunnelSettingItem> VariationSegments;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Weight;
     
     UTunnelSetting();

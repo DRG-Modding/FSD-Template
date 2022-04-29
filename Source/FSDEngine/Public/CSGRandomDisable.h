@@ -4,7 +4,7 @@
 #include "CSGRandomDisableProperties.h"
 #include "CSGRandomDisable.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UCSGRandomDisable : public UCSGSingleChildBase {
     GENERATED_BODY()
 public:

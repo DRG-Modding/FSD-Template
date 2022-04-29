@@ -3,11 +3,11 @@
 #include "AnimatedItem.h"
 #include "TerrainScannerItem.generated.h"
 
-class USceneCaptureComponent2D;
-class USceneComponent;
 class UAnimMontage;
+class USceneComponent;
+class USceneCaptureComponent2D;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATerrainScannerItem : public AAnimatedItem {
     GENERATED_BODY()
 public:
@@ -18,22 +18,22 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ScannerAttachSocketName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float TerrainScannerStartAngle;
     
-    UPROPERTY(BlueprintReadWrite, Transient, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     float TerrainScannerScale;
     
-    UPROPERTY(BlueprintReadWrite, Transient, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     float DelayedTerrainScannerScale;
     
-    UPROPERTY(BlueprintReadWrite, Transient, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     float DelayedTerrainScannerZoom;
     
-    UPROPERTY(BlueprintReadWrite, Transient, VisibleAnywhere, ReplicatedUsing=OnRep_IsLookingAtMap, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_IsLookingAtMap, meta=(AllowPrivateAccess=true))
     bool IsLookingAtMap;
     
-    UPROPERTY(BlueprintReadWrite, Transient, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool UpdateMapToolActors;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -48,10 +48,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimMontage* EndTP;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* TerrainScannerRoot;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneCaptureComponent2D* TerrainScannerCapture;
     
 public:

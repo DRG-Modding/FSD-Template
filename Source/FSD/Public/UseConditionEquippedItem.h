@@ -5,7 +5,7 @@
 
 class AItem;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UUseConditionEquippedItem : public UUseConditionBase {
     GENERATED_BODY()
 public:

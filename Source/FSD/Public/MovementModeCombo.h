@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FMovementModeCombo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<EMovementMode> Mode;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<EMovementCustomMode> CustomMode;
     
     FSD_API FMovementModeCombo();

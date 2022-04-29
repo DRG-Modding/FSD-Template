@@ -3,17 +3,17 @@
 #include "GameFramework/Actor.h"
 #include "InfluenceTester.generated.h"
 
-class UCaveInfluencer;
 class USphereComponent;
+class UCaveInfluencer;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AInfluenceTester : public AActor {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCaveInfluencer* Influencer;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USphereComponent* Sphere;
     
     AInfluenceTester();

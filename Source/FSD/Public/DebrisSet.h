@@ -5,7 +5,7 @@
 
 class UDebrisBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UDebrisSet : public UDataAsset {
     GENERATED_BODY()
 public:

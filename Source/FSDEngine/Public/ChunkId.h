@@ -6,13 +6,13 @@ USTRUCT(BlueprintType)
 struct FSDENGINE_API FChunkId {
     GENERATED_BODY()
 public:
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     int16 X;
     
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     int16 Y;
     
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     int16 Z;
     
     FChunkId();

@@ -3,7 +3,7 @@
 #include "Engine/DataAsset.h"
 #include "EnemySpawnEffectsKey.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UEnemySpawnEffectsKey : public UDataAsset {
     GENERATED_BODY()
 public:

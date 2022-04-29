@@ -4,14 +4,14 @@
 
 class UResourceData;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FPLSResource {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UResourceData* Resource;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float AmountToGenerate;
     
     FSD_API FPLSResource();

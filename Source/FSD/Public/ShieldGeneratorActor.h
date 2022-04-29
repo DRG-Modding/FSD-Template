@@ -3,21 +3,21 @@
 #include "ThrowableActor.h"
 #include "ShieldGeneratorActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class AShieldGeneratorActor : public AThrowableActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Replicated)
     float GeneratorRadius;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Replicated)
     float DeployDelay;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bPushStatusEffectOnExit;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float GeneratorLifetime;
     
 public:

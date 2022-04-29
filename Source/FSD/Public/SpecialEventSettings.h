@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Curves/CurveFloat.h"
 #include "Engine/DataAsset.h"
+#include "Curves/CurveFloat.h"
 #include "SpecialEventSettings.generated.h"
 
+class UDebrisPositioning;
 class USpecialEvent;
 class AEventRewardFrame;
-class UDebrisPositioning;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class USpecialEventSettings : public UDataAsset {
     GENERATED_BODY()
 public:
@@ -22,13 +22,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDebrisPositioning* EventRewardFramePositioning;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float EventRewardRadius;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float CreditsReward;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float XPReward;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -1,11 +1,11 @@
 #include "CoilGun.h"
+#include "CoilgunTrailSpawner.h"
 #include "DamageComponent.h"
 #include "NiagaraComponent.h"
-#include "CoilgunTrailSpawner.h"
 
+class AActor;
 class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
-class AActor;
 class UHealthComponentBase;
 class ACoilgunWeaponTrail;
 

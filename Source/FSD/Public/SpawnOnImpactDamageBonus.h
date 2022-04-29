@@ -6,7 +6,7 @@
 
 class AActor;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class USpawnOnImpactDamageBonus : public UDamageBonusBase {
     GENERATED_BODY()
 public:

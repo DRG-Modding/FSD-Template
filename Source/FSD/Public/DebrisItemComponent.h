@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "IRandRange.h"
-#include "DebrisActorComponent.h"
 #include "DebrisItemActorItem.h"
+#include "DebrisActorComponent.h"
+#include "IRandRange.h"
 #include "EDebrisItemPass.h"
 #include "DebrisItemComponent.generated.h"
 
 class UDebrisPositioning;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UDebrisItemComponent : public UDebrisActorComponent {
     GENERATED_BODY()
 public:
@@ -21,10 +21,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EDebrisItemPass ItemPass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float InfluenceRange;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MinDistanceToImportantLocations;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

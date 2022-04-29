@@ -4,14 +4,14 @@
 #include "EImpulseDirectionSource.h"
 #include "DamageImpulse.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UDamageImpulse : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ImpactForce;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float UpwardForceScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

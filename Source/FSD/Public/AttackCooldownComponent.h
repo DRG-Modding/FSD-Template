@@ -4,7 +4,7 @@
 #include "AttackCooldown.h"
 #include "AttackCooldownComponent.generated.h"
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UAttackCooldownComponent : public UActorComponent {
     GENERATED_BODY()
 public:

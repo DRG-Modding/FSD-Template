@@ -5,7 +5,7 @@
 
 class USeasonEventData;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USeasonReplicatorComponent : public UActorComponent {
     GENERATED_BODY()
 public:

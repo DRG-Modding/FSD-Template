@@ -6,7 +6,7 @@
 #include "GameplayTagContainer.h"
 #include "EscortMuleTrack.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class AEscortMuleTrack : public AActor, public IGameplayTagAssetInterface {
     GENERATED_BODY()
 public:

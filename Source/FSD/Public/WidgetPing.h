@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FWidgetPing {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<UWidget> Widget;
     
     FSD_API FWidgetPing();

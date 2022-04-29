@@ -3,7 +3,7 @@
 #include "Engine/DataAsset.h"
 #include "BaseResource.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBaseResource : public UDataAsset {
     GENERATED_BODY()
 public:

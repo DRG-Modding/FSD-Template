@@ -9,7 +9,7 @@ class AProceduralSetup;
 class UDebrisPositioning;
 class ARessuplyPod;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UHackableBuildingObjective : public UObjective {
     GENERATED_BODY()
 public:

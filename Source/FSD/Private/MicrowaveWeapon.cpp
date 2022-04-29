@@ -1,6 +1,6 @@
 #include "MicrowaveWeapon.h"
-#include "DamageComponent.h"
 #include "CapsuleHitscanComponent.h"
+#include "DamageComponent.h"
 
 class UPrimitiveComponent;
 class AActor;
@@ -44,6 +44,9 @@ void AMicrowaveWeapon::OnPushedDamageEffect(UHealthComponentBase* healthComp) {
 void AMicrowaveWeapon::EndCharacterOverheatAnim() {
 }
 
+void AMicrowaveWeapon::All_ShowNeuroSpread_Implementation(const FVector& Location) {
+}
+
 AMicrowaveWeapon::AMicrowaveWeapon() {
     this->DamageComp = CreateDefaultSubobject<UDamageComponent>(TEXT("MicrowaveDamage"));
     this->CapsuleHitscanComp = CreateDefaultSubobject<UCapsuleHitscanComponent>(TEXT("CapsuleHitscanComponent"));
@@ -58,11 +61,15 @@ AMicrowaveWeapon::AMicrowaveWeapon() {
     this->GammaContaminationRange = 300.00f;
     this->ExplodableBlisterClass = NULL;
     this->BlisteringNecrosisChance = 0.10f;
+    this->MinTimeBetweenBlisteringNecrosis = 0.10f;
     this->FireEffect = NULL;
     this->NeuroToSpread = NULL;
     this->SlowEffect = NULL;
     this->ImpactParticleEnemies = NULL;
     this->ImpactParticleTerrain = NULL;
+    this->NeuroSpreadParticles = NULL;
+    this->P_NeuroSpreadParticles = NULL;
+    this->NeuroSpreadSound = NULL;
     this->MicrowaveMuzzle = NULL;
     this->MuzzleComp = NULL;
     this->WeaponRange = 1000.00f;
@@ -71,9 +78,12 @@ AMicrowaveWeapon::AMicrowaveWeapon() {
     this->KilledTargetsExplosionChance = 0.00f;
     this->ExplosionOCSystem = NULL;
     this->NeuroSpreadRadius = 200.00f;
+    this->TemperatureAmplification = 0.00f;
     this->RadiantSuperheaterActive = false;
     this->RadiantSuperheaterFrostShockChance = 0.50f;
+    this->RadiantSuperheaterHeatShockChance = 0.50f;
     this->RadiantSuperheaterMinColdDamage = 50.00f;
+    this->RadiantSuperheaterMinHeatDamage = 50.00f;
     this->RadiantSuperheaterFrostTransferFactor = 0.50f;
     this->RadiantSuperheaterHeatTransferFactor = 0.50f;
     this->FrostShockTarget = NULL;

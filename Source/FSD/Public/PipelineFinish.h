@@ -2,37 +2,37 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
-#include "ERessuplyPodState.h"
 #include "EInputKeys.h"
+#include "ERessuplyPodState.h"
 #include "UObject/NoExportTypes.h"
 #include "PipelineFinish.generated.h"
 
+class APipelineExtractorPod;
 class USingleUsableComponent;
 class UTrackBuilderConnectPoint;
-class APipelineExtractorPod;
-class ARessuplyPod;
 class APlayerCharacter;
+class ARessuplyPod;
 class ATrackBuilderSegment;
 class APipelineSegment;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class FSD_API APipelineFinish : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTrackBuilderConnectPoint* PipelineEndConnection;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USingleUsableComponent* UsableOrderExtractor;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<APipelineExtractorPod> ExtractPodClass;
     
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_ExtractorPod, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_ExtractorPod, meta=(AllowPrivateAccess=true))
     APipelineExtractorPod* ExtractorPod;
     
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_PipelineCompleted, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_PipelineCompleted, meta=(AllowPrivateAccess=true))
     bool bPipelineCompleted;
     
 public:

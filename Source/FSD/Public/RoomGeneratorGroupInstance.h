@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FRoomGeneratorGroupInstance {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<URoomGenerator*> Rooms;
     
     FSD_API FRoomGeneratorGroupInstance();

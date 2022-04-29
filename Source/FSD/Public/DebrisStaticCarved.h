@@ -8,10 +8,10 @@
 #include "ECarveFilterType.h"
 #include "DebrisStaticCarved.generated.h"
 
-class UTerrainMaterial;
 class AActor;
+class UTerrainMaterial;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UDebrisStaticCarved : public UDebrisBase {
     GENERATED_BODY()
 public:
@@ -30,13 +30,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ECarveFilterType Filter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float CarveOffsetRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> SpawnAttachClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float AttachSpawnOffsetDistance;
     
     UDebrisStaticCarved();

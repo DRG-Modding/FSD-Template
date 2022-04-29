@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DamageCondition.h"
 #include "EDirectDamageConditionEnum.h"
+#include "DamageCondition.h"
 #include "DirectDamageCondition.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UDirectDamageCondition : public UDamageCondition {
     GENERATED_BODY()
 public:

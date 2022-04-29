@@ -6,7 +6,7 @@
 class UMissionTemplate;
 class UMissionComplexity;
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UUnlockComplexityReward : public UUnlockReward {
     GENERATED_BODY()
 public:

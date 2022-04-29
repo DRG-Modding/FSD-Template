@@ -4,7 +4,7 @@
 #include "EShowroomScaling.h"
 #include "EnemyShowroomItem.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class AEnemyShowroomItem : public AShowroomItem {
     GENERATED_BODY()
 public:

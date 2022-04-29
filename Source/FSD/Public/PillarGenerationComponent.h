@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GenerationComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "GenerationComponent.h"
 #include "PillarGenerationComponent.generated.h"
 
 class UPillarSettings;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UPillarGenerationComponent : public UGenerationComponent {
     GENERATED_BODY()
 public:

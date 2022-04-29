@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FVanitySlotStore {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Transient, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UVanityItem*> VanityItems;
     
     FSD_API FVanitySlotStore();

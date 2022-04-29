@@ -6,7 +6,7 @@
 
 class UDamageCondition;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UDamageModifier : public UDataAsset {
     GENERATED_BODY()
 public:

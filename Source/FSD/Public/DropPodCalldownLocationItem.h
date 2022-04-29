@@ -6,7 +6,7 @@
 
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ADropPodCalldownLocationItem : public AGenerationItem {
     GENERATED_BODY()
 public:

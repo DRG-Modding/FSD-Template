@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UpgradeValues.h"
 #include "StandardItemUpgrade.h"
 #include "EDoubleDrillUpgradeType.h"
-#include "UpgradeValues.h"
 #include "DoubleDrillUpgrade.generated.h"
 
 class AItem;
 class AFSDPlayerState;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UDoubleDrillUpgrade : public UStandardItemUpgrade {
     GENERATED_BODY()
 public:

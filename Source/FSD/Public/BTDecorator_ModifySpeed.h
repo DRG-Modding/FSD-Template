@@ -3,12 +3,12 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "BTDecorator_ModifySpeed.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBTDecorator_ModifySpeed : public UBTDecorator {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float SpeedModifier;
     
 public:

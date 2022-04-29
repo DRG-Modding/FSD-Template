@@ -5,7 +5,7 @@
 
 class UResourceData;
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UResourceReward : public UReward {
     GENERATED_BODY()
 public:

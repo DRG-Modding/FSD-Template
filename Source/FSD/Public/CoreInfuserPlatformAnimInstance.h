@@ -3,7 +3,7 @@
 #include "Animation/AnimInstance.h"
 #include "CoreInfuserPlatformAnimInstance.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UCoreInfuserPlatformAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:

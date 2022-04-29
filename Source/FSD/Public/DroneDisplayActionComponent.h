@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/SceneComponent.h"
 #include "EDroneActions.h"
+#include "Components/SceneComponent.h"
 #include "DroneDisplayActionComponent.generated.h"
 
 class UTextRenderComponent;
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UDroneDisplayActionComponent : public USceneComponent {
     GENERATED_BODY()
 public:

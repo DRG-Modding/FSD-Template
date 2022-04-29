@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EPipelineBuildState.h"
 #include "Animation/AnimInstance.h"
-#include "EPipelineExtractorPodAnimState.h"
 #include "ERessuplyPodState.h"
+#include "EPipelineExtractorPodAnimState.h"
+#include "EPipelineBuildState.h"
 #include "ERefineryState.h"
 #include "PipelineExtractorPodAnimInstance.generated.h"
 
 class APipelineStart;
-class APipelineExtractorPod;
 class APipelineSegment;
+class APipelineExtractorPod;
 class AFSDRefinery;
 
-UCLASS(Abstract, NonTransient)
+UCLASS(Abstract, Blueprintable, NonTransient)
 class FSD_API UPipelineExtractorPodAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ConnectionRotation;
     
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EPipelineExtractorPodAnimState AnimState;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -32,19 +32,19 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ERefineryState RefineryState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float RotationSpeed;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<APipelineExtractorPod> Pod;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<APipelineSegment> ConnectedSegment;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<APipelineStart> PipelineStart;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<AFSDRefinery> Refinery;
     
 public:

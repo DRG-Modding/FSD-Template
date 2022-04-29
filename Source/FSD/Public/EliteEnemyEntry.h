@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EEnemyHealthScaling.h"
 #include "EliteEnemyBan.h"
+#include "EEnemyHealthScaling.h"
 #include "EliteEnemyEntry.generated.h"
 
 class UStatusEffect;
@@ -12,7 +12,7 @@ USTRUCT(BlueprintType)
 struct FEliteEnemyEntry {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float HeroChance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

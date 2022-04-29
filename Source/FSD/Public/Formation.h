@@ -4,11 +4,11 @@
 
 class UFormationData;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FFormation {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UFormationData* FormationData;
     
     FSD_API FFormation();

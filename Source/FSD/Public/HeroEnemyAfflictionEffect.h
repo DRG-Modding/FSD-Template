@@ -4,7 +4,7 @@
 #include "GameplayTagContainer.h"
 #include "HeroEnemyAfflictionEffect.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UHeroEnemyAfflictionEffect : public UAfflictionEffect {
     GENERATED_BODY()
 public:

@@ -2,22 +2,22 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "ERoomMirror.h"
-#include "ERoomMirroringSupport.h"
 #include "GameplayTagContainer.h"
+#include "ERoomMirroringSupport.h"
 #include "RoomBurner.generated.h"
 
-class UBiome;
 class URoomGenerator;
+class ADeepCSGWorld;
 class UDifficultySetting;
+class UBiome;
 class UEnemyDescriptor;
 class UMissionMutator;
 class UMissionWarning;
 class USpecialEvent;
 class UMissionTemplate;
-class ADeepCSGWorld;
 class AProceduralSetup;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ARoomBurner : public AActor {
     GENERATED_BODY()
 public:
@@ -28,10 +28,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ERoomMirror MirrorTest;
     
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     URoomGenerator* RoomGenerator;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float RoomRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -91,14 +91,14 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMissionTemplate* CustomMissionTemplate;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ADeepCSGWorld* CSGWorld;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AProceduralSetup* PLSLiveEditor;
     
 private:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     URoomGenerator* LiveEditRoomGenerator;
     
 public:

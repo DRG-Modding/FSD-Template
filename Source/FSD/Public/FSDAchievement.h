@@ -4,11 +4,11 @@
 #include "EFSDAchievementType.h"
 #include "FSDAchievement.generated.h"
 
-class AFSDPlayerController;
 class UObject;
+class AFSDPlayerController;
 class UFSDAchievement;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UFSDAchievement : public USavableDataAsset {
     GENERATED_BODY()
 public:
@@ -22,7 +22,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString XboxAchievementID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float AchievementTargetValue;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -39,7 +39,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void ResetStatForAchievement(UFSDAchievement* AchievementToReset, const AFSDPlayerController* Player);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetAchievementTargetValue();
     
 };

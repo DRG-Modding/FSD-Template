@@ -3,7 +3,7 @@
 #include "Engine/DataAsset.h"
 #include "NewsTextLists.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UNewsTextLists : public UDataAsset {
     GENERATED_BODY()
 public:

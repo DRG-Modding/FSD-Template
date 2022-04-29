@@ -5,13 +5,13 @@
 #include "DefaultPickaxeParts.h"
 #include "PickaxeSettings.generated.h"
 
-class UPickaxePart;
-class UAnimMontage;
 class UPlayerCharacterID;
 class APickaxePreviewActor;
+class UAnimMontage;
+class UPickaxePart;
 class UItemID;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UPickaxeSettings : public UDataAsset {
     GENERATED_BODY()
 public:
@@ -25,7 +25,7 @@ public:
     UAnimMontage* Salute_TP;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UPickaxePart*> Parts;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

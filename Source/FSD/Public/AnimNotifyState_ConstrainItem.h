@@ -3,7 +3,7 @@
 #include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "AnimNotifyState_ConstrainItem.generated.h"
 
-UCLASS(CollapseCategories, EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, EditInlineNew, MinimalAPI)
 class UAnimNotifyState_ConstrainItem : public UAnimNotifyState {
     GENERATED_BODY()
 public:

@@ -6,7 +6,7 @@
 
 class URichTextInputWidget;
 
-UCLASS(Abstract, HideDropdown)
+UCLASS(Abstract, Blueprintable, HideDropdown)
 class URichTextInputDecorator : public UCustomRichTextDecorator {
     GENERATED_BODY()
 public:

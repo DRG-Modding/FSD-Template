@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Curves/CurveFloat.h"
 #include "ETreasureType.h"
 #include "Engine/DataAsset.h"
+#include "Curves/CurveFloat.h"
 #include "TreasureSettings.generated.h"
 
-class UVictoryPose;
 class UItemAquisitionSource;
 class UItemSkinSet;
 class USpecialEvent;
+class UVictoryPose;
 class UDrinkableDataAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTreasureSettings : public UDataAsset {
     GENERATED_BODY()
 public:
@@ -40,7 +40,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USpecialEvent*> TreasureEvents;
     
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UVictoryPose*> VictoryPoses;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CSGBuilderBaseSceneComponent.h"
 #include "SDFBaseProperties.h"
+#include "CSGBuilderBaseSceneComponent.h"
 #include "SDFBaseComponent.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSDENGINE_API USDFBaseComponent : public UCSGBuilderBaseSceneComponent {
     GENERATED_BODY()
 public:

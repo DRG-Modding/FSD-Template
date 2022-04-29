@@ -5,12 +5,12 @@
 
 class UItemUpgrade;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ASentryGunItem : public APlaceableItem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UItemUpgrade*> upgrades;
     
 public:

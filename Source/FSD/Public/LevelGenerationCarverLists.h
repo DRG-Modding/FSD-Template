@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FLevelGenerationCarverLists {
     GENERATED_BODY()
 public:
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FLevelGenerationCarver> Carvers;
     
     FSD_API FLevelGenerationCarverLists();

@@ -5,7 +5,7 @@
 
 class USoundMix;
 
-UCLASS(CollapseCategories, EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, EditInlineNew, MinimalAPI)
 class UAnimNotifyState_SoundMix : public UAnimNotifyState {
     GENERATED_BODY()
 public:
@@ -13,7 +13,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundMix* SoundMix;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MaxDistance;
     
 public:

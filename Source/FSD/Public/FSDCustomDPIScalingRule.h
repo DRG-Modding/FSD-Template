@@ -3,7 +3,7 @@
 #include "Engine/DPICustomScalingRule.h"
 #include "FSDCustomDPIScalingRule.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UFSDCustomDPIScalingRule : public UDPICustomScalingRule {
     GENERATED_BODY()
 public:

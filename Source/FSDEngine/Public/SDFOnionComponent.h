@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SDFOnionProperties.h"
 #include "SDFBaseComponent.h"
+#include "SDFOnionProperties.h"
 #include "SDFOnionComponent.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSDENGINE_API USDFOnionComponent : public USDFBaseComponent {
     GENERATED_BODY()
 public:

@@ -10,7 +10,7 @@ class UPlayerCharacterID;
 class AItem;
 class UItemData;
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API UItemID : public USavableDataAsset {
     GENERATED_BODY()
 public:

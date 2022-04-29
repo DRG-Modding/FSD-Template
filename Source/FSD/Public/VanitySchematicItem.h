@@ -5,7 +5,7 @@
 
 class UVanityItem;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UVanitySchematicItem : public USchematicItem {
     GENERATED_BODY()
 public:

@@ -6,7 +6,7 @@
 
 class UObject;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UCommnuityRewardBundle : public UDataAsset {
     GENERATED_BODY()
 public:

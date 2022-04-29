@@ -3,7 +3,7 @@
 #include "Engine/DataAsset.h"
 #include "BoolUserSettingAsset.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class FSD_API UBoolUserSettingAsset : public UDataAsset {
     GENERATED_BODY()
 public:

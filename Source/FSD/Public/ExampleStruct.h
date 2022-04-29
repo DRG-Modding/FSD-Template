@@ -2,11 +2,11 @@
 #include "CoreMinimal.h"
 #include "ExampleStruct.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FExampleStruct {
     GENERATED_BODY()
 public:
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Field;
     
     FSD_API FExampleStruct();

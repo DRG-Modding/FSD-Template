@@ -4,7 +4,7 @@
 #include "UObject/NoExportTypes.h"
 #include "SavableObject.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class USavableObject : public UObject {
     GENERATED_BODY()
 public:

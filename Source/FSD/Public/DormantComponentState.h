@@ -5,23 +5,23 @@
 
 class UActorComponent;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FDormantComponentState {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Export)
     TWeakObjectPtr<UActorComponent> Component;
     
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ECollisionEnabled::Type> Collision;
     
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName CollisionProfileName;
     
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 Active: 1;
     
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 Visible: 1;
     
     FSD_API FDormantComponentState();

@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TunnelNode.h"
-#include "EDebrisItemPass.h"
 #include "Components/ActorComponent.h"
+#include "PathObstacle.h"
+#include "EDebrisItemPass.h"
+#include "TunnelNode.h"
 #include "LevelGenerationCarverLists.h"
 #include "RoomNode.h"
-#include "PathObstacle.h"
 #include "GeneratedDebrisItem.h"
 #include "GeneratedInfluenceSets.h"
 #include "ProceduralController.generated.h"
 
-UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UProceduralController : public UActorComponent {
     GENERATED_BODY()
 public:

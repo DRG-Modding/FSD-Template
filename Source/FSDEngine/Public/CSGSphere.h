@@ -4,7 +4,7 @@
 #include "CSGSphereProperties.h"
 #include "CSGSphere.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UCSGSphere : public UConvexMeshWithCachedTree {
     GENERATED_BODY()
 public:

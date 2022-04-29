@@ -5,12 +5,12 @@
 
 class UItemPlacerAggregator;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class FSD_API APipelineBuilderItem : public ATrackBuilderItem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UItemPlacerAggregator* SegmentPlacer;
     
 public:

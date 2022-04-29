@@ -4,7 +4,7 @@
 #include "CharacterShouts.h"
 #include "CharacterShoutsData.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UCharacterShoutsData : public UDataAsset {
     GENERATED_BODY()
 public:

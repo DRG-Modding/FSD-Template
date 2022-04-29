@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EHeadVanityType.h"
 #include "VanityItem.h"
 #include "ECharacterHeadMesh.h"
-#include "EHeadVanityType.h"
 #include "HeadVanityItem.generated.h"
 
 class USkeletalMesh;
-class UMaterialInterface;
 class UVanityAnimInstance;
+class UMaterialInterface;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UHeadVanityItem : public UVanityItem {
     GENERATED_BODY()
 public:
@@ -38,7 +38,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool HideAll;
     
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool HideHead;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -5,17 +5,17 @@
 #include "ProfileCategoryTiming.h"
 #include "ProfilingSubSystem.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UProfilingSubSystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FProfileEntry> Entries;
     
 public:
     UProfilingSubSystem();
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetTotalTime() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

@@ -4,12 +4,12 @@
 #include "TentacleTarget.h"
 #include "StabberVine.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class AStabberVine : public ATentacleBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, ReplicatedUsing=OnRep_DesiredTarget, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_DesiredTarget, meta=(AllowPrivateAccess=true))
     FTentacleTarget DesiredTarget;
     
 public:

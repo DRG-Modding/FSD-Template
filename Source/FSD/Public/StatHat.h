@@ -3,7 +3,7 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "StatHat.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UStatHat : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

@@ -6,7 +6,7 @@
 class UTexture2D;
 class UMaterialInstanceDynamic;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UTextureDynamicIcon : public UDynamicIcon {
     GENERATED_BODY()
 public:

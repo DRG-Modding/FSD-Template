@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "FSDPhysicsActor.h"
-#include "Throwable.h"
 #include "AttachChangeSigDelegate.h"
+#include "Throwable.h"
 #include "OnCarriableDepositedDelegate.h"
 #include "UObject/NoExportTypes.h"
 #include "CarriableItem.generated.h"
 
 class APlayerCharacter;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ACarriableItem : public AFSDPhysicsActor, public IThrowable {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAttachChangeSig OnAttachedChangeDelegate;
     
 protected:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnCarriableDeposited OnCarriableDeposited;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

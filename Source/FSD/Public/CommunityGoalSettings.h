@@ -7,7 +7,7 @@
 class UCommunityGoalFaction;
 class UCommunityGoal;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UCommunityGoalSettings : public UDataAsset {
     GENERATED_BODY()
 public:

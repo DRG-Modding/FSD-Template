@@ -7,7 +7,7 @@ class UObject;
 class USoundClass;
 class USoundMix;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UAudioFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -18,7 +18,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void PushTimedSoundMix(UObject* contextObject, USoundMix* mix, float Duration);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetSoundClassVolume(USoundClass* SoundClass);
     
 };

@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct FPostProcessingBlendable {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TScriptInterface<IBlendableInterface> Blendable;
     
     FSD_API FPostProcessingBlendable();

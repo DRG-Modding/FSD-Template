@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UpgradeValues.h"
 #include "StandardItemUpgrade.h"
 #include "EHitScanBaseUpgradeType.h"
-#include "UpgradeValues.h"
 #include "HitscanBaseUpgrade.generated.h"
 
 class AFSDPlayerState;
 class AItem;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UHitscanBaseUpgrade : public UStandardItemUpgrade {
     GENERATED_BODY()
 public:

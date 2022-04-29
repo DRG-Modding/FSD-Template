@@ -4,7 +4,7 @@
 #include "UObject/NoExportTypes.h"
 #include "FSDDebrisSettings.generated.h"
 
-UCLASS(DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class UFSDDebrisSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:

@@ -5,7 +5,7 @@
 #include "RandInterval.h"
 #include "EnemyGroupDescriptor.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class FSD_API UEnemyGroupDescriptor : public UDataAsset {
     GENERATED_BODY()
 public:

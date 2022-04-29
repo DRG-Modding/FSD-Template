@@ -3,7 +3,7 @@
 #include "AfflictionEffect.h"
 #include "ShieldLinkedAfflictionEffect.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UShieldLinkedAfflictionEffect : public UAfflictionEffect {
     GENERATED_BODY()
 public:

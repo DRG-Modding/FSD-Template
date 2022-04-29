@@ -4,7 +4,7 @@
 #include "RegisteredDeviceInfo.h"
 #include "RawInputFunctionLibrary.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class URawInputFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

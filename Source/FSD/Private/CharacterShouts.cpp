@@ -24,5 +24,6 @@ FCharacterShouts::FCharacterShouts() {
     this->UpgradeBought = NULL;
     this->WaitingInDropPod = NULL;
     this->Carrying = NULL;
+    this->WaitingInEscapePod = NULL;
 }
 

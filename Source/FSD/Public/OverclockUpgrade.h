@@ -5,7 +5,7 @@
 
 class USchematicCategory;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UOverclockUpgrade : public UCombinedUpgrade {
     GENERATED_BODY()
 public:

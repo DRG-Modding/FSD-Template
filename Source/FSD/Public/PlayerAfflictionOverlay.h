@@ -6,10 +6,10 @@
 #include "PlayerAfflictionOverlay.generated.h"
 
 class UTexture2D;
-class USoundCue;
 class UPlayerAfflictionOverlayWidget;
+class USoundCue;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UPlayerAfflictionOverlay : public UDataAsset {
     GENERATED_BODY()
 public:

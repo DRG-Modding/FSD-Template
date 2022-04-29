@@ -4,7 +4,7 @@
 #include "UObject/NoExportTypes.h"
 #include "SavableActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ASavableActor : public AActor {
     GENERATED_BODY()
 public:

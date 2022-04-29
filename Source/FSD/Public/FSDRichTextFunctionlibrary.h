@@ -4,7 +4,7 @@
 #include "RichTextParseResult.h"
 #include "FSDRichTextFunctionlibrary.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UFSDRichTextFunctionlibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

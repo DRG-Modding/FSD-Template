@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/Object.h"
 #include "SchematicItem.generated.h"
 
 class UTexture;
 
-UCLASS(Abstract, BlueprintType, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class USchematicItem : public UObject {
     GENERATED_BODY()
 public:

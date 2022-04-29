@@ -1,42 +1,42 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
-#include "ResourceChangedSignatureDelegate.h"
-#include "ResourceAddedSignatureDelegate.h"
-#include "ResourceFullSignatureDelegate.h"
 #include "UObject/NoExportTypes.h"
+#include "ResourceChangedSignatureDelegate.h"
+#include "UObject/Object.h"
+#include "ResourceFullSignatureDelegate.h"
+#include "ResourceAddedSignatureDelegate.h"
 #include "CappedResource.generated.h"
 
 class UResourceData;
 class UCappedResource;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UCappedResource : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FResourceChangedSignature OnChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FResourceAddedSignature OnIncreased;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FResourceFullSignature OnFull;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     UResourceData* Data;
     
-    UPROPERTY(BlueprintReadWrite, ReplicatedUsing=OnRep_CurrentAmount, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_CurrentAmount)
     float currentAmount;
     
-    UPROPERTY(BlueprintReadWrite, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Replicated)
     float MaxAmount;
     
-    UPROPERTY(BlueprintReadWrite, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Replicated)
     float TotalCollected;
     
-    UPROPERTY(BlueprintReadWrite, ReplicatedUsing=OnRep_FullFlag, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_FullFlag, meta=(AllowPrivateAccess=true))
     int32 FullFlag;
     
 public:
@@ -53,7 +53,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_FullFlag(int32 OldValue);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_CurrentAmount(float OldAmount);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -75,7 +75,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FColor GetColor() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetCapacityPct() const;
     
     UFUNCTION(BlueprintCallable)

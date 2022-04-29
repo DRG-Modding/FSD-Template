@@ -3,10 +3,10 @@
 #include "Engine/DataAsset.h"
 #include "GameDLCSettings.generated.h"
 
-class UObject;
 class UGameDLC;
+class UObject;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class FSD_API UGameDLCSettings : public UDataAsset {
     GENERATED_BODY()
 public:

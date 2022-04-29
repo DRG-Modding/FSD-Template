@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "BTTask_MessageAI.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBTTask_MessageAI : public UBTTaskNode {
     GENERATED_BODY()
 public:

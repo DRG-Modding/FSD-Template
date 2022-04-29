@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Objective.h"
 #include "EliminationDescriptors.h"
 #include "EliminationTarget.h"
+#include "Objective.h"
 #include "EliminationObjective.generated.h"
 
-class UEnemyDescriptor;
-class AFSDPawn;
-class UCaveInfluencer;
 class UDebrisPositioning;
+class AFSDPawn;
 class AActor;
+class UCaveInfluencer;
 class UDebrisBase;
 class UHealthComponentBase;
+class UEnemyDescriptor;
 
-UCLASS(Abstract, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UEliminationObjective : public UObjective {
     GENERATED_BODY()
 public:
@@ -33,25 +33,25 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCaveInfluencer* CaveInfluencer;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float DebrisRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSoftObjectPtr<UDebrisBase>> ObjectDebris;
     
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_EnemiesKilled, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_EnemiesKilled, meta=(AllowPrivateAccess=true))
     int32 EnemiesKilled;
     
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_EnemiesToKill, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_EnemiesToKill, meta=(AllowPrivateAccess=true))
     int32 EnemiesToKill;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEliminationDescriptors> TargetDescriptors;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FEliminationDescriptors> TargetQueue;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FEliminationTarget> ActiveEliminationTargets;
     
 public:

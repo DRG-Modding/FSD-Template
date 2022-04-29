@@ -3,7 +3,7 @@
 #include "DamageCondition.h"
 #include "ClipStatusDamageCondition.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UClipStatusDamageCondition : public UDamageCondition {
     GENERATED_BODY()
 public:

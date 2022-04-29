@@ -7,7 +7,7 @@
 class AFSDPlayerController;
 class UCampaign;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UWeeklyTimerCampaignRequirement : public UCampaignRequirement {
     GENERATED_BODY()
 public:

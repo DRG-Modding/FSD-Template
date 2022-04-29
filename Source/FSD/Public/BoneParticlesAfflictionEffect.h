@@ -6,7 +6,7 @@
 class USoundCue;
 class UParticleSystem;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UBoneParticlesAfflictionEffect : public UAfflictionEffect {
     GENERATED_BODY()
 public:

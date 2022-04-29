@@ -4,7 +4,7 @@
 #include "SDFBoxProperties.h"
 #include "SDFBox.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSDENGINE_API USDFBox : public USDFBaseWithTransform {
     GENERATED_BODY()
 public:

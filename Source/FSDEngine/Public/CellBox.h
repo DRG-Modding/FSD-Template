@@ -3,14 +3,14 @@
 #include "CellId.h"
 #include "CellBox.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FCellBox {
     GENERATED_BODY()
 public:
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCellId Min;
     
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCellId Max;
     
     FSDENGINE_API FCellBox();

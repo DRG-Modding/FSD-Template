@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Animation/AnimNotifies/AnimNotify.h"
 #include "UObject/NoExportTypes.h"
+#include "Animation/AnimNotifies/AnimNotify.h"
 #include "UObject/NoExportTypes.h"
 #include "AnimNotify_FSDPlayParticleEffect.generated.h"
 
 class UFXSystemAsset;
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class UAnimNotify_FSDPlayParticleEffect : public UAnimNotify {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "WeaponHitCountEffect.generated.h"
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UWeaponHitCountEffect : public UObject {
     GENERATED_BODY()
 public:

@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FGMMutatorItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UMutator*> Mutators;
     
     FSD_API FGMMutatorItem();

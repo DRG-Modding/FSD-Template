@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "UObject/NoExportTypes.h"
+#include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "UObject/NoExportTypes.h"
 #include "AnimNotifyState_FSDTimedNiagaraEffect.generated.h"
 
 class UNiagaraSystem;
 
-UCLASS(CollapseCategories, EditInlineNew)
+UCLASS(Blueprintable, CollapseCategories, EditInlineNew)
 class UAnimNotifyState_FSDTimedNiagaraEffect : public UAnimNotifyState {
     GENERATED_BODY()
 public:

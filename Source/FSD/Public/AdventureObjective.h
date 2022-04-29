@@ -3,7 +3,7 @@
 #include "Objective.h"
 #include "AdventureObjective.generated.h"
 
-UCLASS(Abstract, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UAdventureObjective : public UObjective {
     GENERATED_BODY()
 public:

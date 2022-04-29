@@ -7,8 +7,8 @@
 
 class UPlayerCharacterID;
 class APlayerCharacter;
-class AFSDPlayerController;
 class UPlayerResourceComponent;
+class AFSDPlayerController;
 
 void AFSDPlayerState::SetSelectedCharacterID(UPlayerCharacterID* characterID) {
 }

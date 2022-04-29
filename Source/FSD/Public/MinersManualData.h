@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "SoftMinersManualDescription.h"
+#include "Engine/DataAsset.h"
 #include "MinersManualData.generated.h"
 
 class UTexture2D;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UMinersManualData : public UDataAsset {
     GENERATED_BODY()
 public:

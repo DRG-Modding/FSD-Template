@@ -1,9 +1,9 @@
 #include "WeakpointGlowComponent.h"
 
-class USkeletalMeshComponent;
-class UHealthComponentBase;
 class UCurveFloat;
 class UMeshComponent;
+class USkeletalMeshComponent;
+class UHealthComponentBase;
 class UFSDPhysicalMaterial;
 
 bool UWeakpointGlowComponent::StopLoopingGlow(int32 aGlowID, bool aFade) {

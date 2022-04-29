@@ -5,7 +5,7 @@
 
 class UUseConditionBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UUseConditionCollection : public UDataAsset {
     GENERATED_BODY()
 public:

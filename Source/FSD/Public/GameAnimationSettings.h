@@ -3,7 +3,7 @@
 #include "Engine/DataAsset.h"
 #include "GameAnimationSettings.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UGameAnimationSettings : public UDataAsset {
     GENERATED_BODY()
 public:

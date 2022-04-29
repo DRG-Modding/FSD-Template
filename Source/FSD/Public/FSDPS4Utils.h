@@ -3,7 +3,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "FSDPS4Utils.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UFSDPS4Utils : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

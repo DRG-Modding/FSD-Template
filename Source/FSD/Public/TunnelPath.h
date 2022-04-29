@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTunnelPath {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVector> Path;
     
     FSD_API FTunnelPath();

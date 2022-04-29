@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UpgradeValues.h"
 #include "StandardItemUpgrade.h"
 #include "EShieldGeneratorUpgrades.h"
-#include "UpgradeValues.h"
 #include "ShieldGeneratorUpgrade.generated.h"
 
 class AItem;
 class AFSDPlayerState;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UShieldGeneratorUpgrade : public UStandardItemUpgrade {
     GENERATED_BODY()
 public:

@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FProfileCategoryTiming {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString CategoryName;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float CategoryTime;
     
     FSD_API FProfileCategoryTiming();

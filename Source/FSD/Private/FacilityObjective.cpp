@@ -2,13 +2,13 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class UCappedResource;
-class AActor;
 class AProceduralSetup;
-class UDebrisPositioning;
-class UEncounterManager;
-class ATetherStation;
 class APawn;
+class UEncounterManager;
+class UDebrisPositioning;
+class ATetherStation;
+class AActor;
+class UCappedResource;
 class ARessuplyPod;
 
 void UFacilityObjective::SpawnFacilityEncounters(AProceduralSetup* setup, UEncounterManager* Encounters, UDebrisPositioning* Positioning) {

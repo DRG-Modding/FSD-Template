@@ -3,7 +3,7 @@
 #include "FSDFlyingBugController.h"
 #include "DashingFlyingBugController.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ADashingFlyingBugController : public AFSDFlyingBugController {
     GENERATED_BODY()
 public:

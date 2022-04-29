@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UpgradeValues.h"
 #include "StandardItemUpgrade.h"
 #include "EInventoryItemUpgradeType.h"
-#include "UpgradeValues.h"
 #include "InventoryItemUpgrade.generated.h"
 
 class AItem;
 class AFSDPlayerState;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UInventoryItemUpgrade : public UStandardItemUpgrade {
     GENERATED_BODY()
 public:

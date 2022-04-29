@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VanityMasteryResult.h"
-#include "VanityMasterySave.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "VanityMasterySettings.h"
+#include "VanityMasterySave.h"
+#include "VanityMasteryResult.h"
 #include "CraftingCost.h"
 #include "VanityMasteryLibrary.generated.h"
 
 class UObject;
 class UPlayerCharacterID;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UVanityMasteryLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -33,7 +33,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetFashionitesAwaredForOldPurchases(UObject* WorldContext);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float CalculateVanityMasteryLevelProgress(int32 Level, int32 XP);
     
     UFUNCTION(BlueprintCallable)

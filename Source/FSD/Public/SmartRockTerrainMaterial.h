@@ -3,7 +3,7 @@
 #include "TerrainMaterialBase.h"
 #include "SmartRockTerrainMaterial.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class USmartRockTerrainMaterial : public UTerrainMaterialBase {
     GENERATED_BODY()
 public:

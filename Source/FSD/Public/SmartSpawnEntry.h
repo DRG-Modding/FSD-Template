@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "SmartSpawnEntry.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FSmartSpawnEntry {
     GENERATED_BODY()
 public:

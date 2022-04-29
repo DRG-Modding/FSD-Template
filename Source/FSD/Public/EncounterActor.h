@@ -5,7 +5,7 @@
 
 class APawn;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AEncounterActor : public AActor {
     GENERATED_BODY()
 public:

@@ -3,11 +3,11 @@
 #include "SDFBase.h"
 #include "SDFSingleChildBase.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSDENGINE_API USDFSingleChildBase : public USDFBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USDFBase* Child;
     
     USDFSingleChildBase();

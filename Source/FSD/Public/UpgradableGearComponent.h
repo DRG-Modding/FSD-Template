@@ -1,28 +1,28 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Components/ActorComponent.h"
 #include "UpgradeTier.h"
-#include "MasteryItem.h"
+#include "Components/ActorComponent.h"
 #include "GearStatEntry.h"
+#include "MasteryItem.h"
 #include "EItemUpgradeStatus.h"
 #include "CraftingCost.h"
 #include "UpgradableGearComponent.generated.h"
 
-class UItemData;
 class UOverclockBank;
-class UResourceData;
-class UObject;
-class UTexture2D;
+class UItemData;
 class UItemUpgrade;
-class AActor;
-class UItemID;
 class AFSDPlayerController;
+class AActor;
+class UTexture2D;
+class UResourceData;
+class UItemID;
 class APlayerCharacter;
+class UObject;
 class AFSDPlayerState;
 class UPlayerCharacterID;
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UUpgradableGearComponent : public UActorComponent {
     GENERATED_BODY()
 public:
@@ -36,7 +36,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UOverclockBank* OverclockBank;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UItemUpgrade*> AllOverclocks;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -66,7 +66,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 CreditCost;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TMap<UResourceData*, float> ResourceCost;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -116,7 +116,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetSourceGearName() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TMap<UResourceData*, float> GetResourceCost() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -146,7 +146,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static EItemUpgradeStatus GetItemUpgradeStatus(UObject* WorldContextObject, TSubclassOf<AActor> itemClass, UItemUpgrade* ItemUpgrade, UPlayerCharacterID* characterID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static TArray<UItemUpgrade*> GetItemUpgrades(TSubclassOf<AActor> itemClass, TSubclassOf<UItemUpgrade> upgradeClass, AFSDPlayerState* Player, uint8 upgradeIndex);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

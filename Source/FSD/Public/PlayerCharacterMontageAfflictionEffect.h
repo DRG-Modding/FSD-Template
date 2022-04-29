@@ -5,7 +5,7 @@
 
 class UAnimMontage;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UPlayerCharacterMontageAfflictionEffect : public UAfflictionEffect {
     GENERATED_BODY()
 public:
@@ -16,7 +16,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimMontage* TP_Montage;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float BlendOut;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

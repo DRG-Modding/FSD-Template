@@ -2,11 +2,11 @@
 #include "CoreMinimal.h"
 #include "CommunityGoalIncrementResponse.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FCommunityGoalIncrementResponse {
     GENERATED_BODY()
 public:
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool success;
     
     FSD_API FCommunityGoalIncrementResponse();

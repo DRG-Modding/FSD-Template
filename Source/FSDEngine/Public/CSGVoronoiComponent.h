@@ -4,7 +4,7 @@
 #include "VoronoiProperties.h"
 #include "CSGVoronoiComponent.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCSGVoronoiComponent : public USimpleMeshWithCachedTreeComponent {
     GENERATED_BODY()
 public:

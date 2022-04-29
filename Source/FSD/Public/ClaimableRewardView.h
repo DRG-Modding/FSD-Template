@@ -3,9 +3,9 @@
 #include "ClaimableRewardEntry.h"
 #include "ClaimableRewardView.generated.h"
 
+class USoundCue;
 class UDialogDataAsset;
 class UUserWidget;
-class USoundCue;
 
 USTRUCT(BlueprintType)
 struct FClaimableRewardView {
@@ -20,7 +20,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<USoundCue> FanfareAudio;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MoveInRewardsDelay;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

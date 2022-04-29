@@ -4,32 +4,32 @@
 #include "GuntowerWeakPoint.generated.h"
 
 class USceneComponent;
-class USoundCue;
-class UParticleSystem;
-class UDamageClass;
 class UEnemyHealthComponent;
 class UStaticMeshComponent;
 class UWeakpointGlowComponent;
+class UDamageClass;
+class USoundCue;
+class UParticleSystem;
 class UHealthComponentBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AGuntowerWeakPoint : public AFSDPawn {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* Root;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UEnemyHealthComponent* Health;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UStaticMeshComponent* Mesh;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UWeakpointGlowComponent* HitGlow;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Export)
     TWeakObjectPtr<UEnemyHealthComponent> ParentHealth;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -50,7 +50,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnDeath(UHealthComponentBase* HealthComponent);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void DamageParent(float ammount);
     
 };

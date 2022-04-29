@@ -2,8 +2,8 @@
 #include "Templates/SubclassOf.h"
 
 class APlayerController;
-class UPerkAsset;
 class UObject;
+class UPerkAsset;
 class UPlayerCharacterID;
 class UPerkHUDIconWidget;
 class UPerkHUDActivationWidget;

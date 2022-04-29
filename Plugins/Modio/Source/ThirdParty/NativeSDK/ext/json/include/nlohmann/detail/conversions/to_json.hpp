@@ -22,13 +22,6 @@ namespace detail
 // constructors //
 //////////////////
 
-/*
- * Note all external_constructor<>::construct functions need to call
- * j.m_value.destroy(j.m_type) to avoid a memory leak in case j contains an
- * allocated value (e.g., a string). See bug issue
- * https://github.com/nlohmann/json/issues/2865 for more information.
- */
-
 template<value_t> struct external_constructor;
 
 template<>
@@ -37,7 +30,6 @@ struct external_constructor<value_t::boolean>
     template<typename BasicJsonType>
     static void construct(BasicJsonType& j, typename BasicJsonType::boolean_t b) noexcept
     {
-        j.m_value.destroy(j.m_type);
         j.m_type = value_t::boolean;
         j.m_value = b;
         j.assert_invariant();
@@ -50,7 +42,6 @@ struct external_constructor<value_t::string>
     template<typename BasicJsonType>
     static void construct(BasicJsonType& j, const typename BasicJsonType::string_t& s)
     {
-        j.m_value.destroy(j.m_type);
         j.m_type = value_t::string;
         j.m_value = s;
         j.assert_invariant();
@@ -59,7 +50,6 @@ struct external_constructor<value_t::string>
     template<typename BasicJsonType>
     static void construct(BasicJsonType& j, typename BasicJsonType::string_t&& s)
     {
-        j.m_value.destroy(j.m_type);
         j.m_type = value_t::string;
         j.m_value = std::move(s);
         j.assert_invariant();
@@ -70,7 +60,6 @@ struct external_constructor<value_t::string>
                              int > = 0 >
     static void construct(BasicJsonType& j, const CompatibleStringType& str)
     {
-        j.m_value.destroy(j.m_type);
         j.m_type = value_t::string;
         j.m_value.string = j.template create<typename BasicJsonType::string_t>(str);
         j.assert_invariant();
@@ -83,18 +72,18 @@ struct external_constructor<value_t::binary>
     template<typename BasicJsonType>
     static void construct(BasicJsonType& j, const typename BasicJsonType::binary_t& b)
     {
-        j.m_value.destroy(j.m_type);
         j.m_type = value_t::binary;
-        j.m_value = typename BasicJsonType::binary_t(b);
+        typename BasicJsonType::binary_t value{b};
+        j.m_value = value;
         j.assert_invariant();
     }
 
     template<typename BasicJsonType>
     static void construct(BasicJsonType& j, typename BasicJsonType::binary_t&& b)
     {
-        j.m_value.destroy(j.m_type);
         j.m_type = value_t::binary;
-        j.m_value = typename BasicJsonType::binary_t(std::move(b));;
+        typename BasicJsonType::binary_t value{std::move(b)};
+        j.m_value = value;
         j.assert_invariant();
     }
 };
@@ -105,7 +94,6 @@ struct external_constructor<value_t::number_float>
     template<typename BasicJsonType>
     static void construct(BasicJsonType& j, typename BasicJsonType::number_float_t val) noexcept
     {
-        j.m_value.destroy(j.m_type);
         j.m_type = value_t::number_float;
         j.m_value = val;
         j.assert_invariant();
@@ -118,7 +106,6 @@ struct external_constructor<value_t::number_unsigned>
     template<typename BasicJsonType>
     static void construct(BasicJsonType& j, typename BasicJsonType::number_unsigned_t val) noexcept
     {
-        j.m_value.destroy(j.m_type);
         j.m_type = value_t::number_unsigned;
         j.m_value = val;
         j.assert_invariant();
@@ -131,7 +118,6 @@ struct external_constructor<value_t::number_integer>
     template<typename BasicJsonType>
     static void construct(BasicJsonType& j, typename BasicJsonType::number_integer_t val) noexcept
     {
-        j.m_value.destroy(j.m_type);
         j.m_type = value_t::number_integer;
         j.m_value = val;
         j.assert_invariant();
@@ -144,20 +130,16 @@ struct external_constructor<value_t::array>
     template<typename BasicJsonType>
     static void construct(BasicJsonType& j, const typename BasicJsonType::array_t& arr)
     {
-        j.m_value.destroy(j.m_type);
         j.m_type = value_t::array;
         j.m_value = arr;
-        j.set_parents();
         j.assert_invariant();
     }
 
     template<typename BasicJsonType>
     static void construct(BasicJsonType& j, typename BasicJsonType::array_t&& arr)
     {
-        j.m_value.destroy(j.m_type);
         j.m_type = value_t::array;
         j.m_value = std::move(arr);
-        j.set_parents();
         j.assert_invariant();
     }
 
@@ -168,25 +150,20 @@ struct external_constructor<value_t::array>
     {
         using std::begin;
         using std::end;
-
-        j.m_value.destroy(j.m_type);
         j.m_type = value_t::array;
         j.m_value.array = j.template create<typename BasicJsonType::array_t>(begin(arr), end(arr));
-        j.set_parents();
         j.assert_invariant();
     }
 
     template<typename BasicJsonType>
     static void construct(BasicJsonType& j, const std::vector<bool>& arr)
     {
-        j.m_value.destroy(j.m_type);
         j.m_type = value_t::array;
         j.m_value = value_t::array;
         j.m_value.array->reserve(arr.size());
         for (const bool x : arr)
         {
             j.m_value.array->push_back(x);
-            j.set_parent(j.m_value.array->back());
         }
         j.assert_invariant();
     }
@@ -195,7 +172,6 @@ struct external_constructor<value_t::array>
              enable_if_t<std::is_convertible<T, BasicJsonType>::value, int> = 0>
     static void construct(BasicJsonType& j, const std::valarray<T>& arr)
     {
-        j.m_value.destroy(j.m_type);
         j.m_type = value_t::array;
         j.m_value = value_t::array;
         j.m_value.array->resize(arr.size());
@@ -203,7 +179,6 @@ struct external_constructor<value_t::array>
         {
             std::copy(std::begin(arr), std::end(arr), j.m_value.array->begin());
         }
-        j.set_parents();
         j.assert_invariant();
     }
 };
@@ -214,20 +189,16 @@ struct external_constructor<value_t::object>
     template<typename BasicJsonType>
     static void construct(BasicJsonType& j, const typename BasicJsonType::object_t& obj)
     {
-        j.m_value.destroy(j.m_type);
         j.m_type = value_t::object;
         j.m_value = obj;
-        j.set_parents();
         j.assert_invariant();
     }
 
     template<typename BasicJsonType>
     static void construct(BasicJsonType& j, typename BasicJsonType::object_t&& obj)
     {
-        j.m_value.destroy(j.m_type);
         j.m_type = value_t::object;
         j.m_value = std::move(obj);
-        j.set_parents();
         j.assert_invariant();
     }
 
@@ -238,10 +209,8 @@ struct external_constructor<value_t::object>
         using std::begin;
         using std::end;
 
-        j.m_value.destroy(j.m_type);
         j.m_type = value_t::object;
         j.m_value.object = j.template create<typename BasicJsonType::object_t>(begin(obj), end(obj));
-        j.set_parents();
         j.assert_invariant();
     }
 };
@@ -353,9 +322,9 @@ void to_json(BasicJsonType& j, typename BasicJsonType::object_t&& obj)
 template <
     typename BasicJsonType, typename T, std::size_t N,
     enable_if_t < !std::is_constructible<typename BasicJsonType::string_t,
-                  const T(&)[N]>::value, // NOLINT(cppcoreguidelines-avoid-c-arrays,hicpp-avoid-c-arrays,modernize-avoid-c-arrays)
+                  const T(&)[N]>::value,
                   int > = 0 >
-void to_json(BasicJsonType& j, const T(&arr)[N]) // NOLINT(cppcoreguidelines-avoid-c-arrays,hicpp-avoid-c-arrays,modernize-avoid-c-arrays)
+void to_json(BasicJsonType& j, const T(&arr)[N])
 {
     external_constructor<value_t::array>::construct(j, arr);
 }
@@ -398,10 +367,8 @@ struct to_json_fn
 }  // namespace detail
 
 /// namespace to hold default `to_json` function
-/// to see why this is required:
-/// http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4381.html
-namespace // NOLINT(cert-dcl59-cpp,fuchsia-header-anon-namespaces,google-build-namespaces)
+namespace
 {
-constexpr const auto& to_json = detail::static_const<detail::to_json_fn>::value; // NOLINT(misc-definitions-in-headers)
+constexpr const auto& to_json = detail::static_const<detail::to_json_fn>::value;
 } // namespace
 } // namespace nlohmann

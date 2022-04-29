@@ -7,7 +7,7 @@
 class AFSDPlayerController;
 class UResourceData;
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UWeeklyResourceReward : public UReward {
     GENERATED_BODY()
 public:
@@ -21,7 +21,7 @@ protected:
 public:
     UWeeklyResourceReward();
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TMap<UResourceData*, float> GetRewards(AFSDPlayerController* Player) const;
     
 };

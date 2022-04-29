@@ -4,7 +4,7 @@
 #include "CSGAddMaterialLayersProperties.h"
 #include "CSGAddMaterialLayers.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UCSGAddMaterialLayers : public UCSGSingleChildBase {
     GENERATED_BODY()
 public:

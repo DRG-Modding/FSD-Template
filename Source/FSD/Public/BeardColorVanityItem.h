@@ -5,7 +5,7 @@
 
 class UMaterialInterface;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UBeardColorVanityItem : public UVanityItem {
     GENERATED_BODY()
 public:

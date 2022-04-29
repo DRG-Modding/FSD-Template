@@ -6,7 +6,7 @@
 
 class UCampaign;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UCamapaignCompletedRequirement : public UCampaignRequirement {
     GENERATED_BODY()
 public:

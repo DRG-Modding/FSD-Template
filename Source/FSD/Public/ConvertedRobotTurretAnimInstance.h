@@ -3,7 +3,7 @@
 #include "Animation/AnimInstance.h"
 #include "ConvertedRobotTurretAnimInstance.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UConvertedRobotTurretAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:

@@ -7,7 +7,7 @@
 class APlayerCharacter;
 class UPlayerCharacterData;
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API UPlayerCharacterID : public USavableDataAsset {
     GENERATED_BODY()
 public:

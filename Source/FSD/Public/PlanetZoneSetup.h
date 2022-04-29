@@ -6,7 +6,7 @@
 class UPlanetZone;
 class UBiome;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UPlanetZoneSetup : public UDataAsset {
     GENERATED_BODY()
 public:

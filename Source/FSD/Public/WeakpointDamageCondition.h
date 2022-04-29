@@ -3,7 +3,7 @@
 #include "DamageCondition.h"
 #include "WeakpointDamageCondition.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UWeakpointDamageCondition : public UDamageCondition {
     GENERATED_BODY()
 public:

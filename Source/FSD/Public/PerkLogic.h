@@ -5,7 +5,7 @@
 
 class APlayerCharacter;
 
-UCLASS(Abstract, Blueprintable, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UPerkLogic : public UActorComponent {
     GENERATED_BODY()
 public:

@@ -4,7 +4,7 @@
 #include "EFSDTargetPlatform.h"
 #include "FrontendBlueprintLibrary.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UFrontendBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

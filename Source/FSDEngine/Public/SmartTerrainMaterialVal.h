@@ -6,16 +6,16 @@ USTRUCT(BlueprintType)
 struct FSmartTerrainMaterialVal {
     GENERATED_BODY()
 public:
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     uint32 IfEmpty;
     
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     uint32 IfSolid;
     
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<uint32> OverrideKeys;
     
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<uint32> OverrideValues;
     
     FSDENGINE_API FSmartTerrainMaterialVal();

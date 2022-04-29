@@ -3,7 +3,7 @@
 #include "DamageConversionBonus.h"
 #include "GatlingHotShellsBonus.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UGatlingHotShellsBonus : public UDamageConversionBonus {
     GENERATED_BODY()
 public:

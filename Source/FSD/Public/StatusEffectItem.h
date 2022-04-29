@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "StatusEffectItem.generated.h"
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UStatusEffectItem : public UObject {
     GENERATED_BODY()
 public:

@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/PrimitiveComponent.h"
-#include "ECaveEntrancePriority.h"
 #include "ECaveEntranceType.h"
+#include "ECaveEntrancePriority.h"
 #include "CaveEntranceComponent.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCaveEntranceComponent : public UPrimitiveComponent {
     GENERATED_BODY()
 public:

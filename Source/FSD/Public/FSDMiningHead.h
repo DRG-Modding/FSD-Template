@@ -5,12 +5,12 @@
 
 class UResourceBank;
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API AFSDMiningHead : public ADropPod {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UResourceBank* ResourceBank;
     
 public:

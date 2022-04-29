@@ -2,15 +2,15 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
-#include "EInputKeys.h"
 #include "EDefendPointState.h"
+#include "EInputKeys.h"
 #include "DefensePointActor.generated.h"
 
-class USingleUsableComponent;
 class AGameEvent;
+class USingleUsableComponent;
 class APlayerCharacter;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ADefensePointActor : public AActor {
     GENERATED_BODY()
 public:
@@ -18,10 +18,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AGameEvent> DefenseEvent;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AGameEvent* ActiveDefenceEvent;
     
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_DefendState, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_DefendState, meta=(AllowPrivateAccess=true))
     EDefendPointState DefendState;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))

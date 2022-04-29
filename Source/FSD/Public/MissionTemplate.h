@@ -2,30 +2,30 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "SavableDataAsset.h"
-#include "ObjectiveMissionIcon.h"
 #include "ResourceSpawner.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "ObjectiveMissionIcon.h"
 #include "MissionTemplate.generated.h"
 
-class AProceduralSetup;
-class UMissionDNA;
+class UObjective;
+class UDebrisActorComponent;
 class UMissionComplexity;
 class UMutator;
-class UObjective;
-class UWorld;
+class UMissionDNA;
+class AProceduralSetup;
 class AFSDGameMode;
+class UWorld;
 class UMissionDuration;
-class UObject;
+class UMissionWarning;
 class UTexture2D;
-class UDebrisActorComponent;
+class UMissionMutator;
 class UTutorialComponent;
 class UGeneratedMission;
-class UMissionMutator;
 class UFSDSaveGame;
 class UMissionTemplate;
+class UObject;
 class UBiome;
-class UMissionWarning;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UMissionTemplate : public USavableDataAsset {
@@ -95,10 +95,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool MustBeUnlocked;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float RoomEncounerScale;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float StationaryEnemyScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

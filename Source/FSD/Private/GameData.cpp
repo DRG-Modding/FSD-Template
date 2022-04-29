@@ -3,11 +3,11 @@
 
 class UAsyncManager;
 class UObject;
+class UDifficultySetting;
+class UPerkAsset;
 class UInventoryList;
 class UPlayerCharacterID;
-class UDifficultySetting;
 class APlayerCharacter;
-class UPerkAsset;
 class UHUDVisibilityGroup;
 class UMissionStat;
 
@@ -113,8 +113,6 @@ int32 UGameData::CalculateClaimablePerkPoints(UObject* WorldContext) const {
 }
 
 UGameData::UGameData() {
-    this->NiagaraParameterCollection = NULL;
-    this->AlwaysLockedDLC = NULL;
     this->PromotionRewardsSettings = NULL;
     this->FsdEventsSettings = NULL;
     this->GameActivitySettings = NULL;
@@ -152,13 +150,8 @@ UGameData::UGameData() {
     this->StatusEffects = NULL;
     this->CharacterSettings = NULL;
     this->Achievements = NULL;
-    this->SchematicGATable = NULL;
     this->MissionSetup = NULL;
-    this->BoscoID = NULL;
-    this->DefaultBiome = NULL;
-    this->DefaultMission = NULL;
     this->SeasonSettings = NULL;
-    this->CaveGeneratorPLSClass = NULL;
     this->DefaultCharacterID = NULL;
     this->DefaultEditorCharacterID = NULL;
 }

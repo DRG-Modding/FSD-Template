@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FWidgetFade {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<UUserWidget> Widget;
     
     FSD_API FWidgetFade();

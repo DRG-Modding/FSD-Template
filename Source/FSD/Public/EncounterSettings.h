@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "EncounterRareCritterItem.h"
-#include "EliteEnemyEntry.h"
-#include "IRandRange.h"
-#include "RandInterval.h"
-#include "EncounterSpecialItem.h"
 #include "RandRange.h"
+#include "IRandRange.h"
+#include "EncounterRareCritterItem.h"
+#include "EncounterSpecialItem.h"
+#include "RandInterval.h"
 #include "GameplayTagContainer.h"
+#include "EliteEnemyEntry.h"
 #include "EncounterSettings.generated.h"
 
 class UEnemyDescriptor;
 class UCritterDescriptor;
 class UMutator;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UEncounterSettings : public UDataAsset {
     GENERATED_BODY()
 public:
@@ -42,10 +42,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEncounterSpecialItem> SpecialEncounters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float RequiredDifficultyPerDiversity;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float GlobalDifficultyScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -66,13 +66,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag LargeRoomTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float SmallRoomDifficultyModifier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MediumRoomDifficultyModifier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float LargeRoomDifficultyModifier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

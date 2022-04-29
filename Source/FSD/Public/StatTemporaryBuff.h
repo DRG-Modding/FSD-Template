@@ -5,12 +5,12 @@
 
 class UPawnStat;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UStatTemporaryBuff : public UTemporaryBuff {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TMap<UPawnStat*, float> ModifiedStats;
     
 public:

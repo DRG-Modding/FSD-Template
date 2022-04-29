@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DailyDeal.h"
 #include "Engine/DataAsset.h"
+#include "DailyDeal.h"
 #include "DailyDealSetup.h"
 #include "DailyDealSettings.generated.h"
 
 class UObject;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UDailyDealSettings : public UDataAsset {
     GENERATED_BODY()
 public:

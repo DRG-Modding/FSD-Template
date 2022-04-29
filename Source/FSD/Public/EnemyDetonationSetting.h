@@ -4,10 +4,10 @@
 #include "EnemyDetonationSetting.generated.h"
 
 class UDamageComponent;
-class UNiagaraSystem;
 class USoundCue;
+class UNiagaraSystem;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UEnemyDetonationSetting : public UDataAsset {
     GENERATED_BODY()
 public:

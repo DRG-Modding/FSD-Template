@@ -7,19 +7,19 @@
 #include "UObject/NoExportTypes.h"
 #include "PlaceableItem.generated.h"
 
-class AActor;
 class UCapacityHoldingItemAggregator;
+class AActor;
 class UItemPlacerAggregator;
 
-UCLASS()
+UCLASS(Blueprintable)
 class APlaceableItem : public AAnimatedItem, public IUpgradable, public IPlaceableInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UCapacityHoldingItemAggregator* Capacity;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UItemPlacerAggregator* ItemPlacer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -1,4 +1,4 @@
-#include "../extern/ftest/ftest.h"
+#include "gtest/gtest.h"
 #include "utf8/unchecked.h"
 
 #include <string>

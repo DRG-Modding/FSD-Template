@@ -7,7 +7,7 @@
 class AActor;
 class UBoxComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ASpawnActorGenerationItem : public AGenerationItem {
     GENERATED_BODY()
 public:
@@ -15,7 +15,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> ActorToSpawn;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UBoxComponent* Box;
     
 public:

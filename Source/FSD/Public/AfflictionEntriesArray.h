@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct FAfflictionEntriesArray : public FFastArraySerializer {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FAfflictionEntry> Items;
     
-    UPROPERTY(BlueprintReadWrite, Export, NotReplicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, NotReplicated, meta=(AllowPrivateAccess=true))
     UPawnAfflictionComponent* Owner;
     
     FSD_API FAfflictionEntriesArray();

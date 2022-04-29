@@ -5,7 +5,7 @@
 
 class UIconGenerationCameraKey;
 
-UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UWeaponIconSceneCaptureComponent : public USceneCaptureComponent2D {
     GENERATED_BODY()
 public:

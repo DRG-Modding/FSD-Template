@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
 #include "SaveGameIDInterface.h"
-#include "UObject/NoExportTypes.h"
 #include "SavablePrimaryDataAsset.generated.h"
 
 class UBuildRestriction;
 
-UCLASS()
+UCLASS(Blueprintable)
 class USavablePrimaryDataAsset : public UPrimaryDataAsset, public ISaveGameIDInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 BuildRestrictions;
     
-    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PlatformRestrictions;
     
 protected:

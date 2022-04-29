@@ -5,7 +5,7 @@
 
 class UDamageBonusBase;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UBonusDamageUpgrade : public UItemUpgrade {
     GENERATED_BODY()
 public:

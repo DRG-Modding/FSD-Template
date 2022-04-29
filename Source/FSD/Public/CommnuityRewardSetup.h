@@ -3,11 +3,11 @@
 #include "Engine/DataAsset.h"
 #include "CommnuityRewardSetup.generated.h"
 
+class UResourceData;
 class UCommnuityRewardBundle;
 class UObject;
-class UResourceData;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UCommnuityRewardSetup : public UDataAsset {
     GENERATED_BODY()
 public:

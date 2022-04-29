@@ -3,18 +3,18 @@
 #include "RessuplyPod.h"
 #include "PipelineExtractorPod.generated.h"
 
-class APipelineSegment;
 class APlayerCharacter;
+class APipelineSegment;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class FSD_API APipelineExtractorPod : public ARessuplyPod {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_ConnectedSegment, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_ConnectedSegment)
     TWeakObjectPtr<APipelineSegment> ConnectedSegment;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Replicated)
     float TargetRotation;
     
 public:

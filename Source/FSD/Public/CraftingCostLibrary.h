@@ -4,7 +4,7 @@
 #include "CraftingCost.h"
 #include "CraftingCostLibrary.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class FSD_API UCraftingCostLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

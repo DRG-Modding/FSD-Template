@@ -3,7 +3,7 @@
 #include "OnlineSessionClient.h"
 #include "FSDOnlineSessionClient.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UFSDOnlineSessionClient : public UOnlineSessionClient {
     GENERATED_BODY()
 public:

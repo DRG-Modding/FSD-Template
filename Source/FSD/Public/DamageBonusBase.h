@@ -4,11 +4,11 @@
 #include "Engine/DataAsset.h"
 #include "DamageBonusBase.generated.h"
 
-class UDamageCondition;
 class UDamageBonusBase;
+class UDamageCondition;
 class UDamageComponent;
 
-UCLASS(Abstract, BlueprintType, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UDamageBonusBase : public UDataAsset {
     GENERATED_BODY()
 public:

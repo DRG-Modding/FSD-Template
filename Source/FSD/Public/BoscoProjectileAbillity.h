@@ -6,7 +6,7 @@
 
 class AProjectile;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBoscoProjectileAbillity : public UBoscoAbillity {
     GENERATED_BODY()
 public:

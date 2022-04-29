@@ -6,7 +6,7 @@
 class UVanityItem;
 class UPlayerCharacterID;
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UVanityReward : public UUnlockReward {
     GENERATED_BODY()
 public:

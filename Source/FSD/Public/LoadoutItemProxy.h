@@ -8,7 +8,7 @@
 class UItemCharacterAnimationSet;
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ALoadoutItemProxy : public AItem {
     GENERATED_BODY()
 public:

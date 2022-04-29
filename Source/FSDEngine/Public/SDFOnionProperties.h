@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FSDFOnionProperties {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Thickness;
     
     FSDENGINE_API FSDFOnionProperties();

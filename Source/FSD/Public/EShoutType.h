@@ -27,5 +27,6 @@ enum class EShoutType : uint8 {
     UpgradeBought,
     WaitingInDropPod,
     Carrying,
+    WaitingInEscapePod,
 };
 

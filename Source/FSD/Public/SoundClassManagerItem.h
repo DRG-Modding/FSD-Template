@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "SoundClassManagerItem.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FSoundClassManagerItem {
     GENERATED_BODY()
 public:

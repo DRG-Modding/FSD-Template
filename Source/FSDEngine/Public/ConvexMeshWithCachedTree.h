@@ -4,7 +4,7 @@
 #include "ConvexNoiseProperties.h"
 #include "ConvexMeshWithCachedTree.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UConvexMeshWithCachedTree : public USimpleMeshWithCachedTree {
     GENERATED_BODY()
 public:

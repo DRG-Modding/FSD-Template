@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FActiveStatusEffect {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<AActor> Owner;
     
     FSD_API FActiveStatusEffect();

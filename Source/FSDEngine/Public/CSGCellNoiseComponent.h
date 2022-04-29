@@ -5,7 +5,7 @@
 #include "BinaryTerrainMaterialCombiner.h"
 #include "CSGCellNoiseComponent.generated.h"
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCSGCellNoiseComponent : public UCSGBaseComponent {
     GENERATED_BODY()
 public:

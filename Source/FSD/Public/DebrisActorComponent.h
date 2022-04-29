@@ -3,7 +3,7 @@
 #include "Components/SceneComponent.h"
 #include "DebrisActorComponent.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UDebrisActorComponent : public USceneComponent {
     GENERATED_BODY()
 public:

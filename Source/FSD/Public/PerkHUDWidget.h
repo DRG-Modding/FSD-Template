@@ -7,7 +7,7 @@ class UPerkAsset;
 class AFSDPlayerState;
 class APlayerCharacter;
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UPerkHUDWidget : public UUserWidget {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "LostPack.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API ALostPack : public AActor {
     GENERATED_BODY()
 public:

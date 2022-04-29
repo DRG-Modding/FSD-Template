@@ -3,7 +3,7 @@
 #include "ItemUpgrade.h"
 #include "CombinedUpgrade.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UCombinedUpgrade : public UItemUpgrade {
     GENERATED_BODY()
 public:
@@ -11,7 +11,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSoftObjectPtr<UItemUpgrade>> CombinedUpgrades;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UItemUpgrade*> LoadedUpgrades;
     
 public:

@@ -4,7 +4,7 @@
 #include "ScaledEffect.h"
 #include "SpawnAtLocationParticleAfflictionEffect.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class USpawnAtLocationParticleAfflictionEffect : public UAfflictionEffect {
     GENERATED_BODY()
 public:

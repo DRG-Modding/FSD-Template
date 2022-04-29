@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
 #include "HeroInfo.h"
-#include "UObject/NoExportTypes.h"
 #include "PlayerCharacterData.generated.h"
 
 class UPlayerCharacterID;
 class UTexture2D;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class FSD_API UPlayerCharacterData : public UPrimaryDataAsset {
     GENERATED_BODY()
 public:

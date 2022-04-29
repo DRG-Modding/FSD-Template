@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "FSDServicesEndpoints.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FFSDServicesEndpoints {
     GENERATED_BODY()
 public:

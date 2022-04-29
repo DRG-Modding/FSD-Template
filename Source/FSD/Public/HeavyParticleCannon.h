@@ -1,45 +1,45 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BoosterModuleActiveDelegate.h"
 #include "AmmoDrivenWeapon.h"
+#include "BoosterModuleActiveDelegate.h"
 #include "DecalData.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "ReflectionTraceResult.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "HeavyParticleCannon.generated.h"
 
-class UDamageComponent;
-class UReflectionHitscanComponent;
-class UFirstPersonNiagaraComponent;
-class UStickyFlameSpawner;
-class UNiagaraComponent;
 class USoundBase;
+class UDamageComponent;
 class UNiagaraSystem;
+class UReflectionHitscanComponent;
+class UStickyFlameSpawner;
+class UFirstPersonNiagaraComponent;
+class UNiagaraComponent;
 class UTerrainType;
-class AActor;
 class UFSDPhysicalMaterial;
+class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AHeavyParticleCannon : public AAmmoDrivenWeapon {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UDamageComponent* Damage;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UReflectionHitscanComponent* HitscanComponent;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UStickyFlameSpawner* StickyFlamesSpawner;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UFirstPersonNiagaraComponent* FirstPersonBeam;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UFirstPersonNiagaraComponent* FirstPersonLaserSight;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UNiagaraComponent* ThirdPersonBeam;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -49,6 +49,9 @@ protected:
     USoundBase* BeamHitLocationEnemySound;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    USoundBase* BeamHitLocationEnemy_Local_Sound;
+    
+    UPROPERTY(EditAnywhere)
     float BeamHitSoundFadeSwitchTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -57,11 +60,14 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* BoosterModuleActivated;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBoosterModuleActive OnBoosterActiveChanged;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UNiagaraSystem* ReflectedBeam;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UNiagaraSystem* ReflectedBeam_PhotoSensitive;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UNiagaraSystem* ReflectedLaserSight;
@@ -70,9 +76,12 @@ protected:
     UNiagaraSystem* ImpactParticle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UNiagaraSystem* ImpactParticle_PhotoSensitive;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UNiagaraSystem* ProjectionModuleParticle;
     
-    UPROPERTY(BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UNiagaraComponent* ImpactParticleComp;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -84,50 +93,59 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bReloadOnButtonRelease;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float SecondsAddedPerKill;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float SwarmerBiomassPercentage;
+    UPROPERTY(EditAnywhere)
+    float MinTimeBetweenBiomassGain;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool BulkyBeam;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float NormalBeamWidth;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float BulkyBeamWidth;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ExtraRadialDamagePerSec;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ExtraRadialRangePerSec;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float CancelCostPercentage;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
+    float ChargeupTime;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    USoundBase* StartChargeSound;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector LastDecalLocation;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsNewDecalBeam;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ProjectionModuleDamage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTerrainType* PlatformTerrainType;
     
-    UPROPERTY(BlueprintReadWrite, ReplicatedUsing=OnRep_BoostActive, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_BoostActive, meta=(AllowPrivateAccess=true))
     bool BoostActive;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bReloadBoostsBeam;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ExtraReloadTimeAfterBoost;
+    
+    UPROPERTY(EditAnywhere)
+    float BoostExtraAmmoCost;
+    
+    UPROPERTY(EditAnywhere)
+    float BeamDependentReloadDuration;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D BeamDistanceRange;
@@ -135,7 +153,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D BeamTesselationRange;
     
-    UPROPERTY(BlueprintReadWrite, ReplicatedUsing=OnRep_bIsBeamActive, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_bIsBeamActive, meta=(AllowPrivateAccess=true))
     bool bIsBeamActive;
     
 public:
@@ -163,6 +181,18 @@ protected:
     
     UFUNCTION(BlueprintCallable)
     void OnRep_bIsBeamActive();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void IsHittngEnemyChanged(bool isHittingEnemy);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ExplodePlatform(FVector Location);
+    
+    UFUNCTION(BlueprintCallable)
+    void ChargeUpComplete();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ChargeChanged(bool isCharging);
     
 };
 

@@ -6,7 +6,7 @@
 #include "UObject/NoExportTypes.h"
 #include "DLSSLibrary.generated.h"
 
-UCLASS(BlueprintType, MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UDLSSLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -32,13 +32,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<UDLSSMode> GetSupportedDLSSModes();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetDLSSSharpness();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetDLSSScreenPercentageRange(float& MinScreenPercentage, float& MaxScreenPercentage);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetDLSSModeInformation(UDLSSMode DLSSMode, FVector2D ScreenResolution, bool& bIsSupported, float& OptimalScreenPercentage, bool& bIsFixedScreenPercentage, float& MinScreenPercentage, float& MaxScreenPercentage, float& OptimalSharpness);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

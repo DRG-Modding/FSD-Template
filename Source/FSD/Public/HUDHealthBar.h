@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HUDHealthBarSignatureDelegate.h"
 #include "FSDUserWidget.h"
+#include "HUDHealthBarSignatureDelegate.h"
 #include "HealthBarLooks.h"
 #include "UObject/NoExportTypes.h"
 #include "EHealthbarType.h"
@@ -10,11 +10,11 @@
 class UHealth;
 class IHealth;
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UHUDHealthBar : public UFSDUserWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHUDHealthBarSignature OnOwnerDead;
     
 protected:
@@ -36,10 +36,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 OutlineThickness;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float HealthAnimationFactor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float HealthPerCell;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -48,13 +48,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxHealthCells;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TScriptInterface<IHealth> TargetHealth;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     float AnimatedHealth;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     float MaxHealth;
     
 public:
@@ -62,7 +62,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetHealthComponent(const TScriptInterface<IHealth>& Health, float Damage);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetCurrentHealth() const;
     
 };

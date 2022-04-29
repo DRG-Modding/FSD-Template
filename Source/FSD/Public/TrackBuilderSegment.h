@@ -2,34 +2,34 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "TrackBuilderPoint.h"
-#include "ETrackBuildPlacementState.h"
 #include "UObject/NoExportTypes.h"
+#include "ETrackBuildPlacementState.h"
 #include "TrackBuilderSegment.generated.h"
 
+class AItem;
 class UTrackBuilderUsable;
 class APlayerCharacter;
 class UTrackBuilderConnectPoint;
-class AItem;
 class ATrackBuilderSegment;
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API ATrackBuilderSegment : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTrackBuilderUsable* NextSegmentUsable;
     
-    UPROPERTY(BlueprintReadWrite, Replicated, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Replicated, Transient)
     TWeakObjectPtr<APlayerCharacter> BuiltByCharacter;
     
-    UPROPERTY(BlueprintReadWrite, Export, Replicated, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Export, Replicated, Transient)
     TWeakObjectPtr<UTrackBuilderUsable> BuiltFromUsable;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FTrackBuilderPoint SegmentEndTransform;
     
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_SegmentEndTransform, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_SegmentEndTransform, meta=(AllowPrivateAccess=true))
     FTrackBuilderPoint ServerSegmentEndTransform;
     
 public:

@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayTagContainer.h"
 #include "BehaviorTree/BTService.h"
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "GameplayTagContainer.h"
+#include "GameplayTagContainer.h"
 #include "BTServer_ChaseTarget.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBTServer_ChaseTarget : public UBTService {
     GENERATED_BODY()
 public:
@@ -35,13 +35,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool CanShoot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float TargetingRange;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float SwitchTargetTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float SwitchTargetDeviation;
     
 public:

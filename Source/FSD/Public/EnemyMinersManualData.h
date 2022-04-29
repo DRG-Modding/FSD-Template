@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EEnemyFamily.h"
 #include "Engine/DataAsset.h"
 #include "EnemyAttackDescription.h"
 #include "EEnemyType.h"
-#include "EEnemyFamily.h"
 #include "EArmorType.h"
 #include "EnemyMinersManualStats.h"
 #include "EDamageType.h"
 #include "EnemyMinersManualData.generated.h"
 
+class AEnemyShowroomItem;
 class UEnemyID;
 class UAnimSequenceBase;
 class UTexture2D;
-class AEnemyShowroomItem;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UEnemyMinersManualData : public UDataAsset {
     GENERATED_BODY()
 public:

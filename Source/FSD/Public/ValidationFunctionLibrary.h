@@ -3,7 +3,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "ValidationFunctionLibrary.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class FSD_API UValidationFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

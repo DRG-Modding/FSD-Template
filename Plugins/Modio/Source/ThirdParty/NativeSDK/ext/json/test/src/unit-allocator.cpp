@@ -29,9 +29,10 @@ SOFTWARE.
 
 #include "doctest_compatibility.h"
 
-#define JSON_TESTS_PRIVATE
+#define private public
 #include <nlohmann/json.hpp>
 using nlohmann::json;
+#undef private
 
 namespace
 {
@@ -40,12 +41,12 @@ template<class T>
 struct bad_allocator : std::allocator<T>
 {
     template<class... Args>
-    void construct(T* /*unused*/, Args&& ... /*unused*/)
+    void construct(T*, Args&& ...)
     {
         throw std::bad_alloc();
     }
 };
-} // namespace
+}
 
 TEST_CASE("bad_alloc")
 {
@@ -85,8 +86,10 @@ struct my_allocator : std::allocator<T>
             next_construct_fails = false;
             throw std::bad_alloc();
         }
-
-        ::new (reinterpret_cast<void*>(p)) T(std::forward<Args>(args)...);
+        else
+        {
+            ::new (reinterpret_cast<void*>(p)) T(std::forward<Args>(args)...);
+        }
     }
 
     void deallocate(T* p, std::size_t n)
@@ -96,8 +99,10 @@ struct my_allocator : std::allocator<T>
             next_deallocate_fails = false;
             throw std::bad_alloc();
         }
-
-        std::allocator<T>::deallocate(p, n);
+        else
+        {
+            std::allocator<T>::deallocate(p, n);
+        }
     }
 
     void destroy(T* p)
@@ -107,8 +112,10 @@ struct my_allocator : std::allocator<T>
             next_destroy_fails = false;
             throw std::bad_alloc();
         }
-
-        p->~T();
+        else
+        {
+            p->~T();
+        }
     }
 
     template <class U>
@@ -127,7 +134,7 @@ void my_allocator_clean_up(T* p)
     alloc.destroy(p);
     alloc.deallocate(p, 1);
 }
-} // namespace
+}
 
 TEST_CASE("controlled bad_alloc")
 {
@@ -233,9 +240,9 @@ namespace
 template<class T>
 struct allocator_no_forward : std::allocator<T>
 {
-    allocator_no_forward() = default;
+    allocator_no_forward() {}
     template <class U>
-    allocator_no_forward(allocator_no_forward<U> /*unused*/) {}
+    allocator_no_forward(allocator_no_forward<U>) {}
 
     template <class U>
     struct rebind
@@ -250,7 +257,7 @@ struct allocator_no_forward : std::allocator<T>
         ::new (static_cast<void*>(p)) T(args...);
     }
 };
-} // namespace
+}
 
 TEST_CASE("bad my_allocator::construct")
 {

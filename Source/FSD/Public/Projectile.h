@@ -8,20 +8,20 @@
 #include "Engine/EngineTypes.h"
 #include "Projectile.generated.h"
 
-class UFSDProjectileMovementComponent;
-class AActor;
 class UObject;
+class AActor;
+class UFSDProjectileMovementComponent;
 class APawn;
 class AProjectile;
 class USceneComponent;
 class UFSDPhysicalMaterial;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class AProjectile : public AProjectileBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, ReplicatedUsing=OnRep_State, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_State, meta=(AllowPrivateAccess=true))
     FProjectileState State;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -30,7 +30,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<AActor>> IgnoreActorClasses;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UFSDProjectileMovementComponent* MovementComponent;
     
 public:

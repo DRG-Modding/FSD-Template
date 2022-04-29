@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FVeinResource {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UVeinResourceCreator* ResourceCreator;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     float VeinLengthToGenerate;
     
     FSD_API FVeinResource();

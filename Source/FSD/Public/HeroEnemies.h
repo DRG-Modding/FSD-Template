@@ -8,7 +8,7 @@
 class UEnemyDescriptor;
 class APawn;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UHeroEnemies : public URunningMissionBP {
     GENERATED_BODY()
 public:

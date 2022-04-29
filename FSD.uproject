@@ -22,6 +22,11 @@
 				"SlateCore",
 				"DiscordSDK"
 			]
+		},
+		{
+			"Name": "ModioEx",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
@@ -221,6 +226,9 @@
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/1ab22ed2961a4cc19b9151bd072df998",
 			"WhitelistPlatforms": [
 				"Win64"
+			],
+			"SupportedTargetPlatforms": [
+				"Win64"
 			]
 		},
 		{
@@ -337,6 +345,7 @@
 		}
 	],
 	"TargetPlatforms": [
-		"Windows"
+		"Windows",
+		"WindowsNoEditor"
 	]
 }

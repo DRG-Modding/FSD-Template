@@ -1,8 +1,8 @@
 #include "AnchorTurner.h"
 #include "Net/UnrealNetwork.h"
 #include "Components/SkeletalMeshComponent.h"
-#include "Components/SphereComponent.h"
 #include "Components/SceneComponent.h"
+#include "Components/SphereComponent.h"
 
 class UPrimitiveComponent;
 class AActor;

@@ -6,7 +6,7 @@
 class USkeletalMesh;
 class UVanityAnimInstance;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UEyeBrowsVanityItem : public UVanityItem {
     GENERATED_BODY()
 public:

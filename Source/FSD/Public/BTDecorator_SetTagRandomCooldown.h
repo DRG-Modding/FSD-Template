@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "BehaviorTree/BTDecorator.h"
-#include "RandRange.h"
 #include "GameplayTagContainer.h"
+#include "RandRange.h"
 #include "BTDecorator_SetTagRandomCooldown.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBTDecorator_SetTagRandomCooldown : public UBTDecorator {
     GENERATED_BODY()
 public:

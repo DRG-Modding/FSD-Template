@@ -3,14 +3,14 @@
 #include "Blueprint/UserWidget.h"
 #include "Styling/SlateTypes.h"
 #include "EFSDInputSource.h"
-#include "InputDisplay.h"
 #include "UObject/NoExportTypes.h"
+#include "InputDisplay.h"
 #include "RichTextInputWidget.generated.h"
 
 class URichTextBlock;
 class UTextBlock;
 
-UCLASS(Abstract, EditInlineNew, HideDropdown)
+UCLASS(Abstract, Blueprintable, EditInlineNew, HideDropdown)
 class URichTextInputWidget : public UUserWidget {
     GENERATED_BODY()
 public:
@@ -30,7 +30,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EFSDInputSource InputSource;
     
-    UPROPERTY(BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     URichTextBlock* RichTextBlock;
     
 public:
@@ -51,10 +51,10 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnCustomKeyBindsChanged();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FVector2D MeasureTextSize(const FText& Text, float Scale) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetLineHeight() const;
     
     UFUNCTION(BlueprintCallable)

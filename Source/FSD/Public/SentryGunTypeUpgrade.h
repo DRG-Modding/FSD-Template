@@ -7,7 +7,7 @@
 class ARecallableSentryGun;
 class AItemMarker;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class USentryGunTypeUpgrade : public UItemUpgrade {
     GENERATED_BODY()
 public:

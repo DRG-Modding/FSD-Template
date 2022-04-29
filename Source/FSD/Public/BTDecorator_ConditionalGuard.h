@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BehaviorTree/BTDecorator.h"
 #include "BehaviorTree/BehaviorTreeTypes.h"
+#include "BehaviorTree/BTDecorator.h"
 #include "BTDecorator_ConditionalGuard.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBTDecorator_ConditionalGuard : public UBTDecorator {
     GENERATED_BODY()
 public:

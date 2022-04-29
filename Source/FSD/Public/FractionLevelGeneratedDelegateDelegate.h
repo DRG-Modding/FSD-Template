@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "FractionLevelGeneratedDelegateDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FFractionLevelGeneratedDelegate, float, Fraction);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FFractionLevelGeneratedDelegate, float, Fraction);
 

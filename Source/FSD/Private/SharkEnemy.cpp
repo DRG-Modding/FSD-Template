@@ -3,14 +3,14 @@
 #include "Perception/PawnSensingComponent.h"
 #include "Components/SphereComponent.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "DamageComponent.h"
 #include "InDangerComponent.h"
 #include "EnemyComponent.h"
-#include "DamageComponent.h"
 #include "FakePhysGrabberComponent.h"
 
 class AActor;
-class APawn;
 class UPrimitiveComponent;
+class APawn;
 class UHealthComponentBase;
 
 void ASharkEnemy::SetVulnerable() {

@@ -29,9 +29,10 @@ SOFTWARE.
 
 #include "doctest_compatibility.h"
 
-#define JSON_TESTS_PRIVATE
+#define private public
 #include <nlohmann/json.hpp>
 using nlohmann::json;
+#undef private
 
 TEST_CASE("JSON pointers")
 {
@@ -358,10 +359,6 @@ TEST_CASE("JSON pointers")
                 CHECK_THROWS_WITH(j_const[jp] == 1, throw_msg.c_str());
             }
 
-#if defined(_MSC_VER)
-#pragma warning (push)
-#pragma warning (disable : 4127) // on some machines, the check below is not constant
-#endif
             if (sizeof(typename json::size_type) < sizeof(unsigned long long))
             {
                 auto size_type_max_uul = static_cast<unsigned long long>((std::numeric_limits<json::size_type>::max)());
@@ -374,10 +371,6 @@ TEST_CASE("JSON pointers")
                 CHECK_THROWS_AS(j_const[jp] == 1, json::out_of_range&);
                 CHECK_THROWS_WITH(j_const[jp] == 1, throw_msg.c_str());
             }
-
-#if defined(_MSC_VER)
-#pragma warning (pop)
-#endif
 
             CHECK_THROWS_AS(j.at("/one"_json_pointer) = 1, json::parse_error&);
             CHECK_THROWS_WITH(j.at("/one"_json_pointer) = 1,
@@ -504,11 +497,8 @@ TEST_CASE("JSON pointers")
 
         // error for nonprimitve values
         CHECK_THROWS_AS(json({{"/1", {1, 2, 3}}}).unflatten(), json::type_error&);
-#if JSON_DIAGNOSTICS
-        CHECK_THROWS_WITH(json({{"/1", {1, 2, 3}}}).unflatten(), "[json.exception.type_error.315] (/~11) values in object must be primitive");
-#else
-        CHECK_THROWS_WITH(json({{"/1", {1, 2, 3}}}).unflatten(), "[json.exception.type_error.315] values in object must be primitive");
-#endif
+        CHECK_THROWS_WITH(json({{"/1", {1, 2, 3}}}).unflatten(),
+        "[json.exception.type_error.315] values in object must be primitive");
 
         // error for conflicting values
         json j_error = {{"", 42}, {"/foo", 17}};
@@ -538,7 +528,7 @@ TEST_CASE("JSON pointers")
 
     SECTION("string representation")
     {
-        for (const auto* ptr :
+        for (auto ptr :
                 {"", "/foo", "/foo/0", "/", "/a~1b", "/c%d", "/e^f", "/g|h", "/i\\j", "/k\"l", "/ ", "/m~0n"
                 })
         {

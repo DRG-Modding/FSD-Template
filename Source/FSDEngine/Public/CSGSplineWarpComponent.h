@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SplineWarpProperties.h"
 #include "CSGWarpedComponent.h"
+#include "SplineWarpProperties.h"
 #include "CSGSplineWarpComponent.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCSGSplineWarpComponent : public UCSGWarpedComponent {
     GENERATED_BODY()
 public:

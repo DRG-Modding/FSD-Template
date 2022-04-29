@@ -2,11 +2,11 @@
 #include "CoreMinimal.h"
 #include "DiscordUserInfoRequest.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FDiscordUserInfoRequest {
     GENERATED_BODY()
 public:
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString UserId;
     
     FSD_API FDiscordUserInfoRequest();

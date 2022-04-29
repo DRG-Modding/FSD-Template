@@ -1,7 +1,7 @@
 #include "PerkSubsystem.h"
 
-class UPerkAsset;
 class UPerkDelegateItem;
+class UPerkAsset;
 
 UPerkDelegateItem* UPerkSubsystem::GetPerkDelegates(UPerkAsset* Perk) {
     return NULL;

@@ -8,7 +8,7 @@ class AFSDPlayerState;
 class UActorComponent;
 class AItem;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UAddComponentUpgrade : public UItemUpgrade {
     GENERATED_BODY()
 public:

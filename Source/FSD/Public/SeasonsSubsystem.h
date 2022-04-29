@@ -1,61 +1,61 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OnTokensChangedSignatureDelegate.h"
 #include "Subsystems/GameInstanceSubsystem.h"
-#include "UObject/NoExportTypes.h"
-#include "ChallengeInfo.h"
-#include "OnXPChangedSignatureDelegate.h"
-#include "OnVanityTreeResetDelegate.h"
 #include "SeasonMissionResult.h"
+#include "OnXPChangedSignatureDelegate.h"
+#include "OnTokensChangedSignatureDelegate.h"
 #include "OnScripChallengeUpdatedDelegate.h"
+#include "OnVanityTreeResetDelegate.h"
 #include "ClaimStatusChangedDelegate.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "SeasonLevel.h"
 #include "UObject/NoExportTypes.h"
+#include "ChallengeInfo.h"
+#include "UObject/NoExportTypes.h"
 #include "EPickaxePartLocation.h"
 #include "SeasonsSubsystem.generated.h"
 
-class UItemSkin;
-class UPlayerCharacterID;
-class USeasonChallenge;
 class UObject;
-class AFSDPlayerController;
-class UMissionStat;
 class AFSDPlayerState;
+class UMissionStat;
+class UItemSkin;
 class UDataAsset;
+class USeasonChallenge;
 class UTextureRenderTarget2D;
 class UVanityItem;
+class UPlayerCharacterID;
 class UPickaxePart;
 class USeasonEventData;
+class AFSDPlayerController;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class USeasonsSubsystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnXPChangedSignature OnXPChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnTokensChangedSignature OnTokensChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnVanityTreeReset OnVanityTreeReset;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnScripChallengeUpdated OnScripChallengeUpdated;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FClaimStatusChanged OnClaimStatusChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ForceSeasonEventIndex;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FSeasonMissionResult TempSeasonMissionResult;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FSeasonMissionResult LatestMissionSeasonResult;
     
 public:
@@ -67,10 +67,10 @@ public:
     void RerollChallenge(int32 Index);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnStatChanged(UObject* WorldContext, UMissionStat* Stat, float Value);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnScripChallengeCompleted(UObject* WorldContext, UMissionStat* Stat, float Value);
     
 public:
@@ -107,10 +107,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FSeasonMissionResult GetSeasonMissionResult();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void GetSeasonLevelFromXP(int32 XP, int32& Level, float& currentLevelPercent, int32& currentLevelXP, int32& LevelXPTotal);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void GetSeasonLevel(int32& Level, float& currentLevelPercent, int32& currentLevelXP, int32& LevelXPTotal);
     
     UFUNCTION(BlueprintCallable)
@@ -137,7 +137,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FSeasonLevel GetLevelReward(int32 Level);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void GetLevelProgress(int32 Level, float& levelPercent);
     
     UFUNCTION(BlueprintCallable)

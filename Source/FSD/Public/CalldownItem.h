@@ -5,12 +5,12 @@
 #include "UObject/NoExportTypes.h"
 #include "CalldownItem.generated.h"
 
+class AActor;
 class UItemPlacerAggregator;
 class ARessuplyPod;
 class UResourceData;
-class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ACalldownItem : public AAnimatedItem {
     GENERATED_BODY()
 public:
@@ -33,13 +33,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> ResupplyBeacon;
     
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UItemPlacerAggregator* ItemPlacerInstance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float CoolDown;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     float CooldownRemaining;
     
 public:

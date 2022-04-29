@@ -3,14 +3,14 @@
 #include "UObject/NoExportTypes.h"
 #include "CaveInfluence.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FCaveInfluence {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FVector Center;
     
-    UPROPERTY(Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     float range;
     
     FSD_API FCaveInfluence();

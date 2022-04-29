@@ -5,7 +5,7 @@
 
 class UTerrainType;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ARaycastDebugProbe : public AActor {
     GENERATED_BODY()
 public:

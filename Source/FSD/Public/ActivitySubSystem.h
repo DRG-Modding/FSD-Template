@@ -6,7 +6,7 @@
 class UGameActivityType;
 class APlayerState;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UActivitySubSystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

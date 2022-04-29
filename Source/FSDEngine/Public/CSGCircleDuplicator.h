@@ -4,7 +4,7 @@
 #include "CSGCircleDuplicatorProperties.h"
 #include "CSGCircleDuplicator.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UCSGCircleDuplicator : public UCSGDuplicateSingleChildBase {
     GENERATED_BODY()
 public:

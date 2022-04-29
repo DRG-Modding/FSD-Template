@@ -7,7 +7,7 @@ class UItemSkin;
 class UItemID;
 class UPlayerCharacterID;
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class USkinUnlock : public UUnlockReward {
     GENERATED_BODY()
 public:

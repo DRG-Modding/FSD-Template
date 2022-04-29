@@ -5,28 +5,28 @@
 #include "UObject/NoExportTypes.h"
 #include "TetherStation.generated.h"
 
-class AFacilityGeneratorLine;
-class USkeletalMeshComponent;
 class USceneComponent;
+class USkeletalMeshComponent;
+class AFacilityGeneratorLine;
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API ATetherStation : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* SceneRoot;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* BaseMesh;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AFacilityGeneratorLine> FacilityGeneratorLineType;
     
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_AreGeneratorsReady, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_AreGeneratorsReady, meta=(AllowPrivateAccess=true))
     bool AreGeneratorsReady;
     
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=Onrep_FacilityActive, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=Onrep_FacilityActive, meta=(AllowPrivateAccess=true))
     bool FacilityActive;
     
 public:

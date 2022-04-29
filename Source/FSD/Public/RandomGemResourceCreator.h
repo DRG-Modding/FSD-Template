@@ -5,7 +5,7 @@
 
 class UCurveFloat;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class URandomGemResourceCreator : public UGemResourceCreator {
     GENERATED_BODY()
 public:

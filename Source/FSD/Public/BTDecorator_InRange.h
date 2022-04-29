@@ -4,14 +4,14 @@
 #include "AITypes.h"
 #include "BTDecorator_InRange.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBTDecorator_InRange : public UBTDecorator_BlackboardBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MinRange;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MaxRange;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

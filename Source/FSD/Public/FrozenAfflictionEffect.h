@@ -6,7 +6,7 @@
 
 class UMaterialInterface;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UFrozenAfflictionEffect : public UAfflictionEffect {
     GENERATED_BODY()
 public:

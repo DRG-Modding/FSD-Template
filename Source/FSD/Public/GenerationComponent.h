@@ -3,7 +3,7 @@
 #include "Components/PrimitiveComponent.h"
 #include "GenerationComponent.generated.h"
 
-UCLASS(Abstract, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UGenerationComponent : public UPrimitiveComponent {
     GENERATED_BODY()
 public:

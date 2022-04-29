@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "MUSTBEHERETOCOMPILE.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMUSTBEHERETOCOMPILE {
     GENERATED_BODY()
 public:

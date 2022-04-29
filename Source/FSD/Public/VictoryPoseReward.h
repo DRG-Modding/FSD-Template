@@ -6,7 +6,7 @@
 class UVictoryPose;
 class UPlayerCharacterID;
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UVictoryPoseReward : public UUnlockReward {
     GENERATED_BODY()
 public:

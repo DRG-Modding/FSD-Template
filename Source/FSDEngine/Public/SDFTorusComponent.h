@@ -4,7 +4,7 @@
 #include "SDFTorusProperties.h"
 #include "SDFTorusComponent.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSDENGINE_API USDFTorusComponent : public USDFBaseWithTransformComponent {
     GENERATED_BODY()
 public:

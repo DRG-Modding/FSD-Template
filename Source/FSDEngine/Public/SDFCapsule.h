@@ -4,7 +4,7 @@
 #include "SDFCapsuleProperties.h"
 #include "SDFCapsule.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSDENGINE_API USDFCapsule : public USDFBaseWithTransform {
     GENERATED_BODY()
 public:

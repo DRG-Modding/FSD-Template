@@ -3,28 +3,28 @@
 #include "Templates/SubclassOf.h"
 #include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
-#include "EPerkUsageType.h"
 #include "EPerkTierState.h"
+#include "EPerkUsageType.h"
 #include "EPerkHUDActivationLocation.h"
 #include "PerkAsset.generated.h"
 
-class UPerkHUDActivationWidget;
-class UPerkLogic;
-class UDialogDataAsset;
-class UObject;
-class UTexture2D;
-class UPerkHUDIconWidget;
 class APlayerController;
+class UPerkLogic;
+class UPerkHUDActivationWidget;
+class UTexture2D;
+class UPerkDelegateItem;
+class UDialogDataAsset;
+class UPerkHUDIconWidget;
+class UObject;
 class UPlayerCharacterID;
 class UPerkAsset;
-class UPerkDelegateItem;
 
-UCLASS(Abstract, BlueprintType)
+UCLASS(Abstract, Blueprintable)
 class FSD_API UPerkAsset : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid SavegameID;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -51,10 +51,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxUseCharges;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float CoolDownBetweenUse;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool bIsHighlighted;
     
 public:
@@ -84,13 +84,13 @@ protected:
     bool IsEquippedBy(UObject* WorldContext, UPlayerCharacterID* characterID) const;
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetUseCoolDownTimeLeft(APlayerController* PlayerController) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetUseCoolDownProgress(APlayerController* PlayerController) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetUseCoolDownDuration(APlayerController* PlayerController) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

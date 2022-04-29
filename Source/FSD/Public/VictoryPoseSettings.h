@@ -4,12 +4,12 @@
 #include "Engine/DataAsset.h"
 #include "VictoryPoseSettings.generated.h"
 
+class AActor;
 class UVictoryPose;
 class UTexture2D;
 class UActorComponent;
-class AActor;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UVictoryPoseSettings : public UDataAsset {
     GENERATED_BODY()
 public:
@@ -17,7 +17,7 @@ public:
     UTexture2D* GenericVictoryPoseIcon;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UVictoryPose*> LoadedVictoryPoses;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

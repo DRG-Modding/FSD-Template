@@ -3,7 +3,7 @@
 #include "Engine/AssetManager.h"
 #include "FSDAssetManager.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UFSDAssetManager : public UAssetManager {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "Components/ActorComponent.h"
 #include "DynamicMeshScaler.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UDynamicMeshScaler : public UActorComponent {
     GENERATED_BODY()
 public:

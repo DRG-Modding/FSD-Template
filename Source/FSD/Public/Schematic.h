@@ -5,29 +5,30 @@
 #include "UObject/NoExportTypes.h"
 #include "Schematic.generated.h"
 
-class USchematicPricingTier;
 class USchematic;
 class USchematicCategory;
+class USchematicPricingTier;
 class USchematicItem;
-class UObject;
 class USchematicRarity;
 class UPlayerCharacterID;
 class UResourceData;
+class UFSDSaveGame;
+class UObject;
 class UTexture;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class FSD_API USchematic : public USavableDataAsset {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FSchematicDelegate, USchematic*, Schematic);
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSchematicDelegate OnSchematicAddedToInventory;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSchematicDelegate OnSchematicReset;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSchematicDelegate OnSchematicBuilt;
     
 protected:
@@ -46,7 +47,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USchematicItem* Item;
     
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<UResourceData*, int32> CraftingCost;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -59,6 +60,15 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void SetCostLocked(bool IsLocked);
+    
+    UFUNCTION(BlueprintCallable)
+    void ResetGivenReward(UFSDSaveGame* SaveGame);
+    
+    UFUNCTION(BlueprintCallable)
+    void RemoveSchematicFromPlayerInventory(UObject* WorldContext);
+    
+    UFUNCTION(BlueprintCallable)
+    void GiveRewardForFree(UFSDSaveGame* SaveGame);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FText GetTitle() const;

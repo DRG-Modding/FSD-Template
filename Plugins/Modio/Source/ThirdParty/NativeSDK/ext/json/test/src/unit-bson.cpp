@@ -101,11 +101,7 @@ TEST_CASE("BSON")
             { std::string("en\0try", 6), true }
         };
         CHECK_THROWS_AS(json::to_bson(j), json::out_of_range&);
-#if JSON_DIAGNOSTICS
-        CHECK_THROWS_WITH(json::to_bson(j), "[json.exception.out_of_range.409] (/en) BSON key cannot contain code point U+0000 (at byte 2)");
-#else
         CHECK_THROWS_WITH(json::to_bson(j), "[json.exception.out_of_range.409] BSON key cannot contain code point U+0000 (at byte 2)");
-#endif
     }
 
     SECTION("string length must be at least 1")
@@ -687,42 +683,42 @@ class SaxCountdown
         return events_left-- > 0;
     }
 
-    bool boolean(bool /*unused*/)
+    bool boolean(bool)
     {
         return events_left-- > 0;
     }
 
-    bool number_integer(json::number_integer_t /*unused*/)
+    bool number_integer(json::number_integer_t)
     {
         return events_left-- > 0;
     }
 
-    bool number_unsigned(json::number_unsigned_t /*unused*/)
+    bool number_unsigned(json::number_unsigned_t)
     {
         return events_left-- > 0;
     }
 
-    bool number_float(json::number_float_t /*unused*/, const std::string& /*unused*/)
+    bool number_float(json::number_float_t, const std::string&)
     {
         return events_left-- > 0;
     }
 
-    bool string(std::string& /*unused*/)
+    bool string(std::string&)
     {
         return events_left-- > 0;
     }
 
-    bool binary(std::vector<std::uint8_t>& /*unused*/)
+    bool binary(std::vector<std::uint8_t>&)
     {
         return events_left-- > 0;
     }
 
-    bool start_object(std::size_t /*unused*/)
+    bool start_object(std::size_t)
     {
         return events_left-- > 0;
     }
 
-    bool key(std::string& /*unused*/)
+    bool key(std::string&)
     {
         return events_left-- > 0;
     }
@@ -732,7 +728,7 @@ class SaxCountdown
         return events_left-- > 0;
     }
 
-    bool start_array(std::size_t /*unused*/)
+    bool start_array(std::size_t)
     {
         return events_left-- > 0;
     }
@@ -742,7 +738,7 @@ class SaxCountdown
         return events_left-- > 0;
     }
 
-    bool parse_error(std::size_t /*unused*/, const std::string& /*unused*/, const json::exception& /*unused*/) // NOLINT(readability-convert-member-functions-to-static)
+    bool parse_error(std::size_t, const std::string&, const json::exception&)
     {
         return false;
     }
@@ -750,7 +746,7 @@ class SaxCountdown
   private:
     int events_left = 0;
 };
-} // namespace
+}
 
 TEST_CASE("Incomplete BSON Input")
 {
@@ -871,9 +867,8 @@ TEST_CASE("Negative size of binary value")
 
         0x00 // end marker
     };
-    json _;
-    CHECK_THROWS_AS(_ = json::from_bson(input), json::parse_error);
-    CHECK_THROWS_WITH(_ = json::from_bson(input), "[json.exception.parse_error.112] parse error at byte 15: syntax error while parsing BSON binary: byte array length cannot be negative, is -1");
+    CHECK_THROWS_AS(json::from_bson(input), json::parse_error);
+    CHECK_THROWS_WITH(json::from_bson(input), "[json.exception.parse_error.112] parse error at byte 15: syntax error while parsing BSON binary: byte array length cannot be negative, is -1");
 }
 
 TEST_CASE("Unsupported BSON input")
@@ -1239,11 +1234,7 @@ TEST_CASE("BSON numerical data")
                     };
 
                     CHECK_THROWS_AS(json::to_bson(j), json::out_of_range&);
-#if JSON_DIAGNOSTICS
-                    CHECK_THROWS_WITH_STD_STR(json::to_bson(j), "[json.exception.out_of_range.407] (/entry) integer number " + std::to_string(i) + " cannot be represented by BSON as it does not fit int64");
-#else
                     CHECK_THROWS_WITH_STD_STR(json::to_bson(j), "[json.exception.out_of_range.407] integer number " + std::to_string(i) + " cannot be represented by BSON as it does not fit int64");
-#endif
                 }
             }
 

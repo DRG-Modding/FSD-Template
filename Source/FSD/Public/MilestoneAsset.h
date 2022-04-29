@@ -1,30 +1,30 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
+#include "OnMilestoneClaimedDelegate.h"
 #include "UObject/NoExportTypes.h"
 #include "OnMilestoneReachedDelegate.h"
 #include "MilestoneTier.h"
-#include "OnMilestoneClaimedDelegate.h"
 #include "MilestoneAsset.generated.h"
 
-class UMilestoneAsset;
 class UMissionStat;
-class UObject;
 class UTexture2D;
 class UPlayerCharacterID;
+class UMilestoneAsset;
+class UObject;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UMilestoneAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FOnMilestoneClaimed OnMilestoneClaimed;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FOnMilestoneReached OnMilestoneReached;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid SavegameID;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -48,10 +48,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FMilestoneTier> Tiers;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 LastTierReached;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool bPendingMilestoneReached;
     
 public:
@@ -60,7 +60,7 @@ public:
     static TArray<UMilestoneAsset*> SortMilestonesByProgress(UObject* WorldContext, UPARAM(Ref) TArray<UMilestoneAsset*>& Milestones);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnMissionStatChanged(UObject* WorldContext, UMissionStat* Stat, float Value);
     
 public:
@@ -79,13 +79,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetNextPerkPointsReward(UObject* WorldContext) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void GetCurrentProgress(UObject* WorldContext, int32& Tier, float& Progress, float& CurrentCount, float& TargetCount);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetClaimedTier(UObject* WorldContext) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetClaimedProgress(UObject* WorldContext, int32& Tier, float& Progress, float& CurrentCount, float& TargetCount);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

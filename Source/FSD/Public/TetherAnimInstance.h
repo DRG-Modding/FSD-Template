@@ -3,7 +3,7 @@
 #include "Animation/AnimInstance.h"
 #include "TetherAnimInstance.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTetherAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:

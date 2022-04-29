@@ -3,7 +3,7 @@
 #include "CharacterStateComponent.h"
 #include "AttachedStateComponent.generated.h"
 
-UCLASS(MinimalAPI, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UAttachedStateComponent : public UCharacterStateComponent {
     GENERATED_BODY()
 public:
@@ -14,7 +14,7 @@ public:
     bool EnableHeadLightOnExit;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MaxPitch;
     
 public:

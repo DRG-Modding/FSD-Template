@@ -4,7 +4,7 @@
 #include "CSGConvexColliderProperties.h"
 #include "CSGConvexCollider.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UCSGConvexCollider : public UConvexMeshWithCachedTree {
     GENERATED_BODY()
 public:

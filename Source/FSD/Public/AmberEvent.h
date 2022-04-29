@@ -3,33 +3,33 @@
 #include "GameEvent.h"
 #include "AmberEvent.generated.h"
 
-class UHealthComponentBase;
 class UDamageComponent;
-class APawn;
 class UAmberEventEnemyPool;
 class AFSDPawn;
+class UHealthComponentBase;
+class APawn;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AAmberEvent : public AGameEvent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UDamageComponent* EndExplosionDamage;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UAmberEventEnemyPool*> EnemyPools;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AFSDPawn*> spawnedEnemies;
     
-    UPROPERTY(BlueprintReadWrite, Replicated, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Replicated, Transient)
     TWeakObjectPtr<UAmberEventEnemyPool> CurrentPool;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float InitialDelayBeforeSpawn;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MaxSpawnRange;
     
 public:

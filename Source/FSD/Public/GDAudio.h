@@ -3,9 +3,9 @@
 #include "Templates/SubclassOf.h"
 #include "GDAudio.generated.h"
 
-class AFSDReverbVolume;
 class USoundAttenuation;
 class UDynamicReverbComponent;
+class AFSDReverbVolume;
 
 USTRUCT(BlueprintType)
 struct FGDAudio {
@@ -20,19 +20,19 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UDynamicReverbComponent> DynamicReverbClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float SmallCaveRadius;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MediumCaveRadius;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float LargeCaveRadius;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float FirstPersonPriority;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ThirdPersonPriority;
     
     FSD_API FGDAudio();

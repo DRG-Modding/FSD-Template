@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RandRange.h"
 #include "StatusEffectItem.h"
+#include "RandRange.h"
 #include "DotEnemyArmorStatusEffectItem.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UDotEnemyArmorStatusEffectItem : public UStatusEffectItem {
     GENERATED_BODY()
 public:

@@ -4,7 +4,7 @@
 #include "UObject/NoExportTypes.h"
 #include "DebrisCellNoise.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UDebrisCellNoise : public UDataAsset {
     GENERATED_BODY()
 public:
@@ -17,10 +17,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NumValues;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FVector InvCellSize;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool Initialized;
     
     UDebrisCellNoise();

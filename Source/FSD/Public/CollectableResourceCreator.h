@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "CollectableResourceCreator.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UCollectableResourceCreator : public UObject {
     GENERATED_BODY()
 public:

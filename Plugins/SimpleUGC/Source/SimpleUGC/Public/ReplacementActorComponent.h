@@ -6,7 +6,7 @@
 
 class AActor;
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SIMPLEUGC_API UReplacementActorComponent : public UActorComponent {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "Engine/DataAsset.h"
 #include "BuildRestriction.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBuildRestriction : public UDataAsset {
     GENERATED_BODY()
 public:

@@ -4,7 +4,7 @@
 #include "EBoltActionWeaponConditions.h"
 #include "BoltActionWeaponDamageCondition.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UBoltActionWeaponDamageCondition : public UDamageCondition {
     GENERATED_BODY()
 public:

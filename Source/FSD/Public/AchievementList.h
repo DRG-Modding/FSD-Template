@@ -4,8 +4,9 @@
 #include "AchievementList.generated.h"
 
 class UFSDAchievement;
+class AActor;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UAchievementList : public UDataAsset {
     GENERATED_BODY()
 public:
@@ -143,6 +144,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UFSDAchievement*> AllAchievements;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSoftClassPtr<AActor> BarrelClass;
     
     UAchievementList();
 };

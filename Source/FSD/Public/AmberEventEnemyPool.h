@@ -3,14 +3,14 @@
 #include "EnemyGroupDescriptor.h"
 #include "AmberEventEnemyPool.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UAmberEventEnemyPool : public UEnemyGroupDescriptor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MaxTimeBetweenSpawn;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MinTimeBetweenSpawn;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

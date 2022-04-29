@@ -3,7 +3,7 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "AssetLoader.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API UAssetLoader : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

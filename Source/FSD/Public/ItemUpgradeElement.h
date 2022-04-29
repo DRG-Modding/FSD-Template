@@ -5,7 +5,7 @@
 
 class UItemUpgrade;
 
-UCLASS(Abstract, BlueprintType, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UItemUpgradeElement : public UDataAsset {
     GENERATED_BODY()
 public:

@@ -6,7 +6,7 @@
 class USoundCue;
 class UMusicCategory;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMusicLibrary : public UDataAsset {
     GENERATED_BODY()
 public:

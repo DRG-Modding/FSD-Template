@@ -5,8 +5,8 @@
 #include "CoolDownProgressStyle.generated.h"
 
 class UTexture2D;
-class USoundCue;
 class UCoolDownProgressWidget;
+class USoundCue;
 
 USTRUCT(BlueprintType)
 struct FCoolDownProgressStyle {

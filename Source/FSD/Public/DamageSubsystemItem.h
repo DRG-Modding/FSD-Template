@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FDamageSubsystemItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UDamageComponent* DamageComponent;
     
     FSD_API FDamageSubsystemItem();

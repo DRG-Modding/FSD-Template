@@ -5,7 +5,7 @@
 
 class UCurveFloat;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UAmmoLeftDamageBonus : public UFlatDamageBonus {
     GENERATED_BODY()
 public:

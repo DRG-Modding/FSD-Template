@@ -1,10 +1,10 @@
 #include "CharacterVanityComponent.h"
 #include "Net/UnrealNetwork.h"
 
+class UCharacterVanityItems;
 class UVanityItem;
 class UObject;
 class UPlayerCharacterID;
-class UCharacterVanityItems;
 
 void UCharacterVanityComponent::UpdateMeshes() {
 }
@@ -68,7 +68,7 @@ UCharacterVanityComponent::UCharacterVanityComponent() {
     this->ArmorClothMaterial = NULL;
     this->DynamicSkinMaterial = NULL;
     this->HeadVanityType = EHeadVanityType::HairOnly;
-    this->SpecialTemporaryArmor = NULL;
+    this->PreviewedItem = NULL;
     this->SkinMaterial = NULL;
 }
 

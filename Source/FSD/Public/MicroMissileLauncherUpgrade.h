@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UpgradeValues.h"
 #include "StandardItemUpgrade.h"
 #include "EMicroMissileLauncherUpgrades.h"
-#include "UpgradeValues.h"
 #include "MicroMissileLauncherUpgrade.generated.h"
 
-class AItem;
 class AFSDPlayerState;
+class AItem;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UMicroMissileLauncherUpgrade : public UStandardItemUpgrade {
     GENERATED_BODY()
 public:

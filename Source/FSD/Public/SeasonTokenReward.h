@@ -3,7 +3,7 @@
 #include "Reward.h"
 #include "SeasonTokenReward.generated.h"
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class USeasonTokenReward : public UReward {
     GENERATED_BODY()
 public:

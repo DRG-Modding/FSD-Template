@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "ItemUpgradeCondition.generated.h"
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UItemUpgradeCondition : public UObject {
     GENERATED_BODY()
 public:

@@ -4,11 +4,11 @@
 #include "UObject/NoExportTypes.h"
 #include "FadeVisibilitySubSystem.generated.h"
 
+class UMeshComponent;
 class ULightComponent;
 class UPrimitiveComponent;
-class UMeshComponent;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UFadeVisibilitySubSystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:

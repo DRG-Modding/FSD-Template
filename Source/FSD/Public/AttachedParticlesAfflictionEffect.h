@@ -6,7 +6,7 @@
 
 class UFXSystemAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UAttachedParticlesAfflictionEffect : public UAfflictionEffect {
     GENERATED_BODY()
 public:

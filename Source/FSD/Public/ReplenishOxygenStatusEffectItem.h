@@ -3,7 +3,7 @@
 #include "StatusEffectItem.h"
 #include "ReplenishOxygenStatusEffectItem.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UReplenishOxygenStatusEffectItem : public UStatusEffectItem {
     GENERATED_BODY()
 public:

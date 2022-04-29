@@ -3,7 +3,7 @@
 #include "Animation/AnimInstanceProxy.h"
 #include "SpiderAnimInstanceProxy.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FSpiderAnimInstanceProxy : public FAnimInstanceProxy {
     GENERATED_BODY()
 public:

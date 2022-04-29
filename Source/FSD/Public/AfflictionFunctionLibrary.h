@@ -5,7 +5,7 @@
 
 class AFSDPawn;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UAfflictionFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

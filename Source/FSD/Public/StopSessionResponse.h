@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FStopSessionResponse {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool success;
     
     FSD_API FStopSessionResponse();

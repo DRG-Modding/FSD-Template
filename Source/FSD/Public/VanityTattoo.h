@@ -6,7 +6,7 @@
 
 class UTexture2D;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UVanityTattoo : public UDataAsset {
     GENERATED_BODY()
 public:
@@ -16,13 +16,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D Location;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float RotationAngle;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ScaleBase;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ScaleStretch;
     
     UVanityTattoo();

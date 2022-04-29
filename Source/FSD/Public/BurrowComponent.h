@@ -5,7 +5,7 @@
 
 class UAnimMontage;
 
-UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UBurrowComponent : public UActorComponent {
     GENERATED_BODY()
 public:

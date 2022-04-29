@@ -3,7 +3,7 @@
 #include "DamageCondition.h"
 #include "LockCountDamageCondition.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class ULockCountDamageCondition : public UDamageCondition {
     GENERATED_BODY()
 public:

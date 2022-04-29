@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FWeightedRoomSelectorItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     URoomGenerator* Room;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     float Weight;
     
     FSD_API FWeightedRoomSelectorItem();

@@ -1,28 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "GameplayTagContainer.h"
 #include "Engine/DataAsset.h"
 #include "RandRange.h"
-#include "EliteEnemyEntry.h"
+#include "GameplayTagContainer.h"
 #include "RandFloatInterval.h"
+#include "EliteEnemyEntry.h"
 #include "EnemySettings.generated.h"
 
-class UEnemyDescriptor;
 class UEnemyID;
+class UEnemyDescriptor;
 class UDamageComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UEnemySettings : public UDataAsset {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<UEnemyDescriptor*> EnemiesAllowedInWaves;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRandRange EnemyWaveRange;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TMap<UEnemyID*, UEnemyDescriptor*> EnemyDescriptor;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

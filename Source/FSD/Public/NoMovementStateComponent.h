@@ -3,7 +3,7 @@
 #include "CharacterStateComponent.h"
 #include "NoMovementStateComponent.generated.h"
 
-UCLASS(MinimalAPI, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UNoMovementStateComponent : public UCharacterStateComponent {
     GENERATED_BODY()
 public:

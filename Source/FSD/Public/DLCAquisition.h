@@ -5,7 +5,7 @@
 
 class UDLCBase;
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UDLCAquisition : public UItemAquisitionBase {
     GENERATED_BODY()
 public:

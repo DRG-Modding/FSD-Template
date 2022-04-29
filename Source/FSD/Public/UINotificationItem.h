@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FUINotificationItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGuid> NotificationIDs;
     
     FSD_API FUINotificationItem();

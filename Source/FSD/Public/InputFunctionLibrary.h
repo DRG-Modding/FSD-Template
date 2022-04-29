@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/PlayerInput.h"
-#include "EKeyBindingAxis.h"
+#include "InputCoreTypes.h"
 #include "Input/Events.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "Input/Events.h"
+#include "EKeyBindingAxis.h"
 #include "GameFramework/PlayerInput.h"
-#include "InputCoreTypes.h"
+#include "GameFramework/PlayerInput.h"
 #include "EFSDInputSource.h"
 #include "InputDisplay.h"
 #include "InputFunctionLibrary.generated.h"
@@ -14,7 +14,7 @@
 class APlayerController;
 class UTexture2D;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UInputFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

@@ -7,7 +7,7 @@
 class UVanityItem;
 class USchematicCategory;
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API UVanitySchematicBank : public USchematicBankBase {
     GENERATED_BODY()
 public:

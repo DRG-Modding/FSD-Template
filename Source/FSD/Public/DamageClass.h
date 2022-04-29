@@ -4,11 +4,11 @@
 #include "DamageClass.generated.h"
 
 class UDamageImpulse;
+class UTexture2D;
 class UPawnStat;
 class UDialogDataAsset;
-class UTexture2D;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UDamageClass : public UDataAsset {
     GENERATED_BODY()
 public:
@@ -16,7 +16,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UPawnStat* ResistanceStat;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float RagdollScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

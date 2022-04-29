@@ -3,7 +3,7 @@
 #include "Components/ActorComponent.h"
 #include "MOD_MakeEliteEnemy.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UMOD_MakeEliteEnemy : public UActorComponent {
     GENERATED_BODY()
 public:

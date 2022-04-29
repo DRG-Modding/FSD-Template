@@ -5,12 +5,12 @@
 
 class UTexture;
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UFSDLevelLoadingPersistentWidget : public UUserWidget {
     GENERATED_BODY()
 public:
     UFSDLevelLoadingPersistentWidget();
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SetFadeProgress(float Fade, bool ToSpaceRig, UTexture* LoadingImage);
     
 };

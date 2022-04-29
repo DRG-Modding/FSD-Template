@@ -5,11 +5,11 @@
 #include "BarleySpawnItem.h"
 #include "DrinkSettings.generated.h"
 
-class UObject;
 class UResourceData;
 class UDrinkableDataAsset;
+class UObject;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UDrinkSettings : public UDataAsset {
     GENERATED_BODY()
 public:

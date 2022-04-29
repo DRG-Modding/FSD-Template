@@ -4,7 +4,7 @@
 #include "SDFRandomDisableProperties.h"
 #include "SDFRandomDisable.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class USDFRandomDisable : public USDFSingleChildBase {
     GENERATED_BODY()
 public:

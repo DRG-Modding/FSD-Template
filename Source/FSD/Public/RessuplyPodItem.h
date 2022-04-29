@@ -5,12 +5,12 @@
 #include "UObject/NoExportTypes.h"
 #include "RessuplyPodItem.generated.h"
 
-class AActor;
 class UItemPlacerAggregator;
+class AActor;
 class ARessuplyPod;
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ARessuplyPodItem : public AAnimatedItem {
     GENERATED_BODY()
 public:
@@ -21,7 +21,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UItemPlacerAggregator> ItemPlacerClass;
     
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UItemPlacerAggregator* ItemPlacerInstance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -36,10 +36,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText LogText;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float CoolDown;
     
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_Used, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_Used, meta=(AllowPrivateAccess=true))
     bool Used;
     
 public:

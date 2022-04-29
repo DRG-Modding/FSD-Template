@@ -4,23 +4,23 @@
 #include "BlueprintRegisterInvitiNotificationDelegateDelegate.h"
 #include "RegisterInviteNotificationBlueprintCallProxy.generated.h"
 
-class URegisterInviteNotificationBlueprintCallProxy;
 class UObject;
+class URegisterInviteNotificationBlueprintCallProxy;
 
-UCLASS()
+UCLASS(Blueprintable)
 class URegisterInviteNotificationBlueprintCallProxy : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlueprintRegisterInvitiNotificationDelegate OnInviteReceived;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlueprintRegisterInvitiNotificationDelegate OnInviteAccepted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlueprintRegisterInvitiNotificationDelegate OnInviteRejected;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UObject* WorldContextObject;
     
     URegisterInviteNotificationBlueprintCallProxy();

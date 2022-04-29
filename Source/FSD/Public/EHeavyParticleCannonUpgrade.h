@@ -6,10 +6,11 @@ UENUM()
 enum class EHeavyParticleCannonUpgrade : uint8 {
     ReloadOnButtonRelease,
     BoosterModule,
-    KillAddsBeamSeconds,
+    KillAddsAmmo,
     RadialDamageIncPerSecond,
     RadialRangeIncPerSecond,
     BulkyBeam,
     ProjectionModule,
+    PlatformExplosions,
 };
 

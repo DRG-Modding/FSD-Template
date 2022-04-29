@@ -1,7 +1,7 @@
 #include "CommunityGoalWrapper.h"
 
-class UObject;
 class UCommunityGoal;
+class UObject;
 class UCommunityGoalFaction;
 
 void UCommunityGoalWrapper::UpdateAllGoalsInitialized() {

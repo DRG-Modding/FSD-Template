@@ -11,7 +11,7 @@ class UFloatPerkActivation : public UDataAsset {
 public:
     UFloatPerkActivation();
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void Receive_ActivatePerk(APlayerCharacter* Character, float Value);
     
 };

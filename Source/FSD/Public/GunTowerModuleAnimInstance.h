@@ -4,7 +4,7 @@
 #include "UObject/NoExportTypes.h"
 #include "GunTowerModuleAnimInstance.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UGunTowerModuleAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:

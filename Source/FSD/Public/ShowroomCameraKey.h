@@ -3,7 +3,7 @@
 #include "Engine/DataAsset.h"
 #include "ShowroomCameraKey.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UShowroomCameraKey : public UDataAsset {
     GENERATED_BODY()
 public:

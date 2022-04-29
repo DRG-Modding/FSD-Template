@@ -11,6 +11,9 @@ void ARivalBomb::SpawnDataCell() {
 void ARivalBomb::OnRep_DataCellPickedUp() {
 }
 
+void ARivalBomb::OnMatchStarted() {
+}
+
 void ARivalBomb::OnDataCellPickedUp(bool Attached, FVector PrevScale) {
 }
 

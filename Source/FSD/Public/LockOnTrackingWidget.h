@@ -3,7 +3,7 @@
 #include "ActorTrackingWidget.h"
 #include "LockOnTrackingWidget.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class ULockOnTrackingWidget : public UActorTrackingWidget {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "WeaponFireComponent.h"
 #include "BasicWeaponFireComponent.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UBasicWeaponFireComponent : public UWeaponFireComponent {
     GENERATED_BODY()
 public:

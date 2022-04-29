@@ -8,7 +8,7 @@ class UUGCSettings;
 class UUGCRegistry;
 class UUGCLatentActionManager;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SIMPLEUGC_API UUGCBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

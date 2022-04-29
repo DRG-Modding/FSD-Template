@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EEnemyHealthScaling.h"
-#include "EHealthbarType.h"
 #include "Components/ActorComponent.h"
-#include "SubHealthComponentDelegateDelegate.h"
-#include "DamageSigDelegate.h"
 #include "Health.h"
+#include "DamageSigDelegate.h"
 #include "HealthChangedSigDelegate.h"
+#include "SubHealthComponentDelegateDelegate.h"
+#include "EHealthbarType.h"
+#include "EEnemyHealthScaling.h"
 #include "SubHealthComponent.generated.h"
 
 class AActor;
 
-UCLASS(Abstract, BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USubHealthComponent : public UActorComponent, public IHealth {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDamageSig OnDamageTaken;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHealthChangedSig OnHealthChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSubHealthComponentDelegate OnCanTakeDamageChanged;
     
 protected:
@@ -42,10 +42,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsAlive() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetHealthPct() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetHealth() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

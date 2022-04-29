@@ -5,7 +5,7 @@
 
 class UAnimMontage;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UProjectileAttackComponent : public UProjectileAttackBaseComponent {
     GENERATED_BODY()
 public:

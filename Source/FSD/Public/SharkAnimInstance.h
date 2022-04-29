@@ -4,7 +4,7 @@
 #include "ESharkEnemyState.h"
 #include "SharkAnimInstance.generated.h"
 
-UCLASS(Abstract, NonTransient)
+UCLASS(Abstract, Blueprintable, NonTransient)
 class USharkAnimInstance : public USpiderAnimInstance {
     GENERATED_BODY()
 public:
@@ -18,7 +18,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool AttackConnected;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     float BendValue;
     
 public:

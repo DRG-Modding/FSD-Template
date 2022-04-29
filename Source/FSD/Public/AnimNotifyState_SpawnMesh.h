@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "UObject/NoExportTypes.h"
+#include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "UObject/NoExportTypes.h"
 #include "AnimNotifyState_SpawnMesh.generated.h"
 
 class UStaticMesh;
 
-UCLASS(CollapseCategories, EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, EditInlineNew, MinimalAPI)
 class UAnimNotifyState_SpawnMesh : public UAnimNotifyState {
     GENERATED_BODY()
 public:

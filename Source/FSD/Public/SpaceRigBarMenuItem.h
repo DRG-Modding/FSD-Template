@@ -5,7 +5,7 @@
 
 class UDrinkableDataAsset;
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class USpaceRigBarMenuItem : public UFSDUserWidget {
     GENERATED_BODY()
 public:

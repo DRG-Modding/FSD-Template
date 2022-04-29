@@ -5,7 +5,7 @@
 
 class URoomGenerator;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ASubRoomItem : public AGenerationItem {
     GENERATED_BODY()
 public:

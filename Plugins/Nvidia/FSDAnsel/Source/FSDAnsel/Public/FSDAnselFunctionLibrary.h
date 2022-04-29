@@ -7,7 +7,7 @@
 
 class UObject;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UFSDAnselFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

@@ -1,60 +1,60 @@
 #include "PlayerCharacter.h"
 #include "Net/UnrealNetwork.h"
+#include "PlayerReactiveTerrainTrackerComponent.h"
 #include "StatusEffectsComponent.h"
-#include "CharacterSightComponent.h"
 #include "InventoryComponent.h"
 #include "Components/SceneComponent.h"
+#include "SingleUsableComponent.h"
+#include "Components/PointLightComponent.h"
+#include "Components/WidgetInteractionComponent.h"
 #include "PlayerAfflictionComponent.h"
-#include "CharacterVanityComponent.h"
+#include "InstantUsable.h"
+#include "ActorTrackingComponent.h"
+#include "CharacterUseComponent.h"
 #include "CommunicationComponent.h"
-#include "PawnStatsComponent.h"
-#include "OutlineComponent.h"
+#include "CharacterVanityComponent.h"
+#include "CharacterSightComponent.h"
+#include "FirstPersonSkeletalMeshComponent.h"
 #include "PlayerTemperatureComponent.h"
 #include "PlayerHealthComponent.h"
-#include "CharacterUseComponent.h"
-#include "CharacterRecoilComponent.h"
-#include "PlayerReactiveTerrainTrackerComponent.h"
-#include "Components/WidgetInteractionComponent.h"
-#include "FirstPersonSkeletalMeshComponent.h"
 #include "Camera/CameraComponent.h"
-#include "ActorTrackingComponent.h"
-#include "MissionStatsCollector.h"
 #include "CharacterCameraController.h"
+#include "MissionStatsCollector.h"
 #include "GameFramework/SpringArmComponent.h"
-#include "Components/PointLightComponent.h"
-#include "SingleUsableComponent.h"
+#include "OutlineComponent.h"
+#include "PawnStatsComponent.h"
+#include "CharacterRecoilComponent.h"
 #include "PlayerInfoComponent.h"
 #include "PlayerAttackPositionComponent.h"
-#include "InstantUsable.h"
 
-class UPlayerTPAnimInstance;
-class AFSDPlayerController;
 class AZipLineProjectile;
 class UPerkHUDActivationWidget;
 class USoundBase;
-class UAudioComponent;
 class USoundAttenuation;
+class UPlayerTPAnimInstance;
 class USoundConcurrency;
+class UAudioComponent;
 class AFSDPlayerState;
 class APlayerController;
 class UMaterialInstanceDynamic;
 class AShieldGeneratorActor;
 class UFSDPhysicalMaterial;
-class UCharacterStateComponent;
-class USchematic;
 class UAnimMontage;
-class UParticleSystem;
 class AEventRewardDispenser;
-class APlayerCharacter;
-class AFSDPhysicsActor;
 class UCappedResource;
+class USchematic;
+class APlayerCharacter;
+class UPlayerAnimInstance;
+class AFSDPhysicsActor;
+class AFSDPlayerController;
 class AActor;
 class AItem;
+class UCharacterStateComponent;
 class UInventoryList;
-class UObject;
 class UTexture2D;
 class UPlayerFPAnimInstance;
-class UPlayerAnimInstance;
+class UObject;
+class UParticleSystem;
 
 void APlayerCharacter::UseZipLine(AZipLineProjectile* ZipLine, const FVector& Start, const FVector& End) {
 }
@@ -117,6 +117,9 @@ void APlayerCharacter::SetOutsideShieldGenerator(AShieldGeneratorActor* Shield) 
 }
 
 void APlayerCharacter::SetIsCharacterSelectionModel() {
+}
+
+void APlayerCharacter::SetInstantUsables_Implementation(bool Value) {
 }
 
 void APlayerCharacter::SetInsideShieldGenerator(AShieldGeneratorActor* Shield) {
@@ -186,6 +189,9 @@ void APlayerCharacter::Server_CheatGodMode_Implementation() {
 }
 
 void APlayerCharacter::Server_CheatFlyMode_Implementation(bool Active) {
+}
+
+void APlayerCharacter::Server_CheatDebugFastMode_Implementation(bool fast) {
 }
 
 void APlayerCharacter::Server_CancelThrowingCarriable_Implementation() {

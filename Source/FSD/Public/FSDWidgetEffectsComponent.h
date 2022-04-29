@@ -1,40 +1,40 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "WidgetMover.h"
 #include "Components/ActorComponent.h"
-#include "WidgetPing.h"
-#include "EPingType.h"
 #include "WidgetFade.h"
 #include "WidgetTextCounter.h"
+#include "WidgetPing.h"
 #include "CustomCounter.h"
-#include "WidgetMover.h"
 #include "CustomCounterDelegateDelegate.h"
+#include "EPingType.h"
 #include "UObject/NoExportTypes.h"
 #include "EMoveType.h"
 #include "FSDWidgetEffectsComponent.generated.h"
 
-class UTextBlock;
 class UObject;
+class UTextBlock;
 class UWidget;
 class UUserWidget;
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFSDWidgetEffectsComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FWidgetPing> WidgetPings;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FWidgetFade> WidgetFades;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FWidgetTextCounter> WidgetTextCounters;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FCustomCounter> CustomCounters;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FWidgetMover> WidgetMovers;
     
 public:

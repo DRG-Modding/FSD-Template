@@ -6,12 +6,12 @@
 
 class UGeneratedMission;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class FSD_API UMissionGenerationManager : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TMap<int32, FGeneratedMissionGroup> AllMissionGroups;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

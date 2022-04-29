@@ -5,7 +5,7 @@
 
 class UFXSystemAsset;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTracerUpgradeElement : public UItemUpgradeElement {
     GENERATED_BODY()
 public:

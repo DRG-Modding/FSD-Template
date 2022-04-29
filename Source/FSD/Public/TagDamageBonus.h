@@ -5,7 +5,7 @@
 
 class UDamageTag;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTagDamageBonus : public UDamageBonusBase {
     GENERATED_BODY()
 public:

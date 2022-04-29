@@ -3,7 +3,7 @@
 #include "Engine/DataAsset.h"
 #include "ResourceCreator.generated.h"
 
-UCLASS(DefaultToInstanced, EditInlineNew)
+UCLASS(Blueprintable, DefaultToInstanced, EditInlineNew)
 class UResourceCreator : public UDataAsset {
     GENERATED_BODY()
 public:

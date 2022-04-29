@@ -602,15 +602,15 @@ void UFSDGameUserSettings::ApplyConsoleGraphicsMode() {
 }
 
 UFSDGameUserSettings::UFSDGameUserSettings() {
-    this->bJukeboxStreamerMode = false;
+    this->bJukeboxStreamerMode = true;
     this->bGraphicSettingsChanged = false;
     this->ServerSearchRegion = 3;
     this->ServerSearchPasswordRequired = false;
     this->volumeCharacterVoice = 98.51f;
     this->volumeMissionControl = 95.95f;
-    this->volumeMaster = 19.78f;
-    this->volumeSFX = 200.00f;
-    this->volumeMusic = 94.21f;
+    this->volumeMaster = 63.45f;
+    this->volumeSFX = 109.31f;
+    this->volumeMusic = 0.63f;
     this->CurrentAudioOutputDeviceId = TEXT("{0.0.0.00000000}.{2a5cebd2-74c5-49ee-b332-663973012ccd}");
     this->UseDefaultAudioOutputDevice = true;
     this->Sharpening = 0.00f;

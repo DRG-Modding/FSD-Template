@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "ESteamBranch.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "FSDSteamUtils.generated.h"
 
 class APlayerState;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UFSDSteamUtils : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

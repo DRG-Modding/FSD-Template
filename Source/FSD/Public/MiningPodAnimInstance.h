@@ -5,7 +5,7 @@
 #include "EMiningPodState.h"
 #include "MiningPodAnimInstance.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UMiningPodAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:

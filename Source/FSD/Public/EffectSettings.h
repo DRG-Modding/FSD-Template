@@ -4,13 +4,17 @@
 #include "EffectSettings.generated.h"
 
 class UNiagaraSystem;
+class UNiagaraParameterCollection;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UEffectSettings : public UDataAsset {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSoftObjectPtr<UNiagaraSystem>> ParticlesForShaderGeneration;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UNiagaraParameterCollection* NiagaraParameterCollection;
     
     UEffectSettings();
     UFUNCTION(BlueprintCallable, BlueprintPure)

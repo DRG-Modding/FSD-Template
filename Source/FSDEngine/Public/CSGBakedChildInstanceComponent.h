@@ -4,7 +4,7 @@
 #include "CSGBakedChildInstanceProperties.h"
 #include "CSGBakedChildInstanceComponent.generated.h"
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCSGBakedChildInstanceComponent : public UCSGBaseComponent {
     GENERATED_BODY()
 public:

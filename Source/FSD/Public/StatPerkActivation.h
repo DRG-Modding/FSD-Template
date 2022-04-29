@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EPawnStatType.h"
 #include "FloatPerkActivation.h"
+#include "EPawnStatType.h"
 #include "StatPerkActivation.generated.h"
 
 class UPawnStat;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UStatPerkActivation : public UFloatPerkActivation {
     GENERATED_BODY()
 public:

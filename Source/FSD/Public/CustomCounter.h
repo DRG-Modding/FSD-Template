@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FCustomCounter {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCustomCounterDelegate OnCount;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<UObject> Owner;
     
     FSD_API FCustomCounter();

@@ -6,7 +6,7 @@
 class UParticleSystem;
 class AFSDPawn;
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UInfestedEnemiesMutator : public UMutator {
     GENERATED_BODY()
 public:

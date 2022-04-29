@@ -89,7 +89,6 @@
 #  include <sys/filio.h>
 #  include <sys/sockio.h>
 # endif
-#include "AsioIPV6Emulation.h"
 #endif
 
 #include "asio/detail/push_options.hpp"

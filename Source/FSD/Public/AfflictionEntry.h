@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct FAfflictionEntry : public FFastArraySerializerItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UPawnAffliction* Affliction;
     
     FSD_API FAfflictionEntry();

@@ -5,39 +5,39 @@
 #include "UObject/NoExportTypes.h"
 #include "RivalBomb.generated.h"
 
-class UDebrisPositioning;
 class ARivalBombNode;
 class AGem;
+class UDebrisPositioning;
 class UCurveFloat;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ARivalBomb : public AGameEvent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ARivalBombNode*> ActiveNodeInstances;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float NodeHackTime;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NumNodesToHack;
     
-    UPROPERTY(BlueprintReadWrite, ReplicatedUsing=OnRep_DataCellPickedUp, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_DataCellPickedUp, meta=(AllowPrivateAccess=true))
     bool bDataCellPickedUp;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AGem> DataCell;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ARivalBombNode> RivalBomb;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDebrisPositioning* NodePositioning;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* NodeCostCurve;
     
 public:
@@ -59,6 +59,11 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_DataCellPickedUp();
     
+private:
+    UFUNCTION(BlueprintCallable)
+    void OnMatchStarted();
+    
+protected:
     UFUNCTION(BlueprintCallable)
     void OnDataCellPickedUp(bool Attached, FVector PrevScale);
     

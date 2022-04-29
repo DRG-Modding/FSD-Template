@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "FSDSessionHandler.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UFSDSessionHandler : public UObject {
     GENERATED_BODY()
 public:

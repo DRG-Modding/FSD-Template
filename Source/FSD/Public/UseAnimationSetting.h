@@ -5,7 +5,7 @@
 
 class UAnimMontage;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UUseAnimationSetting : public UDataAsset {
     GENERATED_BODY()
 public:

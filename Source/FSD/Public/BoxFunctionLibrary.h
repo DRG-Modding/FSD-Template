@@ -5,7 +5,7 @@
 #include "UObject/NoExportTypes.h"
 #include "BoxFunctionLibrary.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UBoxFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -16,7 +16,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static FVector ClosestPointToBox(FVector Pos, const FBox& Box);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float BoxSize(FBox Box);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

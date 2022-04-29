@@ -1,10 +1,10 @@
 #include "PipelineFinish.h"
 #include "Net/UnrealNetwork.h"
-#include "TrackBuilderConnectPoint.h"
 #include "SingleUsableComponent.h"
+#include "TrackBuilderConnectPoint.h"
 
-class ARessuplyPod;
 class APlayerCharacter;
+class ARessuplyPod;
 class ATrackBuilderSegment;
 class APipelineSegment;
 

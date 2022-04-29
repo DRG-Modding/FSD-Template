@@ -3,11 +3,11 @@
 #include "Engine/DataAsset.h"
 #include "SchematicRarity.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class FSD_API USchematicRarity : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Rarity;
     
     USchematicRarity();

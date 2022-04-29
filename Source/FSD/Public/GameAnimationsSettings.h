@@ -4,7 +4,7 @@
 #include "UObject/NoExportTypes.h"
 #include "GameAnimationsSettings.generated.h"
 
-UCLASS(DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class UGameAnimationsSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:

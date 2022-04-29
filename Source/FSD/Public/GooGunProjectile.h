@@ -7,12 +7,12 @@
 
 class AGooGunPuddle;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AGooGunProjectile : public AProjectile {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float PuddleLifeTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

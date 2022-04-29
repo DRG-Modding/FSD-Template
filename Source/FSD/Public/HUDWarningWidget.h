@@ -6,7 +6,7 @@
 class UTexture2D;
 class USoundBase;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UHUDWarningWidget : public UFSDUserWidget {
     GENERATED_BODY()
 public:

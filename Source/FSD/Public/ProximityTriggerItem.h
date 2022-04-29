@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FProximityTriggerItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FPlayerProximityDelegate Callback;
     
     FSD_API FProximityTriggerItem();

@@ -3,7 +3,7 @@
 #include "BehaviorTree/Decorators/BTDecorator_BlackboardBase.h"
 #include "BTDecorator_AttackInRange.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBTDecorator_AttackInRange : public UBTDecorator_BlackboardBase {
     GENERATED_BODY()
 public:

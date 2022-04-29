@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "BTDecorator_CheckPlayerCount.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBTDecorator_CheckPlayerCount : public UBTDecorator {
     GENERATED_BODY()
 public:

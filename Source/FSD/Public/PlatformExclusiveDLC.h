@@ -4,7 +4,7 @@
 #include "EFSDTargetPlatform.h"
 #include "PlatformExclusiveDLC.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UPlatformExclusiveDLC : public UDLCBase {
     GENERATED_BODY()
 public:

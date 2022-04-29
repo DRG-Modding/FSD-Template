@@ -1,14 +1,24 @@
 #include "Schematic.h"
 
+class UObject;
+class UFSDSaveGame;
 class UResourceData;
 class USchematicItem;
-class UObject;
 class UTexture;
 
 void USchematic::SetCraftingMaterialCost() {
 }
 
 void USchematic::SetCostLocked(bool IsLocked) {
+}
+
+void USchematic::ResetGivenReward(UFSDSaveGame* SaveGame) {
+}
+
+void USchematic::RemoveSchematicFromPlayerInventory(UObject* WorldContext) {
+}
+
+void USchematic::GiveRewardForFree(UFSDSaveGame* SaveGame) {
 }
 
 FText USchematic::GetTitle() const {

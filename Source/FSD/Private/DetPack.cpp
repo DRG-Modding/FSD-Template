@@ -1,9 +1,9 @@
 #include "DetPack.h"
 #include "Net/UnrealNetwork.h"
-#include "SimpleHealthComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
-#include "ExplosionComponent.h"
 #include "SingleUsableComponent.h"
+#include "ExplosionComponent.h"
+#include "SimpleHealthComponent.h"
 
 class APlayerCharacter;
 class UHealthComponentBase;

@@ -4,7 +4,7 @@
 #include "CSGCylinderProperties.h"
 #include "CSGCylinderComponent.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCSGCylinderComponent : public UConvexMeshWithCachedTreeComponent {
     GENERATED_BODY()
 public:

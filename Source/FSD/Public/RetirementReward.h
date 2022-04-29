@@ -5,7 +5,7 @@
 
 class UPlayerCharacterID;
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class URetirementReward : public UUnlockReward {
     GENERATED_BODY()
 public:

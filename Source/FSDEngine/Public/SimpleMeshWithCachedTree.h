@@ -4,7 +4,7 @@
 #include "BinaryTerrainMaterialCombiner.h"
 #include "SimpleMeshWithCachedTree.generated.h"
 
-UCLASS(Abstract, BlueprintType)
+UCLASS(Abstract, Blueprintable)
 class USimpleMeshWithCachedTree : public UCSGBase {
     GENERATED_BODY()
 public:

@@ -2,17 +2,17 @@
 #include "CoreMinimal.h"
 #include "CellId.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FSDENGINE_API FCellId {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     int16 X;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     int16 Y;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     int16 Z;
     
     FCellId();

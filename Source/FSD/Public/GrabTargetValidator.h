@@ -3,7 +3,7 @@
 #include "TargetValidator.h"
 #include "GrabTargetValidator.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UGrabTargetValidator : public UTargetValidator {
     GENERATED_BODY()
 public:

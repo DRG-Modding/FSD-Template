@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FSDEventActivateChangedDelegate.h"
 #include "Engine/DataAsset.h"
+#include "FSDEventActivateChangedDelegate.h"
 #include "FSDEventCollection.generated.h"
 
 class UFSDEvent;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class FSD_API UFSDEventCollection : public UDataAsset {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<UFSDEvent*> Events;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFSDEventActivateChanged OnEventActiveChanged;
     
     UFSDEventCollection();

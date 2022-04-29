@@ -4,14 +4,14 @@
 #include "ChunkId.h"
 #include "ChunckIDAndOffset.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FChunckIDAndOffset {
     GENERATED_BODY()
 public:
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FChunkId ChunkId;
     
-    UPROPERTY(meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FChunkOffset Offset;
     
     FSDENGINE_API FChunckIDAndOffset();

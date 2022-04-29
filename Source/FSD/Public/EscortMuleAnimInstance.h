@@ -5,7 +5,7 @@
 
 class UHealthComponent;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UEscortMuleAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:

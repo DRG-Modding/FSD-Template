@@ -3,7 +3,7 @@
 #include "SDFBaseWithTransformComponent.h"
 #include "SDFPlaneComponent.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSDENGINE_API USDFPlaneComponent : public USDFBaseWithTransformComponent {
     GENERATED_BODY()
 public:

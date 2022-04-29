@@ -2,36 +2,36 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UObject/Object.h"
-#include "EUGCApprovalStatus.h"
 #include "EPackageSortField.h"
+#include "EUGCApprovalStatus.h"
 #include "UGCRegistry.generated.h"
 
 class UUGCPackage;
 class AActor;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SIMPLEUGC_API UUGCRegistry : public UObject {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FUGCPackageMounted, bool, Sandbox);
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FUGCPackageMounted OnPackageMounted;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UUGCPackage*> UGCPackages;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<TSubclassOf<AActor>, TSubclassOf<AActor>> RegisteredOverrides;
     
-    UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool PackageChange;
     
 private:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UUGCPackage*> UGCPackagesInstalledDuringJoin;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UUGCPackage*> UGCPackagesUnmountedDuringJoin;
     
 public:
@@ -66,7 +66,7 @@ public:
     UFUNCTION(BlueprintCallable)
     bool MountUGCPackage(UUGCPackage* Package, bool FromJoining);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsModToBeEnabled(int64 ModId) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

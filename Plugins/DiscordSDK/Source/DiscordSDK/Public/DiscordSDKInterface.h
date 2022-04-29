@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DiscordSDKJoinRequestDelegate.h"
 #include "UObject/Object.h"
+#include "DiscordSDKJoinRequestDelegate.h"
 #include "DiscordSDKInterface.generated.h"
 
 class UDiscordSDKInterface;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class DISCORDSDK_API UDiscordSDKInterface : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDiscordSDKJoinRequest OnJoinRequest;
     
     UDiscordSDKInterface();

@@ -6,7 +6,7 @@
 
 class UObject;
 
-UCLASS(Abstract, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTutorialHintComponent : public UTutorialComponent {
     GENERATED_BODY()
 public:

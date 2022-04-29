@@ -5,7 +5,7 @@
 
 class AStabberVine;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class AStabberVineRoot : public AEnemyPawn {
     GENERATED_BODY()
 public:

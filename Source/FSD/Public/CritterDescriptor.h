@@ -4,7 +4,7 @@
 #include "IRandRange.h"
 #include "CritterDescriptor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UCritterDescriptor : public UBaseCritterDescriptor {
     GENERATED_BODY()
 public:
@@ -12,7 +12,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FIRandRange SpawnAmountPerRoom;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float SpawnChancePerRoom;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

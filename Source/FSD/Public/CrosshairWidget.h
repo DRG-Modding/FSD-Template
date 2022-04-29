@@ -5,7 +5,7 @@
 
 class AItem;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UCrosshairWidget : public UUserWidget {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "TargetValidator.h"
 #include "CompositeTargetValidator.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UCompositeTargetValidator : public UTargetValidator {
     GENERATED_BODY()
 public:

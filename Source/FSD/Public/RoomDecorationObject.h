@@ -7,7 +7,7 @@
 class UDebrisPositioning;
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class URoomDecorationObject : public UDataAsset {
     GENERATED_BODY()
 public:

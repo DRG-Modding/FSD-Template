@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SDFBaseComponent.h"
 #include "SDFRandomDisableProperties.h"
+#include "SDFBaseComponent.h"
 #include "SDFRandomDisableComponent.generated.h"
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USDFRandomDisableComponent : public USDFBaseComponent {
     GENERATED_BODY()
 public:

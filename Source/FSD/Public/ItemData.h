@@ -6,11 +6,11 @@
 #include "ItemData.generated.h"
 
 class UItemID;
-class UResourceData;
-class UTexture2D;
 class AActor;
+class UTexture2D;
+class UResourceData;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class FSD_API UItemData : public UPrimaryDataAsset {
     GENERATED_BODY()
 public:
@@ -44,7 +44,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 CreditCost;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TMap<UResourceData*, float> ResourceCost;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

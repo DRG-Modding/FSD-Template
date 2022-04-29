@@ -60,10 +60,10 @@ const char* begin(const MyContainer& c)
 
 const char* end(const MyContainer& c)
 {
-    return c.data + strlen(c.data); // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
+    return c.data + strlen(c.data);
 }
 
-TEST_CASE("Custom container non-member begin/end")
+TEST_CASE("Custom container")
 {
 
     MyContainer data{"[1,2,3,4]"};
@@ -73,31 +73,6 @@ TEST_CASE("Custom container non-member begin/end")
     CHECK(as_json.at(2) == 3);
     CHECK(as_json.at(3) == 4);
 
-}
-
-TEST_CASE("Custom container member begin/end")
-{
-    struct MyContainer2
-    {
-        const char* data;
-
-        const char* begin() const
-        {
-            return data;
-        }
-
-        const char* end() const
-        {
-            return data + strlen(data); // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
-        }
-    };
-
-    MyContainer2 data{"[1,2,3,4]"};
-    json as_json = json::parse(data);
-    CHECK(as_json.at(0) == 1);
-    CHECK(as_json.at(1) == 2);
-    CHECK(as_json.at(2) == 3);
-    CHECK(as_json.at(3) == 4);
 }
 
 TEST_CASE("Custom iterator")
@@ -114,7 +89,7 @@ TEST_CASE("Custom iterator")
 
         MyIterator& operator++()
         {
-            ++ptr; // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
+            ++ptr;
             return *this;
         }
 
@@ -131,15 +106,8 @@ TEST_CASE("Custom iterator")
         const char* ptr;
     };
 
-    // avoid -Wunused-local-typedefs
-    CHECK(std::is_same<MyIterator::difference_type, std::size_t>::value);
-    CHECK(std::is_same<MyIterator::value_type, char>::value);
-    CHECK(std::is_same<MyIterator::pointer, const char*>::value);
-    CHECK(std::is_same<MyIterator::reference, const char&>::value);
-    CHECK(std::is_same<MyIterator::iterator_category, std::input_iterator_tag>::value);
-
     MyIterator begin{raw_data};
-    MyIterator end{raw_data + strlen(raw_data)}; // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
+    MyIterator end{raw_data + strlen(raw_data)};
 
     json as_json = json::parse(begin, end);
     CHECK(as_json.at(0) == 1);

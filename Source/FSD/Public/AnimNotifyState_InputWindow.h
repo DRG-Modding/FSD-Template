@@ -3,7 +3,7 @@
 #include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "AnimNotifyState_InputWindow.generated.h"
 
-UCLASS(CollapseCategories, EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, EditInlineNew, MinimalAPI)
 class UAnimNotifyState_InputWindow : public UAnimNotifyState {
     GENERATED_BODY()
 public:

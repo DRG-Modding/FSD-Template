@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RandRange.h"
 #include "StatusEffectItem.h"
+#include "RandRange.h"
 #include "DotStatusEffectItem.generated.h"
 
 class UDamageImpulse;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UDotStatusEffectItem : public UStatusEffectItem {
     GENERATED_BODY()
 public:

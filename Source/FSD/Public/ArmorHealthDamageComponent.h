@@ -2,26 +2,26 @@
 #include "CoreMinimal.h"
 #include "BaseArmorDamageComponent.h"
 #include "AmorPartDestroyedDelegateDelegate.h"
-#include "ArmorPartDamagedDelegateDelegate.h"
 #include "ArmorHealthItem.h"
+#include "ArmorPartDamagedDelegateDelegate.h"
 #include "ArmorDamageInfo.h"
 #include "ArmorHealthDamageComponent.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UArmorHealthDamageComponent : public UBaseArmorDamageComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAmorPartDestroyedDelegate OnArmorPartDestroyedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FArmorPartDamagedDelegate OnArmorPartDamagedEvent;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, FArmorHealthItem> PhysBoneToArmor;
     
-    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_ArmorDamageInfo, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_ArmorDamageInfo, meta=(AllowPrivateAccess=true))
     FArmorDamageInfo ArmorDamageInfo;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -6,7 +6,7 @@
 
 class UStatusEffect;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ADualMachinePistols : public ADualWieldWeapon {
     GENERATED_BODY()
 public:

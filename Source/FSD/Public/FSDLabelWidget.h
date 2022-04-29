@@ -5,7 +5,7 @@
 #include "Layout/Margin.h"
 #include "FSDLabelWidget.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UFSDLabelWidget : public UTextBlock {
     GENERATED_BODY()
 public:

@@ -2,11 +2,11 @@
 #include "Templates/SubclassOf.h"
 
 class UObject;
+class UBiome;
 class UFSDGameInstance;
 class UPlayerCharacterID;
 class APlayerCharacter;
 class UDifficultySetting;
-class UBiome;
 class UMissionTemplate;
 
 void USessionHandling::StopVoice(UObject* WorldContextObject) {

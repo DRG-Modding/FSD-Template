@@ -1,9 +1,9 @@
 #include "VanityItem.h"
 
 class UObject;
-class UTexture;
 class AFSDPlayerState;
 class UPlayerCharacterID;
+class UTexture;
 class APlayerCharacter;
 
 bool UVanityItem::RemoveFromOwned(UObject* WorldContext) {
@@ -66,6 +66,9 @@ FText UVanityItem::GetCraftableName() const {
 
 FText UVanityItem::GetCraftableDescription() const {
     return FText::GetEmpty();
+}
+
+void UVanityItem::FixupAquisitionLogic() {
 }
 
 void UVanityItem::CraftItemWithFashionite(UObject* WorldContextObject, UPlayerCharacterID* characterID) const {

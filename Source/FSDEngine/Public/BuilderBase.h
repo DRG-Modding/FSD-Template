@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "BuilderBase.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBuilderBase : public UObject {
     GENERATED_BODY()
 public:

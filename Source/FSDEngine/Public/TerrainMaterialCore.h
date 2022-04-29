@@ -3,11 +3,11 @@
 #include "TerrainMaterialBase.h"
 #include "TerrainMaterialCore.generated.h"
 
-class UMaterialInstance;
-class UTerrainMaterialCore;
 class UMaterialInterface;
+class UTerrainMaterialCore;
+class UMaterialInstance;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class FSDENGINE_API UTerrainMaterialCore : public UTerrainMaterialBase {
     GENERATED_BODY()
 public:

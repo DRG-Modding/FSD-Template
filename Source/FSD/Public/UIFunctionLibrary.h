@@ -8,13 +8,13 @@ class UPlayerCharacterID;
 class UNewsTextLists;
 class UMissionNameBank;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UUIFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UUIFunctionLibrary();
     UFUNCTION(BlueprintCallable)
-    static void SetLoadoutIcon(UObject* WorldContextObject, UPlayerCharacterID* characterID, int32 loadoutIndex, int32 IconIndex);
+    static void SetLoadoutIcon(UObject* WorldContextObject, UPlayerCharacterID* characterID, int32 loadoutIndex, int32 iconIndex);
     
     UFUNCTION(BlueprintCallable)
     static void RemoveItemUINotification(UObject* WorldContextObject, TArray<UObject*> Item, bool MatchChildNotifications);
@@ -22,7 +22,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsInItemUINotificationSet(UObject* WorldContextObject, UObject* Item);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static int64 GetUnixTimeStamp();
     
     UFUNCTION(BlueprintCallable)

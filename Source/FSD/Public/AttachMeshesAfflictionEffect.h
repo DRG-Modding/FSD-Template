@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AttachMeshesAfflictionItem.h"
 #include "AfflictionEffect.h"
+#include "AttachMeshesAfflictionItem.h"
 #include "AttachMeshesAfflictionEffect.generated.h"
 
 class UParticleSystem;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UAttachMeshesAfflictionEffect : public UAfflictionEffect {
     GENERATED_BODY()
 public:

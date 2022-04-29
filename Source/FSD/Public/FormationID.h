@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "FormationID.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FFormationID {
     GENERATED_BODY()
 public:

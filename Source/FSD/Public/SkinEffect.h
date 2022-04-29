@@ -6,7 +6,7 @@
 class UMeshComponent;
 class AActor;
 
-UCLASS(Abstract, BlueprintType, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class FSD_API USkinEffect : public UObject {
     GENERATED_BODY()
 public:

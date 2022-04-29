@@ -5,7 +5,7 @@
 
 class USoundCue;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UFireWeaponSoundUpgradeElement : public UItemUpgradeElement {
     GENERATED_BODY()
 public:

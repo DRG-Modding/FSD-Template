@@ -5,7 +5,7 @@
 
 class URoomGenerator;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class URoomCarverComponent : public USceneComponent {
     GENERATED_BODY()
 public:

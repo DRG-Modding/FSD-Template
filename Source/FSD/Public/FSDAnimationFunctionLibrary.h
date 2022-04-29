@@ -5,7 +5,7 @@
 
 class UAnimSequence;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UFSDAnimationFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

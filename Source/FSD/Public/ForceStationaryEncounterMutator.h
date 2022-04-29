@@ -6,7 +6,7 @@
 
 class UEnemyGroupDescriptor;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UForceStationaryEncounterMutator : public UMutator {
     GENERATED_BODY()
 public:

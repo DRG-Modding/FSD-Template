@@ -7,7 +7,7 @@
 class UVictoryPose;
 class APlayerCharacter;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ACharacterSelectionSwitcher : public AActor {
     GENERATED_BODY()
 public:

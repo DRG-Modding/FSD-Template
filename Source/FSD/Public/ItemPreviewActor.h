@@ -6,22 +6,22 @@
 #include "IconGeneratable.h"
 #include "ItemPreviewActor.generated.h"
 
-class UIconGenerationCameraKey;
 class UItemSkin;
 class USkinEffect;
+class UIconGenerationCameraKey;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AItemPreviewActor : public AActor, public ISkinnable, public IIconGeneratable {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UItemSkin* CurrentSkinColor;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UItemSkin* CurrentSkinMesh;
     
-    UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> itemClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
