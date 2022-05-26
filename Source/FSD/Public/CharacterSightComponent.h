@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "Components/ActorComponent.h"
 #include "Engine/EngineTypes.h"
 #include "ReplicatedCharacterData.h"
 #include "CharacterSightComponent.generated.h"
 
-class USimpleObjectInfoComponent;
 class AActor;
-class APlayerCharacter;
-class UPrimitiveComponent;
 class UTemperatureComponent;
+class UPrimitiveComponent;
+class USimpleObjectInfoComponent;
+class APlayerCharacter;
 class UPawnAfflictionComponent;
 class UHealth;
 class IHealth;
@@ -28,7 +28,7 @@ public:
     FTargetChangedSignature OnTargetChanged;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TargetMaxDistance;
     
     UPROPERTY(EditAnywhere)
@@ -61,7 +61,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TScriptInterface<ITargetable> TargetTargetable;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float TargetTime;
     
     UPROPERTY(EditAnywhere, Export)
@@ -82,7 +82,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void RemoveIgnoreActor(AActor* InActor);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetSightStartAndEnd(float InMaxDistance, FVector& OutStartLocation, FVector& OutEndLocation) const;
     
     UFUNCTION(BlueprintCallable)

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDeepMovementMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EDeepMovementMode : uint8 {
     Normal,
     Flee,

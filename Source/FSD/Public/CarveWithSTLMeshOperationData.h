@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EPreciousMaterialOptions.h"
 #include "ECarveFilterType.h"
 #include "MatrixWithExactSync.h"
-#include "EPreciousMaterialOptions.h"
 #include "CarveWithSTLMeshOperationData.generated.h"
 
-class USTLMeshCarver;
 class UStaticMeshCarver;
+class USTLMeshCarver;
 class UTerrainMaterial;
 
 USTRUCT(BlueprintType)

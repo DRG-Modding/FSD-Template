@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CarveOptionsCellSize.h"
 #include "MatrixWithExactSync.h"
+#include "CarveOptionsCellSize.h"
 #include "ECarveFilterType.h"
 #include "LevelGenerationCarver.generated.h"
 
-class USTLMeshCarver;
-class UStaticMesh;
 class UStaticMeshCarver;
+class UStaticMesh;
+class USTLMeshCarver;
 class UTerrainMaterial;
 
 USTRUCT(BlueprintType)
@@ -26,7 +26,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UStaticMeshCarver* StaticMeshCarver;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ConvexExpensiveNoise;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

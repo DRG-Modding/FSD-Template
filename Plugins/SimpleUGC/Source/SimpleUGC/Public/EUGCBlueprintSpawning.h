@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EUGCBlueprintSpawning.generated.h"
 
-UENUM()
-enum class EUGCBlueprintSpawning {
+UENUM(BlueprintType)
+enum class EUGCBlueprintSpawning : uint8 {
     Spacerig,
     Cave,
     Other,

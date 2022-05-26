@@ -1,8 +1,8 @@
 #include "ItemSkin.h"
 
+class AFSDPlayerState;
 class UObject;
 class UItemID;
-class AFSDPlayerState;
 class UPlayerCharacterID;
 class UMaterialInstanceDynamic;
 

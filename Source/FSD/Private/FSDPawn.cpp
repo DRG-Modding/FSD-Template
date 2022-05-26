@@ -1,7 +1,7 @@
 #include "FSDPawn.h"
 #include "Net/UnrealNetwork.h"
-#include "StatusEffectsComponent.h"
 #include "EnemyTemperatureComponent.h"
+#include "StatusEffectsComponent.h"
 
 class AActor;
 class USkeletalMeshComponent;
@@ -43,6 +43,10 @@ void AFSDPawn::OnAlerted() {
 void AFSDPawn::MakeRagdollMesh(USkeletalMeshComponent* Mesh) {
 }
 
+
+bool AFSDPawn::IsElite() const {
+    return false;
+}
 
 bool AFSDPawn::GetIsAlerted() const {
     return false;

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ETerminatorShoutState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ETerminatorShoutState : uint8 {
     EIdle,
     EGrabbing,

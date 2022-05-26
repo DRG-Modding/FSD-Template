@@ -4,8 +4,8 @@
 #include "Curves/CurveFloat.h"
 #include "SpecialEventSettings.generated.h"
 
-class UDebrisPositioning;
 class USpecialEvent;
+class UDebrisPositioning;
 class AEventRewardFrame;
 
 UCLASS(Blueprintable)
@@ -22,13 +22,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDebrisPositioning* EventRewardFramePositioning;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float EventRewardRadius;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CreditsReward;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float XPReward;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

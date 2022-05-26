@@ -5,18 +5,18 @@
 #include "UObject/NoExportTypes.h"
 #include "CharacterSettings.generated.h"
 
-class ACarriableItem;
 class APlayerCharacter;
 class UInventoryList;
+class UTerrainPlacementComponent;
 class UPlayerCharacterID;
+class UDebrisPositioning;
 class USkeletalMesh;
 class UUseAnimationSetting;
+class ACarriableItem;
 class UCampaignManager;
+class UPlayerCharacterData;
 class UCharacterVanityItems;
 class UDialogDataAsset;
-class UDebrisPositioning;
-class UTerrainPlacementComponent;
-class UPlayerCharacterData;
 class UAsyncManager;
 
 UCLASS(Blueprintable)

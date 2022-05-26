@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EAfflictionSocket.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EAfflictionSocket : uint8 {
     CenterMass,
     Feet,

@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "GameFramework/Actor.h"
 #include "SaveGameIDInterface.h"
+#include "UObject/NoExportTypes.h"
+#include "GameFramework/Actor.h"
 #include "ItemIDInterface.h"
 #include "LoadoutItem.h"
-#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "Grenade.generated.h"
 
 class UProjectileMovementComponent;
-class UGrenadeAnimationSet;
-class UStaticMesh;
-class ALoadoutItemProxy;
 class UItemID;
+class UGrenadeAnimationSet;
+class ALoadoutItemProxy;
+class UStaticMesh;
 class USoundCue;
 class UParticleSystem;
 class AGrenade;
@@ -28,10 +28,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UProjectileMovementComponent* Movement;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Duration;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ExplosionDelay;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

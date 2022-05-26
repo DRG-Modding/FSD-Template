@@ -4,11 +4,11 @@
 #include "LookingAtWidget.generated.h"
 
 class UPawnAfflictionComponent;
-class UHealth;
-class IHealth;
 class APlayerCharacter;
 class UCharacterSightComponent;
 class AActor;
+class UHealth;
+class IHealth;
 class UHealthComponentBase;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -16,10 +16,10 @@ class ULookingAtWidget : public UUserWidget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TargetSelectDuration;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TargetLostDuration;
     
     UPROPERTY(EditAnywhere, Transient)
@@ -40,7 +40,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool CanCurrentTargetTakeDamage;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float TargetLostTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -55,7 +55,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void ResetCurrentTarget();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveUpdateTarget(AActor* InCurrentTarget, float DeltaTime);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -76,7 +76,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     AActor* GetLookingAtActor() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetCharacterTemperatureEffect(float& TemperatureEffect) const;
     
 };

@@ -7,7 +7,7 @@ UCLASS(Blueprintable)
 class UMusicCategory : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FadeDuration;
     
     UMusicCategory();

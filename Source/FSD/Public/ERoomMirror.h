@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ERoomMirror.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ERoomMirror : uint8 {
     None,
     MirrorX,

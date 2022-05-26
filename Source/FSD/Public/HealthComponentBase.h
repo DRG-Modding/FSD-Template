@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "DeathSigDelegate.h"
 #include "Health.h"
+#include "DeathSigDelegate.h"
+#include "EHealthbarType.h"
 #include "HealthChangedSigDelegate.h"
 #include "DamageSigDelegate.h"
-#include "OnRadialDamageDelegate.h"
 #include "HitSigDelegate.h"
-#include "EHealthbarType.h"
 #include "BodypartHitSigDelegate.h"
+#include "OnRadialDamageDelegate.h"
 #include "UObject/NoExportTypes.h"
 #include "DamageData.h"
 #include "HealthComponentBase.generated.h"
@@ -87,7 +87,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetShowHealthBar() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetHealthPct() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -96,7 +96,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetHealthBarWorldOffset() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetHealth() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -110,8 +110,8 @@ public:
     
     
     // Fix for true pure virtual functions not being implemented
-    /*UFUNCTION(BlueprintCallable)*/
-    AActor* GetOwner() const override PURE_VIRTUAL(GetOwner, return NULL;);
+    /*UFUNCTION(BlueprintCallable)
+    AActor* GetOwner() const override PURE_VIRTUAL(GetOwner, return NULL;);*/
     
     UFUNCTION(BlueprintCallable)
     float GetMaxHealth() const override PURE_VIRTUAL(GetMaxHealth, return 0.0f;);

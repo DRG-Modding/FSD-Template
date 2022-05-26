@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ETemperatureIntensity.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ETemperatureIntensity : uint8 {
     Cold3,
     Cold2,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EActivityType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EActivityType : uint8 {
     Mission,
     Assignment,

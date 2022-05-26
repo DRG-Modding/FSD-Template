@@ -5,8 +5,8 @@
 #include "ETargetStateDamageBonusType.h"
 #include "StatusAndStateDamageBonus.generated.h"
 
-class UStatusEffect;
 class UDamageClass;
+class UStatusEffect;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UStatusAndStateDamageBonus : public UDamageBonusBase {
@@ -19,7 +19,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETargetStateDamageBonusType> TargetStates;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Bonus;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

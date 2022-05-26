@@ -1,6 +1,7 @@
 #include "SimpleObjectInfoComponent.h"
 
 class UActorContextWidget;
+class UTexture2D;
 class UDialogDataAsset;
 class USceneComponent;
 
@@ -19,6 +20,9 @@ void USimpleObjectInfoComponent::OverrideLookAtShoutOrUseDefault(UDialogDataAsse
 void USimpleObjectInfoComponent::OverrideLookAtShout(UDialogDataAsset* InShout) {
 }
 
+void USimpleObjectInfoComponent::OverrideIcon(UTexture2D* InTexture) {
+}
+
 UDialogDataAsset* USimpleObjectInfoComponent::GetDefaultLookAtShout() const {
     return NULL;
 }
@@ -33,6 +37,7 @@ USimpleObjectInfoComponent::USimpleObjectInfoComponent() {
     this->LookAtShout = NULL;
     this->LookAtShoutOverride = NULL;
     this->Icon = NULL;
+    this->IconOverride = NULL;
     this->bIsPingableByLaserpointer = false;
     this->ContextWidgetClass = NULL;
     this->ContextWidget = NULL;

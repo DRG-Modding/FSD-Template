@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ECoilgunTraceEffect.generated.h"
 
-UENUM()
-enum class ECoilgunTraceEffect {
+UENUM(BlueprintType)
+enum class ECoilgunTraceEffect : uint8 {
     EPrimary,
     EDamage,
     EFear,

@@ -6,8 +6,8 @@
 #include "MusicManager.generated.h"
 
 class USoundBase;
-class UMusicLibrary;
 class UMusicCategory;
+class UMusicLibrary;
 
 UCLASS(Blueprintable)
 class UMusicManager : public UWorldSubsystem {

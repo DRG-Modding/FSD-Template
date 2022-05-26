@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MissionTemplateItem.h"
 #include "Engine/DataAsset.h"
+#include "RequiredMissionItem.h"
 #include "IRandRange.h"
 #include "MissionBiomeItem.h"
-#include "RequiredMissionItem.h"
+#include "MissionTemplateItem.h"
 #include "GlobalMissionSetup.generated.h"
 
-class UPlanetZone;
 class UMissionNameBank;
 class UMissionMutator;
 class UMissionWarning;
+class UPlanetZone;
 
 UCLASS(Blueprintable)
 class UGlobalMissionSetup : public UDataAsset {
@@ -34,7 +34,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMissionTemplateItem FacilityMission;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FacilityMutatorChance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -43,7 +43,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FIRandRange MutatorWarningCount;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DoubleWarningChance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

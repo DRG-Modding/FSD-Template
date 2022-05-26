@@ -2,23 +2,23 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Objective.h"
-#include "EnemySpawnedDelegateDelegate.h"
-#include "RandInterval.h"
-#include "SubObjective.h"
 #include "IRandRange.h"
+#include "EnemySpawnedDelegateDelegate.h"
+#include "SubObjective.h"
+#include "UObject/NoExportTypes.h"
+#include "RandInterval.h"
 #include "UObject/NoExportTypes.h"
 #include "RoomNode.h"
-#include "UObject/NoExportTypes.h"
 #include "FacilityObjective.generated.h"
 
-class UEnemyDescriptor;
 class APawn;
 class ARessuplyPod;
+class UEncounterManager;
 class AActor;
+class UEnemyDescriptor;
 class ATetherStation;
 class UResourceData;
 class AProceduralSetup;
-class UEncounterManager;
 class UDebrisPositioning;
 class UCappedResource;
 
@@ -60,7 +60,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UEnemyDescriptor*> EncounterEnemies;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float EncounterDifficulty;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -96,10 +96,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UResourceData* GoalResource;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AmountRequired;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_AmountCollected)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_AmountCollected, meta=(AllowPrivateAccess=true))
     float AmountCollected;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_GeneratorsActivated, meta=(AllowPrivateAccess=true))
@@ -137,7 +137,7 @@ public:
     UFUNCTION(BlueprintCallable)
     AActor* PlaceObjectInRoom(AProceduralSetup* setup, const FRoomNode& RoomNode, UDebrisPositioning* Positioning, TSubclassOf<AActor> placementActor);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnResourceChanged(UCappedResource* Resource, float Amount);
     
 protected:

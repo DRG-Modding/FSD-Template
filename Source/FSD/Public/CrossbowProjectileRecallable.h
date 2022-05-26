@@ -4,6 +4,7 @@
 #include "UObject/NoExportTypes.h"
 #include "CrossbowProjectileRecallable.generated.h"
 
+class UInstantUsable;
 class APlayerCharacter;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -11,13 +12,16 @@ class FSD_API UCrossbowProjectileRecallable : public UActorComponent {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_SetRecallTarget, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UInstantUsable* Usable;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     APlayerCharacter* RecallTarget;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RecallStartTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RecallSpeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
@@ -30,9 +34,6 @@ public:
 private:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetRecallTarget(APlayerCharacter* Player, const FTransform& startTrans);
-    
-    UFUNCTION(BlueprintCallable)
-    void OnRep_SetRecallTarget();
     
 };
 

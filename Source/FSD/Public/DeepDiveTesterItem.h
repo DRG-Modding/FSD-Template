@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "DeepDiveTesterItem.generated.h"
 
+class UMissionWarning;
 class UMissionTemplate;
 class UMissionMutator;
-class UMissionWarning;
 
 USTRUCT(BlueprintType)
 struct FDeepDiveTesterItem {

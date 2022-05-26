@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ECampaignType.h"
 #include "UObject/Object.h"
 #include "UObject/NoExportTypes.h"
+#include "ECampaignType.h"
 #include "CampaignManager.generated.h"
 
+class UCampaign;
 class UFSDSaveGame;
 class AFSDPlayerController;
-class UCampaign;
 class UGeneratedMission;
 class UDifficultySetting;
 

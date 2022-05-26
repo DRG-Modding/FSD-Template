@@ -13,13 +13,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UPawnStat* BoostedStat;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AmountPerValue;
     
 public:
     UBezerkPerkComponent();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnHealthChanged(float Health);
     
 };

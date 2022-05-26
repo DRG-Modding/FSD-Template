@@ -5,8 +5,8 @@
 #include "UObject/NoExportTypes.h"
 #include "TerrainModifyingProjectile.generated.h"
 
-class UStaticMesh;
 class UTerrainMaterial;
+class UStaticMesh;
 
 UCLASS(Blueprintable)
 class ATerrainModifyingProjectile : public AProjectile {
@@ -31,24 +31,24 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FVector LastHitLocation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Radius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool Revert;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TimeOnGround;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ExpensiveCarveNoise;
     
 public:
     ATerrainModifyingProjectile();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void Tick(float DeltaSeconds);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRadius() const;
     
     UFUNCTION(BlueprintCallable)

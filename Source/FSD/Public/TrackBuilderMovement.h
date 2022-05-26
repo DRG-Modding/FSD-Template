@@ -8,7 +8,7 @@ class FSD_API UTrackBuilderMovement : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MovementSpeed;
     
 public:

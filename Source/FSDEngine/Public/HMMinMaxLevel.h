@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FHMMinMaxLevel {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<float> Entries;
     
     FSDENGINE_API FHMMinMaxLevel();

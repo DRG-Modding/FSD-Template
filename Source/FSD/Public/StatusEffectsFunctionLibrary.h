@@ -4,8 +4,8 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "StatusEffectsFunctionLibrary.generated.h"
 
-class UStatusEffect;
 class UDamageClass;
+class UStatusEffect;
 class AActor;
 
 UCLASS(Blueprintable)
@@ -13,7 +13,7 @@ class UStatusEffectsFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UStatusEffectsFunctionLibrary();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetMaxResistance(TSubclassOf<UStatusEffect> StatusEffect);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

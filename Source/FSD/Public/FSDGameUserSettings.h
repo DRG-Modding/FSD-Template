@@ -1,36 +1,36 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ModdingSettingsChangedDelegate.h"
 #include "GameFramework/GameUserSettings.h"
+#include "GameFramework/GameUserSettings.h"
+#include "ModdingSettingsChangedDelegate.h"
 #include "BoolConfigChangedDelegate.h"
-#include "StringConfigChangedDelegate.h"
+#include "ModdingUISettings.h"
 #include "FloatConfigChangedDelegate.h"
 #include "LanguageChangedDelegate.h"
+#include "StringConfigChangedDelegate.h"
 #include "ChatFontSizeChangedDelegate.h"
-#include "ModdingUISettings.h"
-#include "ESteamSearchRegion.h"
+#include "InputSourceChangedSignatureDelegate.h"
 #include "UDLSSMode.h"
 #include "EConsoleGraphicsMode.h"
 #include "HUDElements.h"
-#include "CustomKeyBinding.h"
 #include "CharacterOptions.h"
-#include "InputSourceChangedSignatureDelegate.h"
 #include "Int32ConfigChangedDelegate.h"
-#include "ESaveSlotChangeProcedure.h"
-#include "UObject/NoExportTypes.h"
-#include "GameFramework/GameUserSettings.h"
-#include "CustomKeyBindingsChangedDelegate.h"
-#include "EFSDInputSource.h"
-#include "ControllerSettings.h"
-#include "EVolumeType.h"
 #include "UObject/NoExportTypes.h"
 #include "ETurn180Mode.h"
+#include "CustomKeyBindingsChangedDelegate.h"
+#include "EFSDInputSource.h"
+#include "CustomKeyBinding.h"
+#include "ControllerSettings.h"
+#include "UObject/NoExportTypes.h"
+#include "EVolumeType.h"
+#include "ESteamSearchRegion.h"
+#include "ESaveSlotChangeProcedure.h"
 #include "FSDGameUserSettings.generated.h"
 
+class UDifficultySetting;
 class USoundClass;
 class APlayerController;
 class UObject;
-class UDifficultySetting;
 class UFSDGameUserSettings;
 
 UCLASS(Blueprintable)
@@ -82,19 +82,19 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FModdingSettingsChanged OnModdingSettingsChanged;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float volumeCharacterVoice;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float volumeMissionControl;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float volumeMaster;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float volumeSFX;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float volumeMusic;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -103,7 +103,7 @@ public:
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UseDefaultAudioOutputDevice;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Sharpening;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -112,7 +112,7 @@ public:
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool TemporalAAUpsamplingEnabled;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float volumeVoice;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -121,16 +121,16 @@ public:
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 AmdFsrMode;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AmdFsrSharpness;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDLSSMode NvidiaDlssMode;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float NvidiaDlssSharpness;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FSDResolutionScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -175,10 +175,10 @@ public:
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool AutoRefreshServerlist;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MouseXSensitivity;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MouseYSensitivity;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -196,16 +196,16 @@ public:
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UseToggleLaserpointer;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FOV;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HeadbobbingScale;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CameraShakeScale;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ChatFadeTime;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -223,7 +223,7 @@ public:
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UseProfanityFilter;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ForceFeedbackScale;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -232,7 +232,7 @@ public:
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool EnableDx12ByDefault;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HDRColorGamma;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -245,14 +245,14 @@ public:
     FCharacterOptions CharacterOptions;
     
 protected:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DownedTurnDirection_Controller;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DownedTurnDirection_Mouse;
     
 public:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float UIDPIScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -564,6 +564,9 @@ public:
     void SetChatFadeTime(float FadeTime);
     
     UFUNCTION(BlueprintCallable)
+    void SetChatEnabledOnController(bool InEnabled);
+    
+    UFUNCTION(BlueprintCallable)
     void SetCanShowBlood(bool bloodAllowed);
     
     UFUNCTION(BlueprintCallable)
@@ -639,7 +642,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetVSyncEnabledToBeApplied();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetVolume(EVolumeType volumeType);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -669,7 +672,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetUpscalingType() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetUIDPIScale() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -699,7 +702,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetShowFPS() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetSharpening() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -720,16 +723,16 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetPhotosensitiveMode() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetNvidiaDlssSharpness() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UDLSSMode GetNvidiaDlssMode() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMouseYSensitivity() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMouseXSensitivity() const;
     
     UFUNCTION(BlueprintPure)
@@ -752,16 +755,16 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static EFSDInputSource GetInputSource();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetHeadBobbingScale() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetHDRColorGamma();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetGrapplingHookAutoSwitch() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetGamma() const;
     
     UFUNCTION(BlueprintPure)
@@ -770,16 +773,16 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static UFSDGameUserSettings* GetFSDGameUserSettings();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetFOV() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetForceFeedbackScale() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetDx12EnabledToBeApplied();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetDownCameraTurnDirection(EFSDInputSource InputSource) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -797,7 +800,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetCurrentAudioInputDeviceName();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetCurrentAudioInputDeviceAmplitude(int32 localUserId);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -809,10 +812,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetChatFontSize() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetChatFadeTime() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool GetChatEnabledOnController() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetCameraShakeScale() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -836,19 +842,19 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetAntiAliasingType() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAMDFSRSharpness() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetAMDFSRMode() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAimSensitivity() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAimOuterAcceleration() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAimDeadZone() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESteamBranch.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ESteamBranch : uint8 {
     Main,
     Experimental,

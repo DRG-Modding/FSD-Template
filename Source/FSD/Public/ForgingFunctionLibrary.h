@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "ForgingResult.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "ESchematicType.h"
 #include "ForgingPendingReward.h"
 #include "ForgingFunctionLibrary.generated.h"
 
-class UObject;
 class USchematic;
+class UObject;
 
 UCLASS(Blueprintable)
 class UForgingFunctionLibrary : public UBlueprintFunctionLibrary {
@@ -32,7 +32,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static ESchematicType GetForgingMasteryRewardDefaultType(ESchematicType InType);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetForgingLevelProgress(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

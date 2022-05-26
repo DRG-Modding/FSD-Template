@@ -1,34 +1,34 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "FSDPlayerControllerBase.h"
 #include "PendingRewardsStats.h"
-#include "OnPlayerCharacterPossesedDelegate.h"
+#include "FSDPlayerControllerBase.h"
 #include "ChatOpenedDelegateDelegate.h"
+#include "OnPlayerCharacterPossesedDelegate.h"
 #include "ESpacerigStartType.h"
-#include "PendingRewards.h"
 #include "EChatSenderType.h"
+#include "PendingRewards.h"
 #include "FSDPlayerController.generated.h"
 
-class UPickaxePart;
 class UTexture2D;
-class UTutorialContentWidget;
-class USoundCue;
-class UPlayerCharacterID;
-class UPerkUsageComponent;
 class UTerrainLatejoinComponent;
+class UTutorialContentWidget;
+class AFSDPlayerState;
+class UPerkUsageComponent;
 class USoundMix;
 class UFSDWidgetEffectsComponent;
 class AActor;
 class UVanityItem;
 class UFSDAchievement;
 class UTemporaryBuff;
+class UItemID;
 class APlayerCharacter;
-class AFSDPlayerState;
+class UPlayerCharacterID;
+class USoundCue;
 class UTreasureRewarder;
 class UVictoryPose;
 class UItemSkin;
-class UItemID;
+class UPickaxePart;
 
 UCLASS(Blueprintable)
 class FSD_API AFSDPlayerController : public AFSDPlayerControllerBase {
@@ -69,6 +69,9 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnPlayerCharacterPossesed OnPlayerCharacterPossesed;
     
+    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FChatOpenedDelegate OnChatOpened;
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UPerkUsageComponent* PerkUsageComponent;
@@ -87,9 +90,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool ServerTravelDone;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FChatOpenedDelegate OnChatOpened;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UFSDWidgetEffectsComponent* WidgetEffects;
@@ -135,7 +135,7 @@ public:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void Server_SetGenerationDone();
     
-    UFUNCTION(Reliable, Server)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetExtraEndScreenTime(float extraTime);
     
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
@@ -182,7 +182,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnSaveGameCreditsChanged(int32 Credits);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnSaveGameCharacterProgressChanged(TSubclassOf<APlayerCharacter> CharacterClass, int32 Level, float Progress);
     
     UFUNCTION(BlueprintCallable)

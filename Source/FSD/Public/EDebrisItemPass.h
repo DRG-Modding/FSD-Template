@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDebrisItemPass.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EDebrisItemPass : uint8 {
     PrePlacement,
     Main,

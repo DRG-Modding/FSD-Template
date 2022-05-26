@@ -39,7 +39,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetIsEventActive(bool NewIsEventActive);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnUseProgress(float Progress);
     
 protected:

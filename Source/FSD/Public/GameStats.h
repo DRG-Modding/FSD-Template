@@ -3,8 +3,8 @@
 #include "GameFramework/Info.h"
 #include "GameStats.generated.h"
 
-class UCappedResource;
 class USeamlessTravelEventKey;
+class UCappedResource;
 
 UCLASS(Blueprintable)
 class AGameStats : public AInfo {
@@ -13,7 +13,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     int32 NumberOfPlayersEscapedInPod;
     
-    UPROPERTY(EditAnywhere, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     float TotalGoldMined;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
@@ -28,7 +28,7 @@ public:
     AGameStats();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnPlayerMinedGold(UCappedResource* Resource, float Amount);
     
 };

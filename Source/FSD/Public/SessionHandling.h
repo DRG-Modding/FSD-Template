@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "FindSessionsCallbackProxy.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "EFSDNATType.h"
-#include "EFSDMissionStatus.h"
-#include "EServerSortOrder.h"
 #include "EDisconnectReason.h"
+#include "EServerSortOrder.h"
+#include "EFSDNATType.h"
+#include "FindSessionsCallbackProxy.h"
 #include "EMissionStructure.h"
 #include "FriendInfo.h"
+#include "EFSDMissionStatus.h"
 #include "UObject/NoExportTypes.h"
 #include "EServerDistance.h"
 #include "SessionHandling.generated.h"
 
 class UObject;
-class UBiome;
 class UFSDGameInstance;
-class UPlayerCharacterID;
 class APlayerCharacter;
+class UPlayerCharacterID;
+class UBiome;
 class UDifficultySetting;
 class UMissionTemplate;
 
@@ -179,7 +179,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 FSDGetGlobalMissionSeed(const FBlueprintSessionResult& Result);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float FSDGetDistanceFloat(const FBlueprintSessionResult& Result);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

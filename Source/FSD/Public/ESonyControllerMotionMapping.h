@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESonyControllerMotionMapping.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ESonyControllerMotionMapping : uint8 {
     Yaw,
     Roll,

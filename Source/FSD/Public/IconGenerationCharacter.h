@@ -3,8 +3,8 @@
 #include "IconGenerationBase.h"
 #include "IconGenerationCharacter.generated.h"
 
-class UIconSceneCaptureComponent;
 class UMaterialInterface;
+class UIconSceneCaptureComponent;
 class USkeletalMeshComponent;
 class UBeardColorVanityItem;
 

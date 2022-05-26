@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UsableChangedSignatureDelegate.h"
+#include "ProgressSignatureDelegate.h"
 #include "UsableComponent.h"
 #include "UsedBySignatureDelegate.h"
-#include "GenericUsableDelegateDelegate.h"
-#include "ProgressSignatureDelegate.h"
 #include "UserCountChangedDelegateDelegate.h"
+#include "GenericUsableDelegateDelegate.h"
+#include "UsableChangedSignatureDelegate.h"
 #include "OnFailedDelegate.h"
 #include "EInputKeys.h"
 #include "SingleUsableComponent.generated.h"
 
 class USoundCue;
 class UDialogDataAsset;
+class UAudioComponent;
 class UPawnStat;
 class UTexture2D;
-class UAudioComponent;
 class APlayerCharacter;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -61,7 +61,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UPawnStat* UseSpeedStat;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CoopUseMultiplier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Usable, meta=(AllowPrivateAccess=true))
@@ -79,13 +79,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UTexture2D> UsableIcon;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float useDuration;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float Progress;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_DesiredProgress)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_DesiredProgress, meta=(AllowPrivateAccess=true))
     float DesiredProgress;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_UserCount, meta=(AllowPrivateAccess=true))

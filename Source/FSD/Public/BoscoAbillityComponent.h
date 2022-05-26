@@ -6,12 +6,12 @@
 #include "AbillityChargeUsedSigDelegate.h"
 #include "BoscoAbillityComponent.generated.h"
 
+class AActor;
+class UItemUpgrade;
 class AProjectileBase;
 class USoundBase;
 class UAnimSequenceBase;
 class ABosco;
-class UItemUpgrade;
-class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UBoscoAbillityComponent : public UActorComponent {

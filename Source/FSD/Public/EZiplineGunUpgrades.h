@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EZiplineGunUpgrades.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EZiplineGunUpgrades : uint8 {
     MaxAngle,
     MaxDistance,

@@ -6,8 +6,8 @@
 #include "Engine/EngineTypes.h"
 #include "FirstPersonNiagaraComponent.generated.h"
 
-class UNiagaraSystem;
 class USceneComponent;
+class UNiagaraSystem;
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFirstPersonNiagaraComponent : public UNiagaraComponent {

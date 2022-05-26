@@ -4,10 +4,10 @@
 #include "AmberEvent.generated.h"
 
 class UDamageComponent;
+class APawn;
 class UAmberEventEnemyPool;
 class AFSDPawn;
 class UHealthComponentBase;
-class APawn;
 
 UCLASS(Blueprintable)
 class AAmberEvent : public AGameEvent {
@@ -26,10 +26,10 @@ protected:
     UPROPERTY(EditAnywhere, Replicated, Transient)
     TWeakObjectPtr<UAmberEventEnemyPool> CurrentPool;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float InitialDelayBeforeSpawn;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxSpawnRange;
     
 public:

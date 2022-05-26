@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECommunityGoalIndex.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ECommunityGoalIndex : uint8 {
     KillBroodNexus,
     KillBulkDetonators,

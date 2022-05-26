@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "AvoidActorEntry.h"
 #include "GrabberComponent.h"
 #include "GrabAvoidClassEntry.h"
-#include "AvoidActorEntry.h"
 #include "FakePhysGrabberComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

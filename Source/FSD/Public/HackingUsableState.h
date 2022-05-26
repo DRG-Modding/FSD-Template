@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "HackingUsableState.generated.h"
 
-class APlayerCharacter;
 class AHackingToolItem;
+class APlayerCharacter;
 
 USTRUCT(BlueprintType)
 struct FHackingUsableState {

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ECellCategory.generated.h"
 
-UENUM()
-enum class ECellCategory {
+UENUM(BlueprintType)
+enum class ECellCategory : uint8 {
     Cave,
     Tunnel,
     ECellCategory_MAX = 0xFF,

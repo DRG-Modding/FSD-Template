@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Blueprint/UserWidget.h"
-#include "Styling/SlateTypes.h"
-#include "EFSDInputSource.h"
-#include "UObject/NoExportTypes.h"
 #include "InputDisplay.h"
+#include "Blueprint/UserWidget.h"
+#include "EFSDInputSource.h"
+#include "Styling/SlateTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "RichTextInputWidget.generated.h"
 
 class URichTextBlock;
@@ -51,10 +51,10 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnCustomKeyBindsChanged();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector2D MeasureTextSize(const FText& Text, float Scale) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetLineHeight() const;
     
     UFUNCTION(BlueprintCallable)

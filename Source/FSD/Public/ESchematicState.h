@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESchematicState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ESchematicState : uint8 {
     NotOwned,
     Owned,

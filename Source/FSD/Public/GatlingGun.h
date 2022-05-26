@@ -3,10 +3,10 @@
 #include "BeltDrivenWeapon.h"
 #include "GatlingGun.generated.h"
 
+class UFSDPhysicalMaterial;
 class UDamageComponent;
 class UFXSystemAsset;
 class AActor;
-class UFSDPhysicalMaterial;
 
 UCLASS(Blueprintable)
 class AGatlingGun : public ABeltDrivenWeapon {
@@ -16,25 +16,25 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool BarrelProximityDamageEnabled;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BarrelProximityDamageDistance;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BarrelProximityDamageRadius;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BarrelProximityDamageLength;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TimeBetweenProximityDamageTicks;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DamageMultiplierAtMaxStabilization;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFXSystemAsset* HotShellsTracerParticles;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HeatRemovedOnKill;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -43,7 +43,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_HotShellsTracerOn, meta=(AllowPrivateAccess=true))
     bool HotShellsOn;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HotShellsTemperatureRequired;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
@@ -63,7 +63,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_HotShellsTracerOn();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnGatlingTemperatureChanged(float Temperature, bool isOverheated);
     
     UFUNCTION(BlueprintCallable)

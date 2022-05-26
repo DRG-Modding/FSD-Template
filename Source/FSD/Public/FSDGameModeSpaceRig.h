@@ -4,8 +4,8 @@
 #include "ESpacerigStartType.h"
 #include "FSDGameModeSpaceRig.generated.h"
 
-class AFSDPlayerController;
 class AActor;
+class AFSDPlayerController;
 
 UCLASS(Blueprintable, MinimalAPI, NonTransient)
 class AFSDGameModeSpaceRig : public AFSDGameMode {

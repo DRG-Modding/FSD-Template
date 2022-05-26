@@ -12,7 +12,7 @@ public:
     FExampleUpdatedDelegate OnExampleUpdatedEvent;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Field;
     
 public:

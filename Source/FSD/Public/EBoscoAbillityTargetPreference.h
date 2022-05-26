@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBoscoAbillityTargetPreference.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EBoscoAbillityTargetPreference : uint8 {
     Self,
     SelectedTarget,

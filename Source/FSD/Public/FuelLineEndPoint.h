@@ -3,10 +3,10 @@
 #include "GameFramework/Actor.h"
 #include "FuelLineEndPoint.generated.h"
 
-class ATrackBuilderSegment;
 class UFuelLineConnectPoint;
 class UStaticMeshComponent;
 class UTrackBuilderConnectPoint;
+class ATrackBuilderSegment;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API AFuelLineEndPoint : public AActor {

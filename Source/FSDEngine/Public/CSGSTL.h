@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SimpleMeshWithCachedTree.h"
 #include "CSGSTLProperties.h"
+#include "SimpleMeshWithCachedTree.h"
 #include "CSGSTL.generated.h"
 
 UCLASS(Blueprintable)

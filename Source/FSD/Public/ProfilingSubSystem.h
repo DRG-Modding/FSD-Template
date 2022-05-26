@@ -15,7 +15,7 @@ protected:
     
 public:
     UProfilingSubSystem();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetTotalTime() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ProgressUpdatedDelegate.h"
 #include "GameFramework/Actor.h"
 #include "PlayersInsideChangedDelegate.h"
 #include "OnFinishedDelegate.h"
-#include "ProgressUpdatedDelegate.h"
 #include "Engine/EngineTypes.h"
 #include "GuntowerActivationPlatform.generated.h"
 
@@ -41,10 +41,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     AGuntowerModule* AssignedModule;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DoneAt;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DisabledTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_PlayersInside, meta=(AllowPrivateAccess=true))

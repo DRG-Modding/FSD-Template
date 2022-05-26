@@ -5,12 +5,12 @@
 #include "UObject/NoExportTypes.h"
 #include "TrackBuilderUsable.generated.h"
 
-class UTrackBuilderUsable;
-class AActor;
-class ATrackBuilderSegment;
-class APlayerCharacter;
-class ATrackBuilderItem;
 class USceneComponent;
+class UTrackBuilderUsable;
+class APlayerCharacter;
+class ATrackBuilderSegment;
+class ATrackBuilderItem;
+class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UTrackBuilderUsable : public UInstantUsable {

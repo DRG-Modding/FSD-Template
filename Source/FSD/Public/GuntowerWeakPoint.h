@@ -3,13 +3,13 @@
 #include "FSDPawn.h"
 #include "GuntowerWeakPoint.generated.h"
 
+class UWeakpointGlowComponent;
+class USoundCue;
 class USceneComponent;
 class UEnemyHealthComponent;
 class UStaticMeshComponent;
-class UWeakpointGlowComponent;
-class UDamageClass;
-class USoundCue;
 class UParticleSystem;
+class UDamageClass;
 class UHealthComponentBase;
 
 UCLASS(Blueprintable)
@@ -50,7 +50,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnDeath(UHealthComponentBase* HealthComponent);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DamageParent(float ammount);
     
 };

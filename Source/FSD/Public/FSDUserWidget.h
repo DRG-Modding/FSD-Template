@@ -5,9 +5,9 @@
 #include "Components/SlateWrapperTypes.h"
 #include "FSDUserWidget.generated.h"
 
-class AFSDPlayerState;
-class APlayerCharacter;
 class AItem;
+class APlayerCharacter;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UFSDUserWidget : public UUserWidget {
@@ -46,7 +46,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     bool HasCharacter();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetOpacity() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -56,7 +56,7 @@ protected:
     AItem* GetEquippedItem() const;
     
 public:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetBaseResolutionScale() const;
     
 protected:

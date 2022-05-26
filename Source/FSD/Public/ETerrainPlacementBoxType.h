@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ETerrainPlacementBoxType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ETerrainPlacementBoxType : uint8 {
     NoTerrain,
     Terrain,

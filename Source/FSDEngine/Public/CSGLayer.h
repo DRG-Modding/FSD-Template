@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
+#include "DeepCSGFloatTree.h"
 #include "CSGGroup.h"
-#include "UObject/NoExportTypes.h"
-#include "DeepCSGTree.h"
 #include "MeshLayerProperties.h"
 #include "GeneralTerrainMaterialCombiner.h"
-#include "DeepCSGFloatTree.h"
+#include "UObject/NoExportTypes.h"
+#include "DeepCSGTree.h"
+#include "UObject/NoExportTypes.h"
 #include "CSGLayer.generated.h"
 
 UCLASS(Blueprintable)

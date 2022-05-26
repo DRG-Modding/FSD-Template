@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Blueprint/UserWidget.h"
 #include "CoolDownProgressStyle.h"
+#include "Blueprint/UserWidget.h"
 #include "CoolDownProgressWidget.generated.h"
 
 class UObject;
@@ -26,7 +26,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void UpdateProgress(float Progress);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveUpdateProgress(float InProgress);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

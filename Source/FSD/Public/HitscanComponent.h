@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HitscanBaseComponent.h"
-#include "HitDelegateDelegate.h"
 #include "IRandRange.h"
+#include "HitscanBaseComponent.h"
 #include "Engine/NetSerialization.h"
+#include "HitDelegateDelegate.h"
 #include "Engine/NetSerialization.h"
 #include "HitscanComponent.generated.h"
 
+class AActor;
 class UFXSystemAsset;
 class USoundCue;
-class AActor;
 class UFSDPhysicalMaterial;
 class UPrimitiveComponent;
 
@@ -27,19 +27,19 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FIRandRange NormalBulletsPerCarvingOne;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CarveDiameter;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CarveNoise;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CarveDebrisSize;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float GeneralImpactAudioVolume;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ImpactDelay;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

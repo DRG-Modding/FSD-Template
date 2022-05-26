@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "OxygenCallback.h"
-#include "Components/ActorComponent.h"
-#include "OxygenDelegateDelegate.h"
-#include "OxygenActiveDelegateDelegate.h"
 #include "OxygenTriggerDelegateDelegate.h"
+#include "Components/ActorComponent.h"
+#include "OxygenActiveDelegateDelegate.h"
+#include "OxygenDelegateDelegate.h"
+#include "OxygenCallback.h"
 #include "OxygenComponent.generated.h"
 
 class UStatusEffect;
@@ -22,13 +22,13 @@ public:
     FOxygenActiveDelegate OnOxygenReplenishingEvent;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OxygenGivenOnRevive;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float CurrentOxygen;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OxygenReplinishmentRate;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_NetworkedOxygen, meta=(AllowPrivateAccess=true))
@@ -37,7 +37,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_IsReplenishingOxygen, meta=(AllowPrivateAccess=true))
     bool IsReplenishingOxygen;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OxygenDepletionPersecond;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

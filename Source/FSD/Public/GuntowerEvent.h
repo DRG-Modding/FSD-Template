@@ -6,8 +6,8 @@
 
 class USceneComponent;
 class USkeletalMeshComponent;
-class UDamageComponent;
 class AGuntowerModule;
+class UDamageComponent;
 
 UCLASS(Blueprintable)
 class AGuntowerEvent : public AGameEvent {
@@ -29,10 +29,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ModuleAttachBone;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TowerExplodeDelay;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DelayBetweenExplosions;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

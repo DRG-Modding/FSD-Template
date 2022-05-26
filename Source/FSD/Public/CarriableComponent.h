@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Throwable.h"
-#include "Components/ActorComponent.h"
-#include "CarriableEventDelegate.h"
 #include "UObject/NoExportTypes.h"
+#include "Components/ActorComponent.h"
+#include "Throwable.h"
+#include "CarriableEventDelegate.h"
 #include "CarriableComponent.generated.h"
 
 class UDialogDataAsset;

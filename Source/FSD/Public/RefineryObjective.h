@@ -7,10 +7,10 @@
 #include "UObject/NoExportTypes.h"
 #include "RefineryObjective.generated.h"
 
-class UDebrisPositioning;
+class AProceduralSetup;
 class AFSDRefinery;
 class AActor;
-class AProceduralSetup;
+class UDebrisPositioning;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API URefineryObjective : public UObjective {

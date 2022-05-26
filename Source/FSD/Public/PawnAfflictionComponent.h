@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "AfflictionEntriesArray.h"
 #include "Components/ActorComponent.h"
 #include "AfflictionChangeDelegateDelegate.h"
-#include "PawnAfflictionItem.h"
 #include "EFrozenBitsSize.h"
+#include "AfflictionEntriesArray.h"
+#include "PawnAfflictionItem.h"
 #include "PawnAfflictionComponent.generated.h"
 
-class UPawnAffliction;
 class UFrozenAfflictionEffect;
+class UPawnAffliction;
 class UBurningAfflictionEffect;
 class UHealthComponentBase;
 
@@ -39,7 +39,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EFrozenBitsSize EffectSize;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BaseEffectScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class USpecialEvent : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Weight;
     
 protected:

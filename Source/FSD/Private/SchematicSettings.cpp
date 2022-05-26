@@ -1,8 +1,8 @@
 #include "SchematicSettings.h"
 
-class UItemID;
-class USchematic;
 class UOverclockBank;
+class USchematic;
+class UItemID;
 
 bool USchematicSettings::ValidateVanitySchematics() const {
     return false;
@@ -34,6 +34,7 @@ USchematicSettings::USchematicSettings() {
     this->VanityCatSideburn = NULL;
     this->VanityCatSkinColor = NULL;
     this->VanityCatVictoryPose = NULL;
+    this->WeaponPaintJob = NULL;
     this->SchematicGATable = NULL;
 }
 

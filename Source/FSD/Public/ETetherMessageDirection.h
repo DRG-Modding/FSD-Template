@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ETetherMessageDirection.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ETetherMessageDirection : uint8 {
     Forward,
     Backward,

@@ -4,11 +4,11 @@
 #include "EHUDVisibilityReason.h"
 #include "FSDHUD.generated.h"
 
+class APlayerController;
 class URadarPointComponent;
-class APlayerCameraDrone;
 class AFSDHUD;
 class APlayerCharacter;
-class APlayerController;
+class APlayerCameraDrone;
 
 UCLASS(Blueprintable, NonTransient)
 class AFSDHUD : public AHUD {

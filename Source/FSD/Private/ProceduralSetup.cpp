@@ -6,11 +6,11 @@
 #include "ProceduralObjectColliders.h"
 
 class AProceduralSetup;
-class UMissionDNA;
-class UCaveInfluencer;
 class ADeepCSGWorld;
+class UMissionDNA;
 class UTunnelParameters;
 class URoomGeneratorBase;
+class UCaveInfluencer;
 
 
 void AProceduralSetup::SpawnSpecialEvents() {

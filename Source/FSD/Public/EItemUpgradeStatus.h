@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EItemUpgradeStatus.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EItemUpgradeStatus : uint8 {
     Locked,
     AvailableCannotAfford,

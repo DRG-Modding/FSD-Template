@@ -3,10 +3,10 @@
 #include "Components/ActorComponent.h"
 #include "Health.h"
 #include "DamageSigDelegate.h"
+#include "EEnemyHealthScaling.h"
+#include "EHealthbarType.h"
 #include "HealthChangedSigDelegate.h"
 #include "SubHealthComponentDelegateDelegate.h"
-#include "EHealthbarType.h"
-#include "EEnemyHealthScaling.h"
 #include "SubHealthComponent.generated.h"
 
 class AActor;
@@ -42,10 +42,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsAlive() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetHealthPct() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetHealth() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -53,8 +53,8 @@ public:
     
     
     // Fix for true pure virtual functions not being implemented
-    /*UFUNCTION(BlueprintCallable)*/
-    AActor* GetOwner() const override PURE_VIRTUAL(GetOwner, return NULL;);
+    /*UFUNCTION(BlueprintCallable)
+    AActor* GetOwner() const override PURE_VIRTUAL(GetOwner, return NULL;);*/
     
     UFUNCTION(BlueprintCallable)
     float GetMaxHealth() const override PURE_VIRTUAL(GetMaxHealth, return 0.0f;);

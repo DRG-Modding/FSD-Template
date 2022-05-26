@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ERobotState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ERobotState : uint8 {
     Enemy,
     Friendly,

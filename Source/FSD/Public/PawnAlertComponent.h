@@ -20,7 +20,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ShouldAlertNearby;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AlertRadius;
     
     UPawnAlertComponent();
@@ -31,7 +31,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnPawnSeen(APawn* Pawn);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnHit(float Damage, const FDamageData& DamageData, bool anyHealthLost);
     
     UFUNCTION(BlueprintCallable)

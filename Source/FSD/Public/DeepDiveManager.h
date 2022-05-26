@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DeepDiveBank.h"
 #include "UObject/Object.h"
 #include "UObject/NoExportTypes.h"
+#include "DeepDiveBank.h"
 #include "DeepDiveManager.generated.h"
 
-class UDeepDive;
 class UFSDEventsHandler;
+class UDeepDive;
 class UGeneratedMission;
 
 UCLASS(Blueprintable)
@@ -37,7 +37,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGeneratedMission* CurrentMission;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float currentDepth;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

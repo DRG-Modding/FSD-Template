@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Targetable.h"
-#include "GameplayTagAssetInterface.h"
 #include "GameplayTagContainer.h"
+#include "GameplayTagAssetInterface.h"
+#include "Targetable.h"
 #include "GameplayTagContainer.h"
 #include "TargetDummyPawn.generated.h"
 

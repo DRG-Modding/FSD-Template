@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBeltDrivenWeaponUpgrade.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EBeltDrivenWeaponUpgrade : uint8 {
     BarrelSpinupTime,
     BarrelSpinDownTime,

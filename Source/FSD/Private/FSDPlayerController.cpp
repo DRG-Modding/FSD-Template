@@ -5,9 +5,9 @@
 #include "FSDWidgetEffectsComponent.h"
 
 class UTutorialContentWidget;
-class AActor;
-class UPickaxePart;
 class UTexture2D;
+class AActor;
+class UItemID;
 class APlayerCharacter;
 class UVanityItem;
 class UFSDAchievement;
@@ -18,7 +18,7 @@ class USoundCue;
 class UTreasureRewarder;
 class UVictoryPose;
 class UItemSkin;
-class UItemID;
+class UPickaxePart;
 
 void AFSDPlayerController::ToggleVoiceOn(bool Enabled) {
 }

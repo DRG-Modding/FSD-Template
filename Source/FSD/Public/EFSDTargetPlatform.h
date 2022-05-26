@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EFSDTargetPlatform.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EFSDTargetPlatform : uint8 {
     Steam,
     XboxOne,

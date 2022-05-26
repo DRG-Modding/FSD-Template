@@ -5,10 +5,10 @@
 #include "LockOnBeam.generated.h"
 
 class USplineComponent;
-class USceneComponent;
 class USplineMeshComponent;
-class UMaterialInterface;
 class ALockOnWeapon;
+class UMaterialInterface;
+class USceneComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ALockOnBeam : public AActor {
@@ -42,7 +42,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInterface* SeekerMaterial;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BeamThicknessScale;
     
     UPROPERTY(EditAnywhere, Transient)

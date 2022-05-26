@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EFSDMissionStatus.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EFSDMissionStatus : uint8 {
     SpaceRig,
     InGame,

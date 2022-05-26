@@ -7,7 +7,6 @@ public class FSDEditorTarget : TargetRules {
 		ExtraModuleNames.AddRange(new string[] {
 			"FSD",
 			"FSDEngine",
-			"ModioEx",
 		});
 	}
 }

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ELockOnWeaponUpgrades.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ELockOnWeaponUpgrades : uint8 {
     MaxLockOnDegree,
     TimeBetweenLockedShots,

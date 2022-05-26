@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPackageSortField.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPackageSortField : uint8 {
     None,
     Name,

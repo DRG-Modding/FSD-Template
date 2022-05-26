@@ -4,8 +4,8 @@
 #include "MeleeAttackDelegateDelegate.h"
 #include "MeleeAttackComponent.generated.h"
 
-class UAnimMontage;
 class UAttackEffect;
+class UAnimMontage;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UMeleeAttackComponent : public UDamageAttackComponent {

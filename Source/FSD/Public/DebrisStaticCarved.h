@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "DebrisInfluence.h"
 #include "DebrisBase.h"
 #include "EDebrisCarvedType.h"
 #include "UDebrisStaticCarveMesh.h"
-#include "DebrisInfluence.h"
 #include "ECarveFilterType.h"
 #include "DebrisStaticCarved.generated.h"
 
@@ -30,13 +30,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ECarveFilterType Filter;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CarveOffsetRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> SpawnAttachClass;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AttachSpawnOffsetDistance;
     
     UDebrisStaticCarved();

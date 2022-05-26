@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEnemyControlState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEnemyControlState : uint8 {
     Connecting,
     Connected,

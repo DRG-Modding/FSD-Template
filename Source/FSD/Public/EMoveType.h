@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMoveType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMoveType : uint8 {
     EaseIn,
     EaseOut,

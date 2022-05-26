@@ -5,10 +5,10 @@
 #include "RandRange.h"
 #include "AfflictionSettings.generated.h"
 
-class UPawnAffliction;
 class UStaticMesh;
-class UParticleSystem;
+class UPawnAffliction;
 class USoundCue;
+class UParticleSystem;
 
 UCLASS(Blueprintable)
 class UAfflictionSettings : public UDataAsset {
@@ -35,10 +35,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* EletrocutedSound;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HeavyStaggerMinTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MediumStaggerMinTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -49,6 +49,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UPawnAffliction* ShortStaggerAffliction;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPawnAffliction* EliteAffliction;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))

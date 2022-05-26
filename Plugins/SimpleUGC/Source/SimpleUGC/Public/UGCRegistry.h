@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UObject/Object.h"
-#include "EPackageSortField.h"
 #include "EUGCApprovalStatus.h"
+#include "EPackageSortField.h"
 #include "UGCRegistry.generated.h"
 
 class UUGCPackage;
@@ -55,9 +55,6 @@ public:
     void ResetUGCPackagesManipulatedDuringJoin();
     
     UFUNCTION(BlueprintCallable)
-    void RegisterOverrideForClass(TSubclassOf<AActor> ClassToOverride, TSubclassOf<AActor> OverrideClass);
-    
-    UFUNCTION(BlueprintCallable)
     void RegisterAssetFromPackage(UUGCPackage* Package);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -88,31 +85,16 @@ public:
     TArray<UUGCPackage*> GetPackagesSorted(EPackageSortField ByField, bool Ascending) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    TSubclassOf<AActor> GetOverrideForActorClass(TSubclassOf<AActor> ActorClass);
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetMapsInPackage(UUGCPackage* Package, TArray<FName>& Maps);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetAllClassesInPackage(UUGCPackage* Package, TArray<UClass*>& Classes);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    bool GetActorClassesWithReplacementActorComponentsInPackage(UUGCPackage* Package, TArray<TSubclassOf<AActor>>& ActorClasses);
-    
-    UFUNCTION(BlueprintCallable)
-    void ClearOverrideForClass(TSubclassOf<AActor> ActorClass);
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool AreModsInstalled(EUGCApprovalStatus ApprovalStatus);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool AreDeprecatedModsInstalled();
-    
-    UFUNCTION(BlueprintCallable)
-    bool ApplyOverridesForActorClass(TSubclassOf<AActor> ActorClass);
-    
-    UFUNCTION(BlueprintCallable)
-    bool ApplyAllOverridesInPackage(UUGCPackage* Package);
     
 };
 

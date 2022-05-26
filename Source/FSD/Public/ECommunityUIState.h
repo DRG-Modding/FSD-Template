@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ECommunityUIState.generated.h"
 
-UENUM()
-enum class ECommunityUIState {
+UENUM(BlueprintType)
+enum class ECommunityUIState : uint8 {
     Loading,
     SelectFaction,
     Progress,

@@ -34,7 +34,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetIntSetting(FName Name, int32 defaultVal);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetFloatSetting(FName Name, float defaultVal);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

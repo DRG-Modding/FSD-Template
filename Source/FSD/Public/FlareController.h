@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "FlareMeta.h"
 #include "Components/ActorComponent.h"
 #include "ShadowQualityChangedDelegate.h"
-#include "FlareMeta.h"
-#include "UObject/NoExportTypes.h"
 #include "FlareController.generated.h"
 
+class AActor;
+class AFlareGunProjectile;
 class AFlare;
 class UObject;
-class AFlareGunProjectile;
-class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFlareController : public UActorComponent {

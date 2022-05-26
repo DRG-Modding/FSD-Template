@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EDecalImportance.generated.h"
 
-UENUM()
-enum class EDecalImportance {
+UENUM(BlueprintType)
+enum class EDecalImportance : uint8 {
     High,
     Normal,
     Low,

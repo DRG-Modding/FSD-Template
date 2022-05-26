@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EFNFractalType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EFNFractalType : uint8 {
     NONE,
     FBM,

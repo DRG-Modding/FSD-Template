@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ETurn180Mode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ETurn180Mode : uint8 {
     PressRun,
     PressFlare,

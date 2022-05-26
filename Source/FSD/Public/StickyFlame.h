@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "DecalData.h"
 #include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
-#include "DecalData.h"
 #include "StickyFlame.generated.h"
 
-class UParticleSystemComponent;
 class UAudioComponent;
+class UParticleSystemComponent;
 class UStatusEffectTriggerComponent;
 
 UCLASS(Blueprintable)
@@ -26,16 +26,16 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDecalData Decal;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FlameLifetime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FlameExtinguishTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D RandomTimeRangeFactor;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AudioFadeOutTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_IsActive, meta=(AllowPrivateAccess=true))

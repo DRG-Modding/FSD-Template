@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGeneratorIconType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGeneratorIconType : uint8 {
     Vanity,
     PickaxePart,

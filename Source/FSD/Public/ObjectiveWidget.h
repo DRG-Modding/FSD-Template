@@ -3,9 +3,9 @@
 #include "Blueprint/UserWidget.h"
 #include "ObjectiveWidget.generated.h"
 
-class UObjectiveWidget;
-class UObjective;
 class UTexture2D;
+class UObjective;
+class UObjectiveWidget;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UObjectiveWidget : public UUserWidget {

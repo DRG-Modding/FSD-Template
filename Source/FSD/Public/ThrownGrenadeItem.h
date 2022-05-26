@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "RejoinListener.h"
-#include "Item.h"
-#include "UObject/NoExportTypes.h"
 #include "EThrownGrenadeItemState.h"
+#include "Item.h"
+#include "RejoinListener.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "ThrownGrenadeItem.generated.h"
 
 class UPlayerAnimInstance;
-class UGrenadeAnimationSet;
-class UItemCharacterAnimationSet;
 class AGrenade;
+class UItemCharacterAnimationSet;
+class UGrenadeAnimationSet;
 class UStaticMeshComponent;
 
 UCLASS(Blueprintable)
@@ -36,7 +36,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector ThrowOffset;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ThrowAngle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -45,7 +45,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_GrenadeCount, meta=(AllowPrivateAccess=true))
     int32 Grenades;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float GrenadeCooldownRemaining;
     
     UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_State)
@@ -75,7 +75,7 @@ protected:
     void Server_SetState(EThrownGrenadeItemState itemState);
     
 public:
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void Server_Resupply(float percentage);
     
     UFUNCTION(BlueprintCallable)
@@ -94,16 +94,16 @@ protected:
     UFUNCTION(BlueprintCallable)
     void GrenadeThrowFinished();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetGrenadeThrowVelocity() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FRotator GetGrenadeThrowRotation() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetGrenadeGravity() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetGrenadeDuration() const;
     
     

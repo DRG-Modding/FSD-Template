@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EArmorSetTorso.generated.h"
 
-UENUM()
-enum class EArmorSetTorso {
+UENUM(BlueprintType)
+enum class EArmorSetTorso : uint8 {
     Invalid,
     UpperTorso,
     MiddleTorso,

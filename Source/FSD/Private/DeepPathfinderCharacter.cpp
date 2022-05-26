@@ -1,7 +1,7 @@
 #include "DeepPathfinderCharacter.h"
-#include "DeepPatherFinderCharacterAfflictionComponent.h"
-#include "Components/SkeletalMeshComponent.h"
 #include "DeepPathfinderMovement.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "DeepPatherFinderCharacterAfflictionComponent.h"
 
 bool ADeepPathfinderCharacter::TryJoinFormation() {
     return false;

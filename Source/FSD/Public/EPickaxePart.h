@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EPickaxePart.generated.h"
 
-UENUM()
-enum class EPickaxePart {
+UENUM(BlueprintType)
+enum class EPickaxePart : uint8 {
     Head,
     Blade,
     Shaft,

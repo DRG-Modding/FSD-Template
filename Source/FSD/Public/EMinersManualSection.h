@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMinersManualSection.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMinersManualSection : uint8 {
     FrontPage,
     Hints,

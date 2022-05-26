@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Item.h"
 #include "UObject/NoExportTypes.h"
+#include "Item.h"
 #include "AnimatedItem.generated.h"
 
 class UPlayerAnimInstance;
@@ -36,7 +36,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimMontage* TP_EquipAnimation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float EquipDuration;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

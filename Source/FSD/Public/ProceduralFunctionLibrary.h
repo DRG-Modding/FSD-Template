@@ -7,9 +7,9 @@
 #include "RoomNode.h"
 #include "ProceduralFunctionLibrary.generated.h"
 
-class UObjective;
 class UObject;
 class UFXSystemAsset;
+class UObjective;
 class AProceduralSetup;
 class UBiome;
 class UDebrisPositioning;
@@ -25,10 +25,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static AProceduralSetup* GetProceduralSetup(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetObjectiveXP(TSubclassOf<UObjective> objectiveClass, float missionLength);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetObjectiveCredits(TSubclassOf<UObjective> objectiveClass, float missionLength);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "FSDUserWidget.h"
-#include "UObject/NoExportTypes.h"
 #include "Layout/Margin.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "ActorTrackingWidget.generated.h"
 
-class AActor;
 class USceneComponent;
-class UActorTrackingWidget;
+class AActor;
 class APlayerController;
+class UActorTrackingWidget;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UActorTrackingWidget : public UFSDUserWidget {
@@ -20,10 +20,10 @@ protected:
     UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<USceneComponent> TargetComponent;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WorldHeightOffset;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ScaleBy;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -50,7 +50,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnTargetSet(AActor* NewTarget);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnTargetDistanceChanged(float Distance);
     
 public:
@@ -58,7 +58,7 @@ public:
     void OnShow();
     
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnInViewChanged(bool inView, float Angle);
     
 public:
@@ -68,7 +68,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector2D GetRenderTranslation() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool FindScreenPosition(APlayerController* PlayerController, FVector WorldLocation, FMargin Margin, FVector& ScreenCord, float& Angle);
     
     UFUNCTION(BlueprintCallable)

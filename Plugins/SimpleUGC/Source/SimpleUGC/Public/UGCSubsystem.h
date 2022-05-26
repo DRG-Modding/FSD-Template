@@ -7,9 +7,9 @@
 #include "Engine/LatentActionManager.h"
 #include "UGCSubsystem.generated.h"
 
-class UUGCRegistry;
-class UUGCSettings;
 class UUGCLatentActionManager;
+class UUGCSettings;
+class UUGCRegistry;
 class UUGCPackage;
 class UObject;
 
@@ -28,6 +28,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool forceNoMods;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool noInternetAccess;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsJoining;

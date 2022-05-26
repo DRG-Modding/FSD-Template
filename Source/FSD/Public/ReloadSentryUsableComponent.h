@@ -4,9 +4,9 @@
 #include "ReloadSentryUsableComponent.generated.h"
 
 class ASentryGun;
-class APlayerCharacter;
 class USoundBase;
 class UAudioComponent;
+class APlayerCharacter;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UReloadSentryUsableComponent : public UUsableComponent {
@@ -37,7 +37,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UAudioComponent* ReloadAudioComponent;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AmmoPerSec;
     
     UPROPERTY(EditAnywhere, Replicated, Transient)

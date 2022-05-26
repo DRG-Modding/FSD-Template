@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECharacterSelectorItemStatus.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ECharacterSelectorItemStatus : uint8 {
     LeaveAsIs,
     SwitchToDefault,

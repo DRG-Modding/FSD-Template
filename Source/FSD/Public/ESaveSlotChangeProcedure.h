@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESaveSlotChangeProcedure.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ESaveSlotChangeProcedure : uint8 {
     NewSave,
     Load,

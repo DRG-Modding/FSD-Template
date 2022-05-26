@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SDFBaseWithTransform.h"
 #include "SDFSphereProperties.h"
+#include "SDFBaseWithTransform.h"
 #include "SDFSphere.generated.h"
 
 UCLASS(Blueprintable)

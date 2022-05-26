@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UpgradeValues.h"
 #include "StandardItemUpgrade.h"
 #include "ELineCutterProjectileUpgradeType.h"
+#include "UpgradeValues.h"
 #include "LineCutterProjectileUpgrade.generated.h"
 
 class AFSDPlayerState;

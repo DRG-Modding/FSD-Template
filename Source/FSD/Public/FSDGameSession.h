@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/OnlineReplStructs.h"
 #include "GameFramework/GameSession.h"
+#include "GameFramework/OnlineReplStructs.h"
 #include "FSDGameSession.generated.h"
 
 UCLASS(Blueprintable)

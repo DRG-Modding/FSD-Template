@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "MissionShoutEndDelegateDelegate.h"
 #include "Components/ActorComponent.h"
-#include "MissionShoutDelegateDelegate.h"
 #include "GameplayTagContainer.h"
+#include "MissionShoutDelegateDelegate.h"
+#include "MissionShoutEndDelegateDelegate.h"
 #include "ActiveOutline.h"
 #include "MissionShoutQueueItem.h"
-#include "UObject/NoExportTypes.h"
 #include "EShoutType.h"
+#include "UObject/NoExportTypes.h"
 #include "CommunicationComponent.generated.h"
 
 class UAudioComponent;
 class UShoutWidget;
-class UCharacterShoutsData;
 class UDialogDataAsset;
+class UCharacterShoutsData;
 class APlayerCharacter;
 class UObject;
 class USoundBase;
@@ -42,16 +42,16 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCharacterShoutsData* CharacterShouts;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PitchMultiplier;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinShoutDelay;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CloseRangeShoutDistance;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TMap<UDialogDataAsset*, float> DelayedShouts;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -79,7 +79,7 @@ private:
     UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<UAudioComponent> ShoutAudioComponent;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TMap<UDialogDataAsset*, float> ShoutHistory;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

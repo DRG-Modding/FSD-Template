@@ -4,16 +4,16 @@
 #include "AmmoDrivenWeapon.h"
 #include "AssaultRifle.generated.h"
 
-class UFSDPhysicalMaterial;
 class UStatusEffect;
 class AActor;
+class UFSDPhysicalMaterial;
 
 UCLASS(Blueprintable)
 class AAssaultRifle : public AAmmoDrivenWeapon {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float KillsResetAccuracyDuration;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

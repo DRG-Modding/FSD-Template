@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPawnStatType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPawnStatType : uint8 {
     Multiplicative,
     Additive,

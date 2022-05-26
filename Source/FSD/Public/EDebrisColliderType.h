@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDebrisColliderType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EDebrisColliderType : uint8 {
     Object,
     AirParticles,

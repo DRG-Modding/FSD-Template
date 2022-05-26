@@ -1,50 +1,50 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "GameFramework/Actor.h"
 #include "VisualLogger/VisualLoggerDebugSnapshotInterface.h"
+#include "UObject/NoExportTypes.h"
+#include "GameFramework/Actor.h"
 #include "TerrainBaseDoneDelegate.h"
+#include "CarveOptionsCellSize.h"
 #include "CSGRaycastHitInfo.h"
 #include "DebrisWhenCarving.h"
-#include "UObject/NoExportTypes.h"
 #include "CSGBuildOperationData.h"
 #include "TerrainLateJoinData.h"
 #include "EncodedChunkId.h"
 #include "PickaxeDigOperationData.h"
 #include "RemoveFloatingIslandOperationData.h"
+#include "Engine/LatentActionManager.h"
 #include "MeltOperationData.h"
 #include "GrenadeExplodeOperationData.h"
 #include "DrillOperationData.h"
 #include "CarveWithSTLMeshOperationData.h"
 #include "CarveSplineSegment.h"
+#include "ECarveFilterType.h"
 #include "SplineSegmentCarveOperationData.h"
 #include "CarveWithColliderOperationData.h"
-#include "UObject/NoExportTypes.h"
 #include "ELandscapeCellFilter.h"
-#include "ECarveFilterType.h"
 #include "UObject/NoExportTypes.h"
 #include "EPreciousMaterialOptions.h"
-#include "Engine/LatentActionManager.h"
-#include "CarveOptionsCellSize.h"
+#include "UObject/NoExportTypes.h"
 #include "DeepCSGWorld.generated.h"
 
-class UDebrisSet;
-class AProceduralSetup;
 class UTerrainMaterial;
-class UTerrainType;
-class UTerrainMaterialsCollection;
 class UDebrisBase;
-class UMaterialInterface;
-class ACSGBuilder;
+class UTerrainType;
 class ADebrisDataActor;
+class UTerrainMaterialsCollection;
+class UDebrisSet;
+class UMaterialInterface;
+class AProceduralSetup;
 class UObject;
 class UAsyncPathRequests;
+class USTLMeshCarver;
 class UDebrisInstances;
 class UPrimitiveComponent;
-class USTLMeshCarver;
-class UStaticMeshCarver;
 class ADeepCSGWorld;
 class UStaticMesh;
+class UStaticMeshCarver;
+class ACSGBuilder;
 
 UCLASS(Blueprintable)
 class FSD_API ADeepCSGWorld : public AActor, public IVisualLoggerDebugSnapshotInterface {
@@ -236,7 +236,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void RegisterScannerComponent(UPrimitiveComponent* Component, bool useFogOfWar);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool Raycast(FVector Start, FVector Direction, float MaxDistance, FCSGRaycastHitInfo& HitInfo, ELandscapeCellFilter Filter) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

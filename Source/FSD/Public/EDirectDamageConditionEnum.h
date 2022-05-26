@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDirectDamageConditionEnum.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EDirectDamageConditionEnum : uint8 {
     Direct,
     Radial,

@@ -1,10 +1,10 @@
 #include "LaserPointerItem.h"
 #include "Components/SceneComponent.h"
 
-class UObject;
-class AActor;
 class UPrimitiveComponent;
+class UObject;
 class UTerrainMaterial;
+class AActor;
 
 void ALaserPointerItem::UnlockToMinersManual(UObject* WorldContextObject, FGuid ObjectID) {
 }

@@ -4,9 +4,9 @@
 #include "CSGBuilder.generated.h"
 
 class UCSGPreviewScene;
+class UTerrainMaterialCore;
 class UCSGGroupComponent;
 class UCSGBase;
-class UTerrainMaterialCore;
 class UBakeConfig;
 
 UCLASS(Blueprintable)

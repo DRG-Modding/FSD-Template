@@ -6,8 +6,8 @@
 #include "StatusDamageBonusUpgrade.generated.h"
 
 class AFSDPlayerState;
-class UStatusEffect;
 class UDamageClass;
+class UStatusEffect;
 class AActor;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
@@ -18,7 +18,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UStatusEffect>> StatusEffects;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Bonus;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESpawnSettings.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ESpawnSettings : uint8 {
     Normal,
     NoSpawning,

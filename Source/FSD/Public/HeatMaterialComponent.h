@@ -13,7 +13,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ParameterName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxEffect;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -22,7 +22,7 @@ protected:
 public:
     UHeatMaterialComponent();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnTemperatureChanged(float Temperature, bool Overheated);
     
 public:

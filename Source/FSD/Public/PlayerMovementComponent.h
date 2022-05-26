@@ -3,8 +3,8 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "PlayerMovementComponent.generated.h"
 
-class APlayerCharacter;
 class USoundBase;
+class APlayerCharacter;
 class UCharacterStateComponent;
 class AActor;
 
@@ -19,10 +19,10 @@ public:
     USoundBase* SlidingOnIceSound;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LedgeClimbZVelocity;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float MovementPenalty;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

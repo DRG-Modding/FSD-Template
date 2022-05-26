@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECoilgunUpgrades.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ECoilgunUpgrades : uint8 {
     EResistanceWhileCharging,
     ETransferAilment,

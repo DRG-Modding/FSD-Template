@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FWidgetAnimationSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PlaybackSpeed;
     
     UPROPERTY(EditAnywhere)

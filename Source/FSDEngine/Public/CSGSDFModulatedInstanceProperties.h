@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "SDFModulateLayer.h"
+#include "ESDFModulateMode.h"
 #include "EPreviewCellSize.h"
 #include "BakeSettings.h"
-#include "ESDFModulateMode.h"
-#include "SDFModulateLayer.h"
 #include "CSGSDFModulatedInstanceProperties.generated.h"
 
 class ASDFBuilder;

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EChargedWeaponUpgrades.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EChargedWeaponUpgrades : uint8 {
     ShotCostAtFullCharge,
     ChargeSpeed,

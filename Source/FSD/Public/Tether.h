@@ -3,13 +3,13 @@
 #include "CarriableItem.h"
 #include "Tether.generated.h"
 
+class UParticleSystem;
 class UNiagaraComponent;
 class USkeletalMeshComponent;
 class UInstantUsable;
-class UParticleSystem;
-class UCarriableComponent;
-class USphereComponent;
 class UDamageComponent;
+class USphereComponent;
+class UCarriableComponent;
 class USoundCue;
 
 UCLASS(Blueprintable)
@@ -47,7 +47,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     bool IsOnGround;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float KnockBackForce;
     
 public:

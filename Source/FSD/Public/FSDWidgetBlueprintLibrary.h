@@ -1,46 +1,46 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Engine/EngineTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "Types/SlateEnums.h"
+#include "Types/SlateEnums.h"
 #include "WidgetAnimationSettings.h"
 #include "Blueprint/UserWidget.h"
-#include "Fonts/SlateFontInfo.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "Components/SlateWrapperTypes.h"
+#include "Engine/EngineTypes.h"
 #include "Engine/EngineTypes.h"
 #include "SizeBoxSettings.h"
+#include "Components/SlateWrapperTypes.h"
+#include "Fonts/SlateFontInfo.h"
 #include "InputCoreTypes.h"
 #include "Framework/Text/TextLayout.h"
-#include "Styling/SlateBrush.h"
-#include "Types/SlateEnums.h"
-#include "Types/SlateEnums.h"
 #include "Layout/Margin.h"
+#include "Styling/SlateBrush.h"
 #include "Widgets/Layout/Anchors.h"
 #include "FSDWidgetBlueprintLibrary.generated.h"
 
-class UTextBlock;
-class UObject;
-class UHorizontalBox;
-class UUserWidget;
-class UWidget;
-class UWidgetAnimation;
-class UCanvasPanel;
 class USizeBox;
-class UUniformGridSlot;
-class UFSDCheatManager;
-class UPanelWidget;
-class UImage;
+class UUserWidget;
 class UVerticalBox;
+class UWidget;
+class UObject;
+class UWidgetAnimation;
+class UVerticalBoxSlot;
+class UImage;
+class UTexture2D;
+class AFSDPlayerState;
+class UPanelWidget;
+class UTextBlock;
+class USpacer;
 class UWindowWidget;
 class APlayerController;
-class AFSDPlayerState;
-class USpacer;
-class UTexture2D;
-class UHorizontalBoxSlot;
-class UVerticalBoxSlot;
+class UFSDCheatManager;
 class UUniformGridPanel;
+class UHorizontalBoxSlot;
+class UHorizontalBox;
+class UUniformGridSlot;
+class UCanvasPanel;
 class UCanvasPanelSlot;
 
 UCLASS(Blueprintable)
@@ -103,7 +103,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void Line(FPaintContext& Context, FVector2D Pos1, FVector2D Pos2, FLinearColor Tint);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FLinearColor LerpColors(const TArray<FLinearColor>& Colors, bool Interpolate, float Progress01);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -142,10 +142,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FText GetKeyName(const FKey& Key);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetFontMaxHeight(const FSlateFontInfo& Font);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetFontBaseline(const FSlateFontInfo& Font);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

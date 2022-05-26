@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ObjectiveUpdatedSignatureDelegate.h"
-#include "MissionShouts.h"
 #include "Components/ActorComponent.h"
-#include "CreditsReward.h"
+#include "ObjectiveUpdatedSignatureDelegate.h"
 #include "ObjectiveMissionIcon.h"
+#include "MissionShouts.h"
+#include "CreditsReward.h"
 #include "Objective.generated.h"
 
-class UBiome;
+class UResourceData;
 class UObjectiveWidget;
 class UMissionStat;
+class UBiome;
 class UOptionalObjectiveWidget;
-class UResourceData;
 class UTexture2D;
 class UObjective;
 
@@ -54,7 +54,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_IsPrimaryObjective, meta=(AllowPrivateAccess=true))
     int32 IsPrimaryObjective;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float MissionScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -117,16 +117,16 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     UTexture2D* GetObjectiveIcon() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FText GetObjectiveDescriptionFromClass(TSubclassOf<UObjective> objectiveClass, float missionLength);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     FText GetObjectiveDescription(float missionLength);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetObjectiveAmountFromClass(TSubclassOf<UObjective> objectiveClass, float missionLength);
     
-    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
     int32 GetObjectiveAmount(float missionLength) const;
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

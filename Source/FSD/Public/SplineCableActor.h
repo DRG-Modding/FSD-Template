@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "CablePathSettings.h"
 #include "GameFramework/Actor.h"
+#include "CablePathSettings.h"
 #include "UObject/NoExportTypes.h"
 #include "SplineCableActor.generated.h"
 
-class USplineComponent;
 class UStaticMesh;
+class USplineComponent;
 class UMaterialInterface;
 class USplineMeshComponent;
 
@@ -25,7 +25,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UStaticMesh> CableMesh;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CableThickness;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ESeasonVisibilityState.generated.h"
 
-UENUM()
-enum class ESeasonVisibilityState {
+UENUM(BlueprintType)
+enum class ESeasonVisibilityState : uint8 {
     Bought,
     CanBuy,
     Locked,

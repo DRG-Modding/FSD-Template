@@ -1,7 +1,7 @@
 #include "DroneCharacter.h"
-#include "SimpleObjectInfoComponent.h"
 #include "HealthComponent.h"
 #include "OutlineComponent.h"
+#include "SimpleObjectInfoComponent.h"
 
 ADroneCharacter::ADroneCharacter() {
     this->HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("HealthComponent"));

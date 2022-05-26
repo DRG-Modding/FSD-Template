@@ -16,7 +16,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDamageClass* DamageClass;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CoolDown;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -25,7 +25,7 @@ protected:
 public:
     UThornsPerkComponent();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnHit(float Damage, const FDamageData& DamageData, bool anyHealthLost);
     
 };

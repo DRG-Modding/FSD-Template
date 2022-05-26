@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "SimpleObjectInfoData.generated.h"
 
-class UDialogDataAsset;
 class UTexture2D;
+class UDialogDataAsset;
 
 USTRUCT(BlueprintType)
 struct FSimpleObjectInfoData {

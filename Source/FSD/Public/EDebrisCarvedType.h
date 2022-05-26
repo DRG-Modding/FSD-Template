@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDebrisCarvedType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EDebrisCarvedType : uint8 {
     Large,
     Small,

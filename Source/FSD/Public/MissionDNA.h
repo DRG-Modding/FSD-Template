@@ -4,17 +4,17 @@
 #include "GameplayTagContainer.h"
 #include "MissionDNA.generated.h"
 
-class UMissionComplexity;
 class UMissionDuration;
+class UMissionComplexity;
 
 UCLASS(Abstract, Blueprintable)
 class UMissionDNA : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MissionScale;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Weight;
     
 protected:
@@ -29,10 +29,10 @@ protected:
     
 public:
     UMissionDNA();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetDurationHazardBonus() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetComplexityHazardBonus() const;
     
 };

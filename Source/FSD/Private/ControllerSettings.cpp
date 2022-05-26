@@ -6,5 +6,6 @@ FControllerSettings::FControllerSettings() {
     this->AimOuterAcceleration = 0.00f;
     this->Turn180Mode = ETurn180Mode::PressRun;
     this->bPreviousItemEnabled = false;
+    this->bChatEnabled = false;
 }
 

@@ -32,13 +32,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<UDLSSMode> GetSupportedDLSSModes();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetDLSSSharpness();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static void GetDLSSScreenPercentageRange(float& MinScreenPercentage, float& MaxScreenPercentage);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static void GetDLSSModeInformation(UDLSSMode DLSSMode, FVector2D ScreenResolution, bool& bIsSupported, float& OptimalScreenPercentage, bool& bIsFixedScreenPercentage, float& MinScreenPercentage, float& MaxScreenPercentage, float& OptimalSharpness);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

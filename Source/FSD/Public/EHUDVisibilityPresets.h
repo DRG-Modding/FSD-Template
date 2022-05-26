@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHUDVisibilityPresets.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EHUDVisibilityPresets : uint8 {
     AllVisible,
     Recommended,

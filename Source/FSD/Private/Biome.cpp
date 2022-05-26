@@ -3,11 +3,11 @@
 
 class UObject;
 class UTerrainMaterial;
-class UTexture2D;
-class AActor;
 class UMaterialInstance;
-class ADebrisDataActor;
+class AActor;
 class UUserWidget;
+class UTexture2D;
+class ADebrisDataActor;
 class UParticleSystem;
 class USoundCue;
 

@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EndMissionResult.h"
 #include "Components/ActorComponent.h"
+#include "EndMissionResult.h"
 #include "DelegateDelegate.h"
 #include "PlayerStatsComponent.generated.h"
 
-class APlayerCharacter;
 class UCappedResource;
+class APlayerCharacter;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPlayerStatsComponent : public UActorComponent {
@@ -31,16 +31,16 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     int32 TotalSupplypodsRequested;
     
-    UPROPERTY(EditAnywhere, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     float TotalGoldMined;
     
-    UPROPERTY(EditAnywhere, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     float TotalMOMsMined;
     
-    UPROPERTY(EditAnywhere, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     float TotalMineralsMined;
     
-    UPROPERTY(EditAnywhere, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     float TotalXPGained;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
@@ -65,7 +65,7 @@ public:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void SendEndMissionResult(const FEndMissionResult& Result);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnResourceMined(UCappedResource* Resource, float Amount);
     
 protected:

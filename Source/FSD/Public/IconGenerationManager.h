@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
 #include "EVanitySlot.h"
+#include "UObject/Object.h"
+#include "PickaxeSet.h"
 #include "GenerateIconInfo.h"
 #include "Engine/LatentActionManager.h"
-#include "PickaxeSet.h"
 #include "EPickaxePartLocation.h"
 #include "IconGenerationManager.generated.h"
 
-class UTextureRenderTarget2D;
-class UVanityItem;
 class AIconGenerationCharacter;
+class UIconGenerationManager;
+class UTextureRenderTarget2D;
 class AIconGenerationPickaxe;
 class AIconGenerationWeapon;
+class UVanityItem;
 class AIconGenerationBase;
-class UIconGenerationManager;
 class UItemSkin;
 class UPlayerCharacterID;
 class UPickaxePart;

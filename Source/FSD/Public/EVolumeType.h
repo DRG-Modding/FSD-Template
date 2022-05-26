@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EVolumeType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EVolumeType : uint8 {
     CharacterVoices,
     Master,

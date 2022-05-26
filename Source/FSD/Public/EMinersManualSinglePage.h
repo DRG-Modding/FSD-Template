@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMinersManualSinglePage.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMinersManualSinglePage : uint8 {
     Mutators,
     Warnings,

@@ -2,8 +2,8 @@
 
 class UCurveFloat;
 class UMeshComponent;
-class USkeletalMeshComponent;
 class UHealthComponentBase;
+class USkeletalMeshComponent;
 class UFSDPhysicalMaterial;
 
 bool UWeakpointGlowComponent::StopLoopingGlow(int32 aGlowID, bool aFade) {

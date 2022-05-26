@@ -6,9 +6,9 @@
 #include "GameplayTagContainer.h"
 #include "EnemyBufferComponent.generated.h"
 
-class AFSDPawn;
-class UStatusEffect;
 class UParticleSystem;
+class UStatusEffect;
+class AFSDPawn;
 class UParticleSystemComponent;
 class UHealthComponentBase;
 
@@ -26,13 +26,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* Particles;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ParticleTangentSize;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBuffingChangedDelegate OnBuffingChangedEvent;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BuffRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -4,10 +4,10 @@
 #include "FuelLineStart.generated.h"
 
 class UFuelLineStartUsable;
-class USimpleObjectInfoComponent;
+class UStaticMeshComponent;
 class AFuelLineStart;
 class UOutlineComponent;
-class UStaticMeshComponent;
+class USimpleObjectInfoComponent;
 class UTrackBuilderUsable;
 class ATrackBuilderSegment;
 

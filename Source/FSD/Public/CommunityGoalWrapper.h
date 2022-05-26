@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
 #include "CommunityRewardNotification.h"
 #include "CommunityGoalStateData.h"
-#include "UICheckDelegateDelegate.h"
+#include "UObject/Object.h"
+#include "GoalStateDelegateDelegate.h"
+#include "FactionsDataDelegateDelegate.h"
 #include "CommunityFactionData.h"
 #include "OnFreeBeersChangedDelegateDelegate.h"
-#include "FactionsDataDelegateDelegate.h"
-#include "GoalStateDelegateDelegate.h"
+#include "UICheckDelegateDelegate.h"
 #include "CommunityGoalWrapper.generated.h"
 
 class UCommunityGoal;

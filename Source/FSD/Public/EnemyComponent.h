@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MixerEnemyNameChangeDelegate.h"
 #include "SimpleObjectInfoComponent.h"
+#include "MixerEnemyNameChangeDelegate.h"
 #include "EnemyComponent.generated.h"
 
-class UTexture2D;
 class UEnemyFamily;
+class UTexture2D;
 class UDialogDataAsset;
 class UEnemyID;
 

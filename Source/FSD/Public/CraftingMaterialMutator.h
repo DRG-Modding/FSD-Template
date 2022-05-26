@@ -8,7 +8,7 @@ class UCraftingMaterialMutator : public UMutator {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Modifier;
     
 public:

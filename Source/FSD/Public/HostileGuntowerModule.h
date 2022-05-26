@@ -7,11 +7,11 @@
 #include "UObject/NoExportTypes.h"
 #include "HostileGuntowerModule.generated.h"
 
-class USkeletalMeshComponent;
+class UHealthComponentBase;
 class APlayerCharacter;
+class USkeletalMeshComponent;
 class UParticleSystemComponent;
 class UEnemyComponent;
-class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class AHostileGuntowerModule : public AGuntowerModule, public IWeaponFireOwner {
@@ -27,7 +27,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UEnemyComponent* EnemyComponent;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_ModuleMaxHealth)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_ModuleMaxHealth, meta=(AllowPrivateAccess=true))
     float ModuleMaxHealth;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))

@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
+#include "Blueprint/UserWidget.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Components/SplineComponent.h"
-#include "Engine/EngineTypes.h"
-#include "Engine/EngineTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "Blueprint/UserWidget.h"
 #include "Curve2DAppearance.h"
 #include "UObject/NoExportTypes.h"
 #include "ECarveFilterType.h"
 #include "EPreciousMaterialOptions.h"
 #include "FSDSplineLibrary.generated.h"
 
-class USplineMeshComponent;
-class AActor;
 class USplineComponent;
-class UObject;
+class AActor;
 class UTerrainMaterial;
+class UObject;
+class USplineMeshComponent;
 
 UCLASS(Blueprintable)
 class UFSDSplineLibrary : public UBlueprintFunctionLibrary {
@@ -38,10 +38,10 @@ public:
     UFUNCTION(BlueprintPure)
     static void GetLocationAndTangentsAtSplinePoint(const USplineComponent* Spline, int32 PointIndex, FVector& Location, FVector& ArriveTangent, FVector& LeaveTangent, TEnumAsByte<ESplineCoordinateSpace::Type> CoordinateSpace);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static void EvalCurveScaled2D(const FInterpCurveVector2D& Curve, float Key, FVector2D ScaleBy, FVector2D& OutPosition, FVector2D& OutTangent);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static void EvalCurve2D(const FInterpCurveVector2D& Curve, float Key, FVector2D& OutPosition, FVector2D& OutTangent);
     
     UFUNCTION(BlueprintCallable)

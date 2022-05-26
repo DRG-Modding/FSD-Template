@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EFNCellularDistanceFunc.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EFNCellularDistanceFunc : uint8 {
     EUCLIDEAN,
     EUCLIDEANSQ,

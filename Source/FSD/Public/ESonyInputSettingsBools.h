@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESonyInputSettingsBools.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ESonyInputSettingsBools : uint8 {
     MotionControlEnabled,
     MotionControlFlight,

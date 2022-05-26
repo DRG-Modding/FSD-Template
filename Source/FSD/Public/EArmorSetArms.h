@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EArmorSetArms.generated.h"
 
-UENUM()
-enum class EArmorSetArms {
+UENUM(BlueprintType)
+enum class EArmorSetArms : uint8 {
     Invalid,
     LeftShoulder,
     RightShoulder,

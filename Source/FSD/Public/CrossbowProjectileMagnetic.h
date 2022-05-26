@@ -4,8 +4,8 @@
 #include "Components/ActorComponent.h"
 #include "CrossbowProjectileMagnetic.generated.h"
 
-class AFSDPawn;
 class UStatusEffect;
+class AFSDPawn;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UCrossbowProjectileMagnetic : public UActorComponent {
@@ -19,7 +19,7 @@ private:
     UPROPERTY(EditAnywhere, Replicated)
     TWeakObjectPtr<AFSDPawn> TargetEnemy;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OverlapCheckSize;
     
 public:

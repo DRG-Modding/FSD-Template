@@ -1,10 +1,10 @@
 #include "AIFunctionLibrary.h"
 
 class UObject;
+class UAttackerPositioningComponent;
 class AActor;
 class APlayerCharacter;
 class APawn;
-class UAttackerPositioningComponent;
 
 void UAIFunctionLibrary::SetAICanSense(bool canSense) {
 }

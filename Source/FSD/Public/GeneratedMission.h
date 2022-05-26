@@ -7,18 +7,18 @@
 #include "ObjectiveMissionIcon.h"
 #include "GeneratedMission.generated.h"
 
-class UObjective;
-class UBiome;
-class UMissionTemplate;
-class UMissionWarning;
-class AFSDPlayerController;
-class UMutator;
 class UMissionMutator;
+class UMutator;
+class UBiome;
 class UMissionComplexity;
+class UMissionWarning;
+class UMissionTemplate;
+class UObjective;
 class UMissionDuration;
-class AProceduralSetup;
 class UMissionDNA;
 class ULevelSequence;
+class AProceduralSetup;
+class AFSDPlayerController;
 class UGeneratedMission;
 
 UCLASS(Blueprintable)
@@ -96,7 +96,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UMutator*> GetMutators(TSubclassOf<UMutator> mutatorClass) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMissionScale() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

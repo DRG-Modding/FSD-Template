@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBlueprintableUserPrivileges.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EBlueprintableUserPrivileges : uint8 {
     CanPlay,
     CanPlayOnline,

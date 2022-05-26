@@ -1,12 +1,12 @@
 #include "GuntowerActivationPlatform.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/SkeletalMeshComponent.h"
 #include "Components/SceneComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 
 class UHealthComponentBase;
-class AFSDPlayerState;
 class UPrimitiveComponent;
+class AFSDPlayerState;
 class AActor;
 class AGuntowerModule;
 

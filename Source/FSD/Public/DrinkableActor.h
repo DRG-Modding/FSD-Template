@@ -3,8 +3,8 @@
 #include "GameFramework/Actor.h"
 #include "DrinkableActor.generated.h"
 
-class APlayerCharacter;
 class UDrinkableDataAsset;
+class APlayerCharacter;
 
 UCLASS(Abstract, Blueprintable)
 class ADrinkableActor : public AActor {

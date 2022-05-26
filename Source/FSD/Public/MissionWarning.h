@@ -3,12 +3,12 @@
 #include "Engine/DataAsset.h"
 #include "MissionWarning.generated.h"
 
-class UObjective;
+class UMutator;
 class URunningMissionBP;
+class UObjective;
 class UMissionStat;
 class UMissionMutator;
 class UTexture2D;
-class UMutator;
 
 UCLASS(Blueprintable)
 class UMissionWarning : public UDataAsset {
@@ -36,7 +36,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture2D* Icon;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HazardBonus;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

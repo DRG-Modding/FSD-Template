@@ -4,8 +4,8 @@
 #include "GameFramework/Actor.h"
 #include "LaserPointerWaypoint.generated.h"
 
-class APlayerCharacter;
 class ALaserPointerItem;
+class APlayerCharacter;
 
 UCLASS(Abstract, Blueprintable)
 class ALaserPointerWaypoint : public AActor {

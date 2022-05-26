@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EItemSkinType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EItemSkinType : uint8 {
     PaintJob,
     Framework,

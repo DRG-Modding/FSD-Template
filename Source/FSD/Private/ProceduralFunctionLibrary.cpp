@@ -1,9 +1,9 @@
 #include "ProceduralFunctionLibrary.h"
 #include "Templates/SubclassOf.h"
 
-class UObjective;
 class UObject;
 class UFXSystemAsset;
+class UObjective;
 class AProceduralSetup;
 class UBiome;
 class UDebrisPositioning;

@@ -4,11 +4,11 @@
 #include "TextCounterEntry.h"
 #include "MultiTextCounterAction.generated.h"
 
-class UObject;
-class UTextBlock;
 class UAudioComponent;
-class UMultiTextCounterAction;
+class UTextBlock;
 class USoundCue;
+class UObject;
+class UMultiTextCounterAction;
 
 UCLASS(Blueprintable)
 class UMultiTextCounterAction : public UTickableActionBase {
@@ -32,7 +32,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FTextCounterEntry> Entries;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float CountSpeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

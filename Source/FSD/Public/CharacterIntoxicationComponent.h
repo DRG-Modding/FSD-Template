@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "LerpingPercent.h"
-#include "EIntoxicationState.h"
 #include "CountDownFloat.h"
+#include "EIntoxicationState.h"
 #include "EDrinkableAlcoholStrength.h"
 #include "CharacterIntoxicationComponent.generated.h"
 
-class UDrinkableDataAsset;
-class UCurveFloat;
 class APlayerCharacter;
+class UCurveFloat;
+class UDrinkableDataAsset;
 
 UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCharacterIntoxicationComponent : public UActorComponent {
@@ -34,10 +34,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     FLerpingPercent IntoxicationPercent;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float IntoxicationLerpSpeed;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float TimeDrunk;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -57,7 +57,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceivePassOutDrunk();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveDrunkTick(float DeltaTime, float DrunkTime);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -86,13 +86,13 @@ protected:
     bool HasAuthority() const;
     
 public:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetSoberingUpCoolDown() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetIntoxicationProgressMapped(UCurveFloat* Curve) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetIntoxicationProgress() const;
     
 protected:

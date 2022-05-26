@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UpgradeValues.h"
 #include "StandardItemUpgrade.h"
 #include "EZiplineGunUpgrades.h"
+#include "UpgradeValues.h"
 #include "ZiplineGunUpgrade.generated.h"
 
-class AZipLineProjectile;
 class AFSDPlayerState;
+class AZipLineProjectile;
 class AActor;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)

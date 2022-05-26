@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EFSDAchievementType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EFSDAchievementType : uint8 {
     NoStatUsed,
     IncrementStatPerCall,

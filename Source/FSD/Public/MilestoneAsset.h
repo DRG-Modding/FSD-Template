@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
 #include "OnMilestoneClaimedDelegate.h"
-#include "UObject/NoExportTypes.h"
 #include "OnMilestoneReachedDelegate.h"
 #include "MilestoneTier.h"
+#include "UObject/NoExportTypes.h"
 #include "MilestoneAsset.generated.h"
 
 class UMissionStat;
@@ -60,7 +60,7 @@ public:
     static TArray<UMilestoneAsset*> SortMilestonesByProgress(UObject* WorldContext, UPARAM(Ref) TArray<UMilestoneAsset*>& Milestones);
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnMissionStatChanged(UObject* WorldContext, UMissionStat* Stat, float Value);
     
 public:
@@ -79,13 +79,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetNextPerkPointsReward(UObject* WorldContext) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetCurrentProgress(UObject* WorldContext, int32& Tier, float& Progress, float& CurrentCount, float& TargetCount);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetClaimedTier(UObject* WorldContext) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetClaimedProgress(UObject* WorldContext, int32& Tier, float& Progress, float& CurrentCount, float& TargetCount);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

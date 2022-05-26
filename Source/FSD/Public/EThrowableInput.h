@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EThrowableInput.generated.h"
 
-UENUM()
-enum class EThrowableInput {
+UENUM(BlueprintType)
+enum class EThrowableInput : uint8 {
     LeftButton,
     RightButton,
 };

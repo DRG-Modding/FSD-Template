@@ -3,8 +3,8 @@
 #include "AmmoDrivenWeapon.h"
 #include "DualWieldWeapon.generated.h"
 
-class USkeletalMeshComponent;
 class UFirstPersonSkeletalMeshComponent;
+class USkeletalMeshComponent;
 class UAnimMontage;
 class UFXSystemAsset;
 

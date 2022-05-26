@@ -4,16 +4,16 @@
 #include "TutorialManager.generated.h"
 
 class AFSDPlayerController;
+class UTutorialComponent;
 class APlayerCharacter;
 class UFSDSaveGame;
-class UTutorialComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ATutorialManager : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinimumTimeBetweenTutorials;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

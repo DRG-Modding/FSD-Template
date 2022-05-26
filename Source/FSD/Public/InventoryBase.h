@@ -20,6 +20,9 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_EquippedActor, meta=(AllowPrivateAccess=true))
     FEquippedActorData EquippedActor;
     
+    UPROPERTY(EditAnywhere)
+    AActor* LastEquippedActors[2];
+    
 public:
     UInventoryBase();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;

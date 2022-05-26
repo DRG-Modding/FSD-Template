@@ -4,10 +4,10 @@
 #include "Components/AudioComponent.h"
 #include "ImpactAudioComponent.generated.h"
 
-class UHealthComponentBase;
-class UImpactAudioComponent;
 class AActor;
 class USceneComponent;
+class UHealthComponentBase;
+class UImpactAudioComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UImpactAudioComponent : public UAudioComponent {
@@ -17,7 +17,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName AudioParameterSpeed;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DecelerationThreshold;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

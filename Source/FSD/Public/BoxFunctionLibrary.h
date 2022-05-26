@@ -16,7 +16,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static FVector ClosestPointToBox(FVector Pos, const FBox& Box);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float BoxSize(FBox Box);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

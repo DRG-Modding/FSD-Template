@@ -35,7 +35,7 @@ private:
 public:
     UCharacterStateComponent();
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveStateTick(float DeltaTime);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -51,7 +51,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasAuthority() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetStateTime() const;
     
     UFUNCTION(BlueprintPure)

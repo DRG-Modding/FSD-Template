@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ECampaignType.h"
 #include "UObject/Object.h"
 #include "UObject/NoExportTypes.h"
+#include "ECampaignType.h"
 #include "ECampaignMutators.h"
 #include "Campaign.generated.h"
 
 class UCampaignMission;
-class UTexture2D;
 class UCampaignRequirement;
-class UDifficultySetting;
 class UPlayerCharacterID;
+class UDifficultySetting;
+class UTexture2D;
 class UMissionStat;
 class UGameActivityAssignmentType;
-class APlayerController;
 class UCampaign;
 class AFSDPlayerController;
+class APlayerController;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API UCampaign : public UObject {

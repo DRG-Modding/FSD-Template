@@ -1,9 +1,9 @@
 #include "DamageFunctionLibrary.h"
 
-class UDamageTag;
-class UPawnStatsComponent;
-class UObject;
 class UDamageClass;
+class UDamageTag;
+class UObject;
+class UPawnStatsComponent;
 class AActor;
 class UDamageImpulse;
 class USkeletalMeshComponent;

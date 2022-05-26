@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ETreasureType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ETreasureType : uint8 {
     WeaponSkin,
     VictoryPose,

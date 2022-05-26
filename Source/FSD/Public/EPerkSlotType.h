@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPerkSlotType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPerkSlotType : uint8 {
     Available,
     LockedByPerk,

@@ -5,8 +5,8 @@
 #include "GameModeFunctionLibrary.generated.h"
 
 class UObject;
-class AActor;
 class USeamlessTravelEventKey;
+class AActor;
 
 UCLASS(Blueprintable)
 class UGameModeFunctionLibrary : public UBlueprintFunctionLibrary {
@@ -16,7 +16,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FTransform FindRandomEscapePodLocation(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FTransform FindEscapePodLocationAtDistance(UObject* WorldContextObject, float Distance, float aboveDistanceBias, AActor* optionalFrom);
     
     UFUNCTION(BlueprintCallable)

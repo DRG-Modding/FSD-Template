@@ -2,16 +2,16 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "EHeadVanityType.h"
-#include "TattooArmorItem.h"
 #include "EquippedVanity.h"
+#include "TattooArmorItem.h"
 #include "EVanitySlot.h"
 #include "CharacterVanityComponent.generated.h"
 
-class UMaterialInstanceDynamic;
-class UVanityItem;
 class UCharacterVanityItems;
 class UBeardColorVanityItem;
+class UMaterialInstanceDynamic;
 class UMaterialInterface;
+class UVanityItem;
 class USkeletalMeshComponent;
 class UObject;
 class UPlayerCharacterID;

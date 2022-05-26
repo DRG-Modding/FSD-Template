@@ -5,8 +5,8 @@
 #include "FadeData.h"
 #include "FadeScreenSubSystem.generated.h"
 
-class UObject;
 class UTexture;
+class UObject;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API UFadeScreenSubSystem : public UGameInstanceSubsystem {
@@ -30,7 +30,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsScreenFading(UObject* WorldContext);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetCurrentFadeAmount() const;
     
     UFUNCTION(BlueprintCallable)

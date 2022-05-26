@@ -4,8 +4,8 @@
 #include "ECarveFilterType.h"
 #include "STLMeshCarverComponent.generated.h"
 
-class USTLMeshCarver;
 class UTerrainMaterialBase;
+class USTLMeshCarver;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USTLMeshCarverComponent : public UPrimitiveComponent {

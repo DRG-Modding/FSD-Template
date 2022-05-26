@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ScanPath.h"
 #include "ReflectiveHitscanHit.h"
+#include "ScanPath.h"
 #include "ReflectionTraceResult.generated.h"
 
 USTRUCT(BlueprintType)

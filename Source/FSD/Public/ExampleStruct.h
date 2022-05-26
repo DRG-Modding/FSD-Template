@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FExampleStruct {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Field;
     
     FSD_API FExampleStruct();

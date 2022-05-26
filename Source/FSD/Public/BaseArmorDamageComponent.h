@@ -5,8 +5,8 @@
 #include "ArmorDamageEffects.h"
 #include "BaseArmorDamageComponent.generated.h"
 
-class UFSDPhysicalMaterial;
 class USkeletalMeshComponent;
+class UFSDPhysicalMaterial;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UBaseArmorDamageComponent : public UActorComponent {

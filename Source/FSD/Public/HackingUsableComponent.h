@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HackingUsableState.h"
 #include "InstantUsable.h"
+#include "HackingUsableState.h"
 #include "HackingUsableComponent.generated.h"
 
-class AHackingToolItem;
 class APlayerCharacter;
+class AHackingToolItem;
 class UHackingToolWidget;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

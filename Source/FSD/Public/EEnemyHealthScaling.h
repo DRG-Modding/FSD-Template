@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEnemyHealthScaling.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEnemyHealthScaling : uint8 {
     SmallEnemy,
     LargeEnemy,

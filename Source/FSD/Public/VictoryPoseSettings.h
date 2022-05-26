@@ -4,9 +4,9 @@
 #include "Engine/DataAsset.h"
 #include "VictoryPoseSettings.generated.h"
 
-class AActor;
-class UVictoryPose;
 class UTexture2D;
+class UVictoryPose;
+class AActor;
 class UActorComponent;
 
 UCLASS(Blueprintable)

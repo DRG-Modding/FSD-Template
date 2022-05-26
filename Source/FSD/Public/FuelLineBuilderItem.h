@@ -16,7 +16,7 @@ protected:
 public:
     AFuelLineBuilderItem();
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceivePlacementUpdated(bool InCanPlace, bool InConnecting, float InDistanceProgress);
     
 };

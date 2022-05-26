@@ -10,6 +10,7 @@ UAfflictionSettings::UAfflictionSettings() {
     this->HeavyStaggerAffliction = NULL;
     this->MediumStaggerAffliction = NULL;
     this->ShortStaggerAffliction = NULL;
+    this->EliteAffliction = NULL;
     this->FreezeParticles.AddDefaulted(5);
     this->IceBreakParticles.AddDefaulted(5);
     this->BurningParticles.AddDefaulted(5);

@@ -3,8 +3,8 @@
 #include "FSDHUD.h"
 #include "SpaceRigHUD.generated.h"
 
-class UObject;
 class UWindowWidget;
+class UObject;
 class UDialogDataAsset;
 
 UCLASS(Blueprintable, NonTransient)

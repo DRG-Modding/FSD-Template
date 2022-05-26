@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETerminatorShoutState.h"
-#include "Components/ActorComponent.h"
-#include "TerminatorShoutState.h"
-#include "DelegateDelegate.h"
 #include "TerminatorTalkMaterial.h"
 #include "Components/AudioComponent.h"
+#include "Components/ActorComponent.h"
+#include "ETerminatorShoutState.h"
+#include "TerminatorShoutState.h"
+#include "DelegateDelegate.h"
 #include "TerminatorShoutComponent.generated.h"
 
-class UPointLightComponent;
 class UAudioComponent;
+class UPointLightComponent;
 class UMeshComponent;
 class USoundCue;
 
@@ -33,10 +33,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UPointLightComponent* TalkLight;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxRadius;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxIntensity;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

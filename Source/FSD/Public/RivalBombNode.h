@@ -7,8 +7,8 @@
 
 class ASplineCableActor;
 class ARivalBombNode;
-class UHackingUsableComponent;
 class ARivalBomb;
+class UHackingUsableComponent;
 class APlayerCharacter;
 
 UCLASS(Blueprintable)
@@ -36,10 +36,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     ARivalBomb* RivalBomb;
     
-    UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_RemainingHackTime)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_RemainingHackTime, meta=(AllowPrivateAccess=true))
     float RemainingHackTime;
     
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float HackStartTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
@@ -65,7 +65,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnHackTimerTick();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRemainingTimePct() const;
     
 };

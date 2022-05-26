@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGameType : uint8 {
     Fully,
     Progression,

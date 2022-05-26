@@ -1,26 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "FSDPawn.h"
-#include "GaragePathSignatureDelegate.h"
+#include "DelegateDelegate.h"
 #include "TriggerAI.h"
-#include "IntDelegateDelegate.h"
-#include "FloatDelegateDelegate.h"
 #include "MuleActivatedSignatureDelegate.h"
 #include "SpeedChangedSignatureDelegate.h"
-#include "DelegateDelegate.h"
+#include "FloatDelegateDelegate.h"
+#include "GaragePathSignatureDelegate.h"
+#include "IntDelegateDelegate.h"
+#include "EEscortMissionState.h"
 #include "UObject/NoExportTypes.h"
+#include "EscortMuleMovementState.h"
 #include "UObject/NoExportTypes.h"
 #include "EscortMuleExtractorSlot.h"
-#include "EscortMuleMovementState.h"
-#include "EEscortMissionState.h"
 #include "EEscortExtractorState.h"
 #include "EscortMule.generated.h"
 
-class UFriendlyHealthComponent;
-class USimpleObjectInfoComponent;
-class URestrictedResourceBank;
-class APlayerCharacter;
 class USkeletalMeshComponent;
+class USimpleObjectInfoComponent;
+class APlayerCharacter;
+class UFriendlyHealthComponent;
+class URestrictedResourceBank;
+class UEscortObjective;
 class UOutlineComponent;
 class UInstantUsable;
 class AExtractorItem;
@@ -63,10 +64,16 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FTransform PreviousTransform;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnObjectiveStateChanged, meta=(AllowPrivateAccess=true))
+    EEscortMissionState State;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UEscortObjective* EscortObjective;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_MovementState, meta=(AllowPrivateAccess=true))
     FEscortMuleMovementState MovementState;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_SpeedModifier)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_SpeedModifier, meta=(AllowPrivateAccess=true))
     float SpeedModifier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
@@ -75,10 +82,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UOutlineComponent* OutlineComponent;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HealPerTickNormal;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HealPerTickUnderAttack;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
@@ -144,7 +151,7 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnObjectiveStateChanged(EEscortMissionState NewState);
+    void OnObjectiveStateChanged(EEscortMissionState oldState);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnExtractorSlotChanged(const FEscortMuleExtractorSlot& Slot, int32 Index);
@@ -154,7 +161,7 @@ protected:
     void OnExtractorDetached(AExtractorItem* Item);
     
 public:
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(BlueprintCallable)
     void ObjectiveStateChange(EEscortMissionState NewState);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

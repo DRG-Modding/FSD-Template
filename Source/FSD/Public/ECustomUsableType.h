@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECustomUsableType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ECustomUsableType : uint8 {
     ClearOnFrameEnd,
     ClearOnUseReleased,

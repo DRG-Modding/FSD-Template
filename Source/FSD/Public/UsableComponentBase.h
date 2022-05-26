@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "UsedBySignatureDelegate.h"
 #include "EInputKeys.h"
+#include "UsedBySignatureDelegate.h"
 #include "UsableComponentBase.generated.h"
 
-class UUseConditionSet;
 class UUseAnimationSetting;
 class USceneComponent;
+class UUseConditionSet;
 class APlayerCharacter;
 class UTexture2D;
 
@@ -22,7 +22,7 @@ public:
     int32 CallbackKeys;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float UseCooldown;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -57,7 +57,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     FText GetUseText(APlayerCharacter* User);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetUseProgressInPercent(APlayerCharacter* User) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

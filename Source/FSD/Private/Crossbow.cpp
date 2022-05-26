@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class UProjectileLauncherBaseComponent;
 class AProjectileBase;
+class UProjectileLauncherBaseComponent;
 class UStatusEffect;
 class AActor;
 class UAnimMontage;
@@ -69,7 +69,6 @@ ACrossbow::ACrossbow() {
     this->IsDefaultArrowEquipped = true;
     this->RecallProgress = 0.00f;
     this->AnimatedArrowSpawnable = NULL;
-    this->AmountOfExtraShots = 2;
     this->ExtraShotAngleDifference = 10.00f;
     this->HoveringRecallable = NULL;
     this->SwitchTimeCof = 1.00f;

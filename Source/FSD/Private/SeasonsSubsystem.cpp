@@ -1,11 +1,11 @@
 #include "SeasonsSubsystem.h"
 
-class UObject;
-class AFSDPlayerState;
-class UMissionStat;
-class USeasonChallenge;
 class UItemSkin;
 class UDataAsset;
+class AFSDPlayerState;
+class UMissionStat;
+class UObject;
+class USeasonChallenge;
 class UVanityItem;
 class UPlayerCharacterID;
 class UTextureRenderTarget2D;
@@ -37,7 +37,7 @@ bool USeasonsSubsystem::IsNodeBought(int32 TreeOfVanityNodeID) {
     return false;
 }
 
-void USeasonsSubsystem::InitliazeStats() {
+void USeasonsSubsystem::InitializeStatsAndChallenges() {
 }
 
 bool USeasonsSubsystem::HasClaimedLevelRewards(int32 startLevel, int32 numberOfLevels) {

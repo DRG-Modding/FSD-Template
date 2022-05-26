@@ -3,10 +3,10 @@
 #include "Objective.h"
 #include "KillEnemiesObjective.generated.h"
 
+class UHealthComponentBase;
 class UEnemyDescriptor;
 class UDebrisPositioning;
 class APawn;
-class UHealthComponentBase;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UKillEnemiesObjective : public UObjective {

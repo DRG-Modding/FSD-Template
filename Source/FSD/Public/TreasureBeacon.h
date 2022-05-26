@@ -4,10 +4,10 @@
 #include "GameFramework/Actor.h"
 #include "TreasureBeacon.generated.h"
 
-class UTerrainPlacementComponent;
-class USceneComponent;
-class UDebrisPositioning;
 class UCurveFloat;
+class USceneComponent;
+class UTerrainPlacementComponent;
+class UDebrisPositioning;
 class ATreasureContainer;
 
 UCLASS(Blueprintable)
@@ -33,13 +33,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* AvoidCostCurveDebris;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxRange;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinRange;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DebrisSpawnRange;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

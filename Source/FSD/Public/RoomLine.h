@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "RoomLinePoint.h"
+#include "UObject/NoExportTypes.h"
 #include "RoomLine.generated.h"
 
 class UFloodFillSettings;

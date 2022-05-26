@@ -3,10 +3,10 @@
 #include "Engine/DataAsset.h"
 #include "DamageClass.generated.h"
 
-class UDamageImpulse;
-class UTexture2D;
 class UPawnStat;
 class UDialogDataAsset;
+class UTexture2D;
+class UDamageImpulse;
 
 UCLASS(Blueprintable)
 class UDamageClass : public UDataAsset {
@@ -16,7 +16,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UPawnStat* ResistanceStat;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RagdollScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

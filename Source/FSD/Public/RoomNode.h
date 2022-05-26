@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GeneratedRoom.h"
-#include "UObject/NoExportTypes.h"
 #include "RoomNodeBase.h"
-#include "RoomEntrance.h"
 #include "RoomGeneratorItem.h"
+#include "UObject/NoExportTypes.h"
+#include "RoomEntrance.h"
+#include "GeneratedRoom.h"
 #include "RoomNode.generated.h"
 
 USTRUCT(BlueprintType)
@@ -20,7 +20,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FVector Position;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float Radius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -38,13 +38,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FGeneratedRoom> Rooms;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float ResourceMultiplier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool CanBeUsedForRoomBasedDistribution;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float WeightedResourceAmount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

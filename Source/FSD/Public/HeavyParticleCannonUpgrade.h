@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UpgradeValues.h"
 #include "EHeavyParticleCannonUpgrade.h"
 #include "StandardItemUpgrade.h"
+#include "UpgradeValues.h"
 #include "HeavyParticleCannonUpgrade.generated.h"
 
 class AItem;

@@ -6,9 +6,9 @@
 #include "ECommunityGoalTier.h"
 #include "CommunityGoal.generated.h"
 
+class UObject;
 class UCommunityGoalCategory;
 class UCommnuityRewardSetup;
-class UObject;
 
 UCLASS(Blueprintable)
 class UCommunityGoal : public UDataAsset {
@@ -36,13 +36,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ECommunityGoalType CommunityGoalType;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float GoalPerMemberTier1;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float GoalPerMemberTier2;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float GoalPerMemberTier3;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -51,26 +51,26 @@ protected:
 public:
     UCommunityGoal();
 protected:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float TotalTierProgress(float Value, int32 Members);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float TierValue(ECommunityGoalTier Tier, float Value, int32 Members);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float TierProgress(ECommunityGoalTier Tier, float Value, int32 Members);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float TierGoal(ECommunityGoalTier Tier, int32 Members);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 RewardTier(float Value, int32 Members);
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void IncrementGoal(UObject* WorldContext, float Value) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FText GoalToText(ECommunityGoalType StatType, float Value);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

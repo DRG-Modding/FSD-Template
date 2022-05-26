@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
 #include "DelegateDelegate.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "FrozenPawnImpactComponent.generated.h"
 
-class UParticleSystem;
-class USoundCue;
-class UPhysicalMaterial;
-class UPrimitiveComponent;
-class UPhysicsAsset;
 class AActor;
+class UPhysicsAsset;
+class UPhysicalMaterial;
+class USoundCue;
+class UParticleSystem;
+class UPrimitiveComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFrozenPawnImpactComponent : public UActorComponent {

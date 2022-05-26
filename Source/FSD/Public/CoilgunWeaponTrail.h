@@ -25,10 +25,10 @@ public:
     UNiagaraComponent* Trail;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ParticleTrailOffset;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_TrailHalfLength)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_TrailHalfLength, meta=(AllowPrivateAccess=true))
     float TrailHalgLength;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_SpawnFireTrail, meta=(AllowPrivateAccess=true))

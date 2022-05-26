@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "ResourceChangedSignatureDelegate.h"
 #include "UObject/Object.h"
-#include "ResourceFullSignatureDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "ResourceAddedSignatureDelegate.h"
+#include "ResourceFullSignatureDelegate.h"
 #include "CappedResource.generated.h"
 
 class UResourceData;
@@ -27,13 +27,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     UResourceData* Data;
     
-    UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_CurrentAmount)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CurrentAmount, meta=(AllowPrivateAccess=true))
     float currentAmount;
     
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float MaxAmount;
     
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float TotalCollected;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_FullFlag, meta=(AllowPrivateAccess=true))
@@ -53,7 +53,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_FullFlag(int32 OldValue);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRep_CurrentAmount(float OldAmount);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -75,7 +75,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FColor GetColor() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetCapacityPct() const;
     
     UFUNCTION(BlueprintCallable)

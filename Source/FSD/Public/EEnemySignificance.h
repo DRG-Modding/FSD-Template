@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEnemySignificance.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEnemySignificance : uint8 {
     Swarmer,
     Normal,

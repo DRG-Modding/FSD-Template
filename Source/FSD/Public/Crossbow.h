@@ -5,13 +5,13 @@
 #include "ProjectileSwitch.h"
 #include "Crossbow.generated.h"
 
-class UProjectileLauncherBaseComponent;
-class UStaticMesh;
-class AProjectileBase;
 class UStatusEffect;
+class UProjectileLauncherBaseComponent;
+class AProjectileBase;
 class UCrossbowProjectileRecallable;
-class AActor;
 class ACrossbowProjectileStuck;
+class UStaticMesh;
+class AActor;
 class UAnimMontage;
 class USoundCue;
 
@@ -24,7 +24,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDefaultArrowEquippedChanged OnDefaultArrowEquippedChanged;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FullDamageSpeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -33,7 +33,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     TSubclassOf<AProjectileBase> SpecialArrow;
     
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float SpecialStatusEffectBonusTimeScale;
     
 protected:
@@ -46,7 +46,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 SpecialAmmoMax;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SwitchTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -55,23 +55,20 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     bool IsDefaultArrowEquipped;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RecallProgress;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> AnimatedArrowSpawnable;
     
-    UPROPERTY(EditAnywhere)
-    uint8 AmountOfExtraShots;
-    
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ExtraShotAngleDifference;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UCrossbowProjectileRecallable* HoveringRecallable;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SwitchTimeCof;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -121,7 +118,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetTotalArrowCount(bool InDefaultArrowCount) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetSpecialArrowEffectDuration(const TSubclassOf<UStatusEffect>& effect) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -131,7 +128,7 @@ public:
     void DestroyActor(AActor* Actor);
     
 private:
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_RefillSpecialAmmo(float percentage);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)

@@ -1,9 +1,9 @@
 #include "FSDGameplayStatics.h"
 
-class UDecalComponent;
 class UObject;
 class AActor;
 class UAudioComponent;
+class UDecalComponent;
 class UFXSystemComponent;
 class UMaterialInterface;
 

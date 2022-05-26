@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGeneralCombEmpty.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGeneralCombEmpty : uint8 {
     Empty,
     Replace,

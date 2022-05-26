@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AmountChangedSignatureDelegate.h"
 #include "ItemAggregator.h"
+#include "AmountChangedSignatureDelegate.h"
+#include "ReloadStartedSignatureDelegate.h"
 #include "ReloadTimeLeftSignatureDelegate.h"
 #include "ReloadCompleteSignatureDelegate.h"
-#include "ReloadStartedSignatureDelegate.h"
 #include "ClipBasedItemAggregator.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

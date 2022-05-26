@@ -8,10 +8,10 @@
 class ARedeployableSentryGun;
 class UActorTrackingComponent;
 class UOutlineComponent;
-class USkeletalMeshComponent;
 class APlayerCharacter;
 class ASentryElectroBeam;
 class AActor;
+class USkeletalMeshComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ARedeployableSentryGun : public ASentryGun {
@@ -50,7 +50,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_State, meta=(AllowPrivateAccess=true))
     ERedeployableSentryGunState State;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PlasmaLineMaxRange;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -68,7 +68,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> EMPDischargeActorClass;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float EMPDiscargeCooldown;
     
 public:
@@ -117,7 +117,7 @@ public:
     bool GetIsDeployed() const;
     
 protected:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAnimDuration(USkeletalMeshComponent* Mesh);
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)

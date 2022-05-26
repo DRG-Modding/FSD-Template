@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "CarveDoneDelegateDelegate.h"
 #include "Components/StaticMeshComponent.h"
 #include "ECarveFilterType.h"
-#include "CarveDoneDelegateDelegate.h"
 #include "AutoCarverComponent.generated.h"
 
 class UTerrainMaterialBase;
@@ -14,13 +14,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTerrainMaterialBase* TerrainMaterial;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Frequency;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ExpensiveNoise;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinDistanceMoved;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

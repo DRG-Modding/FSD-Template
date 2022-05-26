@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPlasmaCarbineConditions.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPlasmaCarbineConditions : uint8 {
     ShieldRemovedOnReload,
 };

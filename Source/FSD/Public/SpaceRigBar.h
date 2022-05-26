@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "DrinkableBarSlot.h"
-#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
+#include "UObject/NoExportTypes.h"
+#include "DrinkableBarSlot.h"
 #include "SpaceRigBar.generated.h"
 
-class UDrinkableDataAsset;
-class UInstantUsable;
-class UBoxComponent;
 class UBarMenuWidget;
+class UDrinkableDataAsset;
+class UBoxComponent;
+class UInstantUsable;
 class APlayerCharacter;
 class ADrinkableActor;
 

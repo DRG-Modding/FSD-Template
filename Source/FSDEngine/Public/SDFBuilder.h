@@ -4,9 +4,9 @@
 #include "EPreviewCellSize.h"
 #include "SDFBuilder.generated.h"
 
+class USDFUnionOpComponent;
 class USDFBase;
 class UTerrainMaterialCore;
-class USDFUnionOpComponent;
 
 UCLASS(Blueprintable)
 class FSDENGINE_API ASDFBuilder : public ACSGBuilderBase {

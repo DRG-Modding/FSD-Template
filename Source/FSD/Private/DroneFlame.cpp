@@ -1,6 +1,6 @@
 #include "DroneFlame.h"
-#include "DamageComponent.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "DamageComponent.h"
 
 ADroneFlame::ADroneFlame() {
     this->FlameParticles = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("FireParticles"));

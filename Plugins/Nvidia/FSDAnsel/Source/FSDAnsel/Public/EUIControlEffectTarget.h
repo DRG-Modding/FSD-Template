@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EUIControlEffectTarget.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum EUIControlEffectTarget {
     Bloom,
     DepthOfField,

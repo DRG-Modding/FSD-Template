@@ -4,17 +4,17 @@
 #include "UObject/NoExportTypes.h"
 #include "ResourceChunk.generated.h"
 
+class APlayerCharacter;
 class USimpleObjectInfoComponent;
 class USoundCue;
 class UResourceData;
-class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class FSD_API AResourceChunk : public AFSDPhysicsActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CollectDuration;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -26,7 +26,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USimpleObjectInfoComponent* InfoComponent;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float ResourceAmount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -56,11 +56,11 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UResourceData* GetResourceData() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetResourceAmount() const;
     
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void CalcMovement(float InProgress, const FVector& InVector, FVector& OutVelocity, FVector& OutAngularVelocity);
     
 };

@@ -1,14 +1,14 @@
 #include "GameData.h"
 #include "Templates/SubclassOf.h"
 
+class APlayerCharacter;
 class UAsyncManager;
 class UObject;
-class UDifficultySetting;
-class UPerkAsset;
 class UInventoryList;
 class UPlayerCharacterID;
-class APlayerCharacter;
 class UHUDVisibilityGroup;
+class UDifficultySetting;
+class UPerkAsset;
 class UMissionStat;
 
 void UGameData::UnloadPreloadedAssets() {
@@ -146,6 +146,7 @@ UGameData::UGameData() {
     this->AfflictionSettings = NULL;
     this->CommunityGoalSettings = NULL;
     this->DailyDealSettings = NULL;
+    this->SaveGameSettings = NULL;
     this->MinersManual = NULL;
     this->StatusEffects = NULL;
     this->CharacterSettings = NULL;

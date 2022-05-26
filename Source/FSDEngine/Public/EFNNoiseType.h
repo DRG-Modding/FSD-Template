@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EFNNoiseType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EFNNoiseType : uint8 {
     OPENSIMPLEX2,
     OPENSIMPLEX2S,

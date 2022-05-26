@@ -4,8 +4,8 @@
 #include "SeasonSettings.generated.h"
 
 class USeason;
-class USeasonChallenge;
 class UCurveFloat;
+class USeasonChallenge;
 
 UCLASS(Blueprintable)
 class USeasonSettings : public UDataAsset {
@@ -29,7 +29,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 TreeOfVanitySnapSize;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SpecialChallengeChange;
     
     USeasonSettings();

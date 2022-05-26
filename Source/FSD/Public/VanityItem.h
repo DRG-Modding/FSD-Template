@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "SavablePrimaryDataAsset.h"
-#include "Craftable.h"
 #include "RefundableInterface.h"
+#include "Craftable.h"
 #include "Aquisitionable.h"
 #include "EVanitySlot.h"
 #include "CraftingCost.h"
 #include "VanityEventSource.h"
 #include "VanityItem.generated.h"
 
-class UIconGenerationCameraKey;
-class UVanityEventSourceDataAsset;
 class UItemAquisitionBase;
 class UDLCBase;
+class UIconGenerationCameraKey;
+class UVanityEventSourceDataAsset;
 class UResourceData;
 class UPlayerCharacterID;
 class UObject;
@@ -55,7 +55,7 @@ protected:
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 CraftingPlayerRankRequired;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<UResourceData*, float> CraftingCost;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

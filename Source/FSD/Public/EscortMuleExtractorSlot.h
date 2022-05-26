@@ -3,9 +3,9 @@
 #include "EEscortExtractorState.h"
 #include "EscortMuleExtractorSlot.generated.h"
 
-class UWidgetComponent;
 class USceneComponent;
 class UInstantUsable;
+class UWidgetComponent;
 
 USTRUCT(BlueprintType)
 struct FEscortMuleExtractorSlot {

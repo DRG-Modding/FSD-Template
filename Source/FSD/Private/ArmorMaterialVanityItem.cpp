@@ -1,8 +1,8 @@
 #include "ArmorMaterialVanityItem.h"
 
 class UMaterialInstance;
-class UMaterialInstanceConstant;
 class UObject;
+class UMaterialInstanceConstant;
 class UMaterialInstanceDynamic;
 class UArmorMaterialVanityItem;
 

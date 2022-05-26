@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "CarveOptionsCellSize.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class CarveOptionsCellSize : uint8 {
     CARVE_CELL_SIZE_25,
     CARVE_CELL_SIZE_50,

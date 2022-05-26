@@ -14,7 +14,7 @@ public:
     FDamageSig OnTrackedPercentageReachedEvent;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TiggerOnPercentage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
@@ -26,7 +26,7 @@ public:
     void ResetTrackedDamage();
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnDamageTaken(float Amount);
     
 };

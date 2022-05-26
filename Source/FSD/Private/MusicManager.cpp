@@ -1,7 +1,7 @@
 #include "MusicManager.h"
 
-class UMusicCategory;
 class USoundBase;
+class UMusicCategory;
 class UMusicLibrary;
 
 void UMusicManager::StopHandle(FMusicHandle Handle) {

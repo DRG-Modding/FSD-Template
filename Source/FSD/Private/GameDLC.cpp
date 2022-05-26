@@ -27,6 +27,8 @@ UTexture2D* UGameDLC::GetBanner() const {
 }
 
 UGameDLC::UGameDLC() {
+    this->bFakeUnlockedStateInEditor = false;
+    this->bEditorUnlockedState = true;
     this->SteamID = 0;
     this->ShowOnDLCScreen = true;
     this->PerformancePoints = 0;

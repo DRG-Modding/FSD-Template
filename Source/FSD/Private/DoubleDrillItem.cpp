@@ -1,9 +1,9 @@
 #include "DoubleDrillItem.h"
 #include "Net/UnrealNetwork.h"
+#include "DoubleDrillAggregator.h"
 #include "DamageComponent.h"
 #include "FirstPersonParticleSystemComponent.h"
 #include "FSDAudioComponent.h"
-#include "DoubleDrillAggregator.h"
 
 class AActor;
 class UFSDPhysicalMaterial;

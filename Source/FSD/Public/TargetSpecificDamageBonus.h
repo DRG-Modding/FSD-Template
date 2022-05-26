@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DamageBonusBase.h"
 #include "GameplayTagContainer.h"
+#include "DamageBonusBase.h"
 #include "TargetSpecificDamageBonus.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -9,7 +9,7 @@ class UTargetSpecificDamageBonus : public UDamageBonusBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Bonus;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

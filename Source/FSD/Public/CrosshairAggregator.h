@@ -7,9 +7,9 @@
 #include "CrosshairAggregator.generated.h"
 
 class APlayerController;
+class UObject;
 class UUserWidget;
 class UCustomAmmoCountWidget;
-class UObject;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCrosshairAggregator : public UItemAggregator, public IUpgradable {

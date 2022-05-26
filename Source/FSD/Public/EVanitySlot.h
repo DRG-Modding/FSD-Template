@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EVanitySlot.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EVanitySlot : uint8 {
     Head,
     Beard,

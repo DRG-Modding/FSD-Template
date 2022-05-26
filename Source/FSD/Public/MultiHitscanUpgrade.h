@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UpgradeValues.h"
 #include "StandardItemUpgrade.h"
 #include "EMultiHitscanUpgradeType.h"
+#include "UpgradeValues.h"
 #include "MultiHitscanUpgrade.generated.h"
 
 class AFSDPlayerState;

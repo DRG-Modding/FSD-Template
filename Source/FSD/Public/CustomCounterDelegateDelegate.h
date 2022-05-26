@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "CustomCounterDelegateDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_DELEGATE_TwoParams(FCustomCounterDelegate, float, Value, float, NormalizedTime);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_DELEGATE_TwoParams(FCustomCounterDelegate, float, Value, float, NormalizedTime);
 

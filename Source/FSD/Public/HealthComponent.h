@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HealthChangedSigDelegate.h"
-#include "HealthComponentBase.h"
-#include "DamageSigDelegate.h"
-#include "ArmorHealedSigDelegate.h"
 #include "DeathSigDetailedDelegate.h"
+#include "DamageSigDelegate.h"
+#include "HealthComponentBase.h"
 #include "HealthSegmentChangeDelegate.h"
+#include "ArmorHealedSigDelegate.h"
 #include "EHealthbarType.h"
+#include "HealthChangedSigDelegate.h"
 #include "DamageData.h"
 #include "HealthComponent.generated.h"
 
@@ -34,10 +34,10 @@ public:
     FHealthSegmentChange OnNewHealthSegment;
     
 protected:
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_Damage)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_Damage, meta=(AllowPrivateAccess=true))
     float Damage;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<float> HealthSegmentSizes;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -52,7 +52,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool InvulnerableToNonDefinedResistances;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<UPawnStat*, float> Resistances;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -75,7 +75,7 @@ public:
     void Resupply(float percentage);
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRep_Damage(float oldDamage);
     
 public:
@@ -85,23 +85,23 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasArmor() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMaxArmor() const;
     
     /*UFUNCTION(BlueprintCallable, BlueprintPure)*/
     EHealthbarType GetHealthbarType() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetCurrentHealthSegment(int32& Segment, float& segmentHealth, float& segmentHealthPercent);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetArmorPct() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetArmor() const;
     
 protected:
-    UFUNCTION(Client, Unreliable)
+    UFUNCTION(BlueprintCallable, Client, Unreliable)
     void Client_ReceivedHit(float Amount, const FDamageData& DamageData, bool anyHealthLost);
     
 };

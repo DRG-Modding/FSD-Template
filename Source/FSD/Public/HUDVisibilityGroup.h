@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "HUDVisibilityRegisteredWidget.h"
 #include "EHUDVisibilityMode.h"
-#include "EHUDVisibilityGroups.h"
 #include "EHUDVisibilityPresets.h"
+#include "EHUDVisibilityGroups.h"
+#include "HUDVisibilityRegisteredWidget.h"
 #include "Components/SlateWrapperTypes.h"
 #include "HUDVisibilityGroup.generated.h"
 

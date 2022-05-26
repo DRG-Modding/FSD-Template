@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
 #include "Engine/EngineTypes.h"
 #include "CrossbowProjectileRicochet.generated.h"
@@ -17,14 +18,14 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 RicochetMax;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RicochetRange;
     
 public:
     UCrossbowProjectileRicochet();
 protected:
     UFUNCTION(BlueprintCallable)
-    void Ricochet(const FHitResult& HitResult);
+    void Ricochet(const FHitResult& HitResult, const FVector& RelativeLocation);
     
 };
 

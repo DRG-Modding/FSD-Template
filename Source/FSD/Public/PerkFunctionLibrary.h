@@ -6,9 +6,9 @@
 #include "EPerkUsageType.h"
 #include "PerkFunctionLibrary.generated.h"
 
-class UObject;
 class UPlayerCharacterID;
 class UPerkAsset;
+class UObject;
 class APlayerCharacter;
 
 UCLASS(Blueprintable)

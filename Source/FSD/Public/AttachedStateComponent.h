@@ -14,7 +14,7 @@ public:
     bool EnableHeadLightOnExit;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxPitch;
     
 public:

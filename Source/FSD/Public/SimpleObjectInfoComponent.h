@@ -5,9 +5,9 @@
 #include "SimpleObjectInfoData.h"
 #include "SimpleObjectInfoComponent.generated.h"
 
-class UActorContextWidget;
-class UDialogDataAsset;
 class UTexture2D;
+class UDialogDataAsset;
+class UActorContextWidget;
 class USceneComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -29,6 +29,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture2D* Icon;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UTexture2D* IconOverride;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIsPingableByLaserpointer;
@@ -58,6 +61,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void OverrideLookAtShout(UDialogDataAsset* InShout);
+    
+    UFUNCTION(BlueprintCallable)
+    void OverrideIcon(UTexture2D* InTexture);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UDialogDataAsset* GetDefaultLookAtShout() const;

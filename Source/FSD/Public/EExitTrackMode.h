@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EExitTrackMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EExitTrackMode : uint8 {
     None,
     StopInPlace,

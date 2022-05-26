@@ -1,7 +1,7 @@
 #include "DeepProceduralMeshComponent.h"
 
-class UTerrainMaterialCore;
 class UPhysicalMaterial;
+class UTerrainMaterialCore;
 
 UTerrainMaterialCore* UDeepProceduralMeshComponent::FindTerrainMaterialFromPhysicalMaterial(UPhysicalMaterial* Material) const {
     return NULL;

@@ -1,35 +1,35 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ItemLoadoutAnimations.h"
-#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
+#include "UObject/NoExportTypes.h"
 #include "SaveGameIDInterface.h"
 #include "Skinnable.h"
-#include "ItemIDInterface.h"
 #include "AudioWithCooldown.h"
+#include "ItemIDInterface.h"
 #include "LoadoutItem.h"
 #include "PlaySoundInterface.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "ItemLoadoutAnimations.h"
 #include "Item.generated.h"
 
-class UItemCharacterAnimationSet;
+class UAudioComponent;
 class UCameraShakeBase;
-class USoundConcurrency;
-class UItemID;
+class UItemCharacterAnimationSet;
 class APlayerCharacter;
+class UItemID;
 class UUpgradableItemComponent;
+class USceneComponent;
 class UCurveFloat;
 class USoundAttenuation;
 class USoundBase;
-class UAudioComponent;
+class UFirstPersonStaticMeshComponent;
 class UDialogDataAsset;
 class UItemsBarIcon;
+class USoundConcurrency;
 class ACharacter;
-class USceneComponent;
-class UFirstPersonStaticMeshComponent;
 class UStaticMeshComponent;
 class USkinEffect;
 class UTexture2D;
@@ -73,25 +73,25 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* HeatCurve;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ManualHeatPerUse;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CooldownRate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ManualCooldownDelay;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float UnjamDuration;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CurrentTemperature;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* AudioTemperature;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AudioTemperatureFadeout;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -109,7 +109,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bAimAssistEnabled;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MovementRateWhileUsing;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -124,7 +124,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UItemsBarIcon> CustomIconWidget;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AdvancedVibrationSendLevel;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -179,7 +179,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Recieve_UpdateMeshses(bool NewIsFirstPerson);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveResupply(float percentage);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -192,7 +192,7 @@ protected:
     UFirstPersonStaticMeshComponent* Receive_GetFPAnimationEventMesh() const;
     
 public:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnTemperatureChanged(float Temperature, bool NewOverheated);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

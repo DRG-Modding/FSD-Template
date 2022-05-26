@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AmmoDrivenWeapon.h"
-#include "BoosterModuleActiveDelegate.h"
 #include "DecalData.h"
 #include "ReflectionTraceResult.h"
+#include "BoosterModuleActiveDelegate.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "HeavyParticleCannon.generated.h"
 
-class USoundBase;
-class UDamageComponent;
-class UNiagaraSystem;
-class UReflectionHitscanComponent;
 class UStickyFlameSpawner;
+class UNiagaraSystem;
+class UDamageComponent;
+class UReflectionHitscanComponent;
 class UFirstPersonNiagaraComponent;
 class UNiagaraComponent;
+class USoundBase;
+class AActor;
 class UTerrainType;
 class UFSDPhysicalMaterial;
-class AActor;
 
 UCLASS(Blueprintable)
 class AHeavyParticleCannon : public AAmmoDrivenWeapon {
@@ -51,7 +51,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* BeamHitLocationEnemy_Local_Sound;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BeamHitSoundFadeSwitchTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -93,28 +93,28 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bReloadOnButtonRelease;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinTimeBetweenBiomassGain;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool BulkyBeam;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float NormalBeamWidth;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BulkyBeamWidth;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ExtraRadialDamagePerSec;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ExtraRadialRangePerSec;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CancelCostPercentage;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ChargeupTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -126,7 +126,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsNewDecalBeam;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ProjectionModuleDamage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -138,13 +138,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bReloadBoostsBeam;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ExtraReloadTimeAfterBoost;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BoostExtraAmmoCost;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BeamDependentReloadDuration;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -173,6 +173,9 @@ protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetBeamActive(bool inIsBeamActive);
     
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void Server_ExplodePlatform(FVector Location);
+    
     UFUNCTION(BlueprintCallable)
     void OnTargetKilled(AActor* Target, UFSDPhysicalMaterial* PhysMat, bool wasDirectHit);
     
@@ -184,9 +187,6 @@ protected:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void IsHittngEnemyChanged(bool isHittingEnemy);
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void ExplodePlatform(FVector Location);
     
     UFUNCTION(BlueprintCallable)
     void ChargeUpComplete();

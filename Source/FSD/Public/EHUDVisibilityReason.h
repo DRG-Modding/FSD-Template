@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHUDVisibilityReason.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EHUDVisibilityReason : uint8 {
     Invalid,
     UserChoice,

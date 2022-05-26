@@ -73,7 +73,7 @@ void AMiningPod::Depart() {
 void AMiningPod::CorrectLocationsForSpawnedOnLocation() {
 }
 
-FVector AMiningPod::AdjustLandingLocationToGround(UObject* WorldContextObjet, const FVector& initialLocation) {
+FVector AMiningPod::AdjustLandingLocationToGround(UObject* WorldContextObjet, const FVector& initialLocation, float maxDownAdjustment) {
     return FVector{};
 }
 

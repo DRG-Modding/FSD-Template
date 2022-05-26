@@ -1,8 +1,8 @@
 #include "FSDGameUserSettings.h"
 
 class UObject;
-class USoundClass;
 class APlayerController;
+class USoundClass;
 class UDifficultySetting;
 class UFSDGameUserSettings;
 
@@ -201,6 +201,9 @@ void UFSDGameUserSettings::SetChatFontSize(int32 inFontSize) {
 }
 
 void UFSDGameUserSettings::SetChatFadeTime(float FadeTime) {
+}
+
+void UFSDGameUserSettings::SetChatEnabledOnController(bool InEnabled) {
 }
 
 void UFSDGameUserSettings::SetCanShowBlood(bool bloodAllowed) {
@@ -513,6 +516,10 @@ float UFSDGameUserSettings::GetChatFadeTime() const {
     return 0.0f;
 }
 
+bool UFSDGameUserSettings::GetChatEnabledOnController() const {
+    return false;
+}
+
 float UFSDGameUserSettings::GetCameraShakeScale() const {
     return 0.0f;
 }
@@ -605,21 +612,21 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->bJukeboxStreamerMode = true;
     this->bGraphicSettingsChanged = false;
     this->ServerSearchRegion = 3;
-    this->ServerSearchPasswordRequired = false;
-    this->volumeCharacterVoice = 98.51f;
-    this->volumeMissionControl = 95.95f;
-    this->volumeMaster = 63.45f;
-    this->volumeSFX = 109.31f;
-    this->volumeMusic = 0.63f;
+    this->ServerSearchPasswordRequired = true;
+    this->volumeCharacterVoice = 101.01f;
+    this->volumeMissionControl = 100.37f;
+    this->volumeMaster = 34.85f;
+    this->volumeSFX = 97.90f;
+    this->volumeMusic = 0.10f;
     this->CurrentAudioOutputDeviceId = TEXT("{0.0.0.00000000}.{2a5cebd2-74c5-49ee-b332-663973012ccd}");
     this->UseDefaultAudioOutputDevice = true;
     this->Sharpening = 0.00f;
     this->AntiAliasingType = 1;
-    this->TemporalAAUpsamplingEnabled = true;
-    this->volumeVoice = 102.89f;
-    this->UpscalingType = 0;
-    this->AmdFsrMode = 1;
-    this->AmdFsrSharpness = 0.20f;
+    this->TemporalAAUpsamplingEnabled = false;
+    this->volumeVoice = 99.74f;
+    this->UpscalingType = 1;
+    this->AmdFsrMode = 0;
+    this->AmdFsrSharpness = 0.22f;
     this->NvidiaDlssMode = UDLSSMode::Auto;
     this->NvidiaDlssSharpness = 0.50f;
     this->FSDResolutionScale = 1.00f;
@@ -654,7 +661,7 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->ForceFeedbackScale = 1.00f;
     this->InvertFlightControls = false;
     this->EnableDx12ByDefault = false;
-    this->HDRColorGamma = 1.00f;
+    this->HDRColorGamma = 1.21f;
     this->ConsoleGraphicsMode = EConsoleGraphicsMode::Fidelity;
     this->DownedTurnDirection_Controller = 1.00f;
     this->DownedTurnDirection_Mouse = -1.00f;

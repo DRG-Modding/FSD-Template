@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "CarveOptionsCellSize.h"
 #include "Components/StaticMeshComponent.h"
 #include "ECarveFilterType.h"
-#include "CarveOptionsCellSize.h"
 #include "MeshCarverComponent.generated.h"
 
 class UTerrainMaterialBase;
@@ -17,7 +17,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ECarveFilterType Filter;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ExpensiveNoise;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

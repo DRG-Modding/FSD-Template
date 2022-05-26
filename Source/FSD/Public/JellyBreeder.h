@@ -5,12 +5,12 @@
 #include "JellyBreeder.generated.h"
 
 class AActor;
-class UAnimSequenceBase;
-class UPhysicalMaterial;
-class UParticleSystem;
-class USoundBase;
-class UEnemyDescriptor;
 class AProjectile;
+class UEnemyDescriptor;
+class USoundBase;
+class UAnimSequenceBase;
+class UParticleSystem;
+class UPhysicalMaterial;
 
 UCLASS(Blueprintable)
 class AJellyBreeder : public AAFlyingBug {
@@ -32,13 +32,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AProjectile> EggClass;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TimeBetweenBursts;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TimeBetweenEggs;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CloseToSpawnEggTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -53,7 +53,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxJellies;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MultiplierOnHighPlayerCount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_BreedMode, meta=(AllowPrivateAccess=true))

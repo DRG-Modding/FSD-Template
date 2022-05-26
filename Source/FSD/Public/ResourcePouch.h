@@ -5,9 +5,9 @@
 #include "UObject/NoExportTypes.h"
 #include "ResourcePouch.generated.h"
 
-class AActor;
 class UCarriableInstantUsable;
 class USoundCue;
+class AActor;
 
 UCLASS(Blueprintable)
 class AResourcePouch : public ACarriableItem {

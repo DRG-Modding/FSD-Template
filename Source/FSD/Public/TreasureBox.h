@@ -6,19 +6,19 @@
 #include "EInputKeys.h"
 #include "TreasureBox.generated.h"
 
-class USingleUsableComponent;
-class URepairableComponent;
-class UStaticMeshComponent;
-class URepairableUsable;
-class AActor;
-class UTerrainPlacementComponent;
-class APlayerCharacter;
 class USkeletalMeshComponent;
+class URepairableComponent;
+class URepairableUsable;
+class UTerrainPlacementComponent;
+class USingleUsableComponent;
+class UStaticMeshComponent;
+class AActor;
 class UAnimSequenceBase;
 class UTreasureRewarder;
+class UCurveFloat;
 class AProceduralSetup;
 class UDebrisPositioning;
-class UCurveFloat;
+class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class FSD_API ATreasureBox : public ATreasureContainer {
@@ -46,13 +46,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<AActor*> Batteries;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CollectActivationDelay;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimSequenceBase* OpenBoxAnim;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DelayToOpenAfterRepair;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -61,7 +61,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTreasureRewarder* boxRewarder;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HologramRotationSpeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
@@ -83,7 +83,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void OnRepairedEvent(URepairableComponent* repaired);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnHammerProgress(float Progress);
     
     UFUNCTION(BlueprintCallable)

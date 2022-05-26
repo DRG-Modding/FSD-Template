@@ -17,16 +17,16 @@ public:
     FOverheatedChanged OnOverheatedChanged;
     
 protected:
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float HeatLossPerSecond;
     
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float OverheatedDuration;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_IsOverheated, meta=(AllowPrivateAccess=true))
     bool bIsOverheated;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_Temperature)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_Temperature, meta=(AllowPrivateAccess=true))
     float Temperature;
     
 public:
@@ -34,7 +34,7 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
-    UFUNCTION(Server, Unreliable, WithValidation)
+    UFUNCTION(BlueprintCallable, Server, Unreliable, WithValidation)
     void Server_SetTemperature(float NewTemperature);
     
     UFUNCTION(BlueprintCallable, Server, Unreliable, WithValidation)
@@ -47,10 +47,10 @@ protected:
     void OnRep_IsOverheated();
     
 public:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetTemperature() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetOverheatingProgress() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

@@ -6,9 +6,9 @@
 #include "AdicPuddle.generated.h"
 
 class USphereComponent;
-class UPrimitiveComponent;
 class USoundBase;
 class UStatusEffect;
+class UPrimitiveComponent;
 
 UCLASS(Blueprintable)
 class AAdicPuddle : public AActor {
@@ -25,7 +25,7 @@ protected:
     TSubclassOf<UStatusEffect> InflictedStatusEffect;
     
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LifeTime;
     
 public:

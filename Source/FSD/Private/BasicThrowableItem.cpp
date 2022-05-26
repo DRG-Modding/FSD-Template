@@ -7,8 +7,8 @@
 #include "FirstPersonStaticMeshComponent.h"
 
 class AActor;
-class UPrimitiveComponent;
 class APlayerCharacter;
+class UPrimitiveComponent;
 
 void ABasicThrowableItem::ThrowItem(const FVector& throwForce) {
 }

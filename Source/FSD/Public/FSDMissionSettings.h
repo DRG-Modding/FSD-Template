@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MissionHazardSetting.h"
-#include "Engine/DeveloperSettings.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/DeveloperSettings.h"
+#include "MissionHazardSetting.h"
 #include "FSDMissionSettings.generated.h"
 
 class UGeneratedMission;
@@ -25,7 +25,7 @@ protected:
     
 public:
     UFSDMissionSettings();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetTotalHazardBonus(UObject* WorldContextObject, UGeneratedMission* mission, UDifficultySetting* DifficultySetting);
     
 };

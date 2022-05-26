@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BaseArmorDamageComponent.h"
-#include "ArmorPrimitiveDestroyedDelegate.h"
-#include "ArmorDamageInfo.h"
-#include "ArmorPrimitiveDamagedDelegateDelegate.h"
 #include "CompositeArmorItem.h"
+#include "ArmorPrimitiveDestroyedDelegate.h"
+#include "BaseArmorDamageComponent.h"
+#include "ArmorPrimitiveDamagedDelegateDelegate.h"
+#include "ArmorDamageInfo.h"
 #include "CompositeArmorComponent.generated.h"
 
 class UFXSystemAsset;

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EBulletMode.generated.h"
 
-UENUM()
-enum class EBulletMode {
+UENUM(BlueprintType)
+enum class EBulletMode : uint8 {
     EMultiTrace,
     ECapsule,
 };

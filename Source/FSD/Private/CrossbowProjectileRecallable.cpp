@@ -6,9 +6,6 @@ class APlayerCharacter;
 void UCrossbowProjectileRecallable::Server_SetRecallTarget_Implementation(APlayerCharacter* Player, const FTransform& startTrans) {
 }
 
-void UCrossbowProjectileRecallable::OnRep_SetRecallTarget() {
-}
-
 void UCrossbowProjectileRecallable::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
@@ -17,6 +14,7 @@ void UCrossbowProjectileRecallable::GetLifetimeReplicatedProps(TArray<FLifetimeP
 }
 
 UCrossbowProjectileRecallable::UCrossbowProjectileRecallable() {
+    this->Usable = NULL;
     this->RecallTarget = NULL;
     this->RecallStartTime = 1.00f;
     this->RecallSpeed = 0.30f;

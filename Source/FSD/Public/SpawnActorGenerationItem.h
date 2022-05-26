@@ -4,8 +4,8 @@
 #include "GenerationItem.h"
 #include "SpawnActorGenerationItem.generated.h"
 
-class AActor;
 class UBoxComponent;
+class AActor;
 
 UCLASS(Blueprintable)
 class ASpawnActorGenerationItem : public AGenerationItem {

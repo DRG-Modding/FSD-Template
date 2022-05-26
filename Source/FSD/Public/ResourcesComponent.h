@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "ResourceAddedDelegate.h"
-#include "ResourceChangedSignatureDelegate.h"
 #include "ResourceFullSignatureDelegate.h"
+#include "Components/ActorComponent.h"
+#include "ResourceChangedSignatureDelegate.h"
 #include "ResourceAddedSignatureDelegate.h"
+#include "ResourceAddedDelegate.h"
 #include "ResourcesComponent.generated.h"
 
 class UResourceData;
@@ -30,7 +30,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Resources, meta=(AllowPrivateAccess=true))
     TArray<UCappedResource*> Resources;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ResourceCap;
     
 public:
@@ -38,20 +38,20 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void ResourceIncreased(UCappedResource* Resource, float Delta);
     
     UFUNCTION(BlueprintCallable)
     void ResourceFull(UCappedResource* Resource);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void ResourceChanged(UCappedResource* Resource, float currentAmount);
     
     UFUNCTION(BlueprintCallable)
     void OnRep_Resources();
     
 public:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetXPFromResourceMap(const TMap<UResourceData*, float>& NewResources);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -63,7 +63,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UCappedResource* GetResource(UResourceData* Data, bool createIfAmountIsZero);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetCapacityPct() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

@@ -4,18 +4,22 @@
 #include "Projectile.h"
 #include "OnCrossbowDamageDealtDelegate.h"
 #include "ECrossbowEffectApplication.h"
-#include "EInputKeys.h"
 #include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "EInputKeys.h"
 #include "CrossbowProjectileBase.generated.h"
 
-class UCrossbowStuckProjectileEffectBanshee;
 class ACrossbowProjectileStuck;
 class UCrossbowProjectileRecallable;
-class UTexture2D;
 class UCrossbowProjectileMagnetic;
 class UCrossbowProjectileRicochet;
+class UCrossbowStuckProjectileEffectBanshee;
+class UTexture2D;
 class UStatusEffect;
 class USoundCue;
+class USphereComponent;
+class UDamageComponent;
+class UTerrainDetectComponent;
 class UStaticMesh;
 class APlayerCharacter;
 class USceneComponent;
@@ -24,7 +28,7 @@ UCLASS(Blueprintable)
 class ACrossbowProjectileBase : public AProjectile {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StatusEffectTime;
     
 protected:
@@ -80,15 +84,28 @@ protected:
     bool IsASpecialProjectile;
     
 private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    USphereComponent* LaserCollider;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UDamageComponent* DamageComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UTerrainDetectComponent* TerrainDetectComponent;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UStaticMesh* ProjectileMesh;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float KillTrailAfterTime;
     
 public:
     ACrossbowProjectileBase();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+    
+private:
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_HandleImpact(const FHitResult& HitResult, const FVector& RelativeLocation);
     
 protected:
     UFUNCTION(BlueprintCallable)
@@ -104,12 +121,12 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetSpecialArrowEquipped() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetScaledStatusEffectTime() const;
     
 protected:
     UFUNCTION(BlueprintCallable)
-    void ApplyDamageEffects(const FHitResult& HitResult);
+    void ApplyDamageEffects(const FHitResult& HitResult, const FVector& RelativeLocation);
     
 public:
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)

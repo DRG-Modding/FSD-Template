@@ -4,8 +4,8 @@
 #include "EPickaxePartLocation.h"
 #include "PickaxePart.generated.h"
 
-class UItemAquisitionBase;
 class UPickaxePartItem;
+class UItemAquisitionBase;
 class UItemAquisitionSource;
 class UDLCBase;
 

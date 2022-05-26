@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMicroMissileLauncherUpgrades.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMicroMissileLauncherUpgrades : uint8 {
     ChargeFire,
     BuckFire,

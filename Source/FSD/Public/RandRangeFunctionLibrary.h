@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "UObject/NoExportTypes.h"
-#include "RandRange.h"
 #include "IRandRange.h"
+#include "RandRange.h"
 #include "RandRangeFunctionLibrary.generated.h"
 
 UCLASS(Blueprintable)
@@ -20,10 +20,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetValueFromStream(FIRandRange RandRange, UPARAM(Ref) FRandomStream& RandomStream);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetFloatValue(FRandRange RandRange);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetFloatFromStream(FRandRange RandRange, UPARAM(Ref) FRandomStream& RandomStream);
     
 };

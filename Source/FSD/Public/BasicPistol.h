@@ -3,8 +3,8 @@
 #include "AmmoDrivenWeapon.h"
 #include "BasicPistol.generated.h"
 
-class UPrimitiveComponent;
 class UHealthComponentBase;
+class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
 
 UCLASS(Blueprintable)
@@ -12,16 +12,16 @@ class ABasicPistol : public AAmmoDrivenWeapon {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ConsecutiveHitsDamageBonus;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ConsecutiveHitsMaxBonus;
     
 public:
     ABasicPistol();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial);
     
 };

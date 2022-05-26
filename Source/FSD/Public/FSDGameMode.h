@@ -1,35 +1,35 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "CallDonkeyDelegate.h"
-#include "PlayerLoggedInDelegate.h"
 #include "GameFramework/GameMode.h"
 #include "MatchStartedSignatureDelegate.h"
 #include "AllReadySignatureDelegate.h"
+#include "PlayerLoggedInDelegate.h"
+#include "CallDonkeyDelegate.h"
 #include "UObject/NoExportTypes.h"
 #include "EPauseReason.h"
 #include "FSDGameMode.generated.h"
 
-class UEnemySpawnManager;
-class UPheromoneSpawnerComponent;
+class AActor;
 class UObjectivesManager;
+class UPheromoneSpawnerComponent;
+class ABosco;
+class UDifficultyManager;
+class UEnemySpawnManager;
 class UKeepInsideWorld;
 class UMissionManager;
 class UEncounterManager;
 class UCritterManager;
-class AActor;
 class AFSDPlayerController;
 class UFormationsManagerComponent;
-class AMolly;
+class APlayerCharacter;
 class AMiningPod;
-class ABosco;
+class AMolly;
 class UWidget;
 class UEnemyDescriptor;
 class UEnemyWaveManager;
 class AFSDGameMode;
-class UDifficultyManager;
 class APlayerController;
-class APlayerCharacter;
 
 UCLASS(Blueprintable, NonTransient)
 class FSD_API AFSDGameMode : public AGameMode {
@@ -93,7 +93,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftClassPtr<UWidget> CheatUI;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ContinueCountdown;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -102,10 +102,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool PreventLateJoinOnMissionStart;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PlayerSpawnHeightOffset;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FriendlyFireGracePeriod;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESDFModulateMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ESDFModulateMode : uint8 {
     MM_Disabled,
     MM_Single,

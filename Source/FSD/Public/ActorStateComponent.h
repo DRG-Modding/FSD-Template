@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "StateDelegateDelegate.h"
 #include "StateTickDelegateDelegate.h"
+#include "StateDelegateDelegate.h"
 #include "ActorStateComponent.generated.h"
 
 class UActorStateComponent;
@@ -30,7 +30,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UActorStateComponent* MasterState;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float StateActiveTime;
     
 public:

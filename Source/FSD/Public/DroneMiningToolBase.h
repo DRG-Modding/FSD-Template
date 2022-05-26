@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MineHitEventDelegate.h"
 #include "Components/ActorComponent.h"
 #include "Engine/NetSerialization.h"
+#include "MineHitEventDelegate.h"
 #include "DroneMiningToolBase.generated.h"
 
 class UTerrainMaterial;
@@ -15,13 +15,13 @@ public:
     FMineHitEvent HitSomething;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float range;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SameHitDistance;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MineRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

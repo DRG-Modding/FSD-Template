@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPlasmaCarbineUpgrades.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPlasmaCarbineUpgrades : uint8 {
     RateOfFireBoostOnFullShield,
     RemoveShieldOnOverheat,

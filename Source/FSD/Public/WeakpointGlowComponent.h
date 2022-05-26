@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "DamageData.h"
-#include "WeakpointChannel.h"
 #include "Curves/CurveFloat.h"
+#include "WeakpointChannel.h"
+#include "DamageData.h"
 #include "WeakpointGlowComponent.generated.h"
 
 class UFSDPhysicalMaterial;
 class UMeshComponent;
-class USkeletalMeshComponent;
 class UHealthComponentBase;
+class USkeletalMeshComponent;
 class UCurveFloat;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -26,7 +26,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRuntimeFloatCurve WeakpointHitCurve;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CurveMultiplier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -44,7 +44,7 @@ public:
     bool StopLoopingGlow(int32 aGlowID, bool aFade);
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void ShowBodypartHit(float Amount, float BaseAmount, const FDamageData& DamageData);
     
 public:

@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ChargedWeapon.h"
 #include "ContrailSettings.h"
-#include "BulletPathSegment.h"
+#include "ChargedWeapon.h"
+#include "UObject/NoExportTypes.h"
 #include "ShotMultiplier.h"
 #include "CoilMaterial.h"
 #include "Curves/CurveFloat.h"
 #include "Engine/NetSerialization.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "BulletPathSegment.h"
 #include "CoilGun.generated.h"
 
 class UDamageComponent;
-class UHealthComponentBase;
 class UNiagaraComponent;
-class AActor;
 class UCoilgunTrailSpawner;
 class UStaticMesh;
+class UHealthComponentBase;
 class UNiagaraSystem;
 class UStatusEffect;
 class ACoilgunWeaponTrail;
+class AActor;
 class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
 
@@ -92,43 +92,43 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UStatusEffect*> RecordedAilments;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxAfflictionTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ShotWidth;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BonusShotWidth;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ImpactFearFactor;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OverChargedShotMaxPower;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxOverchargeTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OverchargeTimeStep;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BrokenShieldboostDuration;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinUndercharge;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TriBustCancelTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TriBurstShotPowerMultiplier;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TriBurstAmmoMultiplier;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TriBurstShotCarvingMultiplier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -151,10 +151,13 @@ public:
     void SetDynamicMaterials();
     
 protected:
-    UFUNCTION(Reliable, Server)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_ToggleCharingBonuses(bool Enabled);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SpawnTrail(const FVector_NetQuantize& Location, const FRotator& Rotation, float HalfHeight, bool fireTrailEnabled);
     
-    UFUNCTION(Reliable, Server)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SpawnGroundTrail(const FVector_NetQuantize& Location, const FVector& Direction, float chargeMultiplier);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
@@ -163,7 +166,10 @@ protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_RegisterBonusHit(AActor* Target);
     
-    UFUNCTION(Reliable, Server)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_RegisterBlastHit(AActor* Target, const FVector_NetQuantize& Location, UPrimitiveComponent* comp);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_HitTerrain(const FVector_NetQuantize& Location, const FVector_NetQuantize& End, float maxCarveDepth);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
@@ -190,7 +196,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnEnemyKilled(AActor* Target, UFSDPhysicalMaterial* PhysicalMaterial, bool wasDirectHit);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnDamageTarget(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* Component, UFSDPhysicalMaterial* PhysicalMaterial);
     
     UFUNCTION(BlueprintCallable)
@@ -207,7 +213,7 @@ protected:
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void All_ShieldBroken();
     
-    UFUNCTION(NetMulticast, Reliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void All_AdjustTrail(ACoilgunWeaponTrail* Trail, float Length);
     
 };

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGatlingGunUpgrade.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGatlingGunUpgrade : uint8 {
     DamageMultiplierAtMaxStabilization,
     HeatRemovedOnKill,

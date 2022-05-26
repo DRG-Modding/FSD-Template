@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "UObject/NoExportTypes.h"
 #include "ESchematicType.h"
 #include "SchematicType.h"
+#include "UObject/NoExportTypes.h"
 #include "SchematicSettings.generated.h"
 
-class USchematicRarity;
-class UDataTable;
-class UItemSkinSchematicCollection;
-class USchematic;
-class UOverclockBank;
 class USchematicBank;
+class UDataTable;
+class UOverclockBank;
+class USchematic;
+class UItemSkinSchematicCollection;
 class USchematicBankBase;
 class USchematicCategory;
 class USchematicPricingTier;
+class USchematicRarity;
 class UItemID;
 
 UCLASS(Blueprintable)
@@ -98,6 +98,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USchematicCategory* VanityCatVictoryPose;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    USchematicCategory* WeaponPaintJob;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* SchematicGATable;

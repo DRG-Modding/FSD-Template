@@ -2,23 +2,23 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "ECharacterState.h"
-#include "GameplayTagContainer.h"
 #include "HeroInfo.h"
+#include "ECharacterState.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "GameplayTagContainer.h"
 #include "Curves/CurveFloat.h"
 #include "ActorFunctionLibrary.generated.h"
 
-class UObject;
+class UItemID;
 class APlayerCharacter;
-class UDamageClass;
-class USoundCue;
 class UWindowWidget;
-class UActorComponent;
-class UMaterialInstanceDynamic;
 class APlayerController;
+class UObject;
+class USoundCue;
+class UHealthComponentBase;
+class UMaterialInstanceDynamic;
 class UUserWidget;
 class AActor;
 class USceneComponent;
@@ -26,15 +26,15 @@ class UFXSystemAsset;
 class UPathfinderCollisionComponent;
 class UFSDPhysicalMaterial;
 class UPlayerCharacterID;
-class AFSDGameMode;
-class UItemID;
-class UPostProcessComponent;
 class UInventoryList;
 class UTexture2D;
+class UActorComponent;
+class UPostProcessComponent;
 class UBlendableInterface;
 class IBlendableInterface;
+class AFSDGameMode;
 class UMeshComponent;
-class UHealthComponentBase;
+class UDamageClass;
 class UEnemyComponent;
 class AFSDGameState;
 
@@ -49,7 +49,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void UnlockCharacters(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float TimeSince(UObject* WorldContextObject, float Time);
     
     UFUNCTION(BlueprintCallable)
@@ -61,10 +61,10 @@ public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     static void PlayCueOnAll(UObject* WorldContextObject, USoundCue* cue);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float PingPong(float Time, float Length, bool normalize);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float MoveTowards(float Current, float End, float step);
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
@@ -97,10 +97,10 @@ public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintPure)
     static bool IsSingleplayer(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsInRangeOfLocalPlayer(AActor* toActor, float MinDistance, float MaxDistance);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsCloseToLocalPlayer(AActor* toActor, float Distance);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -118,7 +118,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static UItemID* GetItemID(TSubclassOf<AActor> itemClass);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetHeroXP(UObject* WorldContextObject, UPlayerCharacterID* characterID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -127,7 +127,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString GetHeroSourceName(TSubclassOf<APlayerCharacter> playerClass);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetHeroProgress(UObject* WorldContextObject, UPlayerCharacterID* characterID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -181,7 +181,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void FSDDumpCallStack(const FString& Msg);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static APlayerCharacter* FindNearestPlayerCharacter(UObject* WorldContextObject, FVector fromLocation, float MaxRadius, bool MustBeAlive, bool MustBeUnparalyzed, bool MustHaveLineOfSight);
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
@@ -199,7 +199,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void FadeMaterials(const UObject* WorldContextObject, UMeshComponent*& Mesh, float Duration);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float EvaluateRuntimeCurve(UObject* WorldContextObject, const FRuntimeFloatCurve& Curve, float Time);
     
     UFUNCTION(BlueprintCallable)

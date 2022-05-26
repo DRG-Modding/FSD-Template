@@ -3,10 +3,10 @@
 #include "Components/SceneComponent.h"
 #include "DamageComponent.h"
 
+class UParticleSystem;
 class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
 class USoundCue;
-class UParticleSystem;
 
 
 void APickaxeItem::SetSpecialCoolDownDuration(float newCooldownDuration) {

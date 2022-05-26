@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EExampleEnum.generated.h"
 
-UENUM()
-enum class EExampleEnum {
+UENUM(BlueprintType)
+enum class EExampleEnum : uint8 {
     FirstName,
     SecondName,
 };

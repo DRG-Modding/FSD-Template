@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameOwnerStatus.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGameOwnerStatus : uint8 {
     Supporter,
     ContentCreator,

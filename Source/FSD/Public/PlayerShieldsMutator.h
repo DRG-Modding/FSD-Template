@@ -8,7 +8,7 @@ class UPlayerShieldsMutator : public UMutator {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ShieldModifier;
     
 public:

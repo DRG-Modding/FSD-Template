@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EDebrisOrientation.generated.h"
 
-UENUM()
-enum class EDebrisOrientation {
+UENUM(BlueprintType)
+enum class EDebrisOrientation : uint8 {
     Random,
     RandomXY,
     AlignToSurfaceNormal,

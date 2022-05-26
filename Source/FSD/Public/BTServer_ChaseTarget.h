@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "BehaviorTree/BTService.h"
-#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "GameplayTagContainer.h"
+#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "GameplayTagContainer.h"
 #include "BTServer_ChaseTarget.generated.h"
 
@@ -35,13 +35,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool CanShoot;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TargetingRange;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SwitchTargetTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SwitchTargetDeviation;
     
 public:

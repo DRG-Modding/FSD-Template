@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ECampaignMutators.h"
 #include "Engine/DataAsset.h"
+#include "ECampaignMutators.h"
 #include "RequiredMissionItem.h"
 #include "CampaignMission.generated.h"
 
 class UPlanetZone;
-class UMissionWarning;
 class UReward;
-class UDialogDataAsset;
 class UMissionTemplate;
+class UMissionWarning;
+class UDialogDataAsset;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UCampaignMission : public UDataAsset {

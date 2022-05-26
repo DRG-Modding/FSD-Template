@@ -59,5 +59,7 @@ void UCharacterUseComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty
 
 UCharacterUseComponent::UCharacterUseComponent() {
     this->UseDistance = 150.00f;
+    this->LastBeginUseUsable = NULL;
+    this->HoveringUsable = NULL;
 }
 

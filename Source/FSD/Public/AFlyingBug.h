@@ -5,17 +5,17 @@
 #include "DamageData.h"
 #include "AFlyingBug.generated.h"
 
-class UOutlineComponent;
 class UEnemyComponent;
-class UPawnSensingComponent;
 class UPawnStatsComponent;
 class UPawnAlertComponent;
-class UAudioComponent;
+class UPawnSensingComponent;
+class UOutlineComponent;
 class USphereComponent;
+class UAudioComponent;
 class UFrozenPawnImpactComponent;
+class USoundBase;
 class UHitReactionComponent;
 class AActor;
-class USoundBase;
 class UHealthComponentBase;
 class UHealthComponent;
 class UDamageTag;
@@ -58,16 +58,16 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* ChatterSound;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DistanceForAttackMode;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinChatterDelay;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxChatterDelay;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AttackModeRotationSpeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -124,7 +124,7 @@ public:
     void OnBugDeath(UHealthComponentBase* Health);
     
 protected:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMidZpointFromCielingAndFloor(float& distanceFromCieling, float& distanceFromFloor) const;
     
 public:

@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Subsystems/GameInstanceSubsystem.h"
-#include "UObject/NoExportTypes.h"
 #include "FSDEventActivateChangedDelegate.h"
+#include "Subsystems/GameInstanceSubsystem.h"
 #include "BackendNotificationEvent.h"
+#include "UObject/NoExportTypes.h"
 #include "FSDEventManager.generated.h"
 
 class UFSDEvent;
@@ -36,7 +36,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FDateTime LastRequestTime;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float NextCheckTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

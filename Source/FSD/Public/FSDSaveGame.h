@@ -1,30 +1,28 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ESonyInputSettingsBools.h"
-#include "ESonyControllerLightMode.h"
 #include "GameFramework/SaveGame.h"
-#include "OptionsInSaveGame.h"
-#include "ResourcesSave.h"
-#include "AchievementSave.h"
-#include "UObject/NoExportTypes.h"
-#include "VanityMasteryResult.h"
-#include "ESonyControllerMotionMapping.h"
-#include "EItemCategory.h"
-#include "EFSDFaction.h"
-#include "UObject/NoExportTypes.h"
-#include "SeasonSave.h"
-#include "MissionStatSave.h"
 #include "MilestoneSave.h"
-#include "ItemUINotifications.h"
+#include "UpgradeLoadout.h"
+#include "VanityMasterySave.h"
+#include "VanityMasteryResult.h"
+#include "EventRewardSave.h"
+#include "ESonyControllerMotionMapping.h"
+#include "PromotionRewardsSave.h"
+#include "FSDEventRewardsSave.h"
+#include "EFSDFaction.h"
+#include "GDKWinOptionsInSaveGame.h"
+#include "UObject/NoExportTypes.h"
+#include "MissionStatSave.h"
 #include "PerkClaimsSave.h"
 #include "WatchedTutorial.h"
 #include "CharacterPerksSave.h"
-#include "VanityMasterySave.h"
+#include "ResourcesSave.h"
+#include "AchievementSave.h"
 #include "SchematicSave.h"
-#include "PromotionRewardsSave.h"
-#include "FSDEventRewardsSave.h"
+#include "SeasonSave.h"
 #include "GameDLCSave.h"
+#include "UObject/NoExportTypes.h"
 #include "UnLockedMissionParameters.h"
 #include "CampaignSave.h"
 #include "DeepDiveSave.h"
@@ -32,26 +30,28 @@
 #include "ForgingSave.h"
 #include "DrinkSave.h"
 #include "ItemUpgradeSelection.h"
-#include "UpgradeLoadout.h"
 #include "ItemNotificationInfo.h"
 #include "SkinList.h"
-#include "EventRewardSave.h"
+#include "ItemUINotifications.h"
 #include "ConsoleOptionsInSaveGame.h"
-#include "GDKWinOptionsInSaveGame.h"
+#include "OptionsInSaveGame.h"
+#include "ESonyInputSettingsBools.h"
+#include "ESonyControllerLightMode.h"
 #include "SonyInputSettings.h"
 #include "ESonyInputSettingsFloats.h"
+#include "EItemCategory.h"
 #include "FSDSaveGame.generated.h"
 
-class APlayerCharacter;
 class UItemID;
-class UResourceData;
+class APlayerCharacter;
 class UItemSkin;
-class UVanityItem;
-class AActor;
+class UResourceData;
 class UFSDSaveGame;
-class UObject;
+class UVanityItem;
 class UPlayerCharacterID;
 class UFSDGameInstance;
+class UObject;
+class AActor;
 
 UCLASS(Blueprintable)
 class FSD_API UFSDSaveGame : public USaveGame {
@@ -335,7 +335,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString Name;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TotalPlayTimeSeconds;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -528,7 +528,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ESonyControllerLightMode GetSonyInputSettingLightMode() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetSonyInputSettingFloat(ESonyInputSettingsFloats Setting) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -552,7 +552,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetResourceBuyingPrice(UResourceData* Resource, int32 Amount) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetResourceAmount(const UResourceData* Resource) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

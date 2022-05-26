@@ -7,10 +7,10 @@ UCLASS(Blueprintable, EditInlineNew)
 class UEncounterOverrideMutator : public UMutator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MobileEncounterScale;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StationaryEncounterScale;
     
     UEncounterOverrideMutator();

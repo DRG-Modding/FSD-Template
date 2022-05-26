@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPreciousMaterialOptions.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPreciousMaterialOptions : uint8 {
     TurnIntoGems,
     LeaveUntouched,

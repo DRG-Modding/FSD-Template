@@ -8,10 +8,10 @@
 #include "Engine/EngineTypes.h"
 #include "Projectile.generated.h"
 
+class APawn;
 class UObject;
 class AActor;
 class UFSDProjectileMovementComponent;
-class APawn;
 class AProjectile;
 class USceneComponent;
 class UFSDPhysicalMaterial;

@@ -5,8 +5,8 @@
 #include "ESchematicType.h"
 #include "SpecialEventBlueprintLibrary.generated.h"
 
-class UObject;
 class USchematic;
+class UObject;
 class UPlayerCharacterID;
 
 UCLASS(Blueprintable)

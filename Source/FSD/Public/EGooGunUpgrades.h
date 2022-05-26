@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGooGunUpgrades.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGooGunUpgrades : uint8 {
     ChargeFire,
     BurstFire,

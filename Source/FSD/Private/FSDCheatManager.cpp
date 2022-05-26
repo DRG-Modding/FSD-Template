@@ -2,13 +2,13 @@
 #include "Templates/SubclassOf.h"
 
 class UPlayerCharacterID;
-class UObject;
+class AFSDAIController;
 class UEnemyDescriptor;
 class UBaseCritterDescriptor;
 class APlayerCharacter;
 class APawn;
-class AFSDAIController;
 class AActor;
+class UObject;
 class UResourceData;
 
 void UFSDCheatManager::SwitchCharacter(UPlayerCharacterID* characterID) {
@@ -94,6 +94,9 @@ void UFSDCheatManager::R_AddCredits(int32 Number) {
 }
 
 void UFSDCheatManager::R_AddCraftingResource(int32 Amount, int32 Type) {
+}
+
+void UFSDCheatManager::R_Add_Phazyonite(int32 Amount) {
 }
 
 void UFSDCheatManager::R_Add_BitterGem(int32 Amount) {

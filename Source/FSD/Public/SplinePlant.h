@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Components/SplineMeshComponent.h"
 #include "Curves/CurveFloat.h"
+#include "Components/SplineMeshComponent.h"
 #include "UObject/NoExportTypes.h"
 #include "SplinePlant.generated.h"
 
-class USplineComponent;
-class USceneComponent;
-class UAudioComponent;
-class USoundCue;
 class UStaticMesh;
+class UAudioComponent;
+class USplineComponent;
+class USoundCue;
+class USceneComponent;
 class USplineMeshComponent;
 
 UCLASS(Blueprintable)
@@ -42,7 +42,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bEnabledSegmentCollision;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CarveRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -51,22 +51,22 @@ protected:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ESplineMeshAxis::Type> SegmentForwardAxis;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SegmentLength;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRuntimeFloatCurve SegmentWidthCurve;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SegmentWidthScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRuntimeFloatCurve SegmentHeightCurve;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SegmentHeightScale;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PreviewLengthPercent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -110,20 +110,20 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ReceivePrepareSpline(USplineComponent* InSplineComponent, int32 InSeed);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveMovementUpdated(float InDistanceProgress);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveMovementStarted(float InTargetDistance);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveMovementFinished(float InDistanceProgress);
     
 public:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetPlantTargetLengthPercent() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetPlantLengthPercent() const;
     
 protected:
@@ -131,7 +131,7 @@ protected:
     FTransform GetNearestLocationToLocalPlayer() const;
     
 public:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetFullPlantLength() const;
     
 };

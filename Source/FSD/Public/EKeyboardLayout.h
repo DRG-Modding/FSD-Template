@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EKeyboardLayout.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EKeyboardLayout : uint8 {
     QWERTY,
     AZERTY,

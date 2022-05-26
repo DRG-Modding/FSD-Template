@@ -4,9 +4,9 @@
 #include "GameFramework/Actor.h"
 #include "ShowroomStage.generated.h"
 
-class UShowroomController;
-class USceneCaptureComponent2D;
 class UTextureRenderTarget2D;
+class USceneCaptureComponent2D;
+class UShowroomController;
 class USceneComponent;
 
 UCLASS(Abstract, Blueprintable)
@@ -29,10 +29,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneCaptureComponent2D* SceneCapture;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinPitch;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxPitch;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))

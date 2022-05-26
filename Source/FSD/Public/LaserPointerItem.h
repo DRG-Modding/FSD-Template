@@ -2,19 +2,19 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "AnimatedItem.h"
-#include "UObject/NoExportTypes.h"
 #include "MarkerPlacedDelegateDelegate.h"
 #include "Engine/EngineTypes.h"
-#include "LaserPointerData.h"
 #include "UObject/NoExportTypes.h"
+#include "LaserPointerData.h"
 #include "UObject/NoExportTypes.h"
 #include "ELaserPointerMarkerType.h"
 #include "UObject/NoExportTypes.h"
 #include "LaserPointerItem.generated.h"
 
+class UDialogDataAsset;
+class UTexture2D;
 class ALaserPointerMarker;
 class ALaserPointerWaypoint;
-class UDialogDataAsset;
 class USceneComponent;
 class UObjectInfoComponent;
 class UTerrainMaterial;
@@ -22,7 +22,6 @@ class AFSDGameState;
 class UObject;
 class AActor;
 class UPrimitiveComponent;
-class UTexture2D;
 
 UCLASS(Abstract, Blueprintable)
 class ALaserPointerItem : public AAnimatedItem {
@@ -53,17 +52,8 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 NextWaypointIndex;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MarkerLifeTime;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FLinearColor ColorMinerals;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FLinearColor ColorEnemy;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FLinearColor ColorOther;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDialogDataAsset* DefaultLookAtShout;
@@ -86,7 +76,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FLaserPointerData LookAtData;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float LookAtDistance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

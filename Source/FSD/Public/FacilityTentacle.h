@@ -8,15 +8,15 @@
 #include "FacilityTentacle.generated.h"
 
 class UAnimMontage;
-class USkeletalMeshComponent;
 class UDebrisPositioning;
+class USkeletalMeshComponent;
 
 UCLASS(Blueprintable)
 class FSD_API AFacilityTentacle : public ATentacleBase, public ITriggerAI {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SwaySpeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -39,7 +39,7 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void PlayHitReaction(float Amount);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

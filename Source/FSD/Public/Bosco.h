@@ -1,53 +1,53 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Skinnable.h"
-#include "UpgradableGear.h"
 #include "DeepPathfinderCharacter.h"
-#include "ItemIDInterface.h"
-#include "WeaponFireOwner.h"
+#include "Skinnable.h"
 #include "Upgradable.h"
+#include "WeaponFireOwner.h"
 #include "SaveGameIDInterface.h"
+#include "UObject/NoExportTypes.h"
+#include "UpgradableGear.h"
 #include "NotifyMessageReceiver.h"
+#include "ItemIDInterface.h"
+#include "GameplayTagContainer.h"
+#include "EDroneAIState.h"
 #include "ReviveUsedSigDelegate.h"
 #include "StateChangedSigDelegate.h"
-#include "GameplayTagContainer.h"
-#include "Engine/NetSerialization.h"
-#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "BoscoLightSetting.h"
 #include "UObject/NoExportTypes.h"
-#include "EDroneAIState.h"
 #include "DamageData.h"
+#include "Engine/NetSerialization.h"
 #include "UObject/NoExportTypes.h"
 #include "Bosco.generated.h"
 
-class UBoscoProjectileAbillity;
-class UDroneMiningToolBase;
-class UPawnSensingComponent;
-class UTerrainMaterial;
+class UAudioComponent;
+class ABoscoController;
 class UHealthComponent;
 class UBoscoAbillityComponent;
+class UPointLightComponent;
 class UDamageComponent;
+class UPawnSensingComponent;
+class UDroneMiningToolBase;
 class UBobbingComponent;
-class APlayerCharacter;
 class USkeletalMeshComponent;
+class UUpgradableBoscoComponent;
 class UHitscanComponent;
 class USpotLightComponent;
-class UAudioComponent;
-class UPointLightComponent;
 class UParticleSystemComponent;
 class UDialogDataAsset;
 class USoundBase;
-class UUpgradableBoscoComponent;
-class UParticleSystem;
 class UItemUpgrade;
-class UItemID;
 class UAnimSequenceBase;
+class UBoscoProjectileAbillity;
+class UTerrainMaterial;
+class APlayerCharacter;
+class UItemID;
 class UDroneSkinnableComponent;
 class UBoscoAbillity;
 class AActor;
 class USoundCue;
-class ABoscoController;
+class UParticleSystem;
 
 UCLASS(Blueprintable)
 class FSD_API ABosco : public ADeepPathfinderCharacter, public IWeaponFireOwner, public IUpgradableGear, public IUpgradable, public ISaveGameIDInterface, public ISkinnable, public IItemIDInterface, public INotifyMessageReceiver {
@@ -143,7 +143,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     USoundBase* CurrentResponse;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ResponseTime;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -156,19 +156,19 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagContainer LosMatchTags;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SeeTargetTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* AbillityErrorSound;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float INcreasedMiningArea;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TimeToResetMiningBoost;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MiningBoosMultiplier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -201,7 +201,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UAnimSequenceBase*> HitReaction;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SaluteDuration;
     
     UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
@@ -225,7 +225,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* ShootSound;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ShootSoundFadeout;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -240,7 +240,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* TracerEffect;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FireRate;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -249,22 +249,22 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxShotsInBurst;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxRandomBurstCooldown;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinRandomBurstCooldown;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxFiringAngle;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxEngagementRange;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinTracerDistance;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TracerSpeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -273,16 +273,16 @@ protected:
     UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<UAudioComponent> ReviveSirensComponent;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DistanceToFacePlayer;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RotationSpeed;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PrepareToMineRange;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MiningRange;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -368,7 +368,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnNotReadyToShoot();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnHit(float Amount, float BaseAmount, const FDamageData& DamageData);
     
 public:

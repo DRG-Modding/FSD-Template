@@ -4,10 +4,10 @@
 #include "EItemCategory.h"
 #include "CharacterShowroomController.generated.h"
 
-class APlayerCharacter;
-class UCharacterShowroomController;
-class UObject;
 class UPlayerCharacterID;
+class UCharacterShowroomController;
+class APlayerCharacter;
+class UObject;
 class UShowroomCameraKey;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

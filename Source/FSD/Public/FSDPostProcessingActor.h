@@ -5,13 +5,13 @@
 #include "Engine/Scene.h"
 #include "FSDPostProcessingActor.generated.h"
 
-class UMaterialInterface;
-class UPostProcessComponent;
-class APostProcessingManager;
 class UBlendableInterface;
 class IBlendableInterface;
-class UObject;
 class UMaterialInstanceDynamic;
+class UPostProcessComponent;
+class APostProcessingManager;
+class UObject;
+class UMaterialInterface;
 
 UCLASS(Abstract, Blueprintable)
 class AFSDPostProcessingActor : public AActor {

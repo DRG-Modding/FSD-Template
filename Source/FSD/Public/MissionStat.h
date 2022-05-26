@@ -6,10 +6,10 @@
 #include "EMissionStatType.h"
 #include "MissionStat.generated.h"
 
-class UMissionStatCategory;
-class UObject;
-class UMissionStat;
 class UFSDAchievement;
+class UMissionStat;
+class UObject;
+class UMissionStatCategory;
 class APlayerCharacter;
 class UPlayerCharacterID;
 class UTexture2D;
@@ -50,31 +50,31 @@ protected:
     
 public:
     UMissionStat();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FText MissionStatToText(EMissionStatType StatType, float Value);
     
     UFUNCTION(BlueprintCallable)
     static void Increment(UObject* WorldContext, UMissionStat* Stat, TSubclassOf<APlayerCharacter> CharacterClass, float Amount);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetStatMinCount(UObject* WorldContext);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetStatMaxCount(UObject* WorldContext);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FText GetStatCountTotalAsText(UObject* WorldContext);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetStatCountTotal(UObject* WorldContext);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetStatCountPct(UObject* WorldContext, TSubclassOf<APlayerCharacter> CharacterClass);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FText GetStatCountAsText(UObject* WorldContext, UPlayerCharacterID* characterID);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetStatCount(UObject* WorldContext, UPlayerCharacterID* characterID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

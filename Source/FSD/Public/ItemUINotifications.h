@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UINotificationItem.h"
 #include "UObject/NoExportTypes.h"
+#include "UINotificationItem.h"
 #include "ItemUINotifications.generated.h"
 
 class UFSDSaveGame;

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EArmorDamageType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EArmorDamageType : uint8 {
     Normal,
     Dissolve,

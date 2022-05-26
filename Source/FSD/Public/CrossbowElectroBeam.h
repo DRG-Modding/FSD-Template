@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class ACrossbowElectroBeam : public AElectroBeam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float MaxRange;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))

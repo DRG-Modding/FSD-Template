@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EItemAdjustmentType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EItemAdjustmentType : uint8 {
     None,
     Cieling,

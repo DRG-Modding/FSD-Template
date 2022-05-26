@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "GooPuddleStatusEffectTrigger.generated.h"
 
-class UDamageClass;
 class UStatusEffect;
+class UDamageClass;
 
 USTRUCT(BlueprintType)
 struct FGooPuddleStatusEffectTrigger {

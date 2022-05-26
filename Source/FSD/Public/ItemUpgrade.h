@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "EUpgradeClass.h"
 #include "SavableDataAsset.h"
 #include "RefundableInterface.h"
 #include "EUpgradeTiers.h"
-#include "EUpgradeClass.h"
-#include "CraftingCost.h"
 #include "ItemUpgradeStatText.h"
 #include "UpgradeValues.h"
+#include "CraftingCost.h"
 #include "ItemUpgrade.generated.h"
 
-class UItemUpgrade;
 class UResourceData;
+class UItemUpgrade;
 class UItemUpgradeCategory;
 class UItemUpgradeElement;
 class AActor;
@@ -54,7 +54,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UItemUpgradeCategory* Category;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<UResourceData*, float> UpgradeCraftingCost;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -86,7 +86,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FUpgradeValues GetGenericUpgradedValue(TSubclassOf<AActor> Item, AFSDPlayerState* Player, UItemUpgrade* NewUpgradeClass);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetCreditsCost() const;
     
     UFUNCTION(BlueprintCallable)

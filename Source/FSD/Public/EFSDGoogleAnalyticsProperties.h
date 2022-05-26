@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EFSDGoogleAnalyticsProperties.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EFSDGoogleAnalyticsProperties : uint8 {
     DRG,
     Discord,

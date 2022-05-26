@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "DecalData.h"
 #include "EDebrisMeshShadows.h"
 #include "EDebrisMeshCollisionProfile.h"
-#include "DecalData.h"
 #include "DebrisStaticMesh.generated.h"
 
 class UStaticMesh;
-class UParticleSystem;
 class USoundCue;
 class UMaterialInterface;
+class UParticleSystem;
 
 USTRUCT(BlueprintType)
 struct FDebrisStaticMesh {
@@ -23,7 +23,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EDebrisMeshCollisionProfile CollisionProfile;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Probablity;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

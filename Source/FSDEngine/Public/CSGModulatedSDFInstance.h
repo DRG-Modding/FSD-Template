@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "CSGSDFModulatedInstanceProperties.h"
-#include "CSGBase.h"
-#include "UObject/NoExportTypes.h"
-#include "BinaryTerrainMaterialCombiner.h"
 #include "DeepCSGFloatTree.h"
+#include "CSGBase.h"
+#include "CSGSDFModulatedInstanceProperties.h"
+#include "BinaryTerrainMaterialCombiner.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "CSGModulatedSDFInstance.generated.h"
 
-class USDFBase;
 class UBakeConfig;
+class USDFBase;
 
 UCLASS(Blueprintable)
 class FSDENGINE_API UCSGModulatedSDFInstance : public UCSGBase {

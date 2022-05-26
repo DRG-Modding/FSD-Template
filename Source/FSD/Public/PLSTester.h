@@ -3,13 +3,13 @@
 #include "GameFramework/Actor.h"
 #include "PLSTester.generated.h"
 
-class UMissionWarning;
-class UMissionComplexity;
-class UMissionDuration;
-class UMissionMutator;
 class UDifficultySetting;
-class UBiome;
 class UMissionTemplate;
+class UMissionWarning;
+class UMissionDuration;
+class UMissionComplexity;
+class UMissionMutator;
+class UBiome;
 
 UCLASS(Blueprintable)
 class APLSTester : public AActor {

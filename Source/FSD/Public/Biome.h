@@ -5,31 +5,31 @@
 #include "UObject/NoExportTypes.h"
 #include "RandRange.h"
 #include "HeatSource.h"
-#include "BiomeEnemyEntry.h"
+#include "UObject/NoExportTypes.h"
 #include "BiomeNoiseItem.h"
 #include "ResourceSpawner.h"
+#include "BiomeEnemyEntry.h"
 #include "Sound/ReverbSettings.h"
-#include "UObject/NoExportTypes.h"
 #include "Biome.generated.h"
 
-class UPillarSettings;
-class UParticleSystem;
-class USoundCue;
+class UFloodFillSettings;
+class UDebrisSet;
+class UUserWidget;
 class UFileMediaSource;
 class UTexture2D;
-class UUserWidget;
-class UDetailNoise;
-class UCaveScriptComponent;
-class UDebrisSet;
-class ADebrisDataActor;
+class UParticleSystem;
 class AActor;
-class UTerrainMaterial;
+class UCaveScriptComponent;
+class ADebrisDataActor;
 class UMaterialInstance;
+class UTerrainMaterial;
 class UMissionStat;
-class UFloodFillSettings;
+class UDetailNoise;
+class UPillarSettings;
 class UTunnelSetting;
 class UEnemyDescriptor;
 class UCritterDescriptor;
+class USoundCue;
 class UReverbEffect;
 class ULevelSequence;
 class UObject;
@@ -93,7 +93,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSoftClassPtr<UCaveScriptComponent>> CaveScriptComponents;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ExtraCaveSize;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -186,19 +186,19 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FReverbSettings ReverbSettings;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SmallCaveReverbVolume;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UReverbEffect* SmallCaveReverb;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MediumCaveReverbVolume;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UReverbEffect* MediumCaveReverb;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LargeCaveReverbVolume;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -216,7 +216,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FText> Quotes;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PlanetZoneSelectionWeight;
     
 public:

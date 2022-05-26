@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EFSDGoogleAnalyticsProperties.h"
 #include "UObject/Object.h"
 #include "PartyAnalyticsInformation.h"
 #include "DeepDiveAnalyticsInformation.h"
+#include "EFSDGoogleAnalyticsProperties.h"
 #include "GoogleAnalyticsWrapper.generated.h"
 
-class AActor;
-class AFSDPlayerState;
 class APlayerController;
-class USeasonChallenge;
 class AFSDGameState;
+class AActor;
+class USeasonChallenge;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable)
 class UGoogleAnalyticsWrapper : public UObject {

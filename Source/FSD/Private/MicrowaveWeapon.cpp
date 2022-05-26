@@ -1,10 +1,10 @@
 #include "MicrowaveWeapon.h"
-#include "CapsuleHitscanComponent.h"
 #include "DamageComponent.h"
+#include "CapsuleHitscanComponent.h"
 
 class UPrimitiveComponent;
-class AActor;
 class UFSDPhysicalMaterial;
+class AActor;
 class UHealthComponentBase;
 
 void AMicrowaveWeapon::UpdateMuzzleAnim(bool InIsFiring) {
@@ -34,7 +34,7 @@ void AMicrowaveWeapon::OnShowHitEffect(const FVector& ImpactPoint, const FVector
 void AMicrowaveWeapon::OnServerHitscanHit(const FMultiHitScanHits& Hits) {
 }
 
-void AMicrowaveWeapon::OnRadiantSuperHeaterFrostAoe() {
+void AMicrowaveWeapon::OnRadiantSuperHeaterAoe() {
 }
 
 void AMicrowaveWeapon::OnPushedDamageEffect(UHealthComponentBase* healthComp) {
@@ -86,7 +86,6 @@ AMicrowaveWeapon::AMicrowaveWeapon() {
     this->RadiantSuperheaterMinHeatDamage = 50.00f;
     this->RadiantSuperheaterFrostTransferFactor = 0.50f;
     this->RadiantSuperheaterHeatTransferFactor = 0.50f;
-    this->FrostShockTarget = NULL;
     this->SlowOnHit = false;
     this->HeatSink = NULL;
 }

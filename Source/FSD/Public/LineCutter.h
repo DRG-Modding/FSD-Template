@@ -27,7 +27,7 @@ protected:
     UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_LastProjectile)
     TWeakObjectPtr<ALineCutterProjectile> LastProjectile;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinExplosiveGoodbyeActivationTimme;
     
 public:

@@ -4,10 +4,10 @@
 #include "ItemLoadoutAnimations.h"
 #include "ItemCharacterAnimationSet.generated.h"
 
-class UAnimSequence;
-class UBlendSpace1D;
-class UAnimMontage;
 class UItemCharacterAnimationSet;
+class UAnimSequence;
+class UAnimMontage;
+class UBlendSpace1D;
 
 UCLASS(Blueprintable)
 class UItemCharacterAnimationSet : public UDataAsset {
@@ -139,7 +139,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FItemLoadoutAnimations LoadoutAnimations;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CameraOffset;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

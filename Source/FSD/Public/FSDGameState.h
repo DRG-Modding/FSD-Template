@@ -1,53 +1,53 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/GameState.h"
-#include "PlayerDelegateDelegate.h"
-#include "DifficultyDelegateDelegate.h"
 #include "Int32DelegateEventDelegate.h"
-#include "EnemyKilledDelegateDelegate.h"
 #include "DelegateEventDelegate.h"
 #include "GameEventCompletedDelegateDelegate.h"
+#include "PlayerDelegateDelegate.h"
+#include "FSDChatMessage.h"
+#include "ReplicatedObjectives.h"
+#include "EnemyKilledDelegateDelegate.h"
 #include "PlayerCharacterDelegateDelegate.h"
-#include "Engine/NetSerialization.h"
 #include "BoscoReviveCounterChangedDelegate.h"
 #include "BoolDelegateDelegate.h"
-#include "ScaledEffect.h"
 #include "ObjectivesDelegateDelegate.h"
+#include "DifficultyDelegateDelegate.h"
+#include "CreditsReward.h"
 #include "CountDownStartedDelegate.h"
 #include "CountdownDelegate.h"
-#include "ReplicatedObjectives.h"
-#include "GeneratedMissionSeed.h"
-#include "FSDChatMessage.h"
-#include "CurrentLeaderChangedDelegate.h"
+#include "Engine/NetSerialization.h"
 #include "FSDLocalizedChatMessage.h"
-#include "CreditsReward.h"
+#include "GeneratedMissionSeed.h"
+#include "CurrentLeaderChangedDelegate.h"
+#include "ScaledEffect.h"
 #include "FSDGameState.generated.h"
 
-class AMiningPod;
-class UGeneratedMission;
-class USpawnEffectsComponent;
-class ADeepCSGWorld;
-class AGameStats;
-class AProceduralSetup;
-class USeasonReplicatorComponent;
-class UPrimitiveComponent;
-class UDynamicMeshScaler;
-class UShowroomManager;
 class UFlareController;
+class APlayerState;
+class APlayerCharacter;
+class AMiningPod;
+class AProceduralSetup;
+class UResourceData;
+class ADeepCSGWorld;
+class UPrimitiveComponent;
+class USpawnEffectsComponent;
+class UDynamicMeshScaler;
 class UGemProximityTracker;
 class UAttackerManagerComponent;
 class UDifficultyManager;
+class AGameStats;
 class USoundMixManagerComponent;
+class USeasonReplicatorComponent;
 class UTeamResourcesComponent;
-class APlayerCharacter;
-class UPlayerCharacterID;
-class APlayerState;
-class USoundCue;
 class UDifficultySetting;
+class USoundCue;
 class UPlayerProximityTracker;
+class UShowroomManager;
+class UGeneratedMission;
 class AFSDPlayerState;
 class UObjective;
-class UResourceData;
+class UPlayerCharacterID;
 class UFSDEvent;
 
 UCLASS(Blueprintable)
@@ -151,16 +151,16 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PlayerSurvivalCreditBonus;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ResourceAmountPenalty;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ObjectivesCreditPenalty;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ObjectivesXPPenaltyNormal;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ObjectivesXPPenaltyDeepDives;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -437,13 +437,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     AGameStats* GetGameStats() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TMap<UResourceData*, float> GetEndscreenResources() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UDifficultyManager* GetDifficultyManager() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TMap<UResourceData*, float> GetCollectedResources() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

@@ -6,15 +6,15 @@
 #include "TowerEventModule.generated.h"
 
 class UWeakpointGlowComponent;
-class USkeletalMeshComponent;
+class UArmorHealthDamageComponent;
 class USceneComponent;
+class ATowerEventModule;
+class USkeletalMeshComponent;
 class UParticleSystemComponent;
 class UEnemyHealthComponent;
-class UArmorHealthDamageComponent;
 class USkeletalMesh;
 class USoundCue;
 class UParticleSystem;
-class ATowerEventModule;
 class UStaticMesh;
 class UStaticMeshComponent;
 
@@ -66,13 +66,13 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ArmorPieces;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ArmorLifetime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ArmorPopForce;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ArmorShedDelay;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))

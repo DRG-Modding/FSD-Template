@@ -1,7 +1,7 @@
 #include "ItemDispenser.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/SceneComponent.h"
 #include "InstantUsable.h"
+#include "Components/SceneComponent.h"
 
 class APlayerCharacter;
 class AActor;

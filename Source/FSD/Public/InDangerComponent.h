@@ -17,10 +17,10 @@ protected:
     UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<UHealthComponentBase> ParentHealthComponent;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DamageTimeLimit;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DamageThreshold;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -31,7 +31,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetIsActive(bool aFlag);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnDamage(float Amount);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

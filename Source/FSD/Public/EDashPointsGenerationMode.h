@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDashPointsGenerationMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EDashPointsGenerationMode : uint8 {
     Surround,
     Forward,

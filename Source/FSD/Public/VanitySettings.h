@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "ResourceSpawner.h"
 #include "VanitySlotCharacter.h"
 #include "VanityMasterySettings.h"
+#include "ResourceSpawner.h"
 #include "UObject/NoExportTypes.h"
 #include "EVanitySlot.h"
 #include "VanitySettings.generated.h"

@@ -1,6 +1,6 @@
 #include "CrossbowProjectileRicochet.h"
 
-void UCrossbowProjectileRicochet::Ricochet(const FHitResult& HitResult) {
+void UCrossbowProjectileRicochet::Ricochet(const FHitResult& HitResult, const FVector& RelativeLocation) {
 }
 
 UCrossbowProjectileRicochet::UCrossbowProjectileRicochet() {

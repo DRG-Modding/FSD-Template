@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Animation/AnimInstance.h"
-#include "IsAttackingChangedDelegateDelegate.h"
-#include "AnimNotifyDelegateDelegate.h"
 #include "NameDelegateDelegate.h"
+#include "Animation/AnimInstance.h"
+#include "AnimNotifyDelegateDelegate.h"
+#include "IsAttackingChangedDelegateDelegate.h"
 #include "EnemyAnimInstance.generated.h"
 
 class UHealthComponentBase;
@@ -32,7 +32,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool IsAlive;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float RandomStartPosition;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))

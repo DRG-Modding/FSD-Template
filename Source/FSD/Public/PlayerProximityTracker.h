@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ProximityTriggerItem.h"
-#include "PlayerSphere.h"
-#include "Components/ActorComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "Components/ActorComponent.h"
+#include "PlayerSphere.h"
+#include "ProximityTriggerItem.h"
 #include "PlayerProximityDelegateDelegate.h"
 #include "PlayerProximityTracker.generated.h"
 
@@ -14,10 +14,10 @@ class UPlayerProximityTracker : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxDistanceBetweenPlayers;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PlayerSpheresUpdateRatePerSecond;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ArmorPartDamagedDelegateDelegate.h"
 #include "BaseArmorDamageComponent.h"
 #include "AmorPartDestroyedDelegateDelegate.h"
 #include "ArmorHealthItem.h"
-#include "ArmorPartDamagedDelegateDelegate.h"
 #include "ArmorDamageInfo.h"
 #include "ArmorHealthDamageComponent.generated.h"
 

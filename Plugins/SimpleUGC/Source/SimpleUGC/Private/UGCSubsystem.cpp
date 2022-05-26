@@ -1,7 +1,7 @@
 #include "UGCSubsystem.h"
 
-class UUGCPackage;
 class UObject;
+class UUGCPackage;
 
 void UUGCSubsystem::SetPackagesAsRecentlyInstalled(TArray<UUGCPackage*> RecentMods) {
 }
@@ -81,6 +81,7 @@ void UUGCSubsystem::ApplyPendingMods(bool FromJoining) {
 
 UUGCSubsystem::UUGCSubsystem() {
     this->forceNoMods = false;
+    this->noInternetAccess = false;
     this->IsJoining = false;
     this->UGCRegistry = NULL;
     this->UGCSettings = NULL;

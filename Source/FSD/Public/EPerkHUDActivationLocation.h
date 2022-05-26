@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPerkHUDActivationLocation.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPerkHUDActivationLocation : uint8 {
     Main,
     Down,

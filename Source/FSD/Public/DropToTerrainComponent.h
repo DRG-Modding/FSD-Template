@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "OnIsFallingToTerrainChangedDelegate.h"
 #include "UObject/NoExportTypes.h"
+#include "OnIsFallingToTerrainChangedDelegate.h"
+#include "Components/ActorComponent.h"
 #include "DropToTerrainComponent.generated.h"
 
 class UTerrainDetectComponent;
@@ -16,10 +16,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTerrainDetectComponent*> TerrainPoints;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FallVelocity;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TerrainTraceMaxDistance;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

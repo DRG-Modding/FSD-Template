@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EMaggotAnimationState.generated.h"
 
-UENUM()
-enum class EMaggotAnimationState {
+UENUM(BlueprintType)
+enum class EMaggotAnimationState : uint8 {
     Idle,
     Moving,
 };

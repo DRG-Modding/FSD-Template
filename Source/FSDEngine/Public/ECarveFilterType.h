@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECarveFilterType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ECarveFilterType : uint8 {
     ReplaceAll,
     ReplaceEmpty,

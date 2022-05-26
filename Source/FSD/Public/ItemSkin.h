@@ -5,6 +5,7 @@
 #include "EItemSkinType.h"
 #include "ItemSkin.generated.h"
 
+class UMaterialInstanceDynamic;
 class UItemSkin;
 class UItemAquisitionBase;
 class UDLCBase;
@@ -15,7 +16,6 @@ class UItemID;
 class UPlayerCharacterID;
 class UObject;
 class AFSDPlayerState;
-class UMaterialInstanceDynamic;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UItemSkin : public USavablePrimaryDataAsset, public IAquisitionable {

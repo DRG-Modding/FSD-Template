@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HeightenedSenseTracker.h"
 #include "FloatPerkComponent.h"
+#include "HeightenedSenseTracker.h"
 #include "HeightenedSenseComponent.generated.h"
 
 class UPawnAffliction;
@@ -15,7 +15,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UPawnAffliction* HeightenSenseAffliction;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AlertDistance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

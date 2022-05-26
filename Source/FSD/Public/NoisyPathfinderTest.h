@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "PathObstacle.h"
 #include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
-#include "PathObstacle.h"
 #include "NoisyPathfinderTest.generated.h"
 
-class UFloodFillSettings;
-class ADeepCSGWorld;
 class UTunnelSegmentSetting;
+class UFloodFillSettings;
 class UTunnelParameters;
+class ADeepCSGWorld;
 
 UCLASS(Blueprintable)
 class ANoisyPathfinderTest : public AActor {
@@ -27,22 +27,22 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector EndDirection;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DirectionDistance;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DirectionPenalty;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ZPenaltyPower;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ZPenaltyScale;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DistancePenaltyScale;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RandomPenaltyScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

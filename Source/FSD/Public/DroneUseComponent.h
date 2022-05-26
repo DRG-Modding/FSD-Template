@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "DroneFinishedUsingDelegate.h"
 #include "Components/ActorComponent.h"
 #include "DelegateEventDelegate.h"
-#include "DroneFinishedUsingDelegate.h"
 #include "DroneUseProgressDelegate.h"
 #include "EInputKeys.h"
 #include "DroneUseComponent.generated.h"
 
 class USingleUsableComponent;
-class UDialogDataAsset;
 class APlayerCharacter;
+class UDialogDataAsset;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UDroneUseComponent : public UActorComponent {
@@ -34,10 +34,10 @@ protected:
     UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<USingleUsableComponent> SyncToUsable;
     
-    UPROPERTY(EditAnywhere, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     float Progress;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float useDuration;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -67,7 +67,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetCanUse(bool NewCanUse);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetProgress() const;
     
     UFUNCTION(BlueprintCallable)

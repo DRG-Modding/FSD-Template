@@ -1,9 +1,9 @@
 #include "TremorAttackComponent.h"
 #include "Net/UnrealNetwork.h"
 
+class UParticleSystemComponent;
 class UPrimitiveComponent;
 class AActor;
-class UParticleSystemComponent;
 class UBoxComponent;
 
 void UTremorAttackComponent::StopParticles() {

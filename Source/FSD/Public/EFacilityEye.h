@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EFacilityEye.generated.h"
 
-UENUM()
-enum class EFacilityEye {
+UENUM(BlueprintType)
+enum class EFacilityEye : uint8 {
     EForward,
     EBack,
     ELeft,

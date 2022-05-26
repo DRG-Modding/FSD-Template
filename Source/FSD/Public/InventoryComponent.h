@@ -1,30 +1,30 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "FlaresDelegateDelegate.h"
-#include "InventoryBase.h"
-#include "UObject/NoExportTypes.h"
-#include "InventoryItemsLoadedDelegate.h"
-#include "ItemDelegateDelegate.h"
-#include "GrenadesDelegateDelegate.h"
-#include "FlareProductionDelegateDelegate.h"
-#include "CarriableChangedDelegateDelegate.h"
 #include "ResupplyDelegateDelegate.h"
+#include "FlareProductionDelegateDelegate.h"
+#include "InventoryBase.h"
+#include "CarriableChangedDelegateDelegate.h"
+#include "InventoryItemsLoadedDelegate.h"
+#include "GrenadesDelegateDelegate.h"
+#include "ItemDelegateDelegate.h"
+#include "FlaresDelegateDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "EItemCategory.h"
 #include "InventoryComponent.generated.h"
 
-class AActor;
+class ATerrainScannerItem;
 class UInventoryList;
 class AThrownGrenadeItem;
 class AFlare;
-class ARecallableSentryGunItem;
+class AActor;
 class USoundCue;
 class UDialogDataAsset;
 class UItemUpgrade;
 class APickaxeItem;
+class ARecallableSentryGunItem;
 class ALaserPointerItem;
-class ATerrainScannerItem;
 class ARessuplyPodItem;
 class AItem;
 
@@ -81,19 +81,19 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDialogDataAsset* OutOfFlaresShout;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FlareAngle;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FlareCooldown;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float FlareProductionTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FLinearColor FlareChromaColor;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float FlareProductionTimeLeft;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -102,7 +102,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 Flares;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float FlareCooldownRemaining;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -197,7 +197,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void DropPickedupItem();
     
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_Resupply(float percentage);
     
     UFUNCTION(BlueprintCallable)

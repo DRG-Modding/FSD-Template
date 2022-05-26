@@ -6,9 +6,9 @@
 #include "TreasureContainer.generated.h"
 
 class USceneComponent;
-class APlayerCharacter;
 class UOncePerPlayerUsableComponent;
 class UItemAquisitionSource;
+class APlayerCharacter;
 class UTreasureRewarder;
 
 UCLASS(Blueprintable)

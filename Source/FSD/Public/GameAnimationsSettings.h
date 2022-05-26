@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DeveloperSettings.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/DeveloperSettings.h"
 #include "GameAnimationsSettings.generated.h"
 
 UCLASS(Blueprintable, DefaultConfig, Config=Game)

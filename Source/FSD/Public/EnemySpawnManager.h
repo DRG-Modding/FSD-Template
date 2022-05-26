@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "EnemySpawnedDelegateDelegate.h"
 #include "Components/ActorComponent.h"
 #include "EnemyDestroyedSignatureDelegate.h"
-#include "EnemySpawnedSignatureDelegate.h"
 #include "SpawnRarityModifierItem.h"
+#include "EnemySpawnedSignatureDelegate.h"
 #include "GameplayTagContainer.h"
 #include "SpawnQueueItem.h"
 #include "UObject/NoExportTypes.h"
-#include "EnemySpawnedDelegateDelegate.h"
 #include "EnemySpawnManager.generated.h"
 
-class USpawnEffectsComponent;
-class UEnemyDescriptor;
-class APawn;
 class UStatusEffect;
+class UEnemyDescriptor;
+class USpawnEffectsComponent;
+class APawn;
 class AProceduralSetup;
-class UHealthComponentBase;
 class AActor;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UEnemySpawnManager : public UActorComponent {
@@ -63,7 +63,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxActiveCritters;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxDistanceBeforeCleanup;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

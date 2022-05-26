@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDebrisMeshShadows.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EDebrisMeshShadows : uint8 {
     Never,
     High,

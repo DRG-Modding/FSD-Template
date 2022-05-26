@@ -5,17 +5,23 @@
 #include "UObject/NoExportTypes.h"
 #include "GameDLC.generated.h"
 
+class UResourceData;
 class UFileMediaSource;
 class UTexture2D;
-class UWindowWidget;
-class UResourceData;
 class UObject;
+class UWindowWidget;
 
 UCLASS(Blueprintable)
 class UGameDLC : public UDLCBase, public ISaveGameIDInterface {
     GENERATED_BODY()
 public:
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bFakeUnlockedStateInEditor;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bEditorUnlockedState;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SteamID;
     

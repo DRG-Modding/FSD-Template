@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FSDFModulateLayer {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ModulateDistance;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SDFOffset;
     
     FSDENGINE_API FSDFModulateLayer();

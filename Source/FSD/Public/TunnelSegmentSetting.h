@@ -4,8 +4,8 @@
 #include "UObject/NoExportTypes.h"
 #include "TunnelSegmentSetting.generated.h"
 
-class UTerrainMaterial;
 class UFloodFillSettings;
+class UTerrainMaterial;
 
 UCLASS(Blueprintable)
 class UTunnelSegmentSetting : public UDataAsset {

@@ -7,11 +7,11 @@
 #include "DamageData.h"
 #include "GooGunPuddle.generated.h"
 
-class USimpleHealthComponent;
 class USphereComponent;
-class UPrimitiveComponent;
+class USimpleHealthComponent;
 class USoundBase;
 class UStatusEffect;
+class UPrimitiveComponent;
 
 UCLASS(Blueprintable)
 class AGooGunPuddle : public AActor {
@@ -36,7 +36,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_ActiveStatusEffectTriggersMask, meta=(AllowPrivateAccess=true))
     int32 ActiveStatusEffectTriggersMask;
     
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float LifeTime;
     
 public:
@@ -59,7 +59,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnPuddleBeginOverLap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnHit(float Damage, const FDamageData& DamageData, bool anyHealthLost);
     
 public:

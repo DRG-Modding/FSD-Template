@@ -11,7 +11,7 @@ class UTemperatureComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FrozenDamageBonusScale;
     
 public:
@@ -25,7 +25,7 @@ public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void ResetTemperature();
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintPure)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintPure)
     float GetCurrentTemperature() const;
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)

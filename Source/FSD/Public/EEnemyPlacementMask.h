@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEnemyPlacementMask.generated.h"
 
-UENUM()
-enum class EEnemyPlacementMask {
+UENUM(BlueprintType)
+enum class EEnemyPlacementMask : uint8 {
     Ground,
     Spawner,
     Cieling,

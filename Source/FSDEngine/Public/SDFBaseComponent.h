@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SDFBaseProperties.h"
 #include "CSGBuilderBaseSceneComponent.h"
+#include "SDFBaseProperties.h"
 #include "SDFBaseComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

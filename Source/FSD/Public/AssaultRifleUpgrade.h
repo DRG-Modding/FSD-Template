@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UpgradeValues.h"
-#include "EAssaultRifleUpgrade.h"
 #include "StandardItemUpgrade.h"
+#include "EAssaultRifleUpgrade.h"
+#include "UpgradeValues.h"
 #include "AssaultRifleUpgrade.generated.h"
 
 class AItem;

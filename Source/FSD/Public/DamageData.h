@@ -3,8 +3,8 @@
 #include "DamageDataBase.h"
 #include "DamageData.generated.h"
 
-class AController;
 class UDamageClass;
+class AController;
 class AActor;
 
 USTRUCT(BlueprintType)
@@ -20,7 +20,7 @@ public:
     UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<AActor> DamageCauser;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float DamageModifier;
     
     FSD_API FDamageData();

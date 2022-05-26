@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "RandRange.h"
 #include "BehaviorTree/BTDecorator.h"
 #include "GameplayTagContainer.h"
-#include "RandRange.h"
 #include "BTDecorator_TagRandomCooldown.generated.h"
 
 UCLASS(Blueprintable)

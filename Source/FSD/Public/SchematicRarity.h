@@ -7,7 +7,7 @@ UCLASS(Blueprintable)
 class FSD_API USchematicRarity : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Rarity;
     
     USchematicRarity();

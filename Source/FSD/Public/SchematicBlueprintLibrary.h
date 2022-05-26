@@ -3,12 +3,12 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "SchematicBlueprintLibrary.generated.h"
 
-class UObject;
-class UItemSkinSchematicCollection;
 class USchematic;
-class UPlayerCharacterID;
-class USchematicCategory;
 class UItemUpgrade;
+class USchematicCategory;
+class UObject;
+class UPlayerCharacterID;
+class UItemSkinSchematicCollection;
 
 UCLASS(Blueprintable)
 class USchematicBlueprintLibrary : public UBlueprintFunctionLibrary {

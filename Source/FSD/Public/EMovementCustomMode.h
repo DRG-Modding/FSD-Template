@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMovementCustomMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum EMovementCustomMode {
     MOVE_Custom_None,
     MOVE_Custom_Track,

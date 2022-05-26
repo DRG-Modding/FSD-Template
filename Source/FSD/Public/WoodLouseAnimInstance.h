@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EWoodLouseState.h"
 #include "SpiderAnimInstance.h"
 #include "UObject/NoExportTypes.h"
+#include "EWoodLouseState.h"
 #include "WoodLouseAnimInstance.generated.h"
 
 UCLASS(Blueprintable, NonTransient)
@@ -13,10 +13,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FVector2D AngleToTarget;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float InterpSpeed;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BreakRollingWhenTimeLeft;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

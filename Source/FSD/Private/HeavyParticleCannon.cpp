@@ -1,9 +1,9 @@
 #include "HeavyParticleCannon.h"
 #include "Net/UnrealNetwork.h"
 #include "FirstPersonNiagaraComponent.h"
-#include "StickyFlameSpawner.h"
 #include "DamageComponent.h"
 #include "ReflectionHitscanComponent.h"
+#include "StickyFlameSpawner.h"
 #include "NiagaraComponent.h"
 
 class AActor;
@@ -21,6 +21,7 @@ void AHeavyParticleCannon::ServerSetBoostActive_Implementation(bool newActive) {
 void AHeavyParticleCannon::Server_SetBeamActive_Implementation(bool inIsBeamActive) {
 }
 
+
 void AHeavyParticleCannon::OnTargetKilled(AActor* Target, UFSDPhysicalMaterial* PhysMat, bool wasDirectHit) {
 }
 
@@ -29,7 +30,6 @@ void AHeavyParticleCannon::OnRep_BoostActive() {
 
 void AHeavyParticleCannon::OnRep_bIsBeamActive() {
 }
-
 
 
 void AHeavyParticleCannon::ChargeUpComplete() {

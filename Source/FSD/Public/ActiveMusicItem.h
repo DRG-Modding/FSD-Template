@@ -3,8 +3,8 @@
 #include "MusicHandle.h"
 #include "ActiveMusicItem.generated.h"
 
-class USoundBase;
 class UMusicCategory;
+class USoundBase;
 
 USTRUCT(BlueprintType)
 struct FActiveMusicItem {
@@ -13,10 +13,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     USoundBase* Sound;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float StartingTime;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float FadeDuration;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

@@ -3,11 +3,11 @@
 #include "Templates/SubclassOf.h"
 
 class AProceduralSetup;
-class APawn;
+class AActor;
 class UEncounterManager;
 class UDebrisPositioning;
 class ATetherStation;
-class AActor;
+class APawn;
 class UCappedResource;
 class ARessuplyPod;
 

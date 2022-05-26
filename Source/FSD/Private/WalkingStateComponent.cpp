@@ -1,7 +1,7 @@
 #include "WalkingStateComponent.h"
 
-class APlayerCharacter;
 class UTrackBuilderMovement;
+class APlayerCharacter;
 
 void UWalkingStateComponent::TrackGrindCallback(APlayerCharacter* User, EInputKeys Key) {
 }

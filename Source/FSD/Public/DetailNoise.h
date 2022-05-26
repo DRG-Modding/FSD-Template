@@ -7,7 +7,7 @@ UCLASS(Blueprintable)
 class UDetailNoise : public UFloodFillSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float NoiseRange;
     
     UDetailNoise();

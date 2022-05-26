@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EPiplelineConnectorAnimationState.generated.h"
 
-UENUM()
-enum class EPiplelineConnectorAnimationState {
+UENUM(BlueprintType)
+enum class EPiplelineConnectorAnimationState : uint8 {
     Unassembled,
     Assembling,
     Assembled,

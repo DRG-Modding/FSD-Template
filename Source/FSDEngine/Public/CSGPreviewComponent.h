@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/SceneComponent.h"
 #include "ChunkId.h"
+#include "Components/SceneComponent.h"
 #include "CSGPreviewComponent.generated.h"
 
-class UBakeConfig;
 class ACSGBuilderBase;
 class UDeepProceduralMeshComponent;
+class UBakeConfig;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSDENGINE_API UCSGPreviewComponent : public USceneComponent {

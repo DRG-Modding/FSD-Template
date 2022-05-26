@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETerminatorTentacleState.h"
-#include "DelegateDelegate.h"
 #include "AttackingPointInterface.h"
+#include "ETerminatorTentacleState.h"
 #include "TentacleBase.h"
+#include "DelegateDelegate.h"
 #include "TriggerAI.h"
 #include "TerminatorTarget.h"
 #include "TerminatorTentacle.generated.h"
 
-class UAnimSequenceBase;
 class UAnimMontage;
+class UAnimSequenceBase;
 class USkeletalMeshComponent;
 class UGrabberComponent;
 class AActor;
@@ -26,13 +26,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimSequenceBase* FlairAnimation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinFlairAnimCooldown;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxFlairAnimationCooldown;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SwaySpeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -58,7 +58,7 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void PlayHitReaction(float Amount);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

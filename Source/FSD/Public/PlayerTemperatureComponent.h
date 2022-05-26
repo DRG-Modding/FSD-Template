@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "TemperatureComponent.h"
-#include "PlayerTemperatureStateChangedSignatureDelegate.h"
 #include "PlayerTemperatureChangedSignatureDelegate.h"
-#include "PlayerTemperatureChangeRateSignatureDelegate.h"
 #include "PlayerDefrostingSignatureDelegate.h"
-#include "EPlayerTemperatureState.h"
+#include "PlayerTemperatureStateChangedSignatureDelegate.h"
 #include "PlayerTemperatureShowBarDelegate.h"
+#include "PlayerTemperatureChangeRateSignatureDelegate.h"
+#include "EPlayerTemperatureState.h"
 #include "PlayerTemperatureComponent.generated.h"
 
 class APlayerCharacter;
@@ -34,43 +34,43 @@ public:
     FPlayerTemperatureShowBar OnBarVisibilityChanged;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinimumTemperature;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaximumTemperature;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DefrostTemperature;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BurnTemperature;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DouseFireTemperature;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TemperaturRegainSpeed;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DefrostingRequired;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UStatusEffect> OnDefrostedStatusEffect;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float NormalTemperature;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_CurrentTemperature)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_CurrentTemperature, meta=(AllowPrivateAccess=true))
     float CurrentTemperature;
     
-    UPROPERTY(EditAnywhere, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     float TargetTemperature;
     
     UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_TemperatureChangeSpeed)
     int8 TemperatureChangeSpeed;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_DefrostProgress)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_DefrostProgress, meta=(AllowPrivateAccess=true))
     float DefrostProgress;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -102,7 +102,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_DefrostProgress();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRep_CurrentTemperature(float OldTemperature);
     
     UFUNCTION(BlueprintCallable)
@@ -112,10 +112,10 @@ protected:
     int32 GetTemperatureChangedSpeed() const;
     
 public:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetDefrostProgress() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetCurrentTemperatureNormalized() const;
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)

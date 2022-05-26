@@ -13,7 +13,7 @@ public:
     TArray<UResourceData*> Resources;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Modifier;
     
 public:

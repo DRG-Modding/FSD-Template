@@ -14,7 +14,7 @@ protected:
     UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_ConnectedSegment)
     TWeakObjectPtr<APipelineSegment> ConnectedSegment;
     
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float TargetRotation;
     
 public:

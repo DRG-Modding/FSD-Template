@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RandRange.h"
 #include "CharacterStateComponent.h"
+#include "RandRange.h"
 #include "FrozenStateComponent.generated.h"
 
 class UFSDPhysicalMaterial;
@@ -24,7 +24,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFSDPhysicalMaterial* DwarfFleshMaterial;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SlowAnimationSpeed;
     
 public:

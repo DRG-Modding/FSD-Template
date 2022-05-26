@@ -2,73 +2,74 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UObject/Object.h"
+#include "GDPlayerAndCharacterProgression.h"
 #include "GVisibilityGroups.h"
-#include "GDMilestones.h"
-#include "GDCharacterRetirement.h"
-#include "GDAudio.h"
-#include "GDItemCategoryIDs.h"
-#include "GDMissionStats.h"
+#include "GDDamageClasses.h"
 #include "GDGameStatsTracking.h"
 #include "GDTerrainTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "GDMissionStats.h"
+#include "GDMilestones.h"
 #include "GDResources.h"
+#include "GDPerks.h"
+#include "GDItemCategoryIDs.h"
 #include "GDStats.h"
+#include "GDAudio.h"
+#include "GDDifficulty.h"
+#include "GDCharacterRetirement.h"
 #include "GameplayTagContainer.h"
 #include "RetirementCostItem.h"
-#include "UObject/NoExportTypes.h"
-#include "GDDifficulty.h"
-#include "GDDamageClasses.h"
-#include "GDPerks.h"
-#include "GDPlayerAndCharacterProgression.h"
 #include "GameData.generated.h"
 
 class UGameActivitySettings;
-class UDanceSettings;
-class UPromotionRewardsSettings;
+class UVanitySettings;
 class UFSDEventCollection;
-class UItemSettings;
-class UGameAnimationSettings;
-class UEnemySettings;
-class UInventoryList;
+class UShowroomSettings;
+class USchematicSettings;
 class UDeepDiveSettings;
-class UFSDTagSettings;
-class APlayerCharacter;
+class UPromotionRewardsSettings;
+class UGameAnimationSettings;
+class UDanceSettings;
+class UAchievementList;
+class UEnemySettings;
+class UDynamicIconSettings;
 class UDamageSettings;
 class UPlanetZoneSetup;
 class UTreasureSettings;
 class UDrinkSettings;
-class UCharacterSettings;
+class UProceduralSettings;
 class UUpgradeSettings;
-class UHUDVisibilityGroup;
 class USpawnSettings;
-class UVanitySettings;
 class UKeyBindingSettings;
-class UMinersManual;
 class UEncounterSettings;
-class USeasonSettings;
+class UVictoryPoseSettings;
 class UForginSettings;
-class USchematicSettings;
 class UItemSkinSettings;
 class USpecialEventSettings;
-class UTexture2D;
-class UProceduralSettings;
-class UPickaxeSettings;
-class UDynamicIconSettings;
-class UShowroomSettings;
-class UVictoryPoseSettings;
 class UFSDTutorialSettings;
+class UPickaxeSettings;
+class UFSDTagSettings;
+class UInventoryList;
+class USeasonSettings;
+class UCommunityGoalSettings;
+class UItemSettings;
 class ULegacySettings;
+class UStatusEffectSettings;
+class USaveGameSettings;
 class UEffectSettings;
 class UAfflictionSettings;
-class UCommunityGoalSettings;
 class UDailyDealSettings;
-class UStatusEffectSettings;
-class UAchievementList;
+class APlayerCharacter;
 class USubsystem;
+class UTexture2D;
+class UMinersManual;
+class UDifficultySetting;
+class UCharacterSettings;
 class UGlobalMissionSetup;
 class UPlayerCharacterID;
 class UAsyncManager;
-class UDifficultySetting;
 class UPerkAsset;
+class UHUDVisibilityGroup;
 class UMissionStat;
 
 UCLASS(Blueprintable)
@@ -177,6 +178,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDailyDealSettings* DailyDealSettings;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    USaveGameSettings* SaveGameSettings;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGDMissionStats MissionStats;

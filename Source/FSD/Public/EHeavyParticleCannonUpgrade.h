@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHeavyParticleCannonUpgrade.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EHeavyParticleCannonUpgrade : uint8 {
     ReloadOnButtonRelease,
     BoosterModule,

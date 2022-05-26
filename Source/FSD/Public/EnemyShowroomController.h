@@ -5,8 +5,8 @@
 
 class AEnemyShowroomItem;
 class UAnimSequenceBase;
-class UEnemyShowroomController;
 class UObject;
+class UEnemyShowroomController;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UEnemyShowroomController : public UShowroomController {

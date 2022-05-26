@@ -3,8 +3,8 @@
 #include "Components/SphereComponent.h"
 
 class APlayerCharacter;
-class UHealthComponentBase;
 class USceneComponent;
+class UHealthComponentBase;
 
 void ACrossbowProjectileStuck::OnUsedBy(APlayerCharacter* Player, EInputKeys Key) {
 }
@@ -39,5 +39,6 @@ ACrossbowProjectileStuck::ACrossbowProjectileStuck() {
     this->AppliedEffect = NULL;
     this->StatusEffectTime = 0.00f;
     this->AttachmentRoot = CreateDefaultSubobject<USphereComponent>(TEXT("Root"));
+    this->LaserCollider = NULL;
 }
 

@@ -6,8 +6,8 @@
 #include "StatusEffectMissionBP.generated.h"
 
 class UEnemyDescriptor;
-class UStatusEffect;
 class APawn;
+class UStatusEffect;
 
 UCLASS(Blueprintable)
 class UStatusEffectMissionBP : public URunningMissionBP {

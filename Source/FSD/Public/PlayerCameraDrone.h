@@ -6,11 +6,11 @@
 #include "Engine/EngineTypes.h"
 #include "PlayerCameraDrone.generated.h"
 
-class UPrimitiveComponent;
+class UCameraComponent;
+class AActor;
 class UPawnMovementComponent;
 class UAnimationAsset;
-class AActor;
-class UCameraComponent;
+class UPrimitiveComponent;
 
 UCLASS(Abstract, Blueprintable)
 class APlayerCameraDrone : public APawn {
@@ -26,13 +26,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool SplineMeshIsVisible;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SplineSpeed;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MouseSensitivity;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CameraRoll;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

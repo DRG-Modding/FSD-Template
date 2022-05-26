@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPauseReason.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPauseReason : uint8 {
     Invalid,
     MenuActive,

@@ -50,5 +50,7 @@ void UInventoryBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
 }
 
 UInventoryBase::UInventoryBase() {
+    this->LastEquippedActors[0] = NULL;
+    this->LastEquippedActors[1] = NULL;
 }
 

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESonyControllerLightMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ESonyControllerLightMode : uint8 {
     Disabled,
     Simple,

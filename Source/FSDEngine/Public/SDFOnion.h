@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SDFBase.h"
 #include "SDFOnionProperties.h"
+#include "SDFBase.h"
 #include "SDFOnion.generated.h"
 
 UCLASS(Blueprintable)

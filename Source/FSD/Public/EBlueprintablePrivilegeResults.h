@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBlueprintablePrivilegeResults.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EBlueprintablePrivilegeResults : uint8 {
     NoFailures,
     RequiredPatchAvailable,

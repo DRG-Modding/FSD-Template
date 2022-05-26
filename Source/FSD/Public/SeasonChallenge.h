@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "SavableDataAsset.h"
-#include "ChallengeVariation.h"
-#include "UObject/NoExportTypes.h"
 #include "TrackedStatInfo.h"
+#include "SavableDataAsset.h"
+#include "UObject/NoExportTypes.h"
+#include "ChallengeVariation.h"
 #include "SeasonChallenge.generated.h"
 
 class UTexture2D;
@@ -36,7 +36,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NumberOfChoices;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ChallengeWeight;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

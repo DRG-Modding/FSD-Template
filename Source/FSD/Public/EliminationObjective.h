@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Objective.h"
 #include "EliminationDescriptors.h"
 #include "EliminationTarget.h"
-#include "Objective.h"
 #include "EliminationObjective.generated.h"
 
 class UDebrisPositioning;
-class AFSDPawn;
-class AActor;
 class UCaveInfluencer;
+class AActor;
 class UDebrisBase;
+class AFSDPawn;
 class UHealthComponentBase;
 class UEnemyDescriptor;
 
@@ -33,7 +33,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCaveInfluencer* CaveInfluencer;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DebrisRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

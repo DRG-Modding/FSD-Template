@@ -1,7 +1,7 @@
 #include "AFlyingBug.h"
 #include "Net/UnrealNetwork.h"
-#include "PawnStatsComponent.h"
 #include "EnemyComponent.h"
+#include "PawnStatsComponent.h"
 #include "OutlineComponent.h"
 #include "Perception/PawnSensingComponent.h"
 #include "PawnAlertComponent.h"

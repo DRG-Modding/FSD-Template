@@ -10,10 +10,10 @@
 #include "EscortObjective.generated.h"
 
 class UCurveFloat;
-class UDebrisPositioning;
-class AEscortDestination;
 class UDebrisBase;
+class UDebrisPositioning;
 class AActor;
+class AEscortDestination;
 class UCarvedResourceData;
 class UResourceData;
 class AEscortMule;
@@ -56,7 +56,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* CostDistanceCurve;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DebrisRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
@@ -86,7 +86,7 @@ protected:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCannisterRegistered OnCannisterRegistered;
     
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float ServerShellProgress;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -148,7 +148,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void RecordFailStage(bool muleDied);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnResourceChanged(UCappedResource* CappedResource, float Amount);
     
     UFUNCTION(BlueprintCallable)
@@ -169,7 +169,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnMuleDied(UHealthComponentBase* HealthComponent);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnHealthChanged(float Health);
     
     UFUNCTION(BlueprintCallable)
@@ -178,7 +178,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnEscortMuleSpawnedEvent();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetShellBreakProgress();
     
 public:

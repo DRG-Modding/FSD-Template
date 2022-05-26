@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "RejoinFloat.h"
 #include "Components/ActorComponent.h"
 #include "UObject/NoExportTypes.h"
-#include "RejoinFloat.h"
 #include "RejoinInt.h"
 #include "PlayerRejoinState.generated.h"
 
@@ -18,7 +18,7 @@ protected:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void Server_AddIntValue_Internal(const FGuid& ItemKey, const FName& ValueKey, int32 Value);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void Server_AddFloatValue_Internal(const FGuid& ItemKey, const FName& ValueKey, float Value);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)

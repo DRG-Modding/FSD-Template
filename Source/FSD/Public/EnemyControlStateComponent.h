@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "CharacterStateComponent.h"
-#include "ControlEnemyState.h"
 #include "EEnemyControlState.h"
+#include "ControlEnemyState.h"
 #include "UObject/NoExportTypes.h"
 #include "EnemyControlStateComponent.generated.h"
 
-class UAIPlayerControlComponent;
 class UAnimMontage;
+class UAIPlayerControlComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UEnemyControlStateComponent : public UCharacterStateComponent {

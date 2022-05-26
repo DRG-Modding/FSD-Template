@@ -8,10 +8,10 @@ class ACoilGunTrailSegment : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_EffectsLife)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_EffectsLife, meta=(AllowPrivateAccess=true))
     float EffectsLife;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DeactivationTime;
     
 public:

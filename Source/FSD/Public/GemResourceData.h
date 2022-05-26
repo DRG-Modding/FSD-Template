@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ResourceData.h"
 #include "IRandRange.h"
+#include "ResourceData.h"
 #include "GemResourceData.generated.h"
 
-class AFSDGameState;
-class UDebrisPositioning;
 class UGemResourceCreator;
+class UDebrisPositioning;
+class AFSDGameState;
 class UDebrisBase;
 class AGem;
 
@@ -28,7 +28,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UGemResourceCreator* ResourceCreator;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float InfluencerRange;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

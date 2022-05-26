@@ -6,9 +6,9 @@
 #include "ETrackBuildPlacementState.h"
 #include "TrackBuilderSegment.generated.h"
 
-class AItem;
 class UTrackBuilderUsable;
 class APlayerCharacter;
+class AItem;
 class UTrackBuilderConnectPoint;
 class ATrackBuilderSegment;
 

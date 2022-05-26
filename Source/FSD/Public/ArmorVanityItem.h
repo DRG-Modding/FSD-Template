@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VanityItem.h"
 #include "TattooArmorItem.h"
+#include "VanityItem.h"
 #include "ArmorVanityItem.generated.h"
 
-class UArmorMaterialVanityItem;
 class USkeletalMesh;
-class AFSDPlayerState;
 class UAnimInstance;
 class UMaterialInterface;
+class UArmorMaterialVanityItem;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UArmorVanityItem : public UVanityItem {
@@ -30,7 +30,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool CropBeard;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ArmorThickness;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

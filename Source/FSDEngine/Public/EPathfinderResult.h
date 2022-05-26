@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EPathfinderResult.generated.h"
 
-UENUM()
-enum class EPathfinderResult {
+UENUM(BlueprintType)
+enum class EPathfinderResult : uint8 {
     Success,
     Failed_StartingPointNotFound,
     Failed_EndPointNotFound,

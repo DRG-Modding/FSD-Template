@@ -6,12 +6,12 @@
 #include "UObject/NoExportTypes.h"
 #include "TerrainMaterial.generated.h"
 
-class USoundCue;
-class UDialogDataAsset;
 class UResourceData;
-class UMaterialInstance;
-class UTerrainType;
 class UFXSystemAsset;
+class UDialogDataAsset;
+class UTerrainType;
+class UMaterialInstance;
+class USoundCue;
 class UFXSystemComponent;
 class UObject;
 
@@ -49,7 +49,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool CanHaveDecals;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PickAxeDigSize;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

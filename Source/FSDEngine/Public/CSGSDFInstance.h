@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "CSGBase.h"
-#include "CSGSDFInstanceProperties.h"
-#include "UObject/NoExportTypes.h"
-#include "BinaryTerrainMaterialCombiner.h"
 #include "DeepCSGFloatTree.h"
+#include "CSGBase.h"
+#include "UObject/NoExportTypes.h"
+#include "CSGSDFInstanceProperties.h"
+#include "BinaryTerrainMaterialCombiner.h"
+#include "UObject/NoExportTypes.h"
 #include "CSGSDFInstance.generated.h"
 
 class USDFBase;

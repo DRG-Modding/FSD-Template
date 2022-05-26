@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EInviteBlockReason.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EInviteBlockReason : uint8 {
     SoloSession,
     ActiveDeepDive,

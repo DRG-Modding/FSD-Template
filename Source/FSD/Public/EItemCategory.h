@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EItemCategory.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EItemCategory : uint8 {
     PrimaryWeapon,
     SecondaryWeapon,

@@ -1,33 +1,33 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UpgradableGear.h"
 #include "AnimatedItem.h"
-#include "WeaponFireOwner.h"
-#include "AmmoDrivenGenericEventDelegate.h"
-#include "Upgradable.h"
 #include "RejoinListener.h"
-#include "DelegateDelegate.h"
-#include "Curves/CurveFloat.h"
-#include "AmountChangedSignatureDelegate.h"
-#include "TracerData.h"
-#include "ItemAnimationItem.h"
-#include "EAmmoWeaponState.h"
-#include "RecoilSettings.h"
+#include "Upgradable.h"
+#include "WeaponFireOwner.h"
 #include "UObject/NoExportTypes.h"
+#include "UpgradableGear.h"
+#include "AmountChangedSignatureDelegate.h"
+#include "AmmoDrivenGenericEventDelegate.h"
+#include "DelegateDelegate.h"
+#include "ItemAnimationItem.h"
+#include "TracerData.h"
+#include "Curves/CurveFloat.h"
+#include "RecoilSettings.h"
+#include "EAmmoWeaponState.h"
 #include "UObject/NoExportTypes.h"
 #include "AmmoDrivenWeapon.generated.h"
 
-class UAudioComponent;
 class UWeaponFireComponent;
 class UAmmoDriveWeaponAggregator;
 class UAnimMontage;
-class UItemUpgrade;
 class UFXSystemAsset;
 class UParticleSystem;
 class ULightComponent;
 class USoundCue;
 class UForceFeedbackEffect;
+class UAudioComponent;
 class UDialogDataAsset;
+class UItemUpgrade;
 class APlayerCharacter;
 
 UCLASS(Abstract, Blueprintable)
@@ -59,7 +59,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool LoopFireAnimation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LoopFireAnimationBlendoutTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -110,13 +110,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* TrailParticles;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinTracerDistance;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TracerSpeed;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TracerOffset;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -140,7 +140,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFXSystemAsset* RicochetParticle;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FireSoundDelayToTail;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -155,7 +155,7 @@ protected:
     UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<UAudioComponent> FireSoundInstance;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FireSoundFadeDuration;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -191,16 +191,16 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ShotCost;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RateOfFire;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 BurstCount;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BurstCycleTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ReloadDuration;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -209,7 +209,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     int32 ClipCount;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float AutoReloadDuration;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -218,13 +218,13 @@ protected:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAmmoDrivenGenericEvent OnItemAutoReloaded;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SupplyStatusWeight;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float CycleTimeLeft;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float ReloadTimeLeft;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -253,7 +253,7 @@ public:
     void Upgraded_Blueprint_Implementation(const TArray<UItemUpgrade*>& upgrades);
     
 protected:
-    UFUNCTION(Reliable, Server)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_StopReload(float BlendOutTime);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
@@ -307,10 +307,10 @@ public:
     void CustomEvent1(const UItemUpgrade* Event);
     
 protected:
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_RefillAmmo(float percentage);
     
-    UFUNCTION(NetMulticast, Unreliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_StopReload(float BlendOutTime);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)

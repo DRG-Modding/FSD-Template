@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ETetherConnectionMode.h"
 #include "Components/ActorComponent.h"
 #include "TetherPowerChanged_DelegateDelegate.h"
-#include "TetherConnectionChanged_DeletageDelegate.h"
-#include "UObject/NoExportTypes.h"
-#include "TeherMessage_DelegateDelegate.h"
 #include "TetherRangeChangedDelegate.h"
-#include "ETetherConnectionMode.h"
+#include "TetherConnectionChanged_DeletageDelegate.h"
+#include "TeherMessage_DelegateDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "ETetherMessageDirection.h"
 #include "TetherMessageSettings.h"
 #include "TetherComponent.generated.h"
 
-class UMeshComponent;
 class UTetherComponent;
+class UMeshComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UTetherComponent : public UActorComponent {
@@ -49,7 +49,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, ReplicatedUsing=OnRep_BackConnection, meta=(AllowPrivateAccess=true))
     UTetherComponent* backConnection;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ConnectionDistance;
     
     UPROPERTY(EditAnywhere)
@@ -132,7 +132,7 @@ public:
     UFUNCTION(BlueprintCallable)
     UTetherComponent* GetForwardConnection();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetConnectionRange() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

@@ -6,11 +6,11 @@
 #include "Components/TimelineComponent.h"
 #include "ZipLineProjectile.generated.h"
 
-class UTimelineComponent;
-class UStatusEffect;
-class UCurveFloat;
-class UMaterialInstanceDynamic;
 class UPointLightComponent;
+class UTimelineComponent;
+class UMaterialInstanceDynamic;
+class UCurveFloat;
+class UStatusEffect;
 
 UCLASS(Abstract, Blueprintable)
 class AZipLineProjectile : public AActor {
@@ -20,10 +20,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTimelineComponent* Timeline;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LightIntensity;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaterialGlow;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -47,7 +47,7 @@ protected:
 public:
     AZipLineProjectile();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnTimelineTick(float NewValue);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

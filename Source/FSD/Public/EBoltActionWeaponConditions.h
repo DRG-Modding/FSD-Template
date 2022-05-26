@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBoltActionWeaponConditions.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EBoltActionWeaponConditions : uint8 {
     WasAimedShot,
     WasNormalShot,

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SmartTerrainMaterialVal.h"
 #include "DeepCSGFloatTreePacked.h"
 #include "UObject/NoExportTypes.h"
+#include "SmartTerrainMaterialVal.h"
 #include "BakeEntry.generated.h"
 
 class UTerrainMaterialCore;

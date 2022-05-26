@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EAutoCannonUpgrades.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EAutoCannonUpgrades : uint8 {
     FireTimeIncreaseScaleMultiplier,
     DamageBonusAtFullROF,

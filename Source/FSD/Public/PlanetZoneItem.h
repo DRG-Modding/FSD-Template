@@ -3,8 +3,8 @@
 #include "PlanetZoneItem.generated.h"
 
 class UBiome;
-class UPlanetZone;
 class UGeneratedMission;
+class UPlanetZone;
 
 USTRUCT(BlueprintType)
 struct FPlanetZoneItem {

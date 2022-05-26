@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EServerSortOrder.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EServerSortOrder : uint8 {
     Mission,
     Players,

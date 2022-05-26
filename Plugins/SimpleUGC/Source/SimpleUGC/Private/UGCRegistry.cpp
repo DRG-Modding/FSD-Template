@@ -1,8 +1,6 @@
 #include "UGCRegistry.h"
-#include "Templates/SubclassOf.h"
 
 class UUGCPackage;
-class AActor;
 
 void UUGCRegistry::UnmountUGCPackages(TArray<FString> ExcludingModIds) {
 }
@@ -22,9 +20,6 @@ UUGCPackage* UUGCRegistry::TryGetPackageFromId(const FString& ModId) {
 }
 
 void UUGCRegistry::ResetUGCPackagesManipulatedDuringJoin() {
-}
-
-void UUGCRegistry::RegisterOverrideForClass(TSubclassOf<AActor> ClassToOverride, TSubclassOf<AActor> OverrideClass) {
 }
 
 void UUGCRegistry::RegisterAssetFromPackage(UUGCPackage* Package) {
@@ -66,10 +61,6 @@ TArray<UUGCPackage*> UUGCRegistry::GetPackagesSorted(EPackageSortField ByField, 
     return TArray<UUGCPackage*>();
 }
 
-TSubclassOf<AActor> UUGCRegistry::GetOverrideForActorClass(TSubclassOf<AActor> ActorClass) {
-    return NULL;
-}
-
 bool UUGCRegistry::GetMapsInPackage(UUGCPackage* Package, TArray<FName>& Maps) {
     return false;
 }
@@ -78,26 +69,11 @@ bool UUGCRegistry::GetAllClassesInPackage(UUGCPackage* Package, TArray<UClass*>&
     return false;
 }
 
-bool UUGCRegistry::GetActorClassesWithReplacementActorComponentsInPackage(UUGCPackage* Package, TArray<TSubclassOf<AActor>>& ActorClasses) {
-    return false;
-}
-
-void UUGCRegistry::ClearOverrideForClass(TSubclassOf<AActor> ActorClass) {
-}
-
 bool UUGCRegistry::AreModsInstalled(EUGCApprovalStatus ApprovalStatus) {
     return false;
 }
 
 bool UUGCRegistry::AreDeprecatedModsInstalled() {
-    return false;
-}
-
-bool UUGCRegistry::ApplyOverridesForActorClass(TSubclassOf<AActor> ActorClass) {
-    return false;
-}
-
-bool UUGCRegistry::ApplyAllOverridesInPackage(UUGCPackage* Package) {
     return false;
 }
 

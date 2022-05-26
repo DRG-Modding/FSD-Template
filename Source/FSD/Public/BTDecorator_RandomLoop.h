@@ -7,7 +7,7 @@ UCLASS(Blueprintable)
 class UBTDecorator_RandomLoop : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Chance;
     
     UBTDecorator_RandomLoop();

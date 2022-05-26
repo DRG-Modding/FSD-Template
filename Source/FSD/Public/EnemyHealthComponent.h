@@ -16,10 +16,10 @@ public:
     EEnemyHealthScaling EnemyHealthScaling;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Courage;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxHealth;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -39,7 +39,7 @@ protected:
     
 public:
     UEnemyHealthComponent();
-    /*UFUNCTION(BlueprintPure)*/
+    /*UFUNCTION(BlueprintCallable, BlueprintPure)*/
     float GetMaxHealth() const;
     
 };

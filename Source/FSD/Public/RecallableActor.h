@@ -2,10 +2,10 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "DeepPathfinderCharacter.h"
-#include "UObject/NoExportTypes.h"
-#include "ERecallableActorState.h"
 #include "Upgradable.h"
+#include "ERecallableActorState.h"
 #include "ReturnedSignatureDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "RecallableActor.generated.h"
@@ -29,13 +29,13 @@ public:
     FReturnedSignature OnRelocateFinished;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AcceptanceRadius;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AutoRecallDistance;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RelocateLandingHeight;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

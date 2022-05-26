@@ -4,10 +4,10 @@
 #include "ResourceData.h"
 #include "CollectableResourceData.generated.h"
 
+class AActor;
 class UCollectableResourceCreator;
 class UDebrisPositioning;
 class UDebrisBase;
-class AActor;
 
 UCLASS(Blueprintable)
 class UCollectableResourceData : public UResourceData {
@@ -20,10 +20,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDebrisPositioning* Positioning;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Rarity;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float InfluenceRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

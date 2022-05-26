@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "HightAccelerationSignatureDelegate.h"
 #include "ImpactedSignatureDelegate.h"
+#include "HightAccelerationSignatureDelegate.h"
 #include "ImpactComponent.generated.h"
 
 class USceneComponent;
@@ -27,10 +27,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool TrackVelocity;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TriggerHighAccelAt;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TriggerAtVelocityDifference;
     
 public:

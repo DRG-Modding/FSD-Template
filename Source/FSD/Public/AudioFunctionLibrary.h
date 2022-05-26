@@ -18,7 +18,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void PushTimedSoundMix(UObject* contextObject, USoundMix* mix, float Duration);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetSoundClassVolume(USoundClass* SoundClass);
     
 };

@@ -46,10 +46,10 @@ public:
     bool WriteToPlainText(const FString& Filename, const FString& TextContent, FText& OutError, bool Append);
     
     UFUNCTION(BlueprintCallable)
-    void SetIconIndexOfSlot(int32 slotNumber, int32 iconIndex);
+    void SetIconIndexOfSlot(int32 SlotNumber, int32 iconIndex);
     
     UFUNCTION(BlueprintCallable)
-    void SaveToSlot(int32 slotNumber);
+    void SaveToSlot(int32 SlotNumber);
     
     UFUNCTION(BlueprintCallable)
     void SaveToSelectedSlot();
@@ -61,19 +61,22 @@ public:
     bool ReadFromPlainText(const FString& Filename, FString& OutTextContent);
     
     UFUNCTION(BlueprintCallable)
-    bool LoadSlot(int32 slotNumber);
+    bool LoadSlot(int32 SlotNumber);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    TArray<FString> GetModNamesOfSlot(int32 slotNumber, int32& outNumberOfUnknown);
+    TArray<FString> GetModNamesOfSlot(int32 SlotNumber, int32& outNumberOfUnknown);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    TArray<FString> GetModIdsOfSlot(int32 slotNumber);
+    TArray<FString> GetModIdsOfSlot(int32 SlotNumber);
     
     UFUNCTION(BlueprintCallable)
-    int32 GetIconIndexOfSlot(int32 slotNumber);
+    int32 GetIconIndexOfSlot(int32 SlotNumber);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    bool DoesSlotContainMods(int32 slotNumber);
+    bool DoesSlotContainMods(int32 SlotNumber);
+    
+    UFUNCTION(BlueprintCallable)
+    void ClearSlot(int32 SlotNumber);
     
     UFUNCTION(BlueprintCallable)
     void CleanupSlots();

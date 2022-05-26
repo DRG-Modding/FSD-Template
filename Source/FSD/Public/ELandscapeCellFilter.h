@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ELandscapeCellFilter.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ELandscapeCellFilter : uint8 {
     Any,
     Empty,

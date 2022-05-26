@@ -53,7 +53,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsFrozen() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetTemperatureEffect() const;
     
 };

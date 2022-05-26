@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EOffsetFrom.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EOffsetFrom : uint8 {
     None,
     Floor,

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHeadVanityType.h"
-#include "VanityItem.h"
 #include "ECharacterHeadMesh.h"
+#include "VanityItem.h"
+#include "EHeadVanityType.h"
 #include "HeadVanityItem.generated.h"
 
 class USkeletalMesh;

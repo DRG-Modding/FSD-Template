@@ -1,137 +1,136 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "OnPerkActivationTimerFinishedDelegate.h"
-#include "UpdateMeshesSignatureDelegate.h"
+#include "PlayerCharacterEventDelegate.h"
 #include "GameFramework/Character.h"
-#include "RejectInviteSignatureDelegate.h"
-#include "Targetable.h"
+#include "ToggleMapToolSignatureDelegate.h"
 #include "GameplayTagAssetInterface.h"
-#include "OnJumpReleasedSignatureDelegate.h"
-#include "ActionHoldEventDelegate.h"
+#include "Targetable.h"
 #include "RejoinListener.h"
-#include "AcceptInviteSignatureDelegate.h"
 #include "PlaySoundInterface.h"
-#include "Engine/NetSerialization.h"
-#include "PlatformComponent.h"
-#include "GameplayTagContainer.h"
+#include "SaluteEventDelegate.h"
+#include "CollectedDrinkDelegateDelegate.h"
+#include "UObject/NoExportTypes.h"
+#include "CollectedVanityItemDeledateDelegate.h"
+#include "DamagedEnemyEventDelegate.h"
 #include "BoolDelegateDelegate.h"
 #include "DelegateDelegate.h"
+#include "ThrowCarriableDelegateDelegate.h"
+#include "UpdateMeshesSignatureDelegate.h"
+#include "OnPerkActivationTimerFinishedDelegate.h"
 #include "CollectedEverythingEventDelegate.h"
 #include "SchematicEventDelegate.h"
 #include "SkinEventDelegate.h"
-#include "CollectedDrinkDelegateDelegate.h"
 #include "CollectedVictoryPoseEventDelegate.h"
 #include "CollectedPickaxePartDelegateDelegate.h"
-#include "CollectedVanityItemDeledateDelegate.h"
 #include "CameraModeChangedDelegate.h"
-#include "DownCameraTargetChangedDelegate.h"
-#include "SaluteEventDelegate.h"
-#include "ThrowCarriableDelegateDelegate.h"
-#include "OnJumpPressedSignatureDelegate.h"
-#include "DamagedEnemyEventDelegate.h"
-#include "OnMinePressedSignatureDelegate.h"
 #include "OnLaserPointerPressedSignatureDelegate.h"
+#include "DownCameraTargetChangedDelegate.h"
+#include "ActionHoldEventDelegate.h"
+#include "OnJumpPressedSignatureDelegate.h"
+#include "OnJumpReleasedSignatureDelegate.h"
+#include "LaserPointerSecondaryDelegate.h"
+#include "OnMinePressedSignatureDelegate.h"
 #include "OnFlareThrownDelegate.h"
 #include "CoolDownProgressDelegateDelegate.h"
 #include "OpenChatSignatureDelegate.h"
+#include "AcceptInviteSignatureDelegate.h"
+#include "RejectInviteSignatureDelegate.h"
 #include "IgnoreInviteSignatureDelegate.h"
-#include "UObject/NoExportTypes.h"
-#include "HoldButton.h"
-#include "ToggleMapToolSignatureDelegate.h"
 #include "DepthSignatureDelegate.h"
 #include "OnCharacterStateChangedSignatureDelegate.h"
-#include "OnCharacterDeathChangeSignatureDelegate.h"
 #include "CharacterDelegateDelegate.h"
+#include "OnCharacterDeathChangeSignatureDelegate.h"
 #include "LaserPointerEventDelegate.h"
-#include "LaserPointerSecondaryDelegate.h"
 #include "OnPlayerShoutEventDelegate.h"
 #include "ReviveCallEventDelegate.h"
-#include "UObject/NoExportTypes.h"
-#include "PlayerCharacterEventDelegate.h"
 #include "HeadlightOnChangedEventDelegate.h"
+#include "HoldButton.h"
 #include "OnCallDonkeySignatureDelegate.h"
+#include "GameplayTagContainer.h"
+#include "GameplayTagContainer.h"
 #include "DownCameraSettings.h"
+#include "PlatformComponent.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "AnalogAimSettings.h"
 #include "ECharacterCameraMode.h"
 #include "CameraSpringSettings.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "EInputKeys.h"
 #include "Engine/NetSerialization.h"
+#include "Engine/NetSerialization.h"
 #include "ECharacterState.h"
 #include "HeroInfo.h"
-#include "GameplayTagContainer.h"
+#include "UObject/NoExportTypes.h"
 #include "PlayerCharacter.generated.h"
 
-class UStatusEffect;
 class AItem;
-class UPlayerTPAnimInstance;
-class AActor;
-class UFSDPhysicalMaterial;
-class UInstantUsable;
-class UHeightenedSenseComponent;
-class AShieldGeneratorActor;
-class UPlayerAttackPositionComponent;
-class UPlayerFPAnimInstance;
-class UCommunicationComponent;
-class UOutlineComponent;
-class UWidgetInteractionComponent;
-class UZipLineStateComponent;
-class AFSDPlayerState;
-class UPerkHUDActivationWidget;
-class UCharacterSightComponent;
-class UPlayerCharacterID;
-class UParticleSystem;
 class ATutorialManager;
+class UPerkHUDActivationWidget;
+class AActor;
+class USchematic;
+class UWidgetInteractionComponent;
+class UHeightenedSenseComponent;
 class USkeletalMeshComponent;
+class USoundBase;
+class UInventoryComponent;
 class UCameraComponent;
+class UInventoryList;
+class USpringArmComponent;
+class UZipLineStateComponent;
+class AShieldGeneratorActor;
+class UPhysicsAsset;
+class UPlayerCharacterID;
 class USceneComponent;
 class UActorTrackingComponent;
 class UCharacterIntoxicationComponent;
 class UMissionStatsCollector;
-class USpringArmComponent;
 class UPointLightComponent;
 class UCharacterCameraController;
 class UPlayerHealthComponent;
-class UInventoryComponent;
+class UCharacterSightComponent;
 class UCharacterUseComponent;
 class USingleUsableComponent;
+class UStatusEffect;
+class UOutlineComponent;
 class UCharacterRecoilComponent;
 class UStatusEffectsComponent;
 class UPawnStatsComponent;
 class UPlayerAfflictionComponent;
 class UPlayerInfoComponent;
+class UPlayerAttackPositionComponent;
+class UCommunicationComponent;
+class UParticleSystem;
 class UPlayerTemperatureComponent;
 class UPlayerReactiveTerrainTrackerComponent;
+class UInstantUsable;
 class USoundCue;
 class UPawnAffliction;
-class UPhysicsAsset;
 class UAudioComponent;
 class UCharacterStateComponent;
 class UFSDAchievement;
 class UAnimMontage;
-class AZipLineProjectile;
-class UDialogDataAsset;
 class UMaterialInterface;
 class UMaterialInstanceDynamic;
+class UFSDPhysicalMaterial;
 class UCharacterVanityComponent;
-class USoundBase;
+class AZipLineProjectile;
 class USoundAttenuation;
 class USoundConcurrency;
 class APlayerController;
 class AEventRewardDispenser;
-class USchematic;
 class APlayerCharacter;
-class UPlayerAnimInstance;
 class AFSDPhysicsActor;
 class UCappedResource;
+class UPlayerTPAnimInstance;
+class AFSDPlayerState;
 class AFSDPlayerController;
-class UInventoryList;
 class UTexture2D;
+class UPlayerFPAnimInstance;
 class ULightComponent;
 class UUsableComponent;
+class UPlayerAnimInstance;
 class UObject;
 
 UCLASS(Abstract, Blueprintable)
@@ -314,7 +313,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UPerkHUDActivationWidget* BoundPerkActivationW;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PerkActivationTimer;
     
 protected:
@@ -357,7 +356,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHoldButton ToggleHUDButton;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float EquipLaserpointerHoldDuration;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
@@ -459,13 +458,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UInstantUsable* TrackGrindUsableComponent;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RunningSpeed;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RunBoost;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RunBoostChargeTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -480,7 +479,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UPhysicsAsset* HangingPhysicsAsset;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HangingSimulationBlend;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -495,40 +494,40 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAnalogAimSettings AimSettings;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DownedCameraMinPitch;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DownedCameraMaxPitch;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TurnToFaceScannerAngularSpeed;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Turn180Time;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CarryingMovementSpeedPenalty;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CarryingMaxFallVelocity;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxThrowProgress;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxThrowHoldDuration;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CarryingThrowMinForce;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CarryingThrowMaxForce;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UStatusEffect> CarryingThrowingStatusEffect;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float ThrowCarriableProgress;
     
     UPROPERTY(EditAnywhere, Export, Transient)
@@ -546,7 +545,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool IsInEscapePod;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ButtonMemoryDuration;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
@@ -555,40 +554,40 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool CanDash;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DashInputWindow;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DashFowardMovementMinRequirement;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DashRightMovementMaxRequirement;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DashControllerMinValueRequired;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float DashCooldown;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UStatusEffect> DashStatusEffect;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float ForwardInput;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float RightInput;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float ControllerForwardInput;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float ControllerRightInput;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float StoppedRunningTime;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float ShoutPressedTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -597,7 +596,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool bIsUsingPressed;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float UsingDelay;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_HeadLightOn, meta=(AllowPrivateAccess=true))
@@ -606,7 +605,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     bool IsUsing;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float JumpPressedTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -633,7 +632,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_IsDancing, meta=(AllowPrivateAccess=true))
     bool IsDancing;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float DanceStartTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -648,7 +647,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool IsInCharacterSelectionWorld;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float IdleTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -656,12 +655,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimMontage* TPDrinkSalute;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UDialogDataAsset* SaluteShout;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UDialogDataAsset* DrinkShout;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UAnimMontage* CurrentSaluteMontage;
@@ -879,13 +872,13 @@ public:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_AddImpulseToActor(AFSDPhysicsActor* Target, FVector_NetQuantize Impulse, FVector_NetQuantize Location, FVector_NetQuantize AngularImpulse);
     
-    UFUNCTION(Reliable, Server)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_AddImpulse(const FVector_NetQuantizeNormal& Direction, float force);
     
     UFUNCTION(BlueprintCallable)
     void SendLevelUpStatistics(const int32 currentRank);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void ReviveProgress(float Progress);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
@@ -968,7 +961,7 @@ protected:
     void JumpPress();
     
 public:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsWithinDistance(AActor* Source, float Distance) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -1032,7 +1025,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UPlayerTPAnimInstance* GetTPAnimInstance() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetTimeSinceLastRevival() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -1071,7 +1064,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     AItem* GetEquippedItem() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetDownTime() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -1092,7 +1085,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UCommunicationComponent* GetCommunicationComponent() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetClassXP();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -1101,7 +1094,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UCharacterStateComponent* GetCharacterStateComponent(ECharacterState State) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetBeginRevivedProgress() const;
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
@@ -1146,11 +1139,11 @@ public:
     void ConsumeCycleItemButton();
     
 protected:
-    UFUNCTION(Client, Unreliable)
+    UFUNCTION(BlueprintCallable, Client, Unreliable)
     void Client_TargetDamaged(UObject* Health, float Damage, float DamageModifier, bool IsWeakPoint, bool IsRadial);
     
 public:
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_AddImpulse(const FVector_NetQuantizeNormal& Direction, float force);
     
 protected:

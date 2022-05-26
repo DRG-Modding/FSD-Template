@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EShoutType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EShoutType : uint8 {
     Attention,
     Follow,
@@ -28,5 +28,8 @@ enum class EShoutType : uint8 {
     WaitingInDropPod,
     Carrying,
     WaitingInEscapePod,
+    Salute,
+    Salute_Spacerig,
+    Drink,
 };
 

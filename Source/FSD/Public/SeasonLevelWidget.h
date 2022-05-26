@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RewardClaimedDelegate.h"
 #include "Blueprint/UserWidget.h"
+#include "RewardClaimedDelegate.h"
 #include "SeasonLevel.h"
 #include "SeasonLevelWidget.generated.h"
 

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EVanityAquisitionType.generated.h"
 
-UENUM()
-enum class EVanityAquisitionType {
+UENUM(BlueprintType)
+enum class EVanityAquisitionType : uint8 {
     UnlockedFromStart,
     Purchased,
     Schematic,

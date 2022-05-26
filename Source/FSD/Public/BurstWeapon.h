@@ -3,10 +3,10 @@
 #include "AmmoDrivenWeapon.h"
 #include "BurstWeapon.generated.h"
 
-class UPrimitiveComponent;
-class UDamageComponent;
 class UHealthComponentBase;
 class UFSDPhysicalMaterial;
+class UDamageComponent;
+class UPrimitiveComponent;
 
 UCLASS(Blueprintable)
 class ABurstWeapon : public AAmmoDrivenWeapon {
@@ -22,7 +22,7 @@ protected:
 public:
     ABurstWeapon();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial);
     
 public:

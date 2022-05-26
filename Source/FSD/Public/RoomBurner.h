@@ -2,19 +2,19 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "ERoomMirror.h"
-#include "GameplayTagContainer.h"
 #include "ERoomMirroringSupport.h"
+#include "GameplayTagContainer.h"
 #include "RoomBurner.generated.h"
 
-class URoomGenerator;
-class ADeepCSGWorld;
 class UDifficultySetting;
+class URoomGenerator;
 class UBiome;
 class UEnemyDescriptor;
 class UMissionMutator;
 class UMissionWarning;
 class USpecialEvent;
 class UMissionTemplate;
+class ADeepCSGWorld;
 class AProceduralSetup;
 
 UCLASS(Blueprintable)
@@ -31,7 +31,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     URoomGenerator* RoomGenerator;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RoomRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -19,7 +19,7 @@ protected:
 public:
     UGravityChangedComponent();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnGravityChanged(float Gravity, float Change);
     
 };

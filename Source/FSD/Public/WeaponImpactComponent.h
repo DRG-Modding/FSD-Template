@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "HightAccelerationSignatureDelegate.h"
 #include "ImpactedSignatureDelegate.h"
+#include "HightAccelerationSignatureDelegate.h"
 #include "WeaponImpactComponent.generated.h"
 
 class USkeletalMeshComponent;
@@ -33,10 +33,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool TrackVelocity;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TriggerHighAccelAt;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TriggerAtVelocityDifference;
     
 public:

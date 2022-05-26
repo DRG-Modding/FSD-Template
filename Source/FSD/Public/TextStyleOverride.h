@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Styling/SlateColor.h"
 #include "Fonts/SlateFontInfo.h"
+#include "Styling/SlateColor.h"
 #include "TextStyleOverride.generated.h"
 
 USTRUCT(BlueprintType)
@@ -23,7 +23,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bOverrideSize;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SizeScale;
     
     FSD_API FTextStyleOverride();

@@ -6,5 +6,5 @@
 class UHealthComponent;
 class UDamageTag;
 
-UDELEGATE(BlueprintAuthorityOnly) DECLARE_DYNAMIC_MULTICAST_DELEGATE_FourParams(FDeathSigDetailed, UHealthComponent*, HealthComponent, float, damageAmount, const FDamageData&, DamageData, const TArray<UDamageTag*>&, Tags);
+UDELEGATE(BlueprintAuthorityOnly, BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_FourParams(FDeathSigDetailed, UHealthComponent*, HealthComponent, float, damageAmount, const FDamageData&, DamageData, const TArray<UDamageTag*>&, Tags);
 

@@ -5,14 +5,14 @@
 #include "CheatEventDelegate.h"
 #include "FSDCheatManager.generated.h"
 
+class AFSDAIController;
+class UEnemyDescriptor;
 class AActor;
 class UPlayerCharacterID;
-class UEnemyDescriptor;
-class UBaseCritterDescriptor;
 class APawn;
-class AFSDAIController;
-class UObject;
 class APlayerCharacter;
+class UBaseCritterDescriptor;
+class UObject;
 class UResourceData;
 
 UCLASS(Blueprintable)
@@ -23,7 +23,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 RoomJumpCount;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float PreviousMaxDistanceBeforeCleanup;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -128,6 +128,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Exec)
     void R_AddCraftingResource(int32 Amount, int32 Type);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void R_Add_Phazyonite(int32 Amount);
     
     UFUNCTION(BlueprintCallable, Exec)
     void R_Add_BitterGem(int32 Amount);
@@ -359,7 +362,7 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void C_SetInstantUsables(bool Value);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void C_SetHealth(float Health);
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -593,7 +596,7 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void C_Escort_ShowSmartRockDebug(bool shouldShow);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void C_Escort_SetMuleSpeed(UObject* WorldContextObject, float Speed);
     
     UFUNCTION(BlueprintCallable, Exec)

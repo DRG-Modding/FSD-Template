@@ -1,29 +1,29 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "SavableDataAsset.h"
 #include "ResourceSpawner.h"
+#include "SavableDataAsset.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "ObjectiveMissionIcon.h"
 #include "MissionTemplate.generated.h"
 
-class UObjective;
-class UDebrisActorComponent;
-class UMissionComplexity;
-class UMutator;
-class UMissionDNA;
 class AProceduralSetup;
+class UObjective;
 class AFSDGameMode;
+class UMutator;
+class UMissionWarning;
+class UMissionComplexity;
 class UWorld;
 class UMissionDuration;
-class UMissionWarning;
+class UMissionTemplate;
 class UTexture2D;
-class UMissionMutator;
+class UMissionDNA;
+class UDebrisActorComponent;
 class UTutorialComponent;
 class UGeneratedMission;
 class UFSDSaveGame;
-class UMissionTemplate;
+class UMissionMutator;
 class UObject;
 class UBiome;
 
@@ -95,10 +95,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool MustBeUnlocked;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RoomEncounerScale;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StationaryEnemyScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EFNCellularReturnType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EFNCellularReturnType : uint8 {
     CELLVALUE,
     DISTANCE,

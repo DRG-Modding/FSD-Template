@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ETrackBuildPlacementState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ETrackBuildPlacementState : uint8 {
     NotBeingPlaced,
     BeingPlaced,

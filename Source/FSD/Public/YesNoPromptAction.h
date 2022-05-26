@@ -5,9 +5,9 @@
 #include "YesNoPromptSettings.h"
 #include "YesNoPromptAction.generated.h"
 
-class UYesNoPromptAction;
 class UObject;
 class UYesNoPromptWidget;
+class UYesNoPromptAction;
 class UResourceData;
 
 UCLASS(Blueprintable)

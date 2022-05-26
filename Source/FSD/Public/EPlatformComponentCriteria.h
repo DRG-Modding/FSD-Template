@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPlatformComponentCriteria.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPlatformComponentCriteria : uint8 {
     All,
     ServerOnly,

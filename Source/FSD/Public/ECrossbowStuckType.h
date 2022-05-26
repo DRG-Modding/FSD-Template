@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECrossbowStuckType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ECrossbowStuckType : uint8 {
     Default,
     Electric,

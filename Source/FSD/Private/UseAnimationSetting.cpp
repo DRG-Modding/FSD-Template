@@ -7,5 +7,6 @@ UUseAnimationSetting::UUseAnimationSetting() {
     this->EndTP = NULL;
     this->IsManuallyControlled = false;
     this->BlockUseWhileActive = false;
+    this->BlockUseWhileActiveDuration = 0.00f;
 }
 

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EAmmoDrivenWeapnUpgradeType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EAmmoDrivenWeapnUpgradeType : uint8 {
     MaxAmmo,
     ClipSize,

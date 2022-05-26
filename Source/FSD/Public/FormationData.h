@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "GameplayTagContainer.h"
 #include "Engine/DataAsset.h"
 #include "FormationDataItem.h"
-#include "GameplayTagContainer.h"
 #include "FormationData.generated.h"
 
 UCLASS(Abstract, Blueprintable)

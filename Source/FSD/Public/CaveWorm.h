@@ -5,10 +5,10 @@
 #include "UObject/NoExportTypes.h"
 #include "CaveWorm.generated.h"
 
-class USimpleHealthComponent;
-class AResourceChunk;
 class UObject;
 class UHealthComponentBase;
+class USimpleHealthComponent;
+class AResourceChunk;
 class UResourceData;
 
 UCLASS(Blueprintable, MinimalAPI)
@@ -19,10 +19,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USimpleHealthComponent* Health;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SearchChunksRadius;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SearchChunksInterval;
     
 public:

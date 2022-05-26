@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EShowroomScaling.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EShowroomScaling : uint8 {
     NoScaling,
     EnemySmall,

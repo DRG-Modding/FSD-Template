@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDeepMovementState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EDeepMovementState : uint8 {
     Stationary,
     Controlled,

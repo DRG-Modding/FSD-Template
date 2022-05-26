@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UpgradeValues.h"
-#include "ECrossbowUpgrades.h"
 #include "StandardItemUpgrade.h"
+#include "ECrossbowUpgrades.h"
+#include "UpgradeValues.h"
 #include "CrossbowUpgrade.generated.h"
 
-class ACrossbowProjectileBase;
 class AItem;
+class ACrossbowProjectileBase;
 class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)

@@ -3,8 +3,8 @@
 #include "Engine/DataAsset.h"
 #include "ItemSettings.generated.h"
 
-class UItemRefundList;
 class UItemID;
+class UItemRefundList;
 class UItemData;
 
 UCLASS(Blueprintable)

@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/PlayerController.h"
-#include "PlatformComponent.h"
-#include "LocalVoiceStatusDelegate.h"
 #include "EMinersManualSinglePage.h"
 #include "EHUDVisibilityReason.h"
+#include "GameFramework/PlayerController.h"
+#include "LocalVoiceStatusDelegate.h"
+#include "PlatformComponent.h"
 #include "EMinersManualSection.h"
 #include "UObject/NoExportTypes.h"
 #include "EDisconnectReason.h"
@@ -12,8 +12,8 @@
 
 class UMaterialParameterCollection;
 class UWindowManager;
-class UEscapeMenuWindow;
 class UPlayerCharacterID;
+class UEscapeMenuWindow;
 
 UCLASS(Blueprintable)
 class AFSDPlayerControllerBase : public APlayerController {

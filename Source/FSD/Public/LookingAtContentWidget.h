@@ -4,11 +4,11 @@
 #include "LookingAtContentWidget.generated.h"
 
 class UPawnAfflictionComponent;
-class USimpleObjectInfoComponent;
+class UPetComponent;
 class AActor;
+class USimpleObjectInfoComponent;
 class UHealth;
 class IHealth;
-class UPetComponent;
 class UHackingUsableComponent;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
@@ -46,7 +46,7 @@ public:
     void RegisterWeakPointHit();
     
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveUpdateTarget(AActor* InCurrentTarget, float DeltaTime);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -59,7 +59,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FText GetTargetName() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetTargetHealthPct() const;
     
 };

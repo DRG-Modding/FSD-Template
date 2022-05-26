@@ -6,9 +6,9 @@
 #include "CalldownItem.generated.h"
 
 class AActor;
+class UResourceData;
 class UItemPlacerAggregator;
 class ARessuplyPod;
-class UResourceData;
 
 UCLASS(Blueprintable)
 class ACalldownItem : public AAnimatedItem {
@@ -36,10 +36,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UItemPlacerAggregator* ItemPlacerInstance;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CoolDown;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float CooldownRemaining;
     
 public:

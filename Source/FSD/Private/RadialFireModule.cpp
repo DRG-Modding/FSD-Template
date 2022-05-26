@@ -5,7 +5,6 @@
 void ARadialFireModule::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
-    DOREPLIFETIME(ARadialFireModule, AttackEndRotation);
     DOREPLIFETIME(ARadialFireModule, IsAttacking);
 }
 

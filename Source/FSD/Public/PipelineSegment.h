@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "TrackBuilderSegment.h"
 #include "EPipelineBuildState.h"
-#include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "EInputKeys.h"
 #include "PipelineSegment.generated.h"
 
-class USplineComponent;
-class USimpleHealthComponent;
-class APipelineSegment;
 class UStaticMesh;
+class APipelineSegment;
+class UTrackBuilderUsable;
 class UMaterialInterface;
 class USingleUsableComponent;
 class UDroneUseComponent;
+class USimpleHealthComponent;
+class USplineComponent;
 class USplineMeshComponent;
-class APlayerCharacter;
 class USkeletalMeshComponent;
 class UStaticMeshComponent;
 class UPathfinderSplineSegmentCollisionComponent;
 class APipelineStart;
+class APlayerCharacter;
 class UHealthComponentBase;
-class UTrackBuilderUsable;
 
 UCLASS(Abstract, Blueprintable)
 class APipelineSegment : public ATrackBuilderSegment {
@@ -103,7 +103,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_SegmentBroken, meta=(AllowPrivateAccess=true))
     bool bSegmentBroken;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_SegmentActivatedProgress)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_SegmentActivatedProgress, meta=(AllowPrivateAccess=true))
     float SegmentActivatedProgress;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -112,31 +112,31 @@ protected:
     UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<APipelineStart> PipelineStart;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinValidLength;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxValidLength;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TooSharpExtraLength;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TooSteepExtraLength;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BlockedSphereSize;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 BlockedExtraRaytraceRotationOffset;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BlockedExtraRaytraces;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BlockedExtraRaytraceDist;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BlockedRayTraceSuccesses;
     
 public:
@@ -161,7 +161,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveSegmentBrokenChanged(bool InSegmentBroken);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveSegmentActivatedProgress(float InProgress);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -199,7 +199,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void CallbackSegmentDestroyed(UHealthComponentBase* InHealth);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void CallbackSegmentActivatedProgress(float InProgress);
     
     UFUNCTION(BlueprintCallable)

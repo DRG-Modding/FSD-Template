@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "BaseArmorDamageComponent.h"
 #include "SimpleArmorRadialDamagedDelegateDelegate.h"
-#include "DestructableBodypartItem.h"
-#include "ArmorDamageInfo.h"
 #include "EArmorDamageType.h"
+#include "ArmorDamageInfo.h"
+#include "DestructableBodypartItem.h"
 #include "SimpleArmorDamageComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -15,7 +15,7 @@ public:
     FSimpleArmorRadialDamagedDelegate OnRadialArmorPartsDestroyedEvent;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ArmorStrength;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

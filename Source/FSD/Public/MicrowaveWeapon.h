@@ -2,21 +2,22 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "AmmoDrivenWeapon.h"
-#include "LensActivedDelegateDelegate.h"
 #include "LensDeactivedDelegateDelegate.h"
 #include "MicrowaveLense.h"
-#include "MultiHitScanHits.h"
-#include "Engine/NetSerialization.h"
+#include "LensActivedDelegateDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "MultiHitscanHit.h"
+#include "Engine/NetSerialization.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "MultiHitScanHits.h"
 #include "MicrowaveWeapon.generated.h"
 
+class UHealthComponentBase;
+class UNiagaraSystem;
 class UDamageComponent;
 class UCapsuleHitscanComponent;
 class UFirstPersonNiagaraComponent;
 class UNiagaraComponent;
-class UNiagaraSystem;
 class UStatusEffect;
 class AActor;
 class UParticleSystem;
@@ -24,7 +25,6 @@ class USoundCue;
 class UEnemyTemperatureComponent;
 class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
-class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class FSD_API AMicrowaveWeapon : public AAmmoDrivenWeapon {
@@ -58,7 +58,7 @@ public:
     FLensDeactivedDelegate OnLenseDeactivated;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SwitchTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -67,16 +67,16 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UStatusEffect> GammaContaminationZoneSTE;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float GammaContaminationRange;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> ExplodableBlisterClass;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BlisteringNecrosisChance;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinTimeBetweenBlisteringNecrosis;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -115,22 +115,22 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TSet<AActor*> ActorsInCapsule;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WeaponRange;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ShotWidth;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DamageInterval;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float KilledTargetsExplosionChance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UNiagaraSystem* ExplosionOCSystem;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float NeuroSpreadRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -139,32 +139,32 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMicrowaveLense FocusLense;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TemperatureAmplification;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool RadiantSuperheaterActive;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RadiantSuperheaterFrostShockChance;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RadiantSuperheaterHeatShockChance;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RadiantSuperheaterMinColdDamage;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RadiantSuperheaterMinHeatDamage;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RadiantSuperheaterFrostTransferFactor;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RadiantSuperheaterHeatTransferFactor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
-    UEnemyTemperatureComponent* FrostShockTarget;
+    UPROPERTY(EditAnywhere, Export, Transient)
+    TWeakObjectPtr<UEnemyTemperatureComponent> RadiantSuperheaterTarget;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool SlowOnHit;
@@ -187,7 +187,7 @@ protected:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void ShowBoilerRayExplosion(FVector_NetQuantize Location, FRotator Rotation);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void Server_SetLensePower(float lensepower);
     
     UFUNCTION(BlueprintCallable)
@@ -200,12 +200,12 @@ protected:
     void OnServerHitscanHit(const FMultiHitScanHits& Hits);
     
     UFUNCTION(BlueprintCallable)
-    void OnRadiantSuperHeaterFrostAoe();
+    void OnRadiantSuperHeaterAoe();
     
     UFUNCTION(BlueprintCallable)
     void OnPushedDamageEffect(UHealthComponentBase* healthComp);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void HeatUpdated(float SmoothedTemperature);
     
     UFUNCTION(BlueprintCallable)

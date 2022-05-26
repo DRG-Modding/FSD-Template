@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "GameplayTagContainer.h"
 #include "Engine/DataAsset.h"
 #include "RandRange.h"
-#include "GameplayTagContainer.h"
-#include "RandFloatInterval.h"
 #include "EliteEnemyEntry.h"
+#include "RandFloatInterval.h"
 #include "EnemySettings.generated.h"
 
+class UDamageComponent;
 class UEnemyID;
 class UEnemyDescriptor;
-class UDamageComponent;
 
 UCLASS(Blueprintable)
 class UEnemySettings : public UDataAsset {

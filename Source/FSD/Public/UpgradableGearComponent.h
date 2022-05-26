@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UpgradeTier.h"
 #include "Components/ActorComponent.h"
-#include "GearStatEntry.h"
+#include "UpgradeTier.h"
 #include "MasteryItem.h"
+#include "GearStatEntry.h"
 #include "EItemUpgradeStatus.h"
 #include "CraftingCost.h"
 #include "UpgradableGearComponent.generated.h"
 
-class UOverclockBank;
-class UItemData;
-class UItemUpgrade;
-class AFSDPlayerController;
-class AActor;
-class UTexture2D;
 class UResourceData;
-class UItemID;
-class APlayerCharacter;
+class AActor;
+class UOverclockBank;
+class UItemUpgrade;
+class UItemData;
+class UTexture2D;
 class UObject;
+class APlayerCharacter;
+class UItemID;
+class AFSDPlayerController;
 class AFSDPlayerState;
 class UPlayerCharacterID;
 
@@ -66,7 +66,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 CreditCost;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<UResourceData*, float> ResourceCost;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -116,7 +116,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetSourceGearName() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TMap<UResourceData*, float> GetResourceCost() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

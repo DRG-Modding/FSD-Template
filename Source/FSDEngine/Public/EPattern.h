@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPattern.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPattern : uint8 {
     Specific,
     Precious,

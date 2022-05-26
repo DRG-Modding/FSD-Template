@@ -4,14 +4,14 @@
 #include "ECaretakerSpawnType.h"
 #include "Caretaker.generated.h"
 
-class UPawnStatsComponent;
-class USceneComponent;
-class UPassthroughSubHealthComponent;
-class USkeletalMeshComponent;
 class UCaretakerActionComponent;
-class UHealthDamageTracker;
+class USceneComponent;
+class USkeletalMeshComponent;
 class UEnemyHealthComponent;
+class UPassthroughSubHealthComponent;
+class UHealthDamageTracker;
 class UAnimSequenceBase;
+class UPawnStatsComponent;
 
 UCLASS(Blueprintable)
 class FSD_API ACaretaker : public AFSDPawn {
@@ -54,10 +54,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     int32 TargetRotationRate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<float> RotationRates;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_Server_Rotation)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_Server_Rotation, meta=(AllowPrivateAccess=true))
     float Server_Rotation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -126,7 +126,7 @@ public:
     void OnEyeClosed(USkeletalMeshComponent* eye);
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnDamageTaken(float Amount);
     
 public:

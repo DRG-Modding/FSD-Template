@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EInputKeys.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EInputKeys : uint8 {
     Use,
     Fire,

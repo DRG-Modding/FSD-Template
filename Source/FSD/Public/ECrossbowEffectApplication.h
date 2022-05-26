@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECrossbowEffectApplication.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ECrossbowEffectApplication : uint8 {
     ToDefault,
     ToSpecial,

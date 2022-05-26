@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
-#include "Targetable.h"
-#include "GameplayTagAssetInterface.h"
-#include "UObject/NoExportTypes.h"
+#include "GameplayTagContainer.h"
 #include "ProjectileSpawner.h"
+#include "GameplayTagAssetInterface.h"
+#include "Targetable.h"
 #include "BoolDelegateDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "GameplayTagContainer.h"
 #include "EPawnAttitude.h"
-#include "GameplayTagContainer.h"
 #include "FSDPawn.generated.h"
 
 class UStatusEffectsComponent;
@@ -93,7 +93,7 @@ protected:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void OnFirstHostileDamageTaken();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnEnemyScaled(float newScale);
     
     UFUNCTION(BlueprintCallable)
@@ -108,6 +108,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void MakeElite();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsElite() const;
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintPure)
     bool GetIsAlerted() const;

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EPlatformRestriction.generated.h"
 
-UENUM()
-enum class EPlatformRestriction {
+UENUM(BlueprintType)
+enum class EPlatformRestriction : uint8 {
     Editor,
     Steam,
     Oddish,

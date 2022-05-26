@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/EngineTypes.h"
 #include "CarriableItem.h"
 #include "UObject/NoExportTypes.h"
 #include "EInputKeys.h"
+#include "Engine/EngineTypes.h"
 #include "BasicThrowableItem.generated.h"
 
 class UStaticMeshComponent;
+class UInstantUsable;
 class UBoxComponent;
 class UFirstPersonStaticMeshComponent;
+class UCarriableComponent;
 class USphereComponent;
 class USoundCue;
-class UCarriableComponent;
-class UInstantUsable;
+class AActor;
 class APlayerCharacter;
 class UPrimitiveComponent;
-class AActor;
 
 UCLASS(Abstract, Blueprintable)
 class ABasicThrowableItem : public ACarriableItem {
@@ -43,13 +43,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* ImpactSound;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SquaredMinImpactForce;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ImpactAudioResetTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SquaredMinThrowforce;
     
 public:

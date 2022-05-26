@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPerkTierState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPerkTierState : uint8 {
     Claimable,
     Claimed,

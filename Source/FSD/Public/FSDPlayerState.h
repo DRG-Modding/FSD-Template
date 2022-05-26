@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "GameFramework/PlayerState.h"
 #include "PlayerSpawnedSignatureDelegate.h"
+#include "GameFramework/PlayerState.h"
 #include "PlayerVoiceSignatureDelegate.h"
 #include "SelectedCharacterChangedDelegateDelegate.h"
 #include "SupplyStatusChangedDelegateDelegate.h"
@@ -18,14 +18,14 @@
 #include "EChatSenderType.h"
 #include "FSDPlayerState.generated.h"
 
-class UPlayerCharacterID;
+class AFSDPlayerController;
 class APlayerCharacter;
 class UVanityItem;
 class UPlayerStatsComponent;
+class UPlayerCharacterID;
 class UPlayerRejoinState;
 class USaveGameStateComponent;
 class UPlayerResourceComponent;
-class AFSDPlayerController;
 
 UCLASS(Blueprintable)
 class FSD_API AFSDPlayerState : public APlayerState {
@@ -40,7 +40,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSelectedCharacterChangedDelegate OnSelectedCharacterChanged;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_FractionLevelGenerated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_FractionLevelGenerated, meta=(AllowPrivateAccess=true))
     float FractionLevelGenerated;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_LevelGenerationState, meta=(AllowPrivateAccess=true))
@@ -187,10 +187,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetUIPing();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetSupplyHealthStatus() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetSupplyAmmoStatus() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

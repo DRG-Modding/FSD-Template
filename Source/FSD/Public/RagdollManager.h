@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RagdollItem.h"
 #include "Components/ActorComponent.h"
+#include "RagdollItem.h"
 #include "RagdollManager.generated.h"
 
-class UMaterialInstanceDynamic;
 class AActor;
+class UMaterialInstanceDynamic;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class URagdollManager : public UActorComponent {

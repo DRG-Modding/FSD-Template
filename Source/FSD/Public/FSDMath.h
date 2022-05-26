@@ -10,13 +10,13 @@ class UFSDMath : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFSDMath();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FVector SphericalToCartesian(float Radius, float azimuth, float elecation);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool PercentageCheck(float percentage);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static void GetAzimuthAndElevation(const FVector& Direction, const FTransform& coordinateSystem, float& azimuth, float& elevation);
     
     UFUNCTION(BlueprintCallable)
@@ -25,7 +25,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static FVector CubicInterpBlueprint(FVector p0, FVector tangent1, FVector p1, FVector tangent2, float alpha);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static void CartesianToSpherical(FVector Location, float& outAzimuth, float& outElevation, float& outRadius);
     
 };

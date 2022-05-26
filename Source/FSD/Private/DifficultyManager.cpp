@@ -6,6 +6,10 @@ UDifficultySetting* UDifficultyManager::SelectDifficulty(int32 Index) {
     return NULL;
 }
 
+float UDifficultyManager::GetSpeedModifier() const {
+    return 0.0f;
+}
+
 float UDifficultyManager::GetSmallEnemyDamageResistance() const {
     return 0.0f;
 }

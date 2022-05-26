@@ -1,9 +1,9 @@
 #include "MilestoneAsset.h"
 
-class UObject;
-class UTexture2D;
-class UMilestoneAsset;
 class UMissionStat;
+class UObject;
+class UMilestoneAsset;
+class UTexture2D;
 
 TArray<UMilestoneAsset*> UMilestoneAsset::SortMilestonesByProgress(UObject* WorldContext, TArray<UMilestoneAsset*>& Milestones) {
     return TArray<UMilestoneAsset*>();

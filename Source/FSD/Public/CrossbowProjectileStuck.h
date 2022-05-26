@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ECrossbowStuckType.h"
 #include "FSDPhysicsActor.h"
+#include "ECrossbowStuckType.h"
 #include "EInputKeys.h"
 #include "CrossbowProjectileStuck.generated.h"
 
-class ACrossbowProjectileBase;
 class UStatusEffect;
 class USphereComponent;
+class ACrossbowProjectileBase;
 class APlayerCharacter;
 class UHealthComponentBase;
 class USceneComponent;
@@ -27,13 +27,16 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UStatusEffect> AppliedEffect;
     
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float StatusEffectTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USphereComponent* AttachmentRoot;
     
 private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    USphereComponent* LaserCollider;
+    
     UPROPERTY(EditAnywhere, Replicated)
     TWeakObjectPtr<ACrossbowProjectileBase> BaseProjectile;
     

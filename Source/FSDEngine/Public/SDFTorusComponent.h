@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SDFBaseWithTransformComponent.h"
 #include "SDFTorusProperties.h"
+#include "SDFBaseWithTransformComponent.h"
 #include "SDFTorusComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

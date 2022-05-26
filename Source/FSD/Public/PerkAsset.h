@@ -3,21 +3,21 @@
 #include "Templates/SubclassOf.h"
 #include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
-#include "EPerkTierState.h"
 #include "EPerkUsageType.h"
+#include "EPerkTierState.h"
 #include "EPerkHUDActivationLocation.h"
 #include "PerkAsset.generated.h"
 
+class UPerkHUDIconWidget;
+class UDialogDataAsset;
+class UTexture2D;
 class APlayerController;
 class UPerkLogic;
 class UPerkHUDActivationWidget;
-class UTexture2D;
-class UPerkDelegateItem;
-class UDialogDataAsset;
-class UPerkHUDIconWidget;
 class UObject;
 class UPlayerCharacterID;
 class UPerkAsset;
+class UPerkDelegateItem;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API UPerkAsset : public UDataAsset {
@@ -51,7 +51,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxUseCharges;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CoolDownBetweenUse;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -84,13 +84,13 @@ protected:
     bool IsEquippedBy(UObject* WorldContext, UPlayerCharacterID* characterID) const;
     
 public:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetUseCoolDownTimeLeft(APlayerController* PlayerController) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetUseCoolDownProgress(APlayerController* PlayerController) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetUseCoolDownDuration(APlayerController* PlayerController) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

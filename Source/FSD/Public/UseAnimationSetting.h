@@ -34,6 +34,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool BlockUseWhileActive;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float BlockUseWhileActiveDuration;
+    
 public:
     UUseAnimationSetting();
 };

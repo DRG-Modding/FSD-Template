@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "SimpleObjectInfoComponent.h"
-#include "FriendlyHealthComponent.h"
 #include "RestrictedResourceBank.h"
+#include "FriendlyHealthComponent.h"
 #include "OutlineComponent.h"
 
 class APlayerCharacter;
@@ -45,7 +45,7 @@ void AEscortMule::OnRep_ExtractorSlots() {
 
 
 
-void AEscortMule::ObjectiveStateChange_Implementation(EEscortMissionState NewState) {
+void AEscortMule::ObjectiveStateChange(EEscortMissionState NewState) {
 }
 
 EEscortExtractorState AEscortMule::GetExtractorState(UInstantUsable* Usable) const {
@@ -58,6 +58,7 @@ void AEscortMule::ActivateMule() {
 void AEscortMule::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
+    DOREPLIFETIME(AEscortMule, State);
     DOREPLIFETIME(AEscortMule, MovementState);
     DOREPLIFETIME(AEscortMule, SpeedModifier);
     DOREPLIFETIME(AEscortMule, CannisterVisible_Left);
@@ -71,6 +72,8 @@ AEscortMule::AEscortMule() {
     this->HealthComponent = CreateDefaultSubobject<UFriendlyHealthComponent>(TEXT("HealthComponent2"));
     this->ObjectInfo = CreateDefaultSubobject<USimpleObjectInfoComponent>(TEXT("ObjectInfo"));
     this->ResourceBank = CreateDefaultSubobject<URestrictedResourceBank>(TEXT("RestrictedResourceBank"));
+    this->State = EEscortMissionState::Stationary;
+    this->EscortObjective = NULL;
     this->SpeedModifier = 1.00f;
     this->Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
     this->OutlineComponent = CreateDefaultSubobject<UOutlineComponent>(TEXT("OutlineComponent"));

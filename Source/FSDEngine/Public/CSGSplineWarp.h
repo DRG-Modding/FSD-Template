@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "CSGWarped.h"
 #include "SplineWarpProperties.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/SplineComponent.h"
-#include "UObject/NoExportTypes.h"
 #include "CSGSplineWarp.generated.h"
 
 UCLASS(Blueprintable)
@@ -20,7 +20,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FBox> AABBs;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<float> Keys;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

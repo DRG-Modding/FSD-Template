@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EFrozenBitsSize.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EFrozenBitsSize : uint8 {
     Tiny,
     Small,

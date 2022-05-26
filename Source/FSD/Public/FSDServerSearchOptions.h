@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EGameType.h"
 #include "ESteamSearchRegion.h"
 #include "ESteamServerJoinStatus.h"
-#include "EGameType.h"
 #include "FSDServerSearchOptions.generated.h"
 
 class UDifficultySetting;

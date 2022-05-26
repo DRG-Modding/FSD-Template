@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "HealthRegeneratingChangedDelegate.h"
 #include "HealthComponent.h"
+#include "HealthRegenerationParams.h"
 #include "RejoinListener.h"
 #include "FullHealthSignatureDelegate.h"
-#include "HealthRegeneratingChangedDelegate.h"
 #include "HitSigDelegate.h"
-#include "HealthRegenerationParams.h"
 #include "AudioWithCooldown.h"
 #include "PlayerHealthComponent.generated.h"
 
-class APlayerCharacter;
 class UCurveFloat;
+class APlayerCharacter;
 class UParticleSystem;
 class UParticleSystemComponent;
 class UPlayerDamageTakenMutator;
@@ -36,22 +36,22 @@ public:
     FHitSig OnPlayerHit;
     
 protected:
-    UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_MaxHealth)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_MaxHealth, meta=(AllowPrivateAccess=true))
     float MaxHealth;
     
-    UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_MaxArmor)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_MaxArmor, meta=(AllowPrivateAccess=true))
     float MaxArmor;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_ArmorDamage)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_ArmorDamage, meta=(AllowPrivateAccess=true))
     float ArmorDamage;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ReviveHealthReturnRatio;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ReviveArmorReturnRatio;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HealthPerCrystalVolume;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -60,7 +60,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* ArmorRegenCurve;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ShieldRegenDelay;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -78,10 +78,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* ShieldLinkInstance;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float InvulnerabilityDuration;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ReviveInvulnerabilityTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -96,7 +96,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     bool IronWillActive;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float IronWillTimeToActivate;
     
 public:
@@ -116,14 +116,14 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_MaxArmor();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRep_ArmorDamage(float oldDamage);
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLowHealth() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRemainingIronWillActivationTime() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -132,7 +132,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetIronWillActive() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetHealthRegeneratingTargetRatio() const;
     
 protected:

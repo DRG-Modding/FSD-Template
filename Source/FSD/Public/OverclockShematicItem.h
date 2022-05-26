@@ -4,8 +4,8 @@
 #include "OverclockShematicItem.generated.h"
 
 class UItemUpgrade;
-class UItemID;
 class UUpgradableGearComponent;
+class UItemID;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UOverclockShematicItem : public USchematicItem {

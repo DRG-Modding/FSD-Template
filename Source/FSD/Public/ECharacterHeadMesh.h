@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECharacterHeadMesh.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ECharacterHeadMesh : uint8 {
     Full,
     ThichNeckOnly,

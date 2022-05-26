@@ -3,8 +3,8 @@
 
 class USceneComponent;
 class AActor;
-class UActorTrackingWidget;
 class APlayerController;
+class UActorTrackingWidget;
 
 void UActorTrackingWidget::SetTargetComponent(USceneComponent* Component) {
 }

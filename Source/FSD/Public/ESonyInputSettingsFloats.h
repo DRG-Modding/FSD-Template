@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESonyInputSettingsFloats.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ESonyInputSettingsFloats : uint8 {
     MotionControlXSensitivity,
     MotionControlYSensitivity,

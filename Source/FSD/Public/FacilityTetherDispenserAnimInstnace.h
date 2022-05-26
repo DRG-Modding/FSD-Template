@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ItemDispenserAnimInstance.h"
 #include "EHackingPodState.h"
+#include "ItemDispenserAnimInstance.h"
 #include "FacilityTetherDispenserAnimInstnace.generated.h"
 
 UCLASS(Blueprintable, NonTransient)

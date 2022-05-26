@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EItemNotificationType.generated.h"
 
-UENUM()
-enum class EItemNotificationType {
+UENUM(BlueprintType)
+enum class EItemNotificationType : uint8 {
     NewOverclock,
 };
 

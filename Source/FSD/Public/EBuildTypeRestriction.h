@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EBuildTypeRestriction.generated.h"
 
-UENUM()
-enum class EBuildTypeRestriction {
+UENUM(BlueprintType)
+enum class EBuildTypeRestriction : uint8 {
     Development,
     Shipping,
 };

@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BehaviorTree/BTDecorator.h"
 #include "UObject/NoExportTypes.h"
+#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BTDecorator_CheckObstruction.generated.h"
 
 UCLASS(Blueprintable)
 class UBTDecorator_CheckObstruction : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float range;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -4,8 +4,8 @@
 #include "ShowroomSettings.generated.h"
 
 class UCharacterShowroomController;
-class AShowroomStage;
 class UEnemyShowroomController;
+class AShowroomStage;
 
 UCLASS(Blueprintable)
 class UShowroomSettings : public UDataAsset {

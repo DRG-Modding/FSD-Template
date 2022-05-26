@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "GameFramework/Actor.h"
-#include "EInputKeys.h"
-#include "ERessuplyPodState.h"
 #include "UObject/NoExportTypes.h"
+#include "GameFramework/Actor.h"
+#include "ERessuplyPodState.h"
+#include "EInputKeys.h"
 #include "PipelineFinish.generated.h"
 
-class APipelineExtractorPod;
-class USingleUsableComponent;
 class UTrackBuilderConnectPoint;
+class USingleUsableComponent;
+class APipelineExtractorPod;
 class APlayerCharacter;
 class ARessuplyPod;
 class ATrackBuilderSegment;

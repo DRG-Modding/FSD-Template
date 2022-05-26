@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECharselectionCameraLocation.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ECharselectionCameraLocation : uint8 {
     Selection,
     Customization,

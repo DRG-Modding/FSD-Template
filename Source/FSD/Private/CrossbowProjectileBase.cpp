@@ -4,6 +4,9 @@
 class APlayerCharacter;
 class USceneComponent;
 
+void ACrossbowProjectileBase::Server_HandleImpact_Implementation(const FHitResult& HitResult, const FVector& RelativeLocation) {
+}
+
 void ACrossbowProjectileBase::OnUsedBy(APlayerCharacter* Player, EInputKeys Key) {
 }
 
@@ -20,7 +23,7 @@ float ACrossbowProjectileBase::GetScaledStatusEffectTime() const {
     return 0.0f;
 }
 
-void ACrossbowProjectileBase::ApplyDamageEffects(const FHitResult& HitResult) {
+void ACrossbowProjectileBase::ApplyDamageEffects(const FHitResult& HitResult, const FVector& RelativeLocation) {
 }
 
 void ACrossbowProjectileBase::All_SetBansheePulseVisible_Implementation(bool Enabled) {
@@ -57,6 +60,9 @@ ACrossbowProjectileBase::ACrossbowProjectileBase() {
     this->Penetrates = false;
     this->ImpactSound = NULL;
     this->IsASpecialProjectile = false;
+    this->LaserCollider = NULL;
+    this->DamageComponent = NULL;
+    this->TerrainDetectComponent = NULL;
     this->ProjectileMesh = NULL;
     this->KillTrailAfterTime = 3.00f;
 }

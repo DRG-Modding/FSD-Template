@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMicrowaveGunUpgrade.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMicrowaveGunUpgrade : uint8 {
     ESlowOnHit,
     EFocusLense,

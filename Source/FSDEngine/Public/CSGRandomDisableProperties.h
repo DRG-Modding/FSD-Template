@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FCSGRandomDisableProperties {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DisableProbability;
     
     FSDENGINE_API FCSGRandomDisableProperties();

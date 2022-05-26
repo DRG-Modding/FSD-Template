@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
+#include "UObject/NoExportTypes.h"
 #include "StartTimelineEventDelegate.h"
 #include "COnStateChangedDelegate.h"
 #include "UObject/NoExportTypes.h"
 #include "ElevatorPlant.generated.h"
 
-class USplineMeshComponent;
 class UAudioComponent;
 class USoundCue;
-class USceneComponent;
+class USplineMeshComponent;
 class UCurveFloat;
+class USceneComponent;
 
 UCLASS(Blueprintable)
 class AElevatorPlant : public AActor {
@@ -51,7 +51,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FRotator LeafNoiseRotator;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BaseTangentLength;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
@@ -63,13 +63,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* CVineLeaf;
     
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float InitialBaseTangentLength;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LeafLocationNoiseSize;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float VineMovementAlpha;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -122,7 +122,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void MoreTick(const FVector& DipOffset, float aValue);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetVineMovementAlpha() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -131,7 +131,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetRelativeDestinationLocation() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetLeafLocationNoiseSize() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -140,7 +140,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetIsExtended() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetInitialTangentLenth() const;
     
 };

@@ -3,8 +3,8 @@
 #include "UnlockReward.h"
 #include "UnlockComplexityReward.generated.h"
 
-class UMissionTemplate;
 class UMissionComplexity;
+class UMissionTemplate;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UUnlockComplexityReward : public UUnlockReward {
