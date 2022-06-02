@@ -4,8 +4,8 @@
 #include "EGooGunFireMode.h"
 #include "GooGun.generated.h"
 
-class USoundCue;
 class UAnimMontage;
+class USoundCue;
 class UFXSystemAsset;
 class UFXSystemComponent;
 
@@ -79,6 +79,9 @@ protected:
     
 public:
     AGooGun();
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnPuddleSuckedIn();
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetOverChargeProgress() const;
     

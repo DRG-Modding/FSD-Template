@@ -3,9 +3,9 @@
 #include "ItemAquisitionBase.h"
 #include "SchematicAquisition.generated.h"
 
-class USchematic;
 class USchematicPricingTier;
 class USchematicRarity;
+class USchematic;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API USchematicAquisition : public UItemAquisitionBase {

@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "EWoodLouseState.h"
 #include "EnemyDeepPathfinderCharacter.h"
 #include "BumpPlayerHit.h"
-#include "EWoodLouseState.h"
 #include "GameplayTagContainer.h"
 #include "WoodLouse.generated.h"
 
 class USceneComponent;
-class UStatusEffect;
 class UPawnSensingComponent;
 class UFakeMoverSettings;
+class UStatusEffect;
 class AProjectile;
 class AActor;
 class USoundBase;

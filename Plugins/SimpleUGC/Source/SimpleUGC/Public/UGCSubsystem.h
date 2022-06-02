@@ -8,10 +8,10 @@
 #include "UGCSubsystem.generated.h"
 
 class UUGCLatentActionManager;
-class UUGCSettings;
 class UUGCRegistry;
-class UUGCPackage;
+class UUGCSettings;
 class UObject;
+class UUGCPackage;
 
 UCLASS(Blueprintable)
 class SIMPLEUGC_API UUGCSubsystem : public UEngineSubsystem {

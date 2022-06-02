@@ -7,8 +7,8 @@
 class UHealthComponent;
 class UEnemyDetonationSetting;
 class UPawnStatsComponent;
-class UDamageTag;
 class UStatusEffectsComponent;
+class UDamageTag;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UEnemyTemperatureComponent : public UTemperatureComponent {

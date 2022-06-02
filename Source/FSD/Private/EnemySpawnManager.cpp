@@ -2,10 +2,10 @@
 #include "Templates/SubclassOf.h"
 
 class APawn;
-class UEnemyDescriptor;
 class UStatusEffect;
-class AActor;
+class UEnemyDescriptor;
 class UHealthComponentBase;
+class AActor;
 
 void UEnemySpawnManager::SpawnerDestroyed(APawn* Actor) {
 }

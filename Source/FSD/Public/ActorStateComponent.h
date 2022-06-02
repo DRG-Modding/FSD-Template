@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "StateTickDelegateDelegate.h"
 #include "StateDelegateDelegate.h"
+#include "StateTickDelegateDelegate.h"
 #include "ActorStateComponent.generated.h"
 
 class UActorStateComponent;

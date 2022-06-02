@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EnemyGroupDescriptorItem.h"
 #include "Engine/DataAsset.h"
+#include "EnemyGroupDescriptorItem.h"
 #include "RandInterval.h"
 #include "EnemyGroupDescriptor.generated.h"
 

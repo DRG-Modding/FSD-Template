@@ -5,18 +5,18 @@
 #include "DamageData.h"
 #include "AFlyingBug.generated.h"
 
+class UPawnAlertComponent;
 class UEnemyComponent;
 class UPawnStatsComponent;
-class UPawnAlertComponent;
 class UPawnSensingComponent;
 class UOutlineComponent;
-class USphereComponent;
 class UAudioComponent;
+class USphereComponent;
 class UFrozenPawnImpactComponent;
-class USoundBase;
 class UHitReactionComponent;
-class AActor;
 class UHealthComponentBase;
+class AActor;
+class USoundBase;
 class UHealthComponent;
 class UDamageTag;
 

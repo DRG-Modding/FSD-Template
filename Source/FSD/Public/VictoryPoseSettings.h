@@ -4,8 +4,8 @@
 #include "Engine/DataAsset.h"
 #include "VictoryPoseSettings.generated.h"
 
-class UTexture2D;
 class UVictoryPose;
+class UTexture2D;
 class AActor;
 class UActorComponent;
 

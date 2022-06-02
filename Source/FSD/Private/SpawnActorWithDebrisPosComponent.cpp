@@ -1,8 +1,8 @@
 #include "SpawnActorWithDebrisPosComponent.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
 class UCurveFloat;
+class AActor;
 class AProceduralSetup;
 class UDebrisPositioning;
 

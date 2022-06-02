@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ItemUpgrade.h"
 #include "ProjectileSwitch.h"
+#include "ItemUpgrade.h"
 #include "UpgradeValues.h"
 #include "WeaponSwitchProjectileUpgrade.generated.h"
 
 class AFSDPlayerState;
-class UWeaponHitCounterComponent;
 class AActor;
+class UWeaponHitCounterComponent;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UWeaponSwitchProjectileUpgrade : public UItemUpgrade {

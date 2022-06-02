@@ -4,8 +4,8 @@
 #include "UObject/NoExportTypes.h"
 #include "PlayerCharacterFunctionLibrary.generated.h"
 
-class AFSDPlayerState;
 class UObject;
+class AFSDPlayerState;
 class APlayerCharacter;
 class AActor;
 

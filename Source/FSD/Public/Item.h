@@ -5,35 +5,35 @@
 #include "UObject/NoExportTypes.h"
 #include "SaveGameIDInterface.h"
 #include "Skinnable.h"
-#include "AudioWithCooldown.h"
-#include "ItemIDInterface.h"
 #include "LoadoutItem.h"
+#include "ItemIDInterface.h"
 #include "PlaySoundInterface.h"
-#include "UObject/NoExportTypes.h"
-#include "Engine/EngineTypes.h"
+#include "AudioWithCooldown.h"
 #include "UObject/NoExportTypes.h"
 #include "ItemLoadoutAnimations.h"
+#include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "Item.generated.h"
 
+class UCurveFloat;
 class UAudioComponent;
 class UCameraShakeBase;
-class UItemCharacterAnimationSet;
+class AItem;
 class APlayerCharacter;
 class UItemID;
+class ACharacter;
 class UUpgradableItemComponent;
-class USceneComponent;
-class UCurveFloat;
-class USoundAttenuation;
 class USoundBase;
-class UFirstPersonStaticMeshComponent;
 class UDialogDataAsset;
 class UItemsBarIcon;
+class USceneComponent;
+class USoundAttenuation;
 class USoundConcurrency;
-class ACharacter;
 class UStaticMeshComponent;
+class UFirstPersonStaticMeshComponent;
+class UItemCharacterAnimationSet;
 class USkinEffect;
 class UTexture2D;
-class AItem;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API AItem : public AActor, public ISaveGameIDInterface, public ISkinnable, public IItemIDInterface, public ILoadoutItem, public IPlaySoundInterface {

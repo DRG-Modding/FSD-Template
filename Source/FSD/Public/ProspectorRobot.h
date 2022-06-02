@@ -4,8 +4,8 @@
 #include "EProspectorRobotState.h"
 #include "ProspectorRobot.generated.h"
 
-class UMaterialInstanceDynamic;
 class AActor;
+class UMaterialInstanceDynamic;
 
 UCLASS(Blueprintable)
 class AProspectorRobot : public AEnemyDeepPathfinderCharacter {

@@ -9,12 +9,12 @@
 #include "EDamageType.h"
 #include "MinersManual.generated.h"
 
-class UBiome;
+class UMissionTemplate;
 class UEnemyMinersManualData;
 class ULoreScreenMasterWidget;
-class UMissionTemplate;
-class UObject;
 class UMinersManualData;
+class UBiome;
+class UObject;
 
 UCLASS(Blueprintable)
 class UMinersManual : public UDataAsset {

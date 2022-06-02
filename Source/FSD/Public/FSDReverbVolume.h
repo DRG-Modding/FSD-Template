@@ -3,8 +3,8 @@
 #include "GameFramework/Actor.h"
 #include "FSDReverbVolume.generated.h"
 
-class UReverbEffect;
 class USphereComponent;
+class UReverbEffect;
 
 UCLASS(Blueprintable)
 class AFSDReverbVolume : public AActor {

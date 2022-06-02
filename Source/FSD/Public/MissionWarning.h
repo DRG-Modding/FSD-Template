@@ -3,10 +3,10 @@
 #include "Engine/DataAsset.h"
 #include "MissionWarning.generated.h"
 
+class UMissionStat;
 class UMutator;
 class URunningMissionBP;
 class UObjective;
-class UMissionStat;
 class UMissionMutator;
 class UTexture2D;
 

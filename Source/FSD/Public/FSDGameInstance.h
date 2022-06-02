@@ -1,88 +1,89 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "OnXBoxChangeUserDelegate.h"
-#include "GenericSignatureDelegate.h"
 #include "Engine/GameInstance.h"
-#include "CravityChangedSignatureDelegate.h"
-#include "ESteamSearchRegion.h"
-#include "ShowCharacterSelectorSignatureDelegate.h"
-#include "ESteamServerJoinStatus.h"
-#include "ShowCharacterWorldSignatureDelegate.h"
-#include "TemporaryBuffChangedDelegate.h"
 #include "JoinSignatureDelegate.h"
+#include "ESteamSearchRegion.h"
+#include "GeneratedMissionSignatureDelegate.h"
+#include "ESteamServerJoinStatus.h"
+#include "OnXBoxChangeUserDelegate.h"
+#include "PendingRewards.h"
+#include "GenericSignatureDelegate.h"
+#include "TemporaryBuffChangedDelegate.h"
 #include "OnLoaderStartSigDelegate.h"
 #include "OnPlayLevelSequenceInCharacterWorldSigDelegate.h"
-#include "FSDServerSearchOptions.h"
+#include "ShowCharacterWorldSignatureDelegate.h"
 #include "StartForgingDelegate.h"
 #include "ForgingDoneDelegate.h"
 #include "TutorialManagerSignatureDelegate.h"
-#include "OnXBoxAccountPickerClosedDelegate.h"
 #include "PlayerCharacterSignatureDelegate.h"
+#include "ShowCharacterSelectorEquipSignatureDelegate.h"
 #include "ShowReconnectControllerDelegate.h"
+#include "FindSessionsCallbackProxy.h"
+#include "OnXBoxAccountPickerClosedDelegate.h"
 #include "OnHDRGammaChangedDelegate.h"
+#include "CravityChangedSignatureDelegate.h"
 #include "NewPostProcessingManagerDelegate.h"
 #include "SkinSignatureDelegate.h"
-#include "PendingRewards.h"
 #include "ClaimableRewardEntry.h"
+#include "ShowCharacterSelectorSignatureDelegate.h"
 #include "ShowViewer3DSignatureDelegate.h"
 #include "ShowCharacterSelectorEqiupSlotSignatureDelegate.h"
-#include "ShowCharacterSelectorEquipSignatureDelegate.h"
 #include "ShowCharacterSelectorRotateSignatureDelegate.h"
 #include "ShowCharacterSelectorEndScreenSignatureDelegate.h"
 #include "UObject/NoExportTypes.h"
-#include "GeneratedMissionSignatureDelegate.h"
-#include "EDisconnectReason.h"
 #include "BoscoChangedDelegate.h"
+#include "FSDServerSearchOptions.h"
 #include "MinersManualNotificationDelegate.h"
 #include "OnPrivilegeCheckCompleteDelegate.h"
+#include "EDisconnectReason.h"
 #include "EAlwaysLoadedWorlds.h"
 #include "ECharselectionCameraLocation.h"
-#include "FindSessionsCallbackProxy.h"
-#include "UObject/NoExportTypes.h"
 #include "EMinersManualSection.h"
 #include "ECharacterSelectorItemStatus.h"
 #include "Engine/EngineBaseTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "PendingRewardsStats.h"
 #include "NetworkConnectionInfo.h"
 #include "FSDGameInstance.generated.h"
 
-class UFSDSessionUpdater;
-class UCampaignManager;
-class USchematic;
-class AMolly;
-class USpecialEvent;
-class AProceduralSetup;
 class UHUDWarningWidget;
-class USoundBase;
-class UFSDSaveGame;
-class ULevelSequence;
-class UGoogleAnalyticsWrapper;
-class APostProcessingManager;
-class UMouseCursorWidget;
-class ACharacterSelectionSwitcher;
-class UTemporaryBuff;
-class ABosco;
-class UWorld;
-class AActor;
-class UMissionResultInfo;
-class UFSDCloudLoadSave;
-class UDifficultySetting;
-class UIconGenerationManager;
-class UWindowWidget;
-class APlayerCharacter;
-class ATutorialManager;
+class AMolly;
+class AProceduralSetup;
+class UCampaignManager;
 class UGeneratedMission;
+class ACharacterSelectionSwitcher;
+class UFSDCloudLoadSave;
+class AActor;
+class UMouseCursorWidget;
+class UDifficultySetting;
+class UGoogleAnalyticsWrapper;
+class USchematic;
+class UMissionResultInfo;
 class UDeepDiveManager;
+class APlayerCharacter;
+class UMutator;
+class UFSDSaveGame;
+class USpecialEvent;
+class UObject;
+class ATutorialManager;
+class UWindowWidget;
+class APostProcessingManager;
+class ABosco;
+class UIconGenerationManager;
+class UWorld;
+class UFSDSessionUpdater;
 class UFSDSendToURL;
 class UFSDFriendsAndInvites;
+class UTemporaryBuff;
+class ULevelSequence;
 class USoundSubmix;
-class UObject;
 class UNetDriver;
-class UMutator;
 class AFSDPlayerController;
 class UItemSkin;
+class UFSDGameUserSettings;
 class UTexture2D;
+class USoundBase;
 
 UCLASS(Blueprintable, NonTransient)
 class FSD_API UFSDGameInstance : public UGameInstance {
@@ -524,6 +525,9 @@ public:
     void SetHasSeenInfoScreen();
     
     UFUNCTION(BlueprintCallable)
+    void SetGlobalMissionSeed(int32 Seed);
+    
+    UFUNCTION(BlueprintCallable)
     void SetFSDPassword(const FString& pw);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -697,6 +701,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void CancelJoin();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ApplyGameUserSettings(UFSDGameUserSettings* Settings);
     
     UFUNCTION(BlueprintCallable)
     UHUDWarningWidget* AddWarningToHUD(TSubclassOf<UHUDWarningWidget> WidgetClass, UTexture2D* Texture, USoundBase* PingSound);

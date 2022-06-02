@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EMissionStructure.h"
 #include "GameFramework/Actor.h"
+#include "EMissionStructure.h"
 #include "DeepDiveTesterItem.h"
 #include "DeepDiveTester.generated.h"
 

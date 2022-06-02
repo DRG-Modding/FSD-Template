@@ -6,10 +6,10 @@
 #include "Components/TimelineComponent.h"
 #include "ZipLineProjectile.generated.h"
 
-class UPointLightComponent;
-class UTimelineComponent;
-class UMaterialInstanceDynamic;
 class UCurveFloat;
+class UTimelineComponent;
+class UPointLightComponent;
+class UMaterialInstanceDynamic;
 class UStatusEffect;
 
 UCLASS(Abstract, Blueprintable)

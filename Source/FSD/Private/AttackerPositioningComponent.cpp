@@ -1,7 +1,7 @@
 #include "AttackerPositioningComponent.h"
 
-class AActor;
 class UHealthComponentBase;
+class AActor;
 
 void UAttackerPositioningComponent::UnregisterAttacker(AActor* Attacker, bool IsFlying) {
 }

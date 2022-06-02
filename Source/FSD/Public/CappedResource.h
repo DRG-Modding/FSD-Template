@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ResourceChangedSignatureDelegate.h"
 #include "UObject/Object.h"
-#include "UObject/NoExportTypes.h"
+#include "ResourceChangedSignatureDelegate.h"
 #include "ResourceAddedSignatureDelegate.h"
 #include "ResourceFullSignatureDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "CappedResource.generated.h"
 
 class UResourceData;

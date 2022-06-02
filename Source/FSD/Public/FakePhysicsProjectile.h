@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FakeMoveState.h"
 #include "ProjectileBase.h"
 #include "FakeMoverState.h"
+#include "FakeMoveState.h"
 #include "Engine/EngineTypes.h"
 #include "FakePhysicsProjectile.generated.h"
 

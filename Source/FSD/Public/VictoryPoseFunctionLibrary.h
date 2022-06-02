@@ -3,9 +3,9 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "VictoryPoseFunctionLibrary.generated.h"
 
+class UPlayerCharacterID;
 class UVictoryPose;
 class UObject;
-class UPlayerCharacterID;
 
 UCLASS(Blueprintable)
 class UVictoryPoseFunctionLibrary : public UBlueprintFunctionLibrary {

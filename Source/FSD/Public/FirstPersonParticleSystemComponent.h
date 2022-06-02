@@ -6,8 +6,8 @@
 #include "Engine/EngineTypes.h"
 #include "FirstPersonParticleSystemComponent.generated.h"
 
-class UParticleSystem;
 class USceneComponent;
+class UParticleSystem;
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFirstPersonParticleSystemComponent : public UParticleSystemComponent {

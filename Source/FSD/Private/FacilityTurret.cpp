@@ -1,7 +1,7 @@
 #include "FacilityTurret.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/SceneComponent.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Components/SceneComponent.h"
 
 void AFacilityTurret::SetIsAttacking(bool IsAttacking) {
 }

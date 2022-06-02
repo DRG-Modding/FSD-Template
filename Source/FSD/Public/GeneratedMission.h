@@ -8,12 +8,12 @@
 #include "GeneratedMission.generated.h"
 
 class UMissionMutator;
-class UMutator;
 class UBiome;
-class UMissionComplexity;
-class UMissionWarning;
 class UMissionTemplate;
 class UObjective;
+class UMutator;
+class UMissionWarning;
+class UMissionComplexity;
 class UMissionDuration;
 class UMissionDNA;
 class ULevelSequence;

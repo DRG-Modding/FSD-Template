@@ -10,11 +10,11 @@
 #include "PathfinderSplineSegmentCollisionComponent.h"
 
 class APlayerCharacter;
-class UHealthComponentBase;
-class UTrackBuilderUsable;
 class UMaterialInterface;
 class APipelineStart;
 class APipelineSegment;
+class UHealthComponentBase;
+class UTrackBuilderUsable;
 class ATrackBuilderSegment;
 
 void APipelineSegment::UpdateSplineMesh(USplineMeshComponent* InMesh, float InProgress, bool InMoveEndCap) {

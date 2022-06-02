@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESonyControllerMotionMapping.h"
 #include "ESonyControllerLightMode.h"
+#include "ESonyControllerMotionMapping.h"
 #include "SonyInputSettings.generated.h"
 
 USTRUCT(BlueprintType)

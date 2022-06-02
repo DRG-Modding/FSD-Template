@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TextStyleOverride.h"
-#include "Components/RichTextBlock.h"
 #include "Fonts/SlateFontInfo.h"
+#include "Components/RichTextBlock.h"
+#include "TextStyleOverride.h"
 #include "Styling/SlateColor.h"
 #include "RichTextStylable.generated.h"
 

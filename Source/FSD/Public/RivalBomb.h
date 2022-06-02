@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "GameEvent.h"
+#include "UObject/NoExportTypes.h"
 #include "RivalBomb.generated.h"
 
-class ARivalBombNode;
-class AGem;
 class UDebrisPositioning;
 class UCurveFloat;
+class ARivalBombNode;
+class AGem;
 
 UCLASS(Blueprintable)
 class ARivalBomb : public AGameEvent {

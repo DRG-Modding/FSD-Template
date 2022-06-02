@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SpiderAnimInstance.h"
 #include "ESharkEnemyState.h"
+#include "SpiderAnimInstance.h"
 #include "SharkAnimInstance.generated.h"
 
 UCLASS(Abstract, Blueprintable, NonTransient)

@@ -5,8 +5,8 @@
 #include "UpgradeValues.h"
 #include "CapacityUpgrade.generated.h"
 
-class AActor;
 class AFSDPlayerState;
+class AActor;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UCapacityUpgrade : public UStandardItemUpgrade {

@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/DataAsset.h"
 #include "CharacterSettings.generated.h"
 
-class APlayerCharacter;
-class UInventoryList;
-class UTerrainPlacementComponent;
 class UPlayerCharacterID;
-class UDebrisPositioning;
-class USkeletalMesh;
-class UUseAnimationSetting;
-class ACarriableItem;
-class UCampaignManager;
-class UPlayerCharacterData;
-class UCharacterVanityItems;
 class UDialogDataAsset;
+class UInventoryList;
+class USkeletalMesh;
+class APlayerCharacter;
+class ACarriableItem;
+class UUseAnimationSetting;
+class UCampaignManager;
+class UCharacterVanityItems;
+class UDebrisPositioning;
+class UTerrainPlacementComponent;
+class UPlayerCharacterData;
 class UAsyncManager;
 
 UCLASS(Blueprintable)
@@ -64,6 +64,15 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USkeletalMesh* ThinNeck;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    USkeletalMesh* FlatEars;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    USkeletalMesh* FaceOnly;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    USkeletalMesh* EyesOnly;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftClassPtr<ACarriableItem> CarriableBagClass;

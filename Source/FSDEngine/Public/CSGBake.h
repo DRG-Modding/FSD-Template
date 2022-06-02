@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "BakeEntry.h"
+#include "Engine/DataAsset.h"
 #include "BakeSettings.h"
 #include "UObject/NoExportTypes.h"
 #include "CSGBake.generated.h"

@@ -3,9 +3,9 @@
 #include "Components/ActorComponent.h"
 #include "TutorialComponent.generated.h"
 
+class AFSDPlayerController;
 class APlayerCharacter;
 class AFSDPlayerState;
-class AFSDPlayerController;
 class UFSDSaveGame;
 class ATutorialManager;
 

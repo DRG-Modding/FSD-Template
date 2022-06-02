@@ -1,8 +1,8 @@
 #include "PawnAfflictionComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UHealthComponentBase;
 class UPawnAffliction;
+class UHealthComponentBase;
 
 void UPawnAfflictionComponent::PushAffliction(UPawnAffliction* Affliction, bool onlyIfNotActive) {
 }

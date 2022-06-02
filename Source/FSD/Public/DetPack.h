@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "EInputKeys.h"
+#include "GameFramework/Actor.h"
 #include "DetPack.generated.h"
 
-class UProjectileMovementComponent;
-class ADetPackItem;
+class UHealthComponentBase;
 class UExplosionComponent;
+class UProjectileMovementComponent;
 class USingleUsableComponent;
 class USimpleHealthComponent;
+class ADetPackItem;
 class APlayerCharacter;
-class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class ADetPack : public AActor {

@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "Curves/CurveFloat.h"
 #include "WeakpointChannel.h"
+#include "Curves/CurveFloat.h"
 #include "DamageData.h"
 #include "WeakpointGlowComponent.generated.h"
 
-class UFSDPhysicalMaterial;
-class UMeshComponent;
-class UHealthComponentBase;
-class USkeletalMeshComponent;
 class UCurveFloat;
+class UHealthComponentBase;
+class UFSDPhysicalMaterial;
+class USkeletalMeshComponent;
+class UMeshComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UWeakpointGlowComponent : public UActorComponent {

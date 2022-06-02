@@ -2,17 +2,17 @@
 #include "CoreMinimal.h"
 #include "Animation/AnimInstance.h"
 #include "FootStepNotifyTarget.h"
+#include "GliderAnimSync.h"
 #include "ECharacterState.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "GliderAnimSync.h"
 #include "ECharacterMoveDirection.h"
 #include "PlayerAnimInstance.generated.h"
 
-class UParticleSystem;
-class APlayerCharacter;
-class USoundCue;
 class UItemCharacterAnimationSet;
+class APlayerCharacter;
+class UParticleSystem;
+class USoundCue;
 class UAnimMontage;
 class UUseAnimationSetting;
 

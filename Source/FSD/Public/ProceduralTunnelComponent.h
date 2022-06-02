@@ -3,8 +3,8 @@
 #include "Components/ActorComponent.h"
 #include "ProceduralTunnelComponent.generated.h"
 
-class UCaveInfluencer;
 class UTunnelParameters;
+class UCaveInfluencer;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UProceduralTunnelComponent : public UActorComponent {

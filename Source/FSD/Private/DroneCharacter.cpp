@@ -1,6 +1,6 @@
 #include "DroneCharacter.h"
-#include "HealthComponent.h"
 #include "OutlineComponent.h"
+#include "HealthComponent.h"
 #include "SimpleObjectInfoComponent.h"
 
 ADroneCharacter::ADroneCharacter() {

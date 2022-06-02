@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EMinersManualSinglePage.h"
-#include "EHUDVisibilityReason.h"
 #include "GameFramework/PlayerController.h"
-#include "LocalVoiceStatusDelegate.h"
 #include "PlatformComponent.h"
+#include "LocalVoiceStatusDelegate.h"
+#include "EHUDVisibilityReason.h"
 #include "EMinersManualSection.h"
 #include "UObject/NoExportTypes.h"
 #include "EDisconnectReason.h"

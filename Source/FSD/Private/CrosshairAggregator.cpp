@@ -1,9 +1,9 @@
 #include "CrosshairAggregator.h"
 
 class UUserWidget;
-class APlayerController;
-class UObject;
 class UCustomAmmoCountWidget;
+class UObject;
+class APlayerController;
 
 void UCrosshairAggregator::SetCrosshair(UUserWidget* Widget) {
 }

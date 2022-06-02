@@ -1,7 +1,7 @@
 #include "TemporaryBuff.h"
 
-class AFSDPlayerController;
 class APlayerCharacter;
+class AFSDPlayerController;
 
 void UTemporaryBuff::DeActivateBuff(AFSDPlayerController* Player) const {
 }

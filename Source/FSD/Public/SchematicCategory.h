@@ -5,8 +5,8 @@
 #include "ESchematicType.h"
 #include "SchematicCategory.generated.h"
 
-class UDialogDataAsset;
 class UTexture2D;
+class UDialogDataAsset;
 class UEventRewardType;
 
 UCLASS(Blueprintable)

@@ -6,10 +6,10 @@
 #include "EFSDGoogleAnalyticsProperties.h"
 #include "GoogleAnalyticsWrapper.generated.h"
 
-class APlayerController;
 class AFSDGameState;
-class AActor;
+class APlayerController;
 class USeasonChallenge;
+class AActor;
 class AFSDPlayerState;
 
 UCLASS(Blueprintable)

@@ -4,8 +4,8 @@
 #include "PlaySoundInterface.h"
 #include "CharacterStateComponent.generated.h"
 
-class APlayerCharacter;
 class UDialogDataAsset;
+class APlayerCharacter;
 class UPlayerMovementComponent;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

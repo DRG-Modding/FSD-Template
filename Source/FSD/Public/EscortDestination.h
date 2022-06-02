@@ -5,9 +5,9 @@
 #include "ShellCrackedSignatureDelegate.h"
 #include "EscortDestination.generated.h"
 
+class UTerrainMaterial;
 class UDamageComponent;
 class ADeepCSGWorld;
-class UTerrainMaterial;
 
 UCLASS(Blueprintable)
 class FSD_API AEscortDestination : public AActor {

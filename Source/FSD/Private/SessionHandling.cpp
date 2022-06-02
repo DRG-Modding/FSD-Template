@@ -2,10 +2,10 @@
 #include "Templates/SubclassOf.h"
 
 class UObject;
-class UFSDGameInstance;
-class APlayerCharacter;
-class UPlayerCharacterID;
 class UBiome;
+class UFSDGameInstance;
+class UPlayerCharacterID;
+class APlayerCharacter;
 class UDifficultySetting;
 class UMissionTemplate;
 

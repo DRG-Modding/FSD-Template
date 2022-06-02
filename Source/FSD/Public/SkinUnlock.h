@@ -3,9 +3,9 @@
 #include "UnlockReward.h"
 #include "SkinUnlock.generated.h"
 
-class UItemSkin;
 class UItemID;
 class UPlayerCharacterID;
+class UItemSkin;
 
 UCLASS(Blueprintable, EditInlineNew)
 class USkinUnlock : public UUnlockReward {

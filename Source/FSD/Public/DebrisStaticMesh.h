@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DecalData.h"
 #include "EDebrisMeshShadows.h"
 #include "EDebrisMeshCollisionProfile.h"
+#include "DecalData.h"
 #include "DebrisStaticMesh.generated.h"
 
 class UStaticMesh;

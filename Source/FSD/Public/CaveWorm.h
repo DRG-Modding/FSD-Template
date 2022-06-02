@@ -5,11 +5,11 @@
 #include "UObject/NoExportTypes.h"
 #include "CaveWorm.generated.h"
 
-class UObject;
-class UHealthComponentBase;
 class USimpleHealthComponent;
-class AResourceChunk;
 class UResourceData;
+class UObject;
+class AResourceChunk;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable, MinimalAPI)
 class ACaveWorm : public ADeepPathfinderCharacter {

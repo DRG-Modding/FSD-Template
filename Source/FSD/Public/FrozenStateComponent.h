@@ -4,8 +4,8 @@
 #include "RandRange.h"
 #include "FrozenStateComponent.generated.h"
 
-class UFSDPhysicalMaterial;
 class USoundBase;
+class UFSDPhysicalMaterial;
 
 UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFrozenStateComponent : public UCharacterStateComponent {

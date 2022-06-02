@@ -7,14 +7,14 @@
 #include "EVanitySlot.h"
 #include "CharacterVanityComponent.generated.h"
 
+class UMaterialInterface;
 class UCharacterVanityItems;
 class UBeardColorVanityItem;
 class UMaterialInstanceDynamic;
-class UMaterialInterface;
-class UVanityItem;
-class USkeletalMeshComponent;
 class UObject;
+class UVanityItem;
 class UPlayerCharacterID;
+class USkeletalMeshComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCharacterVanityComponent : public UActorComponent {

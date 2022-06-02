@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayTagContainer.h"
 #include "DamageBonusBase.h"
+#include "GameplayTagContainer.h"
 #include "TargetSpecificDamageBonus.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

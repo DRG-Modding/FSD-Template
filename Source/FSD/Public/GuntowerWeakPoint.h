@@ -3,13 +3,13 @@
 #include "FSDPawn.h"
 #include "GuntowerWeakPoint.generated.h"
 
-class UWeakpointGlowComponent;
-class USoundCue;
 class USceneComponent;
+class UParticleSystem;
 class UEnemyHealthComponent;
 class UStaticMeshComponent;
-class UParticleSystem;
+class UWeakpointGlowComponent;
 class UDamageClass;
+class USoundCue;
 class UHealthComponentBase;
 
 UCLASS(Blueprintable)

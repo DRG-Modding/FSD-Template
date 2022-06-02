@@ -5,11 +5,11 @@
 #include "DefaultPickaxeParts.h"
 #include "PickaxeSettings.generated.h"
 
-class UItemID;
 class UPlayerCharacterID;
 class APickaxePreviewActor;
 class UAnimMontage;
 class UPickaxePart;
+class UItemID;
 
 UCLASS(Blueprintable)
 class UPickaxeSettings : public UDataAsset {

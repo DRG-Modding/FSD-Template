@@ -3,13 +3,13 @@
 #include "EnemyPawn.h"
 #include "ParasiteEnemy.generated.h"
 
-class UHealthComponentBase;
-class USceneComponent;
-class USkeletalMeshComponent;
-class USoundBase;
-class UStaticMeshComponent;
 class UParticleSystem;
 class UOutlineComponent;
+class USceneComponent;
+class USkeletalMeshComponent;
+class UStaticMeshComponent;
+class USoundBase;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class AParasiteEnemy : public AEnemyPawn {

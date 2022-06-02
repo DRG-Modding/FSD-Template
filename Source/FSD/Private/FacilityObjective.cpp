@@ -3,13 +3,13 @@
 #include "Templates/SubclassOf.h"
 
 class AProceduralSetup;
-class AActor;
 class UEncounterManager;
 class UDebrisPositioning;
-class ATetherStation;
-class APawn;
-class UCappedResource;
+class AActor;
 class ARessuplyPod;
+class APawn;
+class ATetherStation;
+class UCappedResource;
 
 void UFacilityObjective::SpawnFacilityEncounters(AProceduralSetup* setup, UEncounterManager* Encounters, UDebrisPositioning* Positioning) {
 }

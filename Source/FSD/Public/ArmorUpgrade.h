@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "StandardItemUpgrade.h"
-#include "EArmorUpgradeType.h"
 #include "UpgradeValues.h"
+#include "EArmorUpgradeType.h"
 #include "ArmorUpgrade.generated.h"
 
-class AActor;
 class AFSDPlayerState;
+class AActor;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UArmorUpgrade : public UStandardItemUpgrade {

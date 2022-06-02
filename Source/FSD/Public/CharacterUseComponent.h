@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "ECustomUsableType.h"
 #include "EndUsingDelegateDelegate.h"
 #include "BeginUsingDelegateDelegate.h"
-#include "DepositingEventDelegate.h"
+#include "ECustomUsableType.h"
 #include "CharacterUseState.h"
+#include "DepositingEventDelegate.h"
 #include "CharacterUseComponent.generated.h"
 
 class AActor;
@@ -42,6 +42,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCharacterUseState LocalState;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FCharacterUseState LastRequestedState;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UUsableComponentBase* LastBeginUseUsable;

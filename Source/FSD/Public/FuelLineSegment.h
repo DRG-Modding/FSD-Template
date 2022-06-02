@@ -5,10 +5,10 @@
 #include "UObject/NoExportTypes.h"
 #include "FuelLineSegment.generated.h"
 
+class USceneComponent;
 class USplineMeshComponent;
 class USplineComponent;
 class UStaticMeshComponent;
-class USceneComponent;
 class USimpleHealthComponent;
 class UHealthComponentBase;
 

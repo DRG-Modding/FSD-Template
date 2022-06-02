@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "IRandRange.h"
 #include "HitscanBaseComponent.h"
-#include "Engine/NetSerialization.h"
 #include "HitDelegateDelegate.h"
+#include "Engine/NetSerialization.h"
+#include "IRandRange.h"
 #include "Engine/NetSerialization.h"
 #include "HitscanComponent.generated.h"
 
-class AActor;
-class UFXSystemAsset;
 class USoundCue;
+class UFXSystemAsset;
+class AActor;
 class UFSDPhysicalMaterial;
 class UPrimitiveComponent;
 

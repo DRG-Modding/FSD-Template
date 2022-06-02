@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ResourceFullSignatureDelegate.h"
 #include "Components/ActorComponent.h"
 #include "ResourceChangedSignatureDelegate.h"
 #include "ResourceAddedSignatureDelegate.h"
+#include "ResourceFullSignatureDelegate.h"
 #include "ResourceAddedDelegate.h"
 #include "ResourcesComponent.generated.h"
 
-class UResourceData;
 class UCappedResource;
+class UResourceData;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UResourcesComponent : public UActorComponent {

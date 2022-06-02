@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "IRandRange.h"
 #include "SavableDataAsset.h"
-#include "RandInterval.h"
 #include "VeteranComposition.h"
+#include "RandInterval.h"
+#include "IRandRange.h"
 #include "DifficultySetting.generated.h"
 
 class UCampaign;
-class UObject;
 class UMissionStat;
+class UObject;
 
 UCLASS(Blueprintable)
 class FSD_API UDifficultySetting : public USavableDataAsset {

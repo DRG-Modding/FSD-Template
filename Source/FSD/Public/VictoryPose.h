@@ -4,11 +4,11 @@
 #include "Aquisitionable.h"
 #include "VictoryPose.generated.h"
 
+class UObject;
+class UItemAquisitionBase;
+class UPlayerCharacterID;
 class UAnimSequence;
 class AActor;
-class UItemAquisitionBase;
-class UObject;
-class UPlayerCharacterID;
 
 UCLASS(Blueprintable)
 class UVictoryPose : public USavablePrimaryDataAsset, public IAquisitionable {

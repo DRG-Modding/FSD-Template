@@ -1,9 +1,9 @@
 #include "EnemyWaveManager.h"
 #include "Templates/SubclassOf.h"
 
-class APawn;
 class UEnemyWaveController;
 class UObject;
+class APawn;
 
 UEnemyWaveController* UEnemyWaveManager::TriggerWave(TSubclassOf<UEnemyWaveController> waveClass) {
     return NULL;

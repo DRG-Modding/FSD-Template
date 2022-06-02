@@ -4,8 +4,8 @@
 #include "GameplayTagContainer.h"
 #include "ExterminationReward.generated.h"
 
-class AActor;
 class UResourceData;
+class AActor;
 
 UCLASS(Abstract, Blueprintable)
 class UExterminationReward : public URunningMissionBP {

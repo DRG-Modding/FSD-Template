@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EChatSenderType.h"
 #include "EChatMessageType.h"
+#include "EChatSenderType.h"
 #include "GameFramework/OnlineReplStructs.h"
 #include "FSDChatMessage.generated.h"
 

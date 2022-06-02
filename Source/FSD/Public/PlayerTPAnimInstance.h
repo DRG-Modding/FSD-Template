@@ -4,8 +4,8 @@
 #include "UObject/NoExportTypes.h"
 #include "PlayerTPAnimInstance.generated.h"
 
-class UBlendSpace1D;
 class UAnimSequence;
+class UBlendSpace1D;
 
 UCLASS(Blueprintable, NonTransient)
 class UPlayerTPAnimInstance : public UPlayerAnimInstance {

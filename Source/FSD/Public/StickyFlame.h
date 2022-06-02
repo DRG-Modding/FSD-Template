@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DecalData.h"
 #include "GameFramework/Actor.h"
+#include "DecalData.h"
 #include "UObject/NoExportTypes.h"
 #include "StickyFlame.generated.h"
 
-class UAudioComponent;
-class UParticleSystemComponent;
 class UStatusEffectTriggerComponent;
+class UParticleSystemComponent;
+class UAudioComponent;
 
 UCLASS(Blueprintable)
 class AStickyFlame : public AActor {

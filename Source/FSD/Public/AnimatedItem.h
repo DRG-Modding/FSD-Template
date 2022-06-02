@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Item.h"
+#include "UObject/NoExportTypes.h"
 #include "AnimatedItem.generated.h"
 
-class UPlayerAnimInstance;
 class USkinnableComponent;
+class UPlayerAnimInstance;
 class USkeletalMeshComponent;
 class UAnimMontage;
 class UItemCharacterAnimationSet;

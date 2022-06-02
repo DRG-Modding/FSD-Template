@@ -4,8 +4,8 @@
 #include "Engine/DataAsset.h"
 #include "DamageBonusBase.generated.h"
 
-class UDamageBonusBase;
 class UDamageCondition;
+class UDamageBonusBase;
 class UDamageComponent;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)

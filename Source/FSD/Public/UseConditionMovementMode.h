@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovementModeCombo.h"
 #include "UseConditionBase.h"
+#include "MovementModeCombo.h"
 #include "UseConditionMovementMode.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

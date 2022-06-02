@@ -5,9 +5,9 @@
 #include "DeepDiveBank.h"
 #include "DeepDiveManager.generated.h"
 
+class UGeneratedMission;
 class UFSDEventsHandler;
 class UDeepDive;
-class UGeneratedMission;
 
 UCLASS(Blueprintable)
 class UDeepDiveManager : public UObject {

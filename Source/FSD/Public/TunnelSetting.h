@@ -4,8 +4,8 @@
 #include "TunnelSettingItem.h"
 #include "TunnelSetting.generated.h"
 
-class UFloodFillSettings;
 class UTunnelSegmentSetting;
+class UFloodFillSettings;
 
 UCLASS(Blueprintable)
 class UTunnelSetting : public UDataAsset {

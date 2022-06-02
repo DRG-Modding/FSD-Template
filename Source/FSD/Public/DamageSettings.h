@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Engine/DataAsset.h"
 #include "DecalData.h"
+#include "Engine/DataAsset.h"
 #include "Curves/CurveFloat.h"
 #include "DamageSettings.generated.h"
 
-class UDamageTag;
 class UStatusEffect;
 class UDamageComponent;
-class USoundCue;
 class UNiagaraSystem;
+class USoundCue;
+class UDamageTag;
 class UDamageImpulse;
 
 UCLASS(Blueprintable)

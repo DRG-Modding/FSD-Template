@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "DeepDiveTemplateItem.generated.h"
 
-class UMissionDuration;
 class UMissionTemplate;
+class UMissionDuration;
 
 USTRUCT(BlueprintType)
 struct FDeepDiveTemplateItem {

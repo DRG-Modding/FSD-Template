@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataTable.h"
 #include "IRandRange.h"
+#include "Engine/DataTable.h"
 #include "PricingTierEntry.generated.h"
 
 USTRUCT(BlueprintType)

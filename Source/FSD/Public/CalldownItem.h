@@ -5,10 +5,10 @@
 #include "UObject/NoExportTypes.h"
 #include "CalldownItem.generated.h"
 
-class AActor;
-class UResourceData;
 class UItemPlacerAggregator;
 class ARessuplyPod;
+class UResourceData;
+class AActor;
 
 UCLASS(Blueprintable)
 class ACalldownItem : public AAnimatedItem {

@@ -6,8 +6,8 @@
 #include "UpgradeValues.h"
 #include "LockOnWeaponUpgrade.generated.h"
 
-class AItem;
 class AFSDPlayerState;
+class AItem;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class ULockOnWeaponUpgrade : public UStandardItemUpgrade {

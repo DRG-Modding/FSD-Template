@@ -5,8 +5,8 @@
 #include "UpgradeValues.h"
 #include "FearAoEBonusUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AActor;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UFearAoEBonusUpgrade : public UItemUpgrade {

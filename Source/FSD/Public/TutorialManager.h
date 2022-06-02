@@ -3,10 +3,10 @@
 #include "GameFramework/Actor.h"
 #include "TutorialManager.generated.h"
 
-class AFSDPlayerController;
-class UTutorialComponent;
 class APlayerCharacter;
+class AFSDPlayerController;
 class UFSDSaveGame;
+class UTutorialComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ATutorialManager : public AActor {

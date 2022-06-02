@@ -3,10 +3,10 @@
 #include "NiagaraComponent.h"
 #include "CoilgunTrailSpawner.h"
 
-class UFSDPhysicalMaterial;
 class AActor;
-class UPrimitiveComponent;
 class UHealthComponentBase;
+class UFSDPhysicalMaterial;
+class UPrimitiveComponent;
 class ACoilgunWeaponTrail;
 
 void ACoilGun::UpdateAfflictions() {

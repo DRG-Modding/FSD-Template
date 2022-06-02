@@ -4,8 +4,8 @@
 #include "BlueprintFindFriendSessionsResultDelegateDelegate.h"
 #include "FindFriendSessionsBlueprintCallProxy.generated.h"
 
-class UObject;
 class UFindFriendSessionsBlueprintCallProxy;
+class UObject;
 
 UCLASS(Blueprintable)
 class UFindFriendSessionsBlueprintCallProxy : public UOnlineBlueprintCallProxyBase {

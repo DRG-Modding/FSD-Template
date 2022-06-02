@@ -1,9 +1,9 @@
 #include "FSDEvent.h"
 
-class APlayerController;
 class UObject;
 class UFSDEvent;
 class UTexture2D;
+class APlayerController;
 
 void UFSDEvent::MarkClaimableRewardsSeen(UObject* WorldContext) {
 }

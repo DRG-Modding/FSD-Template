@@ -1,8 +1,8 @@
 #include "FSDGameUserSettings.h"
 
-class UObject;
-class APlayerController;
 class USoundClass;
+class APlayerController;
+class UObject;
 class UDifficultySetting;
 class UFSDGameUserSettings;
 
@@ -102,6 +102,9 @@ void UFSDGameUserSettings::SetServerSearchPasswordRequired(bool InPasswordRequir
 }
 
 void UFSDGameUserSettings::SetScreenResolutionToBeApplied(FIntPoint Resolution) {
+}
+
+void UFSDGameUserSettings::SetReflexMode(ENVidiaReflexMode NewReflexMode) {
 }
 
 void UFSDGameUserSettings::SetPushToTalk(bool bEnable) {
@@ -261,6 +264,10 @@ bool UFSDGameUserSettings::IsUpscalingTypeSupported(int32 Type) const {
     return false;
 }
 
+bool UFSDGameUserSettings::IsNvReflexAvailable() {
+    return false;
+}
+
 bool UFSDGameUserSettings::IsDx12Enabled() {
     return false;
 }
@@ -374,6 +381,10 @@ float UFSDGameUserSettings::GetSharpening() const {
 
 FIntPoint UFSDGameUserSettings::GetScreenResolutionToBeApplied() {
     return FIntPoint{};
+}
+
+ENVidiaReflexMode UFSDGameUserSettings::GetReflexMode() const {
+    return ENVidiaReflexMode::Disabled;
 }
 
 bool UFSDGameUserSettings::GetPushToTalk() const {
@@ -615,9 +626,9 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->ServerSearchPasswordRequired = true;
     this->volumeCharacterVoice = 101.01f;
     this->volumeMissionControl = 100.37f;
-    this->volumeMaster = 34.85f;
+    this->volumeMaster = 57.92f;
     this->volumeSFX = 97.90f;
-    this->volumeMusic = 0.10f;
+    this->volumeMusic = 103.95f;
     this->CurrentAudioOutputDeviceId = TEXT("{0.0.0.00000000}.{2a5cebd2-74c5-49ee-b332-663973012ccd}");
     this->UseDefaultAudioOutputDevice = true;
     this->Sharpening = 0.00f;
@@ -630,6 +641,7 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->NvidiaDlssMode = UDLSSMode::Auto;
     this->NvidiaDlssSharpness = 0.50f;
     this->FSDResolutionScale = 1.00f;
+    this->ReflexMode = ENVidiaReflexMode::Disabled;
     this->soundClassCharacterVoices = NULL;
     this->soundClassMissionControl = NULL;
     this->soundClassMaster = NULL;

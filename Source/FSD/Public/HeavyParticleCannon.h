@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AmmoDrivenWeapon.h"
-#include "DecalData.h"
-#include "ReflectionTraceResult.h"
 #include "BoosterModuleActiveDelegate.h"
+#include "DecalData.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "ReflectionTraceResult.h"
 #include "HeavyParticleCannon.generated.h"
 
-class UStickyFlameSpawner;
-class UNiagaraSystem;
-class UDamageComponent;
-class UReflectionHitscanComponent;
 class UFirstPersonNiagaraComponent;
 class UNiagaraComponent;
+class UDamageComponent;
+class UStickyFlameSpawner;
+class UReflectionHitscanComponent;
 class USoundBase;
+class UNiagaraSystem;
 class AActor;
 class UTerrainType;
 class UFSDPhysicalMaterial;

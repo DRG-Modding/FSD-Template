@@ -7,12 +7,12 @@
 #include "ECampaignMutators.h"
 #include "Campaign.generated.h"
 
+class UDifficultySetting;
 class UCampaignMission;
+class UMissionStat;
 class UCampaignRequirement;
 class UPlayerCharacterID;
-class UDifficultySetting;
 class UTexture2D;
-class UMissionStat;
 class UGameActivityAssignmentType;
 class UCampaign;
 class AFSDPlayerController;

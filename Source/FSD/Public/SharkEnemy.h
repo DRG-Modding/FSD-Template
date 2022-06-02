@@ -6,20 +6,20 @@
 #include "ESharkEnemyState.h"
 #include "SharkEnemy.generated.h"
 
-class UFakePhysGrabberComponent;
-class UPawnSensingComponent;
 class UDamageComponent;
+class UParticleSystem;
+class UPawnSensingComponent;
+class UFakePhysGrabberComponent;
 class USphereComponent;
 class UInDangerComponent;
 class UParticleSystemComponent;
 class UEnemyComponent;
 class USoundCue;
 class UFakeMoverSettings;
-class UParticleSystem;
+class UHealthComponentBase;
 class AActor;
 class APawn;
 class UPrimitiveComponent;
-class UHealthComponentBase;
 
 UCLASS(Abstract, Blueprintable)
 class ASharkEnemy : public AEnemyDeepPathfinderCharacter {

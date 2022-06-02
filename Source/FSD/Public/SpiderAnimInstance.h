@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "EnemyAnimInstance.h"
-#include "FootStepNotifyTarget.h"
-#include "EMoveDirection.h"
 #include "RandomWalkCycleEntry.h"
+#include "EnemyAnimInstance.h"
+#include "EMoveDirection.h"
+#include "FootStepNotifyTarget.h"
+#include "UObject/NoExportTypes.h"
 #include "ESpiderDeathAnimationCategory.h"
 #include "SpiderAnimInstance.generated.h"
 
 class UEnemyPlaySoundKey;
-class USoundCue;
 class UParticleSystem;
+class USoundCue;
 class UEnemySpawnEffectsKey;
 class UAnimSequenceBase;
 

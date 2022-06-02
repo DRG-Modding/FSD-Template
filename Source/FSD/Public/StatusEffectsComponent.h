@@ -6,9 +6,9 @@
 #include "StatusEffectsComponent.generated.h"
 
 class AActor;
-class UStatusEffectExclusiveKey;
-class UStatusEffect;
 class UHealthComponentBase;
+class UStatusEffect;
+class UStatusEffectExclusiveKey;
 class UObject;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

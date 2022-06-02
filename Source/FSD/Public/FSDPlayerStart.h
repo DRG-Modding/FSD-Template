@@ -3,8 +3,8 @@
 #include "GameFramework/Actor.h"
 #include "FSDPlayerStart.generated.h"
 
-class AFSDPlayerController;
 class UPlayerCharacterID;
+class AFSDPlayerController;
 
 UCLASS(Blueprintable)
 class AFSDPlayerStart : public AActor {

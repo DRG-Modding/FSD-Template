@@ -5,10 +5,10 @@
 #include "YesNoPromptSettings.h"
 #include "YesNoPromptAction.generated.h"
 
-class UObject;
 class UYesNoPromptWidget;
 class UYesNoPromptAction;
 class UResourceData;
+class UObject;
 
 UCLASS(Blueprintable)
 class UYesNoPromptAction : public UBlueprintAsyncActionBase {

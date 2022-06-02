@@ -6,8 +6,8 @@
 #include "CaveVine.generated.h"
 
 class UHealthComponent;
-class USplineMeshComponent;
 class USceneComponent;
+class USplineMeshComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ACaveVine : public AActor {

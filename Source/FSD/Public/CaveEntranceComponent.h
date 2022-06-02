@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/PrimitiveComponent.h"
-#include "ECaveEntrancePriority.h"
 #include "ECaveEntranceType.h"
+#include "ECaveEntrancePriority.h"
 #include "CaveEntranceComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

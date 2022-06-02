@@ -4,10 +4,10 @@
 #include "UObject/NoExportTypes.h"
 #include "ResourceChunk.generated.h"
 
-class APlayerCharacter;
 class USimpleObjectInfoComponent;
 class USoundCue;
 class UResourceData;
+class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class FSD_API AResourceChunk : public AFSDPhysicsActor {

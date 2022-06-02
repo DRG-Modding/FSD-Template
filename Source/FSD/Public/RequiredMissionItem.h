@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "RequiredMissionItem.generated.h"
 
-class UMissionDuration;
-class UMissionComplexity;
 class UMissionTemplate;
+class UMissionComplexity;
+class UMissionDuration;
 
 USTRUCT(BlueprintType)
 struct FRequiredMissionItem {

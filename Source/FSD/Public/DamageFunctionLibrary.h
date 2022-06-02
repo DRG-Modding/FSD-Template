@@ -5,11 +5,11 @@
 #include "DamageData.h"
 #include "DamageFunctionLibrary.generated.h"
 
-class UPawnStatsComponent;
-class UDamageClass;
 class UDamageTag;
 class UObject;
+class UPawnStatsComponent;
 class AActor;
+class UDamageClass;
 class UDamageImpulse;
 class USkeletalMeshComponent;
 class ULimbDismembermentList;

@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
-#include "GameplayTagContainer.h"
 #include "GameplayTagAssetInterface.h"
+#include "GameplayTagContainer.h"
 #include "MiningPodDialogs.h"
 #include "EMiningPodMission.h"
 #include "EMiningPodState.h"
@@ -13,13 +13,13 @@
 #include "GameplayTagContainer.h"
 #include "MiningPod.generated.h"
 
-class UAutoCarverComponent;
-class UObjectivesManager;
 class UCurveFloat;
+class UAutoCarverComponent;
 class UBoxComponent;
-class UOutlineComponent;
-class AMiningPod;
 class UObject;
+class UOutlineComponent;
+class UObjectivesManager;
+class AMiningPod;
 class AMolly;
 
 UCLASS(Blueprintable)
@@ -68,6 +68,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EMiningPodMission MissionType;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool WaitForPlayerSpawns;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool HasLanded;

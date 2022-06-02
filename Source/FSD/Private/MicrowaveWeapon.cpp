@@ -3,9 +3,9 @@
 #include "CapsuleHitscanComponent.h"
 
 class UPrimitiveComponent;
-class UFSDPhysicalMaterial;
-class AActor;
 class UHealthComponentBase;
+class AActor;
+class UFSDPhysicalMaterial;
 
 void AMicrowaveWeapon::UpdateMuzzleAnim(bool InIsFiring) {
 }
@@ -82,6 +82,10 @@ AMicrowaveWeapon::AMicrowaveWeapon() {
     this->RadiantSuperheaterActive = false;
     this->RadiantSuperheaterFrostShockChance = 0.50f;
     this->RadiantSuperheaterHeatShockChance = 0.50f;
+    this->ShotCountToProcFrostShock = 4;
+    this->ShotCountToProcHeatShock = 8;
+    this->ShotCountToStartColdTempAmplifier = 4;
+    this->ShotCountToStartHeatTempAmplifier = 4;
     this->RadiantSuperheaterMinColdDamage = 50.00f;
     this->RadiantSuperheaterMinHeatDamage = 50.00f;
     this->RadiantSuperheaterFrostTransferFactor = 0.50f;

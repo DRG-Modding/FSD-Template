@@ -3,9 +3,9 @@
 #include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
-#include "StageCompleteSigDelegate.h"
-#include "GameplayTagContainer.h"
 #include "GameplayTagAssetInterface.h"
+#include "GameplayTagContainer.h"
+#include "StageCompleteSigDelegate.h"
 #include "DelegateEventDelegate.h"
 #include "ProgressChangedSigDelegate.h"
 #include "UObject/NoExportTypes.h"
@@ -13,9 +13,9 @@
 #include "GameEvent.generated.h"
 
 class AEventStarterButton;
+class ARessuplyPod;
 class UChildActorComponent;
 class UDialogDataAsset;
-class ARessuplyPod;
 class AProceduralSetup;
 class UDebrisPositioning;
 

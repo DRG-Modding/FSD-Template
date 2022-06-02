@@ -7,9 +7,9 @@
 #include "ThrowableItem.generated.h"
 
 class AThrowableActor;
-class UItemUpgrade;
-class UAnimMontage;
 class AItem;
+class UAnimMontage;
+class UItemUpgrade;
 class AActor;
 
 UCLASS(Blueprintable)

@@ -2,10 +2,10 @@
 
 class UObject;
 class AActor;
-class UAudioComponent;
-class UDecalComponent;
 class UFXSystemComponent;
+class UDecalComponent;
 class UMaterialInterface;
+class UAudioComponent;
 
 UFXSystemComponent* UFSDGameplayStatics::SpawnScaledEmitterAtLocation(UObject* WorldContextObject, FScaledEffect ScaledEffect, FVector Location, FRotator Rotation, bool bAutoDestroy) {
     return NULL;

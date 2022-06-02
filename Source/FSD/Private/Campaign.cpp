@@ -1,13 +1,13 @@
 #include "Campaign.h"
 #include "Templates/SubclassOf.h"
 
-class APlayerController;
+class UDifficultySetting;
 class UObject;
-class UCampaignMission;
 class UCampaign;
+class UCampaignMission;
+class APlayerController;
 class UTexture2D;
 class AFSDPlayerController;
-class UDifficultySetting;
 
 bool UCampaign::IsComplete() const {
     return false;

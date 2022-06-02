@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "FlareMeta.h"
 #include "Components/ActorComponent.h"
 #include "ShadowQualityChangedDelegate.h"
+#include "FlareMeta.h"
 #include "FlareController.generated.h"
 
 class AActor;

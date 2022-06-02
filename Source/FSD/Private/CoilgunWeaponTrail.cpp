@@ -1,8 +1,8 @@
 #include "CoilgunWeaponTrail.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/SceneComponent.h"
-#include "Components/CapsuleComponent.h"
 #include "NiagaraComponent.h"
+#include "Components/CapsuleComponent.h"
+#include "Components/SceneComponent.h"
 
 class UPrimitiveComponent;
 class AActor;

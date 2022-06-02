@@ -4,11 +4,11 @@
 #include "GameFramework/Actor.h"
 #include "TreasureBeacon.generated.h"
 
+class ATreasureContainer;
 class UCurveFloat;
 class USceneComponent;
 class UTerrainPlacementComponent;
 class UDebrisPositioning;
-class ATreasureContainer;
 
 UCLASS(Blueprintable)
 class FSD_API ATreasureBeacon : public AActor {

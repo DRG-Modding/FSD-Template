@@ -2,15 +2,15 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
-#include "ABillityChargeProgressDelegate.h"
 #include "AbillityChargeUsedSigDelegate.h"
+#include "ABillityChargeProgressDelegate.h"
 #include "BoscoAbillityComponent.generated.h"
 
 class AActor;
+class UAnimSequenceBase;
+class USoundBase;
 class UItemUpgrade;
 class AProjectileBase;
-class USoundBase;
-class UAnimSequenceBase;
 class ABosco;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

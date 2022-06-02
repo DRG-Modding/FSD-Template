@@ -7,10 +7,10 @@
 #include "CharacterSightComponent.generated.h"
 
 class AActor;
-class UTemperatureComponent;
 class UPrimitiveComponent;
-class USimpleObjectInfoComponent;
 class APlayerCharacter;
+class USimpleObjectInfoComponent;
+class UTemperatureComponent;
 class UPawnAfflictionComponent;
 class UHealth;
 class IHealth;

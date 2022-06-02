@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "OnAsyncAoE_CompleteDelegate.h"
 #include "Components/ActorComponent.h"
 #include "OnEnemyKilledDelegateDelegate.h"
 #include "OnEnemyDamagedDelegateDelegate.h"
 #include "OnNoTargetHitDelegate.h"
-#include "OnAsyncAoE_CompleteDelegate.h"
 #include "EDamageComponentType.h"
 #include "EArmorDamageType.h"
 #include "GameplayTagContainer.h"
@@ -13,8 +13,8 @@
 #include "UObject/NoExportTypes.h"
 #include "DamageComponent.generated.h"
 
-class UDamageImpulse;
 class UDamageClass;
+class UDamageImpulse;
 class UDamageBonusBase;
 class UDamageModifier;
 class UDamageTag;

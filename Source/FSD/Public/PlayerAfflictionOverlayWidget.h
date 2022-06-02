@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Blueprint/UserWidget.h"
+#include "UObject/NoExportTypes.h"
 #include "PlayerAfflictionOverlayWidget.generated.h"
 
-class UTexture2D;
 class UPlayerAfflictionOverlay;
+class UTexture2D;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UPlayerAfflictionOverlayWidget : public UUserWidget {

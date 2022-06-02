@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EOnProjectileImpactBehaviourEnum.h"
 #include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
-#include "ProjectileImpact.h"
 #include "Engine/EngineTypes.h"
 #include "Engine/NetSerialization.h"
+#include "ProjectileImpact.h"
+#include "EOnProjectileImpactBehaviourEnum.h"
 #include "Engine/NetSerialization.h"
 #include "ProjectileBase.generated.h"
 
-class USoundCue;
-class USphereComponent;
 class UTerrainMaterial;
 class UProjectileUpgradeElement;
+class USoundCue;
+class USphereComponent;
 class UPrimitiveComponent;
 class AProjectileBase;
 class UDamageComponent;

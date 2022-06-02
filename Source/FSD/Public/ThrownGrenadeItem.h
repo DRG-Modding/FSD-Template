@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EThrownGrenadeItemState.h"
 #include "Item.h"
 #include "RejoinListener.h"
 #include "UObject/NoExportTypes.h"
+#include "EThrownGrenadeItemState.h"
 #include "UObject/NoExportTypes.h"
 #include "ThrownGrenadeItem.generated.h"
 
 class UPlayerAnimInstance;
-class AGrenade;
 class UItemCharacterAnimationSet;
+class AGrenade;
 class UGrenadeAnimationSet;
 class UStaticMeshComponent;
 

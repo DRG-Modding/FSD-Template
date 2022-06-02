@@ -6,8 +6,8 @@
 #include "UpgradeValues.h"
 #include "RandomDamageUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AActor;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class URandomDamageUpgrade : public UItemUpgrade {

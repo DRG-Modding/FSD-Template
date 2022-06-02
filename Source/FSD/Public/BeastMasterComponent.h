@@ -6,8 +6,8 @@
 
 class UDamageComponent;
 class UActorComponent;
-class AFSDPawn;
 class APlayerCharacter;
+class AFSDPawn;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UBeastMasterComponent : public UFloatPerkComponent {

@@ -3,9 +3,9 @@
 #include "Templates/SubclassOf.h"
 #include "Components/ChildActorComponent.h"
 
+class AEventStarterButton;
 class ARessuplyPod;
 class AActor;
-class AEventStarterButton;
 class AProceduralSetup;
 class UDebrisPositioning;
 

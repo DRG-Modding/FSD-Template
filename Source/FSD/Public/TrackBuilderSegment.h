@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "ETrackBuildPlacementState.h"
 #include "TrackBuilderPoint.h"
 #include "UObject/NoExportTypes.h"
-#include "ETrackBuildPlacementState.h"
 #include "TrackBuilderSegment.generated.h"
 
+class AItem;
 class UTrackBuilderUsable;
 class APlayerCharacter;
-class AItem;
 class UTrackBuilderConnectPoint;
 class ATrackBuilderSegment;
 

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "SavablePrimaryDataAsset.h"
-#include "RefundableInterface.h"
 #include "Craftable.h"
+#include "RefundableInterface.h"
 #include "Aquisitionable.h"
 #include "EVanitySlot.h"
 #include "CraftingCost.h"
@@ -10,15 +10,15 @@
 #include "VanityItem.generated.h"
 
 class UItemAquisitionBase;
-class UDLCBase;
+class AFSDPlayerState;
 class UIconGenerationCameraKey;
 class UVanityEventSourceDataAsset;
+class UDLCBase;
 class UResourceData;
 class UPlayerCharacterID;
 class UObject;
-class AFSDPlayerState;
-class UTexture;
 class APlayerCharacter;
+class UTexture;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UVanityItem : public USavablePrimaryDataAsset, public ICraftable, public IRefundableInterface, public IAquisitionable {

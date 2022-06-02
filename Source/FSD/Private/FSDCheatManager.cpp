@@ -4,11 +4,11 @@
 class UPlayerCharacterID;
 class AFSDAIController;
 class UEnemyDescriptor;
-class UBaseCritterDescriptor;
-class APlayerCharacter;
 class APawn;
+class UBaseCritterDescriptor;
 class AActor;
 class UObject;
+class APlayerCharacter;
 class UResourceData;
 
 void UFSDCheatManager::SwitchCharacter(UPlayerCharacterID* characterID) {

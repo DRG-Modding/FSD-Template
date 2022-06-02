@@ -6,13 +6,13 @@
 #include "EnemyPawn.generated.h"
 
 class UEnemyComponent;
-class UEnemyPawnAfflictionComponent;
 class UPawnStatsComponent;
 class UEnemyHealthComponent;
+class UEnemyPawnAfflictionComponent;
 class UMaterialInterface;
+class UAnimMontage;
 class UMeshComponent;
 class USkeletalMeshComponent;
-class UAnimMontage;
 class UAnimInstance;
 
 UCLASS(Abstract, Blueprintable)

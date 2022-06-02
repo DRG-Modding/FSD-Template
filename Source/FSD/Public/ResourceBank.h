@@ -3,8 +3,8 @@
 #include "UsableComponentBase.h"
 #include "ResourceBank.generated.h"
 
-class APlayerCharacter;
 class AFSDGameState;
+class APlayerCharacter;
 class USoundBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

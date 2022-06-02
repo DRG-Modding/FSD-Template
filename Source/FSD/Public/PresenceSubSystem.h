@@ -3,8 +3,8 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "PresenceSubSystem.generated.h"
 
-class UCommunityGoalWrapper;
 class UDiscordWrapper;
+class UCommunityGoalWrapper;
 
 UCLASS(Blueprintable)
 class UPresenceSubSystem : public UGameInstanceSubsystem {

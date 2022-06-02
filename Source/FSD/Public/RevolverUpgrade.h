@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "StandardItemUpgrade.h"
-#include "ERevolerUpgrades.h"
 #include "UpgradeValues.h"
+#include "ERevolerUpgrades.h"
 #include "RevolverUpgrade.generated.h"
 
-class AItem;
 class AFSDPlayerState;
+class AItem;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class URevolverUpgrade : public UStandardItemUpgrade {

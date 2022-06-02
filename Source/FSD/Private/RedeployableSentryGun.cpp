@@ -1,11 +1,11 @@
 #include "RedeployableSentryGun.h"
 #include "Net/UnrealNetwork.h"
-#include "OutlineComponent.h"
 #include "ActorTrackingComponent.h"
+#include "OutlineComponent.h"
 
-class USkeletalMeshComponent;
 class APlayerCharacter;
 class AActor;
+class USkeletalMeshComponent;
 
 void ARedeployableSentryGun::ToggleOutlineAndIcon(bool Visible) {
 }

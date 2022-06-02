@@ -3,8 +3,8 @@
 #include "FSDUserWidget.h"
 #include "HUDWarningWidget.generated.h"
 
-class USoundBase;
 class UTexture2D;
+class USoundBase;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UHUDWarningWidget : public UFSDUserWidget {

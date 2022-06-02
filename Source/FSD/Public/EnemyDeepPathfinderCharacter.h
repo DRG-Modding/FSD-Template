@@ -5,11 +5,11 @@
 #include "QueuedMontage.h"
 #include "EnemyDeepPathfinderCharacter.generated.h"
 
-class UAnimMontage;
 class UEnemyHealthComponent;
 class UMeshComponent;
-class UMaterialInterface;
+class UAnimMontage;
 class USkeletalMeshComponent;
+class UMaterialInterface;
 class UAnimInstance;
 
 UCLASS(Blueprintable)

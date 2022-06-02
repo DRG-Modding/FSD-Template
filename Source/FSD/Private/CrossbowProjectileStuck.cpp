@@ -3,8 +3,8 @@
 #include "Components/SphereComponent.h"
 
 class APlayerCharacter;
-class USceneComponent;
 class UHealthComponentBase;
+class USceneComponent;
 
 void ACrossbowProjectileStuck::OnUsedBy(APlayerCharacter* Player, EInputKeys Key) {
 }

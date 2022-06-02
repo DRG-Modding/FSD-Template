@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "WeaponRicochetDelegateDelegate.h"
 #include "Components/ActorComponent.h"
-#include "Upgradable.h"
 #include "Engine/NetSerialization.h"
+#include "Upgradable.h"
+#include "WeaponRicochetDelegateDelegate.h"
 #include "WeaponFiredDelegateDelegate.h"
 #include "WeaponFireEndedDelegateDelegate.h"
 #include "WeaponFireComponent.generated.h"

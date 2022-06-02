@@ -8,9 +8,9 @@
 
 class AActor;
 class UPhysicsAsset;
+class UParticleSystem;
 class UPhysicalMaterial;
 class USoundCue;
-class UParticleSystem;
 class UPrimitiveComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

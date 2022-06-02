@@ -6,8 +6,8 @@
 #include "ItemID.generated.h"
 
 class AActor;
-class UPlayerCharacterID;
 class UItemData;
+class UPlayerCharacterID;
 class AItem;
 
 UCLASS(Blueprintable)

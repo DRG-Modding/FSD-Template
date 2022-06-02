@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Net/OnlineBlueprintCallProxyBase.h"
-#include "FindSessionsCallbackProxy.h"
 #include "Net/OnlineBlueprintCallProxyBase.h"
+#include "FindSessionsCallbackProxy.h"
 #include "FSDJoinSessionCallbackProxy.generated.h"
 
 class APlayerController;
-class UObject;
 class UFSDJoinSessionCallbackProxy;
+class UObject;
 
 UCLASS(Blueprintable, MinimalAPI)
 class UFSDJoinSessionCallbackProxy : public UOnlineBlueprintCallProxyBase {

@@ -9,12 +9,12 @@
 
 class UDebrisPositioning;
 class UGemResourceData;
-class URepairableComponent;
 class UDebrisBase;
-class AMiniMule;
 class AMiningPod;
-class UCurveFloat;
+class AMiniMule;
+class URepairableComponent;
 class AProceduralSetup;
+class UCurveFloat;
 class AActor;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

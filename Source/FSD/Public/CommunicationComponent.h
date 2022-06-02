@@ -2,19 +2,19 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
-#include "GameplayTagContainer.h"
 #include "MissionShoutDelegateDelegate.h"
 #include "MissionShoutEndDelegateDelegate.h"
+#include "GameplayTagContainer.h"
 #include "ActiveOutline.h"
 #include "MissionShoutQueueItem.h"
 #include "EShoutType.h"
 #include "UObject/NoExportTypes.h"
 #include "CommunicationComponent.generated.h"
 
+class UCharacterShoutsData;
 class UAudioComponent;
 class UShoutWidget;
 class UDialogDataAsset;
-class UCharacterShoutsData;
 class APlayerCharacter;
 class UObject;
 class USoundBase;

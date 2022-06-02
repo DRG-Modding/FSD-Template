@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Animation/AnimInstance.h"
 #include "UObject/NoExportTypes.h"
+#include "Animation/AnimInstance.h"
 #include "JellyEggAnimInstance.generated.h"
 
 UCLASS(Blueprintable, NonTransient)

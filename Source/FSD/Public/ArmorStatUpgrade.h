@@ -5,9 +5,9 @@
 #include "UpgradeValues.h"
 #include "ArmorStatUpgrade.generated.h"
 
-class AActor;
-class UPawnStat;
 class AFSDPlayerState;
+class UPawnStat;
+class AActor;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UArmorStatUpgrade : public UStandardItemUpgrade {

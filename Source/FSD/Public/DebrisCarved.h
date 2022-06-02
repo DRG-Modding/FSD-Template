@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "DebrisInfluence.h"
 #include "DebrisBase.h"
 #include "UDebrisCarveMesh.h"
 #include "EDebrisCarvedType.h"
-#include "CarveOptionsCellSize.h"
+#include "DebrisInfluence.h"
 #include "ECarveFilterType.h"
+#include "CarveOptionsCellSize.h"
 #include "DebrisCarved.generated.h"
 
-class UTerrainMaterial;
 class AActor;
+class UTerrainMaterial;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UDebrisCarved : public UDebrisBase {

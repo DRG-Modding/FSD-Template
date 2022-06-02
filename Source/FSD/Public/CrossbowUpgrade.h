@@ -6,9 +6,9 @@
 #include "UpgradeValues.h"
 #include "CrossbowUpgrade.generated.h"
 
+class AFSDPlayerState;
 class AItem;
 class ACrossbowProjectileBase;
-class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UCrossbowUpgrade : public UStandardItemUpgrade {

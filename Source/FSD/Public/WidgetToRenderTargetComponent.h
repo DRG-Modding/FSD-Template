@@ -7,8 +7,8 @@
 #include "UObject/NoExportTypes.h"
 #include "WidgetToRenderTargetComponent.generated.h"
 
-class UTextureRenderTarget2D;
 class UUserWidget;
+class UTextureRenderTarget2D;
 class ULocalPlayer;
 class UMaterialInterface;
 class UMaterialInstanceDynamic;

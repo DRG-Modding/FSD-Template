@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "DeepCSGFloatTree.h"
-#include "UObject/NoExportTypes.h"
 #include "DeepCSGFloatTreePacked.h"
+#include "UObject/NoExportTypes.h"
+#include "DeepCSGFloatTree.h"
 #include "StaticMeshCarver.generated.h"
 
 class UStaticMesh;

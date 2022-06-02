@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "EPerkSlotType.h"
 #include "EPerkUsageType.h"
+#include "EPerkSlotType.h"
 #include "PerkFunctionLibrary.generated.h"
 
 class UPlayerCharacterID;

@@ -5,8 +5,8 @@
 #include "AttackerInfo.h"
 #include "AttackerPositioningComponent.generated.h"
 
-class AActor;
 class UHealthComponentBase;
+class AActor;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UAttackerPositioningComponent : public UActorComponent {

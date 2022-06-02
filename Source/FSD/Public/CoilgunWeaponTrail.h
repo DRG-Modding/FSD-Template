@@ -5,9 +5,9 @@
 #include "Engine/EngineTypes.h"
 #include "CoilgunWeaponTrail.generated.h"
 
-class USceneComponent;
-class UCapsuleComponent;
 class UNiagaraComponent;
+class UCapsuleComponent;
+class USceneComponent;
 class UStatusEffect;
 class UPrimitiveComponent;
 

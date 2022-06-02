@@ -3,10 +3,10 @@
 #include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
+#include "SentryGunMuzzleSetup.h"
+#include "WeaponFireOwner.h"
 #include "AmmoCountChangedEventDelegate.h"
 #include "Upgradable.h"
-#include "WeaponFireOwner.h"
-#include "SentryGunMuzzleSetup.h"
 #include "TracerData.h"
 #include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
@@ -16,13 +16,13 @@
 #include "UObject/NoExportTypes.h"
 #include "SentryGun.generated.h"
 
+class UHealthComponentBase;
+class USoundCue;
 class USkeletalMeshComponent;
 class AProjectile;
-class USoundCue;
 class UParticleSystem;
-class USoundBase;
-class UHealthComponentBase;
 class UWeaponFireComponent;
+class USoundBase;
 class UAudioComponent;
 class APlayerCharacter;
 

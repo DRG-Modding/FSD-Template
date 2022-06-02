@@ -5,11 +5,11 @@
 #include "UObject/NoExportTypes.h"
 #include "GameDLC.generated.h"
 
+class UTexture2D;
+class UWindowWidget;
+class UObject;
 class UResourceData;
 class UFileMediaSource;
-class UTexture2D;
-class UObject;
-class UWindowWidget;
 
 UCLASS(Blueprintable)
 class UGameDLC : public UDLCBase, public ISaveGameIDInterface {

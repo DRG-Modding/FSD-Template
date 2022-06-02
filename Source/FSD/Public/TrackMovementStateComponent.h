@@ -5,9 +5,9 @@
 #include "EExitTrackMode.h"
 #include "TrackMovementStateComponent.generated.h"
 
-class UAudioComponent;
-class USoundBase;
 class UDialogDataAsset;
+class USoundBase;
+class UAudioComponent;
 class AZipLineConnector;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

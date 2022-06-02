@@ -5,8 +5,8 @@
 #include "FloatPerkEffect.h"
 #include "FloatPerkAsset.generated.h"
 
-class UFloatPerkAsset;
 class UObject;
+class UFloatPerkAsset;
 
 UCLASS(Blueprintable)
 class UFloatPerkAsset : public UPerkAsset {

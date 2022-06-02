@@ -5,9 +5,9 @@
 #include "BarleySpawnItem.h"
 #include "DrinkSettings.generated.h"
 
+class UObject;
 class UResourceData;
 class UDrinkableDataAsset;
-class UObject;
 
 UCLASS(Blueprintable)
 class UDrinkSettings : public UDataAsset {

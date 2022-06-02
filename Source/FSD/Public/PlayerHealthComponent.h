@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "HealthRegeneratingChangedDelegate.h"
 #include "HealthComponent.h"
-#include "HealthRegenerationParams.h"
+#include "AudioWithCooldown.h"
 #include "RejoinListener.h"
 #include "FullHealthSignatureDelegate.h"
+#include "HealthRegeneratingChangedDelegate.h"
 #include "HitSigDelegate.h"
-#include "AudioWithCooldown.h"
+#include "HealthRegenerationParams.h"
 #include "PlayerHealthComponent.generated.h"
 
-class UCurveFloat;
 class APlayerCharacter;
+class UPlayerDamageTakenMutator;
+class AActor;
+class UCurveFloat;
 class UParticleSystem;
 class UParticleSystemComponent;
-class UPlayerDamageTakenMutator;
 class UStatusEffect;
 class AController;
-class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPlayerHealthComponent : public UHealthComponent, public IRejoinListener {

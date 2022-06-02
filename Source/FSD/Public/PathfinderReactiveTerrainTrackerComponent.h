@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ReactiveTerrainTrackerComponent.h"
 #include "RandRange.h"
+#include "ReactiveTerrainTrackerComponent.h"
 #include "PathfinderReactiveTerrainTrackerComponent.generated.h"
 
 class UFSDPhysicalMaterial;

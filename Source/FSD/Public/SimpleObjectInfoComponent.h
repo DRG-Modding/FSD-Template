@@ -5,10 +5,10 @@
 #include "SimpleObjectInfoData.h"
 #include "SimpleObjectInfoComponent.generated.h"
 
-class UTexture2D;
 class UDialogDataAsset;
-class UActorContextWidget;
+class UTexture2D;
 class USceneComponent;
+class UActorContextWidget;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USimpleObjectInfoComponent : public UObjectInfoComponent {

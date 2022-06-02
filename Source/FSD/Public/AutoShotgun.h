@@ -5,9 +5,9 @@
 #include "AutoShotgun.generated.h"
 
 class UHealthComponentBase;
-class UStatusEffect;
-class AActor;
 class UFSDPhysicalMaterial;
+class AActor;
+class UStatusEffect;
 class UPrimitiveComponent;
 
 UCLASS(Blueprintable)

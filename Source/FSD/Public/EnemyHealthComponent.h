@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "HealthComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "EEnemyHealthScaling.h"
 #include "EnemyHealthComponent.generated.h"
 
@@ -39,7 +39,7 @@ protected:
     
 public:
     UEnemyHealthComponent();
-    /*UFUNCTION(BlueprintCallable, BlueprintPure)*/
+    // UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMaxHealth() const;
     
 };

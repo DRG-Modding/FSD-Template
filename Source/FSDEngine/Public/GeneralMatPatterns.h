@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GeneralMatProperties.h"
 #include "EGeneralPattern.h"
+#include "GeneralMatProperties.h"
 #include "GeneralMatPatterns.generated.h"
 
 class UTerrainMaterialCore;

@@ -3,8 +3,8 @@
 #include "ItemUpgrade.h"
 #include "ConditionalDamageTagBonusUpgrade.generated.h"
 
-class UDamageTag;
 class UDamageCondition;
+class UDamageTag;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UConditionalDamageTagBonusUpgrade : public UItemUpgrade {

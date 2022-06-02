@@ -1,8 +1,8 @@
 #include "DamageComponent.h"
 #include "Templates/SubclassOf.h"
 
-class UFSDPhysicalMaterial;
 class UDamageComponent;
+class UFSDPhysicalMaterial;
 class AActor;
 class UPrimitiveComponent;
 

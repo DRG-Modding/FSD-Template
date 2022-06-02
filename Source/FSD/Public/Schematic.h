@@ -5,15 +5,15 @@
 #include "UObject/NoExportTypes.h"
 #include "Schematic.generated.h"
 
-class UResourceData;
-class USchematic;
-class USchematicItem;
-class USchematicPricingTier;
-class UObject;
-class USchematicCategory;
 class USchematicRarity;
+class USchematic;
 class UPlayerCharacterID;
+class USchematicPricingTier;
+class USchematicCategory;
+class USchematicItem;
+class UResourceData;
 class UFSDSaveGame;
+class UObject;
 class UTexture;
 
 UCLASS(Blueprintable, EditInlineNew)

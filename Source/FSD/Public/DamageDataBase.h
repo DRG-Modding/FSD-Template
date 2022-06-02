@@ -4,8 +4,8 @@
 #include "DamageDataBase.generated.h"
 
 class UFSDPhysicalMaterial;
-class UPrimitiveComponent;
 class UDamageImpulse;
+class UPrimitiveComponent;
 
 USTRUCT(BlueprintType)
 struct FDamageDataBase {

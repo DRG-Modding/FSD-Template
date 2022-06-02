@@ -3,16 +3,16 @@
 #include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
+#include "GameplayTagAssetInterface.h"
 #include "GameplayTagContainer.h"
 #include "ERessuplyPodState.h"
-#include "GameplayTagAssetInterface.h"
 #include "GameplayTagContainer.h"
 #include "RessuplyPod.generated.h"
 
+class UCurveFloat;
+class ARessuplyPod;
 class UDialogDataAsset;
 class UDamageComponent;
-class ARessuplyPod;
-class UCurveFloat;
 class UObject;
 
 UCLASS(Blueprintable)

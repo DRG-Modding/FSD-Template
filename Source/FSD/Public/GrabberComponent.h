@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ReleasedActorSigDelegate.h"
 #include "Components/ActorComponent.h"
 #include "GrabbedActorSigDelegate.h"
+#include "ReleasedActorSigDelegate.h"
 #include "GameplayTagContainer.h"
 #include "EOutline.h"
 #include "EGrabbedStateCameraMode.h"
 #include "GrabberComponent.generated.h"
 
-class UAudioComponent;
 class USkeletalMeshComponent;
-class ADeepPathfinderCharacter;
 class USoundCue;
+class UAudioComponent;
 class UDialogDataAsset;
+class ADeepPathfinderCharacter;
 class AActor;
 class UPrimitiveComponent;
 

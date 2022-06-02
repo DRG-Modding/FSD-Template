@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "EGeneratorIconType.h"
 #include "PickaxeSet.h"
 #include "EPickaxePartLocation.h"
-#include "UObject/NoExportTypes.h"
 #include "GenerateIconInfo.generated.h"
 
 class UPickaxePart;

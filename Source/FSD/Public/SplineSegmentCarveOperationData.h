@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ECarveFilterType.h"
 #include "CarveSplineSegment.h"
+#include "ECarveFilterType.h"
 #include "EPreciousMaterialOptions.h"
 #include "SplineSegmentCarveOperationData.generated.h"
 

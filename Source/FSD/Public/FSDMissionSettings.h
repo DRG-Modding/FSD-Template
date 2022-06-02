@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "Engine/DeveloperSettings.h"
 #include "MissionHazardSetting.h"
+#include "Engine/DeveloperSettings.h"
+#include "UObject/NoExportTypes.h"
 #include "FSDMissionSettings.generated.h"
 
-class UGeneratedMission;
-class UObject;
 class UDifficultySetting;
+class UObject;
+class UGeneratedMission;
 
 UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class UFSDMissionSettings : public UDeveloperSettings {

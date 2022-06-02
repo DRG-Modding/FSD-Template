@@ -1,8 +1,8 @@
 #include "RockEnemiesEvent.h"
 #include "Components/SkeletalMeshComponent.h"
 
-class APawn;
 class UHealthComponentBase;
+class APawn;
 
 void ARockEnemiesEvent::StopPowerupGeneration() {
 }

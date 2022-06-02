@@ -4,12 +4,12 @@
 #include "UObject/NoExportTypes.h"
 #include "LMGGuntoweModule.generated.h"
 
-class USoundCue;
-class USceneComponent;
 class UHitscanComponent;
-class UDamageComponent;
-class UAudioComponent;
 class UParticleSystem;
+class USceneComponent;
+class UDamageComponent;
+class USoundCue;
+class UAudioComponent;
 
 UCLASS(Blueprintable)
 class ALMGGuntoweModule : public AHostileTargetingGuntowerModule {

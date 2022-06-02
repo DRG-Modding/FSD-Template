@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
-#include "Components/ActorComponent.h"
 #include "RadarPointRemovedSignatureDelegate.h"
+#include "Components/ActorComponent.h"
 #include "RadarPointComponent.generated.h"
 
 class UUserWidget;

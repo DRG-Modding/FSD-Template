@@ -5,8 +5,8 @@
 #include "UObject/NoExportTypes.h"
 #include "AnimNotifyState_SpawnSkeletalMesh.generated.h"
 
-class UAnimSequenceBase;
 class USkeletalMesh;
+class UAnimSequenceBase;
 
 UCLASS(Blueprintable, CollapseCategories, EditInlineNew, MinimalAPI)
 class UAnimNotifyState_SpawnSkeletalMesh : public UAnimNotifyState {

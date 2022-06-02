@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "VanityMasterySettings.h"
 #include "VanityMasteryResult.h"
 #include "VanityMasterySave.h"
+#include "VanityMasterySettings.h"
 #include "CraftingCost.h"
 #include "VanityMasteryLibrary.generated.h"
 
-class UObject;
 class UPlayerCharacterID;
+class UObject;
 
 UCLASS(Blueprintable)
 class UVanityMasteryLibrary : public UBlueprintFunctionLibrary {

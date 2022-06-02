@@ -7,9 +7,9 @@
 #include "UObject/NoExportTypes.h"
 #include "PlaceableItem.generated.h"
 
+class UItemPlacerAggregator;
 class UCapacityHoldingItemAggregator;
 class AActor;
-class UItemPlacerAggregator;
 
 UCLASS(Blueprintable)
 class APlaceableItem : public AAnimatedItem, public IUpgradable, public IPlaceableInterface {

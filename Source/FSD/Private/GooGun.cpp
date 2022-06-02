@@ -1,5 +1,6 @@
 #include "GooGun.h"
 
+
 float AGooGun::GetOverChargeProgress() const {
     return 0.0f;
 }

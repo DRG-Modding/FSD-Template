@@ -4,8 +4,8 @@
 #include "DamageComponent.h"
 
 class UParticleSystem;
-class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
+class UPrimitiveComponent;
 class USoundCue;
 
 

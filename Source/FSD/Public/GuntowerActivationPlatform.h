@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ProgressUpdatedDelegate.h"
 #include "GameFramework/Actor.h"
-#include "PlayersInsideChangedDelegate.h"
-#include "OnFinishedDelegate.h"
 #include "Engine/EngineTypes.h"
+#include "PlayersInsideChangedDelegate.h"
+#include "ProgressUpdatedDelegate.h"
+#include "OnFinishedDelegate.h"
 #include "GuntowerActivationPlatform.generated.h"
 
-class USceneComponent;
-class USkeletalMeshComponent;
-class UCapsuleComponent;
-class AGuntowerModule;
 class UHealthComponentBase;
+class UCapsuleComponent;
+class USceneComponent;
 class AFSDPlayerState;
+class USkeletalMeshComponent;
+class AGuntowerModule;
 class UPrimitiveComponent;
 
 UCLASS(Blueprintable)

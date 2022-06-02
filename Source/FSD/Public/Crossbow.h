@@ -5,15 +5,15 @@
 #include "ProjectileSwitch.h"
 #include "Crossbow.generated.h"
 
-class UStatusEffect;
-class UProjectileLauncherBaseComponent;
-class AProjectileBase;
-class UCrossbowProjectileRecallable;
-class ACrossbowProjectileStuck;
-class UStaticMesh;
 class AActor;
+class UStaticMesh;
+class ACrossbowProjectileStuck;
+class AProjectileBase;
 class UAnimMontage;
+class UStatusEffect;
+class UCrossbowProjectileRecallable;
 class USoundCue;
+class UProjectileLauncherBaseComponent;
 
 UCLASS(Blueprintable)
 class ACrossbow : public AAmmoDrivenWeapon {

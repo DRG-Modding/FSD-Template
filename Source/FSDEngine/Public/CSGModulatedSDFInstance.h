@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DeepCSGFloatTree.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "CSGBase.h"
 #include "CSGSDFModulatedInstanceProperties.h"
 #include "BinaryTerrainMaterialCombiner.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "DeepCSGFloatTree.h"
 #include "CSGModulatedSDFInstance.generated.h"
 
 class UBakeConfig;

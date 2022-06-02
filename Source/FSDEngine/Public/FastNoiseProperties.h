@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EFNRotationType3D.h"
 #include "EFNNoiseType.h"
 #include "EFNCellularDistanceFunc.h"
-#include "EFNFractalType.h"
+#include "EFNRotationType3D.h"
 #include "EFNDomainWarpType.h"
 #include "EFNCellularReturnType.h"
+#include "EFNFractalType.h"
 #include "FastNoiseProperties.generated.h"
 
 USTRUCT(BlueprintType)

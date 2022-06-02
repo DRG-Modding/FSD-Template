@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "GameFramework/Actor.h"
-#include "EDefendPointState.h"
 #include "EInputKeys.h"
+#include "EDefendPointState.h"
+#include "GameFramework/Actor.h"
 #include "DefensePointActor.generated.h"
 
 class AGameEvent;

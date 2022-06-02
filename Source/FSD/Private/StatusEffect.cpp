@@ -22,6 +22,7 @@ UStatusEffect::UStatusEffect() {
     this->DamageClass = NULL;
     this->ExclusiveKey = NULL;
     this->CanStack = false;
+    this->MaxStack = 10;
     this->Duration = -1.00f;
     this->ApplyDurationAfterPop = false;
     this->RemoveOnDeath = true;

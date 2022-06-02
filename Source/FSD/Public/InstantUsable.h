@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UsableComponent.h"
 #include "UsedBySignatureDelegate.h"
+#include "UsableComponent.h"
 #include "UsableChangedSignatureDelegate.h"
 #include "InstantUsable.generated.h"
 

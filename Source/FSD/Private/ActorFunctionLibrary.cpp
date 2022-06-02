@@ -3,29 +3,29 @@
 
 class UItemID;
 class APlayerCharacter;
-class UWindowWidget;
-class APlayerController;
-class UObject;
 class USoundCue;
-class UHealthComponentBase;
+class UObject;
+class UWindowWidget;
+class UPathfinderCollisionComponent;
 class UMaterialInstanceDynamic;
+class APlayerController;
 class UUserWidget;
+class UHealthComponentBase;
 class AActor;
 class USceneComponent;
 class UFXSystemAsset;
-class UPathfinderCollisionComponent;
 class UFSDPhysicalMaterial;
 class UPlayerCharacterID;
+class UEnemyComponent;
 class UInventoryList;
+class AFSDGameMode;
 class UTexture2D;
 class UActorComponent;
 class UPostProcessComponent;
 class UBlendableInterface;
 class IBlendableInterface;
-class AFSDGameMode;
 class UMeshComponent;
 class UDamageClass;
-class UEnemyComponent;
 class AFSDGameState;
 
 void UActorFunctionLibrary::UnlockSpecificCharacters(TArray<APlayerCharacter*> Characters, ECharacterState UnlockIf, ECharacterState UnlockTo) {

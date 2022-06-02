@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EDeepMovementState.h"
 #include "UObject/NoExportTypes.h"
+#include "EDeepMovementState.h"
 #include "DeepRepPath.generated.h"
 
 USTRUCT(BlueprintType)

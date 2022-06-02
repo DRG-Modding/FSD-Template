@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "EInputKeys.h"
+#include "GameFramework/Actor.h"
 #include "ActivationObject.generated.h"
 
 class USingleUsableComponent;

@@ -1,20 +1,20 @@
 #include "GameFunctionLibrary.h"
 
-class UWindowWidget;
 class UObject;
-class UAudioComponent;
-class UWindowManager;
-class UFSDSaveGame;
-class USoundBase;
-class APlayerCharacter;
-class AFSDGameModeSpaceRig;
-class UGoogleAnalyticsWrapper;
-class AFSDGameState;
 class UAsyncManager;
+class UAudioComponent;
+class UWindowWidget;
+class USoundBase;
+class AFSDGameModeSpaceRig;
+class UWindowManager;
+class UDeepDiveManager;
+class APlayerCharacter;
+class UGoogleAnalyticsWrapper;
+class UFSDSaveGame;
+class AFSDGameState;
 class AFSDGameMode;
 class UFSDGameInstance;
 class UGameData;
-class UDeepDiveManager;
 class ADeepCSGWorld;
 class UCampaignManager;
 

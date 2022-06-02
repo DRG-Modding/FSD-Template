@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CustomCounterDelegateDelegate.h"
+#include "WidgetTextCounter.h"
+#include "Components/ActorComponent.h"
 #include "WidgetPing.h"
 #include "WidgetFade.h"
-#include "Components/ActorComponent.h"
-#include "WidgetTextCounter.h"
 #include "CustomCounter.h"
 #include "WidgetMover.h"
+#include "CustomCounterDelegateDelegate.h"
 #include "EPingType.h"
 #include "UObject/NoExportTypes.h"
 #include "EMoveType.h"
 #include "FSDWidgetEffectsComponent.generated.h"
 
-class UObject;
 class UTextBlock;
+class UObject;
 class UWidget;
 class UUserWidget;
 

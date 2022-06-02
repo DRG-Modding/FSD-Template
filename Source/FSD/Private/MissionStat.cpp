@@ -2,8 +2,8 @@
 #include "Templates/SubclassOf.h"
 
 class UPlayerCharacterID;
-class UMissionStat;
 class UObject;
+class UMissionStat;
 class APlayerCharacter;
 class UTexture2D;
 

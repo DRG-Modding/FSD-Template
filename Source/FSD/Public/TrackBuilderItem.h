@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EPlaceableObstructionType.h"
 #include "AnimatedItem.h"
-#include "PlaceableInterface.h"
 #include "UObject/NoExportTypes.h"
+#include "PlaceableInterface.h"
+#include "EPlaceableObstructionType.h"
 #include "UObject/NoExportTypes.h"
 #include "TrackBuilderItem.generated.h"
 
 class ATrackBuilderSegment;
-class UTrackBuilderConnectPoint;
 class UCrosshairAggregator;
+class UTrackBuilderConnectPoint;
 class UTrackBuilderUsable;
 
 UCLASS(Abstract, Blueprintable)

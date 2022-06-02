@@ -4,8 +4,8 @@
 #include "GameplayTagContainer.h"
 #include "MissionDNA.generated.h"
 
-class UMissionDuration;
 class UMissionComplexity;
+class UMissionDuration;
 
 UCLASS(Abstract, Blueprintable)
 class UMissionDNA : public UObject {

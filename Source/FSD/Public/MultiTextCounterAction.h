@@ -5,9 +5,9 @@
 #include "MultiTextCounterAction.generated.h"
 
 class UAudioComponent;
-class UTextBlock;
 class USoundCue;
 class UObject;
+class UTextBlock;
 class UMultiTextCounterAction;
 
 UCLASS(Blueprintable)

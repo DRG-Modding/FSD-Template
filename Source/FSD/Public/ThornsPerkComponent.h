@@ -5,8 +5,8 @@
 #include "DamageData.h"
 #include "ThornsPerkComponent.generated.h"
 
-class UStatusEffect;
 class UDamageClass;
+class UStatusEffect;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UThornsPerkComponent : public UFloatPerkComponent {

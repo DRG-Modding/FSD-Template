@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UnlockReward.h"
 #include "ESchematicType.h"
+#include "UnlockReward.h"
 #include "SchematicReward.generated.h"
 
 class USchematic;

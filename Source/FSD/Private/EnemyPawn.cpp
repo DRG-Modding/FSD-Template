@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 #include "EnemyHealthComponent.h"
 #include "PawnStatsComponent.h"
-#include "EnemyComponent.h"
 #include "EnemyPawnAfflictionComponent.h"
+#include "EnemyComponent.h"
 
 
 void AEnemyPawn::OnRep_QueuedMontage() {

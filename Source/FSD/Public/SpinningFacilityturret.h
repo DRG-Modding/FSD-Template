@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FacilityTurret.h"
 #include "RandRange.h"
+#include "FacilityTurret.h"
 #include "UObject/NoExportTypes.h"
 #include "SpinningFacilityturret.generated.h"
 

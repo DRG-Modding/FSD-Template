@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ContrailSettings.h"
 #include "ChargedWeapon.h"
+#include "ContrailSettings.h"
 #include "UObject/NoExportTypes.h"
 #include "ShotMultiplier.h"
 #include "CoilMaterial.h"
@@ -12,15 +12,15 @@
 #include "BulletPathSegment.h"
 #include "CoilGun.generated.h"
 
-class UDamageComponent;
 class UNiagaraComponent;
+class UDamageComponent;
 class UCoilgunTrailSpawner;
-class UStaticMesh;
-class UHealthComponentBase;
 class UNiagaraSystem;
+class UHealthComponentBase;
+class AActor;
+class UStaticMesh;
 class UStatusEffect;
 class ACoilgunWeaponTrail;
-class AActor;
 class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
 
@@ -132,7 +132,7 @@ protected:
     float TriBurstShotCarvingMultiplier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<TSubclassOf<UStatusEffect>> NoSpreadEffects;
+    TSet<TSubclassOf<UStatusEffect>> NoSpreadEffects;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 FirstDynamicIndex;

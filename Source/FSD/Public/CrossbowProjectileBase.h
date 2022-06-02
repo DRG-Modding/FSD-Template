@@ -2,19 +2,19 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Projectile.h"
+#include "EInputKeys.h"
 #include "OnCrossbowDamageDealtDelegate.h"
 #include "ECrossbowEffectApplication.h"
-#include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "EInputKeys.h"
+#include "Engine/EngineTypes.h"
 #include "CrossbowProjectileBase.generated.h"
 
-class ACrossbowProjectileStuck;
 class UCrossbowProjectileRecallable;
+class UTexture2D;
 class UCrossbowProjectileMagnetic;
 class UCrossbowProjectileRicochet;
+class ACrossbowProjectileStuck;
 class UCrossbowStuckProjectileEffectBanshee;
-class UTexture2D;
 class UStatusEffect;
 class USoundCue;
 class USphereComponent;

@@ -1,7 +1,7 @@
 #include "OutlineComponent.h"
 
-class AActor;
 class UPrimitiveComponent;
+class AActor;
 class UHealthComponentBase;
 class AItem;
 

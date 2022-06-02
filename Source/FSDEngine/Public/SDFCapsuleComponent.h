@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SDFCapsuleProperties.h"
 #include "SDFBaseWithTransformComponent.h"
+#include "SDFCapsuleProperties.h"
 #include "SDFCapsuleComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -3,8 +3,8 @@
 #include "TerrainMaterialBase.h"
 #include "TerrainMaterialCore.generated.h"
 
-class UTerrainMaterialCore;
 class UMaterialInterface;
+class UTerrainMaterialCore;
 class UMaterialInstance;
 
 UCLASS(Blueprintable)

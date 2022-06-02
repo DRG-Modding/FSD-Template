@@ -4,10 +4,10 @@
 #include "GuntowerModuleLevel.h"
 #include "GuntowerEvent.generated.h"
 
+class UDamageComponent;
 class USceneComponent;
 class USkeletalMeshComponent;
 class AGuntowerModule;
-class UDamageComponent;
 
 UCLASS(Blueprintable)
 class AGuntowerEvent : public AGameEvent {

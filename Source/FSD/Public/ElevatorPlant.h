@@ -7,10 +7,10 @@
 #include "UObject/NoExportTypes.h"
 #include "ElevatorPlant.generated.h"
 
-class UAudioComponent;
-class USoundCue;
-class USplineMeshComponent;
 class UCurveFloat;
+class USoundCue;
+class UAudioComponent;
+class USplineMeshComponent;
 class USceneComponent;
 
 UCLASS(Blueprintable)

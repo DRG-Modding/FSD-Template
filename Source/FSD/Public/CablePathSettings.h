@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DeepPathFinderType.h"
 #include "DeepPathFinderPreference.h"
 #include "DeepPathFinderSize.h"
+#include "DeepPathFinderType.h"
 #include "CablePathSettings.generated.h"
 
 USTRUCT(BlueprintType)

@@ -1,26 +1,26 @@
 #include "FSDGameInstance.h"
 #include "Templates/SubclassOf.h"
 #include "FSDCloudLoadSave.h"
-#include "FSDSendToURL.h"
 #include "FSDSessionUpdater.h"
+#include "FSDSendToURL.h"
 
 class AProceduralSetup;
-class AActor;
-class UGeneratedMission;
-class APlayerCharacter;
-class UObject;
-class UTemporaryBuff;
 class ACharacterSelectionSwitcher;
+class UGeneratedMission;
+class AActor;
+class UTexture2D;
+class UObject;
 class UWorld;
 class UNetDriver;
-class USoundBase;
-class UFSDSaveGame;
 class UMutator;
+class UFSDSaveGame;
+class UTemporaryBuff;
+class APlayerCharacter;
+class USoundBase;
 class AFSDPlayerController;
 class UIconGenerationManager;
 class UItemSkin;
 class UHUDWarningWidget;
-class UTexture2D;
 
 void UFSDGameInstance::UpdateGlobelMissionSeed() {
 }
@@ -83,6 +83,9 @@ void UFSDGameInstance::SetIsUsingOnlineFeatures(bool bIsOnlineFeatureUsed) {
 }
 
 void UFSDGameInstance::SetHasSeenInfoScreen() {
+}
+
+void UFSDGameInstance::SetGlobalMissionSeed(int32 Seed) {
 }
 
 void UFSDGameInstance::SetFSDPassword(const FString& pw) {
@@ -276,6 +279,7 @@ void UFSDGameInstance::ChangeSkinPreview(UItemSkin* PreviewSkin) {
 
 void UFSDGameInstance::CancelJoin() {
 }
+
 
 UHUDWarningWidget* UFSDGameInstance::AddWarningToHUD(TSubclassOf<UHUDWarningWidget> WidgetClass, UTexture2D* Texture, USoundBase* PingSound) {
     return NULL;

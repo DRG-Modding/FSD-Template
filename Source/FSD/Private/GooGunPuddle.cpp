@@ -24,6 +24,10 @@ void AGooGunPuddle::OnPuddleBeginOverLap(UPrimitiveComponent* OverlappedComponen
 void AGooGunPuddle::OnHit(float Damage, const FDamageData& DamageData, bool anyHealthLost) {
 }
 
+
+void AGooGunPuddle::IgniteGoo_Implementation() {
+}
+
 void AGooGunPuddle::AddStatusEffect(TSubclassOf<UStatusEffect> NewStatusEffect) {
 }
 

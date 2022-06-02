@@ -2,27 +2,28 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "AmmoDrivenWeapon.h"
-#include "LensDeactivedDelegateDelegate.h"
-#include "MicrowaveLense.h"
 #include "LensActivedDelegateDelegate.h"
+#include "LensDeactivedDelegateDelegate.h"
 #include "UObject/NoExportTypes.h"
+#include "MicrowaveLense.h"
 #include "MultiHitscanHit.h"
 #include "Engine/NetSerialization.h"
 #include "UObject/NoExportTypes.h"
 #include "MultiHitScanHits.h"
 #include "MicrowaveWeapon.generated.h"
 
-class UHealthComponentBase;
-class UNiagaraSystem;
-class UDamageComponent;
-class UCapsuleHitscanComponent;
 class UFirstPersonNiagaraComponent;
 class UNiagaraComponent;
+class UDamageComponent;
+class UEnemyTemperatureComponent;
+class UCapsuleHitscanComponent;
 class UStatusEffect;
-class AActor;
+class ABoil;
+class UNiagaraSystem;
 class UParticleSystem;
 class USoundCue;
-class UEnemyTemperatureComponent;
+class UHealthComponentBase;
+class AActor;
 class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
 
@@ -71,7 +72,7 @@ protected:
     float GammaContaminationRange;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<AActor> ExplodableBlisterClass;
+    TSubclassOf<ABoil> ExplodableBlisterClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BlisteringNecrosisChance;
@@ -150,6 +151,18 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RadiantSuperheaterHeatShockChance;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 ShotCountToProcFrostShock;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 ShotCountToProcHeatShock;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 ShotCountToStartColdTempAmplifier;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 ShotCountToStartHeatTempAmplifier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RadiantSuperheaterMinColdDamage;

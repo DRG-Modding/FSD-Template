@@ -2,22 +2,22 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "AmmoDrivenWeapon.h"
+#include "Engine/NetSerialization.h"
 #include "DecalData.h"
 #include "UObject/NoExportTypes.h"
-#include "Engine/NetSerialization.h"
 #include "UObject/NoExportTypes.h"
 #include "FlameThrowerItem.generated.h"
 
-class UStickyFlameSpawner;
-class UHealthComponentBase;
 class UParticleSystemComponent;
+class UParticleSystem;
 class UDamageComponent;
+class UStickyFlameSpawner;
 class UMotionAudioController;
 class UStatusEffect;
-class UParticleSystem;
 class UItemUpgrade;
 class USoundCue;
 class UProjectileLauncherBaseComponent;
+class UHealthComponentBase;
 class AActor;
 class UFSDPhysicalMaterial;
 class UPrimitiveComponent;

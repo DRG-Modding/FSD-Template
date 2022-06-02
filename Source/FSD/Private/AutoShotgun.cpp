@@ -1,8 +1,8 @@
 #include "AutoShotgun.h"
 
-class AActor;
-class UFSDPhysicalMaterial;
 class UHealthComponentBase;
+class UFSDPhysicalMaterial;
+class AActor;
 class UPrimitiveComponent;
 
 void AAutoShotgun::OnTargetKilled(AActor* Target, UFSDPhysicalMaterial* PhysicalMaterial, bool wasDirectHit) {

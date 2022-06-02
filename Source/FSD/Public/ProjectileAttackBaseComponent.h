@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "AttackBaseComponent.h"
 #include "ProjectileAttackDelegateDelegate.h"
-#include "EProjectileAttackRotationType.h"
 #include "ProjetileSpawnedDelegateDelegate.h"
+#include "EProjectileAttackRotationType.h"
 #include "ProjectileAttackBaseComponent.generated.h"
 
 class UProjectileAttack;

@@ -8,5 +8,8 @@ enum class ECharacterHeadMesh : uint8 {
     ThichNeckOnly,
     ThinNeckOnly,
     None,
+    FlatEars,
+    FaceOnly,
+    EyesOnly,
 };
 

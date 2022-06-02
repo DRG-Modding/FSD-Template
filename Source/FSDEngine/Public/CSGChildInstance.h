@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DeepCSGFloatTree.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "GeneralTerrainMaterialCombiner.h"
 #include "CSGBase.h"
 #include "CSGChildInstanceProperties.h"
-#include "GeneralTerrainMaterialCombiner.h"
+#include "DeepCSGFloatTree.h"
 #include "DeepCSGTree.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "CSGChildInstance.generated.h"
 
 class UBakeConfig;

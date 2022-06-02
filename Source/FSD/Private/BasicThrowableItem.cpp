@@ -1,7 +1,7 @@
 #include "BasicThrowableItem.h"
-#include "Components/BoxComponent.h"
 #include "Components/SphereComponent.h"
 #include "CarriableComponent.h"
+#include "Components/BoxComponent.h"
 #include "InstantUsable.h"
 #include "Components/StaticMeshComponent.h"
 #include "FirstPersonStaticMeshComponent.h"

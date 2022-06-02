@@ -3,8 +3,8 @@
 #include "RessuplyPod.h"
 #include "PipelineExtractorPod.generated.h"
 
-class APlayerCharacter;
 class APipelineSegment;
+class APlayerCharacter;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API APipelineExtractorPod : public ARessuplyPod {

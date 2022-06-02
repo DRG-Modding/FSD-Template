@@ -3,8 +3,8 @@
 #include "DeepPathfinderCharacter.h"
 #include "DroneCharacter.generated.h"
 
-class UHealthComponent;
 class UOutlineComponent;
+class UHealthComponent;
 class USimpleObjectInfoComponent;
 
 UCLASS(Abstract, Blueprintable)

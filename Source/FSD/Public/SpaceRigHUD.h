@@ -3,9 +3,9 @@
 #include "FSDHUD.h"
 #include "SpaceRigHUD.generated.h"
 
-class UWindowWidget;
 class UObject;
 class UDialogDataAsset;
+class UWindowWidget;
 
 UCLASS(Blueprintable, NonTransient)
 class ASpaceRigHUD : public AFSDHUD {

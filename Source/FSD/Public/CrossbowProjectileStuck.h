@@ -7,8 +7,8 @@
 #include "CrossbowProjectileStuck.generated.h"
 
 class UStatusEffect;
-class USphereComponent;
 class ACrossbowProjectileBase;
+class USphereComponent;
 class APlayerCharacter;
 class UHealthComponentBase;
 class USceneComponent;

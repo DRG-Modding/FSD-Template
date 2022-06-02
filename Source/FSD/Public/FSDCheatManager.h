@@ -10,9 +10,9 @@ class UEnemyDescriptor;
 class AActor;
 class UPlayerCharacterID;
 class APawn;
-class APlayerCharacter;
 class UBaseCritterDescriptor;
 class UObject;
+class APlayerCharacter;
 class UResourceData;
 
 UCLASS(Blueprintable)

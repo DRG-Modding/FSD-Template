@@ -10,9 +10,9 @@
 #include "FrozenPawnImpactComponent.h"
 #include "HitReactionComponent.h"
 
-class UHealthComponent;
 class AActor;
 class UHealthComponentBase;
+class UHealthComponent;
 class UDamageTag;
 
 

@@ -2,11 +2,11 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class AProjectileBase;
 class UProjectileLauncherBaseComponent;
+class AProjectileBase;
+class UAnimMontage;
 class UStatusEffect;
 class AActor;
-class UAnimMontage;
 
 
 void ACrossbow::StartAmmoSwitch() {

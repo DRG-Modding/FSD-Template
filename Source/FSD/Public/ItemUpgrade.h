@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EUpgradeClass.h"
 #include "SavableDataAsset.h"
+#include "EUpgradeClass.h"
 #include "RefundableInterface.h"
 #include "EUpgradeTiers.h"
 #include "ItemUpgradeStatText.h"
@@ -10,10 +10,10 @@
 #include "CraftingCost.h"
 #include "ItemUpgrade.generated.h"
 
-class UResourceData;
+class UItemUpgradeElement;
 class UItemUpgrade;
 class UItemUpgradeCategory;
-class UItemUpgradeElement;
+class UResourceData;
 class AActor;
 class AFSDPlayerState;
 

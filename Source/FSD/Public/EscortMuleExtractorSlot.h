@@ -3,8 +3,8 @@
 #include "EEscortExtractorState.h"
 #include "EscortMuleExtractorSlot.generated.h"
 
-class USceneComponent;
 class UInstantUsable;
+class USceneComponent;
 class UWidgetComponent;
 
 USTRUCT(BlueprintType)

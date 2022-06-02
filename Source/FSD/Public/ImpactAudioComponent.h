@@ -5,8 +5,8 @@
 #include "ImpactAudioComponent.generated.h"
 
 class AActor;
-class USceneComponent;
 class UHealthComponentBase;
+class USceneComponent;
 class UImpactAudioComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -5,9 +5,9 @@
 #include "UObject/NoExportTypes.h"
 #include "FacilityTurret.generated.h"
 
-class USoundCue;
 class USceneComponent;
 class USkeletalMeshComponent;
+class USoundCue;
 class AActor;
 
 UCLASS(Blueprintable)

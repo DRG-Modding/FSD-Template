@@ -3,12 +3,12 @@
 #include "Templates/SubclassOf.h"
 #include "UpgradableItemComponent.h"
 
-class USoundBase;
 class USoundAttenuation;
+class USoundBase;
 class USceneComponent;
-class UAudioComponent;
-class AActor;
 class USoundConcurrency;
+class AActor;
+class UAudioComponent;
 class UTexture2D;
 class AItem;
 class UItemCharacterAnimationSet;

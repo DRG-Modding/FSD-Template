@@ -96,6 +96,7 @@ AMiningPod::AMiningPod() {
     this->DwarfCheckerBox = NULL;
     this->DepartureTime = -1.00f;
     this->MissionType = EMiningPodMission::DropAndReturn;
+    this->WaitForPlayerSpawns = true;
     this->HasLanded = false;
     this->PodOutline = NULL;
     this->State = EMiningPodState::WaitingForGameStart;

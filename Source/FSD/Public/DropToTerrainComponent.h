@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "OnIsFallingToTerrainChangedDelegate.h"
 #include "Components/ActorComponent.h"
+#include "OnIsFallingToTerrainChangedDelegate.h"
 #include "DropToTerrainComponent.generated.h"
 
 class UTerrainDetectComponent;

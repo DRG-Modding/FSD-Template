@@ -3,8 +3,8 @@
 #include "Engine/DataAsset.h"
 #include "TemporaryBuff.generated.h"
 
-class APlayerCharacter;
 class UTexture2D;
+class APlayerCharacter;
 class AFSDPlayerController;
 
 UCLASS(Abstract, Blueprintable)

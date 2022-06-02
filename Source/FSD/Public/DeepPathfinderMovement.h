@@ -1,31 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "GameFramework/PawnMovementComponent.h"
-#include "PauseMovementElapsedDelegate.h"
-#include "AsyncPathRequestsInterface.h"
-#include "DeepPathFinderType.h"
-#include "DeepPathFinderPreference.h"
-#include "Engine/LatentActionManager.h"
-#include "DeepPathFinderSize.h"
-#include "Engine/EngineTypes.h"
-#include "PathBeginDelegate.h"
 #include "EDeepMovementState.h"
 #include "PathFinishedDelegate.h"
+#include "GameFramework/PawnMovementComponent.h"
+#include "AsyncPathRequestsInterface.h"
+#include "Engine/EngineTypes.h"
+#include "DeepPathFinderPreference.h"
+#include "DeepPathFinderType.h"
+#include "DeepPathFinderSize.h"
+#include "PathBeginDelegate.h"
+#include "PauseMovementElapsedDelegate.h"
 #include "RefreshDestinationDelegate.h"
 #include "PathStateChangedDelegateDelegate.h"
 #include "DeepRepPath.h"
+#include "UObject/NoExportTypes.h"
+#include "EOffsetFrom.h"
 #include "EDeepMovementMode.h"
 #include "HandleRotationOptions.h"
 #include "FakeMoverState.h"
 #include "UObject/NoExportTypes.h"
-#include "EOffsetFrom.h"
+#include "Engine/LatentActionManager.h"
 #include "UObject/NoExportTypes.h"
 #include "DeepPathfinderMovement.generated.h"
 
-class AActor;
-class ADeepCSGWorld;
 class UFakeMoverSettings;
+class ADeepCSGWorld;
+class AActor;
 class UPawnStatsComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

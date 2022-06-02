@@ -6,8 +6,8 @@
 
 class USoundBase;
 class UAudioComponent;
-class UTrackBuilderMovement;
 class APlayerCharacter;
+class UTrackBuilderMovement;
 
 UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UWalkingStateComponent : public UCharacterStateComponent {

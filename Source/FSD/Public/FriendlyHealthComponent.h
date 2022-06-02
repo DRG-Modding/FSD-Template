@@ -30,7 +30,7 @@ protected:
     
 public:
     UFriendlyHealthComponent();
-    /*UFUNCTION(BlueprintCallable, BlueprintPure)*/
+    // UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMaxHealth() const;
     
 };

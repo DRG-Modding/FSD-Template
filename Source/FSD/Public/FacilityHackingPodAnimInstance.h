@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EHackingPodState.h"
 #include "Animation/AnimInstance.h"
 #include "UObject/NoExportTypes.h"
-#include "EHackingPodState.h"
 #include "FacilityHackingPodAnimInstance.generated.h"
 
 class AActor;

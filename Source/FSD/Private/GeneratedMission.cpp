@@ -4,8 +4,8 @@
 class AFSDPlayerController;
 class AProceduralSetup;
 class UMutator;
-class UGeneratedMission;
 class UMissionDNA;
+class UGeneratedMission;
 
 
 bool UGeneratedMission::IsSingleMission() const {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ECreatureSize.h"
 #include "Engine/NetSerialization.h"
+#include "ECreatureSize.h"
 #include "Engine/NetSerialization.h"
 #include "UObject/NoExportTypes.h"
 #include "SpawnEffectItem.generated.h"

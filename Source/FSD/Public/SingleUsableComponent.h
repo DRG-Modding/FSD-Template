@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ProgressSignatureDelegate.h"
-#include "UsableComponent.h"
 #include "UsedBySignatureDelegate.h"
+#include "UsableComponent.h"
 #include "UserCountChangedDelegateDelegate.h"
 #include "GenericUsableDelegateDelegate.h"
+#include "ProgressSignatureDelegate.h"
 #include "UsableChangedSignatureDelegate.h"
 #include "OnFailedDelegate.h"
 #include "EInputKeys.h"
 #include "SingleUsableComponent.generated.h"
 
+class UPawnStat;
+class APlayerCharacter;
 class USoundCue;
 class UDialogDataAsset;
-class UAudioComponent;
-class UPawnStat;
 class UTexture2D;
-class APlayerCharacter;
+class UAudioComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USingleUsableComponent : public UUsableComponent {

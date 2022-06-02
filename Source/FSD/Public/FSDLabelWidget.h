@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/TextBlock.h"
-#include "Framework/Text/TextLayout.h"
 #include "Layout/Margin.h"
+#include "Framework/Text/TextLayout.h"
 #include "FSDLabelWidget.generated.h"
 
 UCLASS(Blueprintable)

@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
-#include "EDisconnectReason.h"
-#include "EServerSortOrder.h"
 #include "EFSDNATType.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "FindSessionsCallbackProxy.h"
+#include "EServerSortOrder.h"
 #include "EMissionStructure.h"
+#include "EDisconnectReason.h"
 #include "FriendInfo.h"
+#include "EServerDistance.h"
 #include "EFSDMissionStatus.h"
 #include "UObject/NoExportTypes.h"
-#include "EServerDistance.h"
 #include "SessionHandling.generated.h"
 
+class UPlayerCharacterID;
 class UObject;
+class UBiome;
 class UFSDGameInstance;
 class APlayerCharacter;
-class UPlayerCharacterID;
-class UBiome;
 class UDifficultySetting;
 class UMissionTemplate;
 

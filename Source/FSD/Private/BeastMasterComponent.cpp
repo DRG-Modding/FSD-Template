@@ -3,8 +3,8 @@
 
 class UDamageComponent;
 class UActorComponent;
-class AFSDPawn;
 class APlayerCharacter;
+class AFSDPawn;
 
 void UBeastMasterComponent::SetDamage(UDamageComponent* cmp, float dmg) {
 }

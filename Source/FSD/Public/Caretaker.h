@@ -7,11 +7,11 @@
 class UCaretakerActionComponent;
 class USceneComponent;
 class USkeletalMeshComponent;
-class UEnemyHealthComponent;
+class UPawnStatsComponent;
 class UPassthroughSubHealthComponent;
 class UHealthDamageTracker;
+class UEnemyHealthComponent;
 class UAnimSequenceBase;
-class UPawnStatsComponent;
 
 UCLASS(Blueprintable)
 class FSD_API ACaretaker : public AFSDPawn {

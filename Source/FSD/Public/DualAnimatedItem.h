@@ -3,8 +3,8 @@
 #include "Item.h"
 #include "DualAnimatedItem.generated.h"
 
-class UPlayerAnimInstance;
 class UAnimInstance;
+class UPlayerAnimInstance;
 class USkeletalMeshComponent;
 class UAnimMontage;
 class UItemCharacterAnimationSet;

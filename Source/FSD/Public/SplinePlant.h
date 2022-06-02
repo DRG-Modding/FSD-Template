@@ -7,10 +7,10 @@
 #include "SplinePlant.generated.h"
 
 class UStaticMesh;
-class UAudioComponent;
 class USplineComponent;
-class USoundCue;
 class USceneComponent;
+class USoundCue;
+class UAudioComponent;
 class USplineMeshComponent;
 
 UCLASS(Blueprintable)

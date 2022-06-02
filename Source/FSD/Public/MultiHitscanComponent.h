@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "MultiHitScanHits.h"
 #include "HitscanBaseComponent.h"
 #include "HitDelegateDelegate.h"
-#include "MultiHitScanHits.h"
 #include "MultiHitscanComponent.generated.h"
 
 class AActor;

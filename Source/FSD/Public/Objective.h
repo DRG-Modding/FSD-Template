@@ -8,13 +8,13 @@
 #include "CreditsReward.h"
 #include "Objective.generated.h"
 
-class UResourceData;
+class UObjective;
 class UObjectiveWidget;
-class UMissionStat;
 class UBiome;
 class UOptionalObjectiveWidget;
+class UMissionStat;
+class UResourceData;
 class UTexture2D;
-class UObjective;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UObjective : public UActorComponent {

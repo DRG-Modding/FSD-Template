@@ -5,9 +5,9 @@
 #include "ERivalBombNodeState.h"
 #include "RivalBombNode.generated.h"
 
-class ASplineCableActor;
 class ARivalBombNode;
 class ARivalBomb;
+class ASplineCableActor;
 class UHackingUsableComponent;
 class APlayerCharacter;
 

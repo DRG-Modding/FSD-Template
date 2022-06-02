@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ThrowableItem.h"
 #include "UpgradableGear.h"
+#include "ThrowableItem.h"
 #include "RejoinListener.h"
 #include "CoolDownProgressStyle.h"
 #include "ShieldGeneratorItem.generated.h"

@@ -4,11 +4,11 @@
 #include "EPipelineBuildState.h"
 #include "PipelineStart.generated.h"
 
-class APipelineSegment;
 class APipelineStart;
+class APipelineSegment;
+class APipelineFinish;
 class AFSDRefinery;
 class UTrackBuilderUsable;
-class APipelineFinish;
 class ATrackBuilderSegment;
 
 UCLASS(Abstract, Blueprintable)

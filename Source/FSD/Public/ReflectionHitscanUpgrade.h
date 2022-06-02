@@ -6,8 +6,8 @@
 #include "UpgradeValues.h"
 #include "ReflectionHitscanUpgrade.generated.h"
 
-class AItem;
 class AFSDPlayerState;
+class AItem;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UReflectionHitscanUpgrade : public UStandardItemUpgrade {

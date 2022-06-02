@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AIController.h"
-#include "LaserPointerTarget.h"
 #include "UObject/NoExportTypes.h"
+#include "LaserPointerTarget.h"
 #include "DroneControllerBase.generated.h"
 
-class ADroneBase;
 class APlayerCharacter;
+class ADroneBase;
 class AActor;
 
 UCLASS(Blueprintable)

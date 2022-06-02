@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "ItemUpgradeSelection.h"
+#include "UObject/NoExportTypes.h"
 #include "UpgradeLoadout.generated.h"
 
 USTRUCT(BlueprintType)

@@ -3,8 +3,8 @@
 #include "Engine/DataAsset.h"
 #include "ItemSkinSettings.generated.h"
 
-class UItemSkin;
 class UItemSkinSet;
+class UItemSkin;
 
 UCLASS(Blueprintable)
 class FSD_API UItemSkinSettings : public UDataAsset {

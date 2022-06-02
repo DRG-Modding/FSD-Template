@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ECharacterHeadMesh.h"
 #include "VanityItem.h"
+#include "ECharacterHeadMesh.h"
 #include "EHeadVanityType.h"
 #include "HeadVanityItem.generated.h"
 

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "AnimatedItem.h"
-#include "GraplingGunState.h"
 #include "Upgradable.h"
+#include "GraplingGunState.h"
 #include "GrapplingHookGun.generated.h"
 
 class UCoolDownItemAggregator;

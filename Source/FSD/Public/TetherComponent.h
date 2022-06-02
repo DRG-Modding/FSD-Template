@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETetherConnectionMode.h"
+#include "TetherConnectionChanged_DeletageDelegate.h"
 #include "Components/ActorComponent.h"
+#include "TeherMessage_DelegateDelegate.h"
 #include "TetherPowerChanged_DelegateDelegate.h"
 #include "TetherRangeChangedDelegate.h"
-#include "TetherConnectionChanged_DeletageDelegate.h"
-#include "TeherMessage_DelegateDelegate.h"
-#include "UObject/NoExportTypes.h"
+#include "ETetherConnectionMode.h"
 #include "ETetherMessageDirection.h"
 #include "TetherMessageSettings.h"
+#include "UObject/NoExportTypes.h"
 #include "TetherComponent.generated.h"
 
 class UTetherComponent;

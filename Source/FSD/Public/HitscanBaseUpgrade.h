@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EHitScanBaseUpgradeType.h"
 #include "StandardItemUpgrade.h"
+#include "EHitScanBaseUpgradeType.h"
 #include "UpgradeValues.h"
 #include "HitscanBaseUpgrade.generated.h"
 
-class AItem;
 class AFSDPlayerState;
+class AItem;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UHitscanBaseUpgrade : public UStandardItemUpgrade {

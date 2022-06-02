@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "LerpingPercent.h"
-#include "CountDownFloat.h"
 #include "EIntoxicationState.h"
 #include "EDrinkableAlcoholStrength.h"
+#include "LerpingPercent.h"
+#include "CountDownFloat.h"
 #include "CharacterIntoxicationComponent.generated.h"
 
-class APlayerCharacter;
 class UCurveFloat;
+class APlayerCharacter;
 class UDrinkableDataAsset;
 
 UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

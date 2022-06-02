@@ -6,8 +6,8 @@
 #include "UObject/NoExportTypes.h"
 #include "SchematicSettings.generated.h"
 
-class USchematicBank;
 class UDataTable;
+class USchematicBank;
 class UOverclockBank;
 class USchematic;
 class UItemSkinSchematicCollection;

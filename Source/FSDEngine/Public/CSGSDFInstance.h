@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DeepCSGFloatTree.h"
-#include "CSGBase.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "CSGBase.h"
 #include "CSGSDFInstanceProperties.h"
 #include "BinaryTerrainMaterialCombiner.h"
-#include "UObject/NoExportTypes.h"
+#include "DeepCSGFloatTree.h"
 #include "CSGSDFInstance.generated.h"
 
-class USDFBase;
 class UBakeConfig;
+class USDFBase;
 
 UCLASS(Blueprintable)
 class FSDENGINE_API UCSGSDFInstance : public UCSGBase {

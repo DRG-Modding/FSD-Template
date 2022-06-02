@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "AmmoDrivenWeapon.h"
 #include "UObject/NoExportTypes.h"
+#include "AmmoDrivenWeapon.h"
 #include "UObject/NoExportTypes.h"
 #include "TracerData.h"
 #include "LockCounter.h"
 #include "Engine/EngineTypes.h"
 #include "LockOnWeapon.generated.h"
 
-class UActorTrackingWidget;
 class AActor;
-class UStatusEffect;
+class UActorTrackingWidget;
 class ALockOnBeam;
+class UStatusEffect;
 class UDamageComponent;
 class UHitscanComponent;
 

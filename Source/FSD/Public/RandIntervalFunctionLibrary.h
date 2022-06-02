@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RandInterval.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "RandInterval.h"
 #include "RandIntervalFunctionLibrary.generated.h"
 
 UCLASS(Blueprintable)

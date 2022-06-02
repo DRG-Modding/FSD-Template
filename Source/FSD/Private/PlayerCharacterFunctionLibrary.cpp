@@ -1,7 +1,7 @@
 #include "PlayerCharacterFunctionLibrary.h"
 
-class AFSDPlayerState;
 class UObject;
+class AFSDPlayerState;
 class APlayerCharacter;
 class AActor;
 

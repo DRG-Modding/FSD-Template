@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "BakeSettings.h"
 #include "MatrixWithExactSync.h"
+#include "BakeSettings.h"
 #include "CSGBuildOperationData.generated.h"
 
 class ACSGBuilder;

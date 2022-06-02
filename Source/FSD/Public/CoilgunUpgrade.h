@@ -6,8 +6,8 @@
 #include "UpgradeValues.h"
 #include "CoilgunUpgrade.generated.h"
 
-class AItem;
 class AFSDPlayerState;
+class AItem;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UCoilgunUpgrade : public UStandardItemUpgrade {

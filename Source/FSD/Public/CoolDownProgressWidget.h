@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CoolDownProgressStyle.h"
 #include "Blueprint/UserWidget.h"
+#include "CoolDownProgressStyle.h"
 #include "CoolDownProgressWidget.generated.h"
 
 class UObject;

@@ -6,10 +6,10 @@
 #include "ECampaignType.h"
 #include "CampaignManager.generated.h"
 
+class UGeneratedMission;
 class UCampaign;
 class UFSDSaveGame;
 class AFSDPlayerController;
-class UGeneratedMission;
 class UDifficultySetting;
 
 UCLASS(Abstract, Blueprintable)

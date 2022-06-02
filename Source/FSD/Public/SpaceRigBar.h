@@ -8,8 +8,8 @@
 
 class UBarMenuWidget;
 class UDrinkableDataAsset;
-class UBoxComponent;
 class UInstantUsable;
+class UBoxComponent;
 class APlayerCharacter;
 class ADrinkableActor;
 

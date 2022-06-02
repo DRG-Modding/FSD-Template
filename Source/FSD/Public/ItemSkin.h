@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EItemSkinType.h"
 #include "SavablePrimaryDataAsset.h"
 #include "Aquisitionable.h"
-#include "EItemSkinType.h"
 #include "ItemSkin.generated.h"
 
-class UMaterialInstanceDynamic;
+class UDynamicIcon;
 class UItemSkin;
 class UItemAquisitionBase;
 class UDLCBase;
 class UItemSkinSet;
-class UDynamicIcon;
 class USkinEffect;
 class UItemID;
 class UPlayerCharacterID;
 class UObject;
 class AFSDPlayerState;
+class UMaterialInstanceDynamic;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UItemSkin : public USavablePrimaryDataAsset, public IAquisitionable {

@@ -5,10 +5,10 @@
 #include "CharacterShowroomController.generated.h"
 
 class UPlayerCharacterID;
-class UCharacterShowroomController;
 class APlayerCharacter;
-class UObject;
 class UShowroomCameraKey;
+class UCharacterShowroomController;
+class UObject;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCharacterShowroomController : public UShowroomController {

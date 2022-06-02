@@ -5,8 +5,8 @@
 #include "UObject/NoExportTypes.h"
 #include "NoiseFunctionLibrary.generated.h"
 
-class UObject;
 class USceneComponent;
+class UObject;
 class AActor;
 
 UCLASS(Blueprintable)

@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EBeltDrivenWeaponUpgrade.h"
 #include "StandardItemUpgrade.h"
+#include "EBeltDrivenWeaponUpgrade.h"
 #include "UpgradeValues.h"
 #include "BeltDrivenWeaponUpgrade.generated.h"
 
-class AItem;
 class AFSDPlayerState;
+class AItem;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UBeltDrivenWeaponUpgrade : public UStandardItemUpgrade {

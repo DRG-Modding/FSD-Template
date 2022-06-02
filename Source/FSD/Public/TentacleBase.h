@@ -6,9 +6,9 @@
 #include "UObject/NoExportTypes.h"
 #include "TentacleBase.generated.h"
 
-class USceneComponent;
 class USplineComponent;
 class AStabberVineRoot;
+class USceneComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ATentacleBase : public AEnemyPawn {

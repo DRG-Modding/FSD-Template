@@ -3,8 +3,8 @@
 #include "UnlockReward.h"
 #include "UnlockDurationReward.generated.h"
 
-class UMissionDuration;
 class UMissionTemplate;
+class UMissionDuration;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UUnlockDurationReward : public UUnlockReward {

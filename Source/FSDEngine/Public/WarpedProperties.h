@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EPreviewCellSize.h"
 #include "WarpNoiseProperties.h"
+#include "EPreviewCellSize.h"
 #include "WarpedProperties.generated.h"
 
 USTRUCT(BlueprintType)

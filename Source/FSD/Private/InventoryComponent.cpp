@@ -2,9 +2,9 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class ARecallableSentryGunItem;
-class AActor;
 class AItem;
+class AActor;
+class ARecallableSentryGunItem;
 
 void UInventoryComponent::UpdateFromSaveGameInSlot(EItemCategory Category) {
 }
@@ -86,6 +86,9 @@ void UInventoryComponent::AnimationNotify1() {
 }
 
 void UInventoryComponent::All_PlayThrowMontage_Implementation(AActor* Item) {
+}
+
+void UInventoryComponent::AddItemClass(TSubclassOf<AItem> itemClass) {
 }
 
 void UInventoryComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ChunkId.h"
 #include "Components/SceneComponent.h"
+#include "ChunkId.h"
 #include "CSGPreviewComponent.generated.h"
 
 class ACSGBuilderBase;

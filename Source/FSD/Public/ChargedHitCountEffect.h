@@ -3,8 +3,8 @@
 #include "WeaponHitCountEffect.h"
 #include "ChargedHitCountEffect.generated.h"
 
-class UParticleSystem;
 class UDamageClass;
+class UParticleSystem;
 class USoundCue;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)

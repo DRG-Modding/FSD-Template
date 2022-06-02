@@ -5,8 +5,8 @@
 #include "Curves/CurveFloat.h"
 #include "AutoCannon.generated.h"
 
-class UStatusEffect;
 class UAnimMontage;
+class UStatusEffect;
 
 UCLASS(Abstract, Blueprintable)
 class AAutoCannon : public AAmmoDrivenWeapon {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DeveloperSettings.h"
+#include "UObject/NoExportTypes.h"
 #include "FSDDebrisSettings.generated.h"
 
 UCLASS(Blueprintable, DefaultConfig, Config=Game)

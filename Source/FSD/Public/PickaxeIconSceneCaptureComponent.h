@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/SceneCaptureComponent2D.h"
 #include "EPickaxePartLocation.h"
+#include "Components/SceneCaptureComponent2D.h"
 #include "PickaxeIconSceneCaptureComponent.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

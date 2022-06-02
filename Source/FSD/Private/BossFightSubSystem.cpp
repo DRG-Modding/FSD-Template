@@ -1,8 +1,8 @@
 #include "BossFightSubSystem.h"
 
-class AActor;
 class UBossFightInterface;
 class IBossFightInterface;
+class AActor;
 
 void UBossFightSubSystem::RegisterBossFight(TScriptInterface<IBossFightInterface> BossFight) {
 }

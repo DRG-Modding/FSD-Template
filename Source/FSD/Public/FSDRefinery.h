@@ -3,10 +3,10 @@
 #include "Templates/SubclassOf.h"
 #include "DropPod.h"
 #include "ERefineryState.h"
-#include "EInputKeys.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "EPipelineBuildState.h"
+#include "EInputKeys.h"
 #include "FSDRefinery.generated.h"
 
 class APipelineSegment;

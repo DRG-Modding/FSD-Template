@@ -4,8 +4,8 @@
 #include "CommnuityRewardSetup.generated.h"
 
 class UCommnuityRewardBundle;
-class UResourceData;
 class UObject;
+class UResourceData;
 
 UCLASS(Blueprintable)
 class UCommnuityRewardSetup : public UDataAsset {

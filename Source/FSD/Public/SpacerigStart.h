@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerStart.h"
-#include "PlayerSpawnInHubDelegate.h"
 #include "ESpacerigStartType.h"
+#include "PlayerSpawnInHubDelegate.h"
 #include "SpacerigStart.generated.h"
 
 class AFSDPlayerController;

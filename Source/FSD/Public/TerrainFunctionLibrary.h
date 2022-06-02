@@ -4,8 +4,8 @@
 #include "UObject/NoExportTypes.h"
 #include "TerrainFunctionLibrary.generated.h"
 
-class UTerrainMaterial;
 class UObject;
+class UTerrainMaterial;
 
 UCLASS(Blueprintable)
 class UTerrainFunctionLibrary : public UBlueprintFunctionLibrary {

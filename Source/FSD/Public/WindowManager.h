@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "WindowManagerDelegateDelegate.h"
 #include "Components/ActorComponent.h"
+#include "WindowManagerDelegateDelegate.h"
 #include "Components/SlateWrapperTypes.h"
 #include "WindowManager.generated.h"
 

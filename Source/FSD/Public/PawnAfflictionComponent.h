@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Components/ActorComponent.h"
 #include "AfflictionChangeDelegateDelegate.h"
-#include "EFrozenBitsSize.h"
-#include "AfflictionEntriesArray.h"
+#include "Components/ActorComponent.h"
 #include "PawnAfflictionItem.h"
+#include "AfflictionEntriesArray.h"
+#include "EFrozenBitsSize.h"
 #include "PawnAfflictionComponent.generated.h"
 
-class UFrozenAfflictionEffect;
-class UPawnAffliction;
-class UBurningAfflictionEffect;
 class UHealthComponentBase;
+class UFrozenAfflictionEffect;
+class UBurningAfflictionEffect;
+class UPawnAffliction;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPawnAfflictionComponent : public UActorComponent {

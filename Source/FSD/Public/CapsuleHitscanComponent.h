@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OnHitDelegateDelegate.h"
-#include "HitscanBaseComponent.h"
 #include "MultiHitScanHits.h"
+#include "HitscanBaseComponent.h"
+#include "OnHitDelegateDelegate.h"
 #include "CapsuleHitscanComponent.generated.h"
 
 class AActor;

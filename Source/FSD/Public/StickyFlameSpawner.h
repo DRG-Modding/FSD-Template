@@ -4,8 +4,8 @@
 #include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
 #include "Engine/NetSerialization.h"
-#include "Engine/EngineTypes.h"
 #include "Engine/NetSerialization.h"
+#include "Engine/EngineTypes.h"
 #include "StickyFlameSpawner.generated.h"
 
 class AStickyFlame;

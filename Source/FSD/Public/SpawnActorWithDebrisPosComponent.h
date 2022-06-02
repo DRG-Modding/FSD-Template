@@ -6,8 +6,8 @@
 #include "SpawnActorDelegateDelegate.h"
 #include "SpawnActorWithDebrisPosComponent.generated.h"
 
-class AActor;
 class UCurveFloat;
+class AActor;
 class AProceduralSetup;
 class UDebrisPositioning;
 

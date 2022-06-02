@@ -5,10 +5,10 @@
 #include "RandRange.h"
 #include "AfflictionSettings.generated.h"
 
+class UParticleSystem;
 class UStaticMesh;
 class UPawnAffliction;
 class USoundCue;
-class UParticleSystem;
 
 UCLASS(Blueprintable)
 class UAfflictionSettings : public UDataAsset {

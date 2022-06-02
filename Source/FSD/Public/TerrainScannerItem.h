@@ -4,8 +4,8 @@
 #include "TerrainScannerItem.generated.h"
 
 class UAnimMontage;
-class USceneComponent;
 class USceneCaptureComponent2D;
+class USceneComponent;
 
 UCLASS(Blueprintable)
 class ATerrainScannerItem : public AAnimatedItem {

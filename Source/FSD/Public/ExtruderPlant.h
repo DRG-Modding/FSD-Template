@@ -3,8 +3,8 @@
 #include "GameFramework/Actor.h"
 #include "ExtruderPlant.generated.h"
 
-class UAudioComponent;
 class USkeletalMeshComponent;
+class UAudioComponent;
 class UAnimationAsset;
 
 UCLASS(Abstract, Blueprintable)

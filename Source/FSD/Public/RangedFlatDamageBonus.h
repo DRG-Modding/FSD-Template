@@ -3,8 +3,8 @@
 #include "DamageBonusBase.h"
 #include "RangedFlatDamageBonus.generated.h"
 
-class UCurveFloat;
 class UDamageClass;
+class UCurveFloat;
 
 UCLASS(Blueprintable, EditInlineNew)
 class URangedFlatDamageBonus : public UDamageBonusBase {

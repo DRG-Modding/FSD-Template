@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "IRandRange.h"
 #include "ResourceData.h"
+#include "IRandRange.h"
 #include "GemResourceData.generated.h"
 
 class UGemResourceCreator;

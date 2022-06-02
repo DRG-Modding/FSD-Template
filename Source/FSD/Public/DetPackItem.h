@@ -6,14 +6,14 @@
 #include "UpgradableGear.h"
 #include "DetPackItem.generated.h"
 
-class ADetPack;
-class USkeletalMeshComponent;
-class UForceFeedbackEffect;
 class AItem;
+class UForceFeedbackEffect;
+class ADetPack;
 class UAnimMontage;
+class USkeletalMeshComponent;
 class UCapacityHoldingItemAggregator;
-class UDialogDataAsset;
 class UItemUpgrade;
+class UDialogDataAsset;
 
 UCLASS(Blueprintable)
 class ADetPackItem : public AAnimatedItem, public IUpgradable, public IUpgradableGear {

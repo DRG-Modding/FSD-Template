@@ -5,11 +5,11 @@
 
 class UPawnAfflictionComponent;
 class APlayerCharacter;
-class UCharacterSightComponent;
+class UHealthComponentBase;
 class AActor;
+class UCharacterSightComponent;
 class UHealth;
 class IHealth;
-class UHealthComponentBase;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ULookingAtWidget : public UUserWidget {

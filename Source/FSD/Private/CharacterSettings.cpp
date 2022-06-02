@@ -1,8 +1,8 @@
 #include "CharacterSettings.h"
 
 class UAsyncManager;
-class UInventoryList;
 class UPlayerCharacterID;
+class UInventoryList;
 
 void UCharacterSettings::PreloadAllInventories(UAsyncManager* AsyncManager) {
 }
@@ -23,6 +23,9 @@ UCharacterSettings::UCharacterSettings() {
     this->DefaultHead = NULL;
     this->ThickNeck = NULL;
     this->ThinNeck = NULL;
+    this->FlatEars = NULL;
+    this->FaceOnly = NULL;
+    this->EyesOnly = NULL;
     this->ThrowItemAnimSettings = NULL;
     this->AutoReloadShout = NULL;
     this->TeleportPositioning = NULL;

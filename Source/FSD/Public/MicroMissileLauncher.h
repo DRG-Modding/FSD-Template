@@ -4,8 +4,8 @@
 #include "EMicroMissileLauncherFireMode.h"
 #include "MicroMissileLauncher.generated.h"
 
-class USoundCue;
 class UAnimMontage;
+class USoundCue;
 
 UCLASS(Abstract, Blueprintable)
 class AMicroMissileLauncher : public AAmmoDrivenWeapon {

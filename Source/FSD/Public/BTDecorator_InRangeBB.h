@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BehaviorTree/Decorators/BTDecorator_BlackboardBase.h"
 #include "AITypes.h"
+#include "BehaviorTree/Decorators/BTDecorator_BlackboardBase.h"
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BTDecorator_InRangeBB.generated.h"
 

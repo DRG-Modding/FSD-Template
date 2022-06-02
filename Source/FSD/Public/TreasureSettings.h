@@ -5,11 +5,11 @@
 #include "Curves/CurveFloat.h"
 #include "TreasureSettings.generated.h"
 
-class UItemAquisitionSource;
-class UDrinkableDataAsset;
 class UItemSkinSet;
-class USpecialEvent;
 class UVictoryPose;
+class UItemAquisitionSource;
+class USpecialEvent;
+class UDrinkableDataAsset;
 
 UCLASS(Blueprintable)
 class UTreasureSettings : public UDataAsset {

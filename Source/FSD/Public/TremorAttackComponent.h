@@ -4,9 +4,9 @@
 #include "Engine/EngineTypes.h"
 #include "TremorAttackComponent.generated.h"
 
-class UPrimitiveComponent;
-class UParticleSystemComponent;
 class UBoxComponent;
+class UParticleSystemComponent;
+class UPrimitiveComponent;
 class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

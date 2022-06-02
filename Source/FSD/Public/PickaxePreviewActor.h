@@ -2,15 +2,15 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
-#include "SpawnReleasedActor.h"
 #include "PickaxePartEquip.h"
-#include "EPickaxePartLocation.h"
 #include "ItemIDInterface.h"
+#include "SpawnReleasedActor.h"
+#include "EPickaxePartLocation.h"
 #include "PickaxeMeshInstance.h"
 #include "PickaxePreviewActor.generated.h"
 
-class UItemID;
 class USceneComponent;
+class UItemID;
 class UMaterialInterface;
 class UPickaxePart;
 

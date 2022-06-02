@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "StandardItemUpgrade.h"
-#include "ESentryGunUpgradeType.h"
 #include "UpgradeValues.h"
+#include "ESentryGunUpgradeType.h"
 #include "SentryGunUpgrade.generated.h"
 
-class AItem;
 class AFSDPlayerState;
+class AItem;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class USentryGunUpgrade : public UStandardItemUpgrade {

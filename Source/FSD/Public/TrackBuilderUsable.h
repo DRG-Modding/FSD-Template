@@ -5,11 +5,11 @@
 #include "UObject/NoExportTypes.h"
 #include "TrackBuilderUsable.generated.h"
 
-class USceneComponent;
 class UTrackBuilderUsable;
-class APlayerCharacter;
 class ATrackBuilderSegment;
 class ATrackBuilderItem;
+class USceneComponent;
+class APlayerCharacter;
 class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

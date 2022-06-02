@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UObject/NoExportTypes.h"
 #include "Objective.h"
-#include "IRandRange.h"
-#include "EnemySpawnedDelegateDelegate.h"
 #include "SubObjective.h"
-#include "UObject/NoExportTypes.h"
+#include "EnemySpawnedDelegateDelegate.h"
 #include "RandInterval.h"
-#include "UObject/NoExportTypes.h"
+#include "IRandRange.h"
 #include "RoomNode.h"
+#include "UObject/NoExportTypes.h"
 #include "FacilityObjective.generated.h"
 
-class APawn;
-class ARessuplyPod;
-class UEncounterManager;
 class AActor;
+class ARessuplyPod;
+class APawn;
+class UCappedResource;
 class UEnemyDescriptor;
 class ATetherStation;
 class UResourceData;
 class AProceduralSetup;
+class UEncounterManager;
 class UDebrisPositioning;
-class UCappedResource;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UFacilityObjective : public UObjective {

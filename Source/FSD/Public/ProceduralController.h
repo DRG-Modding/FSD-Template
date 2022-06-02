@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PathObstacle.h"
 #include "Components/ActorComponent.h"
+#include "PathObstacle.h"
 #include "EDebrisItemPass.h"
 #include "GeneratedDebrisItem.h"
-#include "GeneratedInfluenceSets.h"
 #include "TunnelNode.h"
+#include "GeneratedInfluenceSets.h"
 #include "RoomNode.h"
 #include "LevelGenerationCarverLists.h"
 #include "ProceduralController.generated.h"

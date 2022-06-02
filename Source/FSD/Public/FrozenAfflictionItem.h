@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RandRange.h"
 #include "EFrozenBitsSize.h"
+#include "RandRange.h"
 #include "FrozenAfflictionItem.generated.h"
 
 USTRUCT(BlueprintType)

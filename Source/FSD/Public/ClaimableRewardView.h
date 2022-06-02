@@ -3,8 +3,8 @@
 #include "ClaimableRewardEntry.h"
 #include "ClaimableRewardView.generated.h"
 
-class UUserWidget;
 class UDialogDataAsset;
+class UUserWidget;
 class USoundCue;
 
 USTRUCT(BlueprintType)
@@ -25,6 +25,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FClaimableRewardEntry> RewardDisplays;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FText ClaimButtonText;
     
     FSD_API FClaimableRewardView();
 };

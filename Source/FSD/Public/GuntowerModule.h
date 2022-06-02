@@ -5,11 +5,11 @@
 #include "UObject/NoExportTypes.h"
 #include "GuntowerModule.generated.h"
 
+class UAnimSequenceBase;
 class USoundCue;
 class UParticleSystem;
 class AActor;
 class UStaticMeshComponent;
-class UAnimSequenceBase;
 class USkeletalMeshComponent;
 class UGunTowerHealthComponent;
 class AGuntowerEvent;
