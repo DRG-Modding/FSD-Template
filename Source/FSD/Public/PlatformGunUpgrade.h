@@ -6,8 +6,8 @@
 #include "UpgradeValues.h"
 #include "PlatformGunUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AActor;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UPlatformGunUpgrade : public UItemUpgrade {

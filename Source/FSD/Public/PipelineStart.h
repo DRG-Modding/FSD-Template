@@ -4,9 +4,9 @@
 #include "EPipelineBuildState.h"
 #include "PipelineStart.generated.h"
 
+class APipelineFinish;
 class APipelineStart;
 class APipelineSegment;
-class APipelineFinish;
 class AFSDRefinery;
 class UTrackBuilderUsable;
 class ATrackBuilderSegment;

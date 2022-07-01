@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "DeepCSGFloatTreePacked.h"
+#include "UObject/NoExportTypes.h"
 #include "SmartTerrainMaterialVal.h"
 #include "BakeEntry.generated.h"
 

@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "CSGBase.h"
 #include "CSGSDFModulatedInstanceProperties.h"
+#include "UObject/NoExportTypes.h"
 #include "BinaryTerrainMaterialCombiner.h"
+#include "UObject/NoExportTypes.h"
 #include "DeepCSGFloatTree.h"
 #include "CSGModulatedSDFInstance.generated.h"
 

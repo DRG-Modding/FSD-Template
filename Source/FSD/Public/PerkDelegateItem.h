@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PerkIntDelegateDelegate.h"
 #include "UObject/Object.h"
 #include "PerkClaimedDelegateDelegate.h"
 #include "PerkEquipDelegateDelegate.h"
 #include "PerkHighlightedDelegateDelegate.h"
+#include "PerkIntDelegateDelegate.h"
 #include "PerkDelegateItem.generated.h"
 
 UCLASS(Blueprintable)

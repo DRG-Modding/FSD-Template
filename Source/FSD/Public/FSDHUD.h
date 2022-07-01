@@ -5,9 +5,9 @@
 #include "FSDHUD.generated.h"
 
 class APlayerController;
-class URadarPointComponent;
-class AFSDHUD;
 class APlayerCharacter;
+class AFSDHUD;
+class URadarPointComponent;
 class APlayerCameraDrone;
 
 UCLASS(Blueprintable, NonTransient)

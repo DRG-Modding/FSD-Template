@@ -5,8 +5,8 @@
 #include "UpgradeValues.h"
 #include "StatusDamageBonusUpgrade.generated.h"
 
-class UStatusEffect;
 class AActor;
+class UStatusEffect;
 class UDamageClass;
 class AFSDPlayerState;
 

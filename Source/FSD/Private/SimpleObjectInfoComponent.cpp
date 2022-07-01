@@ -1,9 +1,9 @@
 #include "SimpleObjectInfoComponent.h"
 
 class USceneComponent;
+class UTexture2D;
 class UActorContextWidget;
 class UDialogDataAsset;
-class UTexture2D;
 
 void USimpleObjectInfoComponent::SetInGameName_Implementation(const FString& GameName) {
 }

@@ -6,8 +6,8 @@
 #include "UpgradeValues.h"
 #include "ChargedWeaponUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AItem;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UChargedWeaponUpgrade : public UStandardItemUpgrade {

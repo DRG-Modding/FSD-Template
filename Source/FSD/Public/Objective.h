@@ -3,18 +3,18 @@
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
 #include "ObjectiveUpdatedSignatureDelegate.h"
-#include "ObjectiveMissionIcon.h"
 #include "MissionShouts.h"
 #include "CreditsReward.h"
+#include "ObjectiveMissionIcon.h"
 #include "Objective.generated.h"
 
-class UObjective;
-class UObjectiveWidget;
-class UBiome;
 class UOptionalObjectiveWidget;
 class UMissionStat;
+class UObjectiveWidget;
 class UResourceData;
+class UBiome;
 class UTexture2D;
+class UObjective;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UObjective : public UActorComponent {

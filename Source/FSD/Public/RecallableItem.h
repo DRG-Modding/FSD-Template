@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "AnimatedItem.h"
-#include "Upgradable.h"
 #include "UObject/NoExportTypes.h"
+#include "Upgradable.h"
 #include "UObject/NoExportTypes.h"
 #include "RecallableItem.generated.h"
 

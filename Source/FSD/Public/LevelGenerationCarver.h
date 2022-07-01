@@ -5,10 +5,10 @@
 #include "ECarveFilterType.h"
 #include "LevelGenerationCarver.generated.h"
 
-class UTerrainMaterial;
-class UStaticMesh;
 class USTLMeshCarver;
+class UStaticMesh;
 class UStaticMeshCarver;
+class UTerrainMaterial;
 
 USTRUCT(BlueprintType)
 struct FLevelGenerationCarver {

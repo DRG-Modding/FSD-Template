@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
+#include "UObject/NoExportTypes.h"
 #include "EDropPodState.h"
 #include "DropPod.generated.h"
 
-class UCurveFloat;
 class UObject;
 class UAutoCarverComponent;
+class UCurveFloat;
 class ADropPod;
 
 UCLASS(Blueprintable)

@@ -1,7 +1,7 @@
 #include "Revoler.h"
 
-class UFSDPhysicalMaterial;
 class AActor;
+class UFSDPhysicalMaterial;
 
 void ARevoler::OnTargetKilled(AActor* Target, UFSDPhysicalMaterial* PhysMat, bool wasDirectHit) {
 }

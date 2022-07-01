@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "DashSigDelegate.h"
 #include "Components/ActorComponent.h"
+#include "DashSigDelegate.h"
 #include "Engine/NetSerialization.h"
+#include "UObject/NoExportTypes.h"
 #include "Curves/CurveFloat.h"
 #include "EDashPointsGenerationMode.h"
 #include "DashPoints.generated.h"

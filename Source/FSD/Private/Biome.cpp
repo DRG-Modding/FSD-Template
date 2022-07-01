@@ -1,12 +1,12 @@
 #include "Biome.h"
 #include "Templates/SubclassOf.h"
 
-class UObject;
-class AActor;
-class UTerrainMaterial;
 class UUserWidget;
-class UMaterialInstance;
+class UObject;
+class UTerrainMaterial;
+class AActor;
 class ADebrisDataActor;
+class UMaterialInstance;
 class UTexture2D;
 class UParticleSystem;
 class USoundCue;

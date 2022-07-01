@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EnemyDestroyedSignatureDelegate.h"
 #include "Components/ActorComponent.h"
+#include "EnemyDestroyedSignatureDelegate.h"
 #include "EnemySpawnedSignatureDelegate.h"
 #include "SpawnRarityModifierItem.h"
 #include "GameplayTagContainer.h"
@@ -11,13 +11,13 @@
 #include "EnemySpawnedDelegateDelegate.h"
 #include "EnemySpawnManager.generated.h"
 
-class APawn;
-class AProceduralSetup;
 class USpawnEffectsComponent;
-class UEnemyDescriptor;
 class UStatusEffect;
-class UHealthComponentBase;
+class APawn;
+class UEnemyDescriptor;
+class AProceduralSetup;
 class AActor;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UEnemySpawnManager : public UActorComponent {

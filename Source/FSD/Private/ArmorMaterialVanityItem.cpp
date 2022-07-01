@@ -1,10 +1,10 @@
 #include "ArmorMaterialVanityItem.h"
 
 class UMaterialInstance;
-class UMaterialInstanceConstant;
 class UObject;
-class UMaterialInstanceDynamic;
+class UMaterialInstanceConstant;
 class UArmorMaterialVanityItem;
+class UMaterialInstanceDynamic;
 
 UMaterialInstanceConstant* UArmorMaterialVanityItem::SetArmorMaterialToTwoSided(UMaterialInstance* Parent) {
     return NULL;

@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "GameplayTagContainer.h"
 #include "Components/ActorComponent.h"
 #include "BuffingChangedDelegateDelegate.h"
-#include "GameplayTagContainer.h"
 #include "EnemyBufferComponent.generated.h"
 
-class UHealthComponentBase;
+class UParticleSystemComponent;
 class UStatusEffect;
 class UParticleSystem;
 class AFSDPawn;
-class UParticleSystemComponent;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UEnemyBufferComponent : public UActorComponent {

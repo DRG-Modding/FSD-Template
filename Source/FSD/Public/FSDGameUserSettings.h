@@ -1,21 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BoolConfigChangedDelegate.h"
-#include "UObject/NoExportTypes.h"
 #include "GameFramework/GameUserSettings.h"
-#include "ModdingUISettings.h"
+#include "BoolConfigChangedDelegate.h"
 #include "FloatConfigChangedDelegate.h"
+#include "ModdingUISettings.h"
 #include "LanguageChangedDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "StringConfigChangedDelegate.h"
 #include "ChatFontSizeChangedDelegate.h"
 #include "ModdingSettingsChangedDelegate.h"
 #include "UDLSSMode.h"
-#include "ESaveSlotChangeProcedure.h"
 #include "ENVidiaReflexMode.h"
 #include "EConsoleGraphicsMode.h"
-#include "HUDElements.h"
-#include "EVolumeType.h"
 #include "CharacterOptions.h"
+#include "HUDElements.h"
 #include "InputSourceChangedSignatureDelegate.h"
 #include "Int32ConfigChangedDelegate.h"
 #include "GameFramework/GameUserSettings.h"
@@ -24,13 +22,15 @@
 #include "CustomKeyBinding.h"
 #include "ControllerSettings.h"
 #include "UObject/NoExportTypes.h"
+#include "EVolumeType.h"
 #include "ETurn180Mode.h"
 #include "ESteamSearchRegion.h"
+#include "ESaveSlotChangeProcedure.h"
 #include "FSDGameUserSettings.generated.h"
 
 class USoundClass;
-class UObject;
 class APlayerController;
+class UObject;
 class UDifficultySetting;
 class UFSDGameUserSettings;
 

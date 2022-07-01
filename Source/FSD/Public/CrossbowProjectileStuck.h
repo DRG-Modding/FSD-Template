@@ -2,15 +2,15 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "FSDPhysicsActor.h"
-#include "ECrossbowStuckType.h"
 #include "EInputKeys.h"
+#include "ECrossbowStuckType.h"
 #include "CrossbowProjectileStuck.generated.h"
 
+class USphereComponent;
 class UStatusEffect;
 class ACrossbowProjectileBase;
-class USphereComponent;
-class APlayerCharacter;
 class UHealthComponentBase;
+class APlayerCharacter;
 class USceneComponent;
 
 UCLASS(Blueprintable)

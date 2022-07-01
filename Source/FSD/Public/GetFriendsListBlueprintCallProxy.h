@@ -4,8 +4,8 @@
 #include "BlueprintGetFriendsListDelegateDelegate.h"
 #include "GetFriendsListBlueprintCallProxy.generated.h"
 
-class UObject;
 class UGetFriendsListBlueprintCallProxy;
+class UObject;
 
 UCLASS(Blueprintable)
 class UGetFriendsListBlueprintCallProxy : public UOnlineBlueprintCallProxyBase {

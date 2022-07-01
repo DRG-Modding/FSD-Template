@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "EEnemyFamily.h"
-#include "EEnemyType.h"
 #include "EnemyAttackDescription.h"
-#include "EArmorType.h"
+#include "EEnemyType.h"
+#include "EEnemyFamily.h"
 #include "EnemyMinersManualStats.h"
+#include "EArmorType.h"
 #include "EDamageType.h"
 #include "EnemyMinersManualData.generated.h"
 

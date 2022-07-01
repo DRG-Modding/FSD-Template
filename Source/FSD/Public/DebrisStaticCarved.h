@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "DebrisBase.h"
+#include "ECarveFilterType.h"
+#include "DebrisInfluence.h"
 #include "EDebrisCarvedType.h"
 #include "UDebrisStaticCarveMesh.h"
-#include "DebrisInfluence.h"
-#include "ECarveFilterType.h"
 #include "DebrisStaticCarved.generated.h"
 
-class AActor;
 class UTerrainMaterial;
+class AActor;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UDebrisStaticCarved : public UDebrisBase {

@@ -4,13 +4,13 @@
 #include "GuntowerWeakPoint.generated.h"
 
 class USceneComponent;
-class UParticleSystem;
 class UEnemyHealthComponent;
-class UStaticMeshComponent;
+class UHealthComponentBase;
 class UWeakpointGlowComponent;
+class UStaticMeshComponent;
 class UDamageClass;
 class USoundCue;
-class UHealthComponentBase;
+class UParticleSystem;
 
 UCLASS(Blueprintable)
 class AGuntowerWeakPoint : public AFSDPawn {

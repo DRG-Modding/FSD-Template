@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "DiscordRewardNotification.h"
 #include "UObject/Object.h"
-#include "OnDiscordServerInfoLoadedDelegate.h"
 #include "DiscordServerInviteData.h"
 #include "ResponseSuccessChangedDelegate.h"
 #include "DiscordEoMDataDelegateDelegate.h"
-#include "OnDiscordServerCountLoadedDelegate.h"
-#include "DiscordRewardNotification.h"
 #include "DiscordEoMData.h"
+#include "OnDiscordServerInfoLoadedDelegate.h"
+#include "OnDiscordServerCountLoadedDelegate.h"
 #include "OnDiscordUserInServerDelegate.h"
 #include "DiscordWrapper.generated.h"
 

@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EFSDGoogleAnalyticsProperties.h"
 #include "UObject/Object.h"
 #include "PartyAnalyticsInformation.h"
 #include "DeepDiveAnalyticsInformation.h"
-#include "EFSDGoogleAnalyticsProperties.h"
 #include "GoogleAnalyticsWrapper.generated.h"
 
 class AFSDGameState;
-class APlayerController;
 class USeasonChallenge;
+class APlayerController;
 class AActor;
 class AFSDPlayerState;
 

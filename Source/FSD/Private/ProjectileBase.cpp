@@ -2,11 +2,11 @@
 #include "Net/UnrealNetwork.h"
 #include "Components/SphereComponent.h"
 
-class AActor;
+class UDamageComponent;
 class UTerrainMaterial;
 class UPrimitiveComponent;
 class AProjectileBase;
-class UDamageComponent;
+class AActor;
 
 UTerrainMaterial* AProjectileBase::TryGetTerrainMaterial() const {
     return NULL;

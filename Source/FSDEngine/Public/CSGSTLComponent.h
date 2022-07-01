@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SimpleMeshWithCachedTreeComponent.h"
 #include "CSGSTLProperties.h"
+#include "SimpleMeshWithCachedTreeComponent.h"
 #include "CSGSTLComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

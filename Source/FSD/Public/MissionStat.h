@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "EMissionStatType.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
+#include "UObject/NoExportTypes.h"
 #include "MissionStat.generated.h"
 
-class UMissionStatCategory;
 class UObject;
 class UMissionStat;
+class UMissionStatCategory;
 class UFSDAchievement;
 class APlayerCharacter;
 class UPlayerCharacterID;

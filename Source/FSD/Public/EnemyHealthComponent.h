@@ -39,8 +39,8 @@ protected:
     
 public:
     UEnemyHealthComponent();
-    // UFUNCTION(BlueprintCallable, BlueprintPure)
-    float GetMaxHealth() const;
+    /*UFUNCTION(BlueprintCallable, BlueprintPure)
+    float GetMaxHealth() const;*/
     
 };
 

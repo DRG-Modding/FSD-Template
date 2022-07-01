@@ -4,11 +4,11 @@
 #include "EOutline.h"
 #include "OutlineComponent.generated.h"
 
-class AActor;
+class UPrimitiveComponent;
 class UHealthComponentBase;
 class APlayerCharacter;
-class UPrimitiveComponent;
 class AItem;
+class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UOutlineComponent : public UActorComponent {

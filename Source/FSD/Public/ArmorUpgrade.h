@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "StandardItemUpgrade.h"
-#include "UpgradeValues.h"
 #include "EArmorUpgradeType.h"
+#include "UpgradeValues.h"
 #include "ArmorUpgrade.generated.h"
 
 class AFSDPlayerState;

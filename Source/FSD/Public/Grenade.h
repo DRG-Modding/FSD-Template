@@ -2,18 +2,18 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
-#include "GameFramework/Actor.h"
 #include "SaveGameIDInterface.h"
-#include "LoadoutItem.h"
+#include "GameFramework/Actor.h"
 #include "ItemIDInterface.h"
+#include "LoadoutItem.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "Grenade.generated.h"
 
-class UStaticMesh;
+class ALoadoutItemProxy;
 class UItemID;
 class UProjectileMovementComponent;
-class ALoadoutItemProxy;
+class UStaticMesh;
 class USoundCue;
 class UParticleSystem;
 class UGrenadeAnimationSet;

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Animation/AnimInstance.h"
-#include "ERessuplyPodState.h"
 #include "EPipelineExtractorPodAnimState.h"
+#include "ERessuplyPodState.h"
 #include "EPipelineBuildState.h"
 #include "ERefineryState.h"
 #include "PipelineExtractorPodAnimInstance.generated.h"

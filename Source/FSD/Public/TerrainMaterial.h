@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TerrainMaterialCore.h"
-#include "DecalData.h"
 #include "UObject/NoExportTypes.h"
+#include "DecalData.h"
 #include "UObject/NoExportTypes.h"
 #include "TerrainMaterial.generated.h"
 
-class USoundCue;
-class UResourceData;
-class UDialogDataAsset;
-class UFXSystemComponent;
-class UMaterialInstance;
 class UFXSystemAsset;
+class UMaterialInstance;
+class UResourceData;
+class USoundCue;
+class UDialogDataAsset;
 class UTerrainType;
+class UFXSystemComponent;
 class UObject;
 
 UCLASS(Blueprintable)

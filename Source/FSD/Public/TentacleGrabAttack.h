@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AttackBaseComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "AttackBaseComponent.h"
 #include "TentacleGrabAttack.generated.h"
 
 class UMeshComponent;

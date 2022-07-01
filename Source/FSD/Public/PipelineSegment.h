@@ -8,19 +8,19 @@
 #include "PipelineSegment.generated.h"
 
 class APipelineSegment;
-class APlayerCharacter;
-class UHealthComponentBase;
+class USimpleHealthComponent;
 class UStaticMesh;
 class UMaterialInterface;
+class USplineComponent;
 class USingleUsableComponent;
 class UDroneUseComponent;
-class USimpleHealthComponent;
-class USplineComponent;
 class USplineMeshComponent;
 class USkeletalMeshComponent;
 class UStaticMeshComponent;
 class UPathfinderSplineSegmentCollisionComponent;
 class APipelineStart;
+class APlayerCharacter;
+class UHealthComponentBase;
 class UTrackBuilderUsable;
 
 UCLASS(Abstract, Blueprintable)

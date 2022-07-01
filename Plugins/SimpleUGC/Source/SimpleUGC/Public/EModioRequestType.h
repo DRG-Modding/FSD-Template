@@ -4,7 +4,6 @@
 
 UENUM(BlueprintType)
 enum class EModioRequestType : uint8 {
-    InitializeLocalInstallation,
     Authentication,
     K2_Authentication,
     TermsOfUse,

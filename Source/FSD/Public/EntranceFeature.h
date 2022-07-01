@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "RoomFeature.h"
 #include "UObject/NoExportTypes.h"
 #include "ECaveEntranceType.h"
-#include "UObject/NoExportTypes.h"
 #include "ECaveEntrancePriority.h"
 #include "EntranceFeature.generated.h"
 

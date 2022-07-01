@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "CharacterVanityLoadout.h"
-#include "EVanitySlot.h"
 #include "UObject/NoExportTypes.h"
+#include "EVanitySlot.h"
 #include "CharacterVanitySave.generated.h"
 
 class UVanityItem;

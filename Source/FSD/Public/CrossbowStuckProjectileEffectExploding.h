@@ -3,8 +3,8 @@
 #include "CrossbowStuckProjectileEffect.h"
 #include "CrossbowStuckProjectileEffectExploding.generated.h"
 
-class UAudioComponent;
 class USoundCue;
+class UAudioComponent;
 class UHealthComponentBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

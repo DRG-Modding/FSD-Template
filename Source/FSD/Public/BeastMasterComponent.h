@@ -4,10 +4,10 @@
 #include "FloatPerkComponent.h"
 #include "BeastMasterComponent.generated.h"
 
-class UDamageComponent;
 class UActorComponent;
-class APlayerCharacter;
+class UDamageComponent;
 class AFSDPawn;
+class APlayerCharacter;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UBeastMasterComponent : public UFloatPerkComponent {

@@ -1,30 +1,30 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
-#include "SentryGunMuzzleSetup.h"
 #include "WeaponFireOwner.h"
-#include "AmmoCountChangedEventDelegate.h"
-#include "Upgradable.h"
-#include "TracerData.h"
 #include "Engine/EngineTypes.h"
+#include "SentryGunMuzzleSetup.h"
+#include "Upgradable.h"
+#include "AmmoCountChangedEventDelegate.h"
+#include "TracerData.h"
 #include "UObject/NoExportTypes.h"
 #include "GameplayTagContainer.h"
+#include "UObject/NoExportTypes.h"
 #include "LaserPointerTarget.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "SentryGun.generated.h"
 
-class UHealthComponentBase;
-class USoundCue;
 class USkeletalMeshComponent;
-class AProjectile;
-class UParticleSystem;
 class UWeaponFireComponent;
-class USoundBase;
-class UAudioComponent;
 class APlayerCharacter;
+class AProjectile;
+class USoundCue;
+class UParticleSystem;
+class USoundBase;
+class UHealthComponentBase;
+class UAudioComponent;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API ASentryGun : public AActor, public IWeaponFireOwner, public IUpgradable {

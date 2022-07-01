@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "StandardItemUpgrade.h"
-#include "UpgradeValues.h"
 #include "EShieldGeneratorUpgrades.h"
+#include "UpgradeValues.h"
 #include "ShieldGeneratorUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AItem;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UShieldGeneratorUpgrade : public UStandardItemUpgrade {

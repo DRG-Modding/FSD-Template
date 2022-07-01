@@ -5,8 +5,8 @@
 #include "SpecialEventSettings.generated.h"
 
 class USpecialEvent;
-class UDebrisPositioning;
 class AEventRewardFrame;
+class UDebrisPositioning;
 
 UCLASS(Blueprintable)
 class USpecialEventSettings : public UDataAsset {

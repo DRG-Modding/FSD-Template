@@ -5,8 +5,8 @@
 #include "UObject/NoExportTypes.h"
 #include "TetherStation.generated.h"
 
-class USceneComponent;
 class USkeletalMeshComponent;
+class USceneComponent;
 class AFacilityGeneratorLine;
 
 UCLASS(Blueprintable)

@@ -1,7 +1,7 @@
 #include "LookingAtWidget.h"
 
-class UHealthComponentBase;
 class AActor;
+class UHealthComponentBase;
 class UHealth;
 class IHealth;
 

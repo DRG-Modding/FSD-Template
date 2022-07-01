@@ -2,15 +2,16 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Projectile.h"
-#include "EInputKeys.h"
+#include "UObject/NoExportTypes.h"
 #include "OnCrossbowDamageDealtDelegate.h"
 #include "ECrossbowEffectApplication.h"
-#include "UObject/NoExportTypes.h"
+#include "EInputKeys.h"
 #include "Engine/EngineTypes.h"
 #include "CrossbowProjectileBase.generated.h"
 
-class UCrossbowProjectileRecallable;
+class USceneComponent;
 class UTexture2D;
+class UCrossbowProjectileRecallable;
 class UCrossbowProjectileMagnetic;
 class UCrossbowProjectileRicochet;
 class ACrossbowProjectileStuck;
@@ -22,7 +23,6 @@ class UDamageComponent;
 class UTerrainDetectComponent;
 class UStaticMesh;
 class APlayerCharacter;
-class USceneComponent;
 
 UCLASS(Blueprintable)
 class ACrossbowProjectileBase : public AProjectile {

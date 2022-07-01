@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "AnimatedItem.h"
-#include "UObject/NoExportTypes.h"
-#include "PlaceableInterface.h"
 #include "EPlaceableObstructionType.h"
+#include "AnimatedItem.h"
+#include "PlaceableInterface.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "TrackBuilderItem.generated.h"
 

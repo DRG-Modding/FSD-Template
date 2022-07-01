@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RandRange.h"
 #include "FacilityTurret.h"
 #include "UObject/NoExportTypes.h"
+#include "RandRange.h"
 #include "SpinningFacilityturret.generated.h"
 
 UCLASS(Blueprintable)

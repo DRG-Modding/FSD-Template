@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "StandardItemUpgrade.h"
-#include "ELineCutterProjectileUpgradeType.h"
 #include "UpgradeValues.h"
+#include "ELineCutterProjectileUpgradeType.h"
 #include "LineCutterProjectileUpgrade.generated.h"
 
 class AFSDPlayerState;

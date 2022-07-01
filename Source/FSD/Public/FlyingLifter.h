@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "GrabSuccessDelegate.h"
 #include "AFlyingBug.h"
 #include "EGrabberState.h"
-#include "GrabSuccessDelegate.h"
 #include "Engine/EngineTypes.h"
 #include "FlyingLifter.generated.h"
 
-class UCapsuleComponent;
 class UAudioComponent;
 class UPointLightComponent;
 class UGrabberComponent;
 class UInDangerComponent;
+class UCapsuleComponent;
 class USoundBase;
 class UAnimSequenceBase;
 class AActor;

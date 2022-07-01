@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "AttackerInfo.h"
 #include "AttackerPositioningComponent.generated.h"
 
-class UHealthComponentBase;
 class AActor;
+class UHealthComponentBase;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UAttackerPositioningComponent : public UActorComponent {

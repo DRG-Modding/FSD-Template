@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FollowTargetChangedDelegate.h"
 #include "FSDAIController.h"
 #include "LaserPointerTarget.h"
+#include "FollowTargetChangedDelegate.h"
 #include "GameplayTagContainer.h"
 #include "UObject/NoExportTypes.h"
 #include "EInputKeys.h"
@@ -10,12 +10,12 @@
 
 class APlayerCharacter;
 class UBehaviorTree;
-class UDroneUseComponent;
 class UTerrainMaterial;
-class ACarriableItem;
-class UHealthComponentBase;
-class AActor;
 class AFSDPlayerState;
+class UDroneUseComponent;
+class ACarriableItem;
+class AActor;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class ABoscoController : public AFSDAIController {

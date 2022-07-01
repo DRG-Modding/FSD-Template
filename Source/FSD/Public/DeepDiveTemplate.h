@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SavableDataAsset.h"
 #include "ESchematicType.h"
-#include "DeepDiveTemplateItem.h"
+#include "SavableDataAsset.h"
 #include "RandInterval.h"
+#include "DeepDiveTemplateItem.h"
 #include "DeepDiveTemplate.generated.h"
 
 class UDifficultySetting;

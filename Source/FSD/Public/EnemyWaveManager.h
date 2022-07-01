@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
-#include "RandRange.h"
 #include "WaveEntry.h"
+#include "RandRange.h"
 #include "EnemyWaveManager.generated.h"
 
-class UEnemySpawnManager;
 class UEnemyWaveController;
-class APawn;
 class AFSDGameMode;
+class APawn;
+class UEnemySpawnManager;
 class UObject;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Subsystems/GameInstanceSubsystem.h"
 #include "DamageSubsystemItem.h"
+#include "Subsystems/GameInstanceSubsystem.h"
 #include "DamageSubsystem.generated.h"
 
 UCLASS(Blueprintable)

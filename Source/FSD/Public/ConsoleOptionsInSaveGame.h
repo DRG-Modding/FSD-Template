@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UDLSSMode.h"
 #include "ControllerSettings.h"
-#include "EConsoleGraphicsMode.h"
-#include "HUDElements.h"
 #include "CharacterOptions.h"
+#include "HUDElements.h"
+#include "UDLSSMode.h"
+#include "EConsoleGraphicsMode.h"
 #include "CustomKeyBinding.h"
 #include "ConsoleOptionsInSaveGame.generated.h"
 

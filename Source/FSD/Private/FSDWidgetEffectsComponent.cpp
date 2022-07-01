@@ -1,9 +1,9 @@
 #include "FSDWidgetEffectsComponent.h"
 
-class UTextBlock;
-class UObject;
-class UWidget;
 class UUserWidget;
+class UObject;
+class UTextBlock;
+class UWidget;
 
 void UFSDWidgetEffectsComponent::StartTextCounter(UObject* WorldContext, UTextBlock*& Widget, float Start, float End, float Duration, int32 MaxDigits, float StartDelay) {
 }

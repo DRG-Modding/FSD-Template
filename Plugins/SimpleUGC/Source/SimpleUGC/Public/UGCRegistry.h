@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UObject/Object.h"
-#include "EPackageSortField.h"
 #include "EUGCApprovalStatus.h"
+#include "EPackageSortField.h"
 #include "UGCRegistry.generated.h"
 
 class UUGCPackage;

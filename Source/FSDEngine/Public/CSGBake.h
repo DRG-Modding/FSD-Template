@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BakeEntry.h"
 #include "Engine/DataAsset.h"
 #include "BakeSettings.h"
 #include "UObject/NoExportTypes.h"
+#include "BakeEntry.h"
 #include "CSGBake.generated.h"
 
 class ACSGBuilder;

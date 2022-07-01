@@ -3,9 +3,9 @@
 #include "TerrainMaterialBase.h"
 #include "TerrainMaterialCore.generated.h"
 
-class UMaterialInterface;
-class UTerrainMaterialCore;
 class UMaterialInstance;
+class UTerrainMaterialCore;
+class UMaterialInterface;
 
 UCLASS(Blueprintable)
 class FSDENGINE_API UTerrainMaterialCore : public UTerrainMaterialBase {

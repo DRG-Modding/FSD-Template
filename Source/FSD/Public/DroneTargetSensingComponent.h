@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "GameplayTagContainer.h"
+#include "Components/ActorComponent.h"
 #include "DroneTargetSensingComponent.generated.h"
 
 class AActor;

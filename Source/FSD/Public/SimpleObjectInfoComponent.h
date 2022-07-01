@@ -6,9 +6,9 @@
 #include "SimpleObjectInfoComponent.generated.h"
 
 class UDialogDataAsset;
-class UTexture2D;
 class USceneComponent;
 class UActorContextWidget;
+class UTexture2D;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USimpleObjectInfoComponent : public UObjectInfoComponent {

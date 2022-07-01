@@ -3,8 +3,8 @@
 #include "UObject/Object.h"
 #include "UGCLatentActionManager.generated.h"
 
-class UModioTermsWrapper;
 class UTexture2DDynamic;
+class UModioTermsWrapper;
 class UModioModInfoWrapper;
 
 UCLASS(Blueprintable)

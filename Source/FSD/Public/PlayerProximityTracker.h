@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "ProximityTriggerItem.h"
 #include "Components/ActorComponent.h"
 #include "PlayerSphere.h"
+#include "ProximityTriggerItem.h"
+#include "UObject/NoExportTypes.h"
 #include "PlayerProximityDelegateDelegate.h"
 #include "PlayerProximityTracker.generated.h"
 

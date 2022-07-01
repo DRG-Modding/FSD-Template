@@ -5,10 +5,10 @@
 #include "Engine/EngineTypes.h"
 #include "CoilgunWeaponTrail.generated.h"
 
-class UNiagaraComponent;
+class UStatusEffect;
 class UCapsuleComponent;
 class USceneComponent;
-class UStatusEffect;
+class UNiagaraComponent;
 class UPrimitiveComponent;
 
 UCLASS(Blueprintable)

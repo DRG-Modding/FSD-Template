@@ -1,32 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "InventoryBase.h"
-#include "GrenadesDelegateDelegate.h"
 #include "ItemDelegateDelegate.h"
+#include "InventoryBase.h"
 #include "CarriableChangedDelegateDelegate.h"
-#include "UObject/NoExportTypes.h"
 #include "InventoryItemsLoadedDelegate.h"
 #include "FlaresDelegateDelegate.h"
-#include "ResupplyDelegateDelegate.h"
+#include "GrenadesDelegateDelegate.h"
 #include "FlareProductionDelegateDelegate.h"
+#include "ResupplyDelegateDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "EItemCategory.h"
 #include "InventoryComponent.generated.h"
 
-class UInventoryList;
-class AThrownGrenadeItem;
 class AFlare;
-class AActor;
-class USoundCue;
-class UItemUpgrade;
-class UDialogDataAsset;
+class UInventoryList;
 class APickaxeItem;
+class AThrownGrenadeItem;
+class AItem;
+class USoundCue;
+class UDialogDataAsset;
+class UItemUpgrade;
 class ALaserPointerItem;
 class ATerrainScannerItem;
 class ARessuplyPodItem;
 class ARecallableSentryGunItem;
-class AItem;
+class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UInventoryComponent : public UInventoryBase {

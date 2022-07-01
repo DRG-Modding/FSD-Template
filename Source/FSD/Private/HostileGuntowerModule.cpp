@@ -1,7 +1,7 @@
 #include "HostileGuntowerModule.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/SkeletalMeshComponent.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "EnemyComponent.h"
 
 class UHealthComponentBase;

@@ -4,8 +4,8 @@
 #include "Engine/DataAsset.h"
 #include "MissionMutator.generated.h"
 
-class UMutator;
 class URunningMissionBP;
+class UMutator;
 class UObjective;
 class UTexture2D;
 

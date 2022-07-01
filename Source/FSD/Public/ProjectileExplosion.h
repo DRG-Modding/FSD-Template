@@ -6,8 +6,8 @@
 #include "UObject/NoExportTypes.h"
 #include "ProjectileExplosion.generated.h"
 
-class USoundCue;
 class UForceFeedbackEffect;
+class USoundCue;
 class UForceFeedbackAttenuation;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -6,9 +6,9 @@
 #include "DebrisStaticMesh.generated.h"
 
 class UStaticMesh;
-class USoundCue;
 class UMaterialInterface;
 class UParticleSystem;
+class USoundCue;
 
 USTRUCT(BlueprintType)
 struct FDebrisStaticMesh {

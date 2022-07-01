@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/StaticMeshComponent.h"
 #include "ECarveFilterType.h"
+#include "Components/StaticMeshComponent.h"
 #include "CarveDoneDelegateDelegate.h"
 #include "AutoCarverComponent.generated.h"
 

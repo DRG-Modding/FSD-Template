@@ -3,10 +3,10 @@
 #include "UsableComponent.h"
 #include "ReloadSentryUsableComponent.generated.h"
 
-class ASentryGun;
+class APlayerCharacter;
 class USoundBase;
 class UAudioComponent;
-class APlayerCharacter;
+class ASentryGun;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UReloadSentryUsableComponent : public UUsableComponent {

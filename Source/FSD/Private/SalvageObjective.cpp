@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 
 class URepairableComponent;
-class AProceduralSetup;
 class UCurveFloat;
+class AProceduralSetup;
 class AActor;
 class UDebrisPositioning;
 

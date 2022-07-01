@@ -4,9 +4,9 @@
 #include "Aquisitionable.h"
 #include "VictoryPose.generated.h"
 
+class UPlayerCharacterID;
 class UObject;
 class UItemAquisitionBase;
-class UPlayerCharacterID;
 class UAnimSequence;
 class AActor;
 

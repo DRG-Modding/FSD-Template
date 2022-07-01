@@ -1,6 +1,6 @@
 #include "PathfinderVehicle.h"
-#include "DeepPathfinderMovement.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "DeepPathfinderMovement.h"
 #include "HealthComponent.h"
 
 APathfinderVehicle::APathfinderVehicle() {

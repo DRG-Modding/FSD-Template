@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
+#include "GameFramework/Actor.h"
+#include "UObject/NoExportTypes.h"
 #include "CaveVine.generated.h"
 
+class USplineMeshComponent;
 class UHealthComponent;
 class USceneComponent;
-class USplineMeshComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ACaveVine : public AActor {

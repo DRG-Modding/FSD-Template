@@ -3,21 +3,21 @@
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
 #include "LoadoutChangedDelegateDelegate.h"
+#include "PlayerProgress.h"
+#include "CharacterProgress.h"
 #include "ItemUpgradesChangedDelegateDelegate.h"
 #include "PlayerProgressChangedSignatureDelegate.h"
 #include "CharacterProgressChangedSignatureDelegate.h"
 #include "SaveGameStatePerkItem.h"
 #include "ItemLoadout.h"
-#include "PlayerProgress.h"
 #include "ActiveCampaingMission.h"
 #include "ItemUpgradeSelection.h"
-#include "CharacterProgress.h"
 #include "SaveGameStateComponent.generated.h"
 
 class AActor;
 class UItemUpgrade;
-class UVictoryPose;
 class UPlayerCharacterID;
+class UVictoryPose;
 class UGeneratedMission;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

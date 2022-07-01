@@ -1,8 +1,8 @@
 #include "DrinkableDataAsset.h"
 
 class UObject;
-class APlayerCharacter;
 class APlayerController;
+class APlayerCharacter;
 class UTexture2D;
 class UDrinkableDataAsset;
 

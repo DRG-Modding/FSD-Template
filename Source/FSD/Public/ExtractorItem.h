@@ -4,24 +4,24 @@
 #include "Throwable.h"
 #include "FloatDelegateDelegate.h"
 #include "CharacterChangedDelegateDelegate.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/NetSerialization.h"
 #include "EExtractorState.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "ExtractorItem.generated.h"
 
 class UBoxComponent;
-class UDialogDataAsset;
+class UAnimMontage;
+class UFSDAudioComponent;
 class USkeletalMeshComponent;
 class UFirstPersonParticleSystemComponent;
-class UFSDAudioComponent;
-class USoundCue;
 class UPointLightComponent;
 class UParticleSystemComponent;
-class UAnimMontage;
 class UParticleSystem;
 class UForceFeedbackEffect;
 class UResourceData;
+class UDialogDataAsset;
+class USoundCue;
 class AResourceChunk;
 
 UCLASS(Blueprintable)

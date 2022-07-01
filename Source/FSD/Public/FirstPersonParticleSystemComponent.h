@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Particles/ParticleSystemComponent.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "FirstPersonParticleSystemComponent.generated.h"
 
-class USceneComponent;
 class UParticleSystem;
+class USceneComponent;
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFirstPersonParticleSystemComponent : public UParticleSystemComponent {

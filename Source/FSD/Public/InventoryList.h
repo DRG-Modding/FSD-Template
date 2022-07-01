@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Engine/DataAsset.h"
-#include "ItemFilterDelegateDelegate.h"
 #include "EItemCategory.h"
+#include "ItemFilterDelegateDelegate.h"
 #include "InventoryList.generated.h"
 
-class UTexture2D;
 class UMaterialInterface;
-class UItemID;
+class UTexture2D;
 class UObject;
+class UItemID;
 class AActor;
 
 UCLASS(Blueprintable)

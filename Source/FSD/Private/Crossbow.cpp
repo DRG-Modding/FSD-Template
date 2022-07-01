@@ -3,10 +3,10 @@
 #include "Templates/SubclassOf.h"
 
 class UProjectileLauncherBaseComponent;
+class AActor;
+class UStatusEffect;
 class AProjectileBase;
 class UAnimMontage;
-class UStatusEffect;
-class AActor;
 
 
 void ACrossbow::StartAmmoSwitch() {

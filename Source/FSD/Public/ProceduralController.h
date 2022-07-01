@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "PathObstacle.h"
-#include "EDebrisItemPass.h"
 #include "GeneratedDebrisItem.h"
-#include "TunnelNode.h"
-#include "GeneratedInfluenceSets.h"
-#include "RoomNode.h"
+#include "EDebrisItemPass.h"
+#include "Components/ActorComponent.h"
 #include "LevelGenerationCarverLists.h"
+#include "TunnelNode.h"
+#include "RoomNode.h"
+#include "PathObstacle.h"
+#include "GeneratedInfluenceSets.h"
 #include "ProceduralController.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

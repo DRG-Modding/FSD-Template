@@ -4,9 +4,9 @@
 #include "Net/OnlineBlueprintCallProxyBase.h"
 #include "FSDCreateSessionCallbackProxy.generated.h"
 
-class APlayerController;
 class UFSDCreateSessionCallbackProxy;
 class UObject;
+class APlayerController;
 
 UCLASS(Blueprintable, MinimalAPI)
 class UFSDCreateSessionCallbackProxy : public UOnlineBlueprintCallProxyBase {

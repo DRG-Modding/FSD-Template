@@ -3,8 +3,8 @@
 #include "ItemUpgradeElement.h"
 #include "HitScanImpactUpgradeElement.generated.h"
 
-class USoundCue;
 class UFXSystemAsset;
+class USoundCue;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UHitScanImpactUpgradeElement : public UItemUpgradeElement {

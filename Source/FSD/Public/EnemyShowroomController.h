@@ -3,8 +3,8 @@
 #include "ShowroomController.h"
 #include "EnemyShowroomController.generated.h"
 
-class AEnemyShowroomItem;
 class UAnimSequenceBase;
+class AEnemyShowroomItem;
 class UObject;
 class UEnemyShowroomController;
 

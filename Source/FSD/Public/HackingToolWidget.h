@@ -3,10 +3,10 @@
 #include "Blueprint/UserWidget.h"
 #include "HackingToolWidget.generated.h"
 
-class UHackingUsableComponent;
-class USoundCue;
-class UDialogDataAsset;
 class AHackingToolItem;
+class UDialogDataAsset;
+class USoundCue;
+class UHackingUsableComponent;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class FSD_API UHackingToolWidget : public UUserWidget {

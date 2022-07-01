@@ -6,8 +6,8 @@
 
 class UDialogDataAsset;
 class UPrimitiveComponent;
-class UActorContextWidget;
 class APlayerController;
+class UActorContextWidget;
 class UTexture2D;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

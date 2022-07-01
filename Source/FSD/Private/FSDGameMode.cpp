@@ -9,16 +9,16 @@
 #include "FormationsManagerComponent.h"
 
 class AActor;
-class AFSDGameMode;
-class AMiningPod;
+class APlayerCharacter;
 class AFSDPlayerController;
+class AFSDGameMode;
 class UEnemyWaveManager;
 class AMolly;
+class AMiningPod;
 class UEncounterManager;
 class ABosco;
 class UDifficultyManager;
 class APlayerController;
-class APlayerCharacter;
 
 void AFSDGameMode::StartGame() {
 }

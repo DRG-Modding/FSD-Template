@@ -5,9 +5,9 @@
 #include "Curves/CurveFloat.h"
 #include "TreasureSettings.generated.h"
 
-class UItemSkinSet;
-class UVictoryPose;
 class UItemAquisitionSource;
+class UVictoryPose;
+class UItemSkinSet;
 class USpecialEvent;
 class UDrinkableDataAsset;
 

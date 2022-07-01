@@ -2,8 +2,8 @@
 
 class UPrimitiveComponent;
 class UDialogDataAsset;
-class UActorContextWidget;
 class APlayerController;
+class UActorContextWidget;
 class UTexture2D;
 
 UDialogDataAsset* UObjectInfoComponent::GetLookAtShout(const UPrimitiveComponent* TargetComponent) const {

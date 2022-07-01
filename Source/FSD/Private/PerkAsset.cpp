@@ -3,9 +3,9 @@
 
 class APlayerController;
 class UObject;
-class UPerkAsset;
 class UPlayerCharacterID;
 class UPerkHUDIconWidget;
+class UPerkAsset;
 class UPerkHUDActivationWidget;
 class UPerkDelegateItem;
 

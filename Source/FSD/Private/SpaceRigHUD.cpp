@@ -1,8 +1,8 @@
 #include "SpaceRigHUD.h"
 
-class UDialogDataAsset;
 class UWindowWidget;
 class UObject;
+class UDialogDataAsset;
 
 void ASpaceRigHUD::SetNotificationQueueActive(bool Inactive) {
 }

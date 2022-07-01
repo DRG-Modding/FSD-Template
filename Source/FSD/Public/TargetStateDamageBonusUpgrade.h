@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ETargetStateDamageBonusType.h"
 #include "ItemUpgrade.h"
 #include "UpgradeValues.h"
+#include "ETargetStateDamageBonusType.h"
 #include "TargetStateDamageBonusUpgrade.generated.h"
 
-class AActor;
 class UDamageClass;
+class AActor;
 class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)

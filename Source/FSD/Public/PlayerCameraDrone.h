@@ -6,11 +6,11 @@
 #include "Engine/EngineTypes.h"
 #include "PlayerCameraDrone.generated.h"
 
+class UPrimitiveComponent;
 class UAnimationAsset;
 class UPawnMovementComponent;
 class AActor;
 class UCameraComponent;
-class UPrimitiveComponent;
 
 UCLASS(Abstract, Blueprintable)
 class APlayerCameraDrone : public APawn {

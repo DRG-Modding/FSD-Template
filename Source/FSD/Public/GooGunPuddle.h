@@ -2,16 +2,16 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "GooPuddleStatusEffectTrigger.h"
+#include "Engine/EngineTypes.h"
 #include "DamageData.h"
 #include "GooGunPuddle.generated.h"
 
-class USimpleHealthComponent;
-class USphereComponent;
-class USoundBase;
 class UStatusEffect;
+class USphereComponent;
+class USimpleHealthComponent;
 class UPrimitiveComponent;
+class USoundBase;
 
 UCLASS(Blueprintable)
 class AGooGunPuddle : public AActor {

@@ -3,10 +3,10 @@
 #include "Item.h"
 #include "DualAnimatedItem.generated.h"
 
-class UAnimInstance;
-class UPlayerAnimInstance;
-class USkeletalMeshComponent;
 class UAnimMontage;
+class UPlayerAnimInstance;
+class UAnimInstance;
+class USkeletalMeshComponent;
 class UItemCharacterAnimationSet;
 
 UCLASS(Abstract, Blueprintable)

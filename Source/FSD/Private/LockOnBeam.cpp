@@ -1,7 +1,7 @@
 #include "LockOnBeam.h"
 #include "Components/SplineComponent.h"
-#include "Components/SceneComponent.h"
 #include "Components/SplineMeshComponent.h"
+#include "Components/SceneComponent.h"
 
 
 ALockOnBeam::ALockOnBeam() {

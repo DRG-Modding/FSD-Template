@@ -3,20 +3,20 @@
 #include "Templates/SubclassOf.h"
 #include "PhysicalMaterials/PhysicalMaterial.h"
 #include "UObject/NoExportTypes.h"
-#include "Engine/EngineTypes.h"
-#include "DecalData.h"
 #include "UObject/NoExportTypes.h"
+#include "DecalData.h"
+#include "Engine/EngineTypes.h"
 #include "FSDPhysicalMaterial.generated.h"
 
-class UReactiveTerrain;
 class USoundCue;
-class UMaterialInstance;
+class UPrimitiveComponent;
 class UFXSystemAsset;
 class UNiagaraSystem;
+class UReactiveTerrain;
+class UMaterialInstance;
 class UFXSystemComponent;
 class UObject;
 class UFSDPhysicalMaterial;
-class UPrimitiveComponent;
 
 UCLASS(Blueprintable, CollapseCategories)
 class UFSDPhysicalMaterial : public UPhysicalMaterial {

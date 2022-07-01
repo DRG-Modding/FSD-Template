@@ -4,8 +4,8 @@
 #include "OutlineComponent.h"
 
 class APlayerCharacter;
-class AActor;
 class USkeletalMeshComponent;
+class AActor;
 
 void ARedeployableSentryGun::ToggleOutlineAndIcon(bool Visible) {
 }

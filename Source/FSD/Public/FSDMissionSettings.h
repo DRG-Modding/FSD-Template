@@ -5,9 +5,9 @@
 #include "UObject/NoExportTypes.h"
 #include "FSDMissionSettings.generated.h"
 
-class UDifficultySetting;
-class UObject;
 class UGeneratedMission;
+class UObject;
+class UDifficultySetting;
 
 UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class UFSDMissionSettings : public UDeveloperSettings {

@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "GunLogicComponent.generated.h"
 
-class UMeshComponent;
-class UWeaponFireComponent;
-class UParticleSystem;
 class USoundCue;
+class UParticleSystem;
+class UWeaponFireComponent;
+class UMeshComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UGunLogicComponent : public UActorComponent {

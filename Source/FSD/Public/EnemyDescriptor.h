@@ -2,25 +2,25 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Engine/DataAsset.h"
-#include "SpawnRarityItem.h"
-#include "EnemyDebris.h"
-#include "EEnemySignificance.h"
 #include "EVeteranScaling.h"
-#include "DeepPathFinderType.h"
+#include "EEnemySignificance.h"
 #include "UObject/NoExportTypes.h"
 #include "ECreatureSize.h"
+#include "EnemyDebris.h"
+#include "DeepPathFinderType.h"
 #include "GameplayTagContainer.h"
+#include "SpawnRarityItem.h"
 #include "EEnemyDescriptorCheatClass.h"
 #include "EnemyDescriptor.generated.h"
 
-class UMissionTemplate;
-class APawn;
-class UEnemyID;
 class UEnemyDescriptor;
+class UMissionTemplate;
+class UEnemyID;
+class APawn;
 class UBiome;
-class AActor;
 class UDebrisPositioning;
 class UCaveInfluencer;
+class AActor;
 
 UCLASS(Blueprintable)
 class FSD_API UEnemyDescriptor : public UDataAsset {

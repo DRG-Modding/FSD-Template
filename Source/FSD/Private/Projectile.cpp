@@ -3,10 +3,10 @@
 #include "Templates/SubclassOf.h"
 #include "FSDProjectileMovementComponent.h"
 
-class USceneComponent;
 class UObject;
-class APawn;
 class AProjectileBase;
+class APawn;
+class USceneComponent;
 class AProjectile;
 class UFSDPhysicalMaterial;
 

@@ -3,8 +3,8 @@
 class UObject;
 class AFSDPlayerState;
 class UPlayerCharacterID;
-class APlayerCharacter;
 class UTexture;
+class APlayerCharacter;
 
 bool UVanityItem::RemoveFromOwned(UObject* WorldContext) {
     return false;

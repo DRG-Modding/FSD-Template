@@ -4,9 +4,9 @@
 #include "GameFramework/Actor.h"
 #include "DroneFlame.generated.h"
 
+class UStatusEffect;
 class UParticleSystemComponent;
 class UDamageComponent;
-class UStatusEffect;
 
 UCLASS(Blueprintable)
 class ADroneFlame : public AActor {

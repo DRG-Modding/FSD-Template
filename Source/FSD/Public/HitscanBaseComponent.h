@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ERicochetBehavior.h"
+#include "DelegateDelegate.h"
 #include "SpreadChangedDelegateDelegate.h"
 #include "WeaponFireComponent.h"
-#include "DelegateDelegate.h"
-#include "Curves/CurveFloat.h"
 #include "EImpactDecalSize.h"
+#include "Curves/CurveFloat.h"
+#include "ERicochetBehavior.h"
 #include "HitscanBaseComponent.generated.h"
 
 class UDamageComponent;

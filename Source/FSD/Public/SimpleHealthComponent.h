@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "HealthComponentBase.h"
+#include "UObject/NoExportTypes.h"
 #include "SimpleHealthComponent.generated.h"
 
-class UEnemyComponent;
 class UPawnStat;
+class UEnemyComponent;
 class UDamageTag;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

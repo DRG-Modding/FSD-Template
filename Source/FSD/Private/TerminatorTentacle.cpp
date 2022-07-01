@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 #include "GrabberComponent.h"
 
-class UHealthComponentBase;
 class AActor;
+class UHealthComponentBase;
 
 void ATerminatorTentacle::PlayHitReaction(float Amount) {
 }

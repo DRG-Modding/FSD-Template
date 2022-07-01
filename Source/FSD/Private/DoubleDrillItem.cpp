@@ -1,12 +1,12 @@
 #include "DoubleDrillItem.h"
 #include "Net/UnrealNetwork.h"
 #include "DoubleDrillAggregator.h"
-#include "FSDAudioComponent.h"
 #include "FirstPersonParticleSystemComponent.h"
 #include "DamageComponent.h"
+#include "FSDAudioComponent.h"
 
-class UFSDPhysicalMaterial;
 class AActor;
+class UFSDPhysicalMaterial;
 
 void ADoubleDrillItem::Server_StopMining_Implementation() {
 }

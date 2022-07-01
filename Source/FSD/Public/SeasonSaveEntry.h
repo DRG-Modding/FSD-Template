@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RewardsClaimed.h"
 #include "UObject/NoExportTypes.h"
+#include "RewardsClaimed.h"
 #include "ChallengeSaveInfo.h"
 #include "UObject/NoExportTypes.h"
 #include "SeasonSaveEntry.generated.h"

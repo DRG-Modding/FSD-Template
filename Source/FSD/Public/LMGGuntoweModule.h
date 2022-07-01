@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HostileTargetingGuntowerModule.h"
 #include "UObject/NoExportTypes.h"
+#include "HostileTargetingGuntowerModule.h"
 #include "LMGGuntoweModule.generated.h"
 
 class UHitscanComponent;
-class UParticleSystem;
-class USceneComponent;
 class UDamageComponent;
-class USoundCue;
+class USceneComponent;
 class UAudioComponent;
+class USoundCue;
+class UParticleSystem;
 
 UCLASS(Blueprintable)
 class ALMGGuntoweModule : public AHostileTargetingGuntowerModule {

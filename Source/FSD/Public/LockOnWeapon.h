@@ -3,15 +3,15 @@
 #include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "AmmoDrivenWeapon.h"
-#include "UObject/NoExportTypes.h"
 #include "TracerData.h"
+#include "UObject/NoExportTypes.h"
 #include "LockCounter.h"
 #include "Engine/EngineTypes.h"
 #include "LockOnWeapon.generated.h"
 
 class AActor;
-class UActorTrackingWidget;
 class ALockOnBeam;
+class UActorTrackingWidget;
 class UStatusEffect;
 class UDamageComponent;
 class UHitscanComponent;

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Fonts/SlateFontInfo.h"
 #include "Styling/SlateColor.h"
+#include "Fonts/SlateFontInfo.h"
 #include "TextStyleOverride.generated.h"
 
 USTRUCT(BlueprintType)

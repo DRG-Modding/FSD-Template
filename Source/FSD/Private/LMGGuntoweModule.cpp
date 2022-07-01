@@ -1,8 +1,8 @@
 #include "LMGGuntoweModule.h"
 #include "Net/UnrealNetwork.h"
 #include "HitscanComponent.h"
-#include "Components/SceneComponent.h"
 #include "DamageComponent.h"
+#include "Components/SceneComponent.h"
 #include "Components/AudioComponent.h"
 
 void ALMGGuntoweModule::ShowShot(const FVector& Location) {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "RandRange.h"
+#include "UObject/NoExportTypes.h"
 #include "RandLinePoint.generated.h"
 
 USTRUCT(BlueprintType)

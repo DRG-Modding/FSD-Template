@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EGrabberState.h"
 #include "SimpleMovingEnemyAnimInstance.h"
+#include "EGrabberState.h"
 #include "FlyingLifterAnimInstance.generated.h"
 
 UCLASS(Blueprintable, NonTransient)

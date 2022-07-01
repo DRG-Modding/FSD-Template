@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
+#include "MuleRefueledDelegate.h"
 #include "Objective.h"
 #include "ShellBreakPauseChangeSignatureDelegate.h"
-#include "EEscortMissionState.h"
 #include "ShellBreakTimerSignatureDelegate.h"
-#include "MuleRefueledDelegate.h"
+#include "UObject/NoExportTypes.h"
+#include "EEscortMissionState.h"
 #include "CannisterRegisteredDelegate.h"
 #include "EscortObjective.generated.h"
 
-class UHealthComponentBase;
-class UCarvedResourceData;
-class AActor;
-class UCurveFloat;
-class UDebrisPositioning;
 class UDebrisBase;
+class UDebrisPositioning;
+class UCurveFloat;
+class AActor;
 class AEscortDestination;
+class UCarvedResourceData;
 class UResourceData;
-class UCappedResource;
 class AEscortMule;
 class AExtractorItem;
+class UCappedResource;
+class UHealthComponentBase;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UEscortObjective : public UObjective {

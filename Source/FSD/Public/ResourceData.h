@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
-#include "SaveGameIDInterface.h"
 #include "UObject/NoExportTypes.h"
+#include "SaveGameIDInterface.h"
 #include "ResourceData.generated.h"
 
-class UMissionStat;
 class UTexture2D;
+class UMissionStat;
 class UObject;
 class AResourceChunk;
 

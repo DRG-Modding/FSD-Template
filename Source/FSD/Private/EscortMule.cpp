@@ -1,9 +1,9 @@
 #include "EscortMule.h"
 #include "Net/UnrealNetwork.h"
-#include "FriendlyHealthComponent.h"
-#include "Components/SkeletalMeshComponent.h"
 #include "SimpleObjectInfoComponent.h"
+#include "FriendlyHealthComponent.h"
 #include "RestrictedResourceBank.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "OutlineComponent.h"
 
 class APlayerCharacter;

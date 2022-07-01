@@ -6,9 +6,9 @@
 #include "FacilityTurret.generated.h"
 
 class USceneComponent;
+class AActor;
 class USkeletalMeshComponent;
 class USoundCue;
-class AActor;
 
 UCLASS(Blueprintable)
 class FSD_API AFacilityTurret : public AEnemyPawn {

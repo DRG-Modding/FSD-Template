@@ -3,13 +3,13 @@
 #include "Blueprint/UserWidget.h"
 #include "LookingAtContentWidget.generated.h"
 
-class UHackingUsableComponent;
+class UPetComponent;
 class UPawnAfflictionComponent;
 class AActor;
+class UHackingUsableComponent;
 class USimpleObjectInfoComponent;
 class UHealth;
 class IHealth;
-class UPetComponent;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class ULookingAtContentWidget : public UUserWidget {

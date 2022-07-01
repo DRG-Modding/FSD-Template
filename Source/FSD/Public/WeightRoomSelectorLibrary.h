@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "UObject/NoExportTypes.h"
 #include "WeightedRoomSelector.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "WeightRoomSelectorLibrary.generated.h"
 
 class URoomGenerator;

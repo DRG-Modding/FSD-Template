@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EDamageType.h"
 #include "EEnemyAttackType.h"
+#include "EDamageType.h"
 #include "EnemyAttackDescription.generated.h"
 
 USTRUCT(BlueprintType)

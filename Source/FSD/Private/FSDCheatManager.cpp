@@ -2,13 +2,13 @@
 #include "Templates/SubclassOf.h"
 
 class UPlayerCharacterID;
-class AFSDAIController;
 class UEnemyDescriptor;
-class APawn;
-class UBaseCritterDescriptor;
 class AActor;
-class UObject;
+class UBaseCritterDescriptor;
+class APawn;
 class APlayerCharacter;
+class AFSDAIController;
+class UObject;
 class UResourceData;
 
 void UFSDCheatManager::SwitchCharacter(UPlayerCharacterID* characterID) {

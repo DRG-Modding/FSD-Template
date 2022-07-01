@@ -6,19 +6,19 @@
 #include "AFlyingBug.generated.h"
 
 class UPawnAlertComponent;
+class UFrozenPawnImpactComponent;
+class UOutlineComponent;
 class UEnemyComponent;
 class UPawnStatsComponent;
 class UPawnSensingComponent;
-class UOutlineComponent;
-class UAudioComponent;
 class USphereComponent;
-class UFrozenPawnImpactComponent;
+class UDamageTag;
+class UAudioComponent;
 class UHitReactionComponent;
-class UHealthComponentBase;
 class AActor;
 class USoundBase;
+class UHealthComponentBase;
 class UHealthComponent;
-class UDamageTag;
 
 UCLASS(Blueprintable)
 class AAFlyingBug : public AEnemyDeepPathfinderCharacter {

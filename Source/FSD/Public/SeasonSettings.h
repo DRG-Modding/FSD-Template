@@ -3,9 +3,9 @@
 #include "Engine/DataAsset.h"
 #include "SeasonSettings.generated.h"
 
-class USeasonChallenge;
-class USeason;
 class UCurveFloat;
+class USeason;
+class USeasonChallenge;
 
 UCLASS(Blueprintable)
 class USeasonSettings : public UDataAsset {

@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
 #include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "ExplosionBaseComponent.generated.h"
 
-class UPhysicalMaterial;
 class UDamageComponent;
 class UPrimitiveComponent;
+class UPhysicalMaterial;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UExplosionBaseComponent : public UActorComponent {

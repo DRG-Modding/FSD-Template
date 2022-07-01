@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Curves/CurveFloat.h"
 #include "Components/SplineMeshComponent.h"
+#include "Curves/CurveFloat.h"
 #include "UObject/NoExportTypes.h"
 #include "SplinePlant.generated.h"
 
-class UStaticMesh;
 class USplineComponent;
 class USceneComponent;
-class USoundCue;
 class UAudioComponent;
+class USoundCue;
+class UStaticMesh;
 class USplineMeshComponent;
 
 UCLASS(Blueprintable)

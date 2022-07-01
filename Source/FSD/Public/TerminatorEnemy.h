@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EnemyDeepPathfinderCharacter.h"
 #include "MultiTargeter.h"
+#include "EnemyDeepPathfinderCharacter.h"
 #include "TerminatorEnemy.generated.h"
 
+class UAnimMontage;
 class AActor;
 class UHitReactionComponent;
-class UAnimMontage;
 
 UCLASS(Blueprintable)
 class ATerminatorEnemy : public AEnemyDeepPathfinderCharacter, public IMultiTargeter {

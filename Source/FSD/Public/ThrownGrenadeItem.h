@@ -2,15 +2,15 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Item.h"
-#include "RejoinListener.h"
 #include "UObject/NoExportTypes.h"
+#include "RejoinListener.h"
 #include "EThrownGrenadeItemState.h"
 #include "UObject/NoExportTypes.h"
 #include "ThrownGrenadeItem.generated.h"
 
+class AGrenade;
 class UPlayerAnimInstance;
 class UItemCharacterAnimationSet;
-class AGrenade;
 class UGrenadeAnimationSet;
 class UStaticMeshComponent;
 

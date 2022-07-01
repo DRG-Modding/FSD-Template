@@ -5,8 +5,8 @@
 #include "UObject/NoExportTypes.h"
 #include "TerrainModifyingProjectile.generated.h"
 
-class UStaticMesh;
 class UTerrainMaterial;
+class UStaticMesh;
 
 UCLASS(Blueprintable)
 class ATerrainModifyingProjectile : public AProjectile {

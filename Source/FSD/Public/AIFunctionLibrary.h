@@ -4,11 +4,11 @@
 #include "UObject/NoExportTypes.h"
 #include "AIFunctionLibrary.generated.h"
 
-class UAttackerPositioningComponent;
-class UObject;
-class AActor;
-class APawn;
 class APlayerCharacter;
+class UObject;
+class APawn;
+class AActor;
+class UAttackerPositioningComponent;
 
 UCLASS(Blueprintable)
 class UAIFunctionLibrary : public UBlueprintFunctionLibrary {

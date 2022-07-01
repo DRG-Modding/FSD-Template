@@ -1,9 +1,9 @@
 #include "UGCBlueprintLibrary.h"
 
-class UObject;
 class UUGCSettings;
-class UUGCLatentActionManager;
+class UObject;
 class UUGCRegistry;
+class UUGCLatentActionManager;
 
 UUGCSettings* UUGCBlueprintLibrary::GetUGCSettings(UObject* WorldContextObject) {
     return NULL;

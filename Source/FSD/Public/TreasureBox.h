@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "TreasureContainer.h"
+#include "UObject/NoExportTypes.h"
 #include "EInputKeys.h"
 #include "TreasureBox.generated.h"
 
-class UCurveFloat;
-class AActor;
-class USkeletalMeshComponent;
-class UTerrainPlacementComponent;
-class USingleUsableComponent;
 class URepairableComponent;
+class UTerrainPlacementComponent;
 class URepairableUsable;
 class UStaticMeshComponent;
-class AProceduralSetup;
+class USingleUsableComponent;
+class AActor;
+class UDebrisPositioning;
+class USkeletalMeshComponent;
 class UAnimSequenceBase;
 class UTreasureRewarder;
-class UDebrisPositioning;
+class AProceduralSetup;
+class UCurveFloat;
 class APlayerCharacter;
 
 UCLASS(Blueprintable)

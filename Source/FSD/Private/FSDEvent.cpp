@@ -2,8 +2,8 @@
 
 class UObject;
 class UFSDEvent;
-class UTexture2D;
 class APlayerController;
+class UTexture2D;
 
 void UFSDEvent::MarkClaimableRewardsSeen(UObject* WorldContext) {
 }

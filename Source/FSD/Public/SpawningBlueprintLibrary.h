@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "DeepPathFinderSize.h"
 #include "UObject/NoExportTypes.h"
 #include "EnemySpawnedDelegateDelegate.h"
+#include "DeepPathFinderSize.h"
 #include "SpawningBlueprintLibrary.generated.h"
 
 class UObject;

@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "FSDUserWidget.h"
-#include "HealthBarLooks.h"
-#include "HUDHealthBarSignatureDelegate.h"
 #include "UObject/NoExportTypes.h"
+#include "HUDHealthBarSignatureDelegate.h"
 #include "EHealthbarType.h"
+#include "HealthBarLooks.h"
 #include "HUDHealthBar.generated.h"
 
 class UHealth;

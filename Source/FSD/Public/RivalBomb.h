@@ -6,8 +6,8 @@
 #include "RivalBomb.generated.h"
 
 class UDebrisPositioning;
-class UCurveFloat;
 class ARivalBombNode;
+class UCurveFloat;
 class AGem;
 
 UCLASS(Blueprintable)

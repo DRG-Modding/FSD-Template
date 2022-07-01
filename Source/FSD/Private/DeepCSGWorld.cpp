@@ -2,14 +2,14 @@
 #include "Templates/SubclassOf.h"
 #include "AsyncPathRequests.h"
 
-class UPrimitiveComponent;
-class ACSGBuilder;
 class UStaticMesh;
-class AActor;
-class UTerrainMaterial;
-class ADebrisDataActor;
-class ADeepCSGWorld;
+class UPrimitiveComponent;
 class USTLMeshCarver;
+class ACSGBuilder;
+class UTerrainMaterial;
+class ADeepCSGWorld;
+class ADebrisDataActor;
+class AActor;
 class UStaticMeshCarver;
 class UDebrisBase;
 

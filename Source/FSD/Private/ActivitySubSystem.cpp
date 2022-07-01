@@ -1,7 +1,7 @@
 #include "ActivitySubSystem.h"
 
-class UGameActivityType;
 class APlayerState;
+class UGameActivityType;
 
 void UActivitySubSystem::StartActivity(const APlayerState* PlayerState, const UGameActivityType* Activity) {
 }

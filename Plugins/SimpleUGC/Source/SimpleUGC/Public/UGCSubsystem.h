@@ -7,11 +7,11 @@
 #include "Engine/LatentActionManager.h"
 #include "UGCSubsystem.generated.h"
 
-class UUGCLatentActionManager;
 class UUGCRegistry;
 class UUGCSettings;
-class UObject;
+class UUGCLatentActionManager;
 class UUGCPackage;
+class UObject;
 
 UCLASS(Blueprintable)
 class SIMPLEUGC_API UUGCSubsystem : public UEngineSubsystem {
@@ -31,6 +31,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool noInternetAccess;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool noModioUser;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsJoining;

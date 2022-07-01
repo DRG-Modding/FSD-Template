@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ETargetStateDamageBonusType.h"
 #include "ItemUpgrade.h"
+#include "ETargetStateDamageBonusType.h"
 #include "StatusAndStateDamageBonusUpgrade.generated.h"
 
 class UStatusEffect;

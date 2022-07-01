@@ -1,10 +1,10 @@
 #include "ItemSkin.h"
 
-class UObject;
 class UItemID;
+class UObject;
 class AFSDPlayerState;
-class UMaterialInstanceDynamic;
 class UPlayerCharacterID;
+class UMaterialInstanceDynamic;
 
 bool UItemSkin::Unlock(UObject* WorldContext, UItemID* ItemID, bool broadcast) {
     return false;

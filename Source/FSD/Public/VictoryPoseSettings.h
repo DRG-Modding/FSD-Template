@@ -6,8 +6,8 @@
 
 class UVictoryPose;
 class UTexture2D;
-class AActor;
 class UActorComponent;
+class AActor;
 
 UCLASS(Blueprintable)
 class UVictoryPoseSettings : public UDataAsset {

@@ -6,12 +6,12 @@
 #include "Engine/NetSerialization.h"
 #include "ElectroBeam.generated.h"
 
-class UHealthComponentBase;
+class UStatusEffect;
+class UParticleSystemComponent;
 class USceneComponent;
 class UCapsuleComponent;
-class UParticleSystemComponent;
 class UAudioComponent;
-class UStatusEffect;
+class UHealthComponentBase;
 
 UCLASS(Abstract, Blueprintable)
 class AElectroBeam : public AActor {

@@ -1,8 +1,8 @@
 #include "YesNoPromptAction.h"
 
-class UResourceData;
-class UObject;
 class UYesNoPromptAction;
+class UObject;
+class UResourceData;
 
 UYesNoPromptAction* UYesNoPromptAction::PromptYesNo(UObject* WorldContext, FYesNoPromptSettings Prompt) {
     return NULL;

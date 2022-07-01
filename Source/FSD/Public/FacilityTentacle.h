@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EFacilityTentacleState.h"
-#include "TentacleBase.h"
 #include "TriggerAI.h"
+#include "TentacleBase.h"
 #include "UObject/NoExportTypes.h"
+#include "EFacilityTentacleState.h"
 #include "TentacleTarget.h"
 #include "FacilityTentacle.generated.h"
 
-class UDebrisPositioning;
 class UAnimMontage;
+class UDebrisPositioning;
 class USkeletalMeshComponent;
 
 UCLASS(Blueprintable)

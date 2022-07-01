@@ -4,9 +4,9 @@
 #include "GuntowerModuleLevel.h"
 #include "GuntowerEvent.generated.h"
 
-class UDamageComponent;
 class USceneComponent;
 class USkeletalMeshComponent;
+class UDamageComponent;
 class AGuntowerModule;
 
 UCLASS(Blueprintable)

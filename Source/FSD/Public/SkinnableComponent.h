@@ -4,8 +4,8 @@
 #include "EItemSkinType.h"
 #include "SkinnableComponent.generated.h"
 
-class AFSDPlayerState;
 class UItemSkin;
+class AFSDPlayerState;
 class UItemID;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -1,11 +1,11 @@
 #include "UpgradableGearComponent.h"
 #include "Templates/SubclassOf.h"
 
-class UItemID;
-class APlayerCharacter;
-class AFSDPlayerController;
-class UItemUpgrade;
 class UObject;
+class UItemID;
+class UItemUpgrade;
+class AFSDPlayerController;
+class APlayerCharacter;
 class AActor;
 class AFSDPlayerState;
 class UPlayerCharacterID;

@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "EnemyDeepPathfinderCharacter.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "FlyingEnemyDeepPathfinderCharacter.generated.h"
 
 class AActor;
-class UParticleSystem;
 class UPhysicalMaterial;
 class UPhysicsAsset;
+class UParticleSystem;
 class USoundCue;
 class UPrimitiveComponent;
 

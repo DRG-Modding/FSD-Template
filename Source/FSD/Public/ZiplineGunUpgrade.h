@@ -6,8 +6,8 @@
 #include "UpgradeValues.h"
 #include "ZiplineGunUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AZipLineProjectile;
+class AFSDPlayerState;
 class AActor;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)

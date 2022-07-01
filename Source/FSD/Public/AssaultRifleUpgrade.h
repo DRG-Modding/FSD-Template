@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "StandardItemUpgrade.h"
-#include "EAssaultRifleUpgrade.h"
 #include "UpgradeValues.h"
+#include "EAssaultRifleUpgrade.h"
 #include "AssaultRifleUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AItem;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UAssaultRifleUpgrade : public UStandardItemUpgrade {

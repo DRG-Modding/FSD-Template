@@ -4,13 +4,13 @@
 #include "ECaretakerSpawnType.h"
 #include "Caretaker.generated.h"
 
-class UCaretakerActionComponent;
 class USceneComponent;
+class UEnemyHealthComponent;
 class USkeletalMeshComponent;
-class UPawnStatsComponent;
+class UCaretakerActionComponent;
 class UPassthroughSubHealthComponent;
 class UHealthDamageTracker;
-class UEnemyHealthComponent;
+class UPawnStatsComponent;
 class UAnimSequenceBase;
 
 UCLASS(Blueprintable)

@@ -4,10 +4,10 @@
 #include "MixerEnemyNameChangeDelegate.h"
 #include "EnemyComponent.generated.h"
 
-class UTexture2D;
-class UEnemyID;
-class UDialogDataAsset;
 class UEnemyFamily;
+class UDialogDataAsset;
+class UEnemyID;
+class UTexture2D;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UEnemyComponent : public USimpleObjectInfoComponent {

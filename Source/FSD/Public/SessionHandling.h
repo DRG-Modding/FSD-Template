@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EFSDNATType.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
-#include "FindSessionsCallbackProxy.h"
-#include "EServerSortOrder.h"
-#include "EMissionStructure.h"
 #include "EDisconnectReason.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
+#include "EServerSortOrder.h"
+#include "FindSessionsCallbackProxy.h"
+#include "EFSDNATType.h"
+#include "EMissionStructure.h"
 #include "FriendInfo.h"
-#include "EServerDistance.h"
 #include "EFSDMissionStatus.h"
 #include "UObject/NoExportTypes.h"
+#include "EServerDistance.h"
 #include "SessionHandling.generated.h"
 
-class UPlayerCharacterID;
+class UFSDGameInstance;
 class UObject;
 class UBiome;
-class UFSDGameInstance;
+class UPlayerCharacterID;
+class UMissionTemplate;
 class APlayerCharacter;
 class UDifficultySetting;
-class UMissionTemplate;
 
 UCLASS(Blueprintable)
 class USessionHandling : public UBlueprintFunctionLibrary {

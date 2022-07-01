@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "SchematicBankInterface.h"
+#include "Engine/DataAsset.h"
 #include "OverclockBank.generated.h"
 
 class UOverclockUpgrade;

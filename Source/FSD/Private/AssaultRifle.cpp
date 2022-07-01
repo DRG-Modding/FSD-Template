@@ -1,7 +1,7 @@
 #include "AssaultRifle.h"
 
-class UFSDPhysicalMaterial;
 class AActor;
+class UFSDPhysicalMaterial;
 
 void AAssaultRifle::OnTimerElapsed() {
 }

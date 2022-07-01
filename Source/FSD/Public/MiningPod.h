@@ -2,24 +2,24 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
-#include "UObject/NoExportTypes.h"
 #include "GameplayTagAssetInterface.h"
-#include "GameplayTagContainer.h"
 #include "MiningPodDialogs.h"
-#include "EMiningPodMission.h"
-#include "EMiningPodState.h"
-#include "EMiningPodRampState.h"
-#include "UObject/NoExportTypes.h"
 #include "GameplayTagContainer.h"
+#include "GameplayTagContainer.h"
+#include "UObject/NoExportTypes.h"
+#include "EMiningPodMission.h"
+#include "EMiningPodRampState.h"
+#include "EMiningPodState.h"
+#include "UObject/NoExportTypes.h"
 #include "MiningPod.generated.h"
 
 class UCurveFloat;
 class UAutoCarverComponent;
 class UBoxComponent;
-class UObject;
 class UOutlineComponent;
 class UObjectivesManager;
 class AMiningPod;
+class UObject;
 class AMolly;
 
 UCLASS(Blueprintable)

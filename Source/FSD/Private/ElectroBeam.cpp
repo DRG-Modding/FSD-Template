@@ -5,8 +5,8 @@
 #include "Components/AudioComponent.h"
 
 class USceneComponent;
-class UHealthComponentBase;
 class AActor;
+class UHealthComponentBase;
 
 void AElectroBeam::SetTarget(USceneComponent* TargetPoint) {
 }

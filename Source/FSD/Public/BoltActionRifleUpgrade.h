@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "StandardItemUpgrade.h"
-#include "EBoltActionRifleUpgrades.h"
 #include "UpgradeValues.h"
+#include "EBoltActionRifleUpgrades.h"
 #include "BoltActionRifleUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AItem;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UBoltActionRifleUpgrade : public UStandardItemUpgrade {

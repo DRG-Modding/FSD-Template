@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "DLSSSettings.generated.h"
 
-UCLASS(Blueprintable, config = Engine, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, config = Engine)
 class DLSS_API UDLSSSettings : public UObject {
     GENERATED_BODY()
 public:

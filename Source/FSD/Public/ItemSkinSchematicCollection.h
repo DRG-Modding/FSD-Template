@@ -4,9 +4,9 @@
 #include "EItemSkinCollectionType.h"
 #include "ItemSkinSchematicCollection.generated.h"
 
-class USchematicPricingTier;
 class UItemSkin;
 class USchematicCategory;
+class USchematicPricingTier;
 class USchematicRarity;
 class USchematic;
 

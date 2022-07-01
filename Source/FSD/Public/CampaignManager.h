@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UObject/Object.h"
-#include "UObject/NoExportTypes.h"
 #include "ECampaignType.h"
+#include "UObject/NoExportTypes.h"
 #include "CampaignManager.generated.h"
 
-class UGeneratedMission;
-class UCampaign;
 class UFSDSaveGame;
+class UCampaign;
 class AFSDPlayerController;
+class UGeneratedMission;
 class UDifficultySetting;
 
 UCLASS(Abstract, Blueprintable)

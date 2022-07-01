@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AmmoDrivenWeapon.h"
-#include "Engine/NetSerialization.h"
 #include "DecalData.h"
+#include "Engine/NetSerialization.h"
 #include "UObject/NoExportTypes.h"
 #include "CryosprayItem.generated.h"
 
-class AProjectileBase;
 class UMotionAudioController;
 class UProjectileLauncherComponent;
-class UParticleSystem;
 class UDamageComponent;
-class UStickyFlameSpawner;
 class UParticleSystemComponent;
+class UStickyFlameSpawner;
+class UFSDPhysicalMaterial;
+class UParticleSystem;
 class UFSDAudioComponent;
 class UItemUpgrade;
 class UHealthComponentBase;
 class UPrimitiveComponent;
-class UFSDPhysicalMaterial;
+class AProjectileBase;
 
 UCLASS(Abstract, Blueprintable)
 class ACryosprayItem : public AAmmoDrivenWeapon {

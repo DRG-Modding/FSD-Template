@@ -4,8 +4,8 @@
 #include "ExtruderPlant.generated.h"
 
 class USkeletalMeshComponent;
-class UAudioComponent;
 class UAnimationAsset;
+class UAudioComponent;
 
 UCLASS(Abstract, Blueprintable)
 class AExtruderPlant : public AActor {

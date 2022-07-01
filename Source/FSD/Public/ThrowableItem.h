@@ -6,10 +6,10 @@
 #include "UObject/NoExportTypes.h"
 #include "ThrowableItem.generated.h"
 
+class UItemUpgrade;
 class AThrowableActor;
 class AItem;
 class UAnimMontage;
-class UItemUpgrade;
 class AActor;
 
 UCLASS(Blueprintable)

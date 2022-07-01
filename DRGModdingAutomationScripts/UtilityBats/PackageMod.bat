@@ -5,8 +5,8 @@ rem Set active directory to main automation dir
 pushd %~dp0
 cd ..
 
-call UtilityBats/CopyWhitelistedFiles.bat noPause
-call UtilityBats/StripBlacklistedFiles.bat noPause
+call UtilityBats/CopyWhitelistedFiles.bat --noPause
+call UtilityBats/StripBlacklistedFiles.bat --noPause
 
 ::Make input text file
 echo making input text file
@@ -19,7 +19,13 @@ echo running UnrealPak
 
 echo Successfully packaged
 
-::There's probably a better way to pass an argument to disable pausing, but Oh well
-if not "%1"=="noPause" (
+rem I found a better way to disable pausing :P
+set noPause=false
+for %%g in (%*) do (
+    if "%%g"=="--noPause" (
+        set noPause==true
+    )
+)
+if %noPause%==false (
 	pause
 )

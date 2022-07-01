@@ -5,10 +5,10 @@
 #include "ActiveStatusEffectBank.h"
 #include "StatusEffectsComponent.generated.h"
 
-class AActor;
-class UHealthComponentBase;
-class UStatusEffect;
 class UStatusEffectExclusiveKey;
+class UHealthComponentBase;
+class AActor;
+class UStatusEffect;
 class UObject;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

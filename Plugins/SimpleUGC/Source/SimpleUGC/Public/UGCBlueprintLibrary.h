@@ -3,9 +3,9 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "UGCBlueprintLibrary.generated.h"
 
-class UUGCSettings;
-class UObject;
 class UUGCLatentActionManager;
+class UObject;
+class UUGCSettings;
 class UUGCRegistry;
 
 UCLASS(Blueprintable)

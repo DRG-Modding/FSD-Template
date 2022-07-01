@@ -3,8 +3,8 @@
 #include "Objective.h"
 #include "RepairObjective.generated.h"
 
-class AActor;
 class UDebrisPositioning;
+class AActor;
 class UGemResourceData;
 class URepairableComponent;
 

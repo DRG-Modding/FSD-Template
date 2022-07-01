@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OnStartBurningDelegate.h"
 #include "TemperatureComponent.h"
+#include "OnStartBurningDelegate.h"
 #include "ObjectTemperatureComponent.generated.h"
 
 class UHealthComponentBase;

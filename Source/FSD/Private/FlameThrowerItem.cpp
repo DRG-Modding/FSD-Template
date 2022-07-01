@@ -1,11 +1,11 @@
 #include "FlameThrowerItem.h"
-#include "StickyFlameSpawner.h"
 #include "DamageComponent.h"
+#include "StickyFlameSpawner.h"
 #include "MotionAudioController.h"
 #include "ProjectileLauncherComponent.h"
 
-class AActor;
 class UHealthComponentBase;
+class AActor;
 class UFSDPhysicalMaterial;
 class UPrimitiveComponent;
 

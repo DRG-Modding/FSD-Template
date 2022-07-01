@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "CarriableItem.h"
-#include "UObject/NoExportTypes.h"
 #include "EInputKeys.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "BasicThrowableItem.generated.h"
 
-class USoundCue;
+class UInstantUsable;
 class UFirstPersonStaticMeshComponent;
 class UBoxComponent;
-class UCarriableComponent;
+class USoundCue;
 class USphereComponent;
 class UStaticMeshComponent;
-class UInstantUsable;
-class AActor;
-class UPrimitiveComponent;
 class APlayerCharacter;
+class UCarriableComponent;
+class UPrimitiveComponent;
+class AActor;
 
 UCLASS(Abstract, Blueprintable)
 class ABasicThrowableItem : public ACarriableItem {

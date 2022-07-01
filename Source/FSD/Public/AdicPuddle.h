@@ -5,9 +5,9 @@
 #include "Engine/EngineTypes.h"
 #include "AdicPuddle.generated.h"
 
+class UStatusEffect;
 class USphereComponent;
 class USoundBase;
-class UStatusEffect;
 class UPrimitiveComponent;
 
 UCLASS(Blueprintable)

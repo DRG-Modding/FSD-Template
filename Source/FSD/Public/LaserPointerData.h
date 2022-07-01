@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "ELaserPointerTargetType.h"
 #include "UObject/NoExportTypes.h"
+#include "ELaserPointerTargetType.h"
 #include "LaserPointerData.generated.h"
 
 class UTexture2D;

@@ -6,10 +6,10 @@
 #include "EPickaxePartLocation.h"
 #include "GenerateIconInfo.generated.h"
 
-class UPickaxePart;
 class UVanityItem;
-class UItemSkin;
+class UPickaxePart;
 class UPlayerCharacterID;
+class UItemSkin;
 
 USTRUCT(BlueprintType)
 struct FGenerateIconInfo {

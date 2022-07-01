@@ -1,8 +1,8 @@
 #include "TerrainMaterial.h"
 
 class UObject;
-class UFXSystemComponent;
 class UMaterialInstance;
+class UFXSystemComponent;
 
 UFXSystemComponent* UTerrainMaterial::SpawnPartialDigParticles(UObject* WorldContextObject, FVector Location, FRotator Rotation) const {
     return NULL;

@@ -4,11 +4,11 @@
 #include "UObject/NoExportTypes.h"
 #include "RandomFiringGuntowerModule.generated.h"
 
+class UAudioComponent;
 class UStaticMeshComponent;
 class UParticleSystemComponent;
-class UDamageComponent;
 class UParticleSystem;
-class UAudioComponent;
+class UDamageComponent;
 
 UCLASS(Blueprintable)
 class ARandomFiringGuntowerModule : public AHostileGuntowerModule {

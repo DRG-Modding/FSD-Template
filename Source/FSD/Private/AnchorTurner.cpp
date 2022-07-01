@@ -1,7 +1,7 @@
 #include "AnchorTurner.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/SceneComponent.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Components/SceneComponent.h"
 #include "Components/SphereComponent.h"
 
 class UPrimitiveComponent;

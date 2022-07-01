@@ -1,7 +1,7 @@
 #include "MilestoneAsset.h"
 
-class UMilestoneAsset;
 class UObject;
+class UMilestoneAsset;
 class UMissionStat;
 class UTexture2D;
 

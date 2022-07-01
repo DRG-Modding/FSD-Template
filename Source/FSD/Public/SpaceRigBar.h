@@ -6,11 +6,11 @@
 #include "DrinkableBarSlot.h"
 #include "SpaceRigBar.generated.h"
 
-class UBarMenuWidget;
-class UDrinkableDataAsset;
 class UInstantUsable;
 class UBoxComponent;
+class UDrinkableDataAsset;
 class APlayerCharacter;
+class UBarMenuWidget;
 class ADrinkableActor;
 
 UCLASS(Abstract, Blueprintable)

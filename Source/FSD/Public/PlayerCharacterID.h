@@ -4,8 +4,8 @@
 #include "SavableDataAsset.h"
 #include "PlayerCharacterID.generated.h"
 
-class UPlayerCharacterData;
 class APlayerCharacter;
+class UPlayerCharacterData;
 
 UCLASS(Blueprintable)
 class FSD_API UPlayerCharacterID : public USavableDataAsset {

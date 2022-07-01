@@ -3,9 +3,9 @@
 #include "Engine/DataAsset.h"
 #include "EnemyDetonationSetting.generated.h"
 
+class USoundCue;
 class UDamageComponent;
 class UNiagaraSystem;
-class USoundCue;
 
 UCLASS(Blueprintable)
 class UEnemyDetonationSetting : public UDataAsset {

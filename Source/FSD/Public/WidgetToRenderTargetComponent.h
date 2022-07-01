@@ -8,9 +8,9 @@
 #include "WidgetToRenderTargetComponent.generated.h"
 
 class UUserWidget;
-class UTextureRenderTarget2D;
-class ULocalPlayer;
 class UMaterialInterface;
+class ULocalPlayer;
+class UTextureRenderTarget2D;
 class UMaterialInstanceDynamic;
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

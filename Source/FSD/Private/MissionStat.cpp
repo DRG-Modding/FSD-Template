@@ -1,10 +1,10 @@
 #include "MissionStat.h"
 #include "Templates/SubclassOf.h"
 
-class UPlayerCharacterID;
 class UObject;
 class UMissionStat;
 class APlayerCharacter;
+class UPlayerCharacterID;
 class UTexture2D;
 
 FText UMissionStat::MissionStatToText(EMissionStatType StatType, float Value) {

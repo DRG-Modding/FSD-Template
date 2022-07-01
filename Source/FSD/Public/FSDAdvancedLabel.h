@@ -2,15 +2,15 @@
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
 #include "EFSDInputSource.h"
-#include "ActionIconMapping.h"
 #include "UObject/NoExportTypes.h"
+#include "ActionIconMapping.h"
 #include "Fonts/SlateFontInfo.h"
 #include "FSDAdvancedLabel.generated.h"
 
-class UHorizontalBox;
-class UImage;
 class UTextBlock;
+class UImage;
 class UTexture2D;
+class UHorizontalBox;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UFSDAdvancedLabel : public UUserWidget {

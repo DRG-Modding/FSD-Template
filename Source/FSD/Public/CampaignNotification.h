@@ -3,8 +3,8 @@
 #include "UObject/Object.h"
 #include "CampaignNotification.generated.h"
 
-class UCampaign;
 class UCampaignMission;
+class UCampaign;
 
 UCLASS(Blueprintable)
 class UCampaignNotification : public UObject {

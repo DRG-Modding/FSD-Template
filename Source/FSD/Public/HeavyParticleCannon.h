@@ -2,21 +2,21 @@
 #include "CoreMinimal.h"
 #include "AmmoDrivenWeapon.h"
 #include "BoosterModuleActiveDelegate.h"
-#include "DecalData.h"
 #include "UObject/NoExportTypes.h"
+#include "DecalData.h"
 #include "UObject/NoExportTypes.h"
 #include "ReflectionTraceResult.h"
 #include "HeavyParticleCannon.generated.h"
 
+class USoundBase;
+class UDamageComponent;
+class UReflectionHitscanComponent;
+class UStickyFlameSpawner;
+class UTerrainType;
 class UFirstPersonNiagaraComponent;
 class UNiagaraComponent;
-class UDamageComponent;
-class UStickyFlameSpawner;
-class UReflectionHitscanComponent;
-class USoundBase;
 class UNiagaraSystem;
 class AActor;
-class UTerrainType;
 class UFSDPhysicalMaterial;
 
 UCLASS(Blueprintable)

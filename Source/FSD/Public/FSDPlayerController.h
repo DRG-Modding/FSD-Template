@@ -3,32 +3,32 @@
 #include "Templates/SubclassOf.h"
 #include "FSDPlayerControllerBase.h"
 #include "OnPlayerCharacterPossesedDelegate.h"
-#include "PendingRewards.h"
 #include "ChatOpenedDelegateDelegate.h"
-#include "EChatSenderType.h"
 #include "ESpacerigStartType.h"
+#include "EChatSenderType.h"
 #include "PendingRewardsStats.h"
+#include "PendingRewards.h"
 #include "FSDPlayerController.generated.h"
 
-class UVictoryPose;
-class UVanityItem;
 class UTexture2D;
-class UPickaxePart;
 class UTutorialContentWidget;
-class UPlayerCharacterID;
 class UPerkUsageComponent;
 class UTerrainLatejoinComponent;
 class USoundMix;
-class UItemSkin;
 class UFSDWidgetEffectsComponent;
 class AActor;
-class AFSDPlayerState;
 class UFSDAchievement;
 class UTemporaryBuff;
-class UItemID;
 class APlayerCharacter;
+class AFSDPlayerState;
+class UPlayerCharacterID;
 class USoundCue;
 class UTreasureRewarder;
+class UVanityItem;
+class UVictoryPose;
+class UItemSkin;
+class UItemID;
+class UPickaxePart;
 
 UCLASS(Blueprintable)
 class FSD_API AFSDPlayerController : public AFSDPlayerControllerBase {

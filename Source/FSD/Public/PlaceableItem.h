@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "AnimatedItem.h"
-#include "Upgradable.h"
 #include "PlaceableInterface.h"
+#include "Upgradable.h"
 #include "UObject/NoExportTypes.h"
 #include "PlaceableItem.generated.h"
 
-class UItemPlacerAggregator;
 class UCapacityHoldingItemAggregator;
+class UItemPlacerAggregator;
 class AActor;
 
 UCLASS(Blueprintable)

@@ -3,8 +3,8 @@
 #include "Blueprint/UserWidget.h"
 #include "TreeOfVanityItemWidget.generated.h"
 
-class UTreeOfVanityItemWidget;
 class UReward;
+class UTreeOfVanityItemWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UTreeOfVanityItemWidget : public UUserWidget {

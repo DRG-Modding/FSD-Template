@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CharacterStateComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "CharacterStateComponent.h"
 #include "FallingStateComponent.generated.h"
 
 class UDialogDataAsset;

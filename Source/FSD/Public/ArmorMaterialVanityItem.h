@@ -3,13 +3,13 @@
 #include "VanityItem.h"
 #include "ArmorMaterialVanityItem.generated.h"
 
+class UMaterialInstanceDynamic;
 class UMaterialInterface;
 class UDynamicIcon;
-class UMaterialInstanceConstant;
 class UArmorVanityItem;
 class UMaterialInstance;
-class UMaterialInstanceDynamic;
 class UObject;
+class UMaterialInstanceConstant;
 class UArmorMaterialVanityItem;
 
 UCLASS(Blueprintable, EditInlineNew)

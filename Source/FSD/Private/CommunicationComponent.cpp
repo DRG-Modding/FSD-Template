@@ -1,11 +1,11 @@
 #include "CommunicationComponent.h"
 #include "Templates/SubclassOf.h"
 
-class USoundBase;
 class UDialogDataAsset;
-class UObject;
-class APlayerCharacter;
 class UAudioComponent;
+class UObject;
+class USoundBase;
+class APlayerCharacter;
 
 void UCommunicationComponent::ShoutCustomOrDefault(UDialogDataAsset* CustomShout, EShoutType DefaultShout) {
 }

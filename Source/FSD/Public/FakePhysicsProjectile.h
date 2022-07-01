@@ -6,9 +6,9 @@
 #include "Engine/EngineTypes.h"
 #include "FakePhysicsProjectile.generated.h"
 
-class UFakeMoverSettings;
-class UPrimitiveComponent;
 class AActor;
+class UPrimitiveComponent;
+class UFakeMoverSettings;
 
 UCLASS(Blueprintable)
 class AFakePhysicsProjectile : public AProjectileBase {

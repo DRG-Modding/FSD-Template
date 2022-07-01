@@ -5,9 +5,9 @@
 #include "PickaxeSet.h"
 #include "PickaxeFunctionLibrary.generated.h"
 
+class UItemID;
 class UObject;
 class UPickaxePart;
-class UItemID;
 
 UCLASS(Blueprintable)
 class UPickaxeFunctionLibrary : public UBlueprintFunctionLibrary {

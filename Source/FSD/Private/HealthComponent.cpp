@@ -24,10 +24,6 @@ float UHealthComponent::GetMaxArmor() const {
     return 0.0f;
 }
 
-EHealthbarType UHealthComponent::GetHealthbarType() const {
-    return EHealthbarType::None;
-}
-
 void UHealthComponent::GetCurrentHealthSegment(int32& Segment, float& segmentHealth, float& segmentHealthPercent) {
 }
 

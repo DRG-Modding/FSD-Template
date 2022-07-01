@@ -3,8 +3,8 @@
 #include "Blueprint/UserWidget.h"
 #include "AmmoCountWidget.generated.h"
 
-class AItem;
 class APlayerCharacter;
+class AItem;
 class UItemAggregator;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)

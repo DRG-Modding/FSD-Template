@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
+#include "UObject/NoExportTypes.h"
 #include "CharacterSettings.generated.h"
 
-class UPlayerCharacterID;
 class UDialogDataAsset;
-class UInventoryList;
-class USkeletalMesh;
 class APlayerCharacter;
+class UPlayerCharacterID;
+class UInventoryList;
+class UDebrisPositioning;
 class ACarriableItem;
+class USkeletalMesh;
 class UUseAnimationSetting;
 class UCampaignManager;
 class UCharacterVanityItems;
-class UDebrisPositioning;
 class UTerrainPlacementComponent;
 class UPlayerCharacterData;
 class UAsyncManager;

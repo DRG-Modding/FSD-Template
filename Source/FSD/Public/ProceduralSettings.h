@@ -4,9 +4,9 @@
 #include "Engine/DataAsset.h"
 #include "ProceduralSettings.generated.h"
 
-class UBiome;
 class URoomDecorationObject;
 class UMissionTemplate;
+class UBiome;
 class AProceduralSetup;
 
 UCLASS(Blueprintable)

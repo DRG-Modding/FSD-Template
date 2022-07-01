@@ -1,7 +1,7 @@
 #include "RegisterInviteNotificationBlueprintCallProxy.h"
 
-class URegisterInviteNotificationBlueprintCallProxy;
 class UObject;
+class URegisterInviteNotificationBlueprintCallProxy;
 
 URegisterInviteNotificationBlueprintCallProxy* URegisterInviteNotificationBlueprintCallProxy::RegisterInvitiNotification(UObject* NewWorldContextObject) {
     return NULL;

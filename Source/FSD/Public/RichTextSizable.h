@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "Components/RichTextBlock.h"
 #include "Styling/SlateColor.h"
-#include "UObject/NoExportTypes.h"
 #include "RichTextSizable.generated.h"
 
 UCLASS(Blueprintable)

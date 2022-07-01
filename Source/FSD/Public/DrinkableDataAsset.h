@@ -4,12 +4,12 @@
 #include "EDrinkableAlcoholStrength.h"
 #include "DrinkableDataAsset.generated.h"
 
-class UTexture2D;
 class APlayerCharacter;
-class UDrinkableDataAsset;
-class UTemporaryBuff;
-class UMissionStat;
 class ADrinkableActor;
+class UTexture2D;
+class UTemporaryBuff;
+class UDrinkableDataAsset;
+class UMissionStat;
 class ADrinkableItem;
 class UDialogDataAsset;
 class UDrinkEffectComponent;

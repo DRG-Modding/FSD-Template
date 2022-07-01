@@ -5,8 +5,8 @@
 #include "AIPlayerControlComponent.generated.h"
 
 class UAnimMontage;
-class UDialogDataAsset;
 class UControlEnemyUsable;
+class UDialogDataAsset;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UAIPlayerControlComponent : public UActorComponent {

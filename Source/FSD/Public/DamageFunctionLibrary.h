@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "UObject/NoExportTypes.h"
 #include "DamageData.h"
+#include "UObject/NoExportTypes.h"
 #include "DamageFunctionLibrary.generated.h"
 
 class UDamageTag;
 class UObject;
 class UPawnStatsComponent;
-class AActor;
 class UDamageClass;
+class AActor;
 class UDamageImpulse;
 class USkeletalMeshComponent;
 class ULimbDismembermentList;

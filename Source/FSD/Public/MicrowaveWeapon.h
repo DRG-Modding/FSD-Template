@@ -2,30 +2,30 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "AmmoDrivenWeapon.h"
-#include "LensActivedDelegateDelegate.h"
 #include "LensDeactivedDelegateDelegate.h"
+#include "LensActivedDelegateDelegate.h"
 #include "UObject/NoExportTypes.h"
-#include "MicrowaveLense.h"
 #include "MultiHitscanHit.h"
-#include "Engine/NetSerialization.h"
+#include "MicrowaveLense.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/NetSerialization.h"
 #include "MultiHitScanHits.h"
 #include "MicrowaveWeapon.generated.h"
 
+class UDamageComponent;
+class UStatusEffect;
+class UCapsuleHitscanComponent;
 class UFirstPersonNiagaraComponent;
 class UNiagaraComponent;
-class UDamageComponent;
-class UEnemyTemperatureComponent;
-class UCapsuleHitscanComponent;
-class UStatusEffect;
 class ABoil;
 class UNiagaraSystem;
+class UFSDPhysicalMaterial;
 class UParticleSystem;
 class USoundCue;
-class UHealthComponentBase;
 class AActor;
+class UEnemyTemperatureComponent;
 class UPrimitiveComponent;
-class UFSDPhysicalMaterial;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class FSD_API AMicrowaveWeapon : public AAmmoDrivenWeapon {
@@ -153,18 +153,6 @@ protected:
     float RadiantSuperheaterHeatShockChance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ShotCountToProcFrostShock;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ShotCountToProcHeatShock;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ShotCountToStartColdTempAmplifier;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ShotCountToStartHeatTempAmplifier;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RadiantSuperheaterMinColdDamage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -175,6 +163,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RadiantSuperheaterHeatTransferFactor;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float ColdTempAmpMultiplier;
     
     UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<UEnemyTemperatureComponent> RadiantSuperheaterTarget;

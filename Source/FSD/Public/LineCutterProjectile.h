@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ScaledEffect.h"
 #include "Projectile.h"
 #include "Engine/EngineTypes.h"
+#include "ScaledEffect.h"
 #include "EImpactDecalSize.h"
 #include "UObject/NoExportTypes.h"
-#include "ELineRotation.h"
 #include "UObject/NoExportTypes.h"
+#include "ELineRotation.h"
 #include "LineCutterProjectile.generated.h"
 
-class UParticleSystemComponent;
 class USceneComponent;
+class UParticleSystemComponent;
 class UDamageComponent;
 
 UCLASS(Blueprintable)

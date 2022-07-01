@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Pillar.h"
-#include "RoomLine.h"
-#include "RoomBox.h"
-#include "RoomEntrance.h"
-#include "ResourceLocation.h"
 #include "RoomItem.h"
+#include "RoomLine.h"
+#include "RoomEntrance.h"
+#include "RoomBox.h"
+#include "Pillar.h"
+#include "ResourceLocation.h"
 #include "TriggerItem.h"
 #include "GeneratedRoom.generated.h"
 

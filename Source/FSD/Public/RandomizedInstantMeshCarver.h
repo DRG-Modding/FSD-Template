@@ -5,10 +5,10 @@
 #include "ECarveFilterType.h"
 #include "RandomizedInstantMeshCarver.generated.h"
 
-class USTLMeshCarver;
-class UStaticMesh;
-class UTerrainMaterialBase;
 class UStaticMeshCarver;
+class UStaticMesh;
+class USTLMeshCarver;
+class UTerrainMaterialBase;
 
 UCLASS(Blueprintable)
 class ARandomizedInstantMeshCarver : public AActor {

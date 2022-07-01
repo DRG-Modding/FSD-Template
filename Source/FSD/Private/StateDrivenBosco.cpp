@@ -1,10 +1,10 @@
 #include "StateDrivenBosco.h"
-#include "Components/AudioComponent.h"
-#include "Components/PointLightComponent.h"
-#include "Particles/ParticleSystemComponent.h"
-#include "DroneFollowState.h"
-#include "DroneCombatState.h"
 #include "DroneMiningState.h"
+#include "Components/PointLightComponent.h"
+#include "DroneFollowState.h"
+#include "Components/AudioComponent.h"
+#include "Particles/ParticleSystemComponent.h"
+#include "DroneCombatState.h"
 #include "DroneReviveState.h"
 
 AStateDrivenBosco::AStateDrivenBosco() {

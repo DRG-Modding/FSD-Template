@@ -1,38 +1,38 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Sound/ReverbSettings.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
-#include "HeatSource.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "ResourceSpawner.h"
-#include "RandRange.h"
 #include "BiomeEnemyEntry.h"
+#include "HeatSource.h"
+#include "RandRange.h"
 #include "BiomeNoiseItem.h"
+#include "ResourceSpawner.h"
+#include "Sound/ReverbSettings.h"
 #include "Biome.generated.h"
 
-class UUserWidget;
+class UParticleSystem;
+class USoundCue;
+class UEnemyDescriptor;
 class UFileMediaSource;
 class UTexture2D;
-class UParticleSystem;
-class UObject;
+class UUserWidget;
+class AActor;
 class UCaveScriptComponent;
-class ULevelSequence;
 class UDebrisSet;
 class ADebrisDataActor;
-class UTunnelSetting;
-class AActor;
+class ULevelSequence;
 class UTerrainMaterial;
 class UMaterialInstance;
 class UMissionStat;
 class UFloodFillSettings;
-class UEnemyDescriptor;
 class UDetailNoise;
 class UPillarSettings;
+class UTunnelSetting;
 class UCritterDescriptor;
-class USoundCue;
 class UReverbEffect;
+class UObject;
 
 UCLASS(Blueprintable)
 class FSD_API UBiome : public UDataAsset {

@@ -2,17 +2,17 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UObject/Object.h"
-#include "UObject/NoExportTypes.h"
 #include "ECampaignType.h"
+#include "UObject/NoExportTypes.h"
 #include "ECampaignMutators.h"
 #include "Campaign.generated.h"
 
-class UDifficultySetting;
 class UCampaignMission;
-class UMissionStat;
 class UCampaignRequirement;
+class UDifficultySetting;
 class UPlayerCharacterID;
 class UTexture2D;
+class UMissionStat;
 class UGameActivityAssignmentType;
 class UCampaign;
 class AFSDPlayerController;

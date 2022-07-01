@@ -1,9 +1,9 @@
 #include "LockCountSTEBonusUpgrade.h"
 #include "Templates/SubclassOf.h"
 
+class UStatusEffect;
 class AActor;
 class AFSDPlayerState;
-class UStatusEffect;
 
 FUpgradeValues ULockCountSTEBonusUpgrade::GetUpgradedValue(TSubclassOf<AActor> Item, AFSDPlayerState* Player, TSubclassOf<UStatusEffect> NewStatusEffect) {
     return FUpgradeValues{};

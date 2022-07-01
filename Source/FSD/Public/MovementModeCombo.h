@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EMovementCustomMode.h"
 #include "Engine/EngineTypes.h"
+#include "EMovementCustomMode.h"
 #include "MovementModeCombo.generated.h"
 
 USTRUCT(BlueprintType)

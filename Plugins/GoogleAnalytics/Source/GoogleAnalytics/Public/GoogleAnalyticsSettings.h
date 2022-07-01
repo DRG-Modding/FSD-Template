@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "GoogleAnalyticsSettings.generated.h"
 
-UCLASS(Blueprintable, config = Engine, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, config = Engine)
 class GOOGLEANALYTICS_API UGoogleAnalyticsSettings : public UObject {
     GENERATED_BODY()
 public:

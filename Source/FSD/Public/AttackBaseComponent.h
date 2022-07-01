@@ -5,8 +5,8 @@
 #include "UObject/NoExportTypes.h"
 #include "AttackBaseComponent.generated.h"
 
-class AActor;
 class UAttackBaseComponent;
+class AActor;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UAttackBaseComponent : public UActorComponent {

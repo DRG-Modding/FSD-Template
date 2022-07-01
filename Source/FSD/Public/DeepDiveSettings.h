@@ -5,11 +5,11 @@
 #include "DeepDiveSettings.generated.h"
 
 class UDialogDataAsset;
+class UMissionWarning;
 class UDeepDiveTemplate;
+class UMissionNameBank;
 class UMutator;
 class UMissionMutator;
-class UMissionWarning;
-class UMissionNameBank;
 
 UCLASS(Blueprintable)
 class UDeepDiveSettings : public UDataAsset {

@@ -1,7 +1,7 @@
 #include "SpaceRigBar.h"
 #include "Net/UnrealNetwork.h"
-#include "InstantUsable.h"
 #include "Components/BoxComponent.h"
+#include "InstantUsable.h"
 
 class UDrinkableDataAsset;
 class APlayerCharacter;

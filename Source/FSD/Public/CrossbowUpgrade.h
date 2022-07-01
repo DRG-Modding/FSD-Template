@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "StandardItemUpgrade.h"
-#include "ECrossbowUpgrades.h"
 #include "UpgradeValues.h"
+#include "ECrossbowUpgrades.h"
 #include "CrossbowUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AItem;
 class ACrossbowProjectileBase;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UCrossbowUpgrade : public UStandardItemUpgrade {

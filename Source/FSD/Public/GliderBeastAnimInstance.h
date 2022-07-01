@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EnemyAnimInstance.h"
 #include "GliderAnimSync.h"
+#include "EnemyAnimInstance.h"
 #include "GliderBeastAnimInstance.generated.h"
 
 UCLASS(Blueprintable, NonTransient)

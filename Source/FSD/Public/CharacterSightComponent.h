@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
 #include "Engine/EngineTypes.h"
 #include "ReplicatedCharacterData.h"
+#include "UObject/NoExportTypes.h"
 #include "CharacterSightComponent.generated.h"
 
+class UTemperatureComponent;
 class AActor;
+class USimpleObjectInfoComponent;
 class UPrimitiveComponent;
 class APlayerCharacter;
-class USimpleObjectInfoComponent;
-class UTemperatureComponent;
-class UPawnAfflictionComponent;
 class UHealth;
 class IHealth;
 class UTargetable;
 class ITargetable;
+class UPawnAfflictionComponent;
 class UCharacterSightSensorBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

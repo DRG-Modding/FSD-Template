@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "RichTextParseResult.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "FSDRichTextFunctionlibrary.generated.h"
 
 UCLASS(Blueprintable)

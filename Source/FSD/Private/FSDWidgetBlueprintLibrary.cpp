@@ -3,24 +3,24 @@
 
 class UObject;
 class UWidgetAnimation;
+class AFSDPlayerState;
 class UWidget;
 class USizeBox;
+class UVerticalBox;
 class UPanelWidget;
-class UHorizontalBox;
 class UUserWidget;
 class UTextBlock;
 class UImage;
 class UWindowWidget;
-class AFSDPlayerState;
-class UUniformGridPanel;
 class APlayerController;
 class UFSDCheatManager;
-class UVerticalBox;
 class USpacer;
 class UTexture2D;
+class UHorizontalBox;
 class UHorizontalBoxSlot;
-class UVerticalBoxSlot;
 class UUniformGridSlot;
+class UVerticalBoxSlot;
+class UUniformGridPanel;
 class UCanvasPanel;
 class UCanvasPanelSlot;
 

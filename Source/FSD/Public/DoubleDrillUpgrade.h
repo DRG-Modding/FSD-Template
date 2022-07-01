@@ -6,8 +6,8 @@
 #include "UpgradeValues.h"
 #include "DoubleDrillUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AItem;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UDoubleDrillUpgrade : public UStandardItemUpgrade {

@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
 #include "DelegateEventDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "AnchorTurner.generated.h"
 
-class USceneComponent;
 class USkeletalMeshComponent;
+class USceneComponent;
 class USphereComponent;
 class UPrimitiveComponent;
 

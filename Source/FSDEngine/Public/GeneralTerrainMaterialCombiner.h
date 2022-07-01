@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GeneralMatPropertiesEmpty.h"
 #include "GeneralMatPatterns.h"
+#include "GeneralMatPropertiesEmpty.h"
 #include "GeneralMatProperties.h"
 #include "GeneralTerrainMaterialCombiner.generated.h"
 

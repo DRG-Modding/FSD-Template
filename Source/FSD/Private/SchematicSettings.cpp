@@ -1,8 +1,8 @@
 #include "SchematicSettings.h"
 
-class UOverclockBank;
 class USchematic;
 class UItemID;
+class UOverclockBank;
 
 bool USchematicSettings::ValidateVanitySchematics() const {
     return false;

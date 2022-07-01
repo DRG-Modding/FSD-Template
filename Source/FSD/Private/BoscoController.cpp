@@ -1,7 +1,7 @@
 #include "BoscoController.h"
 
-class APlayerCharacter;
 class UHealthComponentBase;
+class APlayerCharacter;
 class AActor;
 class AFSDPlayerState;
 

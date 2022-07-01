@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TetherConnectionChanged_DeletageDelegate.h"
 #include "Components/ActorComponent.h"
-#include "TeherMessage_DelegateDelegate.h"
 #include "TetherPowerChanged_DelegateDelegate.h"
-#include "TetherRangeChangedDelegate.h"
 #include "ETetherConnectionMode.h"
 #include "ETetherMessageDirection.h"
+#include "TetherConnectionChanged_DeletageDelegate.h"
+#include "TetherRangeChangedDelegate.h"
+#include "TeherMessage_DelegateDelegate.h"
 #include "TetherMessageSettings.h"
 #include "UObject/NoExportTypes.h"
 #include "TetherComponent.generated.h"
 
-class UTetherComponent;
 class UMeshComponent;
+class UTetherComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UTetherComponent : public UActorComponent {

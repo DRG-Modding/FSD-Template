@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ERoomMirroringSupport.h"
 #include "GameFramework/Actor.h"
 #include "GameplayTagContainer.h"
 #include "ERoomMirror.h"
-#include "ERoomMirroringSupport.h"
 #include "RoomBurner.generated.h"
 
-class UBiome;
-class UEnemyDescriptor;
-class URoomGenerator;
+class UMissionWarning;
 class UDifficultySetting;
 class UMissionMutator;
-class UMissionWarning;
+class URoomGenerator;
+class UBiome;
+class UEnemyDescriptor;
 class USpecialEvent;
 class UMissionTemplate;
 class ADeepCSGWorld;

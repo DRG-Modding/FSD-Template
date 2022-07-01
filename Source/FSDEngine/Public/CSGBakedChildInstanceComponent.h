@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CSGBaseComponent.h"
 #include "CSGBakedChildInstanceProperties.h"
+#include "CSGBaseComponent.h"
 #include "CSGBakedChildInstanceComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

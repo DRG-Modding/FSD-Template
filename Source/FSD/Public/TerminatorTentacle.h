@@ -2,18 +2,18 @@
 #include "CoreMinimal.h"
 #include "TentacleBase.h"
 #include "TriggerAI.h"
-#include "DelegateDelegate.h"
-#include "AttackingPointInterface.h"
 #include "ETerminatorTentacleState.h"
+#include "AttackingPointInterface.h"
+#include "DelegateDelegate.h"
 #include "TerminatorTarget.h"
 #include "TerminatorTentacle.generated.h"
 
-class UAnimMontage;
-class UAnimSequenceBase;
 class USkeletalMeshComponent;
+class AActor;
+class UAnimSequenceBase;
+class UAnimMontage;
 class UGrabberComponent;
 class UHealthComponentBase;
-class AActor;
 
 UCLASS(Blueprintable)
 class FSD_API ATerminatorTentacle : public ATentacleBase, public ITriggerAI, public IAttackingPointInterface {

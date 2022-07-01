@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameplayTagContainer.h"
-#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BehaviorTree/BTService.h"
+#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "GameplayTagContainer.h"
 #include "BTServer_ChaseTarget.generated.h"
 

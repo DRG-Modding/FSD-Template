@@ -3,8 +3,8 @@
 #include "Engine/DataAsset.h"
 #include "MusicLibrary.generated.h"
 
-class UMusicCategory;
 class USoundCue;
+class UMusicCategory;
 
 UCLASS(Blueprintable)
 class UMusicLibrary : public UDataAsset {

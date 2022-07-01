@@ -5,9 +5,9 @@
 #include "UObject/NoExportTypes.h"
 #include "StickyFlame.generated.h"
 
-class UStatusEffectTriggerComponent;
 class UParticleSystemComponent;
 class UAudioComponent;
+class UStatusEffectTriggerComponent;
 
 UCLASS(Blueprintable)
 class AStickyFlame : public AActor {

@@ -3,8 +3,8 @@
 #include "Components/ActorComponent.h"
 #include "FormationsManagerComponent.generated.h"
 
-class UFormationData;
 class UEnemySpawnManager;
+class UFormationData;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFormationsManagerComponent : public UActorComponent {

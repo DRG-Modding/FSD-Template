@@ -5,10 +5,10 @@
 #include "EItemCategory.h"
 #include "ItemID.generated.h"
 
-class AActor;
 class UItemData;
-class UPlayerCharacterID;
+class AActor;
 class AItem;
+class UPlayerCharacterID;
 
 UCLASS(Blueprintable)
 class FSD_API UItemID : public USavableDataAsset {

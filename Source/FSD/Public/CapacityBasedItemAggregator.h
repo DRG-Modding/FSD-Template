@@ -3,8 +3,8 @@
 #include "ReloadCompleteSignatureDelegate.h"
 #include "AmountChangedSignatureDelegate.h"
 #include "ItemAggregator.h"
-#include "ReloadTimeLeftSignatureDelegate.h"
 #include "ReloadStartedSignatureDelegate.h"
+#include "ReloadTimeLeftSignatureDelegate.h"
 #include "CapacityBasedItemAggregator.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

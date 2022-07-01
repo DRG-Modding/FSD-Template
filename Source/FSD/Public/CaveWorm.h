@@ -6,9 +6,9 @@
 #include "CaveWorm.generated.h"
 
 class USimpleHealthComponent;
-class UResourceData;
 class UObject;
 class AResourceChunk;
+class UResourceData;
 class UHealthComponentBase;
 
 UCLASS(Blueprintable, MinimalAPI)

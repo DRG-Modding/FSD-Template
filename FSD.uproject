@@ -341,8 +341,6 @@
 		}
 	],
 	"TargetPlatforms": [
-		"Windows",
-		"WindowsNoEditor",
-		"LinuxNoEditor"
+		"Windows"
 	]
 }

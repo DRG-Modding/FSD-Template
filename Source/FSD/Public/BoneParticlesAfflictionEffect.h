@@ -3,8 +3,8 @@
 #include "AfflictionEffect.h"
 #include "BoneParticlesAfflictionEffect.generated.h"
 
-class UParticleSystem;
 class USoundCue;
+class UParticleSystem;
 
 UCLASS(Abstract, Blueprintable)
 class UBoneParticlesAfflictionEffect : public UAfflictionEffect {

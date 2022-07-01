@@ -1,13 +1,13 @@
 #include "HeavyParticleCannon.h"
 #include "Net/UnrealNetwork.h"
 #include "NiagaraComponent.h"
-#include "FirstPersonNiagaraComponent.h"
 #include "StickyFlameSpawner.h"
 #include "DamageComponent.h"
 #include "ReflectionHitscanComponent.h"
+#include "FirstPersonNiagaraComponent.h"
 
-class UFSDPhysicalMaterial;
 class AActor;
+class UFSDPhysicalMaterial;
 
 void AHeavyParticleCannon::UpdateBeamsVisibility_Implementation(bool isBeamVisible) {
 }

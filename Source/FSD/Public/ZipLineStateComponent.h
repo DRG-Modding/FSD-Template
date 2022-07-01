@@ -7,10 +7,10 @@
 #include "UObject/NoExportTypes.h"
 #include "ZipLineStateComponent.generated.h"
 
-class UDialogDataAsset;
-class USoundBase;
-class AZipLineProjectile;
 class UAudioComponent;
+class AZipLineProjectile;
+class USoundBase;
+class UDialogDataAsset;
 
 UCLASS(Abstract, Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UZipLineStateComponent : public UCharacterStateComponent {

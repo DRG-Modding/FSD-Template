@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "AmmoDrivenWeapon.h"
 #include "Engine/NetSerialization.h"
+#include "AmmoDrivenWeapon.h"
 #include "Engine/NetSerialization.h"
 #include "ElectricalSMG.generated.h"
 
-class UFSDPhysicalMaterial;
 class UHealthComponentBase;
 class UStatusEffect;
 class UParticleSystem;
+class UFSDPhysicalMaterial;
 class USoundCue;
 class UPrimitiveComponent;
 

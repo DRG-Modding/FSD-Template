@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "ShowroomManager.generated.h"
 
-class UShowroomController;
 class AShowroomStage;
 class UTextureRenderTarget2D;
+class UShowroomController;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UShowroomManager : public UActorComponent {

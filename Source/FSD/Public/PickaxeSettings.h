@@ -5,9 +5,9 @@
 #include "DefaultPickaxeParts.h"
 #include "PickaxeSettings.generated.h"
 
+class UAnimMontage;
 class UPlayerCharacterID;
 class APickaxePreviewActor;
-class UAnimMontage;
 class UPickaxePart;
 class UItemID;
 

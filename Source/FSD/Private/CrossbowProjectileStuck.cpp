@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 #include "Components/SphereComponent.h"
 
-class APlayerCharacter;
 class UHealthComponentBase;
+class APlayerCharacter;
 class USceneComponent;
 
 void ACrossbowProjectileStuck::OnUsedBy(APlayerCharacter* Player, EInputKeys Key) {

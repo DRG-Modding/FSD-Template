@@ -1,8 +1,8 @@
 #include "FSDGameUserSettings.h"
 
+class UObject;
 class USoundClass;
 class APlayerController;
-class UObject;
 class UDifficultySetting;
 class UFSDGameUserSettings;
 
@@ -628,7 +628,7 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->volumeMissionControl = 100.37f;
     this->volumeMaster = 57.92f;
     this->volumeSFX = 97.90f;
-    this->volumeMusic = 103.95f;
+    this->volumeMusic = 0.58f;
     this->CurrentAudioOutputDeviceId = TEXT("{0.0.0.00000000}.{2a5cebd2-74c5-49ee-b332-663973012ccd}");
     this->UseDefaultAudioOutputDevice = true;
     this->Sharpening = 0.00f;

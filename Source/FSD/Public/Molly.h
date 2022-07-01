@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "MULE.h"
 #include "DelegateDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "Molly.generated.h"
 
 class APlayerCharacter;
-class UDialogDataAsset;
 class UResourceBank;
 class UOutlineComponent;
+class UDialogDataAsset;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API AMolly : public AMULE {

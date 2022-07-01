@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "SpawnActorDelegateDelegate.h"
 #include "SpawnActorWithDebrisPosComponent.generated.h"
 
-class UCurveFloat;
-class AActor;
-class AProceduralSetup;
 class UDebrisPositioning;
+class AActor;
+class UCurveFloat;
+class AProceduralSetup;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API USpawnActorWithDebrisPosComponent : public UActorComponent {

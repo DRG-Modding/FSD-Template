@@ -6,12 +6,12 @@
 #include "Crossbow.generated.h"
 
 class AActor;
-class UStaticMesh;
-class ACrossbowProjectileStuck;
-class AProjectileBase;
-class UAnimMontage;
 class UStatusEffect;
+class AProjectileBase;
+class ACrossbowProjectileStuck;
 class UCrossbowProjectileRecallable;
+class UStaticMesh;
+class UAnimMontage;
 class USoundCue;
 class UProjectileLauncherBaseComponent;
 

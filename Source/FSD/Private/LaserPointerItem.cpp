@@ -2,9 +2,9 @@
 #include "Components/SceneComponent.h"
 
 class UObject;
-class UTerrainMaterial;
 class AActor;
 class UPrimitiveComponent;
+class UTerrainMaterial;
 
 void ALaserPointerItem::UnlockToMinersManual(UObject* WorldContextObject, FGuid ObjectID) {
 }

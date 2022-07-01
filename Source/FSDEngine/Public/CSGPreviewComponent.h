@@ -4,9 +4,9 @@
 #include "ChunkId.h"
 #include "CSGPreviewComponent.generated.h"
 
+class UBakeConfig;
 class ACSGBuilderBase;
 class UDeepProceduralMeshComponent;
-class UBakeConfig;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSDENGINE_API UCSGPreviewComponent : public USceneComponent {

@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "CSGBase.h"
 #include "UObject/NoExportTypes.h"
+#include "CSGChildInstanceProperties.h"
 #include "UObject/NoExportTypes.h"
 #include "GeneralTerrainMaterialCombiner.h"
-#include "CSGBase.h"
-#include "CSGChildInstanceProperties.h"
 #include "DeepCSGFloatTree.h"
 #include "DeepCSGTree.h"
 #include "CSGChildInstance.generated.h"

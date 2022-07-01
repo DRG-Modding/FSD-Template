@@ -6,13 +6,13 @@
 #include "UObject/NoExportTypes.h"
 #include "Bomber.generated.h"
 
-class UParticleSystem;
 class UAudioComponent;
-class USoundBase;
 class UParticleSystemComponent;
-class AProjectile;
-class UPrimitiveComponent;
 class AActor;
+class AProjectile;
+class UParticleSystem;
+class USoundBase;
+class UPrimitiveComponent;
 
 UCLASS(Blueprintable)
 class ABomber : public AAFlyingBug {

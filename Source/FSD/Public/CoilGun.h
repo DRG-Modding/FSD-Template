@@ -2,27 +2,27 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "ChargedWeapon.h"
-#include "ContrailSettings.h"
 #include "UObject/NoExportTypes.h"
 #include "ShotMultiplier.h"
+#include "ContrailSettings.h"
+#include "Engine/NetSerialization.h"
 #include "CoilMaterial.h"
 #include "Curves/CurveFloat.h"
-#include "Engine/NetSerialization.h"
 #include "UObject/NoExportTypes.h"
 #include "BulletPathSegment.h"
 #include "CoilGun.generated.h"
 
-class UNiagaraComponent;
 class UDamageComponent;
+class UNiagaraComponent;
 class UCoilgunTrailSpawner;
-class UNiagaraSystem;
-class UHealthComponentBase;
-class AActor;
+class UPrimitiveComponent;
 class UStaticMesh;
+class UNiagaraSystem;
 class UStatusEffect;
 class ACoilgunWeaponTrail;
-class UPrimitiveComponent;
+class AActor;
 class UFSDPhysicalMaterial;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class FSD_API ACoilGun : public AChargedWeapon {

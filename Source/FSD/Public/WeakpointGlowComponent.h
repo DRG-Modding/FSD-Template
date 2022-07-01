@@ -6,11 +6,11 @@
 #include "DamageData.h"
 #include "WeakpointGlowComponent.generated.h"
 
-class UCurveFloat;
-class UHealthComponentBase;
-class UFSDPhysicalMaterial;
 class USkeletalMeshComponent;
+class UFSDPhysicalMaterial;
+class UHealthComponentBase;
 class UMeshComponent;
+class UCurveFloat;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UWeakpointGlowComponent : public UActorComponent {

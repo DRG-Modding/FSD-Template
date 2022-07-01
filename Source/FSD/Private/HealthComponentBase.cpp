@@ -1,8 +1,8 @@
 #include "HealthComponentBase.h"
 
-class UDamageClass;
 class AActor;
 class UPrimitiveComponent;
+class UDamageClass;
 class UHealth;
 class IHealth;
 class UParticleSystem;

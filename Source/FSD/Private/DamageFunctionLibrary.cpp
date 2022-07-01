@@ -3,9 +3,9 @@
 class UDamageTag;
 class UObject;
 class UPawnStatsComponent;
-class AActor;
-class UDamageClass;
 class UDamageImpulse;
+class UDamageClass;
+class AActor;
 class USkeletalMeshComponent;
 class ULimbDismembermentList;
 
