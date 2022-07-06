@@ -78,3 +78,11 @@ DerivedDataCache/*
 Plugins/Modio/Source/ModioTests/*
 Plugins/Modio/Source/ThirdParty/liburing/*
 Plugins/Modio/Source/ThirdParty/mbedtls/*
+
+# Get that Ansel BS outa here; don't need compiled files can do that later
+Plugins/Nvidia/FSDAnsel/Intermediate/**
+Plugins/Nvidia/FSDAnsel/Binaries/**
+
+# Get that other Nvidia stuff outa here; don't need compiled files can do that later
+Plugins/Nvidia/DLSS/Intermediate/**
+Plugins/Nvidia/DLSS/Binaries/**
