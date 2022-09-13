@@ -1,9 +1,9 @@
 #include "HeavyParticleCannon.h"
 #include "Net/UnrealNetwork.h"
-#include "NiagaraComponent.h"
-#include "StickyFlameSpawner.h"
 #include "DamageComponent.h"
+#include "StickyFlameSpawner.h"
 #include "ReflectionHitscanComponent.h"
+#include "NiagaraComponent.h"
 #include "FirstPersonNiagaraComponent.h"
 
 class AActor;

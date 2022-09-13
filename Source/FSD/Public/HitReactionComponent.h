@@ -3,8 +3,8 @@
 #include "Components/ActorComponent.h"
 #include "HitReactionComponent.generated.h"
 
-class UAnimSequenceBase;
 class USkeletalMeshComponent;
+class UAnimSequenceBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UHitReactionComponent : public UActorComponent {

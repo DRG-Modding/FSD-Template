@@ -3,14 +3,14 @@
 #include "Templates/SubclassOf.h"
 #include "UpgradableItemComponent.h"
 
-class USoundConcurrency;
-class USoundBase;
-class UTexture2D;
-class USceneComponent;
-class USoundAttenuation;
-class AItem;
-class UAudioComponent;
 class AActor;
+class USoundBase;
+class USoundAttenuation;
+class USceneComponent;
+class UAudioComponent;
+class USoundConcurrency;
+class UTexture2D;
+class AItem;
 class UItemCharacterAnimationSet;
 
 void AItem::UpdateSkin() {

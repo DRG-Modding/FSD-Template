@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
-#include "UObject/NoExportTypes.h"
 #include "SpawnActorDelegateDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "SpawnActorWithDebrisPosComponent.generated.h"
 
-class UDebrisPositioning;
 class AActor;
-class UCurveFloat;
 class AProceduralSetup;
+class UCurveFloat;
+class UDebrisPositioning;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API USpawnActorWithDebrisPosComponent : public UActorComponent {

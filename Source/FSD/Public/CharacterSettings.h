@@ -8,13 +8,13 @@
 class UDialogDataAsset;
 class APlayerCharacter;
 class UPlayerCharacterID;
-class UInventoryList;
-class UDebrisPositioning;
 class ACarriableItem;
+class UInventoryList;
 class USkeletalMesh;
 class UUseAnimationSetting;
 class UCampaignManager;
 class UCharacterVanityItems;
+class UDebrisPositioning;
 class UTerrainPlacementComponent;
 class UPlayerCharacterData;
 class UAsyncManager;
@@ -58,6 +58,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USkeletalMesh* DefaultHead;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    USkeletalMesh* HeadForMasks;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USkeletalMesh* ThickNeck;

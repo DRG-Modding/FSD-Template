@@ -2,29 +2,29 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "AmmoDrivenWeapon.h"
-#include "LensDeactivedDelegateDelegate.h"
 #include "LensActivedDelegateDelegate.h"
-#include "UObject/NoExportTypes.h"
-#include "MultiHitscanHit.h"
+#include "LensDeactivedDelegateDelegate.h"
 #include "MicrowaveLense.h"
-#include "UObject/NoExportTypes.h"
-#include "Engine/NetSerialization.h"
 #include "MultiHitScanHits.h"
+#include "Engine/NetSerialization.h"
+#include "MultiHitscanHit.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "MicrowaveWeapon.generated.h"
 
+class UCapsuleHitscanComponent;
 class UDamageComponent;
 class UStatusEffect;
-class UCapsuleHitscanComponent;
-class UFirstPersonNiagaraComponent;
 class UNiagaraComponent;
-class ABoil;
+class UFirstPersonNiagaraComponent;
 class UNiagaraSystem;
-class UFSDPhysicalMaterial;
+class ABoil;
 class UParticleSystem;
 class USoundCue;
 class AActor;
 class UEnemyTemperatureComponent;
 class UPrimitiveComponent;
+class UFSDPhysicalMaterial;
 class UHealthComponentBase;
 
 UCLASS(Blueprintable)

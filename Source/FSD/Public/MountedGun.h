@@ -8,9 +8,9 @@
 #include "MountedGun.generated.h"
 
 class USkeletalMeshComponent;
+class APlayerCharacter;
 class UWeaponFireComponent;
 class UGunLogicComponent;
-class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class AMountedGun : public AActor, public ISteerable, public IWeaponFireOwner {

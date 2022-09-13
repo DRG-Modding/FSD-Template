@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "CharacterStateComponent.h"
-#include "DamageData.h"
 #include "ZipLineConnectorHandler.h"
+#include "DamageData.h"
 #include "ZipLine.h"
 #include "UObject/NoExportTypes.h"
 #include "ZipLineStateComponent.generated.h"
 
-class UAudioComponent;
 class AZipLineProjectile;
 class USoundBase;
+class UAudioComponent;
 class UDialogDataAsset;
 
 UCLASS(Abstract, Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

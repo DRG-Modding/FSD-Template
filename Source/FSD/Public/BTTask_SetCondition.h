@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BehaviorTree/BTTaskNode.h"
 #include "BehaviorTree/BehaviorTreeTypes.h"
+#include "BehaviorTree/BTTaskNode.h"
 #include "BTTask_SetCondition.generated.h"
 
 UCLASS(Blueprintable)

@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "GameFramework/Actor.h"
-#include "UObject/NoExportTypes.h"
 #include "ProgressChangedSigDelegate.h"
+#include "GameFramework/Actor.h"
 #include "GameplayTagAssetInterface.h"
 #include "DelegateEventDelegate.h"
 #include "StageCompleteSigDelegate.h"
 #include "GameplayTagContainer.h"
 #include "GameplayTagContainer.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "GameEvent.generated.h"
 
 class UChildActorComponent;
+class AProceduralSetup;
 class AEventStarterButton;
 class UDialogDataAsset;
 class ARessuplyPod;
-class AProceduralSetup;
 class UDebrisPositioning;
 
 UCLASS(Blueprintable)

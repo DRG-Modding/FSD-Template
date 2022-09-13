@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DeepDiveBank.h"
 #include "UObject/Object.h"
+#include "DeepDiveBank.h"
 #include "UObject/NoExportTypes.h"
 #include "DeepDiveManager.generated.h"
 
+class UGeneratedMission;
 class UFSDEventsHandler;
 class UDeepDive;
-class UGeneratedMission;
 
 UCLASS(Blueprintable)
 class UDeepDiveManager : public UObject {

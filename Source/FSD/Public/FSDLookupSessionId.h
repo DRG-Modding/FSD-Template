@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Net/OnlineBlueprintCallProxyBase.h"
-#include "Net/OnlineBlueprintCallProxyBase.h"
 #include "FoundSessionResultDelegate.h"
+#include "Net/OnlineBlueprintCallProxyBase.h"
 #include "FSDLookupSessionId.generated.h"
 
 class UFSDLookupSessionId;

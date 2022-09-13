@@ -6,8 +6,8 @@
 #include "IsAttackingChangedDelegateDelegate.h"
 #include "EnemyAnimInstance.generated.h"
 
-class USkeletalMeshComponent;
 class UHealthComponentBase;
+class USkeletalMeshComponent;
 
 UCLASS(Blueprintable, NonTransient)
 class UEnemyAnimInstance : public UAnimInstance {

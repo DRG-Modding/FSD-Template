@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "UObject/NoExportTypes.h"
-#include "RejoinFloat.h"
 #include "RejoinInt.h"
+#include "RejoinFloat.h"
 #include "PlayerRejoinState.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

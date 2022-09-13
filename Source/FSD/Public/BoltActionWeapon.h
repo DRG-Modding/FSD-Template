@@ -6,13 +6,13 @@
 #include "TracerData.h"
 #include "BoltActionWeapon.generated.h"
 
-class UDamageComponent;
-class UHitscanBaseComponent;
-class UStatusEffect;
-class UFSDPhysicalMaterial;
 class UParticleSystem;
 class USoundCue;
+class UHitscanBaseComponent;
+class UDamageComponent;
+class UStatusEffect;
 class AActor;
+class UFSDPhysicalMaterial;
 class UHealthComponentBase;
 class UPrimitiveComponent;
 

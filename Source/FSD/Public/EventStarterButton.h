@@ -5,9 +5,9 @@
 #include "EInputKeys.h"
 #include "EventStarterButton.generated.h"
 
+class USingleUsableComponent;
 class USceneComponent;
 class APlayerCharacter;
-class USingleUsableComponent;
 
 UCLASS(Blueprintable)
 class AEventStarterButton : public AActor {

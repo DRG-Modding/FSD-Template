@@ -1,10 +1,10 @@
 #include "HealthComponentBase.h"
 
-class AActor;
-class UPrimitiveComponent;
-class UDamageClass;
 class UHealth;
 class IHealth;
+class UDamageClass;
+class AActor;
+class UPrimitiveComponent;
 class UParticleSystem;
 
 float UHealthComponentBase::TakeRadialDamage(float damageAmount, FVector BlastCenter, float BlastRadius, float MaxDamageRadius, float MinDamagePct, FDamageData& DamageData) {

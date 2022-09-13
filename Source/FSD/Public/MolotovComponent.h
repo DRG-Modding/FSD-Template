@@ -4,8 +4,8 @@
 #include "Components/ActorComponent.h"
 #include "MolotovComponent.generated.h"
 
-class AActor;
 class UDebrisPositioning;
+class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UMolotovComponent : public UActorComponent {

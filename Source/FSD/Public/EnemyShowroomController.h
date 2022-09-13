@@ -3,10 +3,10 @@
 #include "ShowroomController.h"
 #include "EnemyShowroomController.generated.h"
 
-class UAnimSequenceBase;
 class AEnemyShowroomItem;
-class UObject;
+class UAnimSequenceBase;
 class UEnemyShowroomController;
+class UObject;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UEnemyShowroomController : public UShowroomController {

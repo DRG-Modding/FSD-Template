@@ -6,10 +6,10 @@
 #include "TreasureSettings.generated.h"
 
 class UItemAquisitionSource;
-class UVictoryPose;
-class UItemSkinSet;
-class USpecialEvent;
 class UDrinkableDataAsset;
+class UVictoryPose;
+class USpecialEvent;
+class UItemSkinSet;
 
 UCLASS(Blueprintable)
 class UTreasureSettings : public UDataAsset {

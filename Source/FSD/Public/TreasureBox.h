@@ -6,17 +6,17 @@
 #include "EInputKeys.h"
 #include "TreasureBox.generated.h"
 
+class AActor;
+class USingleUsableComponent;
 class URepairableComponent;
 class UTerrainPlacementComponent;
 class URepairableUsable;
 class UStaticMeshComponent;
-class USingleUsableComponent;
-class AActor;
-class UDebrisPositioning;
 class USkeletalMeshComponent;
 class UAnimSequenceBase;
 class UTreasureRewarder;
 class AProceduralSetup;
+class UDebrisPositioning;
 class UCurveFloat;
 class APlayerCharacter;
 

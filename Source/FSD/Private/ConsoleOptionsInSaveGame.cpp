@@ -39,8 +39,10 @@ FConsoleOptionsInSaveGame::FConsoleOptionsInSaveGame() {
     this->FSDResolutionScale = 0.00f;
     this->UpscalingType = 0;
     this->AmdFsrMode = 0;
+    this->AmdFsr2Mode = 0;
     this->NvidiaDlssMode = UDLSSMode::Off;
     this->AmdFsrSharpness = 0.00f;
+    this->AmdFsr2Sharpness = 0.00f;
     this->NvidiaDlssSharpness = 0.00f;
 }
 

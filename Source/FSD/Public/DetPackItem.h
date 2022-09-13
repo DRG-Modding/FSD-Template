@@ -9,9 +9,9 @@
 class UForceFeedbackEffect;
 class USkeletalMeshComponent;
 class ADetPack;
-class UAnimMontage;
-class AItem;
 class UCapacityHoldingItemAggregator;
+class AItem;
+class UAnimMontage;
 class UDialogDataAsset;
 class UItemUpgrade;
 

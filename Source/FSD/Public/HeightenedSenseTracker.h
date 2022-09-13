@@ -2,10 +2,10 @@
 #include "CoreMinimal.h"
 #include "HeightenedSenseTracker.generated.h"
 
-class UAttackingPointInterface;
-class IAttackingPointInterface;
 class AActor;
 class UHealthComponentBase;
+class UAttackingPointInterface;
+class IAttackingPointInterface;
 
 USTRUCT(BlueprintType)
 struct FHeightenedSenseTracker {

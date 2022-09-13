@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESchematicType.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "UObject/NoExportTypes.h"
+#include "ESchematicType.h"
 #include "SpecialEventBlueprintLibrary.generated.h"
 
 class USchematic;

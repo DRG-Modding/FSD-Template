@@ -1,8 +1,8 @@
 #include "GuntowerModule.h"
 #include "Net/UnrealNetwork.h"
 #include "Components/StaticMeshComponent.h"
-#include "GunTowerHealthComponent.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "GunTowerHealthComponent.h"
 
 void AGuntowerModule::ShootOutArmor() {
 }

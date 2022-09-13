@@ -5,12 +5,12 @@
 #include "Engine/Scene.h"
 #include "FSDPostProcessingActor.generated.h"
 
-class APostProcessingManager;
-class UPostProcessComponent;
-class UObject;
-class UMaterialInstanceDynamic;
 class UBlendableInterface;
 class IBlendableInterface;
+class UPostProcessComponent;
+class UMaterialInstanceDynamic;
+class UObject;
+class APostProcessingManager;
 class UMaterialInterface;
 
 UCLASS(Abstract, Blueprintable)

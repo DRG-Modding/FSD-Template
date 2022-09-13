@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "CountDownFloat.h"
 #include "EIntoxicationState.h"
 #include "LerpingPercent.h"
+#include "CountDownFloat.h"
 #include "EDrinkableAlcoholStrength.h"
 #include "CharacterIntoxicationComponent.generated.h"
 

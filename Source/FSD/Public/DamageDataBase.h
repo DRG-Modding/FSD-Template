@@ -3,8 +3,8 @@
 #include "UObject/NoExportTypes.h"
 #include "DamageDataBase.generated.h"
 
-class UFSDPhysicalMaterial;
 class UDamageImpulse;
+class UFSDPhysicalMaterial;
 class UPrimitiveComponent;
 
 USTRUCT(BlueprintType)

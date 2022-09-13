@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/OnlineReplStructs.h"
 #include "GameFramework/Actor.h"
+#include "GameFramework/OnlineReplStructs.h"
 #include "EventRewardDispenser.generated.h"
 
-class USchematic;
 class AEventRewardFrame;
-class APlayerCharacter;
+class USchematic;
 class AFSDPlayerState;
+class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class AEventRewardDispenser : public AActor {

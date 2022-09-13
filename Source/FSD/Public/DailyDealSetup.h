@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EDealType.h"
 #include "UObject/NoExportTypes.h"
+#include "EDealType.h"
 #include "UObject/NoExportTypes.h"
 #include "DailyDealSetup.generated.h"
 

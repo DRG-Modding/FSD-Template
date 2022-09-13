@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ManagedEncounterItem.h"
-#include "EnemySpawnedDelegateDelegate.h"
 #include "PrePlacedEncounterItem.h"
+#include "EnemySpawnedDelegateDelegate.h"
 #include "EncounterManagerItem.generated.h"
 
 USTRUCT(BlueprintType)

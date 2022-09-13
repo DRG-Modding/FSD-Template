@@ -4,10 +4,10 @@
 #include "UObject/NoExportTypes.h"
 #include "AnimatedItem.generated.h"
 
-class UAnimMontage;
-class USkinnableComponent;
 class UPlayerAnimInstance;
+class USkinnableComponent;
 class USkeletalMeshComponent;
+class UAnimMontage;
 class UItemCharacterAnimationSet;
 
 UCLASS(Abstract, Blueprintable)

@@ -7,9 +7,9 @@
 #include "Engine/LatentActionManager.h"
 #include "UGCSubsystem.generated.h"
 
+class UUGCLatentActionManager;
 class UUGCRegistry;
 class UUGCSettings;
-class UUGCLatentActionManager;
 class UUGCPackage;
 class UObject;
 

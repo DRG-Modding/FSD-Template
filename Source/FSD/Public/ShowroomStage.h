@@ -4,10 +4,10 @@
 #include "GameFramework/Actor.h"
 #include "ShowroomStage.generated.h"
 
-class USceneCaptureComponent2D;
-class UShowroomController;
-class USceneComponent;
 class UTextureRenderTarget2D;
+class UShowroomController;
+class USceneCaptureComponent2D;
+class USceneComponent;
 
 UCLASS(Abstract, Blueprintable)
 class AShowroomStage : public AActor {

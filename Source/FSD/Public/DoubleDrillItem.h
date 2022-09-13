@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UpgradableGear.h"
-#include "DualAnimatedItem.h"
-#include "Engine/NetSerialization.h"
-#include "Engine/EngineTypes.h"
 #include "Upgradable.h"
+#include "DualAnimatedItem.h"
+#include "UpgradableGear.h"
 #include "RejoinListener.h"
 #include "EDoubleDrillState.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "DoubleDrillDamageItem.h"
+#include "Engine/NetSerialization.h"
 #include "DoubleDrillItem.generated.h"
 
-class UDoubleDrillAggregator;
-class UDamageClass;
-class UFSDAudioComponent;
 class UFirstPersonParticleSystemComponent;
+class UFSDAudioComponent;
 class UDamageComponent;
+class UDoubleDrillAggregator;
 class UAnimMontage;
-class UFSDPhysicalMaterial;
 class UParticleSystem;
 class UForceFeedbackEffect;
+class UDamageClass;
 class UDialogDataAsset;
 class AActor;
+class UFSDPhysicalMaterial;
 
 UCLASS(Blueprintable)
 class ADoubleDrillItem : public ADualAnimatedItem, public IUpgradable, public IUpgradableGear, public IRejoinListener {

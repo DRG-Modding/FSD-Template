@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "HitscanBaseComponent.h"
-#include "Engine/NetSerialization.h"
 #include "HitDelegateDelegate.h"
 #include "IRandRange.h"
 #include "Engine/NetSerialization.h"
+#include "Engine/NetSerialization.h"
 #include "HitscanComponent.generated.h"
 
-class UPrimitiveComponent;
 class UFXSystemAsset;
 class USoundCue;
 class AActor;
 class UFSDPhysicalMaterial;
+class UPrimitiveComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UHitscanComponent : public UHitscanBaseComponent {

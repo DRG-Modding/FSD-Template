@@ -1,7 +1,7 @@
 #include "Bomber.h"
 #include "Net/UnrealNetwork.h"
-#include "Particles/ParticleSystemComponent.h"
 #include "Components/AudioComponent.h"
+#include "Particles/ParticleSystemComponent.h"
 
 class UPrimitiveComponent;
 class AActor;

@@ -3,8 +3,8 @@
 #include "UObject/Object.h"
 #include "CampaignRequirement.generated.h"
 
-class AFSDPlayerController;
 class UCampaign;
+class AFSDPlayerController;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class FSD_API UCampaignRequirement : public UObject {

@@ -5,8 +5,8 @@
 #include "MissionMutator.generated.h"
 
 class URunningMissionBP;
-class UMutator;
 class UObjective;
+class UMutator;
 class UTexture2D;
 
 UCLASS(Blueprintable)

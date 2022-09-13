@@ -6,10 +6,10 @@
 #include "CaveWorm.generated.h"
 
 class USimpleHealthComponent;
-class UObject;
 class AResourceChunk;
-class UResourceData;
 class UHealthComponentBase;
+class UObject;
+class UResourceData;
 
 UCLASS(Blueprintable, MinimalAPI)
 class ACaveWorm : public ADeepPathfinderCharacter {

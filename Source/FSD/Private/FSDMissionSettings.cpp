@@ -1,7 +1,7 @@
 #include "FSDMissionSettings.h"
 
-class UObject;
 class UGeneratedMission;
+class UObject;
 class UDifficultySetting;
 
 float UFSDMissionSettings::GetTotalHazardBonus(UObject* WorldContextObject, UGeneratedMission* mission, UDifficultySetting* DifficultySetting) {

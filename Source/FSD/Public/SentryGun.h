@@ -2,29 +2,29 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
-#include "WeaponFireOwner.h"
-#include "Engine/EngineTypes.h"
-#include "SentryGunMuzzleSetup.h"
-#include "Upgradable.h"
 #include "AmmoCountChangedEventDelegate.h"
+#include "Engine/EngineTypes.h"
+#include "WeaponFireOwner.h"
+#include "Upgradable.h"
+#include "SentryGunMuzzleSetup.h"
 #include "TracerData.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "GameplayTagContainer.h"
 #include "UObject/NoExportTypes.h"
 #include "LaserPointerTarget.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "SentryGun.generated.h"
 
-class USkeletalMeshComponent;
-class UWeaponFireComponent;
-class APlayerCharacter;
-class AProjectile;
-class USoundCue;
-class UParticleSystem;
 class USoundBase;
+class USoundCue;
+class AProjectile;
+class USkeletalMeshComponent;
+class UParticleSystem;
 class UHealthComponentBase;
+class UWeaponFireComponent;
 class UAudioComponent;
+class APlayerCharacter;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API ASentryGun : public AActor, public IWeaponFireOwner, public IUpgradable {

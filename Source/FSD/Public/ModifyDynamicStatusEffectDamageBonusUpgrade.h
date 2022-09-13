@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EModifyStatusEffectDamageUpgrade.h"
-#include "StandardItemUpgrade.h"
 #include "UpgradeValues.h"
+#include "StandardItemUpgrade.h"
+#include "EModifyStatusEffectDamageUpgrade.h"
 #include "ModifyDynamicStatusEffectDamageBonusUpgrade.generated.h"
 
 class AActor;

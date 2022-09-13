@@ -5,9 +5,9 @@
 #include "UObject/NoExportTypes.h"
 #include "RivalBomb.generated.h"
 
+class UCurveFloat;
 class UDebrisPositioning;
 class ARivalBombNode;
-class UCurveFloat;
 class AGem;
 
 UCLASS(Blueprintable)

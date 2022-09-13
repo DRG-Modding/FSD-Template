@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "DamageComponent.h"
 
-class ARessuplyPod;
 class UObject;
+class ARessuplyPod;
 class AActor;
 
 void ARessuplyPod::SetIdling() {

@@ -5,11 +5,11 @@
 #include "ERivalBombNodeState.h"
 #include "RivalBombNode.generated.h"
 
-class ARivalBombNode;
-class ARivalBomb;
-class ASplineCableActor;
-class UHackingUsableComponent;
 class APlayerCharacter;
+class ASplineCableActor;
+class ARivalBombNode;
+class UHackingUsableComponent;
+class ARivalBomb;
 
 UCLASS(Blueprintable)
 class ARivalBombNode : public AActor {

@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "RandRange.h"
 #include "Curves/CurveFloat.h"
+#include "RandRange.h"
 #include "AfflictionSettings.generated.h"
 
+class UStaticMesh;
 class UParticleSystem;
 class UPawnAffliction;
 class USoundCue;
-class UStaticMesh;
 
 UCLASS(Blueprintable)
 class UAfflictionSettings : public UDataAsset {

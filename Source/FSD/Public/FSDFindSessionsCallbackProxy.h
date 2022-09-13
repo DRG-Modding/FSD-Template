@@ -5,10 +5,10 @@
 #include "FindSessionsCallbackProxy.h"
 #include "FSDFindSessionsCallbackProxy.generated.h"
 
-class APlayerController;
-class UObject;
 class UFSDFindSteamSessions;
+class UObject;
 class UFSDFindSessionsCallbackProxy;
+class APlayerController;
 
 UCLASS(Blueprintable, MinimalAPI)
 class UFSDFindSessionsCallbackProxy : public UOnlineBlueprintCallProxyBase {

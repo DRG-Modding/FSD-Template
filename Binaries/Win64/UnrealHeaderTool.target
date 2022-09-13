@@ -1,0 +1,119 @@
+{
+	"TargetName": "UnrealHeaderTool",
+	"Platform": "Win64",
+	"Configuration": "Development",
+	"TargetType": "Program",
+	"Architecture": "",
+	"Project": "../../FSD.uproject",
+	"Launch": "$(EngineDir)/Binaries/Win64/UnrealHeaderTool.exe",
+	"Version": 
+	{
+		"MajorVersion": 4,
+		"MinorVersion": 27,
+		"PatchVersion": 2,
+		"Changelist": 18319896,
+		"CompatibleChangelist": 17155196,
+		"IsLicenseeVersion": 0,
+		"IsPromotedBuild": 0,
+		"BranchName": "++UE4+Release-4.27",
+		"BuildId": "17155196"
+	},
+	"BuildProducts": [
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealHeaderTool.exe",
+			"Type": "Executable"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealHeaderTool.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/ScriptPlugin/Binaries/Win64/UnrealHeaderTool-ScriptGeneratorPlugin.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/ScriptPlugin/Binaries/Win64/UnrealHeaderTool-ScriptGeneratorPlugin.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealHeaderTool-BuildSettings.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealHeaderTool-BuildSettings.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealHeaderTool-TraceLog.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealHeaderTool-TraceLog.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealHeaderTool-Core.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealHeaderTool-Core.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealHeaderTool-Json.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealHeaderTool-Json.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealHeaderTool-Projects.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealHeaderTool-Projects.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealHeaderTool-CoreUObject.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealHeaderTool-CoreUObject.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealHeaderTool.version",
+			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/ScriptPlugin/Binaries/Win64/UnrealHeaderTool.modules",
+			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/Win64/UnrealHeaderTool.modules",
+			"Type": "RequiredResource"
+		}
+	],
+	"RuntimeDependencies": [
+		{
+			"Path": "$(ProjectDir)/FSD.uproject",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/ScriptPlugin/ScriptPlugin.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/ThirdParty/DbgHelp/dbghelp.dll",
+			"Type": "NonUFS"
+		}
+	],
+	"AdditionalProperties": [
+		{
+			"Name": "SDK",
+			"Value": "Not Applicable"
+		}
+	]
+}

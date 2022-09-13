@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "AnimatedItem.h"
-#include "PlaceableInterface.h"
-#include "Upgradable.h"
 #include "UObject/NoExportTypes.h"
+#include "AnimatedItem.h"
+#include "Upgradable.h"
+#include "PlaceableInterface.h"
 #include "PlaceableItem.generated.h"
 
-class UCapacityHoldingItemAggregator;
 class UItemPlacerAggregator;
+class UCapacityHoldingItemAggregator;
 class AActor;
 
 UCLASS(Blueprintable)

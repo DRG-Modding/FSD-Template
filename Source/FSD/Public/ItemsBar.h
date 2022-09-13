@@ -4,8 +4,8 @@
 #include "FSDUserWidget.h"
 #include "ItemsBar.generated.h"
 
-class AItem;
 class UItemsBarIcon;
+class AItem;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UItemsBar : public UFSDUserWidget {

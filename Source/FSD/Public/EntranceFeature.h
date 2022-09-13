@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "RoomFeature.h"
 #include "UObject/NoExportTypes.h"
-#include "ECaveEntranceType.h"
+#include "UObject/NoExportTypes.h"
 #include "ECaveEntrancePriority.h"
+#include "ECaveEntranceType.h"
 #include "EntranceFeature.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

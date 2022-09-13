@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DeepDiveRewardItem.h"
 #include "UObject/Object.h"
+#include "DeepDiveRewardItem.h"
 #include "DeepDive.generated.h"
 
 class UGeneratedMission;

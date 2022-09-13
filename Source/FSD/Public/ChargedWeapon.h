@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AmmoDrivenWeapon.h"
 #include "ChargeChangedSignatureDelegate.h"
+#include "AmmoDrivenWeapon.h"
 #include "ChargedWeapon.generated.h"
 
 class UAnimMontage;

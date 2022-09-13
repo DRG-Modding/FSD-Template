@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Projectile.h"
-#include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "GuntowerLineProjectile.generated.h"
 
 class USceneComponent;
-class UDamageComponent;
 class UParticleSystemComponent;
+class UDamageComponent;
 
 UCLASS(Blueprintable)
 class AGuntowerLineProjectile : public AProjectile {

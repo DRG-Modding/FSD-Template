@@ -3,8 +3,8 @@
 #include "Blueprint/UserWidget.h"
 #include "ItemsBarIcon.generated.h"
 
-class APlayerCharacter;
 class UItemsBar;
+class APlayerCharacter;
 class AItem;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)

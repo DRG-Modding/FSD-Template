@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EnemyDeepPathfinderCharacter.h"
 #include "EnemyAttacker.h"
+#include "EnemyDeepPathfinderCharacter.h"
 #include "SpiderEnemy.generated.h"
 
 class UStaticMeshComponent;
-class UPawnStatsComponent;
-class AActor;
-class UHitReactionComponent;
 class UStaticMesh;
+class UPawnStatsComponent;
+class UHitReactionComponent;
+class AActor;
 
 UCLASS(Blueprintable)
 class ASpiderEnemy : public AEnemyDeepPathfinderCharacter, public IEnemyAttacker {

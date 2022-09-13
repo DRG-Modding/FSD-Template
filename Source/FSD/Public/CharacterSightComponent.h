@@ -6,17 +6,17 @@
 #include "UObject/NoExportTypes.h"
 #include "CharacterSightComponent.generated.h"
 
-class UTemperatureComponent;
 class AActor;
-class USimpleObjectInfoComponent;
 class UPrimitiveComponent;
 class APlayerCharacter;
+class UTemperatureComponent;
+class USimpleObjectInfoComponent;
+class UPawnAfflictionComponent;
 class UHealth;
 class IHealth;
+class UCharacterSightSensorBase;
 class UTargetable;
 class ITargetable;
-class UPawnAfflictionComponent;
-class UCharacterSightSensorBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCharacterSightComponent : public UActorComponent {

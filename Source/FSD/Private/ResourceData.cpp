@@ -25,5 +25,6 @@ UResourceData::UResourceData() {
     this->IsWholeNumberResource = false;
     this->CreditValue = 0;
     this->XPValue = 1;
+    this->SeasonXPMultiplier = -1.00f;
 }
 

@@ -7,9 +7,9 @@
 #include "ERefineryState.h"
 #include "PipelineExtractorPodAnimInstance.generated.h"
 
+class APipelineSegment;
 class APipelineExtractorPod;
 class APipelineStart;
-class APipelineSegment;
 class AFSDRefinery;
 
 UCLASS(Abstract, Blueprintable, NonTransient)

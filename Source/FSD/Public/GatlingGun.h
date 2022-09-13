@@ -3,8 +3,8 @@
 #include "BeltDrivenWeapon.h"
 #include "GatlingGun.generated.h"
 
-class UFXSystemAsset;
 class UDamageComponent;
+class UFXSystemAsset;
 class AActor;
 class UFSDPhysicalMaterial;
 

@@ -6,8 +6,8 @@
 #include "DelegateDelegate.h"
 #include "PlayerStatsComponent.generated.h"
 
-class UCappedResource;
 class APlayerCharacter;
+class UCappedResource;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPlayerStatsComponent : public UActorComponent {

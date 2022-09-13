@@ -5,8 +5,8 @@
 #include "PlayerCharacterFunctionLibrary.generated.h"
 
 class APlayerCharacter;
-class UObject;
 class AFSDPlayerState;
+class UObject;
 class AActor;
 
 UCLASS(Blueprintable)

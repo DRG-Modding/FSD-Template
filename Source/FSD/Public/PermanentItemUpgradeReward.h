@@ -4,8 +4,8 @@
 #include "UnlockReward.h"
 #include "PermanentItemUpgradeReward.generated.h"
 
-class AActor;
 class UItemUpgrade;
+class AActor;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UPermanentItemUpgradeReward : public UUnlockReward {

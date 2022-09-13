@@ -1,9 +1,9 @@
 #include "AIFunctionLibrary.h"
 
+class APlayerCharacter;
 class UObject;
 class APawn;
 class AActor;
-class APlayerCharacter;
 class UAttackerPositioningComponent;
 
 void UAIFunctionLibrary::SetAICanSense(bool canSense) {

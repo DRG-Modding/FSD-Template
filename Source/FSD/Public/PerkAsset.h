@@ -8,12 +8,12 @@
 #include "EPerkHUDActivationLocation.h"
 #include "PerkAsset.generated.h"
 
-class UDialogDataAsset;
-class UPerkHUDIconWidget;
-class UPerkHUDActivationWidget;
-class UTexture2D;
 class UPerkLogic;
+class UPerkHUDIconWidget;
+class UDialogDataAsset;
+class UTexture2D;
 class APlayerController;
+class UPerkHUDActivationWidget;
 class UObject;
 class UPlayerCharacterID;
 class UPerkAsset;

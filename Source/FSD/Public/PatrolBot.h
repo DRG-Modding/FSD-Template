@@ -1,28 +1,28 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EnemyDeepPathfinderCharacter.h"
-#include "EDeepMovementState.h"
 #include "EPatrolBotState.h"
 #include "EPatrolBotControlState.h"
 #include "Curves/CurveFloat.h"
+#include "EDeepMovementState.h"
 #include "Engine/EngineTypes.h"
 #include "PatrolBot.generated.h"
 
-class UFakeMoverSettings;
-class UHackingUsableComponent;
-class AActor;
+class UDamageComponent;
 class UParticleSystemComponent;
+class UHackingUsableComponent;
 class UPawnSensingComponent;
 class USphereComponent;
-class UPawnAlertComponent;
 class UEnemyComponent;
-class UDamageComponent;
+class UHealthComponentBase;
+class UPawnAlertComponent;
 class UPlayerImpactCooldownComponent;
 class UAvoidCeilingComponent;
 class UAudioComponent;
 class UProjectileAttackComponent;
 class USoundCue;
-class UHealthComponentBase;
+class UFakeMoverSettings;
+class AActor;
 class UPrimitiveComponent;
 
 UCLASS(Abstract, Blueprintable)

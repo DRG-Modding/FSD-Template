@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
 #include "SaveGameIDInterface.h"
-#include "Engine/DataAsset.h"
 #include "SavablePrimaryDataAsset.generated.h"
 
 class UBuildRestriction;

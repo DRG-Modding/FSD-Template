@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PlayerAnimInstance.h"
 #include "UObject/NoExportTypes.h"
+#include "PlayerAnimInstance.h"
 #include "UObject/NoExportTypes.h"
 #include "PlayerFPAnimInstance.generated.h"
 

@@ -331,6 +331,13 @@
 			"Enabled": true
 		},
 		{
+			"Name": "FSR2",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"Win64"
+			]
+		},
+		{
 			"Name": "DLSS",
 			"Enabled": true,
 			"MarketplaceURL": "https://www.unrealengine.com/marketplace/en-US/product/nvidia-dlss"
@@ -341,6 +348,9 @@
 		}
 	],
 	"TargetPlatforms": [
-		"Windows"
+		"Windows",
+		"WindowsNoEditor",
+		"LinuxNoEditor",
+		"LinuxAArch64NoEditor"
 	]
 }

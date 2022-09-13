@@ -9,14 +9,14 @@
 #include "FSDPhysicalMaterial.generated.h"
 
 class USoundCue;
-class UPrimitiveComponent;
-class UFXSystemAsset;
-class UNiagaraSystem;
 class UReactiveTerrain;
-class UMaterialInstance;
+class UFXSystemAsset;
 class UFXSystemComponent;
+class UNiagaraSystem;
+class UMaterialInstance;
 class UObject;
 class UFSDPhysicalMaterial;
+class UPrimitiveComponent;
 
 UCLASS(Blueprintable, CollapseCategories)
 class UFSDPhysicalMaterial : public UPhysicalMaterial {

@@ -4,8 +4,8 @@
 #include "LineCutter.generated.h"
 
 class UItemUpgrade;
-class ALineCutterProjectile;
 class AProjectileBase;
+class ALineCutterProjectile;
 
 UCLASS(Blueprintable)
 class ALineCutter : public AAmmoDrivenWeapon {

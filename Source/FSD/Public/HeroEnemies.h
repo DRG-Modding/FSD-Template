@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "RunningMissionBP.h"
-#include "GameplayTagContainer.h"
 #include "EliteEnemyEntry.h"
+#include "GameplayTagContainer.h"
 #include "HeroEnemies.generated.h"
 
 class UEnemyDescriptor;

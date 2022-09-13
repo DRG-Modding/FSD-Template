@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
+#include "EVanitySlot.h"
+#include "VanityMasterySettings.h"
 #include "ResourceSpawner.h"
 #include "UObject/NoExportTypes.h"
-#include "VanityMasterySettings.h"
-#include "EVanitySlot.h"
 #include "VanitySlotCharacter.h"
 #include "VanitySettings.generated.h"
 

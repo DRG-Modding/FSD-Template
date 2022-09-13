@@ -4,8 +4,8 @@
 #include "ItemUpgradeElement.h"
 #include "ReplaceSkeletonMeshUpgradeElement.generated.h"
 
-class USkeletalMesh;
 class UAnimInstance;
+class USkeletalMesh;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UReplaceSkeletonMeshUpgradeElement : public UItemUpgradeElement {

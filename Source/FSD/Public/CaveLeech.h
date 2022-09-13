@@ -7,13 +7,13 @@
 #include "UObject/NoExportTypes.h"
 #include "CaveLeech.generated.h"
 
-class AActor;
+class USceneComponent;
 class USkeletalMeshComponent;
 class UGrabberComponent;
 class UPawnAffliction;
-class UHealthComponentBase;
+class AActor;
 class UHealthComponent;
-class USceneComponent;
+class UHealthComponentBase;
 
 UCLASS(Abstract, Blueprintable)
 class ACaveLeech : public AEnemyPawn, public IAttackingPointInterface {

@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "YesNoPromptWidget.h"
-#include "Kismet/BlueprintAsyncActionBase.h"
 #include "YesNoPromptSettings.h"
+#include "Kismet/BlueprintAsyncActionBase.h"
+#include "YesNoPromptWidget.h"
 #include "YesNoPromptAction.generated.h"
 
 class UResourceData;
+class UYesNoPromptAction;
 class UYesNoPromptWidget;
 class UObject;
-class UYesNoPromptAction;
 
 UCLASS(Blueprintable)
 class UYesNoPromptAction : public UBlueprintAsyncActionBase {

@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EliminationDescriptors.h"
 #include "EliminationTarget.h"
 #include "Objective.h"
-#include "EliminationDescriptors.h"
 #include "EliminationObjective.generated.h"
 
+class UCaveInfluencer;
 class AActor;
 class UDebrisPositioning;
-class AFSDPawn;
-class UCaveInfluencer;
 class UDebrisBase;
+class AFSDPawn;
 class UHealthComponentBase;
 class UEnemyDescriptor;
 

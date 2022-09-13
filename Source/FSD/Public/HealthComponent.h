@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "HealthComponentBase.h"
-#include "ArmorHealedSigDelegate.h"
 #include "HealthChangedSigDelegate.h"
 #include "HealthSegmentChangeDelegate.h"
+#include "ArmorHealedSigDelegate.h"
 #include "DamageSigDelegate.h"
 #include "DeathSigDetailedDelegate.h"
-#include "EHealthbarType.h"
 #include "DamageData.h"
+#include "EHealthbarType.h"
 #include "HealthComponent.generated.h"
 
-class UPawnStat;
 class UPawnStatsComponent;
+class UPawnStat;
 class USubHealthComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -88,8 +88,8 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMaxArmor() const;
     
-    /*UFUNCTION(BlueprintCallable, BlueprintPure)
-    EHealthbarType GetHealthbarType() const;*/
+    //UFUNCTION(BlueprintCallable, BlueprintPure)
+    EHealthbarType GetHealthbarType() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetCurrentHealthSegment(int32& Segment, float& segmentHealth, float& segmentHealthPercent);

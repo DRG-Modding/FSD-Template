@@ -7,8 +7,8 @@
 #include "ResourceAddedSignatureDelegate.h"
 #include "ResourcesComponent.generated.h"
 
-class UResourceData;
 class UCappedResource;
+class UResourceData;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UResourcesComponent : public UActorComponent {

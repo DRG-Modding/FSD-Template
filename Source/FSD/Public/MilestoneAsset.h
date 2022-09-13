@@ -3,12 +3,12 @@
 #include "Engine/DataAsset.h"
 #include "OnMilestoneClaimedDelegate.h"
 #include "OnMilestoneReachedDelegate.h"
-#include "MilestoneTier.h"
 #include "UObject/NoExportTypes.h"
+#include "MilestoneTier.h"
 #include "MilestoneAsset.generated.h"
 
-class UMissionStat;
 class UTexture2D;
+class UMissionStat;
 class UPlayerCharacterID;
 class UMilestoneAsset;
 class UObject;

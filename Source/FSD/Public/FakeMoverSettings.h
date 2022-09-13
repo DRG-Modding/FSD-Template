@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DeepPathFinderSize.h"
 #include "Engine/DataAsset.h"
-#include "FakeMoverPropulsion.h"
 #include "FakeMoverTarget.h"
+#include "DeepPathFinderSize.h"
+#include "FakeMoverPropulsion.h"
 #include "FakeMoverSettings.generated.h"
 
 UCLASS(Blueprintable)

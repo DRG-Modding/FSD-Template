@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CSGSDFInstanceProperties.h"
 #include "CSGBase.h"
-#include "UObject/NoExportTypes.h"
+#include "CSGSDFInstanceProperties.h"
 #include "BinaryTerrainMaterialCombiner.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "DeepCSGFloatTree.h"
 #include "CSGSDFInstance.generated.h"

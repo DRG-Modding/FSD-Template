@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DelegateDelegate.h"
-#include "SpreadChangedDelegateDelegate.h"
-#include "WeaponFireComponent.h"
-#include "EImpactDecalSize.h"
 #include "Curves/CurveFloat.h"
+#include "WeaponFireComponent.h"
+#include "SpreadChangedDelegateDelegate.h"
+#include "DelegateDelegate.h"
+#include "EImpactDecalSize.h"
 #include "ERicochetBehavior.h"
 #include "HitscanBaseComponent.generated.h"
 

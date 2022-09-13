@@ -2,9 +2,9 @@
 #include "Templates/SubclassOf.h"
 
 class APlayerController;
+class UPerkHUDIconWidget;
 class UObject;
 class UPlayerCharacterID;
-class UPerkHUDIconWidget;
 class UPerkAsset;
 class UPerkHUDActivationWidget;
 class UPerkDelegateItem;

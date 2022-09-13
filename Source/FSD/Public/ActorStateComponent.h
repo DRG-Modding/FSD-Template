@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "StateTickDelegateDelegate.h"
 #include "Components/ActorComponent.h"
+#include "StateTickDelegateDelegate.h"
 #include "StateDelegateDelegate.h"
 #include "ActorStateComponent.generated.h"
 

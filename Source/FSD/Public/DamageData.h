@@ -3,9 +3,9 @@
 #include "DamageDataBase.h"
 #include "DamageData.generated.h"
 
-class AController;
-class UDamageClass;
 class AActor;
+class UDamageClass;
+class AController;
 
 USTRUCT(BlueprintType)
 struct FDamageData : public FDamageDataBase {

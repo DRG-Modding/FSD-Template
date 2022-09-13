@@ -1,7 +1,7 @@
 #include "RejectInviteBlueprintCallProxy.h"
 
-class UObject;
 class URejectInviteBlueprintCallProxy;
+class UObject;
 
 URejectInviteBlueprintCallProxy* URejectInviteBlueprintCallProxy::RejectInvite(UObject* NewWorldContextObject, const FString& ListName, const FString& UserId) {
     return NULL;

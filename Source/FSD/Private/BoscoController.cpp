@@ -1,9 +1,9 @@
 #include "BoscoController.h"
 
 class UHealthComponentBase;
+class AFSDPlayerState;
 class APlayerCharacter;
 class AActor;
-class AFSDPlayerState;
 
 void ABoscoController::ReviveTarget() {
 }

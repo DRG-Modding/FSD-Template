@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "HealthChangedSigDelegate.h"
 #include "Components/ActorComponent.h"
-#include "Health.h"
 #include "HitSigDelegate.h"
+#include "Health.h"
 #include "BodypartHitSigDelegate.h"
 #include "DamageSigDelegate.h"
 #include "DeathSigDelegate.h"
@@ -110,10 +110,9 @@ public:
     
     
     // Fix for true pure virtual functions not being implemented
-    /*UFUNCTION(BlueprintCallable)
-    AActor* GetOwner() const override PURE_VIRTUAL(GetOwner, return NULL;);*/
-    
     UFUNCTION(BlueprintCallable)
+    //AActor* GetOwner() const override PURE_VIRTUAL(GetOwner, return NULL;);
+    
     float GetMaxHealth() const override PURE_VIRTUAL(GetMaxHealth, return 0.0f;);
     
     UFUNCTION(BlueprintCallable)

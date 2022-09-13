@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ELockOnWeaponUpgrades.h"
-#include "StandardItemUpgrade.h"
 #include "UpgradeValues.h"
+#include "StandardItemUpgrade.h"
+#include "ELockOnWeaponUpgrades.h"
 #include "LockOnWeaponUpgrade.generated.h"
 
 class AItem;

@@ -3,23 +3,24 @@
 #include "Templates/SubclassOf.h"
 #include "EnemyDeepPathfinderCharacter.h"
 #include "WeaponFireOwner.h"
-#include "RobotShieldSwitchSigDelegate.h"
-#include "RobotStateChangedSigDelegate.h"
-#include "IntroductionStartedDelegate.h"
 #include "EInputKeys.h"
-#include "UObject/NoExportTypes.h"
-#include "Curves/CurveFloat.h"
 #include "ERobotState.h"
+#include "RobotStateChangedSigDelegate.h"
+#include "RobotShieldSwitchSigDelegate.h"
+#include "IntroductionStartedDelegate.h"
+#include "Curves/CurveFloat.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "ConvertedRobot.generated.h"
 
-class USoundBase;
-class USingleUsableComponent;
-class USceneComponent;
 class UOutlineComponent;
+class AProjectile;
+class USoundCue;
 class UEnemyComponent;
 class UPawnStatsComponent;
+class USceneComponent;
 class UHitscanComponent;
+class USingleUsableComponent;
 class USkeletalMeshComponent;
 class UPointLightComponent;
 class USpotLightComponent;
@@ -28,12 +29,11 @@ class UAudioComponent;
 class UDamageComponent;
 class UParticleSystem;
 class AActor;
+class USoundBase;
 class AParasiteEnemy;
-class AProjectile;
-class UAnimSequenceBase;
-class USoundCue;
-class APlayerCharacter;
 class APawn;
+class UAnimSequenceBase;
+class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class AConvertedRobot : public AEnemyDeepPathfinderCharacter, public IWeaponFireOwner {

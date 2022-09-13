@@ -1,8 +1,8 @@
 #include "ItemID.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
 class UItemData;
+class AActor;
 class AItem;
 
 bool UItemID::IsItemClassChildOf(TSubclassOf<AActor> InParentClass) const {

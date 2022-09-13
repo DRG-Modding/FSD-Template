@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EInputKeys.h"
 #include "UsableComponent.h"
 #include "UserCountChangedDelegateDelegate.h"
 #include "UsedBySignatureDelegate.h"
@@ -7,15 +8,14 @@
 #include "ProgressSignatureDelegate.h"
 #include "UsableChangedSignatureDelegate.h"
 #include "OnFailedDelegate.h"
-#include "EInputKeys.h"
 #include "SingleUsableComponent.generated.h"
 
-class USoundCue;
+class APlayerCharacter;
 class UDialogDataAsset;
 class UPawnStat;
+class USoundCue;
 class UTexture2D;
 class UAudioComponent;
-class APlayerCharacter;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USingleUsableComponent : public UUsableComponent {

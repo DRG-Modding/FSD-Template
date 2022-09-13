@@ -6,8 +6,8 @@
 #include "UObject/NoExportTypes.h"
 #include "Magazine.generated.h"
 
-class USoundCue;
 class USkinEffect;
+class USoundCue;
 
 UCLASS(Blueprintable)
 class AMagazine : public AActor, public ISkinnable {

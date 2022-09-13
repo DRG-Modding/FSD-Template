@@ -4,8 +4,8 @@
 #include "IconGenerationCharacter.generated.h"
 
 class UMaterialInterface;
-class UBeardColorVanityItem;
 class USkeletalMeshComponent;
+class UBeardColorVanityItem;
 class UIconSceneCaptureComponent;
 
 UCLASS(Blueprintable)

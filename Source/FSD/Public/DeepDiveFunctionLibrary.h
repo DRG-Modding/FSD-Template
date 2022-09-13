@@ -3,8 +3,8 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "DeepDiveFunctionLibrary.generated.h"
 
-class UObject;
 class UGeneratedMission;
+class UObject;
 class UDeepDive;
 class UDeepDiveTemplate;
 

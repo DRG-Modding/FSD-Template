@@ -4,10 +4,10 @@
 #include "AmberEvent.generated.h"
 
 class UDamageComponent;
-class APawn;
 class UAmberEventEnemyPool;
 class AFSDPawn;
 class UHealthComponentBase;
+class APawn;
 
 UCLASS(Blueprintable)
 class AAmberEvent : public AGameEvent {

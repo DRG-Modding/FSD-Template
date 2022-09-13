@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EDashPointsGenerationMode.h"
 #include "Components/ActorComponent.h"
-#include "DashSigDelegate.h"
 #include "Engine/NetSerialization.h"
+#include "DashSigDelegate.h"
 #include "UObject/NoExportTypes.h"
 #include "Curves/CurveFloat.h"
-#include "EDashPointsGenerationMode.h"
 #include "DashPoints.generated.h"
 
-class AActor;
 class UHealthComponentBase;
+class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UDashPoints : public UActorComponent {

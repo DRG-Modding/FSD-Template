@@ -5,9 +5,9 @@
 #include "UObject/NoExportTypes.h"
 #include "TetherStation.generated.h"
 
-class USkeletalMeshComponent;
-class USceneComponent;
 class AFacilityGeneratorLine;
+class USceneComponent;
+class USkeletalMeshComponent;
 
 UCLASS(Blueprintable)
 class FSD_API ATetherStation : public AActor {

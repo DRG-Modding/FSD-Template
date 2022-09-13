@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "ItemUpgrade.h"
-#include "DamageModifierItem.h"
 #include "UpgradeValues.h"
+#include "DamageModifierItem.h"
 #include "ConditionalDamageModifierUpgrade.generated.h"
 
-class UDamageCondition;
 class AActor;
+class UDamageCondition;
 class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)

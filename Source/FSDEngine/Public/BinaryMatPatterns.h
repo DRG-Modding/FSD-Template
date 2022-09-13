@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EPattern.h"
 #include "BinaryMatProperties.h"
+#include "EPattern.h"
 #include "BinaryMatPatterns.generated.h"
 
 class UTerrainMaterialCore;

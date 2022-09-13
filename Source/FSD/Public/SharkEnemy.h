@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EnemyDeepPathfinderCharacter.h"
-#include "Engine/EngineTypes.h"
-#include "Engine/NetSerialization.h"
 #include "ESharkEnemyState.h"
+#include "Engine/NetSerialization.h"
+#include "Engine/EngineTypes.h"
 #include "SharkEnemy.generated.h"
 
-class AActor;
-class UParticleSystemComponent;
+class UInDangerComponent;
 class UPawnSensingComponent;
 class USphereComponent;
-class UEnemyComponent;
-class UInDangerComponent;
 class UDamageComponent;
-class APawn;
+class UParticleSystemComponent;
 class UFakePhysGrabberComponent;
+class UEnemyComponent;
 class USoundCue;
 class UFakeMoverSettings;
 class UParticleSystem;
+class AActor;
+class APawn;
 class UPrimitiveComponent;
 class UHealthComponentBase;
 

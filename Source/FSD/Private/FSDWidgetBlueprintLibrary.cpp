@@ -1,26 +1,26 @@
 #include "FSDWidgetBlueprintLibrary.h"
 #include "Templates/SubclassOf.h"
 
-class UObject;
-class UWidgetAnimation;
 class AFSDPlayerState;
+class UWidgetAnimation;
+class USpacer;
+class UObject;
 class UWidget;
-class USizeBox;
-class UVerticalBox;
-class UPanelWidget;
 class UUserWidget;
+class UVerticalBoxSlot;
+class USizeBox;
+class UPanelWidget;
+class UUniformGridPanel;
+class UVerticalBox;
 class UTextBlock;
 class UImage;
 class UWindowWidget;
+class UHorizontalBox;
 class APlayerController;
 class UFSDCheatManager;
-class USpacer;
 class UTexture2D;
-class UHorizontalBox;
 class UHorizontalBoxSlot;
 class UUniformGridSlot;
-class UVerticalBoxSlot;
-class UUniformGridPanel;
 class UCanvasPanel;
 class UCanvasPanelSlot;
 

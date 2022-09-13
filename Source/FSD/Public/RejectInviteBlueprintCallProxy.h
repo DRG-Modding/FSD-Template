@@ -4,8 +4,8 @@
 #include "Net/OnlineBlueprintCallProxyBase.h"
 #include "RejectInviteBlueprintCallProxy.generated.h"
 
-class UObject;
 class URejectInviteBlueprintCallProxy;
+class UObject;
 
 UCLASS(Blueprintable)
 class URejectInviteBlueprintCallProxy : public UOnlineBlueprintCallProxyBase {

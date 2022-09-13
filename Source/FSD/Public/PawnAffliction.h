@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "SoftReferenceProvider.h"
 #include "Engine/DataAsset.h"
+#include "SoftReferenceProvider.h"
+#include "UObject/NoExportTypes.h"
 #include "PawnAffliction.generated.h"
 
-class UDialogDataAsset;
-class UTexture2D;
 class UPlayerAfflictionOverlay;
+class UTexture2D;
 class UAfflictionEffect;
+class UDialogDataAsset;
 
 UCLASS(Blueprintable)
 class UPawnAffliction : public UDataAsset, public ISoftReferenceProvider {

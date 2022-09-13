@@ -4,8 +4,8 @@
 #include "Engine/NetSerialization.h"
 #include "ProjectileImpact.generated.h"
 
-class UPhysicalMaterial;
 class AActor;
+class UPhysicalMaterial;
 class UPrimitiveComponent;
 
 USTRUCT(BlueprintType)

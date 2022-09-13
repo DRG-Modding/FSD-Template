@@ -4,10 +4,10 @@
 #include "BeamCollision.h"
 #include "LockOnBeam.generated.h"
 
-class USplineMeshComponent;
 class USplineComponent;
-class UMaterialInterface;
+class USplineMeshComponent;
 class USceneComponent;
+class UMaterialInterface;
 class ALockOnWeapon;
 
 UCLASS(Abstract, Blueprintable)

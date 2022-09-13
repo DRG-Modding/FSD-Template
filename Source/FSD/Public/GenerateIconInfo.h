@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "EGeneratorIconType.h"
 #include "PickaxeSet.h"
 #include "EPickaxePartLocation.h"
+#include "UObject/NoExportTypes.h"
 #include "GenerateIconInfo.generated.h"
 
-class UVanityItem;
 class UPickaxePart;
-class UPlayerCharacterID;
+class UVanityItem;
 class UItemSkin;
+class UPlayerCharacterID;
 
 USTRUCT(BlueprintType)
 struct FGenerateIconInfo {

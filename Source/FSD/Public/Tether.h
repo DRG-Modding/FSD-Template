@@ -3,13 +3,13 @@
 #include "CarriableItem.h"
 #include "Tether.generated.h"
 
-class UInstantUsable;
+class UDamageComponent;
 class USkeletalMeshComponent;
+class UInstantUsable;
 class UCarriableComponent;
 class UParticleSystem;
 class USphereComponent;
 class UNiagaraComponent;
-class UDamageComponent;
 class USoundCue;
 
 UCLASS(Blueprintable)

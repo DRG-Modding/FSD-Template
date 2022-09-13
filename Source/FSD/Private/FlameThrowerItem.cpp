@@ -1,8 +1,8 @@
 #include "FlameThrowerItem.h"
+#include "ProjectileLauncherComponent.h"
 #include "DamageComponent.h"
 #include "StickyFlameSpawner.h"
 #include "MotionAudioController.h"
-#include "ProjectileLauncherComponent.h"
 
 class UHealthComponentBase;
 class AActor;

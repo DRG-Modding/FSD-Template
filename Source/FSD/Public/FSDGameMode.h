@@ -10,26 +10,26 @@
 #include "EPauseReason.h"
 #include "FSDGameMode.generated.h"
 
-class AMiningPod;
-class APlayerCharacter;
-class AFSDPlayerController;
-class UPheromoneSpawnerComponent;
-class UObjectivesManager;
 class UEnemySpawnManager;
+class UObjectivesManager;
 class UKeepInsideWorld;
+class UPheromoneSpawnerComponent;
 class UMissionManager;
+class UDifficultyManager;
 class UEncounterManager;
 class UCritterManager;
+class AFSDPlayerController;
 class UFormationsManagerComponent;
-class UEnemyDescriptor;
+class AMiningPod;
 class AMolly;
 class ABosco;
 class UWidget;
+class UEnemyDescriptor;
 class UEnemyWaveManager;
 class AActor;
 class AFSDGameMode;
-class UDifficultyManager;
 class APlayerController;
+class APlayerCharacter;
 
 UCLASS(Blueprintable, NonTransient)
 class FSD_API AFSDGameMode : public AGameMode {

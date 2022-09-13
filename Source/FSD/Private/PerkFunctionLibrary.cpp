@@ -2,8 +2,8 @@
 #include "Templates/SubclassOf.h"
 
 class UPerkAsset;
-class UObject;
 class APlayerCharacter;
+class UObject;
 class UPlayerCharacterID;
 
 void UPerkFunctionLibrary::SplitPerksByUsage(const TArray<UPerkAsset*>& perks, TArray<UPerkAsset*>& OutPassivePerks, TArray<UPerkAsset*>& OutActivePerks) {

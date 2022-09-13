@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MusicHandle.h"
 #include "Subsystems/WorldSubsystem.h"
+#include "MusicHandle.h"
 #include "ActiveAudioItem.h"
 #include "MusicManager.generated.h"
 

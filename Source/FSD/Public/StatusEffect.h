@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/Object.h"
 #include "GameplayTagContainer.h"
+#include "UObject/Object.h"
 #include "GameplayTagContainer.h"
 #include "RandRange.h"
 #include "StatusEffect.generated.h"
 
+class UStatusEffectExclusiveKey;
 class UPawnAffliction;
 class UStatusEffectItem;
 class UDamageClass;
-class UStatusEffectExclusiveKey;
 class UStatusEffect;
 class AActor;
 

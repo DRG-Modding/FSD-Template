@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AttackBaseComponent.h"
 #include "NameDelegateDelegate.h"
+#include "AttackBaseComponent.h"
 #include "SpecialAttackComponent.generated.h"
 
 class UAnimMontage;

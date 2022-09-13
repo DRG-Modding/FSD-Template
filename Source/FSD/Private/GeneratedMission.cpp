@@ -2,8 +2,8 @@
 #include "Templates/SubclassOf.h"
 
 class AFSDPlayerController;
-class AProceduralSetup;
 class UMutator;
+class AProceduralSetup;
 class UMissionDNA;
 class UGeneratedMission;
 

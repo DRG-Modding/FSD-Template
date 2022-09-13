@@ -3,8 +3,8 @@
 #include "MultiHitscanHit.h"
 #include "MultiHitScanHits.generated.h"
 
-class UFSDPhysicalMaterial;
 class UPrimitiveComponent;
+class UFSDPhysicalMaterial;
 
 USTRUCT(BlueprintType)
 struct FMultiHitScanHits {

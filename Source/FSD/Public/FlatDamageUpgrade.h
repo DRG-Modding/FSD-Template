@@ -5,8 +5,8 @@
 #include "UpgradeValues.h"
 #include "FlatDamageUpgrade.generated.h"
 
-class UDamageClass;
 class AActor;
+class UDamageClass;
 class UDamageCondition;
 class AFSDPlayerState;
 

@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/HUD.h"
 #include "EHUDVisibilityReason.h"
+#include "GameFramework/HUD.h"
 #include "FSDHUD.generated.h"
 
-class APlayerController;
 class APlayerCharacter;
 class AFSDHUD;
+class APlayerController;
 class URadarPointComponent;
 class APlayerCameraDrone;
 

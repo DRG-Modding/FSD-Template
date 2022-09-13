@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Components/PrimitiveComponent.h"
 #include "BakeSettings.h"
+#include "Components/PrimitiveComponent.h"
 #include "LevelGenerationCarverComponent2.generated.h"
 
 class ACSGBuilder;

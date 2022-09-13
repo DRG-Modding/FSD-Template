@@ -3,8 +3,8 @@
 #include "GenerationItem.h"
 #include "SpawnResourceGenerationItem.generated.h"
 
-class UResourceData;
 class USphereComponent;
+class UResourceData;
 
 UCLASS(Blueprintable)
 class ASpawnResourceGenerationItem : public AGenerationItem {

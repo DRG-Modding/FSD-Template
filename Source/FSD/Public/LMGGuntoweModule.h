@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "HostileTargetingGuntowerModule.h"
+#include "UObject/NoExportTypes.h"
 #include "LMGGuntoweModule.generated.h"
 
+class USceneComponent;
 class UHitscanComponent;
 class UDamageComponent;
-class USceneComponent;
 class UAudioComponent;
 class USoundCue;
 class UParticleSystem;

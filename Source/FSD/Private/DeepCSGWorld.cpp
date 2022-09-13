@@ -2,15 +2,15 @@
 #include "Templates/SubclassOf.h"
 #include "AsyncPathRequests.h"
 
-class UStaticMesh;
 class UPrimitiveComponent;
-class USTLMeshCarver;
-class ACSGBuilder;
+class AActor;
+class ADebrisDataActor;
 class UTerrainMaterial;
 class ADeepCSGWorld;
-class ADebrisDataActor;
-class AActor;
+class USTLMeshCarver;
 class UStaticMeshCarver;
+class UStaticMesh;
+class ACSGBuilder;
 class UDebrisBase;
 
 void ADeepCSGWorld::UnRegisterScannerComponent(UPrimitiveComponent* Component) {

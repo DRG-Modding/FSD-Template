@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "EPerkSlotType.h"
 #include "EPerkUsageType.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "PerkFunctionLibrary.generated.h"
 
-class APlayerCharacter;
 class UPerkAsset;
+class APlayerCharacter;
 class UObject;
 class UPlayerCharacterID;
 

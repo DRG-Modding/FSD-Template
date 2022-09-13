@@ -1,8 +1,8 @@
 #include "MinersManual.h"
 
-class UEnemyMinersManualData;
 class UObject;
 class UMissionTemplate;
+class UEnemyMinersManualData;
 class UBiome;
 class UMinersManualData;
 

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ActiveCampaignItem.h"
-#include "UObject/NoExportTypes.h"
 #include "WeeklyCampaignItem.h"
+#include "UObject/NoExportTypes.h"
 #include "CampaignSave.generated.h"
 
 USTRUCT(BlueprintType)

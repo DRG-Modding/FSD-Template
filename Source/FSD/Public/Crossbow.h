@@ -6,8 +6,8 @@
 #include "Crossbow.generated.h"
 
 class AActor;
-class UStatusEffect;
 class AProjectileBase;
+class UStatusEffect;
 class ACrossbowProjectileStuck;
 class UCrossbowProjectileRecallable;
 class UStaticMesh;

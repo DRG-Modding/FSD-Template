@@ -6,11 +6,11 @@
 #include "Curves/CurveFloat.h"
 #include "DamageSettings.generated.h"
 
-class USoundCue;
 class UStatusEffect;
+class UDamageTag;
 class UDamageComponent;
 class UNiagaraSystem;
-class UDamageTag;
+class USoundCue;
 class UDamageImpulse;
 
 UCLASS(Blueprintable)

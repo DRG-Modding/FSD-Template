@@ -4,9 +4,9 @@
 #include "EFSDAchievementType.h"
 #include "FSDAchievement.generated.h"
 
+class UObject;
 class UFSDAchievement;
 class AFSDPlayerController;
-class UObject;
 
 UCLASS(Blueprintable)
 class UFSDAchievement : public USavableDataAsset {

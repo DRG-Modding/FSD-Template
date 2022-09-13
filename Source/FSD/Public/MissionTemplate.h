@@ -1,31 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "SavableDataAsset.h"
 #include "ResourceSpawner.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "ObjectiveMissionIcon.h"
 #include "MissionTemplate.generated.h"
 
+class UObject;
+class UObjective;
+class UMissionComplexity;
+class AProceduralSetup;
+class UMutator;
 class AFSDGameMode;
 class UWorld;
-class UMissionTemplate;
-class AProceduralSetup;
-class UDebrisActorComponent;
-class UMissionComplexity;
-class UMutator;
-class UObjective;
 class UMissionDuration;
+class UTutorialComponent;
 class UTexture2D;
 class UMissionDNA;
-class UTutorialComponent;
+class UMissionWarning;
+class UDebrisActorComponent;
 class UGeneratedMission;
 class UFSDSaveGame;
-class UObject;
+class UMissionTemplate;
 class UBiome;
 class UMissionMutator;
-class UMissionWarning;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UMissionTemplate : public USavableDataAsset {

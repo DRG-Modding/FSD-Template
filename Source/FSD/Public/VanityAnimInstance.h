@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Animation/AnimInstance.h"
 #include "EVanitySlot.h"
+#include "Animation/AnimInstance.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "VanityAnimInstance.generated.h"

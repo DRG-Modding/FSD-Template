@@ -3,8 +3,8 @@
 
 class APawn;
 class UEnemyDescriptor;
-class AActor;
 class UStatusEffect;
+class AActor;
 class UHealthComponentBase;
 
 void UEnemySpawnManager::SpawnerDestroyed(APawn* Actor) {

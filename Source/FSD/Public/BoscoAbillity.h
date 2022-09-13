@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "EBoscoAbillityTargetPreference.h"
+#include "Engine/DataAsset.h"
 #include "BoscoAbillity.generated.h"
 
 class UAnimSequenceBase;

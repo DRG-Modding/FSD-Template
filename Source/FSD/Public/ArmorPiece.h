@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "SaveGameIDInterface.h"
 #include "GameFramework/Actor.h"
-#include "ItemIDInterface.h"
 #include "LoadoutItem.h"
+#include "SaveGameIDInterface.h"
+#include "ItemIDInterface.h"
 #include "ArmorPiece.generated.h"
 
 class UPawnStat;
+class UUpgradableGearComponent;
 class UItemID;
 class ALoadoutItemProxy;
-class UUpgradableGearComponent;
 class AArmorPiece;
 class AItem;
 

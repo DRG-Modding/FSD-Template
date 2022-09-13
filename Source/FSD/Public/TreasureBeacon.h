@@ -4,10 +4,10 @@
 #include "GameFramework/Actor.h"
 #include "TreasureBeacon.generated.h"
 
-class UDebrisPositioning;
 class USceneComponent;
 class UTerrainPlacementComponent;
 class UCurveFloat;
+class UDebrisPositioning;
 class ATreasureContainer;
 
 UCLASS(Blueprintable)

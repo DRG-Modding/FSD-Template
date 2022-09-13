@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "DamageData.h"
 #include "WeakpointChannel.h"
 #include "Curves/CurveFloat.h"
-#include "DamageData.h"
 #include "WeakpointGlowComponent.generated.h"
 
-class USkeletalMeshComponent;
-class UFSDPhysicalMaterial;
 class UHealthComponentBase;
+class UFSDPhysicalMaterial;
+class USkeletalMeshComponent;
 class UMeshComponent;
 class UCurveFloat;
 

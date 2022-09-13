@@ -4,8 +4,8 @@
 #include "EInputKeys.h"
 #include "WalkingStateComponent.generated.h"
 
-class APlayerCharacter;
 class USoundBase;
+class APlayerCharacter;
 class UAudioComponent;
 class UTrackBuilderMovement;
 

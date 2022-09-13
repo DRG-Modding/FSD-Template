@@ -3,8 +3,8 @@
 #include "Components/ActorComponent.h"
 #include "DifficultyManager.generated.h"
 
-class AFSDGameMode;
 class UDifficultySetting;
+class AFSDGameMode;
 class AFSDGameState;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

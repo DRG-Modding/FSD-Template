@@ -5,17 +5,17 @@
 #include "DrinkableDataAsset.generated.h"
 
 class APlayerCharacter;
-class ADrinkableActor;
-class UTexture2D;
-class UTemporaryBuff;
-class UDrinkableDataAsset;
-class UMissionStat;
-class ADrinkableItem;
 class UDialogDataAsset;
+class UObject;
+class UTexture2D;
+class ADrinkableActor;
+class UMissionStat;
+class UDrinkableDataAsset;
+class APlayerController;
+class ADrinkableItem;
+class UTemporaryBuff;
 class UDrinkEffectComponent;
 class UResourceData;
-class UObject;
-class APlayerController;
 
 UCLASS(Blueprintable)
 class UDrinkableDataAsset : public USavableDataAsset {

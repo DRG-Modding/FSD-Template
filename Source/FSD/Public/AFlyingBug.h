@@ -5,20 +5,20 @@
 #include "DamageData.h"
 #include "AFlyingBug.generated.h"
 
-class UPawnAlertComponent;
-class UFrozenPawnImpactComponent;
 class UOutlineComponent;
 class UEnemyComponent;
 class UPawnStatsComponent;
 class UPawnSensingComponent;
-class USphereComponent;
-class UDamageTag;
 class UAudioComponent;
-class UHitReactionComponent;
-class AActor;
-class USoundBase;
 class UHealthComponentBase;
+class UPawnAlertComponent;
+class USphereComponent;
+class UFrozenPawnImpactComponent;
+class UHitReactionComponent;
+class USoundBase;
+class AActor;
 class UHealthComponent;
+class UDamageTag;
 
 UCLASS(Blueprintable)
 class AAFlyingBug : public AEnemyDeepPathfinderCharacter {

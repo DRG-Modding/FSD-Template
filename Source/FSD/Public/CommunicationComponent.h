@@ -11,13 +11,13 @@
 #include "UObject/NoExportTypes.h"
 #include "CommunicationComponent.generated.h"
 
-class UObject;
+class USoundBase;
 class UAudioComponent;
+class APlayerCharacter;
+class UDialogDataAsset;
 class UShoutWidget;
 class UCharacterShoutsData;
-class UDialogDataAsset;
-class APlayerCharacter;
-class USoundBase;
+class UObject;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCommunicationComponent : public UActorComponent {

@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UnassignedReward.h"
 #include "SavableDataAsset.h"
-#include "SeasonLevel.h"
 #include "Curves/CurveFloat.h"
+#include "SeasonLevel.h"
+#include "UnassignedReward.h"
 #include "SeasonalEventEntry.h"
 #include "UObject/NoExportTypes.h"
 #include "Season.generated.h"
 
-class UMissionStat;
 class UTreeOfVanity;
+class UMissionStat;
 class UGameDLC;
 class UMissionWarning;
 class UReward;

@@ -3,8 +3,8 @@
 #include "AmmoDrivenWeapon.h"
 #include "BurstWeapon.generated.h"
 
-class UHealthComponentBase;
 class UDamageComponent;
+class UHealthComponentBase;
 class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
 

@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "StandardItemUpgrade.h"
-#include "EReflectionHitscanUpgradeType.h"
 #include "UpgradeValues.h"
+#include "EReflectionHitscanUpgradeType.h"
+#include "StandardItemUpgrade.h"
 #include "ReflectionHitscanUpgrade.generated.h"
 
 class AItem;

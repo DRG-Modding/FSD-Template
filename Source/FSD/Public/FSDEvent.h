@@ -1,18 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "UObject/NoExportTypes.h"
+#include "EHolidayType.h"
 #include "FSDEventActivateChangedDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "ClaimableRewardView.h"
 #include "FSDEvent.generated.h"
 
+class UDrinkableDataAsset;
+class APlayerController;
 class ADebrisDataActor;
 class UWorld;
-class UTexture2D;
 class UCampaign;
+class UTexture2D;
 class UObject;
 class UFSDEvent;
-class APlayerController;
 
 UCLASS(Blueprintable)
 class FSD_API UFSDEvent : public UDataAsset {
@@ -26,6 +28,9 @@ protected:
     FName EventName;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EHolidayType EventType;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid SavegameID;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -35,7 +40,13 @@ protected:
     bool bFreeBeerEvent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UDrinkableDataAsset* SpecialEventBeer;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSoftClassPtr<ADebrisDataActor>> EventDebris;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsEventDebrisInDeepDives;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSoftObjectPtr<UWorld>> SpacerigSublevels;

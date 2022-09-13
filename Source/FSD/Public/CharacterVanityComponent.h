@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EVanitySlot.h"
 #include "Components/ActorComponent.h"
+#include "TattooArmorItem.h"
 #include "EHeadVanityType.h"
 #include "EquippedVanity.h"
-#include "TattooArmorItem.h"
+#include "EVanitySlot.h"
 #include "CharacterVanityComponent.generated.h"
 
 class UCharacterVanityItems;
 class UBeardColorVanityItem;
-class UMaterialInstanceDynamic;
 class UMaterialInterface;
+class UMaterialInstanceDynamic;
 class UVanityItem;
 class USkeletalMeshComponent;
 class UObject;

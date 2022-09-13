@@ -3,8 +3,8 @@
 #include "Subsystems/WorldSubsystem.h"
 #include "PerkSubsystem.generated.h"
 
-class UPerkAsset;
 class UPerkDelegateItem;
+class UPerkAsset;
 
 UCLASS(Blueprintable)
 class FSD_API UPerkSubsystem : public UWorldSubsystem {

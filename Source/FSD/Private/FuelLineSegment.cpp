@@ -1,8 +1,8 @@
 #include "FuelLineSegment.h"
 #include "SimpleHealthComponent.h"
-#include "Components/StaticMeshComponent.h"
 #include "Components/SplineComponent.h"
 #include "Components/SplineMeshComponent.h"
+#include "Components/StaticMeshComponent.h"
 #include "Components/SceneComponent.h"
 
 class UHealthComponentBase;

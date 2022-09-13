@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
-#include "PlatformComponent.h"
 #include "LocalVoiceStatusDelegate.h"
-#include "EMinersManualSinglePage.h"
-#include "UObject/NoExportTypes.h"
+#include "PlatformComponent.h"
 #include "EHUDVisibilityReason.h"
+#include "EMinersManualSinglePage.h"
 #include "EMinersManualSection.h"
+#include "UObject/NoExportTypes.h"
 #include "EDisconnectReason.h"
 #include "FSDPlayerControllerBase.generated.h"
 

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "GameActivitySubTask.h"
+#include "Engine/DataAsset.h"
 #include "EActivityType.h"
 #include "GameActivityType.generated.h"
 

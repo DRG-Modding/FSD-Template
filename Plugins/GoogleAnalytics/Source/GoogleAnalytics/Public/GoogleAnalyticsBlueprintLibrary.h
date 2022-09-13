@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "CustomMetric.h"
 #include "CustomDimension.h"
+#include "CustomMetric.h"
 #include "GoogleAnalyticsBlueprintLibrary.generated.h"
 
 UCLASS(Blueprintable)

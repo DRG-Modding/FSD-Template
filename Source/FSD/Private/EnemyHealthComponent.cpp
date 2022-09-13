@@ -1,5 +1,9 @@
 #include "EnemyHealthComponent.h"
 
+float UEnemyHealthComponent::GetMaxHealth() const {
+    return 0.0f;
+}
+
 UEnemyHealthComponent::UEnemyHealthComponent() {
     this->EnemyHealthScaling = EEnemyHealthScaling::SmallEnemy;
     this->Courage = 0.00f;

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AIController.h"
-#include "UObject/NoExportTypes.h"
 #include "LaserPointerTarget.h"
+#include "UObject/NoExportTypes.h"
 #include "DroneControllerBase.generated.h"
 
 class APlayerCharacter;

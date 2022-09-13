@@ -1,7 +1,7 @@
 #include "Tether.h"
 #include "Net/UnrealNetwork.h"
-#include "InstantUsable.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "InstantUsable.h"
 #include "CarriableComponent.h"
 #include "Components/SphereComponent.h"
 #include "NiagaraComponent.h"

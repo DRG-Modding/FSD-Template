@@ -1,38 +1,38 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Int32ConfigChangedDelegate.h"
+#include "ModdingUISettings.h"
 #include "GameFramework/GameUserSettings.h"
 #include "BoolConfigChangedDelegate.h"
 #include "FloatConfigChangedDelegate.h"
-#include "ModdingUISettings.h"
 #include "LanguageChangedDelegate.h"
-#include "UObject/NoExportTypes.h"
+#include "ESaveSlotChangeProcedure.h"
 #include "StringConfigChangedDelegate.h"
 #include "ChatFontSizeChangedDelegate.h"
 #include "ModdingSettingsChangedDelegate.h"
 #include "UDLSSMode.h"
-#include "ENVidiaReflexMode.h"
-#include "EConsoleGraphicsMode.h"
 #include "CharacterOptions.h"
 #include "HUDElements.h"
+#include "ENVidiaReflexMode.h"
+#include "EConsoleGraphicsMode.h"
 #include "InputSourceChangedSignatureDelegate.h"
-#include "Int32ConfigChangedDelegate.h"
+#include "UObject/NoExportTypes.h"
+#include "CustomKeyBinding.h"
+#include "EFSDInputSource.h"
 #include "GameFramework/GameUserSettings.h"
 #include "CustomKeyBindingsChangedDelegate.h"
-#include "EFSDInputSource.h"
-#include "CustomKeyBinding.h"
 #include "ControllerSettings.h"
-#include "UObject/NoExportTypes.h"
 #include "EVolumeType.h"
-#include "ETurn180Mode.h"
+#include "UObject/NoExportTypes.h"
 #include "ESteamSearchRegion.h"
-#include "ESaveSlotChangeProcedure.h"
+#include "ETurn180Mode.h"
 #include "FSDGameUserSettings.generated.h"
 
 class USoundClass;
-class APlayerController;
-class UObject;
-class UDifficultySetting;
 class UFSDGameUserSettings;
+class APlayerController;
+class UDifficultySetting;
+class UObject;
 
 UCLASS(Blueprintable)
 class UFSDGameUserSettings : public UGameUserSettings {
@@ -123,7 +123,13 @@ public:
     int32 AmdFsrMode;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 AmdFsr2Mode;
+    
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AmdFsrSharpness;
+    
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float AmdFsr2Sharpness;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDLSSMode NvidiaDlssMode;
@@ -318,6 +324,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 LastNiagaraShaderVerions;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    bool HasKeyboardBeenConnected;
     
 protected:
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -601,6 +610,12 @@ public:
     void SetAMDFSRMode(int32 Mode);
     
     UFUNCTION(BlueprintCallable)
+    void SetAMDFSR2Sharpness(float Sharpness);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetAMDFSR2Mode(int32 Mode);
+    
+    UFUNCTION(BlueprintCallable)
     void SetAimSensitivity(float NewValue);
     
     UFUNCTION(BlueprintCallable)
@@ -860,6 +875,12 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetAMDFSRMode() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    float GetAMDFSR2Sharpness() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetAMDFSR2Mode() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAimSensitivity() const;

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Engine/NetSerialization.h"
 #include "ECreatureSize.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/NetSerialization.h"
+#include "UObject/NoExportTypes.h"
 #include "SpawnEffectItem.generated.h"
 
 USTRUCT(BlueprintType)

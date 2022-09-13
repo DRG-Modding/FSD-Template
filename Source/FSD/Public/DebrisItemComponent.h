@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "IRandRange.h"
-#include "EDebrisItemPass.h"
 #include "DebrisActorComponent.h"
+#include "IRandRange.h"
 #include "DebrisItemActorItem.h"
+#include "EDebrisItemPass.h"
 #include "DebrisItemComponent.generated.h"
 
 class UDebrisPositioning;

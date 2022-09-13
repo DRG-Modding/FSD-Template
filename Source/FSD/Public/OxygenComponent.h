@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "OxygenTriggerDelegateDelegate.h"
 #include "Components/ActorComponent.h"
-#include "OxygenDelegateDelegate.h"
 #include "OxygenCallback.h"
 #include "OxygenActiveDelegateDelegate.h"
+#include "OxygenDelegateDelegate.h"
+#include "OxygenTriggerDelegateDelegate.h"
 #include "OxygenComponent.generated.h"
 
 class UHealthComponentBase;

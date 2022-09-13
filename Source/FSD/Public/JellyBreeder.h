@@ -5,12 +5,12 @@
 #include "JellyBreeder.generated.h"
 
 class UAnimSequenceBase;
-class UEnemyDescriptor;
 class UParticleSystem;
-class USoundBase;
-class AProjectile;
 class AActor;
+class USoundBase;
 class UPhysicalMaterial;
+class UEnemyDescriptor;
+class AProjectile;
 
 UCLASS(Blueprintable)
 class AJellyBreeder : public AAFlyingBug {

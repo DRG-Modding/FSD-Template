@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "EUIControlEffectTarget.h"
 #include "UObject/NoExportTypes.h"
+#include "EUIControlEffectTarget.h"
 #include "FSDAnselFunctionLibrary.generated.h"
 
 class UObject;

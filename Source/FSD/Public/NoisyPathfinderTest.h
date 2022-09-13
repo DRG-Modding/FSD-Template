@@ -5,9 +5,9 @@
 #include "PathObstacle.h"
 #include "NoisyPathfinderTest.generated.h"
 
+class UFloodFillSettings;
 class UTunnelSegmentSetting;
 class UTunnelParameters;
-class UFloodFillSettings;
 class ADeepCSGWorld;
 
 UCLASS(Blueprintable)

@@ -3,8 +3,8 @@
 #include "ObjectInfoComponent.h"
 #include "PlayerInfoComponent.generated.h"
 
-class UDialogDataAsset;
 class APlayerCharacter;
+class UDialogDataAsset;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UPlayerInfoComponent : public UObjectInfoComponent {

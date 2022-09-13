@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EMissionStatType.h"
 #include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
+#include "EMissionStatType.h"
 #include "MissionStat.generated.h"
 
 class UObject;

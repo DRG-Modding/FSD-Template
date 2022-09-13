@@ -6,9 +6,9 @@
 #include "ProjectileSwitch.h"
 #include "WeaponSwitchProjectileUpgrade.generated.h"
 
-class UWeaponHitCounterComponent;
-class AFSDPlayerState;
 class AActor;
+class AFSDPlayerState;
+class UWeaponHitCounterComponent;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UWeaponSwitchProjectileUpgrade : public UItemUpgrade {

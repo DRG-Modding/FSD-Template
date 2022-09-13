@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "GameplayTagContainer.h"
 #include "Components/ActorComponent.h"
+#include "GameplayTagContainer.h"
 #include "BuffingChangedDelegateDelegate.h"
 #include "EnemyBufferComponent.generated.h"
 
 class UParticleSystemComponent;
 class UStatusEffect;
-class UParticleSystem;
 class AFSDPawn;
+class UParticleSystem;
 class UHealthComponentBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

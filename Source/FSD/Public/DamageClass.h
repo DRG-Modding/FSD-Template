@@ -3,9 +3,9 @@
 #include "Engine/DataAsset.h"
 #include "DamageClass.generated.h"
 
-class UDialogDataAsset;
 class UPawnStat;
 class UTexture2D;
+class UDialogDataAsset;
 class UDamageImpulse;
 
 UCLASS(Blueprintable)

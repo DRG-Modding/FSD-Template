@@ -4,9 +4,9 @@
 #include "TextCounterEntry.h"
 #include "MultiTextCounterAction.generated.h"
 
+class USoundCue;
 class UMultiTextCounterAction;
 class UTextBlock;
-class USoundCue;
 class UObject;
 class UAudioComponent;
 

@@ -5,9 +5,9 @@
 #include "UObject/NoExportTypes.h"
 #include "PlayerAfflictionOverlay.generated.h"
 
-class USoundCue;
 class UTexture2D;
 class UPlayerAfflictionOverlayWidget;
+class USoundCue;
 
 UCLASS(Blueprintable)
 class UPlayerAfflictionOverlay : public UDataAsset {

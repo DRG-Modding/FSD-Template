@@ -6,9 +6,9 @@
 #include "FuelLineSegment.generated.h"
 
 class USplineMeshComponent;
-class UStaticMeshComponent;
-class USplineComponent;
 class USimpleHealthComponent;
+class USplineComponent;
+class UStaticMeshComponent;
 class USceneComponent;
 class UHealthComponentBase;
 

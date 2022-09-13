@@ -5,10 +5,10 @@
 
 class UDroneMiningState;
 class UPointLightComponent;
-class UDroneFollowState;
 class UAudioComponent;
-class UParticleSystemComponent;
 class UDroneCombatState;
+class UParticleSystemComponent;
+class UDroneFollowState;
 class UDroneReviveState;
 
 UCLASS(Blueprintable)

@@ -3,10 +3,10 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "PlayerMovementComponent.generated.h"
 
-class APlayerCharacter;
-class USoundBase;
-class UCharacterStateComponent;
 class AActor;
+class USoundBase;
+class APlayerCharacter;
+class UCharacterStateComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPlayerMovementComponent : public UCharacterMovementComponent {

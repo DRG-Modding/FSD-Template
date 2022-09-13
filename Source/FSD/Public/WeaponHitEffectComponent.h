@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
-#include "Engine/EngineTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/NetSerialization.h"
+#include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "WeaponHitEffectComponent.generated.h"
 
 class AActor;

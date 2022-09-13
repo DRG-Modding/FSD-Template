@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CustomKeySetting.h"
 #include "Engine/DataAsset.h"
+#include "CustomKeySetting.h"
 #include "KeyBindingSettings.generated.h"
 
 UCLASS(Blueprintable)

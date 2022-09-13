@@ -3,9 +3,9 @@
 #include "Engine/DataAsset.h"
 #include "CommnuityRewardSetup.generated.h"
 
+class UObject;
 class UCommnuityRewardBundle;
 class UResourceData;
-class UObject;
 
 UCLASS(Blueprintable)
 class UCommnuityRewardSetup : public UDataAsset {

@@ -6,8 +6,8 @@
 #include "UObject/NoExportTypes.h"
 #include "SplineCableActor.generated.h"
 
-class USplineMeshComponent;
 class USplineComponent;
+class USplineMeshComponent;
 class UStaticMesh;
 class UMaterialInterface;
 

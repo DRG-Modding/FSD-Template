@@ -6,6 +6,14 @@ bool UFSDEventManager::IsEventActive(const UFSDEvent* FSDEvent) const {
     return false;
 }
 
+EHolidayType UFSDEventManager::GetHolidayType() const {
+    return EHolidayType::None;
+}
+
+UFSDEvent* UFSDEventManager::GetFirstActiveEventHandler() const {
+    return NULL;
+}
+
 bool UFSDEventManager::GetBackendNotificationEvent(FBackendNotificationEvent& Notification) {
     return false;
 }

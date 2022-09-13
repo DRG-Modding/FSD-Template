@@ -2,10 +2,10 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
+class UOptionalObjectiveWidget;
 class UResourceData;
 class UObjectiveWidget;
 class UObjective;
-class UOptionalObjectiveWidget;
 class UTexture2D;
 
 void UObjective::SignalObjectiveUpdated() {

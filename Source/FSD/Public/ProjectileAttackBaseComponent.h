@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ProjetileSpawnedDelegateDelegate.h"
 #include "AttackBaseComponent.h"
+#include "ProjetileSpawnedDelegateDelegate.h"
 #include "EProjectileAttackRotationType.h"
 #include "ProjectileAttackDelegateDelegate.h"
 #include "ProjectileAttackBaseComponent.generated.h"

@@ -6,10 +6,10 @@
 #include "FSDCheatManager.generated.h"
 
 class UBaseCritterDescriptor;
+class APawn;
 class AActor;
 class UPlayerCharacterID;
 class UEnemyDescriptor;
-class APawn;
 class AFSDAIController;
 class UObject;
 class APlayerCharacter;

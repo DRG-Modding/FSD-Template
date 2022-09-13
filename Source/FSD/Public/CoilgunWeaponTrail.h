@@ -6,9 +6,9 @@
 #include "CoilgunWeaponTrail.generated.h"
 
 class UStatusEffect;
-class UCapsuleComponent;
-class USceneComponent;
 class UNiagaraComponent;
+class USceneComponent;
+class UCapsuleComponent;
 class UPrimitiveComponent;
 
 UCLASS(Blueprintable)

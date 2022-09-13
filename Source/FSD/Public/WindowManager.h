@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
-#include "WindowManagerDelegateDelegate.h"
 #include "Components/SlateWrapperTypes.h"
+#include "WindowManagerDelegateDelegate.h"
 #include "WindowManager.generated.h"
 
-class UWindowWidget;
-class USoundCue;
 class UUserWidget;
+class USoundCue;
+class UWindowWidget;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UWindowManager : public UActorComponent {

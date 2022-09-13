@@ -5,8 +5,8 @@
 
 class UObject;
 class UPlayerCharacterID;
-class UNewsTextLists;
 class UMissionNameBank;
+class UNewsTextLists;
 
 UCLASS(Blueprintable)
 class UUIFunctionLibrary : public UBlueprintFunctionLibrary {

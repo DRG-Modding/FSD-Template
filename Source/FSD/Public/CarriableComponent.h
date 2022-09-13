@@ -1,13 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CarriableEventDelegate.h"
 #include "Components/ActorComponent.h"
-#include "UObject/NoExportTypes.h"
 #include "Throwable.h"
+#include "CarriableEventDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "CarriableComponent.generated.h"
 
-class UDialogDataAsset;
+class UItemCharacterAnimationSet;
+class UUseAnimationSetting;
 class APlayerCharacter;
+class UDialogDataAsset;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCarriableComponent : public UActorComponent, public IThrowable {
@@ -22,6 +24,12 @@ public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UDialogDataAsset> ShoutWhileCarrying;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UItemCharacterAnimationSet* OverrideCarryAnimationSet;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UUseAnimationSetting* OverrideThrowAnimationSet;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     APlayerCharacter* CarriedBy;

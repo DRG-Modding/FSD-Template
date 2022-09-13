@@ -3,14 +3,14 @@
 #include "FSDPawn.h"
 #include "GuntowerWeakPoint.generated.h"
 
-class USceneComponent;
-class UEnemyHealthComponent;
-class UHealthComponentBase;
-class UWeakpointGlowComponent;
-class UStaticMeshComponent;
-class UDamageClass;
 class USoundCue;
 class UParticleSystem;
+class USceneComponent;
+class UEnemyHealthComponent;
+class UStaticMeshComponent;
+class UWeakpointGlowComponent;
+class UDamageClass;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class AGuntowerWeakPoint : public AFSDPawn {

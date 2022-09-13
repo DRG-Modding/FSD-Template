@@ -4,8 +4,8 @@
 #include "Net/OnlineBlueprintCallProxyBase.h"
 #include "SendSessionInviteToFriendBlueprintCallProxy.generated.h"
 
-class USendSessionInviteToFriendBlueprintCallProxy;
 class UObject;
+class USendSessionInviteToFriendBlueprintCallProxy;
 
 UCLASS(Blueprintable)
 class USendSessionInviteToFriendBlueprintCallProxy : public UOnlineBlueprintCallProxyBase {

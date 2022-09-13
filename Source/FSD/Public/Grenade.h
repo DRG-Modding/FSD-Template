@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
-#include "SaveGameIDInterface.h"
 #include "GameFramework/Actor.h"
-#include "ItemIDInterface.h"
 #include "LoadoutItem.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "SaveGameIDInterface.h"
+#include "ItemIDInterface.h"
 #include "Engine/EngineTypes.h"
 #include "Grenade.generated.h"
 
@@ -14,11 +14,11 @@ class ALoadoutItemProxy;
 class UItemID;
 class UProjectileMovementComponent;
 class UStaticMesh;
+class AItem;
 class USoundCue;
 class UParticleSystem;
 class UGrenadeAnimationSet;
 class AGrenade;
-class AItem;
 
 UCLASS(Blueprintable)
 class AGrenade : public AActor, public ISaveGameIDInterface, public IItemIDInterface, public ILoadoutItem {

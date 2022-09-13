@@ -1,7 +1,7 @@
 #include "FindFriendSessionsBlueprintCallProxy.h"
 
-class UFindFriendSessionsBlueprintCallProxy;
 class UObject;
+class UFindFriendSessionsBlueprintCallProxy;
 
 UFindFriendSessionsBlueprintCallProxy* UFindFriendSessionsBlueprintCallProxy::FindFriendSessions(UObject* NewWorldContextObject, const FString& FriendId) {
     return NULL;

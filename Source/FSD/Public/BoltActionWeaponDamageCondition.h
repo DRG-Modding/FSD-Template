@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DamageCondition.h"
 #include "EBoltActionWeaponConditions.h"
+#include "DamageCondition.h"
 #include "BoltActionWeaponDamageCondition.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

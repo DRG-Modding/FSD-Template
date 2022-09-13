@@ -2,9 +2,9 @@
 #include "Net/UnrealNetwork.h"
 
 class UVanityItem;
+class UCharacterVanityItems;
 class UObject;
 class UPlayerCharacterID;
-class UCharacterVanityItems;
 
 void UCharacterVanityComponent::UpdateMeshes() {
 }

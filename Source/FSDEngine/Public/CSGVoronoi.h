@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SimpleMeshWithCachedTree.h"
 #include "VoronoiProperties.h"
+#include "SimpleMeshWithCachedTree.h"
 #include "CSGVoronoi.generated.h"
 
 UCLASS(Blueprintable)

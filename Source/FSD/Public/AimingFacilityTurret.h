@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "FacilityTurret.h"
-#include "UObject/NoExportTypes.h"
 #include "EIndicatorMode.h"
+#include "UObject/NoExportTypes.h"
 #include "AimingFacilityTurret.generated.h"
 
 class UParticleSystemComponent;

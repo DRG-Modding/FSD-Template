@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ItemRefundResourceItem.h"
 #include "UObject/NoExportTypes.h"
+#include "ItemRefundResourceItem.h"
 #include "ItemRefundListItem.generated.h"
 
 USTRUCT(BlueprintType)

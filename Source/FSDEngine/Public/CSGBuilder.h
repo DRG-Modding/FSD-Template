@@ -3,8 +3,8 @@
 #include "CSGBuilderBase.h"
 #include "CSGBuilder.generated.h"
 
-class UCSGGroupComponent;
 class UCSGPreviewScene;
+class UCSGGroupComponent;
 class UTerrainMaterialCore;
 class UBakeConfig;
 class UCSGBase;

@@ -3,8 +3,8 @@
 #include "UsableComponent.h"
 #include "ReloadSentryUsableComponent.generated.h"
 
-class APlayerCharacter;
 class USoundBase;
+class APlayerCharacter;
 class UAudioComponent;
 class ASentryGun;
 

@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MuleRefueledDelegate.h"
 #include "Objective.h"
-#include "ShellBreakPauseChangeSignatureDelegate.h"
 #include "ShellBreakTimerSignatureDelegate.h"
 #include "UObject/NoExportTypes.h"
+#include "ShellBreakPauseChangeSignatureDelegate.h"
+#include "MuleRefueledDelegate.h"
 #include "EEscortMissionState.h"
 #include "CannisterRegisteredDelegate.h"
 #include "EscortObjective.generated.h"
 
-class UDebrisBase;
-class UDebrisPositioning;
-class UCurveFloat;
 class AActor;
+class UCurveFloat;
+class UDebrisPositioning;
 class AEscortDestination;
+class UDebrisBase;
 class UCarvedResourceData;
 class UResourceData;
 class AEscortMule;

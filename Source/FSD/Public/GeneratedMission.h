@@ -2,23 +2,23 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UObject/Object.h"
-#include "EMissionStructure.h"
 #include "GMMutatorItem.h"
+#include "EMissionStructure.h"
 #include "ObjectiveMissionIcon.h"
 #include "GeneratedMission.generated.h"
 
 class UMissionMutator;
-class UBiome;
-class AFSDPlayerController;
-class UMissionTemplate;
-class ULevelSequence;
 class UMutator;
+class UBiome;
+class UMissionTemplate;
 class UObjective;
 class UMissionWarning;
 class UMissionComplexity;
 class UMissionDuration;
 class UMissionDNA;
+class ULevelSequence;
 class AProceduralSetup;
+class AFSDPlayerController;
 class UGeneratedMission;
 
 UCLASS(Blueprintable)

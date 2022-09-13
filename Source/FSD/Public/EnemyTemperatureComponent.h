@@ -4,11 +4,11 @@
 #include "DamageData.h"
 #include "EnemyTemperatureComponent.generated.h"
 
-class UStatusEffectsComponent;
-class UDamageTag;
 class UEnemyDetonationSetting;
 class UPawnStatsComponent;
+class UDamageTag;
 class UHealthComponent;
+class UStatusEffectsComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UEnemyTemperatureComponent : public UTemperatureComponent {

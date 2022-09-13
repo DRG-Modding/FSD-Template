@@ -3,13 +3,13 @@
 #include "EMissionStructure.h"
 #include "GeneratedMissionSeed.generated.h"
 
+class UMissionComplexity;
 class UBiome;
 class UMissionTemplate;
-class UFSDEvent;
-class UMissionComplexity;
 class UMissionWarning;
 class UMissionDuration;
 class UMissionMutator;
+class UFSDEvent;
 
 USTRUCT(BlueprintType)
 struct FGeneratedMissionSeed {

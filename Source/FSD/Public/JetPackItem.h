@@ -3,8 +3,8 @@
 #include "AnimatedItem.h"
 #include "JetPackItem.generated.h"
 
-class UCurveFloat;
 class UPlayerMovementComponent;
+class UCurveFloat;
 
 UCLASS(Abstract, Blueprintable)
 class AJetPackItem : public AAnimatedItem {

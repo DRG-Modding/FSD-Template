@@ -10,14 +10,14 @@
 #include "AudioWithCooldown.h"
 #include "PlayerHealthComponent.generated.h"
 
-class UCurveFloat;
-class UPlayerDamageTakenMutator;
 class APlayerCharacter;
+class UCurveFloat;
 class UParticleSystem;
-class AActor;
 class UParticleSystemComponent;
+class UPlayerDamageTakenMutator;
 class UStatusEffect;
 class AController;
+class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPlayerHealthComponent : public UHealthComponent, public IRejoinListener {

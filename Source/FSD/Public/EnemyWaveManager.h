@@ -7,10 +7,10 @@
 #include "EnemyWaveManager.generated.h"
 
 class UEnemyWaveController;
-class AFSDGameMode;
 class APawn;
-class UEnemySpawnManager;
+class AFSDGameMode;
 class UObject;
+class UEnemySpawnManager;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UEnemyWaveManager : public UActorComponent {

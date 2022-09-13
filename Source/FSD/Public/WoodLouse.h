@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "EnemyDeepPathfinderCharacter.h"
-#include "EWoodLouseState.h"
 #include "BumpPlayerHit.h"
+#include "EWoodLouseState.h"
 #include "GameplayTagContainer.h"
 #include "WoodLouse.generated.h"
 
@@ -12,8 +12,8 @@ class USceneComponent;
 class UStatusEffect;
 class UPawnSensingComponent;
 class UFakeMoverSettings;
-class AActor;
 class USoundBase;
+class AActor;
 class UDamageClass;
 class UAudioComponent;
 class APawn;

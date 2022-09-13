@@ -4,10 +4,10 @@
 #include "UObject/NoExportTypes.h"
 #include "GunLogicComponent.generated.h"
 
-class USoundCue;
-class UParticleSystem;
 class UWeaponFireComponent;
 class UMeshComponent;
+class USoundCue;
+class UParticleSystem;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UGunLogicComponent : public UActorComponent {

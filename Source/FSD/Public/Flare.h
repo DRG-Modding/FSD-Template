@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ItemIDInterface.h"
 #include "FSDPhysicsActor.h"
-#include "UpgradableGear.h"
 #include "SaveGameIDInterface.h"
-#include "LoadoutItem.h"
 #include "UObject/NoExportTypes.h"
+#include "ItemIDInterface.h"
+#include "LoadoutItem.h"
+#include "UpgradableGear.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "Flare.generated.h"
 
 class AActor;
+class USoundCue;
 class AItem;
 class UItemID;
-class USoundCue;
 class AFlare;
 
 UCLASS(Abstract, Blueprintable)

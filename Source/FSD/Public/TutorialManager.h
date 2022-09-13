@@ -3,8 +3,8 @@
 #include "GameFramework/Actor.h"
 #include "TutorialManager.generated.h"
 
-class APlayerCharacter;
 class AFSDPlayerController;
+class APlayerCharacter;
 class UFSDSaveGame;
 class UTutorialComponent;
 

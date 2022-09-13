@@ -7,17 +7,17 @@
 #include "EInputKeys.h"
 #include "PipelineSegment.generated.h"
 
-class APipelineSegment;
-class USimpleHealthComponent;
 class UStaticMesh;
-class UMaterialInterface;
-class USplineComponent;
-class USingleUsableComponent;
 class UDroneUseComponent;
+class APipelineSegment;
+class UPathfinderSplineSegmentCollisionComponent;
+class UMaterialInterface;
+class USingleUsableComponent;
+class USimpleHealthComponent;
+class USplineComponent;
 class USplineMeshComponent;
 class USkeletalMeshComponent;
 class UStaticMeshComponent;
-class UPathfinderSplineSegmentCollisionComponent;
 class APipelineStart;
 class APlayerCharacter;
 class UHealthComponentBase;

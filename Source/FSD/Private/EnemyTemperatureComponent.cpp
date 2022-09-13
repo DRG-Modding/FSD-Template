@@ -1,8 +1,8 @@
 #include "EnemyTemperatureComponent.h"
 
+class UDamageTag;
 class UHealthComponent;
 class UStatusEffectsComponent;
-class UDamageTag;
 
 void UEnemyTemperatureComponent::TimerCallback() {
 }

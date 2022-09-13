@@ -11,5 +11,6 @@ enum class ECharacterHeadMesh : uint8 {
     FlatEars,
     FaceOnly,
     EyesOnly,
+    Masks,
 };
 

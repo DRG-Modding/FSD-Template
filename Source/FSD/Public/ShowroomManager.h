@@ -6,8 +6,8 @@
 #include "ShowroomManager.generated.h"
 
 class AShowroomStage;
-class UTextureRenderTarget2D;
 class UShowroomController;
+class UTextureRenderTarget2D;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UShowroomManager : public UActorComponent {

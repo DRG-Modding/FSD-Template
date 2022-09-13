@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HitscanBaseComponent.h"
 #include "ReflectiveHitscanHit.h"
+#include "HitscanBaseComponent.h"
 #include "ReflectionHitscanComponent.generated.h"
 
 class UTerrainType;

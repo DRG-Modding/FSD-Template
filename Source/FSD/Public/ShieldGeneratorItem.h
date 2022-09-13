@@ -6,8 +6,8 @@
 #include "RejoinListener.h"
 #include "ShieldGeneratorItem.generated.h"
 
-class UDialogDataAsset;
 class UCapacityHoldingItemAggregator;
+class UDialogDataAsset;
 
 UCLASS(Blueprintable)
 class AShieldGeneratorItem : public AThrowableItem, public IUpgradableGear, public IRejoinListener {

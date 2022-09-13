@@ -2,15 +2,15 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
-#include "EInputKeys.h"
 #include "ERessuplyPodState.h"
+#include "EInputKeys.h"
 #include "UObject/NoExportTypes.h"
 #include "PipelineFinish.generated.h"
 
-class APipelineExtractorPod;
-class UTrackBuilderConnectPoint;
-class APlayerCharacter;
 class USingleUsableComponent;
+class APlayerCharacter;
+class UTrackBuilderConnectPoint;
+class APipelineExtractorPod;
 class ARessuplyPod;
 class ATrackBuilderSegment;
 class APipelineSegment;

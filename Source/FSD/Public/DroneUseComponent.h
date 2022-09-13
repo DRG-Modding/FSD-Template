@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "EInputKeys.h"
+#include "Components/ActorComponent.h"
 #include "DroneFinishedUsingDelegate.h"
 #include "DelegateEventDelegate.h"
 #include "DroneUseProgressDelegate.h"
 #include "DroneUseComponent.generated.h"
 
-class UDialogDataAsset;
 class APlayerCharacter;
+class UDialogDataAsset;
 class USingleUsableComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

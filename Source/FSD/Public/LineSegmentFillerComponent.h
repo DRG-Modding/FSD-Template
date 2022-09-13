@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GenerationComponent.h"
-#include "LineSegmentFillerPoint.h"
 #include "RandRange.h"
+#include "LineSegmentFillerPoint.h"
 #include "LineSegmentFillerComponent.generated.h"
 
 class UFloodFillSettings;

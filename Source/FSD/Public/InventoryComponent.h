@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ItemDelegateDelegate.h"
-#include "InventoryBase.h"
 #include "CarriableChangedDelegateDelegate.h"
+#include "InventoryBase.h"
 #include "InventoryItemsLoadedDelegate.h"
+#include "ItemDelegateDelegate.h"
 #include "FlaresDelegateDelegate.h"
 #include "GrenadesDelegateDelegate.h"
 #include "FlareProductionDelegateDelegate.h"
@@ -14,19 +14,19 @@
 #include "EItemCategory.h"
 #include "InventoryComponent.generated.h"
 
-class AFlare;
 class UInventoryList;
-class APickaxeItem;
 class AThrownGrenadeItem;
+class UItemUpgrade;
+class AFlare;
 class AItem;
 class USoundCue;
 class UDialogDataAsset;
-class UItemUpgrade;
+class APickaxeItem;
 class ALaserPointerItem;
 class ATerrainScannerItem;
 class ARessuplyPodItem;
-class ARecallableSentryGunItem;
 class AActor;
+class ARecallableSentryGunItem;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UInventoryComponent : public UInventoryBase {

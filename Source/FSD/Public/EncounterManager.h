@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EncounterManagerItem.h"
 #include "Components/ActorComponent.h"
+#include "EncounterManagerItem.h"
 #include "EncounterManager.generated.h"
 
-class UEnemySpawnManager;
 class AProceduralSetup;
 class UCritterDescriptor;
+class UEnemySpawnManager;
 class UEnemyDescriptor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

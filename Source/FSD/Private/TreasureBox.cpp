@@ -1,14 +1,14 @@
 #include "TreasureBox.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/SkeletalMeshComponent.h"
-#include "RepairableComponent.h"
 #include "RepairableUsable.h"
+#include "RepairableComponent.h"
 #include "SingleUsableComponent.h"
 #include "TerrainPlacementComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 
-class UCurveFloat;
 class AProceduralSetup;
+class UCurveFloat;
 class UDebrisPositioning;
 class APlayerCharacter;
 

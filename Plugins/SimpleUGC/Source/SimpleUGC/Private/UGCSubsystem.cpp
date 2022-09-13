@@ -1,7 +1,7 @@
 #include "UGCSubsystem.h"
 
-class UObject;
 class UUGCPackage;
+class UObject;
 
 void UUGCSubsystem::SetPackagesAsRecentlyInstalled(TArray<UUGCPackage*> RecentMods) {
 }

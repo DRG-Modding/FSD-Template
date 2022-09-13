@@ -2,9 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
-#include "LoadoutChangedDelegateDelegate.h"
-#include "PlayerProgress.h"
 #include "CharacterProgress.h"
+#include "LoadoutChangedDelegateDelegate.h"
 #include "ItemUpgradesChangedDelegateDelegate.h"
 #include "PlayerProgressChangedSignatureDelegate.h"
 #include "CharacterProgressChangedSignatureDelegate.h"
@@ -12,12 +11,13 @@
 #include "ItemLoadout.h"
 #include "ActiveCampaingMission.h"
 #include "ItemUpgradeSelection.h"
+#include "PlayerProgress.h"
 #include "SaveGameStateComponent.generated.h"
 
-class AActor;
-class UItemUpgrade;
-class UPlayerCharacterID;
 class UVictoryPose;
+class UItemUpgrade;
+class AActor;
+class UPlayerCharacterID;
 class UGeneratedMission;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

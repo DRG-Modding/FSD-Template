@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EventParticipant.h"
 #include "FSDPawn.h"
+#include "EventParticipant.h"
 #include "UObject/NoExportTypes.h"
 #include "TowerEventModule.generated.h"
 
-class USceneComponent;
 class UParticleSystemComponent;
+class UStaticMesh;
 class UEnemyHealthComponent;
-class USkeletalMeshComponent;
+class USceneComponent;
 class UWeakpointGlowComponent;
-class UArmorHealthDamageComponent;
 class USkeletalMesh;
+class USkeletalMeshComponent;
+class UArmorHealthDamageComponent;
 class USoundCue;
 class UParticleSystem;
 class ATowerEventModule;
-class UStaticMesh;
 class UStaticMeshComponent;
 
 UCLASS(Blueprintable)

@@ -4,9 +4,9 @@
 #include "UObject/NoExportTypes.h"
 #include "AIFunctionLibrary.generated.h"
 
+class APawn;
 class APlayerCharacter;
 class UObject;
-class APawn;
 class AActor;
 class UAttackerPositioningComponent;
 

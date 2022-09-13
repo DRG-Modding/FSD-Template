@@ -4,10 +4,10 @@
 #include "TattooArmorItem.h"
 #include "ArmorVanityItem.generated.h"
 
-class UAnimInstance;
 class USkeletalMesh;
-class UArmorMaterialVanityItem;
+class UAnimInstance;
 class UMaterialInterface;
+class UArmorMaterialVanityItem;
 class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew)

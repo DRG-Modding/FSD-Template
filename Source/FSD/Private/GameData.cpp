@@ -1,15 +1,15 @@
 #include "GameData.h"
 #include "Templates/SubclassOf.h"
 
-class UInventoryList;
 class UAsyncManager;
-class UObject;
-class UDifficultySetting;
-class UPlayerCharacterID;
 class APlayerCharacter;
+class UObject;
+class UPlayerCharacterID;
+class UMissionStat;
+class UDifficultySetting;
+class UInventoryList;
 class UPerkAsset;
 class UHUDVisibilityGroup;
-class UMissionStat;
 
 void UGameData::UnloadPreloadedAssets() {
 }

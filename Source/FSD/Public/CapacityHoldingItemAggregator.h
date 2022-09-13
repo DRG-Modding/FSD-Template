@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "RejoinListener.h"
 #include "CapacityBasedItemAggregator.h"
 #include "Upgradable.h"
-#include "RejoinListener.h"
 #include "CapacityHoldingItemAggregator.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

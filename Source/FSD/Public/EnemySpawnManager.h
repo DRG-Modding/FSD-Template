@@ -4,19 +4,19 @@
 #include "Components/ActorComponent.h"
 #include "EnemyDestroyedSignatureDelegate.h"
 #include "EnemySpawnedSignatureDelegate.h"
+#include "SpawnQueueItem.h"
 #include "SpawnRarityModifierItem.h"
 #include "GameplayTagContainer.h"
-#include "SpawnQueueItem.h"
 #include "UObject/NoExportTypes.h"
 #include "EnemySpawnedDelegateDelegate.h"
 #include "EnemySpawnManager.generated.h"
 
-class USpawnEffectsComponent;
-class UStatusEffect;
-class APawn;
 class UEnemyDescriptor;
-class AProceduralSetup;
 class AActor;
+class USpawnEffectsComponent;
+class APawn;
+class UStatusEffect;
+class AProceduralSetup;
 class UHealthComponentBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

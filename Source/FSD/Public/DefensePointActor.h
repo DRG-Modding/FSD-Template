@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
-#include "EInputKeys.h"
 #include "EDefendPointState.h"
+#include "EInputKeys.h"
 #include "DefensePointActor.generated.h"
 
+class USingleUsableComponent;
 class AGameEvent;
 class APlayerCharacter;
-class USingleUsableComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ADefensePointActor : public AActor {

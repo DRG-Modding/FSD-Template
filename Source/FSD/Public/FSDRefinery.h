@@ -13,9 +13,9 @@ class APipelineSegment;
 class APipelineStart;
 class APipelineExtractorPod;
 class USingleUsableComponent;
+class APlayerCharacter;
 class UDialogDataAsset;
 class ATrackBuilderItem;
-class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class FSD_API AFSDRefinery : public ADropPod {

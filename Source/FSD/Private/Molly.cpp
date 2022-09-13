@@ -3,8 +3,8 @@
 #include "ResourceBank.h"
 #include "OutlineComponent.h"
 
-class APlayerCharacter;
 class UDialogDataAsset;
+class APlayerCharacter;
 
 void AMolly::SetOpenForDeposit(bool Open) {
 }

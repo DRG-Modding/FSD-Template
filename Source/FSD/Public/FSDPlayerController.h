@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "FSDPlayerControllerBase.h"
+#include "ESpacerigStartType.h"
 #include "OnPlayerCharacterPossesedDelegate.h"
 #include "ChatOpenedDelegateDelegate.h"
-#include "ESpacerigStartType.h"
 #include "EChatSenderType.h"
 #include "PendingRewardsStats.h"
 #include "PendingRewards.h"
@@ -12,22 +12,22 @@
 
 class UTexture2D;
 class UTutorialContentWidget;
-class UPerkUsageComponent;
 class UTerrainLatejoinComponent;
+class UTreasureRewarder;
+class AFSDPlayerState;
+class UPerkUsageComponent;
 class USoundMix;
+class UItemID;
 class UFSDWidgetEffectsComponent;
 class AActor;
 class UFSDAchievement;
+class UPlayerCharacterID;
 class UTemporaryBuff;
 class APlayerCharacter;
-class AFSDPlayerState;
-class UPlayerCharacterID;
 class USoundCue;
-class UTreasureRewarder;
 class UVanityItem;
 class UVictoryPose;
 class UItemSkin;
-class UItemID;
 class UPickaxePart;
 
 UCLASS(Blueprintable)

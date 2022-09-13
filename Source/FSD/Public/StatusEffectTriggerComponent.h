@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Components/ActorComponent.h"
 #include "EffectTriggeredDelegateDelegate.h"
+#include "Components/ActorComponent.h"
 #include "Engine/EngineTypes.h"
 #include "StatusEffectTriggerComponent.generated.h"
 
-class AActor;
 class UStatusEffect;
 class UPrimitiveComponent;
+class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UStatusEffectTriggerComponent : public UActorComponent {

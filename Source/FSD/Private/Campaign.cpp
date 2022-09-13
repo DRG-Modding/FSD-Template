@@ -2,12 +2,12 @@
 #include "Templates/SubclassOf.h"
 
 class UObject;
-class UCampaignMission;
-class UCampaign;
-class UTexture2D;
 class APlayerController;
 class AFSDPlayerController;
+class UCampaign;
+class UCampaignMission;
 class UDifficultySetting;
+class UTexture2D;
 
 bool UCampaign::IsComplete() const {
     return false;
@@ -54,7 +54,6 @@ UCampaign::UCampaign() {
     this->Progress = 0;
     this->CanAbort = true;
     this->CanSkip = false;
-    this->Icon = NULL;
     this->campaigntype = ECampaignType::Normal;
     this->CampaignCompletedMissionStat = NULL;
     this->CampaignActivity = NULL;

@@ -4,8 +4,8 @@
 #include "RandRange.h"
 #include "SpawnSettings.generated.h"
 
-class USoundCue;
 class UNiagaraSystem;
+class USoundCue;
 
 UCLASS(Blueprintable)
 class USpawnSettings : public UDataAsset {

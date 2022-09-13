@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "DLCBase.h"
 #include "UObject/NoExportTypes.h"
 #include "SaveGameIDInterface.h"
-#include "DLCBase.h"
 #include "GameDLC.generated.h"
 
+class UObject;
 class UTexture2D;
 class UWindowWidget;
 class UResourceData;
 class UFileMediaSource;
-class UObject;
 
 UCLASS(Blueprintable)
 class UGameDLC : public UDLCBase, public ISaveGameIDInterface {

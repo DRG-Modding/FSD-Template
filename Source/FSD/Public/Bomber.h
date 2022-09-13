@@ -2,16 +2,16 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "AFlyingBug.h"
-#include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "Bomber.generated.h"
 
-class UAudioComponent;
 class UParticleSystemComponent;
-class AActor;
+class UAudioComponent;
 class AProjectile;
 class UParticleSystem;
 class USoundBase;
+class AActor;
 class UPrimitiveComponent;
 
 UCLASS(Blueprintable)

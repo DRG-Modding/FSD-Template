@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "DelegateEventDelegate.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "AnchorTurner.generated.h"
 
-class USkeletalMeshComponent;
 class USceneComponent;
+class USkeletalMeshComponent;
 class USphereComponent;
 class UPrimitiveComponent;
 

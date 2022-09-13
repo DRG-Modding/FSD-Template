@@ -7,11 +7,11 @@
 #include "DamageData.h"
 #include "GooGunPuddle.generated.h"
 
-class UStatusEffect;
+class USoundBase;
 class USphereComponent;
 class USimpleHealthComponent;
+class UStatusEffect;
 class UPrimitiveComponent;
-class USoundBase;
 
 UCLASS(Blueprintable)
 class AGooGunPuddle : public AActor {

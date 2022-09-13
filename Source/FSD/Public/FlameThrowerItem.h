@@ -9,16 +9,16 @@
 #include "FlameThrowerItem.generated.h"
 
 class UMotionAudioController;
-class UStatusEffect;
-class UStickyFlameSpawner;
-class AActor;
-class UParticleSystemComponent;
 class UDamageComponent;
-class UFSDPhysicalMaterial;
+class UParticleSystemComponent;
+class UStickyFlameSpawner;
+class UStatusEffect;
 class UParticleSystem;
 class UItemUpgrade;
 class USoundCue;
 class UProjectileLauncherBaseComponent;
+class AActor;
+class UFSDPhysicalMaterial;
 class UHealthComponentBase;
 class UPrimitiveComponent;
 

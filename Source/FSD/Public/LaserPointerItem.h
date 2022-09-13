@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "AnimatedItem.h"
 #include "Engine/EngineTypes.h"
+#include "AnimatedItem.h"
 #include "MarkerPlacedDelegateDelegate.h"
 #include "LaserPointerData.h"
 #include "UObject/NoExportTypes.h"
@@ -11,17 +11,17 @@
 #include "UObject/NoExportTypes.h"
 #include "LaserPointerItem.generated.h"
 
-class ALaserPointerMarker;
-class UObjectInfoComponent;
 class UDialogDataAsset;
+class ALaserPointerMarker;
 class ALaserPointerWaypoint;
-class UTexture2D;
 class USceneComponent;
+class UObjectInfoComponent;
 class UTerrainMaterial;
 class AFSDGameState;
 class UObject;
 class AActor;
 class UPrimitiveComponent;
+class UTexture2D;
 
 UCLASS(Abstract, Blueprintable)
 class ALaserPointerItem : public AAnimatedItem {

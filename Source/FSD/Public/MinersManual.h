@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MissionTypeDescription.h"
 #include "Engine/DataAsset.h"
-#include "DamageTypeDescription.h"
+#include "MissionTypeDescription.h"
 #include "BiomeFeatures.h"
+#include "DamageTypeDescription.h"
 #include "MissionStepDescription.h"
 #include "UObject/NoExportTypes.h"
 #include "EDamageType.h"
 #include "MinersManual.generated.h"
 
-class UEnemyMinersManualData;
 class ULoreScreenMasterWidget;
 class UBiome;
+class UEnemyMinersManualData;
 class UMissionTemplate;
 class UObject;
 class UMinersManualData;

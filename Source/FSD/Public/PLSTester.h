@@ -3,11 +3,11 @@
 #include "GameFramework/Actor.h"
 #include "PLSTester.generated.h"
 
+class UBiome;
+class UMissionComplexity;
 class UMissionWarning;
 class UMissionDuration;
-class UMissionComplexity;
 class UMissionMutator;
-class UBiome;
 class UMissionTemplate;
 class UDifficultySetting;
 

@@ -5,12 +5,12 @@
 #include "QueuedMontage.h"
 #include "EnemyPawn.generated.h"
 
-class UMeshComponent;
-class UMaterialInterface;
-class UEnemyComponent;
-class UEnemyPawnAfflictionComponent;
-class UEnemyHealthComponent;
 class UPawnStatsComponent;
+class UEnemyHealthComponent;
+class UMaterialInterface;
+class UEnemyPawnAfflictionComponent;
+class UEnemyComponent;
+class UMeshComponent;
 class USkeletalMeshComponent;
 class UAnimMontage;
 class UAnimInstance;

@@ -1,13 +1,13 @@
 #include "CoilGun.h"
-#include "NiagaraComponent.h"
 #include "DamageComponent.h"
+#include "NiagaraComponent.h"
 #include "CoilgunTrailSpawner.h"
 
-class UHealthComponentBase;
-class ACoilgunWeaponTrail;
-class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
+class UHealthComponentBase;
+class UPrimitiveComponent;
 class AActor;
+class ACoilgunWeaponTrail;
 
 void ACoilGun::UpdateAfflictions() {
 }

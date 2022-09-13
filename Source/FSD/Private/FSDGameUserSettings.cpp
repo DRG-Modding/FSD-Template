@@ -1,8 +1,8 @@
 #include "FSDGameUserSettings.h"
 
-class UObject;
 class USoundClass;
 class APlayerController;
+class UObject;
 class UDifficultySetting;
 class UFSDGameUserSettings;
 
@@ -236,6 +236,12 @@ void UFSDGameUserSettings::SetAMDFSRSharpness(float Sharpness) {
 }
 
 void UFSDGameUserSettings::SetAMDFSRMode(int32 Mode) {
+}
+
+void UFSDGameUserSettings::SetAMDFSR2Sharpness(float Sharpness) {
+}
+
+void UFSDGameUserSettings::SetAMDFSR2Mode(int32 Mode) {
 }
 
 void UFSDGameUserSettings::SetAimSensitivity(float NewValue) {
@@ -571,6 +577,14 @@ int32 UFSDGameUserSettings::GetAMDFSRMode() const {
     return 0;
 }
 
+float UFSDGameUserSettings::GetAMDFSR2Sharpness() const {
+    return 0.0f;
+}
+
+int32 UFSDGameUserSettings::GetAMDFSR2Mode() const {
+    return 0;
+}
+
 float UFSDGameUserSettings::GetAimSensitivity() const {
     return 0.0f;
 }
@@ -623,13 +637,13 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->bJukeboxStreamerMode = true;
     this->bGraphicSettingsChanged = false;
     this->ServerSearchRegion = 3;
-    this->ServerSearchPasswordRequired = true;
+    this->ServerSearchPasswordRequired = false;
     this->volumeCharacterVoice = 101.01f;
     this->volumeMissionControl = 100.37f;
-    this->volumeMaster = 57.92f;
+    this->volumeMaster = 69.91f;
     this->volumeSFX = 97.90f;
-    this->volumeMusic = 0.58f;
-    this->CurrentAudioOutputDeviceId = TEXT("{0.0.0.00000000}.{2a5cebd2-74c5-49ee-b332-663973012ccd}");
+    this->volumeMusic = 109.69f;
+    this->CurrentAudioOutputDeviceId = TEXT("{0.0.0.00000000}.{e5f88e95-6344-4763-bd61-70b04ceb23f9}");
     this->UseDefaultAudioOutputDevice = true;
     this->Sharpening = 0.00f;
     this->AntiAliasingType = 1;
@@ -637,7 +651,9 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->volumeVoice = 99.74f;
     this->UpscalingType = 1;
     this->AmdFsrMode = 0;
+    this->AmdFsr2Mode = 2;
     this->AmdFsrSharpness = 0.22f;
+    this->AmdFsr2Sharpness = 0.20f;
     this->NvidiaDlssMode = UDLSSMode::Auto;
     this->NvidiaDlssSharpness = 0.50f;
     this->FSDResolutionScale = 1.00f;
@@ -690,6 +706,7 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->EscMenuActive = false;
     this->bShowUpgradeExtraDetails = false;
     this->LastNiagaraShaderVerions = 63118;
+    this->HasKeyboardBeenConnected = false;
     this->CurrentInputSource = EFSDInputSource::MouseAndKeyboard;
     this->RequestedInputSource = EFSDInputSource::None;
     this->SwapControllerThumbsticks = false;
@@ -700,7 +717,7 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->bCanShowBlood = true;
     this->PreventLatejoinCharacterDuplication = false;
     this->TranslatorDebugModeEnabled = false;
-    this->SelectedDifficultyLevels.AddDefaulted(5);
-    this->DifficultyLevelsAddedByDefault.AddDefaulted(5);
+    this->SelectedDifficultyLevels.AddDefaulted(10);
+    this->DifficultyLevelsAddedByDefault.AddDefaulted(10);
 }
 

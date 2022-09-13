@@ -1,7 +1,7 @@
 #include "SpiderEnemy.h"
 #include "Net/UnrealNetwork.h"
-#include "HitReactionComponent.h"
 #include "PawnStatsComponent.h"
+#include "HitReactionComponent.h"
 
 class AActor;
 class UStaticMeshComponent;

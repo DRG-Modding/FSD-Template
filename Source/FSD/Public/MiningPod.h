@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
-#include "GameplayTagAssetInterface.h"
 #include "MiningPodDialogs.h"
+#include "GameplayTagAssetInterface.h"
 #include "GameplayTagContainer.h"
 #include "GameplayTagContainer.h"
 #include "UObject/NoExportTypes.h"
@@ -13,10 +13,10 @@
 #include "UObject/NoExportTypes.h"
 #include "MiningPod.generated.h"
 
-class UCurveFloat;
-class UAutoCarverComponent;
 class UBoxComponent;
+class UAutoCarverComponent;
 class UOutlineComponent;
+class UCurveFloat;
 class UObjectivesManager;
 class AMiningPod;
 class UObject;

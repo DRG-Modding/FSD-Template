@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
 #include "TerrainPlacementBox.h"
-#include "UObject/NoExportTypes.h"
 #include "EDebrisColliderType.h"
 #include "DebrisCapsule.h"
+#include "UObject/NoExportTypes.h"
 #include "TerrainPlacementComponent.generated.h"
 
 class AProceduralSetup;

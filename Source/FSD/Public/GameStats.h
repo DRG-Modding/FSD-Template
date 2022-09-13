@@ -3,8 +3,8 @@
 #include "GameFramework/Info.h"
 #include "GameStats.generated.h"
 
-class USeamlessTravelEventKey;
 class UCappedResource;
+class USeamlessTravelEventKey;
 
 UCLASS(Blueprintable)
 class AGameStats : public AInfo {

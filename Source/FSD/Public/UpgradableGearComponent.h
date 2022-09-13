@@ -9,15 +9,15 @@
 #include "CraftingCost.h"
 #include "UpgradableGearComponent.generated.h"
 
+class UTexture2D;
+class AActor;
+class UItemUpgrade;
 class UItemData;
 class UOverclockBank;
-class UTexture2D;
-class UItemUpgrade;
-class AActor;
 class UResourceData;
 class UItemID;
-class APlayerCharacter;
 class AFSDPlayerController;
+class APlayerCharacter;
 class UObject;
 class AFSDPlayerState;
 class UPlayerCharacterID;

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
 #include "DiscordSDKJoinRequestDelegate.h"
+#include "UObject/Object.h"
 #include "DiscordSDKInterface.generated.h"
 
 class UDiscordSDKInterface;

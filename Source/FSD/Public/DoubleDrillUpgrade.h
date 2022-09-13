@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UpgradeValues.h"
 #include "StandardItemUpgrade.h"
 #include "EDoubleDrillUpgradeType.h"
-#include "UpgradeValues.h"
 #include "DoubleDrillUpgrade.generated.h"
 
 class AItem;

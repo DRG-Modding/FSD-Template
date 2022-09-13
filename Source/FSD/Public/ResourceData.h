@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
 #include "SaveGameIDInterface.h"
+#include "UObject/NoExportTypes.h"
 #include "ResourceData.generated.h"
 
-class UTexture2D;
-class UMissionStat;
 class UObject;
+class UMissionStat;
+class UTexture2D;
 class AResourceChunk;
 
 UCLASS(Blueprintable)
@@ -72,6 +72,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 XPValue;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float SeasonXPMultiplier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid SavegameID;

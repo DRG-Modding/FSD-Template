@@ -4,13 +4,13 @@
 #include "EnemyAttackDescription.h"
 #include "EEnemyType.h"
 #include "EEnemyFamily.h"
-#include "EnemyMinersManualStats.h"
 #include "EArmorType.h"
+#include "EnemyMinersManualStats.h"
 #include "EDamageType.h"
 #include "EnemyMinersManualData.generated.h"
 
-class UEnemyID;
 class UAnimSequenceBase;
+class UEnemyID;
 class UTexture2D;
 class AEnemyShowroomItem;
 

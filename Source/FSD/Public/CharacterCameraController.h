@@ -3,8 +3,8 @@
 #include "Components/ActorComponent.h"
 #include "CharacterCameraController.generated.h"
 
-class UCameraComponent;
 class APlayerCharacter;
+class UCameraComponent;
 
 UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCharacterCameraController : public UActorComponent {

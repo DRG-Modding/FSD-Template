@@ -1,10 +1,10 @@
 #include "Caretaker.h"
 #include "Net/UnrealNetwork.h"
 #include "Components/SceneComponent.h"
-#include "EnemyHealthComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "HealthDamageTracker.h"
 #include "PawnStatsComponent.h"
+#include "EnemyHealthComponent.h"
 
 class UCaretakerActionComponent;
 

@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "BossFight.generated.h"
 
-class UEnemyHealthComponent;
 class AActor;
 class UEnemyComponent;
+class UEnemyHealthComponent;
 
 USTRUCT(BlueprintType)
 struct FBossFight {

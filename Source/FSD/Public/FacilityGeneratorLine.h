@@ -5,11 +5,11 @@
 #include "UObject/NoExportTypes.h"
 #include "FacilityGeneratorLine.generated.h"
 
-class UStaticMesh;
+class ATetherStation;
 class USplineComponent;
 class USplineDecoratorComponent;
+class UStaticMesh;
 class UMaterialInterface;
-class ATetherStation;
 
 UCLASS(Blueprintable)
 class FSD_API AFacilityGeneratorLine : public AActor {

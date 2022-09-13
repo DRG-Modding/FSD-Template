@@ -4,11 +4,11 @@
 #include "MissionWarning.generated.h"
 
 class URunningMissionBP;
-class UMutator;
 class UObjective;
 class UMissionMutator;
-class UTexture2D;
+class UMutator;
 class UMissionStat;
+class UTexture2D;
 
 UCLASS(Blueprintable)
 class UMissionWarning : public UDataAsset {

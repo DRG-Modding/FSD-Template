@@ -5,8 +5,8 @@
 
 class UPrimitiveComponent;
 class USoundCue;
-class UFSDPhysicalMaterial;
 class UParticleSystem;
+class UFSDPhysicalMaterial;
 
 
 void APickaxeItem::SetSpecialCoolDownDuration(float newCooldownDuration) {

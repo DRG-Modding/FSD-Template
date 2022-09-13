@@ -5,11 +5,11 @@
 #include "IRandRange.h"
 #include "GemResourceData.generated.h"
 
-class AFSDGameState;
 class UDebrisPositioning;
-class UDebrisBase;
+class AFSDGameState;
 class UGemResourceCreator;
 class AGem;
+class UDebrisBase;
 
 UCLASS(Blueprintable)
 class UGemResourceData : public UResourceData {

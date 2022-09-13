@@ -7,8 +7,8 @@
 
 class UItemData;
 class AActor;
-class AItem;
 class UPlayerCharacterID;
+class AItem;
 
 UCLASS(Blueprintable)
 class FSD_API UItemID : public USavableDataAsset {

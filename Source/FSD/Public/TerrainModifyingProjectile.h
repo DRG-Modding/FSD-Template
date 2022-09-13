@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Projectile.h"
-#include "RevertToNormalDelegate.h"
 #include "UObject/NoExportTypes.h"
+#include "RevertToNormalDelegate.h"
 #include "TerrainModifyingProjectile.generated.h"
 
 class UTerrainMaterial;

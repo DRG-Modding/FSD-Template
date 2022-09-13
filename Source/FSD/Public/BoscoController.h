@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "GameplayTagContainer.h"
+#include "FollowTargetChangedDelegate.h"
 #include "FSDAIController.h"
 #include "LaserPointerTarget.h"
-#include "FollowTargetChangedDelegate.h"
-#include "GameplayTagContainer.h"
 #include "UObject/NoExportTypes.h"
 #include "EInputKeys.h"
 #include "BoscoController.generated.h"
@@ -11,11 +11,11 @@
 class APlayerCharacter;
 class UBehaviorTree;
 class UTerrainMaterial;
-class AFSDPlayerState;
 class UDroneUseComponent;
 class ACarriableItem;
 class AActor;
 class UHealthComponentBase;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable)
 class ABoscoController : public AFSDAIController {

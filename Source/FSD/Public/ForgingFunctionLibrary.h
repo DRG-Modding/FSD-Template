@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESchematicType.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "ForgingPendingReward.h"
+#include "ESchematicType.h"
 #include "ForgingResult.h"
 #include "ForgingFunctionLibrary.generated.h"
 

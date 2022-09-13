@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "EVanitySlot.h"
 #include "UObject/NoExportTypes.h"
+#include "EVanitySlot.h"
 #include "CharacterVanityItems.generated.h"
 
-class UHeadVanityItem;
-class UBeardVanityItem;
 class UVanitySchematicBank;
 class UEyeBrowsVanityItem;
+class UHeadVanityItem;
+class UBeardVanityItem;
 class UArmorVanityItem;
 class UArmorMaterialVanityItem;
 class UMoustacheVanityItem;

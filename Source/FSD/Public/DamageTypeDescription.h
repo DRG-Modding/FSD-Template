@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SoftIconWithColor.h"
 #include "EDamageType.h"
+#include "SoftIconWithColor.h"
 #include "DamageTypeDescription.generated.h"
 
 USTRUCT(BlueprintType)

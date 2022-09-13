@@ -4,9 +4,9 @@
 #include "UObject/NoExportTypes.h"
 #include "ResourceChunk.generated.h"
 
-class USimpleObjectInfoComponent;
-class USoundCue;
 class UResourceData;
+class USoundCue;
+class USimpleObjectInfoComponent;
 class APlayerCharacter;
 
 UCLASS(Blueprintable)

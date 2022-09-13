@@ -8,16 +8,16 @@
 
 class UMotionAudioController;
 class UProjectileLauncherComponent;
-class UDamageComponent;
 class UParticleSystemComponent;
+class UDamageComponent;
 class UStickyFlameSpawner;
-class UFSDPhysicalMaterial;
 class UParticleSystem;
+class AProjectileBase;
 class UFSDAudioComponent;
 class UItemUpgrade;
 class UHealthComponentBase;
 class UPrimitiveComponent;
-class AProjectileBase;
+class UFSDPhysicalMaterial;
 
 UCLASS(Abstract, Blueprintable)
 class ACryosprayItem : public AAmmoDrivenWeapon {

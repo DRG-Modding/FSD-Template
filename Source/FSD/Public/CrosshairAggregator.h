@@ -8,8 +8,8 @@
 
 class APlayerController;
 class UCustomAmmoCountWidget;
-class UObject;
 class UUserWidget;
+class UObject;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCrosshairAggregator : public UItemAggregator, public IUpgradable {

@@ -7,8 +7,8 @@
 #include "UObject/NoExportTypes.h"
 #include "RichTextInputWidget.generated.h"
 
-class URichTextBlock;
 class UTextBlock;
+class URichTextBlock;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew, HideDropdown)
 class URichTextInputWidget : public UUserWidget {

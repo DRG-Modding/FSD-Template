@@ -1,8 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
-#include "PickaxeMeshInstance.h"
 #include "Item.h"
 #include "UpgradableGear.h"
 #include "PickaxePartEquip.h"
@@ -10,22 +8,24 @@
 #include "CoolDownProgressStyle.h"
 #include "GameplayTagContainer.h"
 #include "EPickaxeState.h"
+#include "PickaxeMeshInstance.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/NetSerialization.h"
 #include "Engine/NetSerialization.h"
 #include "PickaxeItem.generated.h"
 
-class UAnimMontage;
-class UMaterialInterface;
-class USceneComponent;
 class UPlayerAnimInstance;
-class UItemCharacterAnimationSet;
-class UDamageComponent;
-class UForceFeedbackEffect;
-class UStatusEffect;
 class USoundCue;
 class UPrimitiveComponent;
-class UParticleSystem;
+class UAnimMontage;
+class UStatusEffect;
+class USceneComponent;
+class UDamageComponent;
+class UItemCharacterAnimationSet;
+class UForceFeedbackEffect;
+class UMaterialInterface;
 class UFSDPhysicalMaterial;
+class UParticleSystem;
 
 UCLASS(Abstract, Blueprintable)
 class APickaxeItem : public AItem, public IUpgradableGear, public IPickaxePartEquip {

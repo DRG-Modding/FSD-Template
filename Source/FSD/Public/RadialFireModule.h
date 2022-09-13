@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "HostileGuntowerModule.h"
 #include "UObject/NoExportTypes.h"
+#include "HostileGuntowerModule.h"
 #include "RadialFireModule.generated.h"
 
 class AProjectile;

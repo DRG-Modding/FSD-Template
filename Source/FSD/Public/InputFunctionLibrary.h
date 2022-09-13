@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "InputCoreTypes.h"
 #include "Input/Events.h"
 #include "Input/Events.h"
 #include "EKeyBindingAxis.h"
+#include "InputCoreTypes.h"
 #include "GameFramework/PlayerInput.h"
 #include "GameFramework/PlayerInput.h"
 #include "EFSDInputSource.h"

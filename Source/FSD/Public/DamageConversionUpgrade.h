@@ -5,8 +5,8 @@
 #include "UpgradeValues.h"
 #include "DamageConversionUpgrade.generated.h"
 
-class UDamageClass;
 class AActor;
+class UDamageClass;
 class UDamageCondition;
 class AFSDPlayerState;
 

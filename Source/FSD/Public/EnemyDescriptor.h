@@ -5,18 +5,18 @@
 #include "EVeteranScaling.h"
 #include "EEnemySignificance.h"
 #include "UObject/NoExportTypes.h"
+#include "GameplayTagContainer.h"
 #include "ECreatureSize.h"
 #include "EnemyDebris.h"
 #include "DeepPathFinderType.h"
-#include "GameplayTagContainer.h"
 #include "SpawnRarityItem.h"
 #include "EEnemyDescriptorCheatClass.h"
 #include "EnemyDescriptor.generated.h"
 
 class UEnemyDescriptor;
 class UMissionTemplate;
-class UEnemyID;
 class APawn;
+class UEnemyID;
 class UBiome;
 class UDebrisPositioning;
 class UCaveInfluencer;

@@ -9,10 +9,10 @@
 #include "UObject/NoExportTypes.h"
 #include "RessuplyPod.generated.h"
 
-class UObject;
-class ARessuplyPod;
 class UDamageComponent;
+class ARessuplyPod;
 class UDialogDataAsset;
+class UObject;
 class UCurveFloat;
 
 UCLASS(Blueprintable)

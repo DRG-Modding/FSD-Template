@@ -4,8 +4,8 @@
 #include "CraftingCost.h"
 #include "Craftable.generated.h"
 
-class AFSDPlayerState;
 class UObject;
+class AFSDPlayerState;
 class UPlayerCharacterID;
 
 UINTERFACE(BlueprintType, meta=(CannotImplementInterfaceInBlueprint))

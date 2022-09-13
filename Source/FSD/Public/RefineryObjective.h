@@ -7,9 +7,9 @@
 #include "UObject/NoExportTypes.h"
 #include "RefineryObjective.generated.h"
 
-class AFSDRefinery;
 class AActor;
 class UDebrisPositioning;
+class AFSDRefinery;
 class AProceduralSetup;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ESingleUsableUpgradeType.h"
-#include "StandardItemUpgrade.h"
 #include "UpgradeValues.h"
+#include "StandardItemUpgrade.h"
+#include "ESingleUsableUpgradeType.h"
 #include "SingleUsableUpgrade.generated.h"
 
 class AActor;

@@ -4,8 +4,8 @@
 #include "Perception/AIPerceptionTypes.h"
 #include "HostileGuntowerModuleController.generated.h"
 
-class AActor;
 class UAIPerceptionComponent;
+class AActor;
 
 UCLASS(Blueprintable)
 class AHostileGuntowerModuleController : public AFSDAIController {

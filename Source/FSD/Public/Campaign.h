@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/Object.h"
 #include "ECampaignType.h"
-#include "UObject/NoExportTypes.h"
 #include "ECampaignMutators.h"
 #include "Campaign.generated.h"
 
 class UCampaignMission;
+class UGameActivityAssignmentType;
 class UCampaignRequirement;
-class UDifficultySetting;
 class UPlayerCharacterID;
 class UTexture2D;
 class UMissionStat;
-class UGameActivityAssignmentType;
+class UDifficultySetting;
 class UCampaign;
 class AFSDPlayerController;
 class APlayerController;
@@ -66,9 +66,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText RewardFlavorText;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UTexture2D* Icon;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UTexture2D> Picture;

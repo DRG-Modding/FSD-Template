@@ -3,8 +3,8 @@
 #include "TrackBuilderUsable.h"
 
 class APipelineFinish;
-class APipelineSegment;
 class ATrackBuilderSegment;
+class APipelineSegment;
 
 
 void APipelineStart::PipelineCompleted(APipelineFinish* InPipelineFinish) {

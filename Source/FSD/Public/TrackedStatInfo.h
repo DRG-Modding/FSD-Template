@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "TrackedStatInfo.generated.h"
 
-class UMissionStat;
 class UTexture2D;
+class UMissionStat;
 class UDataAsset;
 
 USTRUCT(BlueprintType)

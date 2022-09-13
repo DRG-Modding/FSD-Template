@@ -5,8 +5,8 @@
 #include "StateStats.h"
 #include "GroundToAirComponent.generated.h"
 
-class ADeepPathfinderCharacter;
 class UDeepPathfinderMovement;
+class ADeepPathfinderCharacter;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UGroundToAirComponent : public UActorComponent {

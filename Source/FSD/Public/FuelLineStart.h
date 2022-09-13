@@ -3,11 +3,11 @@
 #include "GameFramework/Actor.h"
 #include "FuelLineStart.generated.h"
 
+class USimpleObjectInfoComponent;
 class AFuelLineStart;
-class UStaticMeshComponent;
 class UTrackBuilderUsable;
 class UOutlineComponent;
-class USimpleObjectInfoComponent;
+class UStaticMeshComponent;
 class UFuelLineStartUsable;
 class ATrackBuilderSegment;
 

@@ -3,11 +3,11 @@
 
 class UPlayerCharacterID;
 class UEnemyDescriptor;
-class AActor;
 class UBaseCritterDescriptor;
 class APawn;
-class APlayerCharacter;
 class AFSDAIController;
+class AActor;
+class APlayerCharacter;
 class UObject;
 class UResourceData;
 

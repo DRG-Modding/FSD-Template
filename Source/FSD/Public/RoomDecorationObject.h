@@ -4,8 +4,8 @@
 #include "Engine/DataAsset.h"
 #include "RoomDecorationObject.generated.h"
 
-class AActor;
 class UDebrisPositioning;
+class AActor;
 
 UCLASS(Blueprintable)
 class URoomDecorationObject : public UDataAsset {
