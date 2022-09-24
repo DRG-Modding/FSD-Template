@@ -17,8 +17,13 @@ The most useful bats are:
 Consider Local as stuff that will change from computer to computer (E.G. paths to Unreal Engine), and Global as stuff that won't (E.G. ModName)
 
 
-### Config.ini
+### LocalConfig.ini/GlobalConfig.ini
 Contains various variables the batch files access. Assuming you installed everything in the default location you should only have to change ModName
+
+- Use the local config for settings specific to your machine (Engine path, game install. etc.)
+- Use the global config for settings that wouldn't be specific to your machine (ModName) 
+
+**Any variables defined in LocalConfig.ini will overwrite the GlobalConfig.ini's value.**
 
 | Variable | Description | Default value |
 | --- | --- | --- |
@@ -53,7 +58,14 @@ Deletes all files/folders in PakBlackList.ini from Temp\PackageInput\Content
 ### VerifyVars.bat
 Checks whether the variables in Config.ini are valid. If not, exits to prevent any odd issues and informs the user which variables need fixing. Is called by every other bat before they do much of anything
 
-### ModIOConfig.ini
+### LocalModIOConfig.ini/GlobalMODIOConfig.ini
+
+Much like the other config, the local options overwrite the global ones.
+
+**Keep your token in the local config! If you upload your token to github anyone can update your mode pretending to be you!**
+
+**LocalModIOConfig.ini is included in the gitignore next to this readme
+
 | Variable | Description | Default value |
 | --- | --- | --- |
 | Token | Your mod.io OAuth2 token w/ write perms (generate here https://mod.io/oauth/widget) | none* |

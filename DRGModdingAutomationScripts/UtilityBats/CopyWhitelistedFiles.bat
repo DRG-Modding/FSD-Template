@@ -15,7 +15,7 @@ for /F "tokens=*" %%g in (Configs/PakWhiteList.ini) do (
         robocopy "%ProjectFolder%\Saved\Cooked\WindowsNoEditor\%ProjectName%\Content\%%g" "Temp\PackageInput\Content\%%g" /MIR /ns /nc /nfl /ndl /np /njh /njs
     ) else if exist "%ProjectFolder%\Saved\Cooked\WindowsNoEditor\%ProjectName%\Content\%%g" (
         echo copying file %%g
-        copy "%ProjectFolder%\Saved\Cooked\WindowsNoEditor\%ProjectName%\Content\%%g" "Temp\PackageInput\Content\%%g" /y
+        xcopy "%ProjectFolder%\Saved\Cooked\WindowsNoEditor\%ProjectName%\Content\%%g" "Temp\PackageInput\Content\%%g"
     ) else (
         echo could not find %%g inside %ProjectName%\Content
     )
