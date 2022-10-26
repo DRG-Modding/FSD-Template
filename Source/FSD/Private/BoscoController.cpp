@@ -1,9 +1,9 @@
 #include "BoscoController.h"
 
-class UHealthComponentBase;
-class AFSDPlayerState;
 class APlayerCharacter;
 class AActor;
+class AFSDPlayerState;
+class UHealthComponentBase;
 
 void ABoscoController::ReviveTarget() {
 }
@@ -14,13 +14,13 @@ void ABoscoController::ResetToFollowState() {
 void ABoscoController::RegisterPlayer(APlayerCharacter* APlayerCharacter) {
 }
 
-void ABoscoController::PickupGem() {
+void ABoscoController::PickupItem() {
 }
 
 void ABoscoController::OnUseDone(int32 TimesUsed) {
 }
 
-void ABoscoController::OnSecondaryLaserPointer(AActor* aTarget, const FVector& aLocation) {
+void ABoscoController::OnSecondaryLaserPointer(const FLaserPointerTarget& HitInfo) {
 }
 
 void ABoscoController::OnPlayerShout(APlayerCharacter* APlayerCharacter) {
@@ -41,6 +41,9 @@ void ABoscoController::OnJobFinished() {
 void ABoscoController::OnEscortTargetDied(UHealthComponentBase* Health) {
 }
 
+void ABoscoController::OnCarriedUsed(APlayerCharacter* usedBy, EInputKeys Key) {
+}
+
 FVector ABoscoController::GetPointNearPlayers() const {
     return FVector{};
 }
@@ -50,9 +53,6 @@ AActor* ABoscoController::GetFollowTarget() {
 }
 
 void ABoscoController::GenerateRelativeLocation(AActor* aTarget, float aRange, float aHeightRestriction, float aMinRange, bool aTryToStayOutOfTheWay, bool aStayBehind) {
-}
-
-void ABoscoController::GemUsed(APlayerCharacter* usedBy, EInputKeys Key) {
 }
 
 void ABoscoController::ConfirmPickup() {
@@ -76,6 +76,6 @@ ABoscoController::ABoscoController() {
     this->DistanceCountedAsClose = 2000.00f;
     this->ReviveHealthPercentage = 0.40f;
     this->CurrentUse = NULL;
-    this->TryingToPickGem = NULL;
+    this->TryingToPickItem = NULL;
 }
 

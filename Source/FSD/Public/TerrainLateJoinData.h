@@ -8,6 +8,7 @@
 #include "DrillOperationData.h"
 #include "MeltOperationData.h"
 #include "SplineSegmentCarveOperationData.h"
+#include "TerrainSpawnDebrisOperationData.h"
 #include "CSGBuildOperationData.h"
 #include "TerrainLateJoinData.generated.h"
 
@@ -41,6 +42,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FCSGBuildOperationData> CSGBuilds;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TArray<FTerrainSpawnDebrisOperationData> SpawnDebris;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<int32> DebrisInstanceComponentPairs;

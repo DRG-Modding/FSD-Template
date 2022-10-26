@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Subsystems/GameInstanceSubsystem.h"
-#include "EHolidayType.h"
 #include "FSDEventActivateChangedDelegate.h"
-#include "BackendNotificationEvent.h"
+#include "Subsystems/GameInstanceSubsystem.h"
 #include "UObject/NoExportTypes.h"
+#include "EHolidayType.h"
+#include "BackendNotificationEvent.h"
 #include "FSDEventManager.generated.h"
 
 class UFSDEvent;
@@ -53,6 +53,9 @@ public:
     UFSDEventManager();
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEventActive(const UFSDEvent* FSDEvent) const;
+    
+    UFUNCTION(BlueprintCallable)
+    bool GetSeasonExpiryDate(FDateTime& ExpiryDate);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     EHolidayType GetHolidayType() const;

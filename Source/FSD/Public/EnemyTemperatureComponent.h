@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TemperatureComponent.h"
 #include "DamageData.h"
+#include "TemperatureComponent.h"
 #include "EnemyTemperatureComponent.generated.h"
 
+class UHealthComponent;
 class UEnemyDetonationSetting;
 class UPawnStatsComponent;
 class UDamageTag;
-class UHealthComponent;
 class UStatusEffectsComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -57,7 +57,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnemyDetonationSetting* DetonationSetting;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UPawnStatsComponent* PawnStats;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

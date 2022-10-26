@@ -6,5 +6,6 @@ UENUM(BlueprintType)
 enum class EEmptyBinaryComb : uint8 {
     Unchanged,
     Replace,
+    BiomeRock,
 };
 

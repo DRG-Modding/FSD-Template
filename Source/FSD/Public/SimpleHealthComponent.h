@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "HealthComponentBase.h"
+#include "UObject/NoExportTypes.h"
 #include "SimpleHealthComponent.generated.h"
 
 class UEnemyComponent;
@@ -21,6 +21,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool InvulnerableToNonDefinedResistances;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float EnvironmentalDamageResistance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bShowHealthBar;

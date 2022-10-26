@@ -14,7 +14,7 @@ public:
     FName TrackName;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FVector> Positions;
+    TArray<FVector4> Positions;
     
     UPROPERTY(EditAnywhere, Export)
     TArray<TWeakObjectPtr<UGemTracker>> Trackers;

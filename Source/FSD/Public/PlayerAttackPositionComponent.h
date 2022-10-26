@@ -16,5 +16,8 @@ protected:
     
 public:
     UPlayerAttackPositionComponent();
+    UFUNCTION(BlueprintCallable)
+    void SetGameplayModifier(float modifier);
+    
 };
 

@@ -2,9 +2,6 @@
 
 void UFrozenStateComponent::Server_ThawPlayer_Implementation() {
 }
-bool UFrozenStateComponent::Server_ThawPlayer_Validate() {
-    return true;
-}
 
 
 UFrozenStateComponent::UFrozenStateComponent() {

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UpgradeValues.h"
-#include "StandardItemUpgrade.h"
 #include "EPickaxeUpgradeType.h"
+#include "StandardItemUpgrade.h"
 #include "PickaxeUpgrade.generated.h"
 
 class AItem;

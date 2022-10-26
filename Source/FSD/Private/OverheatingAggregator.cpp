@@ -3,14 +3,8 @@
 
 void UOverheatingAggregator::Server_SetTemperature_Implementation(float NewTemperature) {
 }
-bool UOverheatingAggregator::Server_SetTemperature_Validate(float NewTemperature) {
-    return true;
-}
 
 void UOverheatingAggregator::Server_SetIsOverheated_Implementation(bool NewOverheated) {
-}
-bool UOverheatingAggregator::Server_SetIsOverheated_Validate(bool NewOverheated) {
-    return true;
 }
 
 void UOverheatingAggregator::OnRep_Temperature() {

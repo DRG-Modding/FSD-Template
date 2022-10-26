@@ -3,13 +3,13 @@
 #include "Templates/SubclassOf.h"
 #include "SavableDataAsset.h"
 #include "RandInterval.h"
-#include "IRandRange.h"
 #include "VeteranComposition.h"
+#include "IRandRange.h"
 #include "DifficultySetting.generated.h"
 
 class UObject;
-class UCampaign;
 class UMissionStat;
+class UCampaign;
 
 UCLASS(Blueprintable)
 class FSD_API UDifficultySetting : public USavableDataAsset {
@@ -80,7 +80,7 @@ protected:
     float HazardBonus;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float friendlyFireModifier;
+    float FriendlyFireModifier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRandInterval EnemyWaveInterval;
@@ -144,8 +144,11 @@ protected:
     
 public:
     UDifficultySetting();
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     bool IsUnlocked(UObject* WorldContext) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetDifficultyIndex() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float AddHazardBonus(float BaseValue) const;

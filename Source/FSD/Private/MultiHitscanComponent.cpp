@@ -2,9 +2,6 @@
 
 void UMultiHitscanComponent::Server_RegisterHit_Implementation(const FMultiHitScanHits& hitResults) {
 }
-bool UMultiHitscanComponent::Server_RegisterHit_Validate(const FMultiHitScanHits& hitResults) {
-    return true;
-}
 
 void UMultiHitscanComponent::All_ShowHit_Implementation(const FMultiHitScanHits& hitResults) {
 }

@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ShadowQualityChangedDelegate.h"
-#include "Components/ActorComponent.h"
-#include "FlareMeta.h"
+#include "Subsystems/WorldSubsystem.h"
 #include "UObject/NoExportTypes.h"
+#include "ShadowQualityChangedDelegate.h"
+#include "FlareMeta.h"
 #include "FlareController.generated.h"
 
-class AFlareGunProjectile;
 class AActor;
+class AFlareGunProjectile;
 class AFlare;
 class UObject;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
-class UFlareController : public UActorComponent {
+UCLASS(Blueprintable)
+class UFlareController : public UWorldSubsystem {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -36,7 +36,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void RegisterFlare(AFlare* Flare);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static AActor* FindFlareNear(UObject* WorldContextObject, FVector Pos, bool allowMoving, float maxLightRadiusFraction);
     
 };

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DeveloperSettings.h"
 #include "RawInputDeviceConfiguration.h"
+#include "Engine/DeveloperSettings.h"
 #include "RawInputSettings.generated.h"
 
 UCLASS(Blueprintable, DefaultConfig, Config=Input)

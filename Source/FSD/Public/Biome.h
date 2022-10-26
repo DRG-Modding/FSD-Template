@@ -2,37 +2,37 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Engine/DataAsset.h"
-#include "UObject/NoExportTypes.h"
-#include "HeatSource.h"
-#include "RandRange.h"
-#include "BiomeNoiseItem.h"
-#include "ResourceSpawner.h"
-#include "BiomeEnemyEntry.h"
 #include "Sound/ReverbSettings.h"
 #include "UObject/NoExportTypes.h"
+#include "ResourceSpawner.h"
+#include "HeatSource.h"
+#include "RandRange.h"
+#include "UObject/NoExportTypes.h"
+#include "BiomeNoiseItem.h"
+#include "BiomeEnemyEntry.h"
 #include "Biome.generated.h"
 
-class UMaterialInstance;
-class UFileMediaSource;
-class UUserWidget;
-class UTexture2D;
 class UParticleSystem;
+class UDetailNoise;
+class UUserWidget;
+class USoundCue;
+class UPillarSettings;
+class UFileMediaSource;
+class UTexture2D;
+class UCritterDescriptor;
 class UCaveScriptComponent;
-class UEnemyDescriptor;
 class UDebrisSet;
 class ADebrisDataActor;
 class AActor;
 class UTerrainMaterial;
+class UMaterialInstance;
 class UMissionStat;
 class UFloodFillSettings;
-class UDetailNoise;
-class UPillarSettings;
 class UTunnelSetting;
-class UObject;
-class UCritterDescriptor;
-class USoundCue;
+class UEnemyDescriptor;
 class UReverbEffect;
 class ULevelSequence;
+class UObject;
 
 UCLASS(Blueprintable)
 class FSD_API UBiome : public UDataAsset {
@@ -221,7 +221,7 @@ protected:
     
 public:
     UBiome();
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    UFUNCTION(BlueprintCallable, BlueprintPure=false, meta=(WorldContext="WorldContext"))
     void StartPreload(UObject* WorldContext) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

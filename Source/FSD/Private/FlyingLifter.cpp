@@ -1,9 +1,9 @@
 #include "FlyingLifter.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/PointLightComponent.h"
-#include "Components/CapsuleComponent.h"
-#include "Components/AudioComponent.h"
 #include "GrabberComponent.h"
+#include "Components/AudioComponent.h"
+#include "Components/CapsuleComponent.h"
+#include "Components/PointLightComponent.h"
 #include "InDangerComponent.h"
 
 class AActor;

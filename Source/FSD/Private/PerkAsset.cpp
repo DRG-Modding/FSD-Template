@@ -1,13 +1,13 @@
 #include "PerkAsset.h"
 #include "Templates/SubclassOf.h"
 
+class UPerkAsset;
 class APlayerController;
-class UPerkHUDIconWidget;
 class UObject;
 class UPlayerCharacterID;
-class UPerkAsset;
-class UPerkHUDActivationWidget;
 class UPerkDelegateItem;
+class UPerkHUDIconWidget;
+class UPerkHUDActivationWidget;
 
 bool UPerkAsset::UseCharge(APlayerController* PlayerController) {
     return false;
@@ -79,6 +79,10 @@ int32 UPerkAsset::GetMaxUseCharges(APlayerController* PlayerController) const {
     return 0;
 }
 
+int32 UPerkAsset::GetMaxRank() const {
+    return 0;
+}
+
 TSubclassOf<UPerkHUDIconWidget> UPerkAsset::GetHudIconWidgetClass() const {
     return NULL;
 }
@@ -105,6 +109,9 @@ FString UPerkAsset::GetAdditionalRankDescription(int32 Rank) const {
 
 bool UPerkAsset::Equip(UObject* WorldContext, UPlayerCharacterID* characterID) {
     return false;
+}
+
+void UPerkAsset::CheatSetCurrentRank(UObject* WorldContext, int32 InRank) {
 }
 
 bool UPerkAsset::CanUseCharge(APlayerController* PlayerController) const {

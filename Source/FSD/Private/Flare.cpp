@@ -2,19 +2,28 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class AFlare;
+class ULightComponent;
+class UCurveFloat;
 class AActor;
+class AFlare;
+
+void AFlare::StartLightFunction(ULightComponent* mainLight, TArray<ULightComponent*> spotLights, UCurveFloat* flutterCurve, UCurveFloat* fadeInCurve) {
+}
 
 
 void AFlare::OnRep_IsFlareOn() {
 }
 
-void AFlare::OnFlareSpawnCompleted_Implementation() {
+void AFlare::OnFlareSpawnCompleted() {
 }
 
 
 
 void AFlare::Inhibit() {
+}
+
+float AFlare::ImmidiateFadeLight() {
+    return 0.0f;
 }
 
 TSubclassOf<AActor> AFlare::GetWeaponViewClass() const {

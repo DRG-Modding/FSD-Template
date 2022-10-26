@@ -1,35 +1,23 @@
 #include "DoubleDrillItem.h"
 #include "Net/UnrealNetwork.h"
-#include "FirstPersonParticleSystemComponent.h"
-#include "FSDAudioComponent.h"
 #include "DoubleDrillAggregator.h"
+#include "FirstPersonParticleSystemComponent.h"
 #include "DamageComponent.h"
+#include "FSDAudioComponent.h"
 
 class AActor;
 class UFSDPhysicalMaterial;
 
 void ADoubleDrillItem::Server_StopMining_Implementation() {
 }
-bool ADoubleDrillItem::Server_StopMining_Validate() {
-    return true;
-}
 
 void ADoubleDrillItem::Server_StartMining_Implementation() {
-}
-bool ADoubleDrillItem::Server_StartMining_Validate() {
-    return true;
 }
 
 void ADoubleDrillItem::Server_DoDamage_Implementation(const TArray<FDoubleDrillDamageItem>& Targets) {
 }
-bool ADoubleDrillItem::Server_DoDamage_Validate(const TArray<FDoubleDrillDamageItem>& Targets) {
-    return true;
-}
 
 void ADoubleDrillItem::Server_DigBlock_Implementation(FVector_NetQuantize Start, FVector_NetQuantize End) {
-}
-bool ADoubleDrillItem::Server_DigBlock_Validate(FVector_NetQuantize Start, FVector_NetQuantize End) {
-    return true;
 }
 
 void ADoubleDrillItem::OnTargetKilled(AActor* Target, UFSDPhysicalMaterial* PhysMat, bool wasDirectHit) {
@@ -98,7 +86,7 @@ ADoubleDrillItem::ADoubleDrillItem() {
     this->Damage = 5.00f;
     this->ArmorDamageMultiplier = 1.00f;
     this->DamageClass = NULL;
-    this->friendlyFireModifier = 0.10f;
+    this->FriendlyFireModifier = 0.10f;
     this->MaxFuel = 0.00f;
     this->Fuel = 0.00f;
     this->FuelUsePerDig = 0.25f;

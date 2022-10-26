@@ -1,7 +1,7 @@
 #include "CapacityHoldingItemAggregator.h"
 #include "Net/UnrealNetwork.h"
 
-void UCapacityHoldingItemAggregator::UseAmmo(int32 count) {
+void UCapacityHoldingItemAggregator::UseAmmo(int32 Count) {
 }
 
 void UCapacityHoldingItemAggregator::SetMaxAmmo(int32 InMaxAmmo, bool InChangeCurrentAmount) {

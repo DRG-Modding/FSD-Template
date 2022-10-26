@@ -9,9 +9,6 @@ void ALockOnWeapon::UpdateRifleEye() {
 
 void ALockOnWeapon::Server_TriggerAoe_Implementation(FVector Location) {
 }
-bool ALockOnWeapon::Server_TriggerAoe_Validate(FVector Location) {
-    return true;
-}
 
 void ALockOnWeapon::Server_SetTotalLockCount_Implementation(int32 totalLockCount) {
 }
@@ -21,20 +18,11 @@ void ALockOnWeapon::Server_SetLockCount_Implementation(const FLockCounter& LockC
 
 void ALockOnWeapon::Server_SetIsMovementSlowed_Implementation(bool bisMovementSlowed) {
 }
-bool ALockOnWeapon::Server_SetIsMovementSlowed_Validate(bool bisMovementSlowed) {
-    return true;
-}
 
 void ALockOnWeapon::Server_SetIsLatestShotLockedOn_Implementation(bool bisShotLockedOn) {
 }
-bool ALockOnWeapon::Server_SetIsLatestShotLockedOn_Validate(bool bisShotLockedOn) {
-    return true;
-}
 
 void ALockOnWeapon::Server_SetIsChargingShot_Implementation(bool bisCharging) {
-}
-bool ALockOnWeapon::Server_SetIsChargingShot_Validate(bool bisCharging) {
-    return true;
 }
 
 void ALockOnWeapon::Server_PushStatusEffect_Implementation(AActor* Target) {

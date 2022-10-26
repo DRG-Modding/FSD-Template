@@ -21,7 +21,7 @@ public:
     UObject* WorldContextObject;
     
     UAcceptInviteBlueprintCallProxy();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UAcceptInviteBlueprintCallProxy* AcceptInvite(UObject* NewWorldContextObject, const FString& ListName, const FString& UserId);
     
 };

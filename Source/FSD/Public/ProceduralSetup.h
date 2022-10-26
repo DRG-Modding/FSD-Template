@@ -1,45 +1,45 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Engine/LatentActionManager.h"
 #include "GameFramework/Actor.h"
-#include "EncounterSpecialItem.h"
-#include "UObject/NoExportTypes.h"
 #include "EncountersSpawnedDelegateDelegate.h"
+#include "UObject/NoExportTypes.h"
+#include "EncounterSpecialItem.h"
+#include "GeneratedDebris.h"
+#include "PathObstacle.h"
 #include "GemResourceAmount.h"
 #include "CarvedResource.h"
-#include "VeinResource.h"
 #include "CollectableSpawnableItem.h"
 #include "ESpawnSettings.h"
 #include "RoomNode.h"
 #include "TunnelNode.h"
 #include "GeneratedInfluenceSets.h"
 #include "GeneratedInstantCarvers.h"
-#include "GeneratedDebris.h"
-#include "PathObstacle.h"
 #include "InfluenceMap.h"
-#include "EDebrisCarvedType.h"
+#include "Engine/LatentActionManager.h"
 #include "EDebrisItemPass.h"
 #include "UObject/NoExportTypes.h"
 #include "RandRange.h"
 #include "DebrisCapsule.h"
 #include "ProceduralSetup.generated.h"
 
-class UCaveInfluencer;
-class USpecialEvent;
-class UProceduralTunnelComponent;
-class UNoisyPathfinderComponent;
 class UPLSEncounterComponent;
+class UProceduralTunnelComponent;
+class USpecialEvent;
+class UNoisyPathfinderComponent;
+class UProceduralVeinsComponent;
+class UProceduralResources;
 class UProceduralObjectColliders;
-class ADeepCSGWorld;
 class AFSDPlayerController;
+class ADeepCSGWorld;
 class UFloodFillSettings;
-class UTunnelParameters;
 class UMissionDNA;
+class UTunnelParameters;
 class UBiome;
 class UResourceData;
 class AProceduralSetup;
 class URoomGeneratorBase;
+class UCaveInfluencer;
 
 UCLASS(Blueprintable)
 class FSD_API AProceduralSetup : public AActor {
@@ -73,22 +73,31 @@ public:
     TArray<FEncounterSpecialItem> SpecialEncountersToSpawn;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    USpecialEvent* ForcedSpecialEvent;
+    USpecialEvent* ForcedMachineEvent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     USpecialEvent* ForcedTreasure;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    USpecialEvent* ForcedOtherEvent;
+    
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UNoisyPathfinderComponent* NoisyPathfinder;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UProceduralTunnelComponent* ProceduralTunnel;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPLSEncounterComponent* Encounters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UProceduralVeinsComponent* Veins;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UProceduralResources* Resources;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UProceduralObjectColliders* ObjectColliders;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -96,9 +105,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFloodFillSettings* PathfinderNoise;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<FVeinResource> VeinResources;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FCarvedResource> CarvedResources;
@@ -194,7 +200,7 @@ public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SpawnObjectiveCriticalItems();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     static void SpawnItems_Async(AProceduralSetup* setup, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
@@ -203,7 +209,7 @@ public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SpawnEncounters();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     static void SpawnDebrisItems_Async(AProceduralSetup* setup, FLatentActionInfo LatentInfo, EDebrisItemPass pass, int32 Depth);
     
     UFUNCTION(BlueprintCallable)
@@ -254,23 +260,11 @@ protected:
     TMap<FString, float> GetCollectablesResourceAmounts() const;
     
 public:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     static void GenerateRoomsFromGraph_Async(AProceduralSetup* setup, FLatentActionInfo LatentInfo, int32 CarvePass);
     
     UFUNCTION(BlueprintCallable)
     void GenerateRoomsFromGraph(int32 CarvePass);
-    
-    UFUNCTION(BlueprintCallable)
-    static void GenerateResourceVeins_Async(AProceduralSetup* setup, FLatentActionInfo LatentInfo);
-    
-    UFUNCTION(BlueprintCallable)
-    void GenerateResourceVeins();
-    
-    UFUNCTION(BlueprintCallable)
-    static void GeneratePostCarveRooms_Async(AProceduralSetup* setup, FLatentActionInfo LatentInfo);
-    
-    UFUNCTION(BlueprintCallable)
-    void GeneratePostCarveRooms();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void GenerateLandscapeFromData(int32 NewSeed, const TArray<FRoomNode>& NewRooms, const TArray<FPathObstacle>& Obstacles);
@@ -279,18 +273,12 @@ public:
     void GenerateLandscape();
     
     UFUNCTION(BlueprintCallable)
-    static void GenerateDebrisVeins_Async(AProceduralSetup*& setup, EDebrisCarvedType CarverType, FLatentActionInfo LatentInfo);
-    
-    UFUNCTION(BlueprintCallable)
-    void GenerateDebrisVeins(EDebrisCarvedType CarverType);
-    
-    UFUNCTION(BlueprintCallable)
     FVector FindLocationInDirection(FVector Origin, FVector Direction, float horizontalDeviation, float verticalDeviation, FRandRange Distance, float additionalDistance);
     
     UFUNCTION(BlueprintCallable)
     void FindEntrancesForAllConnections();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     static void FillTunnels_Async(AProceduralSetup* setup, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
@@ -312,7 +300,7 @@ public:
     void CreateGeneratedInfluenceSet();
     
     UFUNCTION(BlueprintCallable)
-    int32 ConnectRooms(UPARAM(Ref) FRoomNode& From, UPARAM(Ref) FRoomNode& to, bool hasDirt, UTunnelParameters* tunnelParameterOverride);
+    int32 ConnectRooms(UPARAM(Ref) FRoomNode& From, UPARAM(Ref) FRoomNode& To, bool hasDirt, UTunnelParameters* tunnelParameterOverride);
     
     UFUNCTION(BlueprintCallable)
     int32 ConnectRoomIds(int32 fromID, int32 toID, bool hasDirt, UTunnelParameters* tunnelParameterOverride);

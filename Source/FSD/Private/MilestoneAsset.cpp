@@ -2,8 +2,8 @@
 
 class UObject;
 class UMilestoneAsset;
-class UTexture2D;
 class UMissionStat;
+class UTexture2D;
 
 TArray<UMilestoneAsset*> UMilestoneAsset::SortMilestonesByProgress(UObject* WorldContext, TArray<UMilestoneAsset*>& Milestones) {
     return TArray<UMilestoneAsset*>();

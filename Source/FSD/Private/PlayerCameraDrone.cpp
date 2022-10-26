@@ -40,7 +40,6 @@ FVector APlayerCameraDrone::GetFlareLightSettings() {
     return FVector{};
 }
 
-
 FVector APlayerCameraDrone::GetBounceFlareLightSettings() {
     return FVector{};
 }
@@ -49,7 +48,7 @@ FVector APlayerCameraDrone::GetBounceFlareLightSettings() {
 void APlayerCameraDrone::ClearFocusPoint() {
 }
 
-void APlayerCameraDrone::BeginCountdown_Implementation() {
+void APlayerCameraDrone::All_BeginCountdown_Implementation() {
 }
 
 APlayerCameraDrone::APlayerCameraDrone() {
@@ -67,9 +66,14 @@ APlayerCameraDrone::APlayerCameraDrone() {
     this->VanityWeaponSpawnable = NULL;
     this->SelectedVanityClassIndex = 0;
     this->SelectedVanityAnimation = -1;
+    this->DroneMarker = NULL;
+    this->ActiveMarker = NULL;
     this->Flare = NULL;
     this->BounceFlare = NULL;
+    this->SplineInstance = NULL;
     this->Spline = NULL;
     this->SplineMesh = NULL;
+    this->PlayerFollowed = NULL;
+    this->WeaponTrackActor = NULL;
 }
 

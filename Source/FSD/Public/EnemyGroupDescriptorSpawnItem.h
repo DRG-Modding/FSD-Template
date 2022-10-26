@@ -12,7 +12,7 @@ public:
     UEnemyDescriptor* enemy;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    int32 count;
+    int32 Count;
     
     FSD_API FEnemyGroupDescriptorSpawnItem();
 };

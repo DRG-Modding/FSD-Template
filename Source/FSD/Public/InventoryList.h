@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EItemCategory.h"
-#include "Engine/DataAsset.h"
 #include "ItemFilterDelegateDelegate.h"
+#include "Engine/DataAsset.h"
+#include "EItemCategory.h"
 #include "InventoryList.generated.h"
 
+class AActor;
+class UItemID;
 class UTexture2D;
 class UMaterialInterface;
 class UObject;
-class UItemID;
-class AActor;
 
 UCLASS(Blueprintable)
 class FSD_API UInventoryList : public UDataAsset {
@@ -64,7 +64,7 @@ protected:
     
 public:
     UInventoryList();
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     UItemID* GetPreviousUnlockedItem(UObject* WorldContextObject, EItemCategory Category, UItemID* currentItem) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -73,7 +73,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetNumberOfItems(EItemCategory Category) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     UItemID* GetNextUnlockedItem(UObject* WorldContextObject, EItemCategory Category, UItemID* currentItem) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -94,7 +94,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UItemID*> GetAllItemsList() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     void CheckForInventoryAchievements(UObject* WorldContextObject);
     
 };

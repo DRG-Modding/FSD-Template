@@ -1,10 +1,10 @@
 #include "VanityItem.h"
 
-class APlayerCharacter;
-class AFSDPlayerState;
 class UObject;
+class AFSDPlayerState;
 class UPlayerCharacterID;
 class UTexture;
+class APlayerCharacter;
 
 bool UVanityItem::RemoveFromOwned(UObject* WorldContext) {
     return false;
@@ -68,9 +68,6 @@ FText UVanityItem::GetCraftableDescription() const {
     return FText::GetEmpty();
 }
 
-void UVanityItem::FixupAquisitionLogic() {
-}
-
 void UVanityItem::CraftItemWithFashionite(UObject* WorldContextObject, UPlayerCharacterID* characterID) const {
 }
 
@@ -96,9 +93,5 @@ UVanityItem::UVanityItem() {
     this->Aquisition = NULL;
     this->EventSourceAsset = NULL;
     this->IconGenerationCameraKey = NULL;
-    this->RequiredDLC = NULL;
-    this->CraftingRestrictionDLC = NULL;
-    this->CraftingPlayerRankRequired = 0;
-    this->CraftingCreditsCost = 0;
 }
 

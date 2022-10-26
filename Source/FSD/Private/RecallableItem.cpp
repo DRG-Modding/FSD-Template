@@ -5,9 +5,6 @@ class AActor;
 
 void ARecallableItem::ServerSpawnItem_Implementation(const FVector& Location, const FRotator& Rotation) {
 }
-bool ARecallableItem::ServerSpawnItem_Validate(const FVector& Location, const FRotator& Rotation) {
-    return true;
-}
 
 
 void ARecallableItem::OnRep_ActiveItems() {

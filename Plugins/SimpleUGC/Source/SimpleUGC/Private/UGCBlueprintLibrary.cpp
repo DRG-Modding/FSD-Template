@@ -2,8 +2,8 @@
 
 class UObject;
 class UUGCSettings;
-class UUGCLatentActionManager;
 class UUGCRegistry;
+class UUGCLatentActionManager;
 
 UUGCSettings* UUGCBlueprintLibrary::GetUGCSettings(UObject* WorldContextObject) {
     return NULL;

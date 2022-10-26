@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EmptyFriendDelegateDelegate.h"
 #include "UObject/Object.h"
+#include "EmptyFriendDelegateDelegate.h"
 #include "BlueprintFriend.h"
 #include "FSDFriendsAndInvites.generated.h"
 

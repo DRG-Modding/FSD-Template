@@ -30,14 +30,17 @@ protected:
     
 public:
     UFSDAchievement();
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, meta=(WorldContext="WorldContext"))
     void SetAchievementProgressForEntireServer(float Progress, UObject* WorldContext);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void SetAchievementProgress(float Progress, const AFSDPlayerController* Player, UObject* WorldContext);
     
     UFUNCTION(BlueprintCallable)
     static void ResetStatForAchievement(UFSDAchievement* AchievementToReset, const AFSDPlayerController* Player);
+    
+    UFUNCTION(BlueprintCallable)
+    static void QueryAchievements(const AFSDPlayerController* Player);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAchievementTargetValue();

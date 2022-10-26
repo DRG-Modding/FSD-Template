@@ -3,14 +3,8 @@
 
 void AJetPackItem::Server_StopThruster_Implementation() {
 }
-bool AJetPackItem::Server_StopThruster_Validate() {
-    return true;
-}
 
 void AJetPackItem::Server_StartThruster_Implementation() {
-}
-bool AJetPackItem::Server_StartThruster_Validate() {
-    return true;
 }
 
 void AJetPackItem::OnRep_Fuel(float OldFuel) {

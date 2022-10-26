@@ -4,8 +4,8 @@
 #include "AmmoDrivenWeapon.h"
 #include "AssaultRifle.generated.h"
 
-class AActor;
 class UStatusEffect;
+class AActor;
 class UFSDPhysicalMaterial;
 
 UCLASS(Blueprintable)

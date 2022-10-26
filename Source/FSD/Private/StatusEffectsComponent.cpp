@@ -22,6 +22,9 @@ bool UStatusEffectsComponent::PushActiveStatusEffect(TSubclassOf<UStatusEffect> 
     return false;
 }
 
+void UStatusEffectsComponent::PopAllActiveStatusEffectsOfType(TSubclassOf<UStatusEffect> StatusEffect, AActor* Owner) {
+}
+
 void UStatusEffectsComponent::PopAllActiveStatusEffects(AActor* Owner) {
 }
 

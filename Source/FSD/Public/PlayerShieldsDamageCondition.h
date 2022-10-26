@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DamageCondition.h"
 #include "UObject/NoExportTypes.h"
+#include "DamageCondition.h"
 #include "PlayerShieldsDamageCondition.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

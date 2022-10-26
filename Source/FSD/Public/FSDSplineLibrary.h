@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "Engine/EngineTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
@@ -11,15 +11,15 @@
 #include "Blueprint/UserWidget.h"
 #include "Curve2DAppearance.h"
 #include "UObject/NoExportTypes.h"
-#include "EPreciousMaterialOptions.h"
 #include "ECarveFilterType.h"
+#include "EPreciousMaterialOptions.h"
 #include "FSDSplineLibrary.generated.h"
 
+class USplineMeshComponent;
 class USplineComponent;
 class AActor;
 class UObject;
 class UTerrainMaterial;
-class USplineMeshComponent;
 
 UCLASS(Blueprintable)
 class UFSDSplineLibrary : public UBlueprintFunctionLibrary {
@@ -65,7 +65,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void ConvertSplineDistanceToInputKey(UPARAM(Ref) USplineComponent*& SplineComponent, USplineComponent* OptionalTargetSpline);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static bool CarveAroundSplinePoints(UObject* WorldContext, const FVector& InStartLocation, const FVector& InStartTangent, const FVector& InEndLocation, const FVector& InEndTangent, float InRadius, UTerrainMaterial* InTerrainMaterial, ECarveFilterType InCarveFilter, EPreciousMaterialOptions InPrecious);
     
     UFUNCTION(BlueprintCallable)

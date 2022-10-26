@@ -2,9 +2,6 @@
 
 void ACalldownItem::Server_Call_Resupply_Implementation(const FVector& Location) {
 }
-bool ACalldownItem::Server_Call_Resupply_Validate(const FVector& Location) {
-    return true;
-}
 
 ACalldownItem::ACalldownItem() {
     this->ItemPlacerClass = NULL;

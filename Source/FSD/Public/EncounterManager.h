@@ -2,12 +2,14 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "EncounterManagerItem.h"
+#include "UObject/NoExportTypes.h"
 #include "EncounterManager.generated.h"
 
-class AProceduralSetup;
-class UCritterDescriptor;
-class UEnemySpawnManager;
 class UEnemyDescriptor;
+class AProceduralSetup;
+class UEnemySpawnManager;
+class UCritterDescriptor;
+class UEnemyGroupDescriptor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UEncounterManager : public UActorComponent {
@@ -23,7 +25,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AProceduralSetup* ProceduralSetup;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UEnemySpawnManager* SpawnManager;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -48,6 +50,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UCritterDescriptor*> GetCritterPool() const;
+    
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
+    void AddEncounterFromGroup(UEnemyGroupDescriptor* Group, float Difficulty, FVector Location, float Radius);
     
 };
 

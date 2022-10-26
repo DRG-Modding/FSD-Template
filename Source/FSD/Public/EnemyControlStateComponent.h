@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "CharacterStateComponent.h"
-#include "EEnemyControlState.h"
 #include "ControlEnemyState.h"
+#include "EEnemyControlState.h"
 #include "UObject/NoExportTypes.h"
 #include "EnemyControlStateComponent.generated.h"
 
@@ -34,7 +34,7 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerExit();
     
     UFUNCTION(BlueprintCallable)

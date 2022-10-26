@@ -4,8 +4,8 @@
 #include "PostProcessingBlendable.h"
 #include "PostProcessingManager.generated.h"
 
-class AFSDPostProcessingActor;
 class UMaterialInstanceDynamic;
+class AFSDPostProcessingActor;
 
 UCLASS(Blueprintable)
 class APostProcessingManager : public AActor {

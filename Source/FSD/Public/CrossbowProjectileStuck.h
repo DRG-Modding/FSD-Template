@@ -2,16 +2,16 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "FSDPhysicsActor.h"
-#include "ECrossbowStuckType.h"
 #include "EInputKeys.h"
+#include "ECrossbowStuckType.h"
 #include "CrossbowProjectileStuck.generated.h"
 
-class UHealthComponentBase;
 class APlayerCharacter;
+class ACrossbowProjectileBase;
 class USceneComponent;
 class UStatusEffect;
 class USphereComponent;
-class ACrossbowProjectileBase;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class ACrossbowProjectileStuck : public AFSDPhysicsActor {
@@ -30,11 +30,11 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float StatusEffectTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USphereComponent* AttachmentRoot;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USphereComponent* LaserCollider;
     
     UPROPERTY(EditAnywhere, Replicated)

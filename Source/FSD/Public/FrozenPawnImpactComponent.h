@@ -6,11 +6,11 @@
 #include "Engine/EngineTypes.h"
 #include "FrozenPawnImpactComponent.generated.h"
 
-class UPrimitiveComponent;
 class UPhysicalMaterial;
-class UPhysicsAsset;
 class UParticleSystem;
 class USoundCue;
+class UPhysicsAsset;
+class UPrimitiveComponent;
 class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

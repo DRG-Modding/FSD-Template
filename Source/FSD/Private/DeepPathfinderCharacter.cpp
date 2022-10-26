@@ -30,6 +30,7 @@ ADeepPathfinderCharacter::ADeepPathfinderCharacter() {
     this->IsHidden = false;
     this->IsStaggered = false;
     this->FrozenPauseLogic = false;
+    this->CurrentStaggerAffliction = NULL;
     this->AttackerRadius = 65.00f;
     this->AllowedInFormationChance = 0.75f;
 }

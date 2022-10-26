@@ -1372,6 +1372,14 @@
 			"Type": "SymbolFile"
 		},
 		{
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-DSTelemetry.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-DSTelemetry.pdb",
+			"Type": "SymbolFile"
+		},
+		{
 			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-FSD.dll",
 			"Type": "DynamicLibrary"
 		},

@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AttackBaseComponent.h"
 #include "ProjetileSpawnedDelegateDelegate.h"
+#include "AttackBaseComponent.h"
 #include "EProjectileAttackRotationType.h"
 #include "ProjectileAttackDelegateDelegate.h"
 #include "ProjectileAttackBaseComponent.generated.h"
 
 class UAnimMontage;
-class UProjectileAttack;
 class AActor;
+class UProjectileAttack;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UProjectileAttackBaseComponent : public UAttackBaseComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UProjectileAttack*> Projectiles;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

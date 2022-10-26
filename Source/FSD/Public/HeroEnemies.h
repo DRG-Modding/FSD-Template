@@ -5,8 +5,8 @@
 #include "GameplayTagContainer.h"
 #include "HeroEnemies.generated.h"
 
-class UEnemyDescriptor;
 class APawn;
+class UEnemyDescriptor;
 
 UCLASS(Abstract, Blueprintable)
 class UHeroEnemies : public URunningMissionBP {

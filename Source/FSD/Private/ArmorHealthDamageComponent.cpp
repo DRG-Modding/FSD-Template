@@ -11,6 +11,9 @@ void UArmorHealthDamageComponent::SetHealthOnAllItems(float newHealth) {
 void UArmorHealthDamageComponent::RegrowAllArmor(float baseHealth) {
 }
 
+void UArmorHealthDamageComponent::PopAllWeakPoints() {
+}
+
 void UArmorHealthDamageComponent::OnRep_ArmorDamageInfo(FArmorDamageInfo OldValue) {
 }
 
@@ -21,6 +24,7 @@ void UArmorHealthDamageComponent::GetLifetimeReplicatedProps(TArray<FLifetimePro
 }
 
 UArmorHealthDamageComponent::UArmorHealthDamageComponent() {
+    this->RadialSocketDamageMultiplier = 1.00f;
     this->AffectedByAmorBreak = true;
 }
 

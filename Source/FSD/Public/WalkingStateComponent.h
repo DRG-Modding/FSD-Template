@@ -4,8 +4,8 @@
 #include "EInputKeys.h"
 #include "WalkingStateComponent.generated.h"
 
-class USoundBase;
 class APlayerCharacter;
+class USoundBase;
 class UAudioComponent;
 class UTrackBuilderMovement;
 
@@ -38,10 +38,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* IceSliding;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UAudioComponent* AudioComponentSliding;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UAudioComponent* AudioComponentIceSliding;
     
 public:
@@ -50,10 +50,10 @@ protected:
     UFUNCTION(BlueprintCallable)
     void TrackGrindCallback(APlayerCharacter* User, EInputKeys Key);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_StartTrackMovement(UTrackBuilderMovement* InMovement);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetIsSliding(bool isSliding);
     
 public:

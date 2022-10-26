@@ -5,10 +5,10 @@
 #include "YesNoPromptWidget.h"
 #include "YesNoPromptAction.generated.h"
 
-class UResourceData;
+class UObject;
 class UYesNoPromptAction;
 class UYesNoPromptWidget;
-class UObject;
+class UResourceData;
 
 UCLASS(Blueprintable)
 class UYesNoPromptAction : public UBlueprintAsyncActionBase {
@@ -31,10 +31,10 @@ protected:
     
 public:
     UYesNoPromptAction();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static UYesNoPromptAction* PromptYesNo(UObject* WorldContext, FYesNoPromptSettings Prompt);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static UYesNoPromptAction* PromptPurchase(UObject* WorldContext, FYesNoPromptSettings Prompt, const TMap<UResourceData*, int32>& Resources);
     
 protected:

@@ -2,9 +2,9 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class ARecallableSentryGunItem;
 class AActor;
 class AItem;
+class ARecallableSentryGunItem;
 
 void UInventoryComponent::UpdateFromSaveGameInSlot(EItemCategory Category) {
 }
@@ -16,6 +16,9 @@ void UInventoryComponent::Server_ThrowItem_Implementation(AActor* Item, FVector 
 }
 
 void UInventoryComponent::Server_ThrowFlare_Implementation() {
+}
+
+void UInventoryComponent::ResupplyGrenades(float percentage) {
 }
 
 void UInventoryComponent::Resupply(float percentage) {

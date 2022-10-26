@@ -10,11 +10,11 @@
 #include "LockOnWeapon.generated.h"
 
 class AActor;
-class UActorTrackingWidget;
-class ALockOnBeam;
 class UStatusEffect;
-class UDamageComponent;
+class UActorTrackingWidget;
 class UHitscanComponent;
+class ALockOnBeam;
+class UDamageComponent;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API ALockOnWeapon : public AAmmoDrivenWeapon {
@@ -110,10 +110,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 LockOnCount;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UDamageComponent* DamageComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UHitscanComponent* HitscanComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -166,7 +166,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetMuzzleDirection(FVector TargetLocation);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_TriggerAoe(FVector Location);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
@@ -175,13 +175,13 @@ protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetLockCount(const FLockCounter& LockCounter);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetIsMovementSlowed(bool bisMovementSlowed);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetIsLatestShotLockedOn(bool bisShotLockedOn);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetIsChargingShot(bool bisCharging);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)

@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EFSDInputSource.h"
 #include "Blueprint/UserWidget.h"
 #include "Styling/SlateTypes.h"
-#include "EFSDInputSource.h"
 #include "InputDisplay.h"
 #include "UObject/NoExportTypes.h"
 #include "RichTextInputWidget.generated.h"
 
-class UTextBlock;
 class URichTextBlock;
+class UTextBlock;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew, HideDropdown)
 class URichTextInputWidget : public UUserWidget {
@@ -30,7 +30,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EFSDInputSource InputSource;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     URichTextBlock* RichTextBlock;
     
 public:

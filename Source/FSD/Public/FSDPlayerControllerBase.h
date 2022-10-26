@@ -3,8 +3,8 @@
 #include "GameFramework/PlayerController.h"
 #include "LocalVoiceStatusDelegate.h"
 #include "PlatformComponent.h"
-#include "EHUDVisibilityReason.h"
 #include "EMinersManualSinglePage.h"
+#include "EHUDVisibilityReason.h"
 #include "EMinersManualSection.h"
 #include "UObject/NoExportTypes.h"
 #include "EDisconnectReason.h"
@@ -29,7 +29,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bStartWithBlackScreen;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UWindowManager* WindowManager;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))

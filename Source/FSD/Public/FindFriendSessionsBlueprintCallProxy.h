@@ -4,8 +4,8 @@
 #include "BlueprintFindFriendSessionsResultDelegateDelegate.h"
 #include "FindFriendSessionsBlueprintCallProxy.generated.h"
 
-class UFindFriendSessionsBlueprintCallProxy;
 class UObject;
+class UFindFriendSessionsBlueprintCallProxy;
 
 UCLASS(Blueprintable)
 class UFindFriendSessionsBlueprintCallProxy : public UOnlineBlueprintCallProxyBase {
@@ -21,7 +21,7 @@ public:
     UObject* WorldContextObject;
     
     UFindFriendSessionsBlueprintCallProxy();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UFindFriendSessionsBlueprintCallProxy* FindFriendSessions(UObject* NewWorldContextObject, const FString& FriendId);
     
 };

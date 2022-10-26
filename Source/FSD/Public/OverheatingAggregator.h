@@ -34,10 +34,10 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
-    UFUNCTION(BlueprintCallable, Server, Unreliable, WithValidation)
+    UFUNCTION(BlueprintCallable, Server, Unreliable)
     void Server_SetTemperature(float NewTemperature);
     
-    UFUNCTION(BlueprintCallable, Server, Unreliable, WithValidation)
+    UFUNCTION(BlueprintCallable, Server, Unreliable)
     void Server_SetIsOverheated(bool NewOverheated);
     
     UFUNCTION(BlueprintCallable)

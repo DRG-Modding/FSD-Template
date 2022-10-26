@@ -5,8 +5,8 @@
 #include "UObject/NoExportTypes.h"
 #include "CaveLeechAnimInstance.generated.h"
 
-class ACaveLeech;
 class USceneComponent;
+class ACaveLeech;
 
 UCLASS(Blueprintable, NonTransient)
 class UCaveLeechAnimInstance : public UAnimInstance {
@@ -19,7 +19,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ACaveLeech* CaveLeech;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     USceneComponent* CaveLeechHead;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Engine/DataAsset.h"
-#include "DecalData.h"
 #include "Curves/CurveFloat.h"
+#include "DecalData.h"
 #include "DamageSettings.generated.h"
 
 class UStatusEffect;
-class UDamageTag;
-class UDamageComponent;
 class UNiagaraSystem;
+class UDamageComponent;
+class UDamageTag;
 class USoundCue;
 class UDamageImpulse;
 
@@ -46,6 +46,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UStatusEffect> TemperatureShockFromBurningStatusEffect;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float InfectionPerDamagePoint;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* ArmorShatterDamage;

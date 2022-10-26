@@ -10,44 +10,23 @@ void USaveGameStateComponent::SetCampaign() {
 
 void USaveGameStateComponent::Server_SetVictoryPose_Implementation(UVictoryPose* pose) {
 }
-bool USaveGameStateComponent::Server_SetVictoryPose_Validate(UVictoryPose* pose) {
-    return true;
-}
 
 void USaveGameStateComponent::Server_SetPlayerProgress_Implementation(const FPlayerProgress& Progress) {
-}
-bool USaveGameStateComponent::Server_SetPlayerProgress_Validate(const FPlayerProgress& Progress) {
-    return true;
 }
 
 void USaveGameStateComponent::Server_SetLoadout_Implementation(const FItemLoadout& Loadout, const TArray<FItemUpgradeSelection>& weaponLoadouts) {
 }
-bool USaveGameStateComponent::Server_SetLoadout_Validate(const FItemLoadout& Loadout, const TArray<FItemUpgradeSelection>& weaponLoadouts) {
-    return true;
-}
 
 void USaveGameStateComponent::Server_SetEquippedPerks_Implementation(const TArray<FSaveGameStatePerkItem>& perks) {
-}
-bool USaveGameStateComponent::Server_SetEquippedPerks_Validate(const TArray<FSaveGameStatePerkItem>& perks) {
-    return true;
 }
 
 void USaveGameStateComponent::Server_SetCredits_Implementation(const int32 Amount) {
 }
-bool USaveGameStateComponent::Server_SetCredits_Validate(const int32 Amount) {
-    return true;
-}
 
 void USaveGameStateComponent::Server_SetCharacterStats_Implementation(const TArray<FCharacterProgress>& Stats) {
 }
-bool USaveGameStateComponent::Server_SetCharacterStats_Validate(const TArray<FCharacterProgress>& Stats) {
-    return true;
-}
 
 void USaveGameStateComponent::Server_SetActiveCampaignMission_Implementation(FActiveCampaingMission Data) {
-}
-bool USaveGameStateComponent::Server_SetActiveCampaignMission_Validate(FActiveCampaingMission Data) {
-    return true;
 }
 
 void USaveGameStateComponent::RefreshLoadoutFromSave(UPlayerCharacterID* characterID) {

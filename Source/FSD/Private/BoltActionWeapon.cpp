@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 
 class AActor;
-class UFSDPhysicalMaterial;
 class UHealthComponentBase;
+class UFSDPhysicalMaterial;
 class UPrimitiveComponent;
 
 void ABoltActionWeapon::SetOverheated(bool isOverheated) {
@@ -11,20 +11,11 @@ void ABoltActionWeapon::SetOverheated(bool isOverheated) {
 
 void ABoltActionWeapon::Server_SetIsMovementSlowed_Implementation(bool bisMovementSlowed) {
 }
-bool ABoltActionWeapon::Server_SetIsMovementSlowed_Validate(bool bisMovementSlowed) {
-    return true;
-}
 
 void ABoltActionWeapon::Server_SetIsLatestShotFocused_Implementation(bool bisShotFocused) {
 }
-bool ABoltActionWeapon::Server_SetIsLatestShotFocused_Validate(bool bisShotFocused) {
-    return true;
-}
 
 void ABoltActionWeapon::Server_SetIsChargingShot_Implementation(bool bisCharging) {
-}
-bool ABoltActionWeapon::Server_SetIsChargingShot_Validate(bool bisCharging) {
-    return true;
 }
 
 void ABoltActionWeapon::OnTimerElapsed() {
@@ -74,6 +65,7 @@ ABoltActionWeapon::ABoltActionWeapon() {
     this->SlowMovementAtCharge = 0.50f;
     this->FullChargeDamageBonus = 2.00f;
     this->AimedShotStaggerChance = 0.00f;
+    this->AimedShotWeakpointDamageBonusMultiplier = 1.00f;
     this->AimedWeakspotKilLRange = 350.00f;
     this->TargetKilledReloadTimeBoost = 0.00f;
     this->TargetKilledReloadTimeBoostDuration = 0.00f;

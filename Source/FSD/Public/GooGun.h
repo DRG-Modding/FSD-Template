@@ -4,10 +4,10 @@
 #include "EGooGunFireMode.h"
 #include "GooGun.generated.h"
 
-class UAnimMontage;
-class USoundCue;
 class UFXSystemComponent;
+class UAnimMontage;
 class UFXSystemAsset;
+class USoundCue;
 
 UCLASS(Abstract, Blueprintable)
 class AGooGun : public AAmmoDrivenWeapon {
@@ -68,7 +68,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFXSystemAsset* ChargeupFireMuzzleFlash;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UFXSystemComponent* ChargeupParticleInstance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

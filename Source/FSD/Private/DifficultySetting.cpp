@@ -6,6 +6,10 @@ bool UDifficultySetting::IsUnlocked(UObject* WorldContext) const {
     return false;
 }
 
+int32 UDifficultySetting::GetDifficultyIndex() const {
+    return 0;
+}
+
 float UDifficultySetting::AddHazardBonus(float BaseValue) const {
     return 0.0f;
 }
@@ -27,7 +31,7 @@ UDifficultySetting::UDifficultySetting() {
     this->PointExtractionScaler = 1.00f;
     this->SpecialEncounterModifier = 1.00f;
     this->HazardBonus = 0.00f;
-    this->friendlyFireModifier = 0.33f;
+    this->FriendlyFireModifier = 0.33f;
     this->WaveStartDelayScale = 1.00f;
     this->MinPoolSize = 5;
     this->SpeedModifier = 1.00f;

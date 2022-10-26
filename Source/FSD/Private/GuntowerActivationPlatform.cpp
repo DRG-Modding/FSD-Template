@@ -1,14 +1,14 @@
 #include "GuntowerActivationPlatform.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/SceneComponent.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Components/SceneComponent.h"
 #include "Components/CapsuleComponent.h"
 
 class UHealthComponentBase;
+class AActor;
+class AGuntowerModule;
 class AFSDPlayerState;
 class UPrimitiveComponent;
-class AGuntowerModule;
-class AActor;
 
 void AGuntowerActivationPlatform::ShutDown() {
 }

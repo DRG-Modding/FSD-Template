@@ -37,7 +37,7 @@ protected:
 public:
     UMultiHitscanComponent();
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_RegisterHit(const FMultiHitScanHits& hitResults);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)

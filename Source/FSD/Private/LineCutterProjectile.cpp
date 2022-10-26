@@ -1,8 +1,8 @@
 #include "LineCutterProjectile.h"
 #include "Net/UnrealNetwork.h"
 #include "Components/SceneComponent.h"
-#include "DamageComponent.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "DamageComponent.h"
 
 void ALineCutterProjectile::UpdateBeamLocations() {
 }
@@ -16,9 +16,6 @@ void ALineCutterProjectile::SpawnDecal(FHitResult& Result) {
 
 
 void ALineCutterProjectile::Server_RemoveDebris_Implementation(int32 instance, int32 Component) {
-}
-bool ALineCutterProjectile::Server_RemoveDebris_Validate(int32 instance, int32 Component) {
-    return true;
 }
 
 void ALineCutterProjectile::OnRep_LineRotation() {

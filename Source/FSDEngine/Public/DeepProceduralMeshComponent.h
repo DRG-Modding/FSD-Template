@@ -3,8 +3,8 @@
 #include "Components/MeshComponent.h"
 #include "DeepProceduralMeshComponent.generated.h"
 
-class UPhysicalMaterial;
 class UBodySetup;
+class UPhysicalMaterial;
 class UTerrainMaterialCore;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

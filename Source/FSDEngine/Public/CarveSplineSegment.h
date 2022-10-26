@@ -4,7 +4,7 @@
 #include "CarveSplineSegment.generated.h"
 
 USTRUCT(BlueprintType)
-struct FCarveSplineSegment {
+struct FSDENGINE_API FCarveSplineSegment {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -22,6 +22,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Radius;
     
-    FSDENGINE_API FCarveSplineSegment();
+    FCarveSplineSegment();
 };
 

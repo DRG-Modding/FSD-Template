@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TutorialComponent.h"
 #include "TutorialHint.h"
+#include "TutorialComponent.h"
 #include "TutorialHintComponent.generated.h"
 
 class UObject;
@@ -20,7 +20,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void SetRemainingVisibleTime(float remainingTime);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     bool IsSingleplayer(UObject* WorldContext) const;
     
     UFUNCTION(BlueprintCallable)

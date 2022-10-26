@@ -1,23 +1,28 @@
 #include "DropToTerrainComponent.h"
+#include "Net/UnrealNetwork.h"
 
 class USceneComponent;
 
 void UDropToTerrainComponent::StopDropDetection(bool stopFalling) {
 }
 
-void UDropToTerrainComponent::SetParentPositionOnAll_Implementation(FVector CurrentParentLocation) {
-}
-bool UDropToTerrainComponent::SetParentPositionOnAll_Validate(FVector CurrentParentLocation) {
-    return true;
+void UDropToTerrainComponent::OnTerrainRemoved(USceneComponent* Point) {
 }
 
-void UDropToTerrainComponent::OnTerrainRemoved(USceneComponent* Point) {
+void UDropToTerrainComponent::OnRep_DropTarget() {
 }
 
 void UDropToTerrainComponent::BeginDropDetection() {
 }
 
+void UDropToTerrainComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    
+    DOREPLIFETIME(UDropToTerrainComponent, DropTarget);
+}
+
 UDropToTerrainComponent::UDropToTerrainComponent() {
+    this->StartActive = false;
     this->FallVelocity = 0.00f;
     this->TerrainTraceMaxDistance = -10000.00f;
     this->IsDetecting = false;

@@ -7,7 +7,7 @@ TArray<UDrinkableDataAsset*> UDrinkSettings::GetBarDrinkables(UObject* WorldCont
     return TArray<UDrinkableDataAsset*>();
 }
 
-UDrinkableDataAsset* UDrinkSettings::GetBarDailySpecial(UObject* WorldContext) {
+UDrinkableDataAsset* UDrinkSettings::GetBarDailySpecial(UObject* WorldContext, UDrinkableDataAsset* currentDailySpecial) {
     return NULL;
 }
 

@@ -4,8 +4,8 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "FSDProjectileMovementComponent.generated.h"
 
-class AActor;
 class UCurveFloat;
+class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFSDProjectileMovementComponent : public UProjectileMovementComponent {

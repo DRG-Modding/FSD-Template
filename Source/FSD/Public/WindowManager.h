@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Components/ActorComponent.h"
 #include "Components/SlateWrapperTypes.h"
+#include "Components/ActorComponent.h"
 #include "WindowManagerDelegateDelegate.h"
 #include "WindowManager.generated.h"
 
+class UWindowWidget;
 class UUserWidget;
 class USoundCue;
-class UWindowWidget;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UWindowManager : public UActorComponent {
@@ -24,7 +24,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* AudioWindowOpen;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UWindowWidget*> WindowStack;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
@@ -45,13 +45,13 @@ public:
     void ReplaceWindow(UWindowWidget* Window);
     
     UFUNCTION(BlueprintCallable)
-    UWindowWidget* OpenWindowFromClass(TSubclassOf<UWindowWidget> windowClass, int32 ZOrder, bool ShowCursor);
+    UWindowWidget* OpenWindowFromClass(TSubclassOf<UWindowWidget> WindowClass, int32 ZOrder, bool ShowCursor);
     
     UFUNCTION(BlueprintCallable)
     void OpenWindow(UWindowWidget* Window, bool PlayAudio, bool ShowCursor);
     
     UFUNCTION(BlueprintCallable)
-    UWindowWidget* OpenSingleUseWindow(TSubclassOf<UWindowWidget> windowClass, int32 ZOrder);
+    UWindowWidget* OpenSingleUseWindow(TSubclassOf<UWindowWidget> WindowClass, int32 ZOrder);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsWindowOpen(UWindowWidget* Window) const;

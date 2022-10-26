@@ -3,9 +3,9 @@
 #include "Blueprint/UserWidget.h"
 #include "AmmoCountWidget.generated.h"
 
+class UItemAggregator;
 class APlayerCharacter;
 class AItem;
-class UItemAggregator;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UAmmoCountWidget : public UUserWidget {
@@ -18,7 +18,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AItem* Item;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UItemAggregator* Aggregator;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -49,7 +49,7 @@ protected:
     void OnItemAmountChanged(int32 Value);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnAmountChanged(int32 count);
+    void OnAmountChanged(int32 Count);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void DoItemEquipped();

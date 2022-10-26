@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "AutoCarverComponent.h"
 
-class ADropPod;
 class UObject;
+class ADropPod;
 
 void ADropPod::StartDrilling() {
 }

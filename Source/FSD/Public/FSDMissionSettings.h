@@ -5,9 +5,9 @@
 #include "MissionHazardSetting.h"
 #include "FSDMissionSettings.generated.h"
 
-class UGeneratedMission;
 class UObject;
 class UDifficultySetting;
+class UGeneratedMission;
 
 UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class UFSDMissionSettings : public UDeveloperSettings {
@@ -25,7 +25,7 @@ protected:
     
 public:
     UFSDMissionSettings();
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static float GetTotalHazardBonus(UObject* WorldContextObject, UGeneratedMission* mission, UDifficultySetting* DifficultySetting);
     
 };

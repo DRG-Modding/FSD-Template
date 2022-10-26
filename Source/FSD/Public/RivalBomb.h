@@ -6,9 +6,9 @@
 #include "RivalBomb.generated.h"
 
 class UCurveFloat;
-class UDebrisPositioning;
 class ARivalBombNode;
 class AGem;
+class UDebrisPositioning;
 
 UCLASS(Blueprintable)
 class ARivalBomb : public AGameEvent {

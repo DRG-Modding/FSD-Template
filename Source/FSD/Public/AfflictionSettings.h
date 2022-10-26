@@ -1,34 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "Curves/CurveFloat.h"
-#include "RandRange.h"
+#include "ScaledMeshAfflictionTypeItem.h"
 #include "AfflictionSettings.generated.h"
 
-class UStaticMesh;
 class UParticleSystem;
-class UPawnAffliction;
 class USoundCue;
+class UPawnAffliction;
 
 UCLASS(Blueprintable)
 class UAfflictionSettings : public UDataAsset {
     GENERATED_BODY()
 public:
+private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FRuntimeFloatCurve> IceScalers;
+    FScaledMeshAfflictionTypeItem FrozenScaledMeshAffliction;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<UStaticMesh*> IceMeshes;
+    FScaledMeshAfflictionTypeItem InfectedScaledMeshAffliction;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FRandRange ScaleDelay;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USoundCue* FreezeSound;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USoundCue* IceBreakSound;
-    
+public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* BurningSound;
     
@@ -54,12 +45,6 @@ public:
     UPawnAffliction* EliteAffliction;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
-    TArray<UParticleSystem*> FreezeParticles;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
-    TArray<UParticleSystem*> IceBreakParticles;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
     TArray<UParticleSystem*> BurningParticles;
     

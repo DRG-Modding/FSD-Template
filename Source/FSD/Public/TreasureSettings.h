@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "ETreasureType.h"
 #include "Curves/CurveFloat.h"
+#include "ETreasureType.h"
 #include "TreasureSettings.generated.h"
 
-class UItemAquisitionSource;
-class UDrinkableDataAsset;
-class UVictoryPose;
 class USpecialEvent;
 class UItemSkinSet;
+class UItemAquisitionSource;
+class UVictoryPose;
+class UDrinkableDataAsset;
 
 UCLASS(Blueprintable)
 class UTreasureSettings : public UDataAsset {

@@ -21,11 +21,13 @@ UStatusEffect::UStatusEffect() {
     this->MaxResistance = 1.00f;
     this->DamageClass = NULL;
     this->ExclusiveKey = NULL;
+    this->ApplyImmediately = false;
     this->CanStack = false;
     this->MaxStack = 10;
     this->Duration = -1.00f;
     this->ApplyDurationAfterPop = false;
     this->RemoveOnDeath = true;
     this->RemoveOnTemperatureStateChange = false;
+    this->AllowExternalSread = true;
 }
 

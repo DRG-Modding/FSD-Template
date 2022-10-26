@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "FSDHUD.h"
+#include "NotificationEntry.h"
 #include "SpaceRigHUD.generated.h"
 
-class UDialogDataAsset;
-class UObject;
 class UWindowWidget;
+class UObject;
 
 UCLASS(Blueprintable, NonTransient)
 class ASpaceRigHUD : public AFSDHUD {
@@ -13,7 +13,7 @@ class ASpaceRigHUD : public AFSDHUD {
 public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<UObject*> NotificationQueue;
+    TArray<FNotificationEntry> NotificationQueue;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bNotificationQueueActive;
@@ -28,20 +28,14 @@ protected:
     void ReceiveNotificationQueueActivated();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void ReceiveNotificationAdded(UObject* InNotification);
+    void ReceiveNotificationAdded();
     
 public:
     UFUNCTION(BlueprintCallable)
-    UWindowWidget* QueueWindowClass(TSoftClassPtr<UWindowWidget> InWindowType);
-    
-    UFUNCTION(BlueprintCallable)
-    void QueueWindow(UWindowWidget* InWindow);
+    void QueueWindowClass(TSoftClassPtr<UWindowWidget> InWindowType);
     
     UFUNCTION(BlueprintCallable)
     void QueueNotificationObject(UObject* InObject);
-    
-    UFUNCTION(BlueprintCallable)
-    void QueueMissionShout(TSoftObjectPtr<UDialogDataAsset> InShout);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsNotificationQueueEmpty() const;

@@ -8,12 +8,12 @@
 #include "Engine/EngineTypes.h"
 #include "FSDPhysicalMaterial.generated.h"
 
-class USoundCue;
-class UReactiveTerrain;
-class UFXSystemAsset;
-class UFXSystemComponent;
-class UNiagaraSystem;
 class UMaterialInstance;
+class USoundCue;
+class UFXSystemAsset;
+class UReactiveTerrain;
+class UNiagaraSystem;
+class UFXSystemComponent;
 class UObject;
 class UFSDPhysicalMaterial;
 class UPrimitiveComponent;
@@ -112,10 +112,10 @@ protected:
     
 public:
     UFSDPhysicalMaterial();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UFXSystemComponent* SpawnImpactParticlesFromHit(UObject* WorldContextObject, const FHitResult& HitResult);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    UFUNCTION(BlueprintCallable, BlueprintPure=false, meta=(WorldContext="WorldContextObject"))
     UFXSystemComponent* SpawnImpactParticles(UObject* WorldContextObject, FVector Location, FVector Normal) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

@@ -6,8 +6,8 @@
 #include "UpgradeValues.h"
 #include "TargetSpecificDamageBonusUpgrade.generated.h"
 
-class AActor;
 class AFSDPlayerState;
+class AActor;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UTargetSpecificDamageBonusUpgrade : public UItemUpgrade {

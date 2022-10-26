@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HealthChangedSigDelegate.h"
 #include "Components/ActorComponent.h"
 #include "Health.h"
-#include "DamageSigDelegate.h"
-#include "EEnemyHealthScaling.h"
-#include "SubHealthComponentDelegateDelegate.h"
 #include "EHealthbarType.h"
+#include "DamageSigDelegate.h"
+#include "SubHealthComponentDelegateDelegate.h"
+#include "HealthChangedSigDelegate.h"
+#include "EEnemyHealthScaling.h"
 #include "SubHealthComponent.generated.h"
 
 class AActor;
@@ -53,9 +53,10 @@ public:
     
     
     // Fix for true pure virtual functions not being implemented
-    UFUNCTION(BlueprintCallable)
-    //AActor* GetOwner() const override PURE_VIRTUAL(GetOwner, return NULL;);
+    /*UFUNCTION(BlueprintCallable)
+    AActor* GetOwner() const override PURE_VIRTUAL(GetOwner, return NULL;);*/
     
+    UFUNCTION(BlueprintCallable)
     float GetMaxHealth() const override PURE_VIRTUAL(GetMaxHealth, return 0.0f;);
     
     UFUNCTION(BlueprintCallable)

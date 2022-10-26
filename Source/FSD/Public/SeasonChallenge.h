@@ -7,9 +7,9 @@
 #include "ChallengeVariation.h"
 #include "SeasonChallenge.generated.h"
 
+class USeasonChallenge;
 class UTexture2D;
 class UCampaign;
-class USeasonChallenge;
 
 UCLASS(Blueprintable)
 class USeasonChallenge : public USavableDataAsset {

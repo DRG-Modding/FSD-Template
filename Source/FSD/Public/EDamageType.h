@@ -24,5 +24,6 @@ enum class EDamageType : uint8 {
     TemperatureShock,
     Corrosive,
     Piercing,
+    RockPox,
 };
 

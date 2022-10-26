@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "SavableDataAsset.h"
-#include "UObject/NoExportTypes.h"
 #include "ESchematicState.h"
+#include "UObject/NoExportTypes.h"
 #include "Schematic.generated.h"
 
-class UObject;
 class USchematic;
-class USchematicPricingTier;
 class USchematicCategory;
-class USchematicRarity;
-class UPlayerCharacterID;
+class USchematicPricingTier;
 class USchematicItem;
+class UPlayerCharacterID;
+class USchematicRarity;
 class UResourceData;
 class UFSDSaveGame;
+class UObject;
 class UTexture;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -64,7 +64,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void ResetGivenReward(UFSDSaveGame* SaveGame);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void RemoveSchematicFromPlayerInventory(UObject* WorldContext);
     
     UFUNCTION(BlueprintCallable)
@@ -73,7 +73,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FText GetTitle() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     ESchematicState GetSchematicState(UObject* WorldContext) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -85,19 +85,19 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FColor GetIconTint() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     UTexture* GetIcon(UObject* WorldContextObject) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FText GetDescription() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     bool CanAffordSchematic(UObject* WorldContext) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void BuildSchematic(UObject* WorldContext);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void AddSchematicToPlayerInventory(UObject* WorldContext);
     
 };

@@ -3,8 +3,8 @@
 #include "ResourceData.h"
 #include "VeinResourceData.generated.h"
 
-class UVeinResourceCreator;
 class UTerrainMaterial;
+class UVeinResourceCreator;
 
 UCLASS(Blueprintable)
 class UVeinResourceData : public UResourceData {

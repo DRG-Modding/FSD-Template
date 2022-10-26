@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BehaviorTree/BTTaskNode.h"
+#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "BTTask_FindPointNearTarget.generated.h"
 
@@ -21,6 +21,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector ManualOffset;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool FromCenterOfMass;
     
 public:
     UBTTask_FindPointNearTarget();

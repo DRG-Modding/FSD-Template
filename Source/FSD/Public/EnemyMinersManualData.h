@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "EnemyAttackDescription.h"
+#include "EnemyMinersManualStats.h"
 #include "EEnemyType.h"
 #include "EEnemyFamily.h"
+#include "EnemyAttackDescription.h"
 #include "EArmorType.h"
-#include "EnemyMinersManualStats.h"
 #include "EDamageType.h"
 #include "EnemyMinersManualData.generated.h"
 
-class UAnimSequenceBase;
 class UEnemyID;
+class UAnimSequenceBase;
 class UTexture2D;
 class AEnemyShowroomItem;
 

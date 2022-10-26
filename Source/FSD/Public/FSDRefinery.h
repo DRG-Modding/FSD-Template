@@ -13,9 +13,9 @@ class APipelineSegment;
 class APipelineStart;
 class APipelineExtractorPod;
 class USingleUsableComponent;
-class APlayerCharacter;
 class UDialogDataAsset;
 class ATrackBuilderItem;
+class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class FSD_API AFSDRefinery : public ADropPod {
@@ -43,10 +43,10 @@ public:
     FRefineryExtractPodDelegate OnExtractorPodSpawned;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USingleUsableComponent* UsableStartRefining;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USingleUsableComponent* UsableLaunchRocket;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CSGBase.h"
 #include "BinaryTerrainMaterialCombiner.h"
+#include "CSGBase.h"
 #include "SimpleMeshWithCachedTree.generated.h"
 
 UCLASS(Abstract, Blueprintable)

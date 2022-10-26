@@ -4,8 +4,8 @@
 #include "DamageComponent.h"
 
 class UPrimitiveComponent;
+class UFXSystemAsset;
 class USoundCue;
-class UParticleSystem;
 class UFSDPhysicalMaterial;
 
 
@@ -27,7 +27,7 @@ void APickaxeItem::Server_HitBlock_Implementation(FVector_NetQuantize Position, 
 void APickaxeItem::Server_DoPowerAttack_Implementation() {
 }
 
-void APickaxeItem::Server_DigBlock2_Implementation(FVector carvePos, FVector carveDirection, int32 TerrainMaterial, bool isSpecial) {
+void APickaxeItem::Server_DigBlock_Implementation(FVector carvePos, FVector carveDirection, int32 TerrainMaterial, bool isSpecial) {
 }
 
 void APickaxeItem::Server_DamageTarget_Implementation(UPrimitiveComponent* TargetComponent, bool isSpecial, const FVector_NetQuantize& ImpactPoint, const FVector_NetQuantizeNormal& ImpactNormal, UFSDPhysicalMaterial* PhysMaterial, uint8 BoneIndex) {
@@ -49,7 +49,7 @@ float APickaxeItem::GetSpecialCooldownProgress() const {
 void APickaxeItem::All_SimulateHitBlock_Implementation(FVector_NetQuantize Position, int32 materia, bool removeDebris, bool isSpecial) {
 }
 
-void APickaxeItem::All_SimulateDigDebris_Implementation(FVector_NetQuantize Position, UParticleSystem* Particles, USoundCue* cue) {
+void APickaxeItem::All_SimulateDigDebris_Implementation(FVector_NetQuantize Position, UFXSystemAsset* Particles, USoundCue* cue) {
 }
 
 void APickaxeItem::All_SimulateDigBlock_Implementation(FVector_NetQuantize Position, bool spawnParticles, int32 Material, float Density, bool isSpecial) {

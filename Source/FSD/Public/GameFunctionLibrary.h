@@ -3,22 +3,22 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "GameFunctionLibrary.generated.h"
 
-class APlayerCharacter;
-class UAudioComponent;
-class UWindowManager;
-class UObject;
-class USoundBase;
 class UWindowWidget;
 class UGoogleAnalyticsWrapper;
+class UObject;
+class UFSDGameInstance;
+class UWindowManager;
+class UCampaignManager;
+class UAudioComponent;
+class APlayerCharacter;
+class USoundBase;
 class AFSDGameModeSpaceRig;
 class UFSDSaveGame;
 class AFSDGameState;
 class AFSDGameMode;
-class UFSDGameInstance;
 class UGameData;
 class UDeepDiveManager;
 class ADeepCSGWorld;
-class UCampaignManager;
 class UAsyncManager;
 
 UCLASS(Blueprintable)
@@ -26,91 +26,91 @@ class FSD_API UGameFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UGameFunctionLibrary();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static void SpawnOrUpdateAudio2D(UObject* WorldContext, UPARAM(Ref) UAudioComponent*& AudioComponent, USoundBase* Sound, float VolumeMultiplier, float PitchMultiplier, FName FloatParamName, float FloatParam);
     
     UFUNCTION(BlueprintCallable)
     static void SetUsePushToTalk(bool Enable);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void SetGlobalGravityZ(UObject* WorldContextObject, float GravityZ);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void SetGlobalGravityScale(UObject* WorldContextObject, float GravityScale);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsWorldTickEnabled(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static void IsTearingDown(UObject* caller, bool& NewIsTearingDown);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsPlayingOffline(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsPlayInEditor(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static UWindowManager* GetWindowManager(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool GetUsePushToTalk();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static UWindowWidget* GetTopWindow(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString GetProjectVersion();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     static int32 GetNumPlayers(UObject* WorldContext);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     static int32 GetNumAdditionalPlayers(UObject* WorldContext);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString GetMajorProjectVersion();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     static APlayerCharacter* GetLocalPlayerCharacter(UObject* WorldContext);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static UGoogleAnalyticsWrapper* GetGoogleAnalyticsWrapper(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static float GetGlobalGravityZ(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static AFSDGameModeSpaceRig* GetFSDSRGameMode(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static UFSDSaveGame* GetFSDSaveGame(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static AFSDGameState* GetFSDGameState(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static AFSDGameMode* GetFSDGameMode(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static UFSDGameInstance* GetFSDGameInstance(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static UGameData* GetFSDGameData();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static UDeepDiveManager* GetDeepDiveManager(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static ADeepCSGWorld* GetCSGWorld(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetChangelist();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static UCampaignManager* GetCampaingManager(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static UAsyncManager* GetAsyncManager(UObject* WorldContextObject);
     
 };

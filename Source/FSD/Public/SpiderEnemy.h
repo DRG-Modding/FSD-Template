@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EnemyAttacker.h"
 #include "EnemyDeepPathfinderCharacter.h"
+#include "EnemyAttacker.h"
 #include "SpiderEnemy.generated.h"
 
-class UStaticMeshComponent;
 class UStaticMesh;
 class UPawnStatsComponent;
 class UHitReactionComponent;
 class AActor;
+class UStaticMeshComponent;
 
 UCLASS(Blueprintable)
 class ASpiderEnemy : public AEnemyDeepPathfinderCharacter, public IEnemyAttacker {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPawnStatsComponent* PawnStats;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UHitReactionComponent* HitReactions;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "DecalData.h"
 #include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
-#include "DecalData.h"
 #include "StickyFlame.generated.h"
 
 class UParticleSystemComponent;
-class UStatusEffectTriggerComponent;
 class UAudioComponent;
+class UStatusEffectTriggerComponent;
 
 UCLASS(Blueprintable)
 class AStickyFlame : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* FlameParticles;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAudioComponent* Audio;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UStatusEffectTriggerComponent* StatusTriggerComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

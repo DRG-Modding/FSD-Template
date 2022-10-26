@@ -23,7 +23,7 @@ public:
     UFUNCTION(BlueprintCallable)
     TMap<UResourceData*, int32> GetResourcesReward(int32 Tier);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void AwardTierRewards(UObject* WorldContext, int32 Tier);
     
 };

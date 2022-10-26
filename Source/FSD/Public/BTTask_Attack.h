@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BehaviorTree/BTTaskNode.h"
+#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BTTask_Attack.generated.h"
 
 class UBehaviorTreeComponent;
@@ -21,7 +21,7 @@ public:
     UBTTask_Attack();
 protected:
     UFUNCTION(BlueprintCallable)
-    void OnAttackCompleted(UBehaviorTreeComponent* btComponent);
+    void OnAttackCompleted(UBehaviorTreeComponent* btComponent, const bool& wasSuccess);
     
 };
 

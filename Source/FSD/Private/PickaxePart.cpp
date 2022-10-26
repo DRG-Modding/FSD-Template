@@ -11,8 +11,5 @@ EPickaxePartLocation UPickaxePart::GetPrefferedLocation() const {
 UPickaxePart::UPickaxePart() {
     this->Aquisition = NULL;
     this->Item = NULL;
-    this->AquisitionSource = NULL;
-    this->UnlockedFromStart = false;
-    this->RequiredDLC = NULL;
 }
 

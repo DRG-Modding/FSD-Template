@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Targetable.h"
 #include "GameFramework/Pawn.h"
 #include "GameplayTagAssetInterface.h"
-#include "BoolDelegateDelegate.h"
+#include "GameplayTagContainer.h"
+#include "Targetable.h"
 #include "ProjectileSpawner.h"
-#include "GameplayTagContainer.h"
-#include "GameplayTagContainer.h"
-#include "UObject/NoExportTypes.h"
 #include "EPawnAttitude.h"
+#include "BoolDelegateDelegate.h"
+#include "UObject/NoExportTypes.h"
+#include "GameplayTagContainer.h"
 #include "FSDPawn.generated.h"
 
-class UPawnStatsComponent;
 class UEnemyTemperatureComponent;
+class AActor;
+class AFSDAIController;
+class UPawnStatsComponent;
 class UStatusEffectsComponent;
 class UEnemyDescriptor;
-class AActor;
 class USkeletalMeshComponent;
 class UHealthComponentBase;
-class AFSDAIController;
 
 UCLASS(Abstract, Blueprintable)
 class AFSDPawn : public APawn, public IGameplayTagAssetInterface, public ITargetable, public IProjectileSpawner {
@@ -28,10 +28,10 @@ public:
     FBoolDelegate OnFrozenEvent;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UStatusEffectsComponent* StatusEffects;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEnemyTemperatureComponent* Temperature;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -52,7 +52,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool IsFleeing;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UPawnStatsComponent* PawnStatsInstance;
     
 public:
@@ -94,7 +94,7 @@ protected:
     void OnFirstHostileDamageTaken();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnEnemyScaled(float newScale);
+    void OnEnemyScaled(float NewScale);
     
     UFUNCTION(BlueprintCallable)
     void OnArmorShattered(const FVector& Location);

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CSGGroupComponent.h"
 #include "MeshLayerProperties.h"
+#include "CSGGroupComponent.h"
 #include "GeneralTerrainMaterialCombiner.h"
 #include "CSGLayerComponent.generated.h"
 

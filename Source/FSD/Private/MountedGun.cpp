@@ -3,9 +3,6 @@
 
 void AMountedGun::Server_Test_Implementation() {
 }
-bool AMountedGun::Server_Test_Validate() {
-    return true;
-}
 
 AMountedGun::AMountedGun() {
     this->Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));

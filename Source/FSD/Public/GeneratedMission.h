@@ -7,12 +7,12 @@
 #include "ObjectiveMissionIcon.h"
 #include "GeneratedMission.generated.h"
 
-class UMissionMutator;
-class UMutator;
+class UMissionWarning;
 class UBiome;
+class UMutator;
 class UMissionTemplate;
 class UObjective;
-class UMissionWarning;
+class UMissionMutator;
 class UMissionComplexity;
 class UMissionDuration;
 class UMissionDNA;
@@ -68,6 +68,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     EMissionStructure MissionStructure;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    bool IsInSeasonEventZone;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<ULevelSequence> LoaderLevelSequence;
     
@@ -80,6 +83,9 @@ protected:
 public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsSingleMission() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsPlagueMission() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLocked(AFSDPlayerController* Player) const;

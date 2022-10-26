@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
+#include "PickaxeMeshInstance.h"
 #include "PickaxePartEquip.h"
 #include "ItemIDInterface.h"
 #include "SpawnReleasedActor.h"
-#include "UObject/NoExportTypes.h"
 #include "EPickaxePartLocation.h"
-#include "PickaxeMeshInstance.h"
 #include "PickaxePreviewActor.generated.h"
 
 class USceneComponent;
 class UItemID;
-class UMaterialInterface;
 class UPickaxePart;
+class UMaterialInterface;
 
 UCLASS(Blueprintable)
 class APickaxePreviewActor : public AActor, public IPickaxePartEquip, public IItemIDInterface, public ISpawnReleasedActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* TP_Root;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

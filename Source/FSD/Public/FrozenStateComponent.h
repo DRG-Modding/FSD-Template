@@ -4,8 +4,8 @@
 #include "RandRange.h"
 #include "FrozenStateComponent.generated.h"
 
-class USoundBase;
 class UFSDPhysicalMaterial;
+class USoundBase;
 
 UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFrozenStateComponent : public UCharacterStateComponent {
@@ -30,7 +30,7 @@ protected:
 public:
     UFrozenStateComponent();
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_ThawPlayer();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

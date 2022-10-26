@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
-#include "ERessuplyPodState.h"
 #include "EInputKeys.h"
+#include "ERessuplyPodState.h"
 #include "UObject/NoExportTypes.h"
 #include "PipelineFinish.generated.h"
 
+class UTrackBuilderConnectPoint;
 class USingleUsableComponent;
 class APlayerCharacter;
-class UTrackBuilderConnectPoint;
 class APipelineExtractorPod;
 class ARessuplyPod;
 class ATrackBuilderSegment;
@@ -20,10 +20,10 @@ class FSD_API APipelineFinish : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTrackBuilderConnectPoint* PipelineEndConnection;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USingleUsableComponent* UsableOrderExtractor;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

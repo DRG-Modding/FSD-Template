@@ -1,14 +1,18 @@
 #include "GeneratedMission.h"
 #include "Templates/SubclassOf.h"
 
-class AFSDPlayerController;
-class UMutator;
-class AProceduralSetup;
 class UMissionDNA;
+class AFSDPlayerController;
+class AProceduralSetup;
 class UGeneratedMission;
+class UMutator;
 
 
 bool UGeneratedMission::IsSingleMission() const {
+    return false;
+}
+
+bool UGeneratedMission::IsPlagueMission() const {
     return false;
 }
 
@@ -60,5 +64,6 @@ UGeneratedMission::UGeneratedMission() {
     this->DurationLimit = NULL;
     this->MissionDNA = NULL;
     this->MissionStructure = EMissionStructure::SingleMission;
+    this->IsInSeasonEventZone = false;
 }
 

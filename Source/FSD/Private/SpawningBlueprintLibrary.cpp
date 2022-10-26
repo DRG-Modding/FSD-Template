@@ -13,10 +13,10 @@ void USpawningBlueprintLibrary::SpawnEnemyGroupDescriptor(UObject* WorldContextO
 void USpawningBlueprintLibrary::SpawnEnemiesFromPool(UObject* WorldContextObject, float Difficulty, const TArray<FVector>& Locations, bool Alert, bool isConstantPreassure) {
 }
 
-void USpawningBlueprintLibrary::SpawnEnemiesAtLocationWithCallback(UObject* WorldContextObject, UEnemyDescriptor* EnemyDescriptor, int32 count, FVector Location, const FEnemySpawnedDelegate& Callback, bool Alert, bool scaleToDifficulty, DeepPathFinderSize pfSize) {
+void USpawningBlueprintLibrary::SpawnEnemiesAtLocationWithCallback(UObject* WorldContextObject, UEnemyDescriptor* EnemyDescriptor, int32 Count, FVector Location, const FEnemySpawnedDelegate& Callback, bool Alert, bool scaleToDifficulty, DeepPathFinderSize pfSize) {
 }
 
-void USpawningBlueprintLibrary::SpawnEnemiesAtLocation(UObject* WorldContextObject, UEnemyDescriptor* EnemyDescriptor, int32 count, FVector Location, bool Alert, bool scaleToDifficulty, DeepPathFinderSize pfSize) {
+void USpawningBlueprintLibrary::SpawnEnemiesAtLocation(UObject* WorldContextObject, UEnemyDescriptor* EnemyDescriptor, int32 Count, FVector Location, bool Alert, bool scaleToDifficulty, DeepPathFinderSize pfSize) {
 }
 
 void USpawningBlueprintLibrary::SpawnEnemiesAtEachLocation(UObject* WorldContextObject, UEnemyDescriptor* EnemyDescriptor, TArray<FVector> Locations, DeepPathFinderSize pfSize) {
@@ -26,7 +26,7 @@ TArray<FVector> USpawningBlueprintLibrary::GetSpawnPointsInRange(UObject* WorldC
     return TArray<FVector>();
 }
 
-TArray<FVector> USpawningBlueprintLibrary::GetSpawnPointsInCircle(UObject* WorldContextObject, FVector Location, float Radius, int32 count, bool scaleToDificulty, float maxSpawnAngle, DeepPathFinderSize pfSize) {
+TArray<FVector> USpawningBlueprintLibrary::GetSpawnPointsInCircle(UObject* WorldContextObject, FVector Location, float Radius, int32 Count, bool scaleToDificulty, float maxSpawnAngle, DeepPathFinderSize pfSize) {
     return TArray<FVector>();
 }
 

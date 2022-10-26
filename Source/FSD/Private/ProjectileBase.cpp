@@ -2,8 +2,9 @@
 #include "Net/UnrealNetwork.h"
 #include "Components/SphereComponent.h"
 
-class UTerrainMaterial;
 class AProjectileBase;
+class UFSDPhysicalMaterial;
+class UTerrainMaterial;
 class UPrimitiveComponent;
 class UDamageComponent;
 class AActor;
@@ -17,20 +18,11 @@ void AProjectileBase::StopMovement() {
 
 void AProjectileBase::Server_SetState_Implementation(FVector_NetQuantize Position, FVector_NetQuantize Velocity) {
 }
-bool AProjectileBase::Server_SetState_Validate(FVector_NetQuantize Position, FVector_NetQuantize Velocity) {
-    return true;
-}
 
 void AProjectileBase::Server_Penetrated_Implementation(const FProjectileImpact& Impact) {
 }
-bool AProjectileBase::Server_Penetrated_Validate(const FProjectileImpact& Impact) {
-    return true;
-}
 
 void AProjectileBase::Server_Impacted_Implementation(const FProjectileImpact& Impact) {
-}
-bool AProjectileBase::Server_Impacted_Validate(const FProjectileImpact& Impact) {
-    return true;
 }
 
 
@@ -72,7 +64,8 @@ void AProjectileBase::DisableProjectileCollision(AProjectileBase* projectileA, A
 void AProjectileBase::DisableAndDestroy() {
 }
 
-void AProjectileBase::DamageArmor(UDamageComponent* DamageComponent, const FHitResult& HitResult) {
+UFSDPhysicalMaterial* AProjectileBase::DamageArmor(UDamageComponent* DamageComponent, const FHitResult& HitResult) {
+    return NULL;
 }
 
 

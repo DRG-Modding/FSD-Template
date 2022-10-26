@@ -5,10 +5,10 @@
 #include "AnimatedItem.h"
 #include "RessuplyPodItem.generated.h"
 
-class UObject;
 class AActor;
 class UItemPlacerAggregator;
 class ARessuplyPod;
+class UObject;
 
 UCLASS(Blueprintable)
 class ARessuplyPodItem : public AAnimatedItem {
@@ -21,7 +21,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UItemPlacerAggregator> ItemPlacerClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UItemPlacerAggregator* ItemPlacerInstance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -47,7 +47,7 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_Call_Resupply(const FVector& Location);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -57,7 +57,7 @@ protected:
     void OnRep_Used();
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     int32 GetResourceCost(UObject* WorldContextObject) const;
     
 protected:

@@ -3,8 +3,8 @@
 #include "Components/ActorComponent.h"
 #include "LevelGenerationDebris.generated.h"
 
-class UDebrisBase;
 class UObject;
+class UDebrisBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ULevelGenerationDebris : public UActorComponent {

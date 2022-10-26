@@ -1,21 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "FSDAIController.h"
 #include "GameplayTagContainer.h"
 #include "FollowTargetChangedDelegate.h"
-#include "FSDAIController.h"
 #include "LaserPointerTarget.h"
-#include "UObject/NoExportTypes.h"
 #include "EInputKeys.h"
+#include "UObject/NoExportTypes.h"
 #include "BoscoController.generated.h"
 
-class APlayerCharacter;
-class UBehaviorTree;
-class UTerrainMaterial;
 class UDroneUseComponent;
-class ACarriableItem;
+class UBehaviorTree;
+class APlayerCharacter;
+class UTerrainMaterial;
 class AActor;
-class UHealthComponentBase;
 class AFSDPlayerState;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class ABoscoController : public AFSDAIController {
@@ -33,10 +32,13 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFollowTargetChanged OnFollowTargetChangedDelegate;
     
-protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTerrainMaterial* HearthstoneCrystalMaterial;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<UTerrainMaterial*> PlagueMaterials;
+    
+protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SearchForEnemiesInterval;
     
@@ -76,11 +78,11 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ReviveHealthPercentage;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UDroneUseComponent* CurrentUse;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    ACarriableItem* TryingToPickGem;
+    AActor* TryingToPickItem;
     
 public:
     ABoscoController();
@@ -96,7 +98,7 @@ private:
     
 public:
     UFUNCTION(BlueprintCallable)
-    void PickupGem();
+    void PickupItem();
     
 private:
     UFUNCTION(BlueprintCallable)
@@ -104,7 +106,7 @@ private:
     
 public:
     UFUNCTION(BlueprintCallable)
-    void OnSecondaryLaserPointer(AActor* aTarget, const FVector& aLocation);
+    void OnSecondaryLaserPointer(const FLaserPointerTarget& HitInfo);
     
     UFUNCTION(BlueprintCallable)
     void OnPlayerShout(APlayerCharacter* APlayerCharacter);
@@ -126,6 +128,9 @@ protected:
     void OnEscortTargetDied(UHealthComponentBase* Health);
     
 public:
+    UFUNCTION(BlueprintCallable)
+    void OnCarriedUsed(APlayerCharacter* usedBy, EInputKeys Key);
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetPointNearPlayers() const;
     
@@ -134,9 +139,6 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void GenerateRelativeLocation(AActor* aTarget, float aRange, float aHeightRestriction, float aMinRange, bool aTryToStayOutOfTheWay, bool aStayBehind);
-    
-    UFUNCTION(BlueprintCallable)
-    void GemUsed(APlayerCharacter* usedBy, EInputKeys Key);
     
     UFUNCTION(BlueprintCallable)
     void ConfirmPickup();

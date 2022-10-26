@@ -41,12 +41,13 @@ UDamageComponent::UDamageComponent() {
     this->DamageImpulse = NULL;
     this->Damage = 5.00f;
     this->ArmorDamageMultiplier = 1.00f;
+    this->ArmorPenetration = 0.00f;
     this->ShattersArmor = false;
     this->DamageClass = NULL;
     this->ArmorDamageType = EArmorDamageType::Normal;
     this->WeakpointDamageMultiplier = 1.00f;
     this->FrozenDamageBonusScale = 1.00f;
-    this->friendlyFireModifier = 1.00f;
+    this->FriendlyFireModifier = 1.00f;
     this->SelfFriendlyFireMultiplier = 1.00f;
     this->StaggerOnlyOnWeakpointHit = false;
     this->StaggerChance = 0.00f;

@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ECharacterState.h"
 #include "Animation/AnimInstance.h"
 #include "FootStepNotifyTarget.h"
 #include "UObject/NoExportTypes.h"
+#include "ECharacterState.h"
 #include "UObject/NoExportTypes.h"
-#include "GliderAnimSync.h"
 #include "ECharacterMoveDirection.h"
+#include "GliderAnimSync.h"
 #include "PlayerAnimInstance.generated.h"
 
 class UItemCharacterAnimationSet;

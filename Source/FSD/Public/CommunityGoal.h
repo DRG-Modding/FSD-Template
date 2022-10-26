@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
-#include "ECommunityGoalType.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/DataAsset.h"
 #include "ECommunityGoalTier.h"
+#include "ECommunityGoalType.h"
 #include "CommunityGoal.generated.h"
 
-class UObject;
 class UCommunityGoalCategory;
 class UCommnuityRewardSetup;
+class UObject;
 
 UCLASS(Blueprintable)
 class UCommunityGoal : public UDataAsset {
@@ -67,7 +67,7 @@ protected:
     int32 RewardTier(float Value, int32 Members);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    UFUNCTION(BlueprintCallable, BlueprintPure=false, meta=(WorldContext="WorldContext"))
     void IncrementGoal(UObject* WorldContext, float Value) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ProjectileBase.h"
-#include "FakeMoveState.h"
 #include "FakeMoverState.h"
+#include "FakeMoveState.h"
 #include "Engine/EngineTypes.h"
 #include "FakePhysicsProjectile.generated.h"
 
-class AActor;
-class UFakeMoverSettings;
 class UPrimitiveComponent;
+class UFakeMoverSettings;
+class AActor;
 
 UCLASS(Blueprintable)
 class AFakePhysicsProjectile : public AProjectileBase {
@@ -18,7 +18,7 @@ public:
     FFakeMoverState MoverState;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_PosVel, meta=(AllowPrivateAccess=true))
-    FFakeMoveState posVel;
+    FFakeMoveState PosVel;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFakeMoverSettings* MoveSettings;

@@ -4,10 +4,10 @@
 #include "GameFramework/HUD.h"
 #include "FSDHUD.generated.h"
 
+class URadarPointComponent;
 class APlayerCharacter;
 class AFSDHUD;
 class APlayerController;
-class URadarPointComponent;
 class APlayerCameraDrone;
 
 UCLASS(Blueprintable, NonTransient)

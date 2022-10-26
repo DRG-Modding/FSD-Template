@@ -5,51 +5,51 @@
 #include "LensActivedDelegateDelegate.h"
 #include "LensDeactivedDelegateDelegate.h"
 #include "MicrowaveLense.h"
-#include "MultiHitScanHits.h"
 #include "Engine/NetSerialization.h"
+#include "UObject/NoExportTypes.h"
 #include "MultiHitscanHit.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "MultiHitScanHits.h"
 #include "MicrowaveWeapon.generated.h"
 
-class UCapsuleHitscanComponent;
 class UDamageComponent;
-class UStatusEffect;
-class UNiagaraComponent;
+class UHealthComponentBase;
 class UFirstPersonNiagaraComponent;
-class UNiagaraSystem;
+class UCapsuleHitscanComponent;
+class UNiagaraComponent;
+class UStatusEffect;
 class ABoil;
+class UNiagaraSystem;
 class UParticleSystem;
 class USoundCue;
 class AActor;
+class UFSDPhysicalMaterial;
 class UEnemyTemperatureComponent;
 class UPrimitiveComponent;
-class UFSDPhysicalMaterial;
-class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class FSD_API AMicrowaveWeapon : public AAmmoDrivenWeapon {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* DamageComp;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCapsuleHitscanComponent* CapsuleHitscanComp;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UFirstPersonNiagaraComponent* FP_MuzzleParticle;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UNiagaraComponent* TP_MuzzleParticle;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* ExplodingTargetsDamageComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* RadiantSuperheaterHeat;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* RadiantSuperheaterFrostShock;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -110,7 +110,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UNiagaraSystem* MicrowaveMuzzle;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UNiagaraComponent* MuzzleComp;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -191,7 +191,7 @@ protected:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void ShowBoilerRayExplosion(FVector_NetQuantize Location, FRotator Rotation);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetLensePower(float lensepower);
     
     UFUNCTION(BlueprintCallable)

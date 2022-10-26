@@ -14,7 +14,16 @@ class USpecialEventSettings : public UDataAsset {
 public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<USpecialEvent*> SpecialEvents;
+    TArray<USpecialEvent*> MachineEvents;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FRuntimeFloatCurve ME_SpawnChanceMissionLengthCurve;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<USpecialEvent*> OtherSpecialEvents;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FRuntimeFloatCurve Other_SpawnChanceMissionLengthCurve;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftClassPtr<AEventRewardFrame> EventRewardFrameClass;
@@ -30,9 +39,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float XPReward;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FRuntimeFloatCurve SpawnChanceMissionLengthCurve;
     
 public:
     USpecialEventSettings();

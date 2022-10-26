@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CopyBoneVisibilityCompleted.h"
 #include "Animation/AnimInstance.h"
+#include "CopyBoneVisibilityCompleted.h"
 #include "MicroMissileLauncherAnimInstance.generated.h"
 
-class AMicroMissileLauncher;
 class UAnimMontage;
+class AMicroMissileLauncher;
 
 UCLASS(Blueprintable, NonTransient)
 class UMicroMissileLauncherAnimInstance : public UAnimInstance, public ICopyBoneVisibilityCompleted {

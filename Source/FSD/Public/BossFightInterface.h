@@ -4,8 +4,8 @@
 #include "UObject/Interface.h"
 #include "BossFightInterface.generated.h"
 
-class AActor;
 class UBossFightWidget;
+class AActor;
 
 UINTERFACE(Blueprintable)
 class UBossFightInterface : public UInterface {

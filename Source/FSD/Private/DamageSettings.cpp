@@ -11,6 +11,7 @@ UDamageSettings::UDamageSettings() {
     this->PlayerOnFireStatusEffect = NULL;
     this->TemperatureShockFromFrozenStatusEffect = NULL;
     this->TemperatureShockFromBurningStatusEffect = NULL;
+    this->InfectionPerDamagePoint = 0.00f;
     this->ArmorShatterDamage = NULL;
     this->ChemicalExplosionDamage = NULL;
     this->ArmorShatterEmitter = NULL;

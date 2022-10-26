@@ -1,6 +1,9 @@
 #include "FlareGunProjectile.h"
 #include "Net/UnrealNetwork.h"
 
+void AFlareGunProjectile::UpdateLightDuration(float lightDuration) {
+}
+
 
 void AFlareGunProjectile::OnRep_IsFlareOn() {
 }

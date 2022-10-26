@@ -4,9 +4,9 @@
 #include "UObject/NoExportTypes.h"
 #include "ResourceChunk.generated.h"
 
-class UResourceData;
-class USoundCue;
 class USimpleObjectInfoComponent;
+class USoundCue;
+class UResourceData;
 class APlayerCharacter;
 
 UCLASS(Blueprintable)
@@ -23,7 +23,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool CanBeCollected;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USimpleObjectInfoComponent* InfoComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

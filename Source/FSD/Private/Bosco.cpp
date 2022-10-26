@@ -1,16 +1,16 @@
 #include "Bosco.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/PointLightComponent.h"
 #include "UpgradableBoscoComponent.h"
-#include "Components/SkeletalMeshComponent.h"
 #include "BoscoAbillityComponent.h"
-#include "HitscanComponent.h"
 #include "HealthComponent.h"
 #include "DamageComponent.h"
-#include "BobbingComponent.h"
 #include "Perception/PawnSensingComponent.h"
 #include "DroneMiningToolBase.h"
+#include "BobbingComponent.h"
 #include "Components/SpotLightComponent.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "HitscanComponent.h"
+#include "Components/PointLightComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "Components/AudioComponent.h"
 #include "DroneSkinnableComponent.h"
@@ -110,7 +110,8 @@ void ABosco::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimePr
 
 ABosco::ABosco() {
     this->HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("HealthComponent"));
-    this->AbillityComponent = CreateDefaultSubobject<UBoscoAbillityComponent>(TEXT("PlayerAbillity"));
+    this->PrimaryAbility = CreateDefaultSubobject<UBoscoAbillityComponent>(TEXT("PrimaryAbility"));
+    this->SecondaryAbility = CreateDefaultSubobject<UBoscoAbillityComponent>(TEXT("SecondaryAbility"));
     this->Damage = CreateDefaultSubobject<UDamageComponent>(TEXT("Damage"));
     this->Senses = CreateDefaultSubobject<UPawnSensingComponent>(TEXT("Senses"));
     this->MiningTool = CreateDefaultSubobject<UDroneMiningToolBase>(TEXT("MiningTool"));
@@ -133,6 +134,7 @@ ABosco::ABosco() {
     this->GeneralCallShout = NULL;
     this->RocketAbillityShout = NULL;
     this->CryoGrenadeAbillityShout = NULL;
+    this->VacuumShout = NULL;
     this->MineResponse = NULL;
     this->CombatResponse = NULL;
     this->LightResponse = NULL;

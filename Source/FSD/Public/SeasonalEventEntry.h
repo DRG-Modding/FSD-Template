@@ -3,6 +3,7 @@
 #include "SeasonalEventEntry.generated.h"
 
 class USpecialEvent;
+class UMutator;
 class UMissionTemplate;
 
 USTRUCT(BlueprintType)
@@ -14,6 +15,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UMissionTemplate*> BannedMissions;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<UMutator*> BannedMutators;
     
     FSD_API FSeasonalEventEntry();
 };

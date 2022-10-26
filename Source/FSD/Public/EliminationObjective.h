@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Objective.h"
 #include "EliminationDescriptors.h"
 #include "EliminationTarget.h"
-#include "Objective.h"
 #include "EliminationObjective.generated.h"
 
-class UCaveInfluencer;
 class AActor;
+class UCaveInfluencer;
 class UDebrisPositioning;
 class UDebrisBase;
 class AFSDPawn;

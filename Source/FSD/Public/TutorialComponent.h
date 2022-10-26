@@ -3,11 +3,11 @@
 #include "Components/ActorComponent.h"
 #include "TutorialComponent.generated.h"
 
-class AFSDPlayerState;
 class APlayerCharacter;
-class ATutorialManager;
+class AFSDPlayerState;
 class AFSDPlayerController;
 class UFSDSaveGame;
+class ATutorialManager;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTutorialComponent : public UActorComponent {
@@ -84,7 +84,7 @@ protected:
     void OnTutorialsReset();
     
     UFUNCTION(BlueprintCallable)
-    void OnManagerReady(ATutorialManager* Manager);
+    void OnManagerReady(ATutorialManager* manager);
     
     UFUNCTION(BlueprintCallable)
     void MarkTutorialWatched();

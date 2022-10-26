@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
-#include "GenerateIconInfo.h"
 #include "EVanitySlot.h"
-#include "Engine/LatentActionManager.h"
 #include "PickaxeSet.h"
+#include "GenerateIconInfo.h"
+#include "Engine/LatentActionManager.h"
 #include "EPickaxePartLocation.h"
 #include "IconGenerationManager.generated.h"
 
-class AIconGenerationWeapon;
-class AIconGenerationBase;
-class UTextureRenderTarget2D;
-class AIconGenerationCharacter;
-class UVanityItem;
 class AIconGenerationPickaxe;
+class UVanityItem;
+class AIconGenerationCharacter;
+class AIconGenerationBase;
+class UPickaxePart;
+class AIconGenerationWeapon;
+class UTextureRenderTarget2D;
 class UIconGenerationManager;
 class UItemSkin;
 class UPlayerCharacterID;
-class UPickaxePart;
 
 UCLASS(Blueprintable)
 class UIconGenerationManager : public UObject {
@@ -59,17 +59,17 @@ protected:
     
 public:
     UIconGenerationManager();
-    UFUNCTION(BlueprintCallable)
-    static void GenerateWeaponIcon_Async(UIconGenerationManager* Manager, UItemSkin* Item, bool inShowCloseUp, UPlayerCharacterID* Character, UTextureRenderTarget2D*& Icon, FLatentActionInfo LatentInfo);
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
+    static void GenerateWeaponIcon_Async(UIconGenerationManager* manager, UItemSkin* Item, bool inShowCloseUp, UPlayerCharacterID* Character, UTextureRenderTarget2D*& Icon, FLatentActionInfo LatentInfo);
     
-    UFUNCTION(BlueprintCallable)
-    static void GenerateVanityIcon_Async(UIconGenerationManager* Manager, UVanityItem* Item, UPlayerCharacterID* Character, UTextureRenderTarget2D*& Icon, FLatentActionInfo LatentInfo);
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
+    static void GenerateVanityIcon_Async(UIconGenerationManager* manager, UVanityItem* Item, UPlayerCharacterID* Character, UTextureRenderTarget2D*& Icon, FLatentActionInfo LatentInfo);
     
-    UFUNCTION(BlueprintCallable)
-    static void GeneratePickaxeSetIcon_Async(UIconGenerationManager* Manager, FPickaxeSet PickaxeSet, UPlayerCharacterID* Character, UTextureRenderTarget2D*& Icon, FLatentActionInfo LatentInfo);
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
+    static void GeneratePickaxeSetIcon_Async(UIconGenerationManager* manager, FPickaxeSet PickaxeSet, UPlayerCharacterID* Character, UTextureRenderTarget2D*& Icon, FLatentActionInfo LatentInfo);
     
-    UFUNCTION(BlueprintCallable)
-    static void GeneratePickaxePartIcon_Async(UIconGenerationManager* Manager, UPickaxePart* part, EPickaxePartLocation PickaxePartLocation, UPlayerCharacterID* Character, UTextureRenderTarget2D*& Icon, FLatentActionInfo LatentInfo);
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
+    static void GeneratePickaxePartIcon_Async(UIconGenerationManager* manager, UPickaxePart* part, EPickaxePartLocation PickaxePartLocation, UPlayerCharacterID* Character, UTextureRenderTarget2D*& Icon, FLatentActionInfo LatentInfo);
     
 };
 

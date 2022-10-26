@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "WindowWidget.h"
 #include "EMinersManualSection.h"
-#include "UObject/NoExportTypes.h"
 #include "EscapeMenuWindow.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

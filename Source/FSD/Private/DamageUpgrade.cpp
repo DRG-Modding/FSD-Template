@@ -1,8 +1,8 @@
 #include "DamageUpgrade.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
 class AFSDPlayerState;
+class AActor;
 
 FUpgradeValues UDamageUpgrade::GetUpgradedValue(TSubclassOf<AActor> Item, TSubclassOf<AActor> upgradedItem, AFSDPlayerState* Player, EDamageUpgrade NewUpgradeType, EDamageComponentType NewDamageComponentType) {
     return FUpgradeValues{};

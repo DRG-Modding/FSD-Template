@@ -1,28 +1,37 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Components/ActorComponent.h"
 #include "MissionShoutDelegateDelegate.h"
+#include "Components/ActorComponent.h"
 #include "MissionShoutEndDelegateDelegate.h"
 #include "GameplayTagContainer.h"
 #include "ActiveOutline.h"
 #include "MissionShoutQueueItem.h"
 #include "EShoutType.h"
 #include "UObject/NoExportTypes.h"
+#include "EAsyncLoadPriority.h"
 #include "CommunicationComponent.generated.h"
 
-class USoundBase;
-class UAudioComponent;
-class APlayerCharacter;
 class UDialogDataAsset;
+class APlayerCharacter;
 class UShoutWidget;
 class UCharacterShoutsData;
+class UAudioComponent;
 class UObject;
+class USoundBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCommunicationComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FShoutDelegate, APlayerCharacter*, InSender, FText, InText, float, InDuration);
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FShoutDelegate OnSubtitleShout;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FShoutDelegate OnPlayerShout;
+    
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMissionShoutDelegate OnMissionShout;
     
@@ -60,12 +69,12 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bMissionControlPaused;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAudioComponent* MissionControlAudioComponent;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
-    TMap<APlayerCharacter*, UShoutWidget*> ActiveShouts;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    TArray<UShoutWidget*> ActiveShouts;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FActiveOutline> ActiveOutlines;
@@ -93,7 +102,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void ShoutCustomLocalOnly(UDialogDataAsset* NewShout);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static void ShoutCustomClosestDwarf(UObject* WorldContext, UDialogDataAsset* NewShout, FVector TargetLocation);
     
     UFUNCTION(BlueprintCallable)
@@ -113,19 +122,19 @@ protected:
     void ServerMissionShout(UDialogDataAsset* NewShout, int32 Index, bool bPriority);
     
 public:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UAudioComponent* PlayPitchedByClass(UObject* WorldContextObject, TSubclassOf<APlayerCharacter> CharacterClass, USoundBase* Sound, UDialogDataAsset* NewShout, EShoutType ShoutType, UAudioComponent* AudioComponent);
     
-    UFUNCTION(BlueprintCallable)
-    void PlayPitchedAsync(UDialogDataAsset* NewShout, EShoutType ShoutType, bool IgnoreCoolDown, UAudioComponent* AudioComponent, UObject* WorldContextObject, float shoutVolumeMultiplier);
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    void PlayPitchedAsync(UDialogDataAsset* NewShout, EShoutType ShoutType, bool IgnoreCoolDown, UAudioComponent* AudioComponent, UObject* WorldContextObject, float shoutVolumeMultiplier, EAsyncLoadPriority Priority);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     UAudioComponent* PlayPitched(USoundBase* Sound, UDialogDataAsset* NewShout, EShoutType ShoutType, bool IgnoreCoolDown, UAudioComponent* AudioComponent, UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static int32 MissionShoutLocally(UObject* WorldContext, UDialogDataAsset* NewShout);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static void MissionShout(UObject* WorldContext, UDialogDataAsset* NewShout, bool bPriority);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

@@ -13,6 +13,9 @@ public:
     FNewMessageSig OnNewMessage;
     
     UMessagingSubSystem();
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    static FString MessageSenderIdAsString(const FFSDChatMessage& Msg);
+    
     UFUNCTION(BlueprintCallable)
     static float MessageAge(const FFSDChatMessage& Msg);
     

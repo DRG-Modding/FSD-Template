@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EDashPointsGenerationMode.h"
 #include "Components/ActorComponent.h"
-#include "Engine/NetSerialization.h"
 #include "DashSigDelegate.h"
-#include "UObject/NoExportTypes.h"
+#include "Engine/NetSerialization.h"
 #include "Curves/CurveFloat.h"
+#include "EDashPointsGenerationMode.h"
+#include "UObject/NoExportTypes.h"
 #include "DashPoints.generated.h"
 
 class UHealthComponentBase;

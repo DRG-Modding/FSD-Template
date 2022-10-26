@@ -5,15 +5,15 @@
 
 class UCSGPreviewScene;
 class UCSGGroupComponent;
-class UTerrainMaterialCore;
 class UBakeConfig;
+class UTerrainMaterialCore;
 class UCSGBase;
 
 UCLASS(Blueprintable)
 class FSDENGINE_API ACSGBuilder : public ACSGBuilderBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCSGGroupComponent* CSGRoot;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

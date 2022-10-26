@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
-#include "EFSDGoogleAnalyticsProperties.h"
 #include "PartyAnalyticsInformation.h"
 #include "DeepDiveAnalyticsInformation.h"
+#include "EFSDGoogleAnalyticsProperties.h"
 #include "GoogleAnalyticsWrapper.generated.h"
 
-class AFSDGameState;
-class AActor;
 class USeasonChallenge;
 class APlayerController;
+class AFSDGameState;
+class AActor;
 class AFSDPlayerState;
 
 UCLASS(Blueprintable)
@@ -98,7 +98,7 @@ public:
     void RecordGASeasonLevelUp();
     
     UFUNCTION(BlueprintCallable)
-    void RecordGAMissionTotalTimeHit(const FString& Key, const FString& Campaign, bool Rank, int32 totalTime, int32 Progress, int32 XP, int32 Credits);
+    void RecordGAMissionTotalTimeHit(const FString& Key, const FString& Campaign, bool Rank, int32 TotalTime, int32 Progress, int32 XP, int32 Credits);
     
     UFUNCTION(BlueprintCallable)
     void RecordGAMissionTimeEvent(int32 Time);
@@ -107,10 +107,10 @@ public:
     void RecordGAEvent(const FString& EventCategory, const FString& EventAction, const FString& EventLabel, const int32 EventValue, EFSDGoogleAnalyticsProperties Property);
     
     UFUNCTION(BlueprintCallable)
-    void RecordGADeepDiveStageHit(const FString& Key, bool Rank, int32 stageTime, int32 timeSinceStartOfDive, int32 totalTime, int32 nitraLeft);
+    void RecordGADeepDiveStageHit(const FString& Key, bool Rank, int32 StageTime, int32 TimeSinceStartOfDive, int32 TotalTime, int32 NitraLeft);
     
     UFUNCTION(BlueprintCallable)
-    void RecordGaChallengeReroll(int32 challengeIndex, USeasonChallenge* challenge);
+    void RecordGaChallengeReroll(int32 ChallengeIndex, USeasonChallenge* Challenge);
     
     UFUNCTION(BlueprintCallable)
     void RecordExtraFailInfo(const FString& MissionName, const FString& Stage, const FString& ExtraText);

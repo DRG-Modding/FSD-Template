@@ -1,16 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HealthChangedSigDelegate.h"
 #include "Components/ActorComponent.h"
-#include "HitSigDelegate.h"
 #include "Health.h"
-#include "BodypartHitSigDelegate.h"
+#include "HealthChangedSigDelegate.h"
+#include "EHealthbarType.h"
 #include "DamageSigDelegate.h"
-#include "DeathSigDelegate.h"
 #include "OnRadialDamageDelegate.h"
+#include "HitSigDelegate.h"
+#include "BodypartHitSigDelegate.h"
+#include "DeathSigDelegate.h"
+#include "OnHitByHitScanDelegate.h"
 #include "UObject/NoExportTypes.h"
 #include "DamageData.h"
-#include "EHealthbarType.h"
 #include "HealthComponentBase.generated.h"
 
 class AActor;
@@ -44,6 +45,9 @@ public:
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnRadialDamage OnRadialDamage;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FOnHitByHitScan OnHitByHitScan;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCanTakeDamageDelegate OnCanTakeDamageChanged;
@@ -110,9 +114,10 @@ public:
     
     
     // Fix for true pure virtual functions not being implemented
-    UFUNCTION(BlueprintCallable)
-    //AActor* GetOwner() const override PURE_VIRTUAL(GetOwner, return NULL;);
+    /*UFUNCTION(BlueprintCallable)
+    AActor* GetOwner() const override PURE_VIRTUAL(GetOwner, return NULL;);*/
     
+    UFUNCTION(BlueprintCallable)
     float GetMaxHealth() const override PURE_VIRTUAL(GetMaxHealth, return 0.0f;);
     
     UFUNCTION(BlueprintCallable)

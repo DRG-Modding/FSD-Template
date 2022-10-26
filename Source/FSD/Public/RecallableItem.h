@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
-#include "AnimatedItem.h"
-#include "Upgradable.h"
 #include "UObject/NoExportTypes.h"
+#include "Upgradable.h"
+#include "AnimatedItem.h"
 #include "RecallableItem.generated.h"
 
-class ARecallableActor;
 class AActor;
+class ARecallableActor;
 
 UCLASS(Abstract, Blueprintable)
 class ARecallableItem : public AAnimatedItem, public IUpgradable {
@@ -26,7 +26,7 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerSpawnItem(const FVector& Location, const FRotator& Rotation);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

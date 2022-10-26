@@ -6,9 +6,9 @@
 #include "UObject/NoExportTypes.h"
 #include "CarriableComponent.generated.h"
 
-class UItemCharacterAnimationSet;
-class UUseAnimationSetting;
 class APlayerCharacter;
+class UUseAnimationSetting;
+class UItemCharacterAnimationSet;
 class UDialogDataAsset;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

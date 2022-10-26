@@ -5,27 +5,27 @@
 #include "VanityCharacter.generated.h"
 
 class UChildActorComponent;
+class UBeardColorVanityItem;
 class UAnimSequenceBase;
 class USkinColorVanityItem;
-class UBeardColorVanityItem;
-class UEyeBrowsVanityItem;
 class UHeadVanityItem;
 class USideburnsVanityItem;
+class UMaterialInterface;
+class UEyeBrowsVanityItem;
 class UMoustacheVanityItem;
 class UBeardVanityItem;
 class UArmorVanityItem;
 class UArmorMaterialVanityItem;
-class UItemSkin;
 class USkeletalMeshComponent;
-class UMaterialInterface;
 class AItem;
+class UItemSkin;
 
 UCLASS(Blueprintable)
 class AVanityCharacter : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UChildActorComponent* ChildActorComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -61,10 +61,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UArmorMaterialVanityItem* ArmorColor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* Mesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* BodyMesh;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

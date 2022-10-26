@@ -7,19 +7,19 @@
 #include "SelectedCharacterChangedDelegateDelegate.h"
 #include "SupplyStatusChangedDelegateDelegate.h"
 #include "EnemyKilledSignatureDelegate.h"
+#include "EChatSenderType.h"
 #include "PlayerNameChangedSignatureDelegate.h"
 #include "FractionLevelGeneratedDelegateDelegate.h"
 #include "LevelGenerationStateSignatureDelegate.h"
-#include "RewardTexts.h"
-#include "EChatSenderType.h"
 #include "XPReward.h"
+#include "RewardTexts.h"
 #include "CharacterProgress.h"
 #include "EGameOwnerStatus.h"
 #include "CreditsReward.h"
 #include "FSDPlayerState.generated.h"
 
-class UVanityItem;
 class APlayerCharacter;
+class UVanityItem;
 class UPlayerStatsComponent;
 class UPlayerRejoinState;
 class USaveGameStateComponent;
@@ -71,13 +71,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsOnSpaceRig;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPlayerStatsComponent* PlayerStatsComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPlayerRejoinState* RejoinState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USaveGameStateComponent* SaveGameStateComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_PlayerCharacter, meta=(AllowPrivateAccess=true))
@@ -107,7 +107,7 @@ protected:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLevelGenerationStateSignature OnLevelGenerationStateChanged;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UPlayerResourceComponent* PlayerResources;
     
     UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_SupplyAmmoStatus)

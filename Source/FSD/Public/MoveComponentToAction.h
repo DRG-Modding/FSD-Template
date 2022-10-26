@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "TickableActionBase.h"
+#include "UObject/NoExportTypes.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "MoveComponentToAction.generated.h"
 
@@ -25,7 +25,7 @@ protected:
 public:
     UMoveComponentToAction();
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static UMoveComponentToAction* EaseComponentTo(UObject* WorldContext, USceneComponent* InComponent, FTransform InEndTransform, TEnumAsByte<EEasingFunc::Type> InEasingMode, bool InWorldSpace, float InDuration);
     
 };

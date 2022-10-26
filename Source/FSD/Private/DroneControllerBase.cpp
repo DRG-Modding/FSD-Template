@@ -1,12 +1,11 @@
 #include "DroneControllerBase.h"
 
 class APlayerCharacter;
-class AActor;
 
 void ADroneControllerBase::OnShout(APlayerCharacter* ShoutingPlayer) {
 }
 
-void ADroneControllerBase::OnSecondaryLaserPointer(AActor* aTarget, const FVector& aLocation) {
+void ADroneControllerBase::OnSecondaryLaserPointer(const FLaserPointerTarget& HitInfo) {
 }
 
 void ADroneControllerBase::OnSalute(APlayerCharacter* aCharacater) {

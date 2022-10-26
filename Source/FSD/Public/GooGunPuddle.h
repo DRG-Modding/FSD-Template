@@ -2,26 +2,26 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
-#include "GooPuddleStatusEffectTrigger.h"
 #include "Engine/EngineTypes.h"
+#include "GooPuddleStatusEffectTrigger.h"
 #include "DamageData.h"
 #include "GooGunPuddle.generated.h"
 
-class USoundBase;
 class USphereComponent;
 class USimpleHealthComponent;
-class UStatusEffect;
+class USoundBase;
 class UPrimitiveComponent;
+class UStatusEffect;
 
 UCLASS(Blueprintable)
 class AGooGunPuddle : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USphereComponent* SphereTrigger;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USimpleHealthComponent* SimpleHealth;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -38,6 +38,10 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float LifeTime;
+    
+private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool CollisionOnClients;
     
 public:
     AGooGunPuddle();

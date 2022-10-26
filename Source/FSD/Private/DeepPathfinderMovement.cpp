@@ -22,7 +22,7 @@ void UDeepPathfinderMovement::StopMove() {
 void UDeepPathfinderMovement::StopAttackStance() {
 }
 
-bool UDeepPathfinderMovement::StartMoveToActor(AActor* Dest, float NewAcceptanceRadius) {
+bool UDeepPathfinderMovement::StartMoveToActor(AActor* Dest, float NewAcceptanceRadius, bool ToCenterOfMass) {
     return false;
 }
 
@@ -52,6 +52,9 @@ void UDeepPathfinderMovement::SetSlowDownAngles(const float Min, const float Max
 void UDeepPathfinderMovement::SetMaxSpeed(const float Speed) {
 }
 
+void UDeepPathfinderMovement::SetMaxAcceleration(float Value) {
+}
+
 void UDeepPathfinderMovement::SetHandleRotation(const bool flag) {
 }
 
@@ -68,7 +71,7 @@ bool UDeepPathfinderMovement::PathExistTo(const FVector& Dest) {
     return false;
 }
 
-bool UDeepPathfinderMovement::PathExistsBetween(const FVector& From, const FVector& to) {
+bool UDeepPathfinderMovement::PathExistsBetween(const FVector& From, const FVector& To) {
     return false;
 }
 
@@ -113,6 +116,10 @@ DeepPathFinderSize UDeepPathfinderMovement::GetPathfinderSize() const {
 
 EDeepMovementState UDeepPathfinderMovement::GetMovementState() const {
     return EDeepMovementState::Stationary;
+}
+
+float UDeepPathfinderMovement::GetMaxAcceleration() const {
+    return 0.0f;
 }
 
 bool UDeepPathfinderMovement::GetIsStrafing() {

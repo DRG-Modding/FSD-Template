@@ -6,8 +6,8 @@
 #include "ELineCutterProjectileUpgradeType.h"
 #include "LineCutterProjectileUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AActor;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class ULineCutterProjectileUpgrade : public UStandardItemUpgrade {

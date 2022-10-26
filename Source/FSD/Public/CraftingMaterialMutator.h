@@ -9,7 +9,7 @@ class UCraftingMaterialMutator : public UMutator {
 public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float Modifier;
+    float modifier;
     
 public:
     UCraftingMaterialMutator();

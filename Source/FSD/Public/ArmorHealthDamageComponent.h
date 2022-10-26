@@ -17,12 +17,21 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FArmorPartDamagedDelegate OnArmorPartDamagedEvent;
     
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FAmorPartDestroyedDelegate OnSocketPartDestroyedEvent;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FArmorPartDamagedDelegate OnSocketPartDamagedEvent;
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, FArmorHealthItem> PhysBoneToArmor;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_ArmorDamageInfo, meta=(AllowPrivateAccess=true))
     FArmorDamageInfo ArmorDamageInfo;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float RadialSocketDamageMultiplier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool AffectedByAmorBreak;
@@ -41,6 +50,9 @@ public:
     void RegrowAllArmor(float baseHealth);
     
 protected:
+    UFUNCTION(BlueprintCallable)
+    void PopAllWeakPoints();
+    
     UFUNCTION(BlueprintCallable)
     void OnRep_ArmorDamageInfo(FArmorDamageInfo OldValue);
     

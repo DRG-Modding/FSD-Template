@@ -25,7 +25,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 CurrentRoom;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEscortObjective* EscortObj;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -47,6 +47,9 @@ protected:
     void OnPathComplete();
     
 public:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    FVector GetPointBehindEscortMule(float Distance);
+    
     UFUNCTION(BlueprintCallable)
     TArray<FVector> GetPathForDebug(int32 Segment);
     

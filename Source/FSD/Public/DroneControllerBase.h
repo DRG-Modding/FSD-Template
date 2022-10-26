@@ -2,12 +2,10 @@
 #include "CoreMinimal.h"
 #include "AIController.h"
 #include "LaserPointerTarget.h"
-#include "UObject/NoExportTypes.h"
 #include "DroneControllerBase.generated.h"
 
-class APlayerCharacter;
 class ADroneBase;
-class AActor;
+class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class ADroneControllerBase : public AAIController {
@@ -24,7 +22,7 @@ public:
     void OnShout(APlayerCharacter* ShoutingPlayer);
     
     UFUNCTION(BlueprintCallable)
-    void OnSecondaryLaserPointer(AActor* aTarget, const FVector& aLocation);
+    void OnSecondaryLaserPointer(const FLaserPointerTarget& HitInfo);
     
     UFUNCTION(BlueprintCallable)
     void OnSalute(APlayerCharacter* aCharacater);

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ReflectiveHitscanHit.h"
 #include "HitscanBaseComponent.h"
+#include "ReflectiveHitscanHit.h"
 #include "ReflectionHitscanComponent.generated.h"
 
 class UTerrainType;
@@ -35,7 +35,7 @@ protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_RegisterHit_Reflection(const FReflectiveHitscanHit& Hit);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_RegisterHit(const FReflectiveHitscanHit& Hit);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)

@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
+#include "IRandRange.h"
+#include "RandInterval.h"
 #include "RandRange.h"
 #include "EncounterRareCritterItem.h"
-#include "EliteEnemyEntry.h"
-#include "IRandRange.h"
 #include "EncounterSpecialItem.h"
-#include "RandInterval.h"
 #include "GameplayTagContainer.h"
+#include "EliteEnemyEntry.h"
 #include "EncounterSettings.generated.h"
 
 class UEnemyDescriptor;

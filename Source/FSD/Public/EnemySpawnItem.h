@@ -12,7 +12,7 @@ public:
     UEnemyDescriptor* enemy;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    int32 count;
+    int32 Count;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float VeteranComposition;

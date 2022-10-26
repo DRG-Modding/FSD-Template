@@ -1,10 +1,10 @@
 #include "EscortMule.h"
 #include "Net/UnrealNetwork.h"
+#include "OutlineComponent.h"
 #include "SimpleObjectInfoComponent.h"
 #include "FriendlyHealthComponent.h"
 #include "RestrictedResourceBank.h"
 #include "Components/SkeletalMeshComponent.h"
-#include "OutlineComponent.h"
 
 class APlayerCharacter;
 class UInstantUsable;
@@ -72,7 +72,7 @@ AEscortMule::AEscortMule() {
     this->HealthComponent = CreateDefaultSubobject<UFriendlyHealthComponent>(TEXT("HealthComponent2"));
     this->ObjectInfo = CreateDefaultSubobject<USimpleObjectInfoComponent>(TEXT("ObjectInfo"));
     this->ResourceBank = CreateDefaultSubobject<URestrictedResourceBank>(TEXT("RestrictedResourceBank"));
-    this->State = EEscortMissionState::Stationary;
+    this->State = EEscortMissionState::InGarage;
     this->EscortObjective = NULL;
     this->SpeedModifier = 1.00f;
     this->Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));

@@ -2,15 +2,15 @@
 
 class UObject;
 
-UClass* UAsyncManager::SyncLoadClass(const TSoftClassPtr<UObject>& Asset) {
-    return NULL;
-}
-
 UObject* UAsyncManager::SyncLoadAsset(const TSoftObjectPtr<UObject>& Asset) {
     return NULL;
 }
 
 void UAsyncManager::ReleaseAllHandles() {
+}
+
+UClass* UAsyncManager::Receive_SyncLoadClass(TSoftClassPtr<UObject> Asset) {
+    return NULL;
 }
 
 void UAsyncManager::AsyncLoadSoftObjects(const TArray<TSoftObjectPtr<UObject>>& Items, EAsyncPersistence persistence, const FAsyncLoadCompleteDelegate& OnLoadComplete, EAsyncLoadPriority Priority) {

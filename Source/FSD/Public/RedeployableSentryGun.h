@@ -6,9 +6,9 @@
 #include "RedeployableSentryGun.generated.h"
 
 class ARedeployableSentryGun;
-class APlayerCharacter;
 class UActorTrackingComponent;
 class UOutlineComponent;
+class APlayerCharacter;
 class ASentryElectroBeam;
 class AActor;
 class USkeletalMeshComponent;
@@ -35,10 +35,10 @@ public:
     FOnDeployProgress OnDeployProgressEvent;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UActorTrackingComponent* ActorTrackingIcon;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UOutlineComponent* outline;
     
     UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_SentryGunOwner)

@@ -6,8 +6,8 @@
 #include "WeaponHitCounterUpgrade.generated.h"
 
 class AActor;
-class UWeaponHitCounterComponent;
 class AFSDPlayerState;
+class UWeaponHitCounterComponent;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UWeaponHitCounterUpgrade : public UItemUpgrade {

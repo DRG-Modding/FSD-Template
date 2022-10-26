@@ -3,29 +3,29 @@
 #include "Templates/SubclassOf.h"
 #include "Item.h"
 #include "UpgradableGear.h"
-#include "PickaxePartEquip.h"
-#include "EPickaxePartLocation.h"
 #include "CoolDownProgressStyle.h"
+#include "PickaxePartEquip.h"
 #include "GameplayTagContainer.h"
 #include "EPickaxeState.h"
+#include "Engine/NetSerialization.h"
+#include "EPickaxePartLocation.h"
 #include "PickaxeMeshInstance.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/NetSerialization.h"
-#include "Engine/NetSerialization.h"
 #include "PickaxeItem.generated.h"
 
-class UPlayerAnimInstance;
-class USoundCue;
-class UPrimitiveComponent;
-class UAnimMontage;
-class UStatusEffect;
-class USceneComponent;
 class UDamageComponent;
 class UItemCharacterAnimationSet;
+class USceneComponent;
+class UPlayerAnimInstance;
+class UAnimMontage;
+class UStatusEffect;
+class UFXSystemAsset;
+class USoundCue;
 class UForceFeedbackEffect;
 class UMaterialInterface;
+class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
-class UParticleSystem;
 
 UCLASS(Abstract, Blueprintable)
 class APickaxeItem : public AItem, public IUpgradableGear, public IPickaxePartEquip {
@@ -35,16 +35,16 @@ public:
     bool QuadDamageCarving;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* FP_Root;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* TP_Root;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* FP_Scale;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* TP_Scale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -65,10 +65,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UItemCharacterAnimationSet* CharacterAnimationSet;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* DamageComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* SpecialDamageComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -193,7 +193,7 @@ protected:
     void Server_DoPowerAttack();
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_DigBlock2(FVector carvePos, FVector carveDirection, int32 TerrainMaterial, bool isSpecial);
+    void Server_DigBlock(FVector carvePos, FVector carveDirection, int32 TerrainMaterial, bool isSpecial);
     
     UFUNCTION(Reliable, Server)
     void Server_DamageTarget(UPrimitiveComponent* TargetComponent, bool isSpecial, const FVector_NetQuantize& ImpactPoint, const FVector_NetQuantizeNormal& ImpactNormal, UFSDPhysicalMaterial* PhysMaterial, uint8 BoneIndex);
@@ -218,7 +218,7 @@ protected:
     void All_SimulateHitBlock(FVector_NetQuantize Position, int32 materia, bool removeDebris, bool isSpecial);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
-    void All_SimulateDigDebris(FVector_NetQuantize Position, UParticleSystem* Particles, USoundCue* cue);
+    void All_SimulateDigDebris(FVector_NetQuantize Position, UFXSystemAsset* Particles, USoundCue* cue);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_SimulateDigBlock(FVector_NetQuantize Position, bool spawnParticles, int32 Material, float Density, bool isSpecial);

@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UObject/NoExportTypes.h"
 #include "Objective.h"
 #include "ERefineryState.h"
-#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "RefineryObjective.generated.h"
 
 class AActor;
-class UDebrisPositioning;
 class AFSDRefinery;
+class UDebrisPositioning;
 class AProceduralSetup;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -1,50 +1,55 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ELandscapeCellFilter.h"
-#include "MeltOperationData.h"
 #include "GameFramework/Actor.h"
 #include "VisualLogger/VisualLoggerDebugSnapshotInterface.h"
-#include "EPreciousMaterialOptions.h"
-#include "ECarveFilterType.h"
-#include "UObject/NoExportTypes.h"
-#include "CarveSplineSegment.h"
+#include "CSGBuildOperationData.h"
+#include "TerrainSpawnDebrisOperationData.h"
 #include "TerrainBaseDoneDelegate.h"
+#include "ELandscapeCellFilter.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "PickaxeDigOperationData.h"
+#include "RemoveFloatingIslandOperationData.h"
 #include "DebrisWhenCarving.h"
+#include "RuntimeSpawnedDebris.h"
+#include "CarveOptionsCellSize.h"
 #include "TerrainLateJoinData.h"
 #include "EncodedChunkId.h"
-#include "DrillOperationData.h"
-#include "RemoveFloatingIslandOperationData.h"
-#include "PickaxeDigOperationData.h"
-#include "CarveWithColliderOperationData.h"
+#include "MeltOperationData.h"
 #include "GrenadeExplodeOperationData.h"
+#include "DrillOperationData.h"
 #include "CarveWithSTLMeshOperationData.h"
+#include "CarveSplineSegment.h"
 #include "SplineSegmentCarveOperationData.h"
-#include "CSGBuildOperationData.h"
-#include "Engine/LatentActionManager.h"
+#include "UObject/NoExportTypes.h"
+#include "CarveWithColliderOperationData.h"
+#include "UObject/NoExportTypes.h"
+#include "ESpecialDebrisType.h"
 #include "CSGRaycastHitInfo.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "CarveOptionsCellSize.h"
+#include "ECarveFilterType.h"
+#include "EPreciousMaterialOptions.h"
+#include "Engine/LatentActionManager.h"
 #include "DeepCSGWorld.generated.h"
 
-class UTerrainMaterial;
-class UMaterialInterface;
-class UTerrainType;
-class UDebrisInstances;
-class UDebrisBase;
-class UTerrainMaterialsCollection;
 class UDebrisSet;
+class UTerrainMaterial;
+class UDebrisBase;
+class UTerrainType;
+class UAsyncPathRequests;
+class UMaterialInterface;
+class UDebrisMesh;
+class UTerrainMaterialsCollection;
+class ACSGBuilder;
+class UDebrisInstances;
 class ADebrisDataActor;
 class AProceduralSetup;
 class UObject;
-class UAsyncPathRequests;
-class USTLMeshCarver;
 class UPrimitiveComponent;
 class ADeepCSGWorld;
-class UStaticMeshCarver;
 class UStaticMesh;
-class ACSGBuilder;
+class USTLMeshCarver;
+class UStaticMeshCarver;
 
 UCLASS(Blueprintable)
 class FSD_API ADeepCSGWorld : public AActor, public IVisualLoggerDebugSnapshotInterface {
@@ -108,9 +113,6 @@ public:
     TArray<UDebrisSet*> StandardDebrisSets;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<UDebrisBase*> AddedDebris;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UDebrisBase*> DebrisLevelGenerationCarved;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -124,6 +126,12 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInterface* DefaultScannerMaterial;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<ACSGBuilder> TestLevelCarver;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FBox TestLevelCarverBoundingBox;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -139,7 +147,7 @@ protected:
     TArray<UObject*> TerrainMaterialAssets;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAsyncPathRequests* AsyncPathRequests;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -160,8 +168,11 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FDebrisWhenCarving> DebrisWhenCarvingList;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UDebrisInstances*> DebrisInstanceList;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TArray<FRuntimeSpawnedDebris> RuntimeSpawnedDebris;
     
     UPROPERTY(EditAnywhere, Export, Transient)
     TArray<TWeakObjectPtr<UPrimitiveComponent>> ShowAlwaysScannerComponents;
@@ -182,6 +193,9 @@ public:
     ADeepCSGWorld();
     UFUNCTION(BlueprintCallable)
     void UnRegisterScannerComponent(UPrimitiveComponent* Component);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void TerrainOp_SpawnDebris(const FTerrainSpawnDebrisOperationData& Data);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void TerrainOp_RemoveFloating(const FRemoveFloatingIslandOperationData& Data);
@@ -216,6 +230,9 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable)
+    void SpawnDebris(UDebrisMesh* Debris, const FVector& Pos, float Radius);
+    
+    UFUNCTION(BlueprintCallable)
     void SetVisibleToScanner(const FVector& Center, const FVector& range);
     
     UFUNCTION(BlueprintCallable)
@@ -231,7 +248,7 @@ public:
     void RemoveDebrisInstance_TerrainOp2(int32 instance, int32 Component);
     
     UFUNCTION(BlueprintCallable)
-    void RemoveDebrisInSphere(const FVector& Position, float Radius, bool onlyFragile, bool alsoDurable);
+    void RemoveDebrisInSphere(const FVector& Position, float Radius, bool onlyFragile, bool alsoDurable, ESpecialDebrisType onlyType);
     
     UFUNCTION(BlueprintCallable)
     void RegisterScannerComponent(UPrimitiveComponent* Component, bool useFogOfWar);
@@ -272,19 +289,19 @@ public:
     UFUNCTION(BlueprintCallable)
     float FindTotalVolumeOfMaterialInWorld(UTerrainMaterial* Material);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     static void CarveWithSTLMeshUsingTransform_Wait(ADeepCSGWorld* CSGWorld, USTLMeshCarver* MeshCarver, UTerrainMaterial* Material, ECarveFilterType CarveFilter, const FTransform& Transform, EPreciousMaterialOptions Precious, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
     void CarveWithSTLMeshUsingTransform(USTLMeshCarver* MeshCarver, UTerrainMaterial* Material, ECarveFilterType CarveFilter, const FTransform& Transform, EPreciousMaterialOptions Precious);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     static void CarveWithSTLMesh_Wait(ADeepCSGWorld* CSGWorld, USTLMeshCarver* MeshCarver, UTerrainMaterial* Material, ECarveFilterType CarveFilter, FVector Pos, FQuat Orientation, FVector Scale, EPreciousMaterialOptions Precious, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
     void CarveWithSTLMesh(USTLMeshCarver* MeshCarver, UTerrainMaterial* Material, ECarveFilterType CarveFilter, FVector Pos, FQuat Orientation, FVector Scale, EPreciousMaterialOptions Precious);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     static void CarveWithStaticMeshUsingTransform_Wait(ADeepCSGWorld* CSGWorld, UStaticMeshCarver* MeshCarver, UTerrainMaterial* Material, ECarveFilterType CarveFilter, const FTransform& Transform, EPreciousMaterialOptions Precious, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
@@ -299,13 +316,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void CarveWithSplineSegment(const FVector& SplineStart, const FVector& SplineStartTangent, const FVector& SplineEnd, const FVector& SplineEndTangent, float Radius, UTerrainMaterial* Material, ECarveFilterType CarveFilter, EPreciousMaterialOptions Precious);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     static void CarveWithMeshUsingTransform_Wait(ADeepCSGWorld* CSGWorld, UStaticMesh* StaticMesh, UTerrainMaterial* Material, ECarveFilterType CarveFilter, const FTransform& Transform, float ExpensiveNoise, EPreciousMaterialOptions Precious, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
     void CarveWithMeshUsingTransform(UStaticMesh* StaticMesh, UTerrainMaterial* Material, ECarveFilterType CarveFilter, const FTransform& Transform, float ExpensiveNoise, EPreciousMaterialOptions Precious, CarveOptionsCellSize CarverSize);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     static void CarveWithMesh_Wait(ADeepCSGWorld* CSGWorld, UStaticMesh* StaticMesh, UTerrainMaterial* Material, ECarveFilterType CarveFilter, FVector Pos, FQuat Orientation, FVector Scale, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
@@ -316,6 +333,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     float CalcApproximateTerrainDensity(FVector Pos, float Radius);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UTerrainMaterial* BPGetTerrainMaterial(int32 Handle) const;
     
     UFUNCTION(BlueprintCallable)
     void BaseLayerCommitFinal(bool blocking);

@@ -3,9 +3,9 @@
 #include "Engine/DataAsset.h"
 #include "ItemSettings.generated.h"
 
+class UItemData;
 class UItemRefundList;
 class UItemID;
-class UItemData;
 
 UCLASS(Blueprintable)
 class UItemSettings : public UDataAsset {

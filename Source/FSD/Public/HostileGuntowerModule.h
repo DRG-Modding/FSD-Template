@@ -1,30 +1,30 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GuntowerModule.h"
 #include "UObject/NoExportTypes.h"
+#include "GuntowerModule.h"
 #include "WeaponFireOwner.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "HostileGuntowerModule.generated.h"
 
-class UEnemyComponent;
-class USkeletalMeshComponent;
 class UParticleSystemComponent;
-class APlayerCharacter;
 class UHealthComponentBase;
+class USkeletalMeshComponent;
+class UEnemyComponent;
+class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class AHostileGuntowerModule : public AGuntowerModule, public IWeaponFireOwner {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* DestroyedMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* DestroyedSmoke;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEnemyComponent* EnemyComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_ModuleMaxHealth, meta=(AllowPrivateAccess=true))

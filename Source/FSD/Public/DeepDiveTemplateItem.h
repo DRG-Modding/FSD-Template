@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "DeepDiveTemplateItem.generated.h"
 
+class UMissionComplexity;
 class UMissionTemplate;
 class UMissionDuration;
 
@@ -14,6 +15,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UMissionDuration*> AllowedDurations;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<UMissionComplexity*> AllowedComplexities;
     
     FSD_API FDeepDiveTemplateItem();
 };

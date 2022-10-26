@@ -6,8 +6,8 @@
 #include "EFlareUpgradeType.h"
 #include "FlareUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AActor;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UFlareUpgrade : public UStandardItemUpgrade {

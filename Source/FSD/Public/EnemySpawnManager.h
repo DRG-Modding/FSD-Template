@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "SpawnRarityModifierItem.h"
 #include "Components/ActorComponent.h"
 #include "EnemyDestroyedSignatureDelegate.h"
 #include "EnemySpawnedSignatureDelegate.h"
-#include "SpawnQueueItem.h"
-#include "SpawnRarityModifierItem.h"
 #include "GameplayTagContainer.h"
+#include "SpawnQueueItem.h"
 #include "UObject/NoExportTypes.h"
 #include "EnemySpawnedDelegateDelegate.h"
 #include "EnemySpawnManager.generated.h"
 
-class UEnemyDescriptor;
-class AActor;
-class USpawnEffectsComponent;
 class APawn;
+class USpawnEffectsComponent;
 class UStatusEffect;
+class UEnemyDescriptor;
 class AProceduralSetup;
+class AActor;
 class UHealthComponentBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -33,7 +33,7 @@ public:
     FEnemySpawnedSignature OnEnemySpawned;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     USpawnEffectsComponent* SpawnEffects;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -117,6 +117,12 @@ private:
 public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetSpawningEnabled() const;
+    
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintPure)
+    APawn* FindEnemyByClass(TSubclassOf<APawn> PawnClass, bool isSwarmerEnemy) const;
+    
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintPure)
+    TArray<APawn*> FindEnemiesByClass(TSubclassOf<APawn> PawnClass, bool isSwarmerEnemy) const;
     
 private:
     UFUNCTION(BlueprintCallable)

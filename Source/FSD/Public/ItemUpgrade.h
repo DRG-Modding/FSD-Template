@@ -2,20 +2,20 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "SavableDataAsset.h"
-#include "EUpgradeClass.h"
 #include "RefundableInterface.h"
+#include "EUpgradeClass.h"
 #include "EUpgradeTiers.h"
 #include "ItemUpgradeStatText.h"
 #include "CraftingCost.h"
 #include "UpgradeValues.h"
 #include "ItemUpgrade.generated.h"
 
+class UItemUpgradeCategory;
 class UItemUpgrade;
 class UResourceData;
-class UItemUpgradeCategory;
-class AActor;
-class UItemUpgradeElement;
 class AFSDPlayerState;
+class UItemUpgradeElement;
+class AActor;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UItemUpgrade : public USavableDataAsset, public IRefundableInterface {
@@ -60,7 +60,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UResourceData*> ResourceCost;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UItemUpgradeElement*> Elements;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

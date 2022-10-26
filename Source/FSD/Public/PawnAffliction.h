@@ -5,10 +5,10 @@
 #include "UObject/NoExportTypes.h"
 #include "PawnAffliction.generated.h"
 
+class UDialogDataAsset;
 class UPlayerAfflictionOverlay;
 class UTexture2D;
 class UAfflictionEffect;
-class UDialogDataAsset;
 
 UCLASS(Blueprintable)
 class UPawnAffliction : public UDataAsset, public ISoftReferenceProvider {

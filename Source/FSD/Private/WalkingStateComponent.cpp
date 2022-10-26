@@ -8,14 +8,8 @@ void UWalkingStateComponent::TrackGrindCallback(APlayerCharacter* User, EInputKe
 
 void UWalkingStateComponent::Server_StartTrackMovement_Implementation(UTrackBuilderMovement* InMovement) {
 }
-bool UWalkingStateComponent::Server_StartTrackMovement_Validate(UTrackBuilderMovement* InMovement) {
-    return true;
-}
 
 void UWalkingStateComponent::Server_SetIsSliding_Implementation(bool isSliding) {
-}
-bool UWalkingStateComponent::Server_SetIsSliding_Validate(bool isSliding) {
-    return true;
 }
 
 void UWalkingStateComponent::JumpPress() {

@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
+#include "UObject/NoExportTypes.h"
 #include "BakeSettings.h"
 #include "CSGBuilderBase.generated.h"
 
-class UTerrainMaterialCore;
 class UBakeConfig;
+class UTerrainMaterialCore;
 class UCSGPreviewComponent;
 
 UCLASS(Blueprintable)
@@ -34,7 +34,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTerrainMaterialCore* BurnedMat;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UCSGPreviewComponent* PreviewComponent;
     
     ACSGBuilderBase();

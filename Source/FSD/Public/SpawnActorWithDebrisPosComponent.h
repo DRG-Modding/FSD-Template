@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
-#include "SpawnActorDelegateDelegate.h"
 #include "UObject/NoExportTypes.h"
+#include "SpawnActorDelegateDelegate.h"
 #include "SpawnActorWithDebrisPosComponent.generated.h"
 
+class UCurveFloat;
 class AActor;
 class AProceduralSetup;
-class UCurveFloat;
 class UDebrisPositioning;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

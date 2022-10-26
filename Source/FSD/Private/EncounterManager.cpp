@@ -2,6 +2,7 @@
 
 class UEnemyDescriptor;
 class UCritterDescriptor;
+class UEnemyGroupDescriptor;
 
 void UEncounterManager::ShowSpawnLocations() {
 }
@@ -16,6 +17,9 @@ TArray<UEnemyDescriptor*> UEncounterManager::GetEncounterPool() const {
 
 TArray<UCritterDescriptor*> UEncounterManager::GetCritterPool() const {
     return TArray<UCritterDescriptor*>();
+}
+
+void UEncounterManager::AddEncounterFromGroup(UEnemyGroupDescriptor* Group, float Difficulty, FVector Location, float Radius) {
 }
 
 UEncounterManager::UEncounterManager() {

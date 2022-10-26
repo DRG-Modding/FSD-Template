@@ -32,6 +32,7 @@ UItemPlacerAggregator::UItemPlacerAggregator() {
     this->ShoutOnPlaced = NULL;
     this->MarkerType = NULL;
     this->CanOnlyPlaceOnTerrain = false;
+    this->InvalidAroundSize = 250.00f;
     this->PlacementMarker = NULL;
     this->Item = NULL;
     this->bIsPlacementActive = false;

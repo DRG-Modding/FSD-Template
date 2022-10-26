@@ -1,34 +1,33 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "AmountChangedSignatureDelegate.h"
-#include "AnimatedItem.h"
-#include "AmmoDrivenGenericEventDelegate.h"
-#include "WeaponFireOwner.h"
 #include "Upgradable.h"
+#include "AnimatedItem.h"
+#include "ItemAnimationItem.h"
 #include "DelegateDelegate.h"
+#include "WeaponFireOwner.h"
+#include "AmmoDrivenGenericEventDelegate.h"
 #include "UpgradableGear.h"
 #include "RejoinListener.h"
-#include "Curves/CurveFloat.h"
-#include "ItemAnimationItem.h"
+#include "AmountChangedSignatureDelegate.h"
 #include "TracerData.h"
-#include "RecoilSettings.h"
+#include "Curves/CurveFloat.h"
 #include "EAmmoWeaponState.h"
+#include "RecoilSettings.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "AmmoDrivenWeapon.generated.h"
 
-class UAudioComponent;
-class USoundCue;
-class ULightComponent;
+class UAnimMontage;
 class UWeaponFireComponent;
 class UAmmoDriveWeaponAggregator;
-class UAnimMontage;
+class USoundCue;
 class UFXSystemAsset;
-class UParticleSystem;
+class ULightComponent;
 class UForceFeedbackEffect;
-class APlayerCharacter;
+class UAudioComponent;
 class UDialogDataAsset;
 class UItemUpgrade;
+class APlayerCharacter;
 
 UCLASS(Abstract, Blueprintable)
 class AAmmoDrivenWeapon : public AAnimatedItem, public IWeaponFireOwner, public IUpgradable, public IUpgradableGear, public IRejoinListener {
@@ -50,10 +49,10 @@ public:
     FAmmoDrivenGenericEvent OnStoppedUsingEvent;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UWeaponFireComponent* WeaponFire;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAmmoDriveWeaponAggregator* Aggregator;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -105,27 +104,12 @@ protected:
     FTracerData Tracer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UParticleSystem* TracerParticles;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UParticleSystem* TrailParticles;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float MinTracerDistance;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float TracerSpeed;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float TracerOffset;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFXSystemAsset* CasingParticles;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UseTriggeredCasingParticleSystem;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     ULightComponent* MuzzleFlashLight;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

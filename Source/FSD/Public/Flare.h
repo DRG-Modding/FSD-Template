@@ -3,18 +3,20 @@
 #include "Templates/SubclassOf.h"
 #include "FSDPhysicsActor.h"
 #include "SaveGameIDInterface.h"
-#include "UObject/NoExportTypes.h"
 #include "ItemIDInterface.h"
 #include "LoadoutItem.h"
 #include "UpgradableGear.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "Flare.generated.h"
 
-class AActor;
-class USoundCue;
 class AItem;
+class AActor;
 class UItemID;
+class USoundCue;
+class ULightComponent;
+class UCurveFloat;
 class AFlare;
 
 UCLASS(Abstract, Blueprintable)
@@ -65,6 +67,9 @@ public:
     AFlare();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
+    UFUNCTION(BlueprintCallable)
+    void StartLightFunction(ULightComponent* mainLight, TArray<ULightComponent*> spotLights, UCurveFloat* flutterCurve, UCurveFloat* fadeInCurve);
+    
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnUpdateShadowRadius();
     
@@ -73,7 +78,7 @@ protected:
     void OnRep_IsFlareOn();
     
 public:
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(BlueprintCallable)
     void OnFlareSpawnCompleted();
     
 protected:
@@ -86,6 +91,9 @@ protected:
 public:
     UFUNCTION(BlueprintCallable)
     void Inhibit();
+    
+    UFUNCTION(BlueprintCallable)
+    float ImmidiateFadeLight();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TSubclassOf<AActor> GetWeaponViewClass() const;

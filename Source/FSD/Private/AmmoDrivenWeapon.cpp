@@ -80,11 +80,6 @@ AAmmoDrivenWeapon::AAmmoDrivenWeapon() {
     this->MuzzleParticles = NULL;
     this->TPMuzzleParticles = NULL;
     this->UseTriggeredMuzzleParticles = false;
-    this->TracerParticles = NULL;
-    this->TrailParticles = NULL;
-    this->MinTracerDistance = 100.00f;
-    this->TracerSpeed = 10000.00f;
-    this->TracerOffset = 0.00f;
     this->CasingParticles = NULL;
     this->UseTriggeredCasingParticleSystem = false;
     this->MuzzleFlashLight = NULL;

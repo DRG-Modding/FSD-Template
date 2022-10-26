@@ -3,7 +3,6 @@
 #include "TerrainMaterialBase.h"
 #include "TerrainMaterialCore.generated.h"
 
-class UMaterialInstance;
 class UTerrainMaterialCore;
 class UMaterialInterface;
 
@@ -28,9 +27,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UMaterialInterface> RenderMaterial;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSoftObjectPtr<UMaterialInstance> ObjectMaterial;
     
     UTerrainMaterialCore();
 };

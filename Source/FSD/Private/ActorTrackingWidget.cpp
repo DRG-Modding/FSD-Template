@@ -2,8 +2,8 @@
 #include "Templates/SubclassOf.h"
 
 class USceneComponent;
-class APlayerController;
 class AActor;
+class APlayerController;
 class UActorTrackingWidget;
 
 void UActorTrackingWidget::SetTargetComponent(USceneComponent* Component) {
@@ -38,5 +38,7 @@ UActorTrackingWidget::UActorTrackingWidget() {
     this->WidgetZOrder = -10;
     this->bTrackCenterOfMass = false;
     this->bHideWhenPlayerNearby = true;
+    this->bHideWhenPlayerFarAway = false;
+    this->LastTargetDistanceUpdate = -100.00f;
 }
 

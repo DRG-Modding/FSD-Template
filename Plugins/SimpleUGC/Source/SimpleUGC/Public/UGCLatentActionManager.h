@@ -3,9 +3,9 @@
 #include "UObject/Object.h"
 #include "UGCLatentActionManager.generated.h"
 
-class UTexture2DDynamic;
-class UModioTermsWrapper;
 class UModioModInfoWrapper;
+class UModioTermsWrapper;
+class UTexture2DDynamic;
 
 UCLASS(Blueprintable)
 class UUGCLatentActionManager : public UObject {

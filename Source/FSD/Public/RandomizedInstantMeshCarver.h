@@ -5,8 +5,8 @@
 #include "ECarveFilterType.h"
 #include "RandomizedInstantMeshCarver.generated.h"
 
-class UStaticMesh;
 class USTLMeshCarver;
+class UStaticMesh;
 class UStaticMeshCarver;
 class UTerrainMaterialBase;
 

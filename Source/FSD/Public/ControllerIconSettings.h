@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DeveloperSettings.h"
-#include "InputTranslationTable.h"
 #include "ActionIconMapping.h"
+#include "InputTranslationTable.h"
 #include "InputCoreTypes.h"
 #include "ControllerIconSettings.generated.h"
 

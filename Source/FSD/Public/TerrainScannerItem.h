@@ -3,8 +3,8 @@
 #include "AnimatedItem.h"
 #include "TerrainScannerItem.generated.h"
 
-class USceneComponent;
 class UAnimMontage;
+class USceneComponent;
 class USceneCaptureComponent2D;
 
 UCLASS(Blueprintable)
@@ -48,10 +48,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimMontage* EndTP;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* TerrainScannerRoot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneCaptureComponent2D* TerrainScannerCapture;
     
 public:
@@ -59,7 +59,7 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetIslookingAtMap(bool lookingAtMap);
     
     UFUNCTION(BlueprintCallable)

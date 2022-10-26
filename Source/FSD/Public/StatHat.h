@@ -12,7 +12,7 @@ public:
     void AddStatValue(const FString& Key, float Value);
     
     UFUNCTION(BlueprintCallable)
-    void AddStatCount(const FString& Key, int32 count);
+    void AddStatCount(const FString& Key, int32 Count);
     
 };
 

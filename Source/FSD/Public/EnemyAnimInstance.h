@@ -6,8 +6,8 @@
 #include "IsAttackingChangedDelegateDelegate.h"
 #include "EnemyAnimInstance.generated.h"
 
-class UHealthComponentBase;
 class USkeletalMeshComponent;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable, NonTransient)
 class UEnemyAnimInstance : public UAnimInstance {
@@ -35,7 +35,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float RandomStartPosition;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UHealthComponentBase* HealthComponent;
     
 public:

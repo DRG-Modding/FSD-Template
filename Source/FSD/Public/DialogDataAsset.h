@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DialogStruct.h"
 #include "Engine/DataAsset.h"
+#include "DialogStruct.h"
 #include "DialogDataAsset.generated.h"
 
 class USoundSubmixBase;
@@ -41,10 +41,10 @@ protected:
     
 public:
     UDialogDataAsset();
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     int32 SelectIndex(UObject* WorldContext);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     bool SelectEntry(UObject* WorldContext, FDialogStruct& Dialog);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

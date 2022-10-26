@@ -5,15 +5,15 @@
 #include "ProjectileSwitch.h"
 #include "Crossbow.generated.h"
 
-class AActor;
-class AProjectileBase;
+class UProjectileLauncherBaseComponent;
 class UStatusEffect;
-class ACrossbowProjectileStuck;
-class UCrossbowProjectileRecallable;
 class UStaticMesh;
+class UCrossbowProjectileRecallable;
+class ACrossbowProjectileStuck;
+class AProjectileBase;
+class AActor;
 class UAnimMontage;
 class USoundCue;
-class UProjectileLauncherBaseComponent;
 
 UCLASS(Blueprintable)
 class ACrossbow : public AAmmoDrivenWeapon {
@@ -65,7 +65,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ExtraShotAngleDifference;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UCrossbowProjectileRecallable* HoveringRecallable;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -119,7 +119,7 @@ public:
     int32 GetTotalArrowCount(bool InDefaultArrowCount) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    float GetSpecialArrowEffectDuration(const TSubclassOf<UStatusEffect>& effect) const;
+    float GetSpecialArrowEffectDuration(const TSubclassOf<UStatusEffect>& Effect) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetIsDefaultArrowEquipped() const;

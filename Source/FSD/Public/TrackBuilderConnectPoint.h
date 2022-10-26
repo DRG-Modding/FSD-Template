@@ -6,8 +6,8 @@
 #include "UObject/NoExportTypes.h"
 #include "TrackBuilderConnectPoint.generated.h"
 
-class UTrackBuilderConnectPoint;
 class ATrackBuilderSegment;
+class UTrackBuilderConnectPoint;
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UTrackBuilderConnectPoint : public USphereComponent {

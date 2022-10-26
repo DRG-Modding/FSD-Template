@@ -4,8 +4,8 @@
 #include "FloatPerkComponent.h"
 #include "BeastMasterComponent.generated.h"
 
-class UActorComponent;
 class UDamageComponent;
+class UActorComponent;
 class AFSDPawn;
 class APlayerCharacter;
 

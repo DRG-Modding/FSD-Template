@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UpgradeValues.h"
-#include "StandardItemUpgrade.h"
 #include "ECryoSprayUpgrades.h"
+#include "StandardItemUpgrade.h"
 #include "CryoSprayUpgrade.generated.h"
 
 class AItem;

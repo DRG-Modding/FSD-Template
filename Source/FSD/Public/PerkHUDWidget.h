@@ -4,8 +4,8 @@
 #include "PerkHUDWidget.generated.h"
 
 class UPerkAsset;
-class APlayerCharacter;
 class AFSDPlayerState;
+class APlayerCharacter;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UPerkHUDWidget : public UUserWidget {

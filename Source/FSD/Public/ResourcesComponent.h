@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ResourceAddedDelegate.h"
 #include "Components/ActorComponent.h"
-#include "ResourceFullSignatureDelegate.h"
 #include "ResourceChangedSignatureDelegate.h"
+#include "ResourceFullSignatureDelegate.h"
 #include "ResourceAddedSignatureDelegate.h"
+#include "ResourceAddedDelegate.h"
 #include "ResourcesComponent.generated.h"
 
 class UCappedResource;

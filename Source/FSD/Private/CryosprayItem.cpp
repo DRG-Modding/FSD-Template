@@ -1,32 +1,23 @@
 #include "CryosprayItem.h"
 #include "Net/UnrealNetwork.h"
-#include "FSDAudioComponent.h"
-#include "StickyFlameSpawner.h"
 #include "ProjectileLauncherComponent.h"
 #include "DamageComponent.h"
+#include "StickyFlameSpawner.h"
 #include "MotionAudioController.h"
+#include "FSDAudioComponent.h"
 
-class AProjectileBase;
-class UHealthComponentBase;
 class UPrimitiveComponent;
+class AProjectileBase;
 class UFSDPhysicalMaterial;
+class UHealthComponentBase;
 
 void ACryosprayItem::ServerDoDamage_Implementation(FVector_NetQuantize Start, FVector_NetQuantize End, uint8 Power) {
-}
-bool ACryosprayItem::ServerDoDamage_Validate(FVector_NetQuantize Start, FVector_NetQuantize End, uint8 Power) {
-    return true;
 }
 
 void ACryosprayItem::Server_TriggerAoECold_Implementation() {
 }
-bool ACryosprayItem::Server_TriggerAoECold_Validate() {
-    return true;
-}
 
 void ACryosprayItem::Server_PreLaunchProjectile_Implementation() {
-}
-bool ACryosprayItem::Server_PreLaunchProjectile_Validate() {
-    return true;
 }
 
 
@@ -71,7 +62,7 @@ ACryosprayItem::ACryosprayItem() {
     this->DamageSphereRadius = 25.00f;
     this->MaxFlameDistance = 5000.00f;
     this->FlameGrowthPerSecond = 1000.00f;
-    this->friendlyFireModifier = 1.00f;
+    this->FriendlyFireModifier = 1.00f;
     this->ChargeupTime = 1.00f;
     this->ChargeDownTime = 1.00f;
     this->isCharging = false;

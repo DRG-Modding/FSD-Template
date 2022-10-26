@@ -6,8 +6,8 @@
 #include "EArmorUpgradeType.h"
 #include "ArmorUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AActor;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UArmorUpgrade : public UStandardItemUpgrade {

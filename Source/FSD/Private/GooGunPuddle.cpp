@@ -4,8 +4,8 @@
 #include "Components/SphereComponent.h"
 #include "SimpleHealthComponent.h"
 
-class UStatusEffect;
 class UPrimitiveComponent;
+class UStatusEffect;
 class AActor;
 
 void AGooGunPuddle::SetStatusEffect(TSubclassOf<UStatusEffect> NewStatusEffect) {
@@ -44,5 +44,6 @@ AGooGunPuddle::AGooGunPuddle() {
     this->SpawnSound = NULL;
     this->ActiveStatusEffectTriggersMask = 0;
     this->LifeTime = 0.00f;
+    this->CollisionOnClients = false;
 }
 

@@ -3,8 +3,8 @@
 #include "Engine/DataAsset.h"
 #include "PlanetZoneSetup.generated.h"
 
-class UBiome;
 class UPlanetZone;
+class UBiome;
 
 UCLASS(Blueprintable)
 class UPlanetZoneSetup : public UDataAsset {
@@ -17,7 +17,7 @@ protected:
 public:
     UPlanetZoneSetup();
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    UPlanetZone* GetPlanetZoneForBiome(UBiome* Biome) const;
+    UPlanetZone* GetPlanetZoneForBiome(UBiome* Biome, int32& zoneIndex) const;
     
 };
 

@@ -1,27 +1,21 @@
 #include "FlameThrowerItem.h"
-#include "ProjectileLauncherComponent.h"
-#include "DamageComponent.h"
 #include "StickyFlameSpawner.h"
+#include "DamageComponent.h"
 #include "MotionAudioController.h"
+#include "ProjectileLauncherComponent.h"
 
-class UHealthComponentBase;
 class AActor;
-class UFSDPhysicalMaterial;
 class UPrimitiveComponent;
+class UHealthComponentBase;
+class UFSDPhysicalMaterial;
 
 void AFlameThrowerItem::TriggerAoEHeat() {
 }
 
 void AFlameThrowerItem::ServerMeltIce_Implementation(const TArray<FVector>& meltPoints) {
 }
-bool AFlameThrowerItem::ServerMeltIce_Validate(const TArray<FVector>& meltPoints) {
-    return true;
-}
 
 void AFlameThrowerItem::ServerDoDamage_Implementation(FVector_NetQuantize Start, FVector_NetQuantize End) {
-}
-bool AFlameThrowerItem::ServerDoDamage_Validate(FVector_NetQuantize Start, FVector_NetQuantize End) {
-    return true;
 }
 
 void AFlameThrowerItem::OnTargetKilled(AActor* Target, UFSDPhysicalMaterial* PhysMat, bool wasDirectHit) {

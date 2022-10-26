@@ -3,7 +3,7 @@
 #include "UObject/NoExportTypes.h"
 #include "PlayerSphere.generated.h"
 
-class APlayerCharacter;
+class APawn;
 
 USTRUCT(BlueprintType)
 struct FPlayerSphere {
@@ -16,7 +16,7 @@ public:
     float Radius;
     
     UPROPERTY(EditAnywhere, Transient)
-    TArray<TWeakObjectPtr<APlayerCharacter>> Players;
+    TArray<TWeakObjectPtr<APawn>> Players;
     
     FSD_API FPlayerSphere();
 };

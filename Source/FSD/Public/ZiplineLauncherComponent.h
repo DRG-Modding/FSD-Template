@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "WeaponFireComponent.h"
 #include "Engine/EngineTypes.h"
+#include "WeaponFireComponent.h"
 #include "Engine/NetSerialization.h"
 #include "ZiplineLauncherComponent.generated.h"
 
@@ -25,7 +25,7 @@ protected:
 public:
     UZiplineLauncherComponent();
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_Fire(FVector_NetQuantize Origin, FVector_NetQuantize Destination);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Curves/CurveFloat.h"
 #include "CSGTriangleMapper.h"
+#include "Curves/CurveFloat.h"
 #include "DebrisBase.generated.h"
 
 class UObject;

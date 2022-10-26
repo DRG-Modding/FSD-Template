@@ -5,11 +5,11 @@
 #include "Engine/EngineTypes.h"
 #include "FlyingEnemyDeepPathfinderCharacter.generated.h"
 
-class UPrimitiveComponent;
 class UPhysicalMaterial;
 class UPhysicsAsset;
 class UParticleSystem;
 class USoundCue;
+class UPrimitiveComponent;
 class AActor;
 
 UCLASS(Blueprintable)

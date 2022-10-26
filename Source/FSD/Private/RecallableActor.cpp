@@ -5,21 +5,12 @@ class AActor;
 
 void ARecallableActor::SetRecallTarget_Implementation(AActor* NewTarget) {
 }
-bool ARecallableActor::SetRecallTarget_Validate(AActor* NewTarget) {
-    return true;
-}
 
 void ARecallableActor::Relocate_Implementation(FVector NewLocation, FRotator NewRotation) {
-}
-bool ARecallableActor::Relocate_Validate(FVector NewLocation, FRotator NewRotation) {
-    return true;
 }
 
 
 void ARecallableActor::Recall_Implementation() {
-}
-bool ARecallableActor::Recall_Validate() {
-    return true;
 }
 
 

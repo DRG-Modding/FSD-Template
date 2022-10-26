@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
-#include "ShellCrackedSignatureDelegate.h"
 #include "UObject/NoExportTypes.h"
+#include "ShellCrackedSignatureDelegate.h"
+#include "GameFramework/Actor.h"
 #include "EscortDestination.generated.h"
 
 class ADeepCSGWorld;
@@ -16,7 +16,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FShellCrackedSignature OnShellCracked;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* EndExplosionDamage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

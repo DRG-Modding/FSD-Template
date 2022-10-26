@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "ImpactedSignatureDelegate.h"
 #include "HightAccelerationSignatureDelegate.h"
+#include "ImpactedSignatureDelegate.h"
 #include "ImpactComponent.generated.h"
 
 class USceneComponent;

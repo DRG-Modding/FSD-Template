@@ -5,13 +5,12 @@
 #include "EItemSkinType.h"
 #include "ItemSkin.generated.h"
 
-class UItemID;
-class UItemAquisitionBase;
 class UItemSkin;
-class UDLCBase;
-class UItemSkinSet;
+class UItemAquisitionBase;
 class UDynamicIcon;
+class UItemSkinSet;
 class USkinEffect;
+class UItemID;
 class UPlayerCharacterID;
 class UObject;
 class AFSDPlayerState;
@@ -37,15 +36,6 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UItemAquisitionBase* Aquisition;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool UnlockedFromStart;
-    
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UDLCBase* RequiredDLC;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    EItemSkinType SkinType;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText SkinName;
     
@@ -66,16 +56,19 @@ protected:
     
 public:
     UItemSkin();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     bool Unlock(UObject* WorldContext, UItemID* ItemID, bool broadcast);
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void Receive_SkinItem(UObject* Skinnable) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void Lock(UObject* WorldContext, UItemID* ItemID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsUnlockedFromStart() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     bool IsLocked(UObject* WorldContext, UItemID* skinnableID) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

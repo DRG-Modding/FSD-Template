@@ -1,10 +1,10 @@
 #include "LaserPointerItem.h"
 #include "Components/SceneComponent.h"
 
+class UTerrainMaterial;
 class UObject;
 class AActor;
 class UPrimitiveComponent;
-class UTerrainMaterial;
 
 void ALaserPointerItem::UnlockToMinersManual(UObject* WorldContextObject, FGuid ObjectID) {
 }
@@ -14,14 +14,8 @@ void ALaserPointerItem::ToggleLaserVisible_Implementation(bool aVisible) {
 
 void ALaserPointerItem::ServerPlaceMarker_Implementation(FVector Location, AActor* Actor, UPrimitiveComponent* Cmponent, UTerrainMaterial* TerrainMaterial, ELaserPointerMarkerType eMarkerType) {
 }
-bool ALaserPointerItem::ServerPlaceMarker_Validate(FVector Location, AActor* Actor, UPrimitiveComponent* Cmponent, UTerrainMaterial* TerrainMaterial, ELaserPointerMarkerType eMarkerType) {
-    return true;
-}
 
 void ALaserPointerItem::Server_SecondaryUse_Implementation() {
-}
-bool ALaserPointerItem::Server_SecondaryUse_Validate() {
-    return true;
 }
 
 
@@ -40,6 +34,7 @@ ALaserPointerItem::ALaserPointerItem() {
     this->PointerComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Pointer"));
     this->LookAtDistance = 0.00f;
     this->LookAtShout = NULL;
+    this->MissionControlLookAtShout = NULL;
     this->GameState = NULL;
 }
 

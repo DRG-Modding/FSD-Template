@@ -1,7 +1,11 @@
 #include "BoscoAbillityComponent.h"
 
-int32 UBoscoAbillityComponent::GetMaxCharges() const {
+int32 UBoscoAbillityComponent::GetMaxCharges(bool Total) const {
     return 0;
+}
+
+bool UBoscoAbillityComponent::GetIsSet() const {
+    return false;
 }
 
 int32 UBoscoAbillityComponent::GetCharges() const {
@@ -10,7 +14,7 @@ int32 UBoscoAbillityComponent::GetCharges() const {
 
 UBoscoAbillityComponent::UBoscoAbillityComponent() {
     this->ProjectileClass = NULL;
-    this->Animation = NULL;
-    this->VoiceOnUse = NULL;
+    this->StreamClass = NULL;
+    this->AbilityData = NULL;
 }
 

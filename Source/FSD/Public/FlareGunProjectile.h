@@ -18,6 +18,9 @@ public:
     AFlareGunProjectile();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
+    UFUNCTION(BlueprintCallable)
+    void UpdateLightDuration(float lightDuration);
+    
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnUpdateShadowRadius();
     

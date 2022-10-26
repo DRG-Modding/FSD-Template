@@ -10,14 +10,14 @@ void UWindowManager::SetSingletonWidgetVisibility(TSubclassOf<UUserWidget> Widge
 void UWindowManager::ReplaceWindow(UWindowWidget* Window) {
 }
 
-UWindowWidget* UWindowManager::OpenWindowFromClass(TSubclassOf<UWindowWidget> windowClass, int32 ZOrder, bool ShowCursor) {
+UWindowWidget* UWindowManager::OpenWindowFromClass(TSubclassOf<UWindowWidget> WindowClass, int32 ZOrder, bool ShowCursor) {
     return NULL;
 }
 
 void UWindowManager::OpenWindow(UWindowWidget* Window, bool PlayAudio, bool ShowCursor) {
 }
 
-UWindowWidget* UWindowManager::OpenSingleUseWindow(TSubclassOf<UWindowWidget> windowClass, int32 ZOrder) {
+UWindowWidget* UWindowManager::OpenSingleUseWindow(TSubclassOf<UWindowWidget> WindowClass, int32 ZOrder) {
     return NULL;
 }
 

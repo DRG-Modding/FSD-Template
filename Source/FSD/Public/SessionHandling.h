@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EFSDNATType.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
-#include "EServerSortOrder.h"
 #include "EMissionStructure.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "FindSessionsCallbackProxy.h"
+#include "EServerSortOrder.h"
+#include "EFSDNATType.h"
 #include "EDisconnectReason.h"
 #include "FriendInfo.h"
 #include "EFSDMissionStatus.h"
@@ -13,8 +13,8 @@
 #include "EServerDistance.h"
 #include "SessionHandling.generated.h"
 
-class UFSDGameInstance;
 class UObject;
+class UFSDGameInstance;
 class UPlayerCharacterID;
 class APlayerCharacter;
 class UDifficultySetting;
@@ -26,28 +26,31 @@ class USessionHandling : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     USessionHandling();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void StopVoice(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void StartVoice(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable)
     static bool StartSearchForFriends(int32 localUserNum, UFSDGameInstance* GameInstance);
     
     UFUNCTION(BlueprintCallable)
+    static bool StartSearchForBlockedUsers(int32 localUserNum);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void StartCheckForInstalledDLC(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void SortServerList(UObject* WorldContextObject, EServerSortOrder order, bool Reverse, bool sortByFriends, UPARAM(Ref) TArray<FBlueprintSessionResult>& servers);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void ShowStoreUI(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void ShowInviteUI(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void JoinOfficialXboxClub(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -62,13 +65,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static FString GetVoiceStatus();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static FText GetSessionJoinError(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable)
     static bool GetOnlinePlayerName(int32 localUserNum, FString& Name);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static EFSDNATType GetNATType(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -77,31 +80,34 @@ public:
     UFUNCTION(BlueprintCallable)
     static FString GetLoginStatus(int32 localUserNum);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static FString GetHostUsername(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static FString GetHostUniqueId(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable)
     static bool GetFriendsList(int32 localUserNum, TArray<FFriendInfo>& Players);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static FString GetFriendlyServerNameSanitized(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static FString GetFriendlyServerName(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable)
     static bool GetCurrentSessionState(FString& sessionState, FString& ID);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    static bool GetBlockedUsersList(int32 localUserNum, TArray<FFriendInfo>& BlockedPlayers);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool FSDUpdateSessionInfo(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static EFSDMissionStatus FSDMissionStatus(const FBlueprintSessionResult& Result);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void FSDListen(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -191,13 +197,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString FSDGetBuildId(const FBlueprintSessionResult& Result);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool FSDCancelFindSessions(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool FindBestQuickJoinServer(UObject* WorldContextObject, UPARAM(Ref) TArray<FBlueprintSessionResult>& sessions, UDifficultySetting* Difficulty, UBiome* Biome, UMissionTemplate* MissionTemplate, FBlueprintSessionResult& OutResult);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool AllowLinkToExternalFeedback(UObject* WorldContextObject);
     
 };

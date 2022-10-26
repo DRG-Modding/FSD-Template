@@ -5,11 +5,11 @@
 #include "ERivalBombNodeState.h"
 #include "RivalBombNode.generated.h"
 
-class APlayerCharacter;
 class ASplineCableActor;
 class ARivalBombNode;
-class UHackingUsableComponent;
+class APlayerCharacter;
 class ARivalBomb;
+class UHackingUsableComponent;
 
 UCLASS(Blueprintable)
 class ARivalBombNode : public AActor {
@@ -24,7 +24,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ASplineCableActor> RivalBombCable;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UHackingUsableComponent* HackingUsable;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_State, meta=(AllowPrivateAccess=true))

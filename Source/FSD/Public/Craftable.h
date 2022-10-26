@@ -4,9 +4,9 @@
 #include "CraftingCost.h"
 #include "Craftable.generated.h"
 
-class UObject;
-class AFSDPlayerState;
 class UPlayerCharacterID;
+class AFSDPlayerState;
+class UObject;
 
 UINTERFACE(BlueprintType, meta=(CannotImplementInterfaceInBlueprint))
 class FSD_API UCraftable : public UInterface {
@@ -19,7 +19,7 @@ public:
     UFUNCTION(BlueprintCallable)
     virtual void PreviewItem(AFSDPlayerState* PlayerState, bool Show) const PURE_VIRTUAL(PreviewItem,);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     virtual bool IsOwned(UObject* WorldContextObject, UPlayerCharacterID* characterID) const PURE_VIRTUAL(IsOwned, return false;);
     
     UFUNCTION(BlueprintCallable)
@@ -40,16 +40,16 @@ public:
     UFUNCTION(BlueprintCallable)
     virtual FText GetCraftableDescription() const PURE_VIRTUAL(GetCraftableDescription, return FText::GetEmpty(););
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     virtual void CraftItemWithFashionite(UObject* WorldContextObject, UPlayerCharacterID* characterID) const PURE_VIRTUAL(CraftItemWithFashionite,);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     virtual void CraftItem(UObject* WorldContextObject, UPlayerCharacterID* characterID) const PURE_VIRTUAL(CraftItem,);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     virtual bool CanCraftWithFashionite(UObject* WorldContextObject) const PURE_VIRTUAL(CanCraftWithFashionite, return false;);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     virtual bool CanCraft(UObject* WorldContextObject) const PURE_VIRTUAL(CanCraft, return false;);
     
 };

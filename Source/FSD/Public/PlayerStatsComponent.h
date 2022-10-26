@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
-#include "EndMissionResult.h"
 #include "DelegateDelegate.h"
+#include "EndMissionResult.h"
 #include "PlayerStatsComponent.generated.h"
 
-class APlayerCharacter;
 class UCappedResource;
+class APlayerCharacter;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPlayerStatsComponent : public UActorComponent {
@@ -62,7 +62,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SendMissionAnalytics(bool trackMorkite);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void SendEndMissionResult(const FEndMissionResult& Result);
     
     UFUNCTION(BlueprintCallable)

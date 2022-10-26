@@ -1,13 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SavablePrimaryDataAsset.h"
 #include "EPickaxePartLocation.h"
+#include "SavablePrimaryDataAsset.h"
 #include "PickaxePart.generated.h"
 
 class UItemAquisitionBase;
 class UPickaxePartItem;
-class UItemAquisitionSource;
-class UDLCBase;
 
 UCLASS(Blueprintable)
 class FSD_API UPickaxePart : public USavablePrimaryDataAsset {
@@ -22,15 +20,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPickaxePartItem* Item;
-    
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UItemAquisitionSource* AquisitionSource;
-    
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool UnlockedFromStart;
-    
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UDLCBase* RequiredDLC;
     
 public:
     UPickaxePart();

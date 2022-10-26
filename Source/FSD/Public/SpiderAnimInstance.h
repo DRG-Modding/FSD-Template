@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FootStepNotifyTarget.h"
 #include "EnemyAnimInstance.h"
-#include "UObject/NoExportTypes.h"
+#include "FootStepNotifyTarget.h"
 #include "EMoveDirection.h"
+#include "UObject/NoExportTypes.h"
 #include "RandomWalkCycleEntry.h"
 #include "ESpiderDeathAnimationCategory.h"
 #include "SpiderAnimInstance.generated.h"
 
+class UAnimSequenceBase;
 class UEnemyPlaySoundKey;
 class USoundCue;
 class UParticleSystem;
 class UEnemySpawnEffectsKey;
-class UAnimSequenceBase;
 
 UCLASS(Blueprintable, NonTransient)
 class USpiderAnimInstance : public UEnemyAnimInstance, public IFootStepNotifyTarget {
@@ -142,7 +142,7 @@ protected:
 public:
     USpiderAnimInstance();
     UFUNCTION(BlueprintCallable)
-    void SetMeshScale(float newScale);
+    void SetMeshScale(float NewScale);
     
     UFUNCTION(BlueprintCallable)
     void SetDeathAnimationCategory(ESpiderDeathAnimationCategory Category);

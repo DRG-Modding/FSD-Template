@@ -50,6 +50,9 @@ void UFSDGameUserSettings::SetUseSeparateSensitivity(bool newSetting) {
 void UFSDGameUserSettings::SetUseProfanityFilter(bool shouldUse) {
 }
 
+void UFSDGameUserSettings::SetUseManualGraphicsMode(bool bEnabled) {
+}
+
 void UFSDGameUserSettings::SetUseHoldToRun(bool NewUseHoldToRun) {
 }
 
@@ -78,6 +81,9 @@ void UFSDGameUserSettings::SetSwapControllerThumbsticks(bool InSwapThumbsticks) 
 }
 
 void UFSDGameUserSettings::SetSteamSearchRegion(ESteamSearchRegion InRegion) {
+}
+
+void UFSDGameUserSettings::SetStaticResolutionScale(float percentage) {
 }
 
 void UFSDGameUserSettings::SetShowUIAnimations(bool shouldShow) {
@@ -197,6 +203,9 @@ void UFSDGameUserSettings::SetCurrentUserSaveSlotName(UObject* WorldContextObjec
 void UFSDGameUserSettings::SetConsoleGraphicsMode(EConsoleGraphicsMode Mode) {
 }
 
+void UFSDGameUserSettings::SetColorVisionDeficiency(EColorVisionDeficiency InType, float InSeverity) {
+}
+
 void UFSDGameUserSettings::SetCheckForOutOfBoundsEnabled(bool Enabled) {
 }
 
@@ -274,6 +283,10 @@ bool UFSDGameUserSettings::IsNvReflexAvailable() {
     return false;
 }
 
+bool UFSDGameUserSettings::IsManaulGraphicsModeAvailable() {
+    return false;
+}
+
 bool UFSDGameUserSettings::IsDx12Enabled() {
     return false;
 }
@@ -325,6 +338,10 @@ bool UFSDGameUserSettings::GetUseProfanityFilter() const {
     return false;
 }
 
+bool UFSDGameUserSettings::GetUseManualGraphicsMode() {
+    return false;
+}
+
 bool UFSDGameUserSettings::GetUseHoldToRun() const {
     return false;
 }
@@ -359,6 +376,10 @@ bool UFSDGameUserSettings::GetTemporalAAUpscalingEnabled() const {
 
 ESteamSearchRegion UFSDGameUserSettings::GetSteamSearchRegion() const {
     return ESteamSearchRegion::Close;
+}
+
+float UFSDGameUserSettings::GetStaticResolutionScale() {
+    return 0.0f;
 }
 
 bool UFSDGameUserSettings::GetShowUIAnimations() const {
@@ -691,6 +712,8 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->EnableDx12ByDefault = false;
     this->HDRColorGamma = 1.21f;
     this->ConsoleGraphicsMode = EConsoleGraphicsMode::Fidelity;
+    this->StaticResoultionScale = 1.00f;
+    this->UseManuelGrahpicsMode = false;
     this->DownedTurnDirection_Controller = 1.00f;
     this->DownedTurnDirection_Mouse = -1.00f;
     this->UIDPIScale = 80.63f;

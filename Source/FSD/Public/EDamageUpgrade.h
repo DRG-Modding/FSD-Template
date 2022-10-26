@@ -16,5 +16,6 @@ enum class EDamageUpgrade : uint8 {
     StaggerOnWeakpointOnly,
     FriendlyFireModifier,
     ShattersArmor,
+    ArmorPenetration,
 };
 

@@ -1,6 +1,6 @@
 #include "SimpleMovingEnemyAnimInstance.h"
 
-void USimpleMovingEnemyAnimInstance::SetMeshScale(float newScale) {
+void USimpleMovingEnemyAnimInstance::SetMeshScale(float NewScale) {
 }
 
 bool USimpleMovingEnemyAnimInstance::IsNotMoving() const {

@@ -1,9 +1,9 @@
 #include "SimpleObjectInfoComponent.h"
 
 class UActorContextWidget;
+class USceneComponent;
 class UDialogDataAsset;
 class UTexture2D;
-class USceneComponent;
 
 void USimpleObjectInfoComponent::SetInGameName_Implementation(const FString& GameName) {
 }
@@ -35,6 +35,8 @@ void USimpleObjectInfoComponent::AddComponentObjectInfo(USceneComponent* TargetC
 
 USimpleObjectInfoComponent::USimpleObjectInfoComponent() {
     this->LookAtShout = NULL;
+    this->bHasMissionControlLookAtShout = false;
+    this->MissionControlLookAtShout = NULL;
     this->LookAtShoutOverride = NULL;
     this->Icon = NULL;
     this->IconOverride = NULL;

@@ -22,7 +22,7 @@ protected:
 public:
     UMiniTimerAction();
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static UMiniTimerAction* MiniTimer(UObject* WorldContext, float InDuration);
     
 };

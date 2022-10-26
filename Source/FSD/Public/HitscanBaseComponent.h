@@ -1,14 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Curves/CurveFloat.h"
 #include "WeaponFireComponent.h"
 #include "SpreadChangedDelegateDelegate.h"
 #include "DelegateDelegate.h"
+#include "Curves/CurveFloat.h"
 #include "EImpactDecalSize.h"
 #include "ERicochetBehavior.h"
 #include "HitscanBaseComponent.generated.h"
 
 class UDamageComponent;
+class AActor;
 class UDamageClass;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -25,7 +26,7 @@ public:
     float SpreadPerShot;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UDamageComponent* DamageComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -50,10 +51,13 @@ protected:
     EImpactDecalSize ImpactDecalSize;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float friendlyFireModifier;
+    float FriendlyFireModifier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UseDynamicSpread;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TArray<AActor*> IgnoredActorsInTrace;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinSpread;
@@ -100,10 +104,10 @@ protected:
 public:
     UHitscanBaseComponent();
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_StopFire();
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_RemoveDebris(int32 instance, int32 Component);
     
 public:

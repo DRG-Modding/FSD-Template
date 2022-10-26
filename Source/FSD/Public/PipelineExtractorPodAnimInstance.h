@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ERefineryState.h"
 #include "Animation/AnimInstance.h"
 #include "EPipelineExtractorPodAnimState.h"
 #include "ERessuplyPodState.h"
 #include "EPipelineBuildState.h"
-#include "ERefineryState.h"
 #include "PipelineExtractorPodAnimInstance.generated.h"
 
-class APipelineSegment;
 class APipelineExtractorPod;
+class APipelineSegment;
 class APipelineStart;
 class AFSDRefinery;
 

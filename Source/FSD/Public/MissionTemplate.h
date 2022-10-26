@@ -8,24 +8,24 @@
 #include "ObjectiveMissionIcon.h"
 #include "MissionTemplate.generated.h"
 
-class UObject;
+class AFSDGameMode;
 class UObjective;
 class UMissionComplexity;
-class AProceduralSetup;
 class UMutator;
-class AFSDGameMode;
+class AProceduralSetup;
 class UWorld;
 class UMissionDuration;
-class UTutorialComponent;
 class UTexture2D;
 class UMissionDNA;
-class UMissionWarning;
 class UDebrisActorComponent;
+class UTutorialComponent;
 class UGeneratedMission;
 class UFSDSaveGame;
 class UMissionTemplate;
+class UObject;
 class UBiome;
 class UMissionMutator;
+class UMissionWarning;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UMissionTemplate : public USavableDataAsset {
@@ -141,7 +141,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UTexture2D* GetMissionButtonImage() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     UGeneratedMission* GenerateMission(const UObject* WorldContextObject, UBiome* Biome, int32 Seed, int32 GlobalSeed, int32 missionIndex, UMissionComplexity* limitComplexity, UMissionDuration* limitDuration, UMissionMutator* Mutator, TArray<UMissionWarning*> Warnings, TSubclassOf<UObjective> forceSecondary);
     
 };

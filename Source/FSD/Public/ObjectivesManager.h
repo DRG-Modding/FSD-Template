@@ -20,10 +20,10 @@ public:
     FDelegateEvent OnAllRequiredReturnObjectivesCompleted;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UObjective* Objective;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UObjective*> SecondaryObjectives;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -43,6 +43,9 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool HasRequiredSecondaryObjective() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UObjective* GetSecondaryObjective() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -56,6 +59,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void DropPodExited();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool AreRequiredSecondariesComplete() const;
     
 };
 

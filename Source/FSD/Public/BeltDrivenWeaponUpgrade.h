@@ -6,8 +6,8 @@
 #include "EBeltDrivenWeaponUpgrade.h"
 #include "BeltDrivenWeaponUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AItem;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UBeltDrivenWeaponUpgrade : public UStandardItemUpgrade {

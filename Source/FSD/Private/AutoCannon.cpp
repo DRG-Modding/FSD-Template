@@ -2,9 +2,6 @@
 
 void AAutoCannon::Server_SetStatusActive_Implementation(bool IsActive) {
 }
-bool AAutoCannon::Server_SetStatusActive_Validate(bool IsActive) {
-    return true;
-}
 
 AAutoCannon::AAutoCannon() {
     this->StartingFireRate = 3.00f;

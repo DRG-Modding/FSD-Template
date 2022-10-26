@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SavableDataAsset.h"
 #include "UObject/NoExportTypes.h"
+#include "SavableDataAsset.h"
 #include "VanityNode.h"
 #include "TreeOfVanity.generated.h"
 

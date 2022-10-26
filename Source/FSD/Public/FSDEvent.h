@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
-#include "EHolidayType.h"
-#include "FSDEventActivateChangedDelegate.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/DataAsset.h"
 #include "ClaimableRewardView.h"
+#include "FSDEventActivateChangedDelegate.h"
+#include "EHolidayType.h"
 #include "FSDEvent.generated.h"
 
-class UDrinkableDataAsset;
-class APlayerController;
-class ADebrisDataActor;
 class UWorld;
+class ADebrisDataActor;
+class UDrinkableDataAsset;
 class UCampaign;
 class UTexture2D;
+class APlayerController;
 class UObject;
 class UFSDEvent;
 
@@ -65,15 +65,15 @@ protected:
     
 public:
     UFSDEvent();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void MarkClaimableRewardsSeen(UObject* WorldContext);
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     static bool IsFsdEventActive(UObject* WorldContext, const UFSDEvent* FSDEvent);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     bool HasUnseenClaimableRewards(UObject* WorldContext);
     
     UFUNCTION(BlueprintCallable)
@@ -82,7 +82,7 @@ public:
     UFUNCTION(BlueprintCallable)
     UTexture2D* GetTitleScreenOverride();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     bool GetIsActive(UObject* WorldContext) const;
     
 };

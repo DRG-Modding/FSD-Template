@@ -1,41 +1,25 @@
 #include "FallingStateComponent.h"
 #include "Net/UnrealNetwork.h"
 
+class UFSDPhysicalMaterial;
+
 
 void UFallingStateComponent::Server_TakeFallDamage_Implementation(float Amount) {
-}
-bool UFallingStateComponent::Server_TakeFallDamage_Validate(float Amount) {
-    return true;
 }
 
 void UFallingStateComponent::Server_SetJumpPressed_Implementation(bool Pressed) {
 }
-bool UFallingStateComponent::Server_SetJumpPressed_Validate(bool Pressed) {
-    return true;
-}
 
 void UFallingStateComponent::Server_SetHoverBootsPressed_Implementation(bool IsPressed) {
-}
-bool UFallingStateComponent::Server_SetHoverBootsPressed_Validate(bool IsPressed) {
-    return true;
 }
 
 void UFallingStateComponent::Server_SetFallVelocity_Implementation(float Velocity) {
 }
-bool UFallingStateComponent::Server_SetFallVelocity_Validate(float Velocity) {
-    return true;
-}
 
 void UFallingStateComponent::Server_ClimbLedge_Implementation(bool shouldPlayAnimation) {
 }
-bool UFallingStateComponent::Server_ClimbLedge_Validate(bool shouldPlayAnimation) {
-    return true;
-}
 
 void UFallingStateComponent::Server_ActivateJumpBoots_Implementation() {
-}
-bool UFallingStateComponent::Server_ActivateJumpBoots_Validate() {
-    return true;
 }
 
 
@@ -56,6 +40,9 @@ void UFallingStateComponent::HoverBootsPressed() {
 }
 
 void UFallingStateComponent::All_ShowJumpBootsActivation_Implementation() {
+}
+
+void UFallingStateComponent::All_ShowFallImpact_Implementation(UFSDPhysicalMaterial* PhysMat, const FVector_NetQuantize& Location) {
 }
 
 void UFallingStateComponent::All_ShowClimbLedge_Implementation() {

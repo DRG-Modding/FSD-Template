@@ -3,10 +3,10 @@
 #include "NiagaraComponent.h"
 #include "CoilgunTrailSpawner.h"
 
-class UFSDPhysicalMaterial;
-class UHealthComponentBase;
 class UPrimitiveComponent;
 class AActor;
+class UHealthComponentBase;
+class UFSDPhysicalMaterial;
 class ACoilgunWeaponTrail;
 
 void ACoilGun::UpdateAfflictions() {
@@ -22,6 +22,9 @@ void ACoilGun::Server_SpawnTrail_Implementation(const FVector_NetQuantize& Locat
 }
 
 void ACoilGun::Server_SpawnGroundTrail_Implementation(const FVector_NetQuantize& Location, const FVector& Direction, float chargeMultiplier) {
+}
+
+void ACoilGun::Server_SetShotPower_Implementation(const float& Power) {
 }
 
 void ACoilGun::Server_RegisterPrimaryHit_Implementation(UPrimitiveComponent* Target, UFSDPhysicalMaterial* PhysMaterial, const FVector_NetQuantize& Origin, const FVector_NetQuantize& Location, int32 BoneIndex, FShotMultiplier Multiplier, int32 mole) {

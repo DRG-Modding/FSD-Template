@@ -1,6 +1,6 @@
 #include "RecallableSentryGunItem.h"
-#include "CapacityHoldingItemAggregator.h"
 #include "ItemPlacerAggregator.h"
+#include "CapacityHoldingItemAggregator.h"
 
 class ARecallableSentryGun;
 

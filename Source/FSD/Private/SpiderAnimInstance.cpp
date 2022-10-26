@@ -1,6 +1,6 @@
 #include "SpiderAnimInstance.h"
 
-void USpiderAnimInstance::SetMeshScale(float newScale) {
+void USpiderAnimInstance::SetMeshScale(float NewScale) {
 }
 
 void USpiderAnimInstance::SetDeathAnimationCategory(ESpiderDeathAnimationCategory Category) {

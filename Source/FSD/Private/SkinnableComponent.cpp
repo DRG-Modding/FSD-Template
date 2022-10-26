@@ -10,7 +10,7 @@ void USkinnableComponent::UpdateSkin(AFSDPlayerState* Player) {
 void USkinnableComponent::OnLoadoutChanged() {
 }
 
-TArray<UItemSkin*> USkinnableComponent::GetSkinsForItem(UItemID* ItemID, EItemSkinType SkinType) {
+TArray<UItemSkin*> USkinnableComponent::GetSkinsForItem(UItemID* ItemID, EItemSkinType skinType) {
     return TArray<UItemSkin*>();
 }
 
@@ -22,7 +22,7 @@ UItemSkin* USkinnableComponent::GetEquippedSkinColor(UItemID* ItemID, AFSDPlayer
     return NULL;
 }
 
-UItemSkin* USkinnableComponent::GetEquippedSkin(UItemID* ItemID, EItemSkinType SkinType, AFSDPlayerState* Player) {
+UItemSkin* USkinnableComponent::GetEquippedSkin(UItemID* ItemID, EItemSkinType skinType, AFSDPlayerState* Player) {
     return NULL;
 }
 

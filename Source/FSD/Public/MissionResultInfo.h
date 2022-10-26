@@ -52,7 +52,7 @@ public:
     float TotalXPSum;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool WasSuccess;
+    bool wasSuccess;
     
     UMissionResultInfo();
     UFUNCTION(BlueprintCallable, BlueprintPure)

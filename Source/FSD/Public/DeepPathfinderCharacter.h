@@ -1,30 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "VisualLogger/VisualLoggerDebugSnapshotInterface.h"
 #include "TriggerAI.h"
 #include "FSDPawn.h"
-#include "VisualLogger/VisualLoggerDebugSnapshotInterface.h"
 #include "DeepPathfinderCharacter.generated.h"
 
 class UDeepPathfinderMovement;
 class USkeletalMeshComponent;
 class UDeepPatherFinderCharacterAfflictionComponent;
+class UPawnAffliction;
 class UMaterialInterface;
 
 UCLASS(Blueprintable)
 class ADeepPathfinderCharacter : public AFSDPawn, public ITriggerAI, public IVisualLoggerDebugSnapshotInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDeepPathfinderMovement* PathfinderMovement;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* Mesh;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName CenterMassSocketName;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDeepPatherFinderCharacterAfflictionComponent* Affliction;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -53,6 +54,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool FrozenPauseLogic;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPawnAffliction* CurrentStaggerAffliction;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AttackerRadius;

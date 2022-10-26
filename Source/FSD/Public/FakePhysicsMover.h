@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FakeMoveState.h"
-#include "FakeMoverState.h"
-#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
+#include "GameFramework/Actor.h"
+#include "FakeMoverState.h"
+#include "FakeMoveState.h"
 #include "FakePhysicsMover.generated.h"
 
 class USceneComponent;
@@ -13,14 +13,14 @@ UCLASS(Blueprintable)
 class AFakePhysicsMover : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* Root;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFakeMoverState MoverState;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_PosVel, meta=(AllowPrivateAccess=true))
-    FFakeMoveState posVel;
+    FFakeMoveState PosVel;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_MoveSettings, meta=(AllowPrivateAccess=true))
     UFakeMoverSettings* MoveSettings;

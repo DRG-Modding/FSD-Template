@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FDebrisVeinResource {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UDebrisVeinComponent* Debris;
     
     FSD_API FDebrisVeinResource();

@@ -1,23 +1,23 @@
 #include "FSDCheatManager.h"
 #include "Templates/SubclassOf.h"
 
-class UPlayerCharacterID;
-class UEnemyDescriptor;
 class UBaseCritterDescriptor;
+class UEnemyDescriptor;
+class UPlayerCharacterID;
+class APlayerCharacter;
 class APawn;
 class AFSDAIController;
 class AActor;
-class APlayerCharacter;
 class UObject;
 class UResourceData;
 
 void UFSDCheatManager::SwitchCharacter(UPlayerCharacterID* characterID) {
 }
 
-void UFSDCheatManager::SpawnEnemies(UEnemyDescriptor* desscriptor, int32 count) {
+void UFSDCheatManager::SpawnEnemies(UEnemyDescriptor* descriptor, int32 Count) {
 }
 
-void UFSDCheatManager::SpawnCritters(UBaseCritterDescriptor* descriptor, int32 count) {
+void UFSDCheatManager::SpawnCritters(UBaseCritterDescriptor* descriptor, int32 Count) {
 }
 
 void UFSDCheatManager::SpawnBosco(TSoftClassPtr<APawn> droneClass, TSubclassOf<AFSDAIController> aControllerClass) {
@@ -48,6 +48,9 @@ void UFSDCheatManager::SetGodMode(bool God) {
 void UFSDCheatManager::SetFastMovement(bool fast) {
 }
 
+void UFSDCheatManager::Server_Refresh_Daily_Special_Implementation() {
+}
+
 void UFSDCheatManager::ResetTutorials() {
 }
 
@@ -58,6 +61,9 @@ void UFSDCheatManager::R_RemoveResources(int32 Number) {
 }
 
 void UFSDCheatManager::R_RemoveCredits(int32 Number) {
+}
+
+void UFSDCheatManager::R_RemoveCraftingResource(int32 Amount, int32 Type) {
 }
 
 void UFSDCheatManager::R_AddSeasonToken(int32 Number) {
@@ -158,9 +164,6 @@ void UFSDCheatManager::Cheat_SetSpawnPosMarker(AActor* Actor) {
 }
 
 void UFSDCheatManager::Cheat_SetHealth_Implementation(float newHealthValue, APlayerCharacter* Player) {
-}
-bool UFSDCheatManager::Cheat_SetHealth_Validate(float newHealthValue, APlayerCharacter* Player) {
-    return true;
 }
 
 void UFSDCheatManager::Cheat_Schematic_UnlockAll(UObject* WorldContextObject) {
@@ -283,7 +286,7 @@ void UFSDCheatManager::C_Unlock_Facility() {
 void UFSDCheatManager::C_Treasures_Track(int32 Mode) {
 }
 
-void UFSDCheatManager::C_Treasures_Reward(int32 count) {
+void UFSDCheatManager::C_Treasures_Reward(int32 Count) {
 }
 
 void UFSDCheatManager::C_ToggleHoopGameMovement() {
@@ -314,6 +317,9 @@ void UFSDCheatManager::C_SpawnEvenRewarder() {
 }
 
 void UFSDCheatManager::C_SpawnBarrelOnPlayer(int32 Amount) {
+}
+
+void UFSDCheatManager::C_SpawnAllParticles() {
 }
 
 void UFSDCheatManager::C_SetUseSavedCheatsByDefault(bool useSavedCheats) {
@@ -364,6 +370,9 @@ void UFSDCheatManager::C_Seasons_ResetToken() {
 void UFSDCheatManager::C_Seasons_ResetReroll() {
 }
 
+void UFSDCheatManager::C_Seasons_ResetPlagueHeartsCollected() {
+}
+
 void UFSDCheatManager::C_Seasons_IncrementChallenge(int32 Index) {
 }
 
@@ -377,6 +386,9 @@ void UFSDCheatManager::C_Seasons_ClearAllProgress() {
 }
 
 void UFSDCheatManager::C_Seasons_AddXP(int32 Number) {
+}
+
+void UFSDCheatManager::C_Seasons_AddHeartsCollecdted(int32 Number) {
 }
 
 void UFSDCheatManager::C_Seasons_AddChallenge() {
@@ -463,6 +475,9 @@ void UFSDCheatManager::C_RemoveAllWidgets() {
 void UFSDCheatManager::C_RefreshDailyDeal(int32 Seed) {
 }
 
+void UFSDCheatManager::C_Refresh_Daily_Special() {
+}
+
 void UFSDCheatManager::C_Refinery_BreakPipes() {
 }
 
@@ -517,6 +532,9 @@ void UFSDCheatManager::C_KillTeam() {
 void UFSDCheatManager::C_KillPlayer() {
 }
 
+void UFSDCheatManager::C_KillAllFriendly() {
+}
+
 void UFSDCheatManager::C_KillAll() {
 }
 
@@ -532,7 +550,7 @@ void UFSDCheatManager::C_Intoxication_Set(int32 Percent) {
 void UFSDCheatManager::C_IncrementAllMissionStats(int32 Amount) {
 }
 
-void UFSDCheatManager::C_GodMode() {
+void UFSDCheatManager::C_GodMode(int32 forceEnable) {
 }
 
 void UFSDCheatManager::C_GiveAllGenericHeroItems() {
@@ -575,6 +593,12 @@ void UFSDCheatManager::C_Escort_JumpToNextPhase(UObject* WorldContextObject) {
 }
 
 void UFSDCheatManager::C_Escort_AddOilShale(int32 Number) {
+}
+
+void UFSDCheatManager::C_DLC_ClearAnnounced() {
+}
+
+void UFSDCheatManager::C_DisableBackendEvents() {
 }
 
 void UFSDCheatManager::C_DeepDives_UnlockAll() {

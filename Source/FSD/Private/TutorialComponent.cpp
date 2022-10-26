@@ -11,7 +11,7 @@ void UTutorialComponent::RegisterTutorial() {
 void UTutorialComponent::OnTutorialsReset() {
 }
 
-void UTutorialComponent::OnManagerReady(ATutorialManager* Manager) {
+void UTutorialComponent::OnManagerReady(ATutorialManager* manager) {
 }
 
 void UTutorialComponent::MarkTutorialWatched() {

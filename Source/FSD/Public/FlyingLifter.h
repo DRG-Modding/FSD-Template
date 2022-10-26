@@ -1,41 +1,41 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "AFlyingBug.h"
 #include "EGrabberState.h"
 #include "GrabSuccessDelegate.h"
-#include "AFlyingBug.h"
 #include "Engine/EngineTypes.h"
 #include "FlyingLifter.generated.h"
 
-class UCapsuleComponent;
-class UInDangerComponent;
 class UPointLightComponent;
 class UGrabberComponent;
 class UAudioComponent;
-class AActor;
+class UCapsuleComponent;
+class UInDangerComponent;
 class USoundBase;
 class UAnimSequenceBase;
+class AActor;
 class UPrimitiveComponent;
 
 UCLASS(Abstract, Blueprintable)
 class AFlyingLifter : public AAFlyingBug {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPointLightComponent* GrabLight;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UGrabberComponent* GrabberComp;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCapsuleComponent* GrabCapsule;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAudioComponent* GrabbedIdleLoop;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UInDangerComponent* InDanger;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAudioComponent* ScreamComponent;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

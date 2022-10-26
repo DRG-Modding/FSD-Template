@@ -3,9 +3,9 @@
 #include "AmmoDrivenWeapon.h"
 #include "BasicPistol.generated.h"
 
+class UFSDPhysicalMaterial;
 class UHealthComponentBase;
 class UPrimitiveComponent;
-class UFSDPhysicalMaterial;
 
 UCLASS(Blueprintable)
 class ABasicPistol : public AAmmoDrivenWeapon {

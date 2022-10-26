@@ -1,5 +1,17 @@
 #include "DeepDiveTemplate.h"
 
+class UMissionComplexity;
+class UMissionTemplate;
+class UMissionDuration;
+
+bool UDeepDiveTemplate::IsDurationAllowed(UMissionTemplate* mission, UMissionDuration* Duration) const {
+    return false;
+}
+
+bool UDeepDiveTemplate::IsComplexityAllowed(UMissionTemplate* mission, UMissionComplexity* Complexity) const {
+    return false;
+}
+
 ESchematicType UDeepDiveTemplate::GetStageRewardType(int32 stageIndex) const {
     return ESchematicType::Overclock;
 }

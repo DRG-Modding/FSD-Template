@@ -3,10 +3,10 @@
 #include "Objective.h"
 #include "RepairObjective.generated.h"
 
-class URepairableComponent;
 class AActor;
-class UGemResourceData;
+class URepairableComponent;
 class UDebrisPositioning;
+class UGemResourceData;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class URepairObjective : public UObjective {

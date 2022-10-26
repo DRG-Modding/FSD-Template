@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UpgradeValues.h"
-#include "EProjectileLauncherBaseUpgradeType.h"
 #include "StandardItemUpgrade.h"
+#include "EProjectileLauncherBaseUpgradeType.h"
 #include "ProjectileLauncherBaseUpgrade.generated.h"
 
 class AItem;

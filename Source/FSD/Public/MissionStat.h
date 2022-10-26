@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/DataAsset.h"
 #include "EMissionStatType.h"
 #include "MissionStat.generated.h"
 
 class UObject;
+class UFSDAchievement;
 class UMissionStat;
 class UMissionStatCategory;
-class UFSDAchievement;
 class APlayerCharacter;
 class UPlayerCharacterID;
 class UTexture2D;
@@ -53,40 +53,40 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FText MissionStatToText(EMissionStatType StatType, float Value);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static void Increment(UObject* WorldContext, UMissionStat* Stat, TSubclassOf<APlayerCharacter> CharacterClass, float Amount);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     float GetStatMinCount(UObject* WorldContext);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     float GetStatMaxCount(UObject* WorldContext);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     FText GetStatCountTotalAsText(UObject* WorldContext);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     float GetStatCountTotal(UObject* WorldContext);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     float GetStatCountPct(UObject* WorldContext, TSubclassOf<APlayerCharacter> CharacterClass);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     FText GetStatCountAsText(UObject* WorldContext, UPlayerCharacterID* characterID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     float GetStatCount(UObject* WorldContext, UPlayerCharacterID* characterID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetSourceTitle();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     FText GetLowestStatCountAsText(UObject* WorldContext);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UTexture2D* GetIcon() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     FText GetHighestStatCountAsText(UObject* WorldContext);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

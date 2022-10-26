@@ -5,9 +5,6 @@ class APipelineSegment;
 
 void APipelineExtractorPod::SetTargetRotation_Implementation(APipelineSegment* InPipelineSegment) {
 }
-bool APipelineExtractorPod::SetTargetRotation_Validate(APipelineSegment* InPipelineSegment) {
-    return true;
-}
 
 
 void APipelineExtractorPod::OnRep_ConnectedSegment() {

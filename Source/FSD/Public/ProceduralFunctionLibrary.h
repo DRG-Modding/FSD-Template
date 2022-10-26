@@ -9,9 +9,9 @@
 
 class UObject;
 class UFXSystemAsset;
+class UObjective;
 class UBiome;
 class AProceduralSetup;
-class UObjective;
 class UDebrisPositioning;
 
 UCLASS(Blueprintable)
@@ -19,10 +19,10 @@ class UProceduralFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UProceduralFunctionLibrary();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void SpawnTerrainImpact(UObject* WorldContextObject, UFXSystemAsset* particle, const FVector& Location, FRotator Rotation);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static AProceduralSetup* GetProceduralSetup(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -37,7 +37,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void CreateEntrances(AProceduralSetup* pls, UPARAM(Ref) FRoomNode& Room, int32 exitCount, int32 entranceCount, UDebrisPositioning* exitPositioning, UDebrisPositioning* entrancePositioning);
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool AllControllersFinishedTransitionToPlay(UObject* WorldContextObject);
     
 };

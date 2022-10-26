@@ -1,8 +1,8 @@
 #include "SessionHandling.h"
 #include "Templates/SubclassOf.h"
 
-class UFSDGameInstance;
 class UObject;
+class UFSDGameInstance;
 class UPlayerCharacterID;
 class APlayerCharacter;
 class UDifficultySetting;
@@ -16,6 +16,10 @@ void USessionHandling::StartVoice(UObject* WorldContextObject) {
 }
 
 bool USessionHandling::StartSearchForFriends(int32 localUserNum, UFSDGameInstance* GameInstance) {
+    return false;
+}
+
+bool USessionHandling::StartSearchForBlockedUsers(int32 localUserNum) {
     return false;
 }
 
@@ -91,6 +95,10 @@ FString USessionHandling::GetFriendlyServerName(UObject* WorldContextObject) {
 }
 
 bool USessionHandling::GetCurrentSessionState(FString& sessionState, FString& ID) {
+    return false;
+}
+
+bool USessionHandling::GetBlockedUsersList(int32 localUserNum, TArray<FFriendInfo>& BlockedPlayers) {
     return false;
 }
 

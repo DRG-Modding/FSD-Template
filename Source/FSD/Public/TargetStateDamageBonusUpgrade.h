@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "ItemUpgrade.h"
-#include "ETargetStateDamageBonusType.h"
 #include "UpgradeValues.h"
+#include "ETargetStateDamageBonusType.h"
 #include "TargetStateDamageBonusUpgrade.generated.h"
 
+class AFSDPlayerState;
 class AActor;
 class UDamageClass;
-class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UTargetStateDamageBonusUpgrade : public UItemUpgrade {

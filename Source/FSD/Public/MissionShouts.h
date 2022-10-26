@@ -21,13 +21,13 @@ public:
     UDialogDataAsset* OnCompletion;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UDialogDataAsset* OnCompletion_OneOfMultiple;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UDialogDataAsset* OnAllReturnObjectivesCompleted;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDialogDataAsset* OnDeepDiveExitPodDescending;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UDialogDataAsset* OnDeepDiveObjectiveCompletion;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UDialogDataAsset* OnDeepDiveAllReturnObjectivesCompleted;
     
     FSD_API FMissionShouts();
 };

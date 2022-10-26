@@ -2,8 +2,8 @@
 #include "Templates/SubclassOf.h"
 
 class UItemUpgrade;
-class AActor;
 class AFSDPlayerState;
+class AActor;
 
 void UItemUpgrade::UnequipUpgrade(TSubclassOf<AActor> itemClass, AFSDPlayerState* PlayerState) {
 }

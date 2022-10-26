@@ -5,9 +5,9 @@
 #include "CraftingCost.h"
 #include "ItemData.generated.h"
 
-class UItemID;
-class UTexture2D;
 class AActor;
+class UTexture2D;
+class UItemID;
 class UResourceData;
 
 UCLASS(Blueprintable)

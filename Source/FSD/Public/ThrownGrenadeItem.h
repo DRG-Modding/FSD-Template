@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EThrownGrenadeItemState.h"
 #include "Item.h"
 #include "RejoinListener.h"
 #include "UObject/NoExportTypes.h"
+#include "EThrownGrenadeItemState.h"
 #include "UObject/NoExportTypes.h"
 #include "ThrownGrenadeItem.generated.h"
 
@@ -13,6 +13,7 @@ class UItemCharacterAnimationSet;
 class AGrenade;
 class UGrenadeAnimationSet;
 class UStaticMeshComponent;
+class UFSDAudioComponent;
 
 UCLASS(Blueprintable)
 class AThrownGrenadeItem : public AItem, public IRejoinListener {
@@ -57,8 +58,14 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGrenadeAnimationSet* DefaultGrenadeAnimationSet;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UStaticMeshComponent* GrenadeMeshInstance;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UFSDAudioComponent* CookSound;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
+    bool CooldownIsDone;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     bool HasRejoinedInitialized;
@@ -68,20 +75,34 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
-    void Server_ThrowGrenade();
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void UpdateCookTime(float Time);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+public:
+    UFUNCTION(BlueprintCallable)
+    void SetRemainingCooldown(float CoolDown);
+    
+protected:
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_ThrowGrenade(const FVector& StartLocation, const float& cookTime);
+    
+    UFUNCTION(Reliable, Server)
     void Server_SetState(EThrownGrenadeItemState itemState);
     
 public:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_Resupply(float percentage);
+    
+    UFUNCTION(BlueprintCallable)
+    void ResupplyGrenadesAmount(const int32& Amount);
     
     UFUNCTION(BlueprintCallable)
     void ResupplyGrenades(float percentage);
     
 protected:
+    UFUNCTION(BlueprintCallable)
+    TArray<FVector> PredictGrenadePath();
+    
     UFUNCTION(BlueprintCallable)
     void OnRep_State();
     
@@ -94,6 +115,11 @@ protected:
     UFUNCTION(BlueprintCallable)
     void GrenadeThrowFinished();
     
+public:
+    UFUNCTION(BlueprintCallable)
+    void GetPredictedLastPosAndVelocity(FVector& Pos, FVector& Velocity);
+    
+protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetGrenadeThrowVelocity() const;
     

@@ -2,6 +2,6 @@
 
 UVeinMutator::UVeinMutator() {
     this->VeinResource = NULL;
-    this->Modifier = 1.00f;
+    this->modifier = 1.00f;
 }
 

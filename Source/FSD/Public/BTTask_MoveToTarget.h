@@ -11,6 +11,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AcceptableRadius;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool ToCenterOfMass;
+    
 public:
     UBTTask_MoveToTarget();
 };

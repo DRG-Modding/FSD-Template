@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "GeneratedDebris.generated.h"
 
-class UDebrisBase;
 class UObject;
+class UDebrisBase;
 
 USTRUCT(BlueprintType)
 struct FGeneratedDebris {

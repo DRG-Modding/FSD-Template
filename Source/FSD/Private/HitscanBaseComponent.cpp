@@ -2,14 +2,8 @@
 
 void UHitscanBaseComponent::Server_StopFire_Implementation() {
 }
-bool UHitscanBaseComponent::Server_StopFire_Validate() {
-    return true;
-}
 
 void UHitscanBaseComponent::Server_RemoveDebris_Implementation(int32 instance, int32 Component) {
-}
-bool UHitscanBaseComponent::Server_RemoveDebris_Validate(int32 instance, int32 Component) {
-    return true;
 }
 
 float UHitscanBaseComponent::GetCurrentVerticalSpread() const {
@@ -30,7 +24,7 @@ UHitscanBaseComponent::UHitscanBaseComponent() {
     this->WeakpointDamageMultiplier = 1.00f;
     this->MaxPenetrations = 0;
     this->ImpactDecalSize = EImpactDecalSize::Small;
-    this->friendlyFireModifier = 1.00f;
+    this->FriendlyFireModifier = 1.00f;
     this->UseDynamicSpread = false;
     this->MinSpread = 0.00f;
     this->MinSpreadWhenMoving = 0.00f;

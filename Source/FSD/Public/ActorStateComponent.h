@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "StateDelegateDelegate.h"
 #include "Components/ActorComponent.h"
 #include "StateTickDelegateDelegate.h"
-#include "StateDelegateDelegate.h"
 #include "ActorStateComponent.generated.h"
 
 class UActorStateComponent;
@@ -21,13 +21,13 @@ public:
     FStateDelegate OnEndState;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, ReplicatedUsing=OnRep_CurrentState, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, ReplicatedUsing=OnRep_CurrentState, meta=(AllowPrivateAccess=true))
     UActorStateComponent* CurrentState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UActorStateComponent* NextState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UActorStateComponent* MasterState;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -39,7 +39,7 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable)
-    void OnRep_CurrentState(UActorStateComponent* PreviousState);
+    void OnRep_CurrentState(UActorStateComponent* previousState);
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintPure)

@@ -1,20 +1,20 @@
 #include "PatrolBot.h"
 #include "Net/UnrealNetwork.h"
-#include "Perception/PawnSensingComponent.h"
 #include "PawnAlertComponent.h"
+#include "PlayerImpactCooldownComponent.h"
 #include "HackingUsableComponent.h"
+#include "Perception/PawnSensingComponent.h"
 #include "Components/SphereComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "EnemyComponent.h"
 #include "DamageComponent.h"
-#include "PlayerImpactCooldownComponent.h"
 #include "AvoidCeilingComponent.h"
 #include "Components/AudioComponent.h"
 #include "ProjectileAttackComponent.h"
 
+class UHealthComponentBase;
 class UPrimitiveComponent;
 class AActor;
-class UHealthComponentBase;
 
 void APatrolBot::SetIsPatrolling(bool patroling) {
 }

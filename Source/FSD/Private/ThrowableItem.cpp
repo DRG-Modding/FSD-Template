@@ -2,16 +2,13 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
 class AThrowableActor;
+class AActor;
 
 void AThrowableItem::Simulate_Throw_Implementation(TSubclassOf<AThrowableActor> ActorClass) {
 }
 
 void AThrowableItem::Server_Throw_Implementation(TSubclassOf<AThrowableActor> ActorClass) {
-}
-bool AThrowableItem::Server_Throw_Validate(TSubclassOf<AThrowableActor> ActorClass) {
-    return true;
 }
 
 

@@ -1,7 +1,7 @@
 #include "FlareController.h"
 
-class AFlareGunProjectile;
 class AActor;
+class AFlareGunProjectile;
 class AFlare;
 class UObject;
 

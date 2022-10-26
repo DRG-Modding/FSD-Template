@@ -6,13 +6,13 @@
 #include "Engine/EngineTypes.h"
 #include "BasicThrowableItem.generated.h"
 
-class UBoxComponent;
-class USoundCue;
-class USphereComponent;
-class UCarriableComponent;
 class UInstantUsable;
-class UFirstPersonStaticMeshComponent;
+class UBoxComponent;
+class UCarriableComponent;
+class USphereComponent;
 class UStaticMeshComponent;
+class UFirstPersonStaticMeshComponent;
+class USoundCue;
 class APlayerCharacter;
 class UPrimitiveComponent;
 class AActor;
@@ -21,22 +21,22 @@ UCLASS(Abstract, Blueprintable)
 class ABasicThrowableItem : public ACarriableItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBoxComponent* BoxComp;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USphereComponent* UseSphere;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCarriableComponent* CarriableComp;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UInstantUsable* UsableComp;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UStaticMeshComponent* WorldMeshComp;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UFirstPersonStaticMeshComponent* ViewMeshComp;
     
 protected:

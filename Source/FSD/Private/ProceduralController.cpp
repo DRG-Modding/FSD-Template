@@ -2,9 +2,6 @@
 
 void UProceduralController::Server_RequestTunnelData_Implementation() {
 }
-bool UProceduralController::Server_RequestTunnelData_Validate() {
-    return true;
-}
 
 
 

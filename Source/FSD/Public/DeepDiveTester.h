@@ -22,7 +22,7 @@ protected:
     EMissionStructure MissionStructure;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
-    TArray<FDeepDiveTesterItem> Stages;
+    TArray<FDeepDiveTesterItem> stages;
     
 public:
     ADeepDiveTester();

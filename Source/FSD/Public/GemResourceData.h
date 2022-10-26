@@ -6,10 +6,10 @@
 #include "GemResourceData.generated.h"
 
 class UDebrisPositioning;
-class AFSDGameState;
 class UGemResourceCreator;
-class AGem;
 class UDebrisBase;
+class AGem;
+class AFSDGameState;
 
 UCLASS(Blueprintable)
 class UGemResourceData : public UResourceData {
@@ -36,6 +36,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSoftClassPtr<AGem>> GemClasses;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float ImportantRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<AGem>> GemClassesLoaded;

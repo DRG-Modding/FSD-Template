@@ -4,6 +4,7 @@ void AEscortMuleAIController::SetDozerNextPathSegment() {
 }
 
 
+
 TArray<FVector> AEscortMuleAIController::GetPathForDebug(int32 Segment) {
     return TArray<FVector>();
 }

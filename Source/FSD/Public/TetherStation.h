@@ -5,18 +5,18 @@
 #include "UObject/NoExportTypes.h"
 #include "TetherStation.generated.h"
 
-class AFacilityGeneratorLine;
 class USceneComponent;
 class USkeletalMeshComponent;
+class AFacilityGeneratorLine;
 
 UCLASS(Blueprintable)
 class FSD_API ATetherStation : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* SceneRoot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* BaseMesh;
     
 protected:

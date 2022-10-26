@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UpgradeValues.h"
-#include "EReflectionHitscanUpgradeType.h"
 #include "StandardItemUpgrade.h"
+#include "EReflectionHitscanUpgradeType.h"
 #include "ReflectionHitscanUpgrade.generated.h"
 
 class AItem;

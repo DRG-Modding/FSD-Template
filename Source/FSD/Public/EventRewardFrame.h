@@ -10,7 +10,7 @@ UCLASS(Blueprintable)
 class AEventRewardFrame : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USpecialEventUsableComponent* EventUsable;
     
 protected:

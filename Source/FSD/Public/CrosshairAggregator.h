@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "ItemAggregator.h"
-#include "Upgradable.h"
 #include "CrosshairCreatedDelegate.h"
+#include "Upgradable.h"
 #include "CrosshairAggregator.generated.h"
 
-class APlayerController;
-class UCustomAmmoCountWidget;
 class UUserWidget;
+class UCustomAmmoCountWidget;
+class APlayerController;
 class UObject;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -19,13 +19,13 @@ public:
     FCrosshairCreated OnCrosshairCreated;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UUserWidget* CrosshairWidget;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UUserWidget> CrossHairType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UCustomAmmoCountWidget* CustomAmmoCounterWidget;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -39,7 +39,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UUserWidget* GetOrCreateCrosshair();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     UCustomAmmoCountWidget* GetCustomAmmoCounterWidget(UObject* WorldContext, APlayerController* InOwner);
     
     

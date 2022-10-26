@@ -14,7 +14,7 @@ public:
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float Modifier;
+    float modifier;
     
 public:
     UResourceMutator();

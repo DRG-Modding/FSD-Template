@@ -12,5 +12,7 @@ enum class EBoltActionRifleUpgrades : uint8 {
     FocusedWeakspotHitStatusEffect,
     NoGravityOnFocus,
     KillReloadTimeBoost,
+    AimedShotWeakpointDamageBonusMultiplier,
+    AimedShotAmmoCost,
 };
 

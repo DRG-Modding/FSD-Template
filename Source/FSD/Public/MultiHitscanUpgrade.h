@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UpgradeValues.h"
-#include "EMultiHitscanUpgradeType.h"
 #include "StandardItemUpgrade.h"
+#include "EMultiHitscanUpgradeType.h"
 #include "MultiHitscanUpgrade.generated.h"
 
 class AItem;

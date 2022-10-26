@@ -9,9 +9,6 @@ void ADrinkableItem::Consume() {
 
 void ADrinkableItem::ClientConsumed_Implementation() {
 }
-bool ADrinkableItem::ClientConsumed_Validate() {
-    return true;
-}
 
 
 void ADrinkableItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

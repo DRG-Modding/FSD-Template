@@ -6,11 +6,11 @@
 #include "RockEnemiesEvent.generated.h"
 
 class AProjectile;
-class USkeletalMeshComponent;
 class APawn;
+class UHealthComponentBase;
+class USkeletalMeshComponent;
 class UEnemyGroupDescriptor;
 class UParticleSystem;
-class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class ARockEnemiesEvent : public AGameEvent {
@@ -32,7 +32,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<APawn*> SpawnedRockEnemies;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* Mesh;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

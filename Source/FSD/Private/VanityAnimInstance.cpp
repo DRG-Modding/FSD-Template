@@ -1,5 +1,8 @@
 #include "VanityAnimInstance.h"
 
+void UVanityAnimInstance::UpdateMeshes() {
+}
+
 UVanityAnimInstance::UVanityAnimInstance() {
     this->VanitySlot = EVanitySlot::Beard;
     this->ArmorCoversBeard = false;

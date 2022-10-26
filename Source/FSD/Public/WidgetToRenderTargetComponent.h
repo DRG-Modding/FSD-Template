@@ -8,8 +8,8 @@
 #include "WidgetToRenderTargetComponent.generated.h"
 
 class UUserWidget;
-class UMaterialInterface;
 class ULocalPlayer;
+class UMaterialInterface;
 class UTextureRenderTarget2D;
 class UMaterialInstanceDynamic;
 
@@ -69,7 +69,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool TickWhenOffscreen;
     
-    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UUserWidget* Widget;
     
     UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

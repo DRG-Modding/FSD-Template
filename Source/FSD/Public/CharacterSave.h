@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "CharacterVanitySave.h"
-#include "VictoryPoseSave.h"
 #include "ItemLoadout.h"
+#include "VictoryPoseSave.h"
 #include "CharacterSave.generated.h"
 
 class APlayerCharacter;

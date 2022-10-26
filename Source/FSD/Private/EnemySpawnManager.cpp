@@ -39,6 +39,14 @@ bool UEnemySpawnManager::GetSpawningEnabled() const {
     return false;
 }
 
+APawn* UEnemySpawnManager::FindEnemyByClass(TSubclassOf<APawn> PawnClass, bool isSwarmerEnemy) const {
+    return NULL;
+}
+
+TArray<APawn*> UEnemySpawnManager::FindEnemiesByClass(TSubclassOf<APawn> PawnClass, bool isSwarmerEnemy) const {
+    return TArray<APawn*>();
+}
+
 void UEnemySpawnManager::EnemyDestroyed(AActor* Actor) {
 }
 

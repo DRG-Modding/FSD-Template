@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "DLCBase.h"
-#include "UObject/NoExportTypes.h"
 #include "SaveGameIDInterface.h"
+#include "UObject/NoExportTypes.h"
 #include "GameDLC.generated.h"
 
-class UObject;
-class UTexture2D;
-class UWindowWidget;
 class UResourceData;
 class UFileMediaSource;
+class UTexture2D;
+class UWindowWidget;
+class UObject;
 
 UCLASS(Blueprintable)
 class UGameDLC : public UDLCBase, public ISaveGameIDInterface {
@@ -50,6 +50,9 @@ protected:
     TSoftObjectPtr<UTexture2D> Banner_16_9;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSoftObjectPtr<UTexture2D> InfoScreenOverlay;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftClassPtr<UWindowWidget> AnnouncementWidget;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -66,17 +69,20 @@ protected:
     
 public:
     UGameDLC();
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     bool ShouldBeAnnounced(UObject* WorldContext) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     bool OpenStorePage(UObject* WorldContext);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void MarkAnnounced(UObject* WorldContext);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetSonyAdditionalContentId() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UTexture2D* GetInfoScreenOverlay() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UTexture2D* GetBanner_16_9() const;

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "CraftingCost.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "CraftingCostLibrary.generated.h"
 
 UCLASS(Blueprintable)

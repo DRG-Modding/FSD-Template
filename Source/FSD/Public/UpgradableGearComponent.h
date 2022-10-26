@@ -9,11 +9,11 @@
 #include "CraftingCost.h"
 #include "UpgradableGearComponent.generated.h"
 
-class UTexture2D;
-class AActor;
-class UItemUpgrade;
-class UItemData;
 class UOverclockBank;
+class UItemData;
+class AActor;
+class UTexture2D;
+class UItemUpgrade;
 class UResourceData;
 class UItemID;
 class AFSDPlayerController;
@@ -83,14 +83,14 @@ public:
     UFUNCTION(BlueprintCallable)
     bool PurchaseUpgrade(UItemID* ItemID, UItemUpgrade* Upgrade, AFSDPlayerController* PlayerController, TSubclassOf<APlayerCharacter> previewedCharacter);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool PurchaseItem(UObject* WorldContextObject, UItemID* ItemID);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool PlayerOwnesUpgradeInAllTiers(TSubclassOf<AActor> itemClass, UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable)
-    static void MirrorUpgradePreviewStatus(UPARAM(Ref) FGearStatEntry& From, UPARAM(Ref) FGearStatEntry& to);
+    static void MirrorUpgradePreviewStatus(UPARAM(Ref) FGearStatEntry& From, UPARAM(Ref) FGearStatEntry& To);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsUpgradeEquipped(TSubclassOf<AActor> itemClass, UItemUpgrade* Upgrade, AFSDPlayerState* Player);
@@ -98,16 +98,16 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsTierUnLocked(TSubclassOf<AActor> itemClass, int32 tierIndex, AFSDPlayerState* Player, UPlayerCharacterID* characterID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsOverclockingEnabled(UObject* WorldContextObject, AFSDPlayerState* Player, UPlayerCharacterID* characterID, TSubclassOf<AActor> itemClass);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsItemUnlocked(UObject* WorldContextObject, UItemID* Item);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsItemOwned(UObject* WorldContextObject, UItemID* Item);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsItemEquipped(UObject* WorldContextObject, UItemID* ItemID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -131,7 +131,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UItemUpgrade*> GetOverClocks() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static int32 GetMasteryProgress(UObject* WorldContextObject, UItemID* ItemID, int32& maxMastery);
     
     UFUNCTION(BlueprintCallable)
@@ -143,7 +143,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<FUpgradeTier> GetItemUpgradeTiers(TSubclassOf<AActor> itemClass);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static EItemUpgradeStatus GetItemUpgradeStatus(UObject* WorldContextObject, TSubclassOf<AActor> itemClass, UItemUpgrade* ItemUpgrade, UPlayerCharacterID* characterID);
     
     UFUNCTION(BlueprintPure)
@@ -191,10 +191,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static UItemUpgrade* GetEquippedUpgradeAtTier(TSubclassOf<AActor> itemClass, int32 tierIndex, UPlayerCharacterID* characterID, AFSDPlayerState* Player);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static UItemUpgrade* GetEquippedOverclock(UObject* WorldContextObject, TSubclassOf<AActor> itemClass);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static TArray<UItemUpgrade*> GetEquippableOverclocks(UObject* WorldContextObject, TSubclassOf<AActor> itemClass, UPlayerCharacterID* characterID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -215,13 +215,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static void CheckMasteryUnlocks(UItemID* ItemID, AFSDPlayerController* Player);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool CanItemOverclock(UObject* WorldContextObject, TSubclassOf<AActor> itemClass);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool CanAffordUpgrade(UObject* WorldContextObject, UItemUpgrade* Upgrade);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool CanAffordItem(UObject* WorldContextObject, UItemID* ItemID);
     
 };

@@ -1,8 +1,8 @@
 #include "FSDOnlineSystemUtils.h"
 
 class APlayerState;
-class UObject;
 class UFSDGameInstance;
+class UObject;
 
 void UFSDOnlineSystemUtils::TryToResolvePrivilege(const APlayerState* PlayerState, EBlueprintableUserPrivileges Privilege, EBlueprintablePrivilegeResults reason) {
 }
@@ -14,6 +14,9 @@ void UFSDOnlineSystemUtils::ShowAccountPicker(UFSDGameInstance* gInstance, const
 }
 
 void UFSDOnlineSystemUtils::OpenURLInOverlay(const FString& URL, FOnShowWebUrlClosedBP OnOverlayClosed) {
+}
+
+void UFSDOnlineSystemUtils::OpenProfileWithEvent(APlayerState* Requestor, APlayerState* Requestee, FOnProfileUIClosedBP OnProfileWindowClosed) {
 }
 
 void UFSDOnlineSystemUtils::OpenProfileByUserId(APlayerState* Requestor, const FString& RequesteeUserID) {

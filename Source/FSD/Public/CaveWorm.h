@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DeepPathfinderCharacter.h"
 #include "UObject/NoExportTypes.h"
+#include "DeepPathfinderCharacter.h"
 #include "UObject/NoExportTypes.h"
 #include "CaveWorm.generated.h"
 
+class UResourceData;
 class USimpleHealthComponent;
 class AResourceChunk;
 class UHealthComponentBase;
 class UObject;
-class UResourceData;
 
 UCLASS(Blueprintable, MinimalAPI)
 class ACaveWorm : public ADeepPathfinderCharacter {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USimpleHealthComponent* Health;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -27,7 +27,7 @@ protected:
     
 public:
     ACaveWorm();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static AResourceChunk* SpawnResource(UObject* WorldContext, UResourceData* Data, float Size, FTransform Transform, FVector Impulse, FVector DropOffset);
     
 protected:

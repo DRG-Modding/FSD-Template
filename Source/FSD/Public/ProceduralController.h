@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RoomNode.h"
-#include "Components/ActorComponent.h"
-#include "GeneratedDebrisItem.h"
-#include "EDebrisItemPass.h"
-#include "TunnelNode.h"
 #include "PathObstacle.h"
+#include "Components/ActorComponent.h"
+#include "EDebrisItemPass.h"
+#include "GeneratedDebrisItem.h"
+#include "TunnelNode.h"
+#include "RoomNode.h"
 #include "LevelGenerationCarverLists.h"
 #include "GeneratedInfluenceSets.h"
 #include "ProceduralController.generated.h"
@@ -15,7 +15,7 @@ class UProceduralController : public UActorComponent {
     GENERATED_BODY()
 public:
     UProceduralController();
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_RequestTunnelData();
     
 protected:

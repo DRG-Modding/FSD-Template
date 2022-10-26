@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UpgradeValues.h"
-#include "EInventoryItemUpgradeType.h"
 #include "StandardItemUpgrade.h"
+#include "EInventoryItemUpgradeType.h"
 #include "InventoryItemUpgrade.generated.h"
 
 class AItem;

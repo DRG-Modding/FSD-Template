@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
-#include "Engine/NetSerialization.h"
-#include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
+#include "Engine/NetSerialization.h"
 #include "Engine/NetSerialization.h"
 #include "StickyFlameSpawner.generated.h"
 
@@ -50,7 +50,7 @@ public:
     bool TrySpawnStickyFlame(FVector Location, FVector Normal);
     
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerSpawnStickyFlame(FVector_NetQuantize Location, FVector_NetQuantizeNormal Normal);
     
 };

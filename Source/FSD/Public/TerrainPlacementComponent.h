@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/SceneComponent.h"
-#include "TerrainPlacementBox.h"
 #include "EDebrisColliderType.h"
+#include "Components/SceneComponent.h"
 #include "DebrisCapsule.h"
+#include "TerrainPlacementBox.h"
 #include "UObject/NoExportTypes.h"
 #include "TerrainPlacementComponent.generated.h"
 

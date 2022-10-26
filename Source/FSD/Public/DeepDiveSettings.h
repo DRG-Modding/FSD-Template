@@ -4,12 +4,12 @@
 #include "DeepDiveLoaderSequence.h"
 #include "DeepDiveSettings.generated.h"
 
-class UMissionWarning;
-class UDeepDiveTemplate;
 class UMissionNameBank;
-class UMutator;
+class UDeepDiveTemplate;
 class UDialogDataAsset;
+class UMutator;
 class UMissionMutator;
+class UMissionWarning;
 
 UCLASS(Blueprintable)
 class UDeepDiveSettings : public UDataAsset {

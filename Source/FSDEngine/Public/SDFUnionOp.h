@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SDFBase.h"
 #include "SDFSmoothingProperties.h"
+#include "SDFBase.h"
 #include "SDFUnionOp.generated.h"
 
 UCLASS(Blueprintable)

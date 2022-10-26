@@ -9,20 +9,11 @@ void ADetPackItem::Simulate_ThrowGrenade_Implementation() {
 
 void ADetPackItem::Server_ThrowGrenade_Implementation() {
 }
-bool ADetPackItem::Server_ThrowGrenade_Validate() {
-    return true;
-}
 
 void ADetPackItem::Server_Detonate_Implementation() {
 }
-bool ADetPackItem::Server_Detonate_Validate() {
-    return true;
-}
 
 void ADetPackItem::Server_CycleItem_Implementation() {
-}
-bool ADetPackItem::Server_CycleItem_Validate() {
-    return true;
 }
 
 

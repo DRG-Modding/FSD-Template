@@ -30,6 +30,9 @@ protected:
     bool DeadBugWalkingTargetMarking;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float ExtraDamageForCalculatingDBW;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UStatusEffect> DeadBugWalkingSTE;
     
 public:

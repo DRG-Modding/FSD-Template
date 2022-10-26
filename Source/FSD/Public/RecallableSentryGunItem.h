@@ -4,12 +4,12 @@
 #include "RecallableItem.h"
 #include "RecallableSentryGunItem.generated.h"
 
-class UItemUpgrade;
-class ARecallableSentryGunItem;
-class AItem;
-class UCapacityHoldingItemAggregator;
-class ARecallableSentryGun;
 class UItemPlacerAggregator;
+class ARecallableSentryGun;
+class ARecallableSentryGunItem;
+class UItemUpgrade;
+class UCapacityHoldingItemAggregator;
+class AItem;
 
 UCLASS(Blueprintable)
 class ARecallableSentryGunItem : public ARecallableItem {
@@ -37,10 +37,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RecallHoldDuration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCapacityHoldingItemAggregator* AmmoCapacity;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UItemPlacerAggregator* ItemPlacer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

@@ -2,18 +2,18 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "EnemyDeepPathfinderCharacter.h"
-#include "BumpPlayerHit.h"
 #include "EWoodLouseState.h"
+#include "BumpPlayerHit.h"
 #include "GameplayTagContainer.h"
 #include "WoodLouse.generated.h"
 
-class AProjectile;
 class USceneComponent;
-class UStatusEffect;
 class UPawnSensingComponent;
+class UStatusEffect;
 class UFakeMoverSettings;
-class USoundBase;
+class AProjectile;
 class AActor;
+class USoundBase;
 class UDamageClass;
 class UAudioComponent;
 class APawn;
@@ -22,10 +22,10 @@ UCLASS(Blueprintable)
 class AWoodLouse : public AEnemyDeepPathfinderCharacter {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* RollingCenter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPawnSensingComponent* PawnSensing;
     
 protected:

@@ -1,8 +1,8 @@
 #include "CrossbowProjectileBase.h"
 #include "Net/UnrealNetwork.h"
 
-class APlayerCharacter;
 class USceneComponent;
+class APlayerCharacter;
 
 void ACrossbowProjectileBase::Server_HandleImpact_Implementation(const FHitResult& HitResult, const FVector& RelativeLocation) {
 }

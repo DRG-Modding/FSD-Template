@@ -1,12 +1,12 @@
 #include "DetPack.h"
 #include "Net/UnrealNetwork.h"
 #include "ExplosionComponent.h"
-#include "GameFramework/ProjectileMovementComponent.h"
 #include "SingleUsableComponent.h"
+#include "GameFramework/ProjectileMovementComponent.h"
 #include "SimpleHealthComponent.h"
 
-class UHealthComponentBase;
 class APlayerCharacter;
+class UHealthComponentBase;
 
 void ADetPack::UseFearStaggerUpgrades() {
 }

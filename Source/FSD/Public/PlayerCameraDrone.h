@@ -2,22 +2,23 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Pawn.h"
-#include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "PlayerCameraDrone.generated.h"
 
-class UAnimationAsset;
 class UPawnMovementComponent;
 class AActor;
+class AVanityCharacter;
+class UAnimationAsset;
+class ALaserPointerMarker;
 class UPrimitiveComponent;
-class UCameraComponent;
 
 UCLASS(Abstract, Blueprintable)
 class APlayerCameraDrone : public APawn {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPawnMovementComponent* Movement;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -65,18 +66,48 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SelectedVanityAnimation;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TArray<AVanityCharacter*> VanityCharacterInstances;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TArray<AVanityCharacter*> StaticVanityCharacterInstances;
+    
 private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<ALaserPointerMarker> DroneMarker;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    ALaserPointerMarker* ActiveMarker;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> Flare;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TArray<AActor*> FlareInstances;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> BounceFlare;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TArray<AActor*> BounceFlareInstances;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    AActor* SplineInstance;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TArray<AActor*> SplineMeshInstances;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> Spline;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> SplineMesh;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    AActor* PlayerFollowed;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    AActor* WeaponTrackActor;
     
 public:
     APlayerCameraDrone();
@@ -118,9 +149,6 @@ protected:
     UFUNCTION(BlueprintCallable)
     FVector GetFlareLightSettings();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    UCameraComponent* GetCamera();
-    
     UFUNCTION(BlueprintCallable)
     FVector GetBounceFlareLightSettings();
     
@@ -131,7 +159,7 @@ protected:
     void ClearFocusPoint();
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void BeginCountdown();
+    void All_BeginCountdown();
     
 };
 

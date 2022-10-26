@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "SoftMinersManualDescription.h"
+#include "Engine/DataAsset.h"
 #include "MinersManualData.generated.h"
 
 class UTexture2D;

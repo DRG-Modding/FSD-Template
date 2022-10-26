@@ -5,15 +5,15 @@
 #include "GameplayTagAssetInterface.h"
 #include "ERessuplyPodState.h"
 #include "GameplayTagContainer.h"
-#include "GameplayTagContainer.h"
 #include "UObject/NoExportTypes.h"
+#include "GameplayTagContainer.h"
 #include "RessuplyPod.generated.h"
 
-class UDamageComponent;
 class ARessuplyPod;
+class UDamageComponent;
 class UDialogDataAsset;
-class UObject;
 class UCurveFloat;
+class UObject;
 
 UCLASS(Blueprintable)
 class ARessuplyPod : public AActor, public IGameplayTagAssetInterface {
@@ -28,7 +28,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagContainer GameplayTags;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* Damage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -44,6 +44,9 @@ protected:
     float MissionShoutDelay;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UDialogDataAsset* ShoutDialogOrderAccepted;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDialogDataAsset* DialogOrderAccepted;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -55,7 +58,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FVector StartLocation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_TargetLocation, meta=(AllowPrivateAccess=true))
     FVector TargetLocation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_State, meta=(AllowPrivateAccess=true))
@@ -88,6 +91,9 @@ protected:
     void OnTunnelBLocked();
     
     UFUNCTION(BlueprintCallable)
+    void OnRep_TargetLocation();
+    
+    UFUNCTION(BlueprintCallable)
     void OnRep_State(ERessuplyPodState oldState);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -100,7 +106,7 @@ protected:
     void OnDroppodCloseToImpact();
     
 public:
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static AActor* DropToTarget(UObject* WorldContextObject, TSubclassOf<ARessuplyPod> podClass, const FVector& Location, AActor* requester);
     
     

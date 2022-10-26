@@ -15,5 +15,6 @@ enum class EEnemyFamily : uint8 {
     Automaton,
     Unknown,
     RivalTech,
+    Lithophage,
 };
 

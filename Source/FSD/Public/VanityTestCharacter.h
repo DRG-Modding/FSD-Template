@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EVanitySlot.h"
 #include "GameFramework/Character.h"
+#include "EVanitySlot.h"
 #include "VanityTestCharacterItem.h"
 #include "VanityTestCharacter.generated.h"
 

@@ -6,8 +6,8 @@
 #include "ELineCutterUpgradeType.h"
 #include "LineCutterUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AActor;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class ULineCutterUpgrade : public UStandardItemUpgrade {

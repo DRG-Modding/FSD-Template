@@ -1,34 +1,48 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "ECampaignType.h"
 #include "ECampaignMutators.h"
 #include "Campaign.generated.h"
 
-class UCampaignMission;
-class UGameActivityAssignmentType;
-class UCampaignRequirement;
-class UPlayerCharacterID;
-class UTexture2D;
-class UMissionStat;
-class UDifficultySetting;
-class UCampaign;
-class AFSDPlayerController;
 class APlayerController;
+class UCampaignMission;
+class UPlayerCharacterID;
+class UDialogDataAsset;
+class UReward;
+class UDifficultySetting;
+class UCampaignRequirement;
+class UTexture2D;
+class AFSDPlayerController;
+class UMissionStat;
+class UGameActivityAssignmentType;
+class UCampaign;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API UCampaign : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool HasMissions;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UCampaignMission*> missions;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TArray<UReward*> RewardsOnCampaignStart;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TArray<UReward*> RewardsOnCompletion;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UDialogDataAsset* CampaignCompleteShout;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UCampaignRequirement*> Requirements;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UCampaignRequirement*> VisibilityRequirements;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -39,6 +53,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 Progress;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    int32 Seed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid SavegameID;
@@ -79,6 +96,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGameActivityAssignmentType* CampaignActivity;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UCampaign> ReplacesOldCampaignCampaign;
+    
 protected:
     UPROPERTY(EditAnywhere)
     ECampaignMutators Mutators;
@@ -88,7 +108,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsComplete() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     static bool IsCampaignComplete(UObject* WorldContext, TSubclassOf<UCampaign> Campaign);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

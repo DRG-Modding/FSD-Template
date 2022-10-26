@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "BootUpDelegateDelegate.h"
 #include "EInputKeys.h"
+#include "BootUpDelegateDelegate.h"
 #include "EventStarterButton.generated.h"
 
-class USingleUsableComponent;
-class USceneComponent;
 class APlayerCharacter;
+class USceneComponent;
+class USingleUsableComponent;
 
 UCLASS(Blueprintable)
 class AEventStarterButton : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* Root;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USingleUsableComponent* Usable;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

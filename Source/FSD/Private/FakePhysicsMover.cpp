@@ -19,7 +19,7 @@ void AFakePhysicsMover::ApplyImpulse(const FVector& Impulse) {
 void AFakePhysicsMover::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
-    DOREPLIFETIME(AFakePhysicsMover, posVel);
+    DOREPLIFETIME(AFakePhysicsMover, PosVel);
     DOREPLIFETIME(AFakePhysicsMover, MoveSettings);
 }
 

@@ -4,9 +4,9 @@
 #include "GameFramework/OnlineReplStructs.h"
 #include "EventRewardDispenser.generated.h"
 
+class AFSDPlayerState;
 class AEventRewardFrame;
 class USchematic;
-class AFSDPlayerState;
 class APlayerCharacter;
 
 UCLASS(Blueprintable)

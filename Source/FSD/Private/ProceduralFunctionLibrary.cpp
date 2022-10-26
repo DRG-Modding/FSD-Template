@@ -3,9 +3,9 @@
 
 class UObject;
 class UFXSystemAsset;
+class UObjective;
 class UBiome;
 class AProceduralSetup;
-class UObjective;
 class UDebrisPositioning;
 
 void UProceduralFunctionLibrary::SpawnTerrainImpact(UObject* WorldContextObject, UFXSystemAsset* particle, const FVector& Location, FRotator Rotation) {

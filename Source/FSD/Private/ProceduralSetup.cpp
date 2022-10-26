@@ -3,14 +3,16 @@
 #include "NoisyPathfinderComponent.h"
 #include "ProceduralTunnelComponent.h"
 #include "PLSEncounterComponent.h"
+#include "ProceduralVeinsComponent.h"
+#include "ProceduralResources.h"
 #include "ProceduralObjectColliders.h"
 
 class AProceduralSetup;
-class UCaveInfluencer;
 class ADeepCSGWorld;
-class UTunnelParameters;
 class UMissionDNA;
+class UTunnelParameters;
 class URoomGeneratorBase;
+class UCaveInfluencer;
 
 
 void AProceduralSetup::SpawnSpecialEvents() {
@@ -80,25 +82,7 @@ void AProceduralSetup::GenerateRoomsFromGraph_Async(AProceduralSetup* setup, FLa
 void AProceduralSetup::GenerateRoomsFromGraph(int32 CarvePass) {
 }
 
-void AProceduralSetup::GenerateResourceVeins_Async(AProceduralSetup* setup, FLatentActionInfo LatentInfo) {
-}
 
-void AProceduralSetup::GenerateResourceVeins() {
-}
-
-void AProceduralSetup::GeneratePostCarveRooms_Async(AProceduralSetup* setup, FLatentActionInfo LatentInfo) {
-}
-
-void AProceduralSetup::GeneratePostCarveRooms() {
-}
-
-
-
-void AProceduralSetup::GenerateDebrisVeins_Async(AProceduralSetup*& setup, EDebrisCarvedType CarverType, FLatentActionInfo LatentInfo) {
-}
-
-void AProceduralSetup::GenerateDebrisVeins(EDebrisCarvedType CarverType) {
-}
 
 FVector AProceduralSetup::FindLocationInDirection(FVector Origin, FVector Direction, float horizontalDeviation, float verticalDeviation, FRandRange Distance, float additionalDistance) {
     return FVector{};
@@ -130,7 +114,7 @@ int32 AProceduralSetup::CreateItemDepths() {
 void AProceduralSetup::CreateGeneratedInfluenceSet() {
 }
 
-int32 AProceduralSetup::ConnectRooms(FRoomNode& From, FRoomNode& to, bool hasDirt, UTunnelParameters* tunnelParameterOverride) {
+int32 AProceduralSetup::ConnectRooms(FRoomNode& From, FRoomNode& To, bool hasDirt, UTunnelParameters* tunnelParameterOverride) {
     return 0;
 }
 
@@ -184,11 +168,14 @@ AProceduralSetup::AProceduralSetup() {
     this->ShowItemNoisePattern = false;
     this->Seed = -1;
     this->UseRandomSeed = true;
-    this->ForcedSpecialEvent = NULL;
+    this->ForcedMachineEvent = NULL;
     this->ForcedTreasure = NULL;
+    this->ForcedOtherEvent = NULL;
     this->NoisyPathfinder = CreateDefaultSubobject<UNoisyPathfinderComponent>(TEXT("NoisyPathfinder"));
     this->ProceduralTunnel = CreateDefaultSubobject<UProceduralTunnelComponent>(TEXT("ProceduralTunnel"));
     this->Encounters = CreateDefaultSubobject<UPLSEncounterComponent>(TEXT("Encounters"));
+    this->Veins = CreateDefaultSubobject<UProceduralVeinsComponent>(TEXT("ProceduralVeins"));
+    this->Resources = CreateDefaultSubobject<UProceduralResources>(TEXT("ProceduralResources"));
     this->ObjectColliders = CreateDefaultSubobject<UProceduralObjectColliders>(TEXT("ObjectColliders"));
     this->CSGWorld = NULL;
     this->PathfinderNoise = NULL;

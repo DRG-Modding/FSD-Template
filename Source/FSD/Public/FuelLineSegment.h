@@ -5,11 +5,11 @@
 #include "UObject/NoExportTypes.h"
 #include "FuelLineSegment.generated.h"
 
-class USplineMeshComponent;
-class USimpleHealthComponent;
-class USplineComponent;
-class UStaticMeshComponent;
 class USceneComponent;
+class USplineComponent;
+class USplineMeshComponent;
+class UStaticMeshComponent;
+class USimpleHealthComponent;
 class UHealthComponentBase;
 
 UCLASS(Abstract, Blueprintable)
@@ -17,19 +17,19 @@ class FSD_API AFuelLineSegment : public ATrackBuilderSegment {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USplineMeshComponent* FuelLineSplineMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USplineComponent* FuelLineSplineComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UStaticMeshComponent* FuelLineEndPostMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USimpleHealthComponent* DeconstructHealthComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* PreviewEndPostLocation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -47,7 +47,7 @@ protected:
 public:
     AFuelLineSegment();
 protected:
-    UFUNCTION(BlueprintCallable, Client, Unreliable, WithValidation)
+    UFUNCTION(BlueprintCallable, Client, Unreliable)
     void ClientUpdateStartTransform(const FVector& NewStartLocation);
     
     UFUNCTION(BlueprintCallable)

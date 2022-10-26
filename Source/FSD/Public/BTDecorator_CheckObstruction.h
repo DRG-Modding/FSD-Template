@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "BehaviorTree/BTDecorator.h"
+#include "UObject/NoExportTypes.h"
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BTDecorator_CheckObstruction.generated.h"
 

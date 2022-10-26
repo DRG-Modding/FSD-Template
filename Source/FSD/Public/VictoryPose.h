@@ -4,10 +4,10 @@
 #include "Aquisitionable.h"
 #include "VictoryPose.generated.h"
 
-class UObject;
 class UItemAquisitionBase;
 class UAnimSequence;
 class AActor;
+class UObject;
 class UPlayerCharacterID;
 
 UCLASS(Blueprintable)
@@ -23,9 +23,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UItemAquisitionBase* Aquisition;
-    
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool UnlockedFromStart;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSoftObjectPtr<UAnimSequence>> Walks;
@@ -47,19 +44,19 @@ protected:
     
 public:
     UVictoryPose();
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    UFUNCTION(BlueprintCallable, BlueprintPure=false, meta=(WorldContext="WorldContextObject"))
     void Unlock(UObject* WorldContextObject, UPlayerCharacterID* characterID) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     void ResetUnlock(UObject* WorldContextObject, UPlayerCharacterID* characterID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     bool IsUnlockedNotFromStart(UObject* WorldContextObject, UPlayerCharacterID* characterID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     bool IsUnlocked(UObject* WorldContextObject, UPlayerCharacterID* characterID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    UFUNCTION(BlueprintCallable, BlueprintPure=false, meta=(WorldContext="WorldContextObject"))
     void Equip(UObject* WorldContextObject, UPlayerCharacterID* characterID) const;
     
     

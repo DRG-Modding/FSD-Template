@@ -21,6 +21,7 @@ UDialogDataAsset* AMolly::GetCallingShout_Implementation() const {
 }
 
 
+
 void AMolly::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     

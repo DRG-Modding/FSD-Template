@@ -4,9 +4,9 @@
 #include "Engine/NetSerialization.h"
 #include "ProjectileImpact.generated.h"
 
+class UPrimitiveComponent;
 class AActor;
 class UPhysicalMaterial;
-class UPrimitiveComponent;
 
 USTRUCT(BlueprintType)
 struct FProjectileImpact {

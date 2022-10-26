@@ -1,26 +1,26 @@
 #include "FSDGameInstance.h"
 #include "Templates/SubclassOf.h"
-#include "FSDSendToURL.h"
-#include "FSDCloudLoadSave.h"
 #include "FSDSessionUpdater.h"
+#include "FSDCloudLoadSave.h"
+#include "FSDSendToURL.h"
 
 class AProceduralSetup;
-class USoundBase;
+class UTexture2D;
 class AActor;
 class UGeneratedMission;
 class UObject;
-class UWorld;
-class UItemSkin;
 class ACharacterSelectionSwitcher;
+class UWorld;
+class UHUDWarningWidget;
 class UNetDriver;
 class UFSDSaveGame;
 class UMutator;
 class UTemporaryBuff;
-class UHUDWarningWidget;
 class APlayerCharacter;
 class AFSDPlayerController;
 class UIconGenerationManager;
-class UTexture2D;
+class UItemSkin;
+class USoundBase;
 
 void UFSDGameInstance::UpdateGlobelMissionSeed() {
 }
@@ -39,14 +39,6 @@ void UFSDGameInstance::StartPersonalAnalytics() {
 
 AProceduralSetup* UFSDGameInstance::SpawnProcedural() {
     return NULL;
-}
-
-bool UFSDGameInstance::ShouldPendingRewardsBeShown() const {
-    return false;
-}
-
-bool UFSDGameInstance::ShouldPendingRewardsBeGiven() const {
-    return false;
 }
 
 void UFSDGameInstance::SetViewer3DClass(TSubclassOf<AActor> NewClass, ECharselectionCameraLocation Location) {
@@ -210,10 +202,6 @@ TArray<FBlueprintSessionResult> UFSDGameInstance::GetServersFriendsArePlaying(TA
     return TArray<FBlueprintSessionResult>();
 }
 
-bool UFSDGameInstance::GetPendingRewards(FPendingRewardsStats& OutStats, FPendingRewards& OutRewards) const {
-    return false;
-}
-
 TArray<UMutator*> UFSDGameInstance::GetMutators(TSubclassOf<UMutator> mutatorClass) const {
     return TArray<UMutator*>();
 }
@@ -268,9 +256,6 @@ void UFSDGameInstance::GameUserSettingsChanged() {
 void UFSDGameInstance::CloseSessionLobby() {
 }
 
-void UFSDGameInstance::ClearPendingRewards() {
-}
-
 void UFSDGameInstance::ClearDisconnectError() {
 }
 
@@ -291,7 +276,7 @@ void UFSDGameInstance::AddToFriendSessions(const FString& friendSessionId, const
 void UFSDGameInstance::AddStatValue(const FString& Key, float Value) {
 }
 
-void UFSDGameInstance::AddStatCount(const FString& Key, int32 count) {
+void UFSDGameInstance::AddStatCount(const FString& Key, int32 Count) {
 }
 
 UFSDGameInstance::UFSDGameInstance() {
@@ -316,7 +301,9 @@ UFSDGameInstance::UFSDGameInstance() {
     this->CanPlayOnline = true;
     this->CanCommunicateOnline = true;
     this->GoogleAnalyticsWI = NULL;
-    this->ForcedSpecialEvent = NULL;
+    this->DSTelemetryWrapper = NULL;
+    this->ForcedMachineEvent = NULL;
+    this->ForcedOtherEvent = NULL;
     this->ShowMinerManualWorkInProgress = false;
     this->LastDreadnaughtKillTime = -1.00f;
     this->CharacterSelectionSwitcher = NULL;

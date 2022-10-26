@@ -3,12 +3,12 @@
 #include "Templates/SubclassOf.h"
 #include "UpgradableItemComponent.h"
 
-class AActor;
+class USoundConcurrency;
+class USceneComponent;
 class USoundBase;
 class USoundAttenuation;
-class USceneComponent;
 class UAudioComponent;
-class USoundConcurrency;
+class AActor;
 class UTexture2D;
 class AItem;
 class UItemCharacterAnimationSet;
@@ -29,9 +29,6 @@ UAudioComponent* AItem::SpawnSound2D(USoundBase* Sound, float PriorityOverride, 
 }
 
 void AItem::Server_StartUsing_Implementation(bool NewIsUsing) {
-}
-bool AItem::Server_StartUsing_Validate(bool NewIsUsing) {
-    return true;
 }
 
 void AItem::Resupply(float percentage) {

@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Subsystems/EngineSubsystem.h"
 #include "EUGCPackageError.h"
+#include "Engine/LatentActionManager.h"
 #include "EModioRequestType.h"
 #include "HasHiddenModsData.h"
-#include "Engine/LatentActionManager.h"
 #include "UGCSubsystem.generated.h"
 
-class UUGCLatentActionManager;
 class UUGCRegistry;
 class UUGCSettings;
+class UUGCLatentActionManager;
 class UUGCPackage;
 class UObject;
 
@@ -119,25 +119,25 @@ public:
     UFUNCTION(BlueprintCallable)
     void MarkRecentlyInstalledModsSuccesful();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContext"))
     void K2_RequestTermsOfUse(UObject* WorldContext, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
     bool K2_RequestSubscribe(const FString& ModId);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContext"))
     void K2_RequestModThumbnailById(UObject* WorldContext, FLatentActionInfo LatentInfo, const FString& ModId);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContext"))
     void K2_RequestModThumbnail(UObject* WorldContext, FLatentActionInfo LatentInfo, UUGCPackage* Package);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContext"))
     void K2_RequestModMetaData(UObject* WorldContext, FLatentActionInfo LatentInfo, const FString& ModioStringID, int64& ModId);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContext"))
     void K2_RequestModDependencyList(UObject* WorldContext, FLatentActionInfo LatentInfo, const FString& ModId, FString& outParentId, TArray<FString>& outModIds);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContext"))
     void K2_RequestHasHostHiddenMods(UObject* WorldContext, FLatentActionInfo LatentInfo, TArray<FString> sHostModIds, TArray<FString> sClientModIds, bool& outHidden);
     
     UFUNCTION(BlueprintCallable)

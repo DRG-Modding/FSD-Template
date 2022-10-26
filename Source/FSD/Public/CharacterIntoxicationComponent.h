@@ -7,8 +7,8 @@
 #include "EDrinkableAlcoholStrength.h"
 #include "CharacterIntoxicationComponent.generated.h"
 
-class APlayerCharacter;
 class UCurveFloat;
+class APlayerCharacter;
 class UDrinkableDataAsset;
 
 UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "GameplayTagAssetInterface.h"
+#include "GameFramework/Actor.h"
 #include "GameplayTagContainer.h"
 #include "GameplayTagContainer.h"
 #include "FacilityShieldGenerator.generated.h"

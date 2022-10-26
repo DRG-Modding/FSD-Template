@@ -1,10 +1,10 @@
 #include "GoogleAnalyticsWrapper.h"
 
 class AFSDGameState;
-class AActor;
 class USeasonChallenge;
 class APlayerController;
 class AFSDPlayerState;
+class AActor;
 
 void UGoogleAnalyticsWrapper::StartMissionPartyInfo(AFSDGameState* GameState) {
 }
@@ -36,7 +36,7 @@ void UGoogleAnalyticsWrapper::RecordGaTreeOfVanityClaim(int32 NodeID) {
 void UGoogleAnalyticsWrapper::RecordGASeasonLevelUp() {
 }
 
-void UGoogleAnalyticsWrapper::RecordGAMissionTotalTimeHit(const FString& Key, const FString& Campaign, bool Rank, int32 totalTime, int32 Progress, int32 XP, int32 Credits) {
+void UGoogleAnalyticsWrapper::RecordGAMissionTotalTimeHit(const FString& Key, const FString& Campaign, bool Rank, int32 TotalTime, int32 Progress, int32 XP, int32 Credits) {
 }
 
 void UGoogleAnalyticsWrapper::RecordGAMissionTimeEvent(int32 Time) {
@@ -45,10 +45,10 @@ void UGoogleAnalyticsWrapper::RecordGAMissionTimeEvent(int32 Time) {
 void UGoogleAnalyticsWrapper::RecordGAEvent(const FString& EventCategory, const FString& EventAction, const FString& EventLabel, const int32 EventValue, EFSDGoogleAnalyticsProperties Property) {
 }
 
-void UGoogleAnalyticsWrapper::RecordGADeepDiveStageHit(const FString& Key, bool Rank, int32 stageTime, int32 timeSinceStartOfDive, int32 totalTime, int32 nitraLeft) {
+void UGoogleAnalyticsWrapper::RecordGADeepDiveStageHit(const FString& Key, bool Rank, int32 StageTime, int32 TimeSinceStartOfDive, int32 TotalTime, int32 NitraLeft) {
 }
 
-void UGoogleAnalyticsWrapper::RecordGaChallengeReroll(int32 challengeIndex, USeasonChallenge* challenge) {
+void UGoogleAnalyticsWrapper::RecordGaChallengeReroll(int32 ChallengeIndex, USeasonChallenge* Challenge) {
 }
 
 void UGoogleAnalyticsWrapper::RecordExtraFailInfo(const FString& MissionName, const FString& Stage, const FString& ExtraText) {

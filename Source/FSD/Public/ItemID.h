@@ -1,14 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "SavableDataAsset.h"
 #include "EItemCategory.h"
+#include "SavableDataAsset.h"
 #include "ItemID.generated.h"
 
-class UItemData;
 class AActor;
 class UPlayerCharacterID;
+class UItemData;
 class AItem;
+class UItemSkin;
 
 UCLASS(Blueprintable)
 class FSD_API UItemID : public USavableDataAsset {
@@ -40,6 +41,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     AItem* GetItem() const;
+    
+    UFUNCTION(BlueprintCallable)
+    TArray<UItemSkin*> GetAllSkins();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TSubclassOf<AActor> GetActorClass() const;

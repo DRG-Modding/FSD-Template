@@ -1,14 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SpiderAnimInstance.h"
 #include "UObject/NoExportTypes.h"
+#include "SpiderAnimInstance.h"
 #include "PatrolBotAnimInstance.generated.h"
+
+class APatrolBot;
 
 UCLASS(Blueprintable, NonTransient)
 class UPatrolBotAnimInstance : public USpiderAnimInstance {
     GENERATED_BODY()
 public:
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    APatrolBot* PatrolBot;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FRotator TurretRotation;
     

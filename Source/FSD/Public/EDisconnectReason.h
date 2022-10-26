@@ -22,5 +22,6 @@ enum class EDisconnectReason : uint8 {
     DeepDiveLateJoin,
     MissionStarting,
     LatejoinNotAllowed,
+    OutdatedClient,
 };
 

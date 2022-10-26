@@ -3,8 +3,8 @@
 #include "GenerationItem.h"
 #include "SpawnResourceGenerationItem.generated.h"
 
-class USphereComponent;
 class UResourceData;
+class USphereComponent;
 
 UCLASS(Blueprintable)
 class ASpawnResourceGenerationItem : public AGenerationItem {
@@ -17,7 +17,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BaseAmount;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USphereComponent* Sphere;
     
 public:

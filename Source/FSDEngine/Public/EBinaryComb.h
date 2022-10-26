@@ -8,5 +8,6 @@ enum class EBinaryComb : uint8 {
     Unchanged,
     Replace,
     Burn,
+    BiomeRock,
 };
 

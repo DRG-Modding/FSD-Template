@@ -6,14 +6,15 @@
 #include "EPackageSortField.h"
 #include "UGCRegistry.generated.h"
 
-class UUGCPackage;
 class AActor;
+class UUGCPackage;
 
 UCLASS(Blueprintable)
 class SIMPLEUGC_API UUGCRegistry : public UObject {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FUGCPackageMounted, bool, Sandbox);
+    DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FUGCBlueprintsSpawned, int32, Count);
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FUGCPackageMounted OnPackageMounted;
@@ -26,6 +27,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool PackageChange;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FUGCBlueprintsSpawned OnBlueprintsSpawned;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

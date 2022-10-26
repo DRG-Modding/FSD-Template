@@ -1,10 +1,10 @@
 #include "ItemSkin.h"
 
+class UObject;
 class AFSDPlayerState;
 class UItemID;
-class UObject;
-class UMaterialInstanceDynamic;
 class UPlayerCharacterID;
+class UMaterialInstanceDynamic;
 
 bool UItemSkin::Unlock(UObject* WorldContext, UItemID* ItemID, bool broadcast) {
     return false;
@@ -14,6 +14,10 @@ void UItemSkin::Receive_SkinItem(UObject* Skinnable) const {
 }
 
 void UItemSkin::Lock(UObject* WorldContext, UItemID* ItemID) {
+}
+
+bool UItemSkin::IsUnlockedFromStart() const {
+    return false;
 }
 
 bool UItemSkin::IsLocked(UObject* WorldContext, UItemID* skinnableID) const {
@@ -46,9 +50,6 @@ UMaterialInstanceDynamic* UItemSkin::CreateIcon(UObject* Owner) const {
 
 UItemSkin::UItemSkin() {
     this->Aquisition = NULL;
-    this->UnlockedFromStart = false;
-    this->RequiredDLC = NULL;
-    this->SkinType = EItemSkinType::PaintJob;
     this->SkinSet = NULL;
     this->DynamicIcon = NULL;
     this->SkinEffect = NULL;

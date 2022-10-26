@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "RewardsClaimed.h"
-#include "ChallengeSaveInfo.h"
 #include "UObject/NoExportTypes.h"
+#include "ChallengeSaveInfo.h"
 #include "UObject/NoExportTypes.h"
 #include "SeasonSaveEntry.generated.h"
 
@@ -43,6 +43,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ClaimedScripChallenges;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 PlagueHeartsdUsed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TimePlayedAtSeasonStart;

@@ -1,7 +1,7 @@
 #include "InfestedEnemiesMutator.h"
 
-class UParticleSystem;
 class AFSDPawn;
+class UParticleSystem;
 
 UParticleSystem* UInfestedEnemiesMutator::GetParticleSystem(AFSDPawn* enemy) const {
     return NULL;

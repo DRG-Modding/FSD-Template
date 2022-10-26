@@ -7,8 +7,8 @@
 #include "EDamageUpgrade.h"
 #include "DamageUpgrade.generated.h"
 
-class AActor;
 class AFSDPlayerState;
+class AActor;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UDamageUpgrade : public UStandardItemUpgrade {

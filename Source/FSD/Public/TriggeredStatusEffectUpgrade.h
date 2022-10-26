@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "ItemUpgrade.h"
-#include "UpgradeValues.h"
 #include "ETriggeredStatusEffectType.h"
+#include "UpgradeValues.h"
 #include "TriggeredStatusEffectUpgrade.generated.h"
 
+class AFSDPlayerState;
 class AActor;
 class UStatusEffect;
-class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UTriggeredStatusEffectUpgrade : public UItemUpgrade {

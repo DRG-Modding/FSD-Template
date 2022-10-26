@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ConvexMeshWithCachedTree.h"
 #include "CSGConvexColliderProperties.h"
+#include "ConvexMeshWithCachedTree.h"
 #include "CSGConvexCollider.generated.h"
 
 UCLASS(Blueprintable)

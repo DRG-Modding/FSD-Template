@@ -21,7 +21,7 @@ public:
     int32 Required;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 count;
+    int32 Count;
     
     FSD_API FSubObjective();
 };

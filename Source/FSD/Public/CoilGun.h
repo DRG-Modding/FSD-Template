@@ -3,21 +3,21 @@
 #include "Templates/SubclassOf.h"
 #include "ChargedWeapon.h"
 #include "ContrailSettings.h"
-#include "ShotMultiplier.h"
 #include "CoilMaterial.h"
 #include "Curves/CurveFloat.h"
 #include "Engine/NetSerialization.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "ShotMultiplier.h"
 #include "BulletPathSegment.h"
 #include "CoilGun.generated.h"
 
+class UNiagaraSystem;
 class UDamageComponent;
-class UStaticMesh;
-class UStatusEffect;
 class UNiagaraComponent;
 class UCoilgunTrailSpawner;
-class UNiagaraSystem;
+class UStaticMesh;
+class UStatusEffect;
 class ACoilgunWeaponTrail;
 class AActor;
 class UPrimitiveComponent;
@@ -28,31 +28,31 @@ UCLASS(Blueprintable)
 class FSD_API ACoilGun : public AChargedWeapon {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* DamageComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* OverchargeDamageComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* WeaponBlastDamage;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* ShotwaveBonusDamage;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* MoleBonusDamage;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UNiagaraComponent* FullyChargedParticles;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UNiagaraComponent* FP_OverchargeIndicatorParticles;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UNiagaraComponent* TP_FullyChargedParticles;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCoilgunTrailSpawner* TrailSpawner;
     
 protected:
@@ -132,9 +132,6 @@ protected:
     float TriBurstShotCarvingMultiplier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSet<TSubclassOf<UStatusEffect>> NoSpreadEffects;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 FirstDynamicIndex;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -159,6 +156,9 @@ protected:
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SpawnGroundTrail(const FVector_NetQuantize& Location, const FVector& Direction, float chargeMultiplier);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_SetShotPower(const float& Power);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_RegisterPrimaryHit(UPrimitiveComponent* Target, UFSDPhysicalMaterial* PhysMaterial, const FVector_NetQuantize& Origin, const FVector_NetQuantize& Location, int32 BoneIndex, FShotMultiplier Multiplier, int32 mole);

@@ -3,10 +3,10 @@
 #include "EMissionStructure.h"
 #include "GeneratedMissionSeed.generated.h"
 
-class UMissionComplexity;
-class UBiome;
-class UMissionTemplate;
 class UMissionWarning;
+class UBiome;
+class UMissionComplexity;
+class UMissionTemplate;
 class UMissionDuration;
 class UMissionMutator;
 class UFSDEvent;

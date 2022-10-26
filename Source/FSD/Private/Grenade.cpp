@@ -32,21 +32,27 @@ void AGrenade::ActorWasHit(AActor* SelfActor, AActor* OtherActor, FVector Normal
 void AGrenade::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
+    DOREPLIFETIME(AGrenade, Duration);
     DOREPLIFETIME(AGrenade, HasExploded);
 }
 
 AGrenade::AGrenade() {
+    this->CrossHairType = NULL;
     this->Movement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
+    this->CoolDown = -1.00f;
     this->Duration = 0.00f;
+    this->CanCook = false;
+    this->cookTime = -1.00f;
+    this->CookingSound = NULL;
     this->ExplosionDelay = 0.00f;
     this->ExplodeOnImpact = false;
     this->MaxGrenades = 0;
     this->HasExploded = false;
-    this->EnableDangerousSaveGameIDEditing = false;
     this->ItemID = NULL;
     this->WeaponPreviewClass = NULL;
     this->LoadoutProxy = NULL;
     this->HandAttachMesh = NULL;
+    this->ProjectionSettings = NULL;
     this->ImpactGroundSound = NULL;
     this->ImpactGroundParticles = NULL;
     this->GrenadeAnimationSetOverride = NULL;

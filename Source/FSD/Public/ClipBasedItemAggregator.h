@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ReloadStartedSignatureDelegate.h"
 #include "ItemAggregator.h"
 #include "AmountChangedSignatureDelegate.h"
-#include "ReloadStartedSignatureDelegate.h"
 #include "ReloadTimeLeftSignatureDelegate.h"
 #include "ReloadCompleteSignatureDelegate.h"
 #include "ClipBasedItemAggregator.generated.h"

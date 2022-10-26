@@ -1,7 +1,7 @@
 #include "AnimatedItem.h"
 #include "Components/SkeletalMeshComponent.h"
-#include "SkinnableComponent.h"
 #include "FirstPersonSkeletalMeshComponent.h"
+#include "SkinnableComponent.h"
 
 
 FTransform AAnimatedItem::GetMuzzle() const {

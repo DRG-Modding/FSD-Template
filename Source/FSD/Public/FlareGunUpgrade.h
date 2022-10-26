@@ -6,8 +6,8 @@
 #include "EFlaregunUpgrades.h"
 #include "FlareGunUpgrade.generated.h"
 
-class AActor;
 class AFSDPlayerState;
+class AActor;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UFlareGunUpgrade : public UStandardItemUpgrade {

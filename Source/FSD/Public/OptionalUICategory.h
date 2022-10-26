@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/DataAsset.h"
 #include "OptionalUICategory.generated.h"
 
 class UOptionalUICategory;
@@ -25,10 +25,10 @@ protected:
     
 public:
     UOptionalUICategory();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void SetVisible(UObject* WorldContext, bool IsCategoryVisible);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     bool IsVisible(UObject* WorldContext) const;
     
 };

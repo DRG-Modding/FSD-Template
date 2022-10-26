@@ -10,26 +10,26 @@
 #include "EPauseReason.h"
 #include "FSDGameMode.generated.h"
 
-class UEnemySpawnManager;
 class UObjectivesManager;
-class UKeepInsideWorld;
+class APlayerCharacter;
 class UPheromoneSpawnerComponent;
-class UMissionManager;
-class UDifficultyManager;
-class UEncounterManager;
 class UCritterManager;
-class AFSDPlayerController;
+class UEnemySpawnManager;
 class UFormationsManagerComponent;
+class UKeepInsideWorld;
+class UMissionManager;
+class UEncounterManager;
+class UEnemyWaveManager;
+class AFSDPlayerController;
+class APlayerController;
 class AMiningPod;
 class AMolly;
 class ABosco;
 class UWidget;
 class UEnemyDescriptor;
-class UEnemyWaveManager;
 class AActor;
 class AFSDGameMode;
-class APlayerController;
-class APlayerCharacter;
+class UDifficultyManager;
 
 UCLASS(Blueprintable, NonTransient)
 class FSD_API AFSDGameMode : public AGameMode {
@@ -50,32 +50,32 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool GenerationStarted;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPheromoneSpawnerComponent* PheromoneComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEnemySpawnManager* EnemySpawnManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UObjectivesManager* ObjectivesManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UKeepInsideWorld* KeepInsideWorld;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMissionManager* MissionManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UEncounterManager* EncounterManagerComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCritterManager* CritterManager;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<AFSDPlayerController*> PlayerControllers;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UFormationsManagerComponent* FormationsManager;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -120,7 +120,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool AllowSpecialEncounters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UEnemyWaveManager* CachedWaveManager;
     
 public:
@@ -173,6 +173,11 @@ public:
     UFUNCTION(BlueprintCallable)
     void HostAbortMission();
     
+protected:
+    UFUNCTION(BlueprintCallable)
+    void HandlePlayerBanning(AFSDPlayerController* FSDPlayerController);
+    
+public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UEnemyWaveManager* GetWaveManager() const;
     

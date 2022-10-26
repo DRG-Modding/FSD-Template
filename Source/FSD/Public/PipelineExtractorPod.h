@@ -21,7 +21,7 @@ public:
     APipelineExtractorPod();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void SetTargetRotation(APipelineSegment* InPipelineSegment);
     
 protected:

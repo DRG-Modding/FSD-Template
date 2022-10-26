@@ -8,6 +8,7 @@ APLSTester::APLSTester() {
     this->limitComplexity = NULL;
     this->limitDuration = NULL;
     this->Mutator = NULL;
+    this->SpecialEvent = NULL;
     this->Biome = NULL;
     this->MissionTemplate = NULL;
     this->CustomMissionTemplate = NULL;

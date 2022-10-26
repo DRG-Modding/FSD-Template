@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
-#include "CampaignNotificationSignatureDelegate.h"
 #include "DelegateDelegate.h"
+#include "CampaignNotificationSignatureDelegate.h"
 #include "SpaceRigNotification.h"
 #include "NotificationSubSystem.generated.h"
 

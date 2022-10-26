@@ -6,6 +6,10 @@ bool UFSDEventManager::IsEventActive(const UFSDEvent* FSDEvent) const {
     return false;
 }
 
+bool UFSDEventManager::GetSeasonExpiryDate(FDateTime& ExpiryDate) {
+    return false;
+}
+
 EHolidayType UFSDEventManager::GetHolidayType() const {
     return EHolidayType::None;
 }

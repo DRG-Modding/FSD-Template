@@ -3,9 +3,9 @@
 
 class UFSDSaveGame;
 class UMissionDuration;
-class AProceduralSetup;
-class UMissionComplexity;
 class UMissionTemplate;
+class UMissionComplexity;
+class AProceduralSetup;
 class UTexture2D;
 class UObject;
 class UBiome;

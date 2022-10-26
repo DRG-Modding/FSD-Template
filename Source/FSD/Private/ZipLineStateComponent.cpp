@@ -3,26 +3,14 @@
 
 void UZipLineStateComponent::ServerSetSpeedBoostActivated_Implementation(bool InBoostActivated) {
 }
-bool UZipLineStateComponent::ServerSetSpeedBoostActivated_Validate(bool InBoostActivated) {
-    return true;
-}
 
 void UZipLineStateComponent::ServerJumpPressed_Implementation(bool JumpForward) {
-}
-bool UZipLineStateComponent::ServerJumpPressed_Validate(bool JumpForward) {
-    return true;
 }
 
 void UZipLineStateComponent::ServerForwardInputChanged_Implementation(float Input) {
 }
-bool UZipLineStateComponent::ServerForwardInputChanged_Validate(float Input) {
-    return true;
-}
 
 void UZipLineStateComponent::ServerChangeDirection_Implementation() {
-}
-bool UZipLineStateComponent::ServerChangeDirection_Validate() {
-    return true;
 }
 
 
@@ -42,9 +30,6 @@ FVector UZipLineStateComponent::GetJumpVector_Implementation(FVector LookVector,
 }
 
 void UZipLineStateComponent::All_SpeedBoostChanged_Implementation(bool bActive) {
-}
-bool UZipLineStateComponent::All_SpeedBoostChanged_Validate(bool bActive) {
-    return true;
 }
 
 void UZipLineStateComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
@@ -81,7 +66,7 @@ UZipLineStateComponent::UZipLineStateComponent() {
     this->ShoutSpeedBoostActivated = NULL;
     this->ZipLineProjectile = NULL;
     this->DamageBeforeFalling = 25.00f;
-    this->friendlyFireModifier = 0.50f;
+    this->FriendlyFireModifier = 0.50f;
     this->DamageResetTime = 2.00f;
     this->AudioComponent = NULL;
 }

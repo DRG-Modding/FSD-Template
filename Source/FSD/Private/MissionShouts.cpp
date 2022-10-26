@@ -5,8 +5,8 @@ FMissionShouts::FMissionShouts() {
     this->OnExitPodDescending = NULL;
     this->OnExitPodArrived = NULL;
     this->OnCompletion = NULL;
+    this->OnCompletion_OneOfMultiple = NULL;
+    this->OnAllReturnObjectivesCompleted = NULL;
     this->OnDeepDiveExitPodDescending = NULL;
-    this->OnDeepDiveObjectiveCompletion = NULL;
-    this->OnDeepDiveAllReturnObjectivesCompleted = NULL;
 }
 

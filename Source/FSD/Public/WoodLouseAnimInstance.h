@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EWoodLouseState.h"
 #include "SpiderAnimInstance.h"
 #include "UObject/NoExportTypes.h"
+#include "EWoodLouseState.h"
 #include "WoodLouseAnimInstance.generated.h"
 
 UCLASS(Blueprintable, NonTransient)

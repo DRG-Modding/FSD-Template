@@ -1,8 +1,8 @@
 #include "BeastMasterComponent.h"
 #include "Templates/SubclassOf.h"
 
-class UActorComponent;
 class UDamageComponent;
+class UActorComponent;
 class AFSDPawn;
 class APlayerCharacter;
 

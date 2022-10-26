@@ -1,58 +1,61 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EnemyDeepPathfinderCharacter.h"
-#include "ESharkEnemyState.h"
 #include "Engine/NetSerialization.h"
+#include "ESharkEnemyState.h"
 #include "Engine/EngineTypes.h"
+#include "DamageData.h"
 #include "SharkEnemy.generated.h"
 
-class UInDangerComponent;
-class UPawnSensingComponent;
-class USphereComponent;
 class UDamageComponent;
-class UParticleSystemComponent;
-class UFakePhysGrabberComponent;
 class UEnemyComponent;
+class USphereComponent;
+class UPawnSensingComponent;
+class UParticleSystemComponent;
+class UInDangerComponent;
+class UFakePhysGrabberComponent;
 class USoundCue;
+class UPrimitiveComponent;
 class UFakeMoverSettings;
 class UParticleSystem;
 class AActor;
 class APawn;
-class UPrimitiveComponent;
+class UHealthComponent;
+class UDamageTag;
 class UHealthComponentBase;
 
 UCLASS(Abstract, Blueprintable)
 class ASharkEnemy : public AEnemyDeepPathfinderCharacter {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPawnSensingComponent* PawnSensing;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USphereComponent* CollisionSphere;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USphereComponent* NearTargetSphere;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* TearingGroundParticles;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* AirTrailParticles;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UInDangerComponent* Danger;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEnemyComponent* EnemyComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* Damage;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* BumpDamage;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UFakePhysGrabberComponent* RestrictedGrabberComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -67,9 +70,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_DiveTime, meta=(AllowPrivateAccess=true))
     float DiveForSeconds;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_RagdollImpact, meta=(AllowPrivateAccess=true))
-    FVector_NetQuantize RagdollImpact;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LaunchPower;
@@ -189,11 +189,6 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_State(ESharkEnemyState oldState);
     
-public:
-    UFUNCTION(BlueprintCallable)
-    void OnRep_RagdollImpact();
-    
-protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_DiveTime();
     
@@ -218,6 +213,9 @@ public:
     
 private:
     UFUNCTION(BlueprintCallable)
+    void OnDeathDetailed(UHealthComponent* aHealthComponent, float damageAmount, const FDamageData& DamageData, const TArray<UDamageTag*>& dTags);
+    
+    UFUNCTION(BlueprintCallable)
     void OnDeath(UHealthComponentBase* aHealthComponent);
     
 protected:
@@ -238,6 +236,9 @@ protected:
     
     UFUNCTION(BlueprintCallable)
     void DiveHide();
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void All_DoRagdollImpact(const FVector_NetQuantize& Direction);
     
 private:
     UFUNCTION(BlueprintCallable)

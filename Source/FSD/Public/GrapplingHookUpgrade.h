@@ -6,8 +6,8 @@
 #include "EGrapplingHookUpgrade.h"
 #include "GrapplingHookUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AActor;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UGrapplingHookUpgrade : public UStandardItemUpgrade {

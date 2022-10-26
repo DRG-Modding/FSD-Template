@@ -8,13 +8,13 @@
 #include "EGrabbedStateCameraMode.h"
 #include "GrabberComponent.generated.h"
 
-class USoundCue;
-class UAudioComponent;
-class UPrimitiveComponent;
 class ADeepPathfinderCharacter;
+class UAudioComponent;
 class USkeletalMeshComponent;
+class USoundCue;
 class UDialogDataAsset;
 class AActor;
+class UPrimitiveComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UGrabberComponent : public UActorComponent {
@@ -30,7 +30,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagQuery TagFilter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UAudioComponent* GrabLoopSoundInstance;
     
     UPROPERTY(EditAnywhere, Transient)

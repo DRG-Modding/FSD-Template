@@ -5,12 +5,12 @@
 #include "CheatEventDelegate.h"
 #include "FSDCheatManager.generated.h"
 
-class UBaseCritterDescriptor;
-class APawn;
-class AActor;
-class UPlayerCharacterID;
-class UEnemyDescriptor;
 class AFSDAIController;
+class AActor;
+class UBaseCritterDescriptor;
+class UEnemyDescriptor;
+class UPlayerCharacterID;
+class APawn;
 class UObject;
 class APlayerCharacter;
 class UResourceData;
@@ -47,10 +47,10 @@ public:
     void SwitchCharacter(UPlayerCharacterID* characterID);
     
     UFUNCTION(BlueprintCallable)
-    void SpawnEnemies(UEnemyDescriptor* desscriptor, int32 count);
+    void SpawnEnemies(UEnemyDescriptor* descriptor, int32 Count);
     
     UFUNCTION(BlueprintCallable)
-    void SpawnCritters(UBaseCritterDescriptor* descriptor, int32 count);
+    void SpawnCritters(UBaseCritterDescriptor* descriptor, int32 Count);
     
     UFUNCTION(BlueprintCallable, Exec)
     void SpawnBosco(TSoftClassPtr<APawn> droneClass, TSubclassOf<AFSDAIController> aControllerClass);
@@ -81,6 +81,9 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetFastMovement(bool fast);
     
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_Refresh_Daily_Special();
+    
     UFUNCTION(BlueprintCallable, Exec)
     void ResetTutorials();
     
@@ -92,6 +95,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Exec)
     void R_RemoveCredits(int32 Number);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void R_RemoveCraftingResource(int32 Amount, int32 Type);
     
     UFUNCTION(BlueprintCallable, Exec)
     void R_AddSeasonToken(int32 Number);
@@ -173,79 +179,79 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void D_EnableMovieMode(bool Value);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_UnlockAllWeapons(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_UnlockAllUpgrades(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_UnlockAll_Poses(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_UnlockAll_Beers(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable)
     void Cheat_SetSpawnPosMarker(AActor* Actor);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Cheat_SetHealth(float newHealthValue, APlayerCharacter* Player);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_Schematic_UnlockAll(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_Schematic_ResetAll(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_Schematic_GiveRandom(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_Schematic_ForgeAll(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_Resources(UObject* WorldContextObject, float Amount);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_ResetEquippedUpgrades(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_RemoveResources(UObject* WorldContextObject, int32 Amount);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_PickAxeVanity_UnlockAll(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_PickAxeVanity_ResetAll(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_MinersManual_ShowAll(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_GenerateNewMissionSeed(UObject* WorldContextObject, bool Enabled);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_ForceTreasure(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_ForceLostPack(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_DeepDives_Refresh(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_Campaign_Complete(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_Campaign_Advance(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_AddXP(UObject* WorldContextObject, int32 Amount);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_AddPerkPoints(UObject* WorldContextObject, int32 Amount);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_AddCredits(UObject* WorldContextObject, int32 Amount);
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -312,7 +318,7 @@ public:
     void C_Treasures_Track(int32 Mode);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void C_Treasures_Reward(int32 count);
+    void C_Treasures_Reward(int32 Count);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_ToggleHoopGameMovement();
@@ -343,6 +349,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_SpawnBarrelOnPlayer(int32 Amount);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_SpawnAllParticles();
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_SetUseSavedCheatsByDefault(bool useSavedCheats);
@@ -393,6 +402,9 @@ public:
     void C_Seasons_ResetReroll();
     
     UFUNCTION(BlueprintCallable, Exec)
+    void C_Seasons_ResetPlagueHeartsCollected();
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void C_Seasons_IncrementChallenge(int32 Index);
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -406,6 +418,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_Seasons_AddXP(int32 Number);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_Seasons_AddHeartsCollecdted(int32 Number);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_Seasons_AddChallenge();
@@ -492,6 +507,9 @@ public:
     void C_RefreshDailyDeal(int32 Seed);
     
     UFUNCTION(BlueprintCallable, Exec)
+    void C_Refresh_Daily_Special();
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void C_Refinery_BreakPipes();
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -527,7 +545,7 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void C_MissionMap_DoubleWarning(int32 indexA, int32 indexB);
     
-    UFUNCTION(BlueprintCallable, Exec)
+    UFUNCTION(BlueprintCallable, Exec, meta=(WorldContext="WorldContextObject"))
     void C_MinersManual_EnableWorkInProgress(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -546,6 +564,9 @@ public:
     void C_KillPlayer();
     
     UFUNCTION(BlueprintCallable, Exec)
+    void C_KillAllFriendly();
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void C_KillAll();
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -561,7 +582,7 @@ public:
     void C_IncrementAllMissionStats(int32 Amount);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void C_GodMode();
+    void C_GodMode(int32 forceEnable);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_GiveAllGenericHeroItems();
@@ -587,7 +608,7 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void C_FailMission();
     
-    UFUNCTION(BlueprintCallable, Exec)
+    UFUNCTION(BlueprintCallable, Exec, meta=(WorldContext="WorldContextObject"))
     static void C_FadeFromBlack(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -596,14 +617,20 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void C_Escort_ShowSmartRockDebug(bool shouldShow);
     
-    UFUNCTION(BlueprintCallable, Exec)
+    UFUNCTION(BlueprintCallable, Exec, meta=(WorldContext="WorldContextObject"))
     void C_Escort_SetMuleSpeed(UObject* WorldContextObject, float Speed);
     
-    UFUNCTION(BlueprintCallable, Exec)
+    UFUNCTION(BlueprintCallable, Exec, meta=(WorldContext="WorldContextObject"))
     void C_Escort_JumpToNextPhase(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_Escort_AddOilShale(int32 Number);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_DLC_ClearAnnounced();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_DisableBackendEvents();
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_DeepDives_UnlockAll();

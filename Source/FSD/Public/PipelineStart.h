@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "EPipelineBuildState.h"
+#include "GameFramework/Actor.h"
 #include "PipelineStart.generated.h"
 
-class APipelineSegment;
-class APipelineStart;
-class AFSDRefinery;
-class UTrackBuilderUsable;
 class APipelineFinish;
+class APipelineStart;
+class UTrackBuilderUsable;
+class APipelineSegment;
+class AFSDRefinery;
 class ATrackBuilderSegment;
 
 UCLASS(Abstract, Blueprintable)
-class FSD_API APipelineStart : public AActor {
+class APipelineStart : public AActor {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FPipelineStartStateDelegate, APipelineStart*, InPipelineStart, EPipelineBuildState, InPipelineState);
@@ -24,7 +24,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PipelineID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTrackBuilderUsable* PipelineStartUsable;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_BuildState, meta=(AllowPrivateAccess=true))

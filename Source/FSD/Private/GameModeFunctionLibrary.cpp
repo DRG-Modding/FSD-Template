@@ -1,8 +1,8 @@
 #include "GameModeFunctionLibrary.h"
 
 class UObject;
-class AActor;
 class USeamlessTravelEventKey;
+class AActor;
 
 FTransform UGameModeFunctionLibrary::FindRandomEscapePodLocation(UObject* WorldContextObject) {
     return FTransform{};

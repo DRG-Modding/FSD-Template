@@ -5,10 +5,10 @@
 #include "ECarveFilterType.h"
 #include "VeinResourceCreator.generated.h"
 
+class UFloodFillSettings;
 class UVeinResourceData;
 class UDebrisPositioning;
 class UDebrisBase;
-class UFloodFillSettings;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UVeinResourceCreator : public UResourceCreator {

@@ -18,10 +18,10 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
-    UFUNCTION(BlueprintCallable, Server, Unreliable, WithValidation)
+    UFUNCTION(BlueprintCallable, Server, Unreliable)
     void Server_MoveRight(float Value);
     
-    UFUNCTION(BlueprintCallable, Server, Unreliable, WithValidation)
+    UFUNCTION(BlueprintCallable, Server, Unreliable)
     void Server_MoveForward(float Value);
     
     UFUNCTION(BlueprintCallable)

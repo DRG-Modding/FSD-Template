@@ -5,7 +5,7 @@ class AActor;
 void UPlayerMovementComponent::RemoveGravityModifier(AActor* SourceActor) {
 }
 
-void UPlayerMovementComponent::AddGravityModifier(AActor* SourceActor, float effect) {
+void UPlayerMovementComponent::AddGravityModifier(AActor* SourceActor, float Effect) {
 }
 
 UPlayerMovementComponent::UPlayerMovementComponent() {

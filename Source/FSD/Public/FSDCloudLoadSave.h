@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "SDCloudFailedDelegate.h"
 #include "UObject/Object.h"
 #include "SDCloudLoadDelegate.h"
-#include "SDCloudFailedDelegate.h"
 #include "FSDCloudLoadSave.generated.h"
 
 class UFSDCloudSaveHandler;
@@ -23,7 +23,7 @@ private:
     
 public:
     UFSDCloudLoadSave();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     void StartCloudLoadAll(UObject* WorldContextObject, int32 Index, int32 Offset);
     
 };

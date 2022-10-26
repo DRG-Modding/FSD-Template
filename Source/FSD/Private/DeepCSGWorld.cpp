@@ -3,17 +3,21 @@
 #include "AsyncPathRequests.h"
 
 class UPrimitiveComponent;
-class AActor;
-class ADebrisDataActor;
+class UDebrisMesh;
+class UDebrisBase;
 class UTerrainMaterial;
+class ADebrisDataActor;
+class AActor;
 class ADeepCSGWorld;
+class UStaticMesh;
 class USTLMeshCarver;
 class UStaticMeshCarver;
-class UStaticMesh;
 class ACSGBuilder;
-class UDebrisBase;
 
 void ADeepCSGWorld::UnRegisterScannerComponent(UPrimitiveComponent* Component) {
+}
+
+void ADeepCSGWorld::TerrainOp_SpawnDebris_Implementation(const FTerrainSpawnDebrisOperationData& Data) {
 }
 
 void ADeepCSGWorld::TerrainOp_RemoveFloating_Implementation(const FRemoveFloatingIslandOperationData& Data) {
@@ -46,6 +50,9 @@ void ADeepCSGWorld::TerrainOp_CarveCollider_Implementation(const FCarveWithColli
 void ADeepCSGWorld::TerrainMaterialDataLoaded() {
 }
 
+void ADeepCSGWorld::SpawnDebris(UDebrisMesh* Debris, const FVector& Pos, float Radius) {
+}
+
 void ADeepCSGWorld::SetVisibleToScanner(const FVector& Center, const FVector& range) {
 }
 
@@ -61,7 +68,7 @@ void ADeepCSGWorld::ResetEntireWorld() {
 void ADeepCSGWorld::RemoveDebrisInstance_TerrainOp2_Implementation(int32 instance, int32 Component) {
 }
 
-void ADeepCSGWorld::RemoveDebrisInSphere(const FVector& Position, float Radius, bool onlyFragile, bool alsoDurable) {
+void ADeepCSGWorld::RemoveDebrisInSphere(const FVector& Position, float Radius, bool onlyFragile, bool alsoDurable, ESpecialDebrisType onlyType) {
 }
 
 void ADeepCSGWorld::RegisterScannerComponent(UPrimitiveComponent* Component, bool useFogOfWar) {
@@ -158,6 +165,10 @@ float ADeepCSGWorld::CalcApproximateTerrainDensity(FVector Pos, float Radius) {
     return 0.0f;
 }
 
+UTerrainMaterial* ADeepCSGWorld::BPGetTerrainMaterial(int32 Handle) const {
+    return NULL;
+}
+
 void ADeepCSGWorld::BaseLayerCommitFinal(bool blocking) {
 }
 
@@ -180,6 +191,7 @@ ADeepCSGWorld::ADeepCSGWorld() {
     this->EmptyTerrainType = NULL;
     this->DirtTerrainType = NULL;
     this->DefaultBurntTerrainType = NULL;
+    this->TestLevelCarver = NULL;
     this->DebrisActorInstance = NULL;
     this->DebrisActorIndex = 0;
     this->ProceduralSetup = NULL;

@@ -3,9 +3,6 @@
 
 void UHealthComponent::ToggleCanTakeDamage_Implementation() {
 }
-bool UHealthComponent::ToggleCanTakeDamage_Validate() {
-    return true;
-}
 
 void UHealthComponent::Resupply(float percentage) {
 }
@@ -24,9 +21,9 @@ float UHealthComponent::GetMaxArmor() const {
     return 0.0f;
 }
 
-EHealthbarType UHealthComponent::GetHealthbarType() const {
+/*EHealthbarType UHealthComponent::GetHealthbarType() const {
     return EHealthbarType::None;
-}
+}*/
 
 void UHealthComponent::GetCurrentHealthSegment(int32& Segment, float& segmentHealth, float& segmentHealthPercent) {
 }
@@ -51,8 +48,10 @@ void UHealthComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
 UHealthComponent::UHealthComponent() {
     this->Damage = 0.00f;
     this->CanDamageThroughSegments = true;
+    this->LastDamageCauser = NULL;
     this->ShouldUseLargestSubhealthDamageTaken = false;
     this->InvulnerableToNonDefinedResistances = false;
+    this->EnvironmentalDamageResistance = 1.00f;
     this->AffectedByGlobalWeakpointDamageMultiplier = true;
     this->UseDormancy = false;
     this->PawnStats = NULL;

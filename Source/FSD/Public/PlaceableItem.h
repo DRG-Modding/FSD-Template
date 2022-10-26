@@ -2,24 +2,24 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
-#include "AnimatedItem.h"
 #include "Upgradable.h"
+#include "AnimatedItem.h"
 #include "PlaceableInterface.h"
 #include "PlaceableItem.generated.h"
 
-class UItemPlacerAggregator;
-class UCapacityHoldingItemAggregator;
 class AActor;
+class UCapacityHoldingItemAggregator;
+class UItemPlacerAggregator;
 
 UCLASS(Blueprintable)
 class APlaceableItem : public AAnimatedItem, public IUpgradable, public IPlaceableInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCapacityHoldingItemAggregator* Capacity;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UItemPlacerAggregator* ItemPlacer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -28,7 +28,7 @@ protected:
 public:
     APlaceableItem();
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SpawnItem(FVector Location);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

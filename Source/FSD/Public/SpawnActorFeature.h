@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "RoomFeature.h"
 #include "UObject/NoExportTypes.h"
-#include "EItemAdjustmentType.h"
 #include "UObject/NoExportTypes.h"
+#include "EItemAdjustmentType.h"
 #include "SpawnActorFeature.generated.h"
 
 class AActor;

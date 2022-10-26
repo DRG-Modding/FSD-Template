@@ -3,8 +3,16 @@
 class UPrimitiveComponent;
 class UDialogDataAsset;
 class UTexture2D;
-class APlayerController;
 class UActorContextWidget;
+class APlayerController;
+
+bool UObjectInfoComponent::HasMissionControlLookAtShout(const UPrimitiveComponent* TargetComponent) const {
+    return false;
+}
+
+UDialogDataAsset* UObjectInfoComponent::GetMissionControlLookAtShout(const UPrimitiveComponent* TargetComponent) const {
+    return NULL;
+}
 
 UDialogDataAsset* UObjectInfoComponent::GetLookAtShout(const UPrimitiveComponent* TargetComponent) const {
     return NULL;

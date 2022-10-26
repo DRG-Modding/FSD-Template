@@ -2,22 +2,22 @@
 #include "CoreMinimal.h"
 #include "ThrowableItem.h"
 #include "UpgradableGear.h"
-#include "CoolDownProgressStyle.h"
 #include "RejoinListener.h"
+#include "CoolDownProgressStyle.h"
 #include "ShieldGeneratorItem.generated.h"
 
-class UCapacityHoldingItemAggregator;
 class UDialogDataAsset;
+class UCapacityHoldingItemAggregator;
 
 UCLASS(Blueprintable)
 class AShieldGeneratorItem : public AThrowableItem, public IUpgradableGear, public IRejoinListener {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCapacityHoldingItemAggregator* ChargeCapacity;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCapacityHoldingItemAggregator* CarryCapacity;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

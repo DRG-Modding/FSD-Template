@@ -39,7 +39,7 @@ protected:
 public:
     USimpleMovingEnemyAnimInstance();
     UFUNCTION(BlueprintCallable)
-    void SetMeshScale(float newScale);
+    void SetMeshScale(float NewScale);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsNotMoving() const;

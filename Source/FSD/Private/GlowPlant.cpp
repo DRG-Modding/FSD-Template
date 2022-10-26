@@ -11,7 +11,7 @@ void AGlowPlant::OnDamage_Implementation(UPrimitiveComponent* hitSphere) {
 
 AGlowPlant::AGlowPlant() {
     this->TrunkMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
-    this->MainLight = NULL;
+    this->mainLight = NULL;
     this->IntensityBase = 0.00f;
     this->RadiusBase = 0.00f;
     this->IntensityPerPart = 0.00f;

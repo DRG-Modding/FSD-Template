@@ -5,8 +5,8 @@
 #include "Net/OnlineBlueprintCallProxyBase.h"
 #include "FSDLookupSessionId.generated.h"
 
-class UFSDLookupSessionId;
 class UObject;
+class UFSDLookupSessionId;
 
 UCLASS(Blueprintable, MinimalAPI)
 class UFSDLookupSessionId : public UOnlineBlueprintCallProxyBase {
@@ -22,7 +22,7 @@ private:
 public:
     UFSDLookupSessionId();
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UFSDLookupSessionId* FSDLookupSessionId(UObject* WorldContextObject, const FString& SessionKey);
     
 };

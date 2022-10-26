@@ -7,5 +7,6 @@ enum class ECampaignType : uint8 {
     Normal,
     Weekly,
     MatrixCoreHunt,
+    SeededRandom,
 };
 

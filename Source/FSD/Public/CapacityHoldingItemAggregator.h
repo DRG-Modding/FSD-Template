@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RejoinListener.h"
 #include "CapacityBasedItemAggregator.h"
 #include "Upgradable.h"
+#include "RejoinListener.h"
 #include "CapacityHoldingItemAggregator.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -24,7 +24,7 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintCallable)
-    void UseAmmo(int32 count);
+    void UseAmmo(int32 Count);
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetMaxAmmo(int32 InMaxAmmo, bool InChangeCurrentAmount);

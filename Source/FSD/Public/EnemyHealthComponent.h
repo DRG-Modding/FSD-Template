@@ -1,17 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "HealthComponent.h"
-#include "UObject/NoExportTypes.h"
 #include "EEnemyHealthScaling.h"
+#include "UObject/NoExportTypes.h"
 #include "EnemyHealthComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UEnemyHealthComponent : public UHealthComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    FVector KillImpactNormal;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EEnemyHealthScaling EnemyHealthScaling;
     
@@ -39,8 +36,8 @@ protected:
     
 public:
     UEnemyHealthComponent();
-    
-    float GetMaxHealth() const;
+    /*UFUNCTION(BlueprintCallable, BlueprintPure)
+    float GetMaxHealth() const;*/
     
 };
 

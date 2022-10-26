@@ -2,31 +2,30 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "Curves/CurveFloat.h"
 #include "ECharacterState.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "HeroInfo.h"
 #include "UObject/NoExportTypes.h"
+#include "HeroInfo.h"
 #include "GameplayTagContainer.h"
+#include "Curves/CurveFloat.h"
 #include "ActorFunctionLibrary.generated.h"
 
-class UObject;
-class APlayerCharacter;
-class UDamageClass;
-class APlayerController;
-class USoundCue;
-class UMaterialInstanceDynamic;
-class UPathfinderCollisionComponent;
 class UWindowWidget;
+class APlayerCharacter;
+class UObject;
+class APlayerController;
+class UMaterialInstanceDynamic;
+class UFXSystemAsset;
+class USoundCue;
 class UUserWidget;
 class AActor;
 class USceneComponent;
-class UInventoryList;
-class UFXSystemAsset;
+class UPathfinderCollisionComponent;
 class UFSDPhysicalMaterial;
 class UPlayerCharacterID;
 class UItemID;
+class UInventoryList;
 class UTexture2D;
 class UActorComponent;
 class UPostProcessComponent;
@@ -34,7 +33,6 @@ class UBlendableInterface;
 class IBlendableInterface;
 class AFSDGameMode;
 class UMeshComponent;
-class UHealthComponentBase;
 class UEnemyComponent;
 class AFSDGameState;
 
@@ -46,10 +44,10 @@ public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     static void UnlockSpecificCharacters(TArray<APlayerCharacter*> Characters, ECharacterState UnlockIf, ECharacterState UnlockTo);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void UnlockCharacters(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static float TimeSince(UObject* WorldContextObject, float Time);
     
     UFUNCTION(BlueprintCallable)
@@ -58,7 +56,7 @@ public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     static void PlayCueOnClient(APlayerController* Target, USoundCue* cue);
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void PlayCueOnAll(UObject* WorldContextObject, USoundCue* cue);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -76,7 +74,7 @@ public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     static bool LockSpecificCharacterIfState(APlayerCharacter* Character, ECharacterState LockIf, ECharacterState LockTo);
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void LockCharacters(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -94,7 +92,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsWeakPoint(UFSDPhysicalMaterial* Material);
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsSingleplayer(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -103,7 +101,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsCloseToLocalPlayer(AActor* toActor, float Distance);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static int32 GetTotalHeroLevels(UObject* WorldContextObject, UPlayerCharacterID* characterID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -112,13 +110,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FGuid GetSavegameID(UClass* objectClass);
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static TArray<APlayerCharacter*> GetPlayersInRange(UObject* WorldContextObject, const FVector& Origin, float Radius, bool MustBeAlive);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static UItemID* GetItemID(TSubclassOf<AActor> itemClass);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static float GetHeroXP(UObject* WorldContextObject, UPlayerCharacterID* characterID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -127,13 +125,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString GetHeroSourceName(TSubclassOf<APlayerCharacter> playerClass);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static float GetHeroProgress(UObject* WorldContextObject, UPlayerCharacterID* characterID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FText GetHeroName(TSubclassOf<APlayerCharacter> playerClass);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static int32 GetHeroLevel(UObject* WorldContextObject, UPlayerCharacterID* characterID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -166,7 +164,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static UPlayerCharacterID* GetCharacterID(TSubclassOf<APlayerCharacter> playerClass);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     static TArray<APlayerCharacter*> GetAllPlayerCharacters(UObject* WorldContext);
     
     UFUNCTION(BlueprintCallable)
@@ -175,52 +173,43 @@ public:
     UFUNCTION(BlueprintCallable)
     static void FSDRemoveBlendable(UPostProcessComponent* PostProcessComponent, TScriptInterface<IBlendableInterface> InBlendableObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void FSDRemoveAllWidgets(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable)
     static void FSDDumpCallStack(const FString& Msg);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static APlayerCharacter* FindNearestPlayerCharacter(UObject* WorldContextObject, FVector fromLocation, float MaxRadius, bool MustBeAlive, bool MustBeUnparalyzed, bool MustHaveLineOfSight);
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     static FVector FindLatejoinDroppodLocation(AFSDGameMode* GameMode);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static AActor* FindClosestEnemyFromLocation(const FVector& fromLocation, float range, bool LineOfSightCheck, UObject* WorldContextObject, const TArray<AActor*>& IgnoredActors, const FVector& Offset);
+    
+    UFUNCTION(BlueprintCallable)
+    static AActor* FindClosestEnemyFromActorWithSkipChance(AActor* FromActor, float range, float SkipChance, bool LineOfSightCheck, const FGameplayTagQuery& tagQuery, FVector Offset);
     
     UFUNCTION(BlueprintCallable)
     static AActor* FindClosestEnemyFromActor(AActor* FromActor, float range, bool LineOfSightCheck, const FGameplayTagQuery& tagQuery, const FVector& Offset);
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static FVector FindCharacterTeleportLocation(UObject* WorldContextObject, const FVector& closeToLocation, float desiredDistance);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void FadeMaterials(const UObject* WorldContextObject, UMeshComponent*& Mesh, float Duration);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static float EvaluateRuntimeCurve(UObject* WorldContextObject, const FRuntimeFloatCurve& Curve, float Time);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void DissolveMaterials(const UObject* WorldContextObject, UMeshComponent*& Mesh, float Duration);
-    
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
-    static void DamagePlayersInArea(const FVector& Origin, AActor* Instigator, const float Damage, const float Radius, UDamageClass* DamageClass);
-    
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
-    static UHealthComponentBase* DamageIfInRange(float MaxDistance, float Damage, AActor* Target, AActor* Attacker, UDamageClass* DamageClass);
-    
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
-    static void DamageAllInAreaExcept(const FVector Origin, AActor* Instigator, const float Damage, const float BlastRadius, const float MaxDamageRadius, const float minDamagePercent, const TArray<AActor*>& IgnoreActors, const float friendlyFireModifier, UDamageClass* DamageClass);
-    
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
-    static void DamageAllInArea(const FVector Origin, AActor* Instigator, const float Damage, const float BlastRadius, const float MaxDamageRadius, const float minDamagePercent, const float friendlyFireModifier, UDamageClass* DamageClass);
     
     UFUNCTION(BlueprintCallable)
     static TArray<UMaterialInstanceDynamic*> CreateDynamicMaterialInstances(UMeshComponent* Mesh);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static float AddHeroXP(UObject* WorldContextObject, UPlayerCharacterID* characterID, float Amount);
     
     UFUNCTION(BlueprintCallable)

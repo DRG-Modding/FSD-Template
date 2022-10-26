@@ -5,6 +5,7 @@
 #include "DelegateDelegate.h"
 #include "Molly.generated.h"
 
+class UNiagaraSystem;
 class UDialogDataAsset;
 class APlayerCharacter;
 class UResourceBank;
@@ -20,10 +21,10 @@ public:
     FCalledByDelegate OnCalledByChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UResourceBank* ResourceBank;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UOutlineComponent* OutlineComponent;
     
     UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -55,6 +56,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void EnableButton();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void AddTrayEffect(UNiagaraSystem* Effect, int32 numberOfTraysAffected);
     
 };
 

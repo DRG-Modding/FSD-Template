@@ -12,6 +12,7 @@ enum class EPlaceableObstructionType : uint8 {
     Blocked,
     NotEnoughRoom,
     TooSteep,
+    TooClose,
     Other,
 };
 

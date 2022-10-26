@@ -17,7 +17,7 @@ protected:
     
 public:
     AExampleActor();
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_ExampleFunction();
     
     UFUNCTION(BlueprintCallable, Client, Reliable)

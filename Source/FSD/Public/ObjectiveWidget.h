@@ -3,8 +3,8 @@
 #include "Blueprint/UserWidget.h"
 #include "ObjectiveWidget.generated.h"
 
-class UTexture2D;
 class UObjectiveWidget;
+class UTexture2D;
 class UObjective;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
@@ -17,7 +17,7 @@ public:
     FObjectiveWidgetDelegate OnObjectiveWidgetUpdated;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UObjective* MissionObjective;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -5,9 +5,9 @@
 
 class AProceduralSetup;
 class ARessuplyPod;
-class AEventStarterButton;
 class AActor;
 class UDebrisPositioning;
+class AEventStarterButton;
 
 void AGameEvent::TrySetupGameEvent() {
 }

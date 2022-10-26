@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "FSDMath.generated.h"
 
@@ -26,7 +26,7 @@ public:
     static FVector CubicInterpBlueprint(FVector p0, FVector tangent1, FVector p1, FVector tangent2, float alpha);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    static void CartesianToSpherical(FVector Location, float& outAzimuth, float& outElevation, float& outRadius);
+    static void CartesianToSpherical(FVector Location, float& outAzimuth, float& outElevation, float& OutRadius);
     
 };
 

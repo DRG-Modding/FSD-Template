@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UObject/NoExportTypes.h"
 #include "DeepPathfinderCharacter.h"
-#include "Upgradable.h"
 #include "UObject/NoExportTypes.h"
-#include "ERecallableActorState.h"
 #include "ReturnedSignatureDelegate.h"
-#include "UObject/NoExportTypes.h"
+#include "Upgradable.h"
+#include "ERecallableActorState.h"
 #include "UObject/NoExportTypes.h"
 #include "RecallableActor.generated.h"
 
-class ARecallableActor;
 class AActor;
+class ARecallableActor;
 
 UCLASS(Abstract, Blueprintable)
 class ARecallableActor : public ADeepPathfinderCharacter, public IUpgradable {
@@ -63,10 +63,10 @@ public:
     ARecallableActor();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void SetRecallTarget(AActor* NewTarget);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Relocate(FVector NewLocation, FRotator NewRotation);
     
 protected:
@@ -74,7 +74,7 @@ protected:
     void ReceiveOnStateChanged();
     
 public:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Recall();
     
 protected:

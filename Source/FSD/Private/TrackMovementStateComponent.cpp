@@ -3,14 +3,8 @@
 
 void UTrackMovementStateComponent::ServerExitMode_Implementation(EExitTrackMode eMode) {
 }
-bool UTrackMovementStateComponent::ServerExitMode_Validate(EExitTrackMode eMode) {
-    return true;
-}
 
 void UTrackMovementStateComponent::ServerAddTemporaryAcceration_Implementation(float Acceleration, float Duration) {
-}
-bool UTrackMovementStateComponent::ServerAddTemporaryAcceration_Validate(float Acceleration, float Duration) {
-    return true;
 }
 
 void UTrackMovementStateComponent::OnRep_TrackMovementdata(FPipelineMovementData& oldState) {

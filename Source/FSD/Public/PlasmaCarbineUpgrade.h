@@ -6,8 +6,8 @@
 #include "EPlasmaCarbineUpgrades.h"
 #include "PlasmaCarbineUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AItem;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UPlasmaCarbineUpgrade : public UStandardItemUpgrade {

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Objective.h"
 #include "UObject/NoExportTypes.h"
+#include "Objective.h"
 #include "HackableBuildingObjective.generated.h"
 
 class ARessuplyPod;

@@ -3,6 +3,7 @@
 
 class UDeepDive;
 class UGeneratedMission;
+class UBiome;
 
 void UDeepDiveManager::StartDeepDive(UDeepDive* DeepDive) {
 }
@@ -33,6 +34,14 @@ UDeepDive* UDeepDiveManager::GetActiveDeepDive() const {
     return NULL;
 }
 
+UDeepDive* UDeepDiveManager::GenerateDebugDeepDive(TArray<FDeepDiveTesterItem> stages, UBiome* Biome, bool IsElite) {
+    return NULL;
+}
+
+int32 UDeepDiveManager::FindDeepDiveSeed(UDeepDive* DeepDive) const {
+    return 0;
+}
+
 bool UDeepDiveManager::CompleteCurrentSingleMission() {
     return false;
 }
@@ -47,6 +56,7 @@ UDeepDiveManager::UDeepDiveManager() {
     this->ActiveNormalDeepDive = NULL;
     this->ActiveHardDeepDive = NULL;
     this->ActiveDeepDive = NULL;
+    this->DebugDeepDive = NULL;
     this->CurrentMission = NULL;
     this->currentDepth = 0.00f;
     this->BackendDataValid = 0;

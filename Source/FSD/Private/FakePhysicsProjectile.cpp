@@ -13,7 +13,7 @@ void AFakePhysicsProjectile::OnRep_PosVel(const FFakeMoveState& NewPosVel) {
 void AFakePhysicsProjectile::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
-    DOREPLIFETIME(AFakePhysicsProjectile, posVel);
+    DOREPLIFETIME(AFakePhysicsProjectile, PosVel);
 }
 
 AFakePhysicsProjectile::AFakePhysicsProjectile() {

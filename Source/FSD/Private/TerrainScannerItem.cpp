@@ -5,9 +5,6 @@
 
 void ATerrainScannerItem::Server_SetIslookingAtMap_Implementation(bool lookingAtMap) {
 }
-bool ATerrainScannerItem::Server_SetIslookingAtMap_Validate(bool lookingAtMap) {
-    return true;
-}
 
 void ATerrainScannerItem::OnRep_IsLookingAtMap() {
 }

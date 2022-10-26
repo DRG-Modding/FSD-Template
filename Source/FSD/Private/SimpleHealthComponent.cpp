@@ -18,6 +18,7 @@ USimpleHealthComponent::USimpleHealthComponent() {
     this->Damage = 0.00f;
     this->MaxHealth = 100.00f;
     this->InvulnerableToNonDefinedResistances = false;
+    this->EnvironmentalDamageResistance = 1.00f;
     this->bShowHealthBar = false;
     this->AutomaticFlushNetDormancy = false;
 }

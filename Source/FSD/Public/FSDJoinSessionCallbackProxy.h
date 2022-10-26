@@ -5,9 +5,9 @@
 #include "FindSessionsCallbackProxy.h"
 #include "FSDJoinSessionCallbackProxy.generated.h"
 
-class UObject;
 class UFSDJoinSessionCallbackProxy;
 class APlayerController;
+class UObject;
 
 UCLASS(Blueprintable, MinimalAPI)
 class UFSDJoinSessionCallbackProxy : public UOnlineBlueprintCallProxyBase {
@@ -25,7 +25,7 @@ private:
     
 public:
     UFSDJoinSessionCallbackProxy();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UFSDJoinSessionCallbackProxy* FSDJoinSession(UObject* NewWorldContextObject, APlayerController* PlayerController, const FBlueprintSessionResult& SearchResult, const FString& FSDPassword, bool fromInvite);
     
 };

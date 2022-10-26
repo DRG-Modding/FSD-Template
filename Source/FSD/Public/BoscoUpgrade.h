@@ -6,8 +6,8 @@
 #include "EBoscoUpgrades.h"
 #include "BoscoUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AActor;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UBoscoUpgrade : public UStandardItemUpgrade {

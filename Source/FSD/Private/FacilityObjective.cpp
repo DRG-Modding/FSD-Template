@@ -5,8 +5,8 @@
 class AProceduralSetup;
 class UEncounterManager;
 class UDebrisPositioning;
-class ATetherStation;
 class AActor;
+class ATetherStation;
 class APawn;
 class UCappedResource;
 class ARessuplyPod;

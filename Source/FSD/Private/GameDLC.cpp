@@ -18,6 +18,10 @@ FString UGameDLC::GetSonyAdditionalContentId() const {
     return TEXT("");
 }
 
+UTexture2D* UGameDLC::GetInfoScreenOverlay() const {
+    return NULL;
+}
+
 UTexture2D* UGameDLC::GetBanner_16_9() const {
     return NULL;
 }

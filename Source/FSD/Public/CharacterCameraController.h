@@ -3,8 +3,8 @@
 #include "Components/ActorComponent.h"
 #include "CharacterCameraController.generated.h"
 
-class APlayerCharacter;
 class UCameraComponent;
+class APlayerCharacter;
 
 UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCharacterCameraController : public UActorComponent {
@@ -24,7 +24,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     APlayerCharacter* Character;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCameraComponent* Camera;
     
 public:

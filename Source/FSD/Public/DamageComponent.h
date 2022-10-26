@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EArmorDamageType.h"
-#include "OnEnemyKilledDelegateDelegate.h"
-#include "EDamageComponentType.h"
 #include "Components/ActorComponent.h"
+#include "OnEnemyKilledDelegateDelegate.h"
 #include "OnEnemyDamagedDelegateDelegate.h"
 #include "OnNoTargetHitDelegate.h"
 #include "OnAsyncAoE_CompleteDelegate.h"
+#include "EDamageComponentType.h"
+#include "EArmorDamageType.h"
 #include "GameplayTagContainer.h"
 #include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "DamageComponent.generated.h"
 
-class UDamageClass;
 class UDamageImpulse;
-class UDamageBonusBase;
+class UPrimitiveComponent;
 class UDamageModifier;
+class UDamageClass;
+class UFSDPhysicalMaterial;
+class UDamageBonusBase;
 class UDamageTag;
 class UDamageComponent;
 class AActor;
-class UPrimitiveComponent;
-class UFSDPhysicalMaterial;
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UDamageComponent : public UActorComponent {
@@ -56,6 +56,9 @@ protected:
     float ArmorDamageMultiplier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float ArmorPenetration;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ShattersArmor;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -71,7 +74,7 @@ protected:
     float FrozenDamageBonusScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float friendlyFireModifier;
+    float FriendlyFireModifier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SelfFriendlyFireMultiplier;

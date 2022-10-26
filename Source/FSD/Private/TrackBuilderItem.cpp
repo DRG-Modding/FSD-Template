@@ -12,26 +12,14 @@ void ATrackBuilderItem::UpdatePlacement(const FTransform& InTransform, UTrackBui
 
 void ATrackBuilderItem::ServerUpdatePlacement_Implementation(const FTransform& InTransform, const bool bPlacementValid, UTrackBuilderConnectPoint* InConnectPoint) {
 }
-bool ATrackBuilderItem::ServerUpdatePlacement_Validate(const FTransform& InTransform, const bool bPlacementValid, UTrackBuilderConnectPoint* InConnectPoint) {
-    return true;
-}
 
 void ATrackBuilderItem::ServerFinishPlacement_Implementation(const FTransform& FinalLocation, UTrackBuilderConnectPoint* ConnectPoint) {
-}
-bool ATrackBuilderItem::ServerFinishPlacement_Validate(const FTransform& FinalLocation, UTrackBuilderConnectPoint* ConnectPoint) {
-    return true;
 }
 
 void ATrackBuilderItem::ServerCancelPlacement_Implementation() {
 }
-bool ATrackBuilderItem::ServerCancelPlacement_Validate() {
-    return true;
-}
 
 void ATrackBuilderItem::ServerBeginPlaceSegment_Implementation(UTrackBuilderUsable* InUsable) {
-}
-bool ATrackBuilderItem::ServerBeginPlaceSegment_Validate(UTrackBuilderUsable* InUsable) {
-    return true;
 }
 
 

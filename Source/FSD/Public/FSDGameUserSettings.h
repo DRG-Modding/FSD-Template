@@ -1,38 +1,41 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Int32ConfigChangedDelegate.h"
-#include "ModdingUISettings.h"
+#include "ETurn180Mode.h"
+#include "ChatFontSizeChangedDelegate.h"
+#include "InputSourceChangedSignatureDelegate.h"
 #include "GameFramework/GameUserSettings.h"
 #include "BoolConfigChangedDelegate.h"
 #include "FloatConfigChangedDelegate.h"
-#include "LanguageChangedDelegate.h"
-#include "ESaveSlotChangeProcedure.h"
 #include "StringConfigChangedDelegate.h"
-#include "ChatFontSizeChangedDelegate.h"
+#include "Rendering/RenderingCommon.h"
+#include "LanguageChangedDelegate.h"
+#include "CustomKeyBinding.h"
+#include "ENVidiaReflexMode.h"
+#include "ModdingUISettings.h"
+#include "ColorVisionDeficiencyDelegateDelegate.h"
+#include "ColorVisionDeficiencySettings.h"
 #include "ModdingSettingsChangedDelegate.h"
 #include "UDLSSMode.h"
-#include "CharacterOptions.h"
-#include "HUDElements.h"
-#include "ENVidiaReflexMode.h"
 #include "EConsoleGraphicsMode.h"
-#include "InputSourceChangedSignatureDelegate.h"
+#include "ESteamSearchRegion.h"
+#include "HUDElements.h"
+#include "CharacterOptions.h"
+#include "Int32ConfigChangedDelegate.h"
 #include "UObject/NoExportTypes.h"
-#include "CustomKeyBinding.h"
-#include "EFSDInputSource.h"
+#include "UObject/NoExportTypes.h"
 #include "GameFramework/GameUserSettings.h"
 #include "CustomKeyBindingsChangedDelegate.h"
+#include "EFSDInputSource.h"
 #include "ControllerSettings.h"
 #include "EVolumeType.h"
-#include "UObject/NoExportTypes.h"
-#include "ESteamSearchRegion.h"
-#include "ETurn180Mode.h"
+#include "ESaveSlotChangeProcedure.h"
 #include "FSDGameUserSettings.generated.h"
 
 class USoundClass;
-class UFSDGameUserSettings;
+class UObject;
 class APlayerController;
 class UDifficultySetting;
-class UObject;
+class UFSDGameUserSettings;
 
 UCLASS(Blueprintable)
 class UFSDGameUserSettings : public UGameUserSettings {
@@ -73,6 +76,12 @@ public:
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FModdingUISettings ModdingUISettings;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FColorVisionDeficiencyDelegate OnColorVisionDeficiencySettingsChanged;
+    
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FColorVisionDeficiencySettings ColorVisionDeficiency;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ServerSearchRegion;
@@ -249,6 +258,12 @@ public:
     EConsoleGraphicsMode ConsoleGraphicsMode;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float StaticResoultionScale;
+    
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool UseManuelGrahpicsMode;
+    
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHUDElements HUDElements;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -422,9 +437,12 @@ public:
     void SetUseProfanityFilter(bool shouldUse);
     
     UFUNCTION(BlueprintCallable)
-    void SetUseHoldToRun(bool NewUseHoldToRun);
+    void SetUseManualGraphicsMode(bool bEnabled);
     
     UFUNCTION(BlueprintCallable)
+    void SetUseHoldToRun(bool NewUseHoldToRun);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     void SetUseDefaultAudioOutputDevice(UObject* WorldContextObject, bool UseDefault);
     
     UFUNCTION(BlueprintCallable)
@@ -450,6 +468,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void SetSteamSearchRegion(ESteamSearchRegion InRegion);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetStaticResolutionScale(float percentage);
     
     UFUNCTION(BlueprintCallable)
     void SetShowUIAnimations(bool shouldShow);
@@ -564,11 +585,14 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetDebugLocalizerMode(bool bEnable);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     void SetCurrentUserSaveSlotName(UObject* WorldContextObject, const FString& saveSlotName, ESaveSlotChangeProcedure changeProcedure);
     
     UFUNCTION(BlueprintCallable)
     void SetConsoleGraphicsMode(EConsoleGraphicsMode Mode);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetColorVisionDeficiency(EColorVisionDeficiency InType, float InSeverity);
     
     UFUNCTION(BlueprintCallable)
     void SetCheckForOutOfBoundsEnabled(bool Enabled);
@@ -591,7 +615,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetAutoRefreshServerlist(bool Value);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     bool SetAudioOutputDevice(UObject* WorldContextObject, const FString& DeviceID);
     
     UFUNCTION(BlueprintCallable)
@@ -630,7 +654,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void ResetControllerSettings();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     void PostInitFSDUserSettings(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -641,6 +665,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsNvReflexAvailable();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsManaulGraphicsModeAvailable();
     
 protected:
     UFUNCTION(BlueprintCallable)
@@ -654,7 +681,7 @@ public:
     static bool IsCurrentInputSource(EFSDInputSource InputSource);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void InitializeDifficultySelection(UObject* WorldContext, const TArray<UDifficultySetting*> StartSelection);
     
 public:
@@ -686,6 +713,9 @@ public:
     bool GetUseProfanityFilter() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool GetUseManualGraphicsMode();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetUseHoldToRun() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -711,6 +741,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ESteamSearchRegion GetSteamSearchRegion() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    float GetStaticResolutionScale();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetShowUIAnimations() const;
@@ -822,7 +855,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     EFSDInputSource GetCurrentInputSource();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     bool GetCurrentAudioOutputDevice(UObject* WorldContextObject, FString& AudioDevice);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -849,7 +882,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetCameraShakeScale() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     bool GetAvaliableAudioOutputDevices(UObject* WorldContextObject, TArray<FString>& AudioDevices);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -861,7 +894,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetAutoRefreshServerlist() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     FString GetAudioOutputDeviceName(UObject* WorldContextObject, const FString& DeviceID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -900,7 +933,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void FSDSetResolutionScale(float NewScaleNormalized);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool FSDSetCurrentLanguage(UObject* WorldContextObject, const FString& Culture);
     
     UFUNCTION(BlueprintCallable)

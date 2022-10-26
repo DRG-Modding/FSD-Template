@@ -3,8 +3,8 @@
 #include "Blueprint/UserWidget.h"
 #include "HackingToolWidget.generated.h"
 
-class UHackingUsableComponent;
 class USoundCue;
+class UHackingUsableComponent;
 class UDialogDataAsset;
 class AHackingToolItem;
 

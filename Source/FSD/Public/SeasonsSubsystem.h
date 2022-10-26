@@ -1,30 +1,30 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "OnTokensChangedSignatureDelegate.h"
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "OnXPChangedSignatureDelegate.h"
-#include "SeasonLevel.h"
-#include "OnScripChallengeUpdatedDelegate.h"
-#include "OnVanityTreeResetDelegate.h"
-#include "ClaimStatusChangedDelegate.h"
-#include "SeasonMissionResult.h"
-#include "UObject/NoExportTypes.h"
 #include "ChallengeInfo.h"
 #include "UObject/NoExportTypes.h"
+#include "OnTokensChangedSignatureDelegate.h"
+#include "OnVanityTreeResetDelegate.h"
+#include "OnScripChallengeUpdatedDelegate.h"
+#include "UObject/NoExportTypes.h"
+#include "SeasonMissionResult.h"
+#include "ClaimStatusChangedDelegate.h"
+#include "UObject/NoExportTypes.h"
+#include "SeasonLevel.h"
 #include "UObject/NoExportTypes.h"
 #include "EPickaxePartLocation.h"
 #include "SeasonsSubsystem.generated.h"
 
-class UPlayerCharacterID;
-class UObject;
-class UMissionStat;
-class AFSDPlayerState;
-class UDataAsset;
-class AFSDPlayerController;
-class USeasonChallenge;
 class UTextureRenderTarget2D;
+class AFSDPlayerState;
+class UObject;
+class AFSDPlayerController;
+class UMissionStat;
+class UDataAsset;
+class USeasonChallenge;
 class UVanityItem;
+class UPlayerCharacterID;
 class UItemSkin;
 class UPickaxePart;
 class USeasonEventData;
@@ -70,10 +70,10 @@ public:
     void RerollChallenge(int32 Index);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void OnStatChanged(UObject* WorldContext, UMissionStat* Stat, float Value);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void OnScripChallengeCompleted(UObject* WorldContext, UMissionStat* Stat, float Value);
     
 public:
@@ -90,10 +90,16 @@ public:
     void InitializeStatsAndChallenges();
     
     UFUNCTION(BlueprintCallable)
+    bool HasUnclaimedRewards(int32& Level);
+    
+    UFUNCTION(BlueprintCallable)
     bool HasClaimedLevelRewards(int32 startLevel, int32 numberOfLevels);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasClaimedAllRewards();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetUnusedHearts();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetSeasonXPFromMissionXP(AFSDPlayerState* PlayerState);
@@ -125,11 +131,14 @@ public:
     UFUNCTION(BlueprintCallable)
     void GetScriptChallengeInfo(int32& Completed, int32& claimed, int32& Total);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     int32 GetNumberOfTokens(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetNumberOfSeasonLevels();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetNumberOfClaimedPlagueHeartScrips();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FSeasonLevel GetNextReward();
@@ -144,7 +153,7 @@ public:
     void GetLevelProgress(int32 Level, float& levelPercent);
     
     UFUNCTION(BlueprintCallable)
-    TArray<UDataAsset*> GetAssetReferences(int32 challengeIndex, USeasonChallenge*& outChallenge);
+    TArray<UDataAsset*> GetAssetReferences(int32 ChallengeIndex, USeasonChallenge*& outChallenge);
     
     UFUNCTION(BlueprintCallable)
     TArray<FChallengeInfo> GetActiveChallenges(bool canGenerateNewChallenge);
@@ -159,12 +168,15 @@ public:
     UTextureRenderTarget2D* GeneratePickaxeRewardIcon(UPickaxePart* part, EPickaxePartLocation PickaxePartLocation, UPlayerCharacterID* Character, FTransform Offset, bool rebuildMesh, FVector2D Size);
     
     UFUNCTION(BlueprintCallable)
+    bool ConvertHeartsToScrip(int32& scripGained);
+    
+    UFUNCTION(BlueprintCallable)
     void CompleteSeasonEvent_Server(USeasonEventData* inEvent);
     
     UFUNCTION(BlueprintCallable)
     bool ClaimScripChallenge();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     bool ClaimReward(UObject* WorldContext, AFSDPlayerController* Player, int32 Level, bool isNormalReward);
     
     UFUNCTION(BlueprintCallable)
@@ -182,7 +194,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanRerollChallenge();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     bool BuyTreeNode(UObject* WorldContextObject, AFSDPlayerController* Player, int32 TreeOfVanityNodeID);
     
 };

@@ -1,14 +1,14 @@
 #include "SeasonsSubsystem.h"
 
-class AFSDPlayerState;
-class UObject;
-class UMissionStat;
-class AFSDPlayerController;
 class USeasonChallenge;
+class UObject;
+class AFSDPlayerController;
+class UMissionStat;
+class UTextureRenderTarget2D;
+class AFSDPlayerState;
 class UDataAsset;
 class UVanityItem;
 class UPlayerCharacterID;
-class UTextureRenderTarget2D;
 class UItemSkin;
 class UPickaxePart;
 class USeasonEventData;
@@ -40,12 +40,20 @@ bool USeasonsSubsystem::IsNodeBought(int32 TreeOfVanityNodeID) {
 void USeasonsSubsystem::InitializeStatsAndChallenges() {
 }
 
+bool USeasonsSubsystem::HasUnclaimedRewards(int32& Level) {
+    return false;
+}
+
 bool USeasonsSubsystem::HasClaimedLevelRewards(int32 startLevel, int32 numberOfLevels) {
     return false;
 }
 
 bool USeasonsSubsystem::HasClaimedAllRewards() {
     return false;
+}
+
+int32 USeasonsSubsystem::GetUnusedHearts() {
+    return 0;
 }
 
 int32 USeasonsSubsystem::GetSeasonXPFromMissionXP(AFSDPlayerState* PlayerState) {
@@ -92,6 +100,10 @@ int32 USeasonsSubsystem::GetNumberOfSeasonLevels() {
     return 0;
 }
 
+int32 USeasonsSubsystem::GetNumberOfClaimedPlagueHeartScrips() {
+    return 0;
+}
+
 FSeasonLevel USeasonsSubsystem::GetNextReward() {
     return FSeasonLevel{};
 }
@@ -107,7 +119,7 @@ FSeasonLevel USeasonsSubsystem::GetLevelReward(int32 Level) {
 void USeasonsSubsystem::GetLevelProgress(int32 Level, float& levelPercent) {
 }
 
-TArray<UDataAsset*> USeasonsSubsystem::GetAssetReferences(int32 challengeIndex, USeasonChallenge*& outChallenge) {
+TArray<UDataAsset*> USeasonsSubsystem::GetAssetReferences(int32 ChallengeIndex, USeasonChallenge*& outChallenge) {
     return TArray<UDataAsset*>();
 }
 
@@ -125,6 +137,10 @@ UTextureRenderTarget2D* USeasonsSubsystem::GenerateSkinRewardIcon(UItemSkin* Ski
 
 UTextureRenderTarget2D* USeasonsSubsystem::GeneratePickaxeRewardIcon(UPickaxePart* part, EPickaxePartLocation PickaxePartLocation, UPlayerCharacterID* Character, FTransform Offset, bool rebuildMesh, FVector2D Size) {
     return NULL;
+}
+
+bool USeasonsSubsystem::ConvertHeartsToScrip(int32& scripGained) {
+    return false;
 }
 
 void USeasonsSubsystem::CompleteSeasonEvent_Server(USeasonEventData* inEvent) {

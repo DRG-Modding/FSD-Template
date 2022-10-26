@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "PlayerTemperatureShowBarDelegate.h"
+#include "PlayerTemperatureStateChangedSignatureDelegate.h"
 #include "TemperatureComponent.h"
 #include "PlayerTemperatureChangedSignatureDelegate.h"
-#include "PlayerTemperatureStateChangedSignatureDelegate.h"
 #include "PlayerTemperatureChangeRateSignatureDelegate.h"
 #include "PlayerDefrostingSignatureDelegate.h"
+#include "PlayerTemperatureShowBarDelegate.h"
 #include "EPlayerTemperatureState.h"
 #include "PlayerTemperatureComponent.generated.h"
 
-class APlayerCharacter;
 class UHealthComponentBase;
 class UStatusEffect;
+class APlayerCharacter;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPlayerTemperatureComponent : public UTemperatureComponent {

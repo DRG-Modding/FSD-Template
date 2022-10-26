@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UpgradeValues.h"
-#include "EDetPackUpgrades.h"
 #include "StandardItemUpgrade.h"
+#include "EDetPackUpgrades.h"
 #include "DetPackUpgrade.generated.h"
 
-class AActor;
 class AFSDPlayerState;
+class AActor;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UDetPackUpgrade : public UStandardItemUpgrade {

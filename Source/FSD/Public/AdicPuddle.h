@@ -5,17 +5,17 @@
 #include "Engine/EngineTypes.h"
 #include "AdicPuddle.generated.h"
 
-class USoundBase;
 class USphereComponent;
-class UStatusEffect;
+class USoundBase;
 class UPrimitiveComponent;
+class UStatusEffect;
 
 UCLASS(Blueprintable)
 class AAdicPuddle : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USphereComponent* SphereTrigger;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

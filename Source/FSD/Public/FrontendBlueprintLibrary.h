@@ -15,8 +15,17 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsShippingBuild();
     
+    UFUNCTION(BlueprintCallable)
+    static void GetStringFromClipboard(FString& fromClipboard);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    static bool FSDTargetPlatformIsXSX();
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static EFSDTargetPlatform FSDTargetPlatform();
+    
+    UFUNCTION(BlueprintCallable)
+    static void CopyStringToClipboard(const FString& toClipboard);
     
 };
 

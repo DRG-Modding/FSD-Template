@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Subsystems/GameInstanceSubsystem.h"
 #include "GeneratedMissionGroup.h"
+#include "Subsystems/GameInstanceSubsystem.h"
 #include "MissionGenerationManager.generated.h"
 
 class UGeneratedMission;

@@ -5,23 +5,23 @@
 #include "Engine/EngineTypes.h"
 #include "CoilgunWeaponTrail.generated.h"
 
-class UStatusEffect;
 class UNiagaraComponent;
 class USceneComponent;
-class UCapsuleComponent;
 class UPrimitiveComponent;
+class UStatusEffect;
+class UCapsuleComponent;
 
 UCLASS(Blueprintable)
 class ACoilgunWeaponTrail : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* Root;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCapsuleComponent* Collision;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UNiagaraComponent* Trail;
     
 protected:

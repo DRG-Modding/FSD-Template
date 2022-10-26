@@ -1,37 +1,37 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
-#include "LoadoutItem.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "SaveGameIDInterface.h"
 #include "Skinnable.h"
 #include "ItemIDInterface.h"
-#include "ItemLoadoutAnimations.h"
 #include "AudioWithCooldown.h"
+#include "LoadoutItem.h"
 #include "PlaySoundInterface.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
+#include "ItemLoadoutAnimations.h"
 #include "Item.generated.h"
 
-class USoundBase;
-class UTexture2D;
-class UCameraShakeBase;
-class UItemID;
-class UDialogDataAsset;
-class APlayerCharacter;
 class UUpgradableItemComponent;
+class APlayerCharacter;
+class UItemID;
+class UCameraShakeBase;
 class UCurveFloat;
+class USoundBase;
 class UAudioComponent;
-class UItemsBarIcon;
 class USceneComponent;
-class USoundAttenuation;
+class UDialogDataAsset;
+class USkinEffect;
 class USoundConcurrency;
+class UItemsBarIcon;
+class USoundAttenuation;
 class ACharacter;
 class UStaticMeshComponent;
 class UFirstPersonStaticMeshComponent;
-class USkinEffect;
+class UTexture2D;
 class AItem;
 class UItemCharacterAnimationSet;
 
@@ -58,7 +58,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     APlayerCharacter* Character;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UUpgradableItemComponent* UpgradableItem;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -97,7 +97,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName TemperatureFloatParam;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UAudioComponent* TemperatureAudioComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
@@ -150,7 +150,7 @@ public:
     UAudioComponent* SpawnSound2D(USoundBase* Sound, float PriorityOverride, float VolumeMultiplier, float PitchMultiplier, float StartTime, USoundConcurrency* ConcurrencySettings, bool bPersistAcrossLevelTransition, bool bAutoDestroy, bool SendVibration);
     
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_StartUsing(bool NewIsUsing);
     
 public:

@@ -5,9 +5,6 @@ void UReflectionHitscanComponent::Server_RegisterHit_Reflection_Implementation(c
 
 void UReflectionHitscanComponent::Server_RegisterHit_Implementation(const FReflectiveHitscanHit& Hit) {
 }
-bool UReflectionHitscanComponent::Server_RegisterHit_Validate(const FReflectiveHitscanHit& Hit) {
-    return true;
-}
 
 void UReflectionHitscanComponent::All_ShowHit_Implementation(const FReflectiveHitscanHit& Hit) {
 }

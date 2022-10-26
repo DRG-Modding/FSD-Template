@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ChargeChangedSignatureDelegate.h"
 #include "AmmoDrivenWeapon.h"
+#include "ChargeChangedSignatureDelegate.h"
 #include "ChargedWeapon.generated.h"
 
-class UAnimMontage;
-class UFXSystemAsset;
 class UFXSystemComponent;
 class USoundCue;
+class UFXSystemAsset;
+class UAnimMontage;
 
 UCLASS(Abstract, Blueprintable)
 class AChargedWeapon : public AAmmoDrivenWeapon {
@@ -35,7 +35,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFXSystemAsset* ChargeupParticles;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UFXSystemComponent* ChargeupParticleInstance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

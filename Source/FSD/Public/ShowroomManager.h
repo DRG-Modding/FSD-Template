@@ -5,9 +5,9 @@
 #include "UObject/NoExportTypes.h"
 #include "ShowroomManager.generated.h"
 
-class AShowroomStage;
-class UShowroomController;
 class UTextureRenderTarget2D;
+class UShowroomController;
+class AShowroomStage;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UShowroomManager : public UActorComponent {

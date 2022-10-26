@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "RequiredMissionItem.generated.h"
 
-class UMissionTemplate;
 class UMissionComplexity;
+class UMissionTemplate;
 class UMissionDuration;
 
 USTRUCT(BlueprintType)

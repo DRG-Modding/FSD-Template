@@ -1,8 +1,15 @@
 #include "TerrainMaterial.h"
 
 class UObject;
+class UTerrainMaterial;
 class UFXSystemComponent;
 class UMaterialInstance;
+
+void UTerrainMaterial::TestMaterialEffects(UTerrainMaterial* Material, TArray<FTestTerrainMaterialItem>& Items) {
+}
+
+void UTerrainMaterial::TestDecals(UTerrainMaterial* Material, TArray<FTestTerrainMaterialDecalItem>& Items) {
+}
 
 UFXSystemComponent* UTerrainMaterial::SpawnPartialDigParticles(UObject* WorldContextObject, FVector Location, FRotator Rotation) const {
     return NULL;
@@ -14,10 +21,6 @@ UFXSystemComponent* UTerrainMaterial::SpawnDigParticles(UObject* WorldContextObj
 
 bool UTerrainMaterial::IsPrecious() const {
     return false;
-}
-
-UMaterialInstance* UTerrainMaterial::GetObjectMaterial() const {
-    return NULL;
 }
 
 FText UTerrainMaterial::GetInGameName() const {
@@ -37,7 +40,6 @@ UTerrainMaterial::UTerrainMaterial() {
     this->PlatformDissolvable = false;
     this->ResourceData = NULL;
     this->HitsNeededToMine = 2;
-    this->CanHaveDecals = true;
     this->PickAxeDigSize = 105.00f;
     this->RemoveDebrisOnFirstHit = true;
     this->ShoutLookAt = NULL;

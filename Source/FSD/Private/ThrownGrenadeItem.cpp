@@ -1,25 +1,27 @@
 #include "ThrownGrenadeItem.h"
 #include "Net/UnrealNetwork.h"
 
-void AThrownGrenadeItem::Server_ThrowGrenade_Implementation() {
+
+void AThrownGrenadeItem::SetRemainingCooldown(float CoolDown) {
 }
-bool AThrownGrenadeItem::Server_ThrowGrenade_Validate() {
-    return true;
+
+void AThrownGrenadeItem::Server_ThrowGrenade_Implementation(const FVector& StartLocation, const float& cookTime) {
 }
 
 void AThrownGrenadeItem::Server_SetState_Implementation(EThrownGrenadeItemState itemState) {
 }
-bool AThrownGrenadeItem::Server_SetState_Validate(EThrownGrenadeItemState itemState) {
-    return true;
-}
 
 void AThrownGrenadeItem::Server_Resupply_Implementation(float percentage) {
 }
-bool AThrownGrenadeItem::Server_Resupply_Validate(float percentage) {
-    return true;
+
+void AThrownGrenadeItem::ResupplyGrenadesAmount(const int32& Amount) {
 }
 
 void AThrownGrenadeItem::ResupplyGrenades(float percentage) {
+}
+
+TArray<FVector> AThrownGrenadeItem::PredictGrenadePath() {
+    return TArray<FVector>();
 }
 
 void AThrownGrenadeItem::OnRep_State() {
@@ -32,6 +34,9 @@ void AThrownGrenadeItem::OnRep_GrenadeClass() {
 }
 
 void AThrownGrenadeItem::GrenadeThrowFinished() {
+}
+
+void AThrownGrenadeItem::GetPredictedLastPosAndVelocity(FVector& Pos, FVector& Velocity) {
 }
 
 float AThrownGrenadeItem::GetGrenadeThrowVelocity() const {
@@ -56,6 +61,7 @@ void AThrownGrenadeItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& O
     DOREPLIFETIME(AThrownGrenadeItem, Grenades);
     DOREPLIFETIME(AThrownGrenadeItem, State);
     DOREPLIFETIME(AThrownGrenadeItem, GrenadeClass);
+    DOREPLIFETIME(AThrownGrenadeItem, CooldownIsDone);
     DOREPLIFETIME(AThrownGrenadeItem, HasRejoinedInitialized);
 }
 
@@ -71,6 +77,8 @@ AThrownGrenadeItem::AThrownGrenadeItem() {
     this->GrenadeClass = NULL;
     this->DefaultGrenadeAnimationSet = NULL;
     this->GrenadeMeshInstance = NULL;
+    this->CookSound = NULL;
+    this->CooldownIsDone = true;
     this->HasRejoinedInitialized = false;
 }
 

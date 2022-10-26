@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RichTextParseResult.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "RichTextParseResult.h"
 #include "FSDRichTextFunctionlibrary.generated.h"
 
 UCLASS(Blueprintable)
@@ -16,7 +16,7 @@ public:
     static FRichTextParseResult ParseRichText(const FText& InText);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    static FText MidRichText(const FRichTextParseResult& Parser, int32 StartIndex, int32 count, bool bKeepFormatting);
+    static FText MidRichText(const FRichTextParseResult& Parser, int32 StartIndex, int32 Count, bool bKeepFormatting);
     
 };
 

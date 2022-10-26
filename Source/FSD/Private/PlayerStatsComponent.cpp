@@ -8,9 +8,6 @@ void UPlayerStatsComponent::SendMissionAnalytics(bool trackMorkite) {
 
 void UPlayerStatsComponent::SendEndMissionResult_Implementation(const FEndMissionResult& Result) {
 }
-bool UPlayerStatsComponent::SendEndMissionResult_Validate(const FEndMissionResult& Result) {
-    return true;
-}
 
 void UPlayerStatsComponent::OnResourceMined(UCappedResource* Resource, float Amount) {
 }

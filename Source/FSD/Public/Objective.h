@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Components/ActorComponent.h"
 #include "ObjectiveUpdatedSignatureDelegate.h"
-#include "ObjectiveMissionIcon.h"
+#include "Components/ActorComponent.h"
 #include "MissionShouts.h"
+#include "ObjectiveMissionIcon.h"
 #include "CreditsReward.h"
 #include "Objective.generated.h"
 
-class UMissionStat;
 class UObjectiveWidget;
-class UResourceData;
-class UBiome;
 class UOptionalObjectiveWidget;
+class UMissionStat;
+class UBiome;
+class UResourceData;
 class UTexture2D;
 class UObjective;
 
@@ -42,6 +42,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ScaleObjectiveToMission;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bHasReturnObjective;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool RequiredReturnObjectiveCompleted;
     
@@ -53,6 +56,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_IsPrimaryObjective, meta=(AllowPrivateAccess=true))
     int32 IsPrimaryObjective;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
+    bool bIsNeededForMissionCompletion;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float MissionScale;
@@ -83,6 +89,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     bool IsObjectiveResource(UResourceData* InResource) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsNeededForMissionCompletion() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsFinalBattle() const;

@@ -6,6 +6,7 @@ UDamageHitCountEffect::UDamageHitCountEffect() {
     this->DamageParticle = NULL;
     this->DamageSound = NULL;
     this->DeadBugWalkingTargetMarking = false;
+    this->ExtraDamageForCalculatingDBW = 0.00f;
     this->DeadBugWalkingSTE = NULL;
 }
 

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EFlyingBugDeathAnimationCategory.h"
 #include "SimpleMovingEnemyAnimInstance.h"
+#include "EFlyingBugDeathAnimationCategory.h"
 #include "FlyingBugAnimInstance.generated.h"
 
 UCLASS(Blueprintable, NonTransient)

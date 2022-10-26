@@ -22,6 +22,7 @@ enum class ECharacterState : uint8 {
     Pushing,
     TrackMovement,
     EnemyControl,
+    Infected,
     Invalid,
 };
 

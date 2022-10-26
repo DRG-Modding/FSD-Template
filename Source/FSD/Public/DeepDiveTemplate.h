@@ -1,12 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ESchematicType.h"
 #include "SavableDataAsset.h"
 #include "DeepDiveTemplateItem.h"
 #include "RandInterval.h"
-#include "ESchematicType.h"
 #include "DeepDiveTemplate.generated.h"
 
 class UDifficultySetting;
+class UMissionComplexity;
+class UMissionTemplate;
+class UMissionDuration;
 
 UCLASS(Blueprintable)
 class UDeepDiveTemplate : public USavableDataAsset {
@@ -43,6 +46,12 @@ public:
     FRandInterval WarningCount;
     
     UDeepDiveTemplate();
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsDurationAllowed(UMissionTemplate* mission, UMissionDuration* Duration) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsComplexityAllowed(UMissionTemplate* mission, UMissionComplexity* Complexity) const;
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ESchematicType GetStageRewardType(int32 stageIndex) const;
     

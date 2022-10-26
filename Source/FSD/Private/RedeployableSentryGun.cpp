@@ -1,7 +1,7 @@
 #include "RedeployableSentryGun.h"
 #include "Net/UnrealNetwork.h"
-#include "ActorTrackingComponent.h"
 #include "OutlineComponent.h"
+#include "ActorTrackingComponent.h"
 
 class APlayerCharacter;
 class AActor;

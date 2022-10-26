@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ETetherConnectionMode.h"
 #include "Components/ActorComponent.h"
 #include "TetherPowerChanged_DelegateDelegate.h"
-#include "TetherRangeChangedDelegate.h"
 #include "TetherConnectionChanged_DeletageDelegate.h"
 #include "TeherMessage_DelegateDelegate.h"
-#include "ETetherConnectionMode.h"
+#include "TetherRangeChangedDelegate.h"
 #include "ETetherMessageDirection.h"
-#include "UObject/NoExportTypes.h"
 #include "TetherMessageSettings.h"
+#include "UObject/NoExportTypes.h"
 #include "TetherComponent.generated.h"
 
-class UTetherComponent;
 class UMeshComponent;
+class UTetherComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UTetherComponent : public UActorComponent {
@@ -31,22 +31,22 @@ public:
     FTetherRangeChanged OnConnectionRangeUpdated;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UMeshComponent* TetherMesh;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool AutoSetup;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTetherComponent*> ConnectionHistory;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ConnectionPointName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, ReplicatedUsing=OnRep_ForwardConnection, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, ReplicatedUsing=OnRep_ForwardConnection, meta=(AllowPrivateAccess=true))
     UTetherComponent* ForwardConnection;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, ReplicatedUsing=OnRep_BackConnection, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, ReplicatedUsing=OnRep_BackConnection, meta=(AllowPrivateAccess=true))
     UTetherComponent* backConnection;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

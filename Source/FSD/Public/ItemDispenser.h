@@ -2,23 +2,23 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
-#include "ItemDispenserDelegateDelegate.h"
 #include "EInputKeys.h"
+#include "ItemDispenserDelegateDelegate.h"
 #include "ItemDispenser.generated.h"
 
-class USceneComponent;
-class UInstantUsable;
 class ACarriableItem;
 class APlayerCharacter;
+class USceneComponent;
+class UInstantUsable;
 
 UCLASS(Blueprintable)
 class AItemDispenser : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* Root;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UInstantUsable* Usable;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -4,7 +4,7 @@
 #include "MissionFunctionLibrary.generated.h"
 
 UCLASS(Blueprintable)
-class UMissionFunctionLibrary : public UBlueprintFunctionLibrary {
+class FSD_API UMissionFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UMissionFunctionLibrary();

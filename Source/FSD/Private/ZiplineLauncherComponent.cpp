@@ -2,9 +2,6 @@
 
 void UZiplineLauncherComponent::Server_Fire_Implementation(FVector_NetQuantize Origin, FVector_NetQuantize Destination) {
 }
-bool UZiplineLauncherComponent::Server_Fire_Validate(FVector_NetQuantize Origin, FVector_NetQuantize Destination) {
-    return true;
-}
 
 void UZiplineLauncherComponent::All_ShowHit_Implementation() {
 }

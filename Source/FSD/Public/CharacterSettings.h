@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/DataAsset.h"
 #include "CharacterSettings.generated.h"
 
-class UDialogDataAsset;
-class APlayerCharacter;
-class UPlayerCharacterID;
-class ACarriableItem;
-class UInventoryList;
-class USkeletalMesh;
 class UUseAnimationSetting;
+class APlayerCharacter;
+class UInventoryList;
+class UPlayerCharacterID;
+class USkeletalMesh;
+class ACarriableItem;
 class UCampaignManager;
 class UCharacterVanityItems;
+class UDialogDataAsset;
 class UDebrisPositioning;
 class UTerrainPlacementComponent;
 class UPlayerCharacterData;
@@ -25,9 +25,6 @@ class UCharacterSettings : public UDataAsset {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSoftClassPtr<APlayerCharacter>> RankedHeroClasses;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<TSubclassOf<APlayerCharacter>> LoadedClasses;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FText> PlayerRankNames;

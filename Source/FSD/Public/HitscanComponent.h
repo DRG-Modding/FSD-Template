@@ -2,16 +2,16 @@
 #include "CoreMinimal.h"
 #include "HitscanBaseComponent.h"
 #include "HitDelegateDelegate.h"
-#include "IRandRange.h"
 #include "Engine/NetSerialization.h"
+#include "IRandRange.h"
 #include "Engine/NetSerialization.h"
 #include "HitscanComponent.generated.h"
 
+class UPrimitiveComponent;
+class AActor;
 class UFXSystemAsset;
 class USoundCue;
-class AActor;
 class UFSDPhysicalMaterial;
-class UPrimitiveComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UHitscanComponent : public UHitscanBaseComponent {
@@ -21,6 +21,9 @@ public:
     FHitDelegate OnHit;
     
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool CanHitInstigator;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool BulletsCanCarve;
     
@@ -60,22 +63,22 @@ protected:
 public:
     UHitscanComponent();
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_RegisterRicochetHit_Terrain(FVector_NetQuantize Origin, FVector_NetQuantize Location, FVector_NetQuantizeNormal Normal, UFSDPhysicalMaterial* PhysMaterial);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server)
     void Server_RegisterRicochetHit_Destructable(FVector_NetQuantize Origin, FVector_NetQuantize Location, FVector_NetQuantizeNormal Normal, UPrimitiveComponent* Target, UFSDPhysicalMaterial* PhysMaterial, uint8 BoneIndex);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_RegisterRicochetHit(FVector_NetQuantize Origin, FVector_NetQuantize Location, FVector_NetQuantizeNormal Normal, UPrimitiveComponent* Target, UFSDPhysicalMaterial* PhysMaterial);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_RegisterHit_Terrain(FVector_NetQuantize Location, FVector_NetQuantizeNormal Normal, UFSDPhysicalMaterial* PhysMaterial);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server)
     void Server_RegisterHit_Destructable(FVector_NetQuantize Location, FVector_NetQuantizeNormal Normal, UPrimitiveComponent* Target, UFSDPhysicalMaterial* PhysMaterial, uint8 BoneIndex);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_RegisterHit(FVector_NetQuantize Location, FVector_NetQuantizeNormal Normal, UPrimitiveComponent* Target, UFSDPhysicalMaterial* PhysMaterial);
     
     UFUNCTION(NetMulticast, Unreliable)

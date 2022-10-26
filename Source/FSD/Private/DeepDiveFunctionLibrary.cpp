@@ -1,7 +1,7 @@
 #include "DeepDiveFunctionLibrary.h"
 
-class UGeneratedMission;
 class UObject;
+class UGeneratedMission;
 class UDeepDive;
 class UDeepDiveTemplate;
 

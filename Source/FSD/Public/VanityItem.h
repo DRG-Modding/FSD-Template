@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Craftable.h"
 #include "SavablePrimaryDataAsset.h"
 #include "RefundableInterface.h"
-#include "Craftable.h"
 #include "Aquisitionable.h"
 #include "EVanitySlot.h"
 #include "CraftingCost.h"
@@ -11,10 +11,8 @@
 
 class UItemAquisitionBase;
 class UIconGenerationCameraKey;
-class UDLCBase;
-class UVanityEventSourceDataAsset;
-class UResourceData;
 class UPlayerCharacterID;
+class UVanityEventSourceDataAsset;
 class UObject;
 class AFSDPlayerState;
 class UTexture;
@@ -46,42 +44,27 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UIconGenerationCameraKey* IconGenerationCameraKey;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UDLCBase* RequiredDLC;
-    
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UDLCBase* CraftingRestrictionDLC;
-    
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 CraftingPlayerRankRequired;
-    
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<UResourceData*, float> CraftingCost;
-    
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 CraftingCreditsCost;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<UPlayerCharacterID*> RestrictToCharacters;
     
 public:
     UVanityItem();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     bool RemoveFromOwned(UObject* WorldContext);
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void PreviewItem(AFSDPlayerState* PlayerState, bool Show) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     bool IsOwned(UObject* WorldContextObject, UPlayerCharacterID* characterID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     bool IsEquipped(UObject* WorldContextObject, UPlayerCharacterID* characterID) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasEventSource() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     void GiftItem(UObject* WorldContextObject, UPlayerCharacterID* characterID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -114,22 +97,19 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FText GetCraftableDescription() const;
     
-    UFUNCTION(BlueprintCallable)
-    void FixupAquisitionLogic();
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    UFUNCTION(BlueprintCallable, BlueprintPure=false, meta=(WorldContext="WorldContextObject"))
     void CraftItemWithFashionite(UObject* WorldContextObject, UPlayerCharacterID* characterID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    UFUNCTION(BlueprintCallable, BlueprintPure=false, meta=(WorldContext="WorldContextObject"))
     void CraftItem(UObject* WorldContextObject, UPlayerCharacterID* characterID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     bool CanCraftWithFashionite(UObject* WorldContextObject) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     bool CanCraft(UObject* WorldContextObject) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    UFUNCTION(BlueprintCallable, BlueprintPure=false, meta=(WorldContext="WorldContextObject"))
     void ApplyItemPermanently(UObject* WorldContextObject, UPlayerCharacterID* characterID) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)

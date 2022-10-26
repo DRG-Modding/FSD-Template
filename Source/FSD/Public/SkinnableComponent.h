@@ -30,7 +30,7 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable)
-    static TArray<UItemSkin*> GetSkinsForItem(UItemID* ItemID, EItemSkinType SkinType);
+    static TArray<UItemSkin*> GetSkinsForItem(UItemID* ItemID, EItemSkinType skinType);
     
     UFUNCTION(BlueprintCallable)
     static UItemSkin* GetEquippedSkinMesh(UItemID* ItemID, AFSDPlayerState* Player);
@@ -39,7 +39,7 @@ public:
     static UItemSkin* GetEquippedSkinColor(UItemID* ItemID, AFSDPlayerState* Player);
     
     UFUNCTION(BlueprintCallable)
-    static UItemSkin* GetEquippedSkin(UItemID* ItemID, EItemSkinType SkinType, AFSDPlayerState* Player);
+    static UItemSkin* GetEquippedSkin(UItemID* ItemID, EItemSkinType skinType, AFSDPlayerState* Player);
     
     UFUNCTION(BlueprintCallable)
     static TArray<UItemSkin*> GetEquippableColorSkins(UItemID* ItemID, AFSDPlayerState* Player);

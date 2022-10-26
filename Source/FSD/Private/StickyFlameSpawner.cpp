@@ -10,9 +10,6 @@ bool UStickyFlameSpawner::TrySpawnStickyFlame(FVector Location, FVector Normal) 
 
 void UStickyFlameSpawner::ServerSpawnStickyFlame_Implementation(FVector_NetQuantize Location, FVector_NetQuantizeNormal Normal) {
 }
-bool UStickyFlameSpawner::ServerSpawnStickyFlame_Validate(FVector_NetQuantize Location, FVector_NetQuantizeNormal Normal) {
-    return true;
-}
 
 UStickyFlameSpawner::UStickyFlameSpawner() {
     this->StickyFlameActor = NULL;

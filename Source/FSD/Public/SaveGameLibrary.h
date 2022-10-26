@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "SaveGameSnapShot.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "UObject/NoExportTypes.h"
 #include "SaveGameLibrary.generated.h"
 
@@ -12,7 +12,7 @@ class USaveGameLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     USaveGameLibrary();
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     static bool TryGetSaveGameSnapShot(UObject* WorldContext, const FString& Filename, int32 userIdx, FSaveGameSnapShot& OutSnapShot);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

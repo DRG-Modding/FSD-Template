@@ -1,14 +1,11 @@
 #include "WeaponHitCounterComponent.h"
 
+class UFSDPhysicalMaterial;
 class UHealthComponentBase;
 class UPrimitiveComponent;
-class UFSDPhysicalMaterial;
 class AActor;
 
 void UWeaponHitCounterComponent::Server_OnReloading_Implementation() {
-}
-bool UWeaponHitCounterComponent::Server_OnReloading_Validate() {
-    return true;
 }
 
 void UWeaponHitCounterComponent::OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial) {

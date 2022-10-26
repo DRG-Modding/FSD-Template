@@ -15,6 +15,6 @@ UMissionResultInfo::UMissionResultInfo() {
     this->LenghtDots = 0;
     this->TotalCreditsSum = 0.00f;
     this->TotalXPSum = 0.00f;
-    this->WasSuccess = false;
+    this->wasSuccess = false;
 }
 

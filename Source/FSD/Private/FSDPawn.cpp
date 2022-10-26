@@ -3,8 +3,8 @@
 #include "StatusEffectsComponent.h"
 #include "EnemyTemperatureComponent.h"
 
-class UHealthComponentBase;
 class AActor;
+class UHealthComponentBase;
 class USkeletalMeshComponent;
 class AFSDAIController;
 

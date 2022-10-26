@@ -3,29 +3,29 @@
 #include "FSDPawn.h"
 #include "GuntowerWeakPoint.generated.h"
 
-class USoundCue;
-class UParticleSystem;
+class UWeakpointGlowComponent;
 class USceneComponent;
 class UEnemyHealthComponent;
 class UStaticMeshComponent;
-class UWeakpointGlowComponent;
 class UDamageClass;
+class USoundCue;
+class UParticleSystem;
 class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class AGuntowerWeakPoint : public AFSDPawn {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* Root;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEnemyHealthComponent* Health;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UStaticMeshComponent* Mesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UWeakpointGlowComponent* HitGlow;
     
 protected:

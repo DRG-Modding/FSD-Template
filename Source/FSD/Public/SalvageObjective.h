@@ -2,20 +2,20 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Objective.h"
-#include "DelegateDelegate.h"
 #include "UObject/NoExportTypes.h"
+#include "DelegateDelegate.h"
 #include "UObject/NoExportTypes.h"
 #include "SalvageObjective.generated.h"
 
-class URepairableComponent;
-class AActor;
 class UGemResourceData;
+class URepairableComponent;
 class UDebrisPositioning;
-class UCurveFloat;
-class UDebrisBase;
 class AMiningPod;
+class UDebrisBase;
 class AMiniMule;
 class AProceduralSetup;
+class AActor;
+class UCurveFloat;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API USalvageObjective : public UObjective {

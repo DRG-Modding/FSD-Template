@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/DataAsset.h"
 #include "SaveGameIDInterface.h"
 #include "UObject/NoExportTypes.h"
 #include "ResourceData.generated.h"
 
-class UObject;
-class UMissionStat;
 class UTexture2D;
+class UMissionStat;
 class AResourceChunk;
+class UObject;
 
 UCLASS(Blueprintable)
 class FSD_API UResourceData : public UDataAsset, public ISaveGameIDInterface {
@@ -81,7 +81,7 @@ protected:
     
 public:
     UResourceData();
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     float GetOwnedAmount(UObject* WorldContextObject) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

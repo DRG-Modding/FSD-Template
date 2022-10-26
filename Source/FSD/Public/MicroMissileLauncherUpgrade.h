@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UpgradeValues.h"
-#include "EMicroMissileLauncherUpgrades.h"
 #include "StandardItemUpgrade.h"
+#include "EMicroMissileLauncherUpgrades.h"
 #include "MicroMissileLauncherUpgrade.generated.h"
 
 class AItem;

@@ -4,8 +4,8 @@
 #include "ECommunityGoalIndex.h"
 #include "CommunityGoalSettings.generated.h"
 
-class UCommunityGoal;
 class UCommunityGoalFaction;
+class UCommunityGoal;
 
 UCLASS(Blueprintable)
 class UCommunityGoalSettings : public UDataAsset {

@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
+#include "Subsystems/WorldSubsystem.h"
 #include "DynamicMeshScaler.generated.h"
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
-class UDynamicMeshScaler : public UActorComponent {
+UCLASS(Blueprintable)
+class UDynamicMeshScaler : public UWorldSubsystem {
     GENERATED_BODY()
 public:
     UDynamicMeshScaler();

@@ -1,8 +1,8 @@
 #include "DetPackUpgrade.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
 class AFSDPlayerState;
+class AActor;
 
 FUpgradeValues UDetPackUpgrade::GetUpgradedValue(TSubclassOf<AActor> Item, AFSDPlayerState* Player, EDetPackUpgrades NewUpgradeType) {
     return FUpgradeValues{};

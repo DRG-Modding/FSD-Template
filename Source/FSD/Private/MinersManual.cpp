@@ -2,8 +2,8 @@
 
 class UObject;
 class UMissionTemplate;
-class UEnemyMinersManualData;
 class UBiome;
+class UEnemyMinersManualData;
 class UMinersManualData;
 
 bool UMinersManual::IsObjectInMinersManual(UObject* WorldContext, UObject* Object) {

@@ -50,13 +50,17 @@ bool UCampaign::AreRestrictionsMet(AFSDPlayerController* Player, UDifficultySett
 }
 
 UCampaign::UCampaign() {
+    this->HasMissions = true;
+    this->CampaignCompleteShout = NULL;
     this->RequiredCharacterID = NULL;
     this->Progress = 0;
+    this->Seed = 0;
     this->CanAbort = true;
     this->CanSkip = false;
     this->campaigntype = ECampaignType::Normal;
     this->CampaignCompletedMissionStat = NULL;
     this->CampaignActivity = NULL;
+    this->ReplacesOldCampaignCampaign = NULL;
     this->Mutators = ECampaignMutators::NotAllowed;
 }
 

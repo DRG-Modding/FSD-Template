@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EItemCategory.h"
 #include "ShowroomController.h"
+#include "EItemCategory.h"
 #include "CharacterShowroomController.generated.h"
 
-class UObject;
 class APlayerCharacter;
+class UObject;
 class UCharacterShowroomController;
-class UPlayerCharacterID;
 class UShowroomCameraKey;
+class UPlayerCharacterID;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCharacterShowroomController : public UShowroomController {
@@ -28,7 +28,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void EquipWeapon(EItemCategory Category);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UCharacterShowroomController* DisplayCharacter(UObject* WorldContextObject, UPlayerCharacterID* characterID, UShowroomCameraKey* Key);
     
 };

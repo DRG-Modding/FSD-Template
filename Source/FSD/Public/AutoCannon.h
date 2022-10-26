@@ -5,8 +5,8 @@
 #include "Curves/CurveFloat.h"
 #include "AutoCannon.generated.h"
 
-class UAnimMontage;
 class UStatusEffect;
+class UAnimMontage;
 
 UCLASS(Abstract, Blueprintable)
 class AAutoCannon : public AAmmoDrivenWeapon {
@@ -55,7 +55,7 @@ protected:
 public:
     AAutoCannon();
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetStatusActive(bool IsActive);
     
 };

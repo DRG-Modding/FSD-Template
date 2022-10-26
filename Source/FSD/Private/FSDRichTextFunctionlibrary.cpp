@@ -7,7 +7,7 @@ FRichTextParseResult UFSDRichTextFunctionlibrary::ParseRichText(const FText& InT
     return FRichTextParseResult{};
 }
 
-FText UFSDRichTextFunctionlibrary::MidRichText(const FRichTextParseResult& Parser, int32 StartIndex, int32 count, bool bKeepFormatting) {
+FText UFSDRichTextFunctionlibrary::MidRichText(const FRichTextParseResult& Parser, int32 StartIndex, int32 Count, bool bKeepFormatting) {
     return FText::GetEmpty();
 }
 

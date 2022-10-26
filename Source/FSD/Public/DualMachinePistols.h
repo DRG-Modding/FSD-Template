@@ -17,7 +17,7 @@ protected:
 public:
     ADualMachinePistols();
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_TriggerStatusEffect();
     
 };

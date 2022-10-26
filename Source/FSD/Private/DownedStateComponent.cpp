@@ -8,9 +8,6 @@ void UDownedStateComponent::TriggerDownedBombDamage() {
 
 void UDownedStateComponent::Server_TriggerDownedBomb_Implementation() {
 }
-bool UDownedStateComponent::Server_TriggerDownedBomb_Validate() {
-    return true;
-}
 
 
 UDamageComponent* UDownedStateComponent::CreateDownedBombDamage(TSubclassOf<UDamageComponent> DamageClass) {

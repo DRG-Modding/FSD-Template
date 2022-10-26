@@ -3,74 +3,73 @@
 #include "Templates/SubclassOf.h"
 #include "UObject/Object.h"
 #include "GVisibilityGroups.h"
-#include "GDItemCategoryIDs.h"
-#include "GDPerks.h"
+#include "GDPlayerAndCharacterProgression.h"
+#include "GDTerrainTypes.h"
 #include "GDMissionStats.h"
+#include "GDResources.h"
+#include "GDStats.h"
 #include "GDGameStatsTracking.h"
 #include "GDMilestones.h"
-#include "GDStats.h"
-#include "UObject/NoExportTypes.h"
-#include "GDResources.h"
-#include "GDDamageClasses.h"
-#include "GDTerrainTypes.h"
-#include "GDCharacterRetirement.h"
-#include "GDAudio.h"
+#include "GDPerks.h"
+#include "GDItemCategoryIDs.h"
 #include "GDDifficulty.h"
-#include "GDPlayerAndCharacterProgression.h"
+#include "GDDamageClasses.h"
+#include "GDAudio.h"
+#include "GDCharacterRetirement.h"
 #include "GameplayTagContainer.h"
+#include "UObject/NoExportTypes.h"
 #include "RetirementCostItem.h"
 #include "GameData.generated.h"
 
-class UPromotionRewardsSettings;
-class UShowroomSettings;
-class UEnemySettings;
-class UPlayerCharacterID;
-class UVictoryPoseSettings;
-class UFSDEventCollection;
-class UPlanetZoneSetup;
 class UGameAnimationSettings;
-class UProceduralSettings;
-class UGameActivitySettings;
-class UVanitySettings;
-class UDanceSettings;
-class UDamageSettings;
-class UTreasureSettings;
-class UPickaxeSettings;
-class UDrinkSettings;
-class UUpgradeSettings;
-class USpawnSettings;
-class UDifficultySetting;
 class UKeyBindingSettings;
-class UInventoryList;
+class UDanceSettings;
+class UItemSettings;
+class UPromotionRewardsSettings;
+class UCommunityGoalSettings;
+class UFSDEventCollection;
+class UGameActivitySettings;
+class UMissionStat;
+class UEnemySettings;
+class UDamageSettings;
+class UPlanetZoneSetup;
+class UAchievementList;
+class UTreasureSettings;
+class USpawnSettings;
+class UDrinkSettings;
+class UProceduralSettings;
+class UUpgradeSettings;
+class UVanitySettings;
 class UDeepDiveSettings;
 class UEncounterSettings;
+class USeasonSettings;
 class UForginSettings;
+class UInventoryList;
 class USchematicSettings;
 class UItemSkinSettings;
 class USpecialEventSettings;
-class UFSDTagSettings;
-class UItemSettings;
-class APlayerCharacter;
 class UDynamicIconSettings;
+class UPickaxeSettings;
+class UFSDTagSettings;
+class UShowroomSettings;
+class UVictoryPoseSettings;
 class UFSDTutorialSettings;
 class ULegacySettings;
 class UEffectSettings;
-class UStatusEffectSettings;
 class UAfflictionSettings;
-class UCommunityGoalSettings;
 class UDailyDealSettings;
 class USaveGameSettings;
-class UTexture2D;
+class UTerrainMaterialSettings;
 class UMinersManual;
+class UTexture2D;
+class UPlayerCharacterID;
+class UStatusEffectSettings;
 class UCharacterSettings;
-class UAchievementList;
 class UGlobalMissionSetup;
-class USeasonSettings;
-class USubsystem;
 class UAsyncManager;
-class UPerkAsset;
+class UDifficultySetting;
+class APlayerCharacter;
 class UHUDVisibilityGroup;
-class UMissionStat;
 
 UCLASS(Blueprintable)
 class FSD_API UGameData : public UObject {
@@ -180,6 +179,9 @@ protected:
     UDailyDealSettings* DailyDealSettings;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UTerrainMaterialSettings* TerrainMaterialSettings;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USaveGameSettings* SaveGameSettings;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -243,9 +245,6 @@ protected:
     USeasonSettings* SeasonSettings;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<TSubclassOf<USubsystem>> BlueprintSubSystems;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UPlayerCharacterID* DefaultCharacterID;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -263,37 +262,19 @@ public:
     void LoadDefaultAssetsBlocking(UAsyncManager* AsyncManager);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    bool IsPerkTierUnLocked(UObject* WorldContext, int32 Tier) const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsCheatConsolesEnabled() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    int32 GetRequiredPerkClaimsForTier(int32 Tier) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UPlayerCharacterID*> GetRankedHeroIDs() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    TArray<TSubclassOf<APlayerCharacter>> GetRankedHeroClasses() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
     FText GetPlayerRankName(int32 Rank) const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    TSubclassOf<APlayerCharacter> GetPlayerClassFromID(UPlayerCharacterID* ID) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UPlayerCharacterID* GetPlayerCharacterID(const FGuid& ID) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    void GetPerkTierState(UObject* WorldContext, int32 Tier, bool& TierUnLocked, int32& NextRequiredCount, int32& NextProgressCount) const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
     UInventoryList* GetInventoryList(UPlayerCharacterID* characterID) const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    int32 GetHighestPerkTier() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UDifficultySetting* GetDifficultySetting(int32 Index) const;
@@ -307,20 +288,8 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TSubclassOf<APlayerCharacter> GetDefaultCharacter() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     FRetirementCostItem GetCharacterRetirementCost(UObject* WorldContext, UPlayerCharacterID* ID) const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    TArray<UPerkAsset*> GetCharacterNonEquippedPerks(UObject* WorldContext, UPlayerCharacterID* characterID) const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    TArray<UPerkAsset*> GetCharacterEquippedPerks(UObject* WorldContext, UPlayerCharacterID* characterID) const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    TArray<UPerkAsset*> GetAvailablePerks() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    int32 GetAmountOfPurchasedPerks(UObject* WorldContext) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UHUDVisibilityGroup*> GetAllVisibilityGroups() const;
@@ -330,9 +299,6 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UMissionStat*> GetAllInfirmaryStats() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    int32 CalculateClaimablePerkPoints(UObject* WorldContext) const;
     
 };
 

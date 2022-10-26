@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "NiagaraComponent.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "FirstPersonNiagaraComponent.generated.h"
 
 class USceneComponent;

@@ -1,16 +1,18 @@
 #include "SharkEnemy.h"
 #include "Net/UnrealNetwork.h"
 #include "Perception/PawnSensingComponent.h"
-#include "EnemyComponent.h"
 #include "Components/SphereComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "InDangerComponent.h"
+#include "EnemyComponent.h"
 #include "DamageComponent.h"
 #include "FakePhysGrabberComponent.h"
 
 class AActor;
 class APawn;
+class UDamageTag;
 class UPrimitiveComponent;
+class UHealthComponent;
 class UHealthComponentBase;
 
 void ASharkEnemy::SetVulnerable() {
@@ -29,9 +31,6 @@ void ASharkEnemy::OnSeePawn(APawn* APawn) {
 void ASharkEnemy::OnRep_State(ESharkEnemyState oldState) {
 }
 
-void ASharkEnemy::OnRep_RagdollImpact() {
-}
-
 void ASharkEnemy::OnRep_DiveTime() {
 }
 
@@ -42,6 +41,9 @@ void ASharkEnemy::OnNearTarget(UPrimitiveComponent* OverlappedComponent, AActor*
 
 
 
+
+void ASharkEnemy::OnDeathDetailed(UHealthComponent* aHealthComponent, float damageAmount, const FDamageData& DamageData, const TArray<UDamageTag*>& dTags) {
+}
 
 void ASharkEnemy::OnDeath(UHealthComponentBase* aHealthComponent) {
 }
@@ -64,6 +66,9 @@ void ASharkEnemy::DiveShow() {
 void ASharkEnemy::DiveHide() {
 }
 
+void ASharkEnemy::All_DoRagdollImpact_Implementation(const FVector_NetQuantize& Direction) {
+}
+
 void ASharkEnemy::ActivateDanger() {
 }
 
@@ -71,7 +76,6 @@ void ASharkEnemy::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifet
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
     DOREPLIFETIME(ASharkEnemy, DiveForSeconds);
-    DOREPLIFETIME(ASharkEnemy, RagdollImpact);
     DOREPLIFETIME(ASharkEnemy, State);
 }
 

@@ -7,9 +7,9 @@
 #include "TrackBuilderSegment.generated.h"
 
 class UTrackBuilderUsable;
-class UTrackBuilderConnectPoint;
 class APlayerCharacter;
 class AItem;
+class UTrackBuilderConnectPoint;
 class ATrackBuilderSegment;
 
 UCLASS(Blueprintable)
@@ -17,7 +17,7 @@ class FSD_API ATrackBuilderSegment : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTrackBuilderUsable* NextSegmentUsable;
     
     UPROPERTY(EditAnywhere, Replicated, Transient)

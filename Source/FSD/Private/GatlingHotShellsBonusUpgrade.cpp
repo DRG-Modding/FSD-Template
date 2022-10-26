@@ -2,8 +2,8 @@
 #include "Templates/SubclassOf.h"
 
 class UDamageClass;
-class AActor;
 class AFSDPlayerState;
+class AActor;
 
 FUpgradeValues UGatlingHotShellsBonusUpgrade::GetUpgradedValue(TSubclassOf<AActor> Item, AFSDPlayerState* Player, UDamageClass* NewDamageClass) {
     return FUpgradeValues{};

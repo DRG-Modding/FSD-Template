@@ -2,6 +2,6 @@
 
 FSeasonEvent::FSeasonEvent() {
     this->Event = NULL;
-    this->count = 0;
+    this->Count = 0;
 }
 

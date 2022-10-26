@@ -10,6 +10,7 @@ FTerrainLateJoinIteration::FTerrainLateJoinIteration() {
     this->ExplosionsIndex = 0;
     this->SplineIndex = 0;
     this->CSGIndex = 0;
+    this->SpawnDebrisIndex = 0;
     this->LateJoinIndex = 0;
     this->DebrisIndex = 0;
     this->ChunkVisibilityIndex = 0;

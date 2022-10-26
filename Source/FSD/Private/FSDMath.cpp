@@ -19,7 +19,7 @@ FVector UFSDMath::CubicInterpBlueprint(FVector p0, FVector tangent1, FVector p1,
     return FVector{};
 }
 
-void UFSDMath::CartesianToSpherical(FVector Location, float& outAzimuth, float& outElevation, float& outRadius) {
+void UFSDMath::CartesianToSpherical(FVector Location, float& outAzimuth, float& outElevation, float& OutRadius) {
 }
 
 UFSDMath::UFSDMath() {

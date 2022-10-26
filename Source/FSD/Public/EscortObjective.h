@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "Objective.h"
 #include "ShellBreakTimerSignatureDelegate.h"
-#include "UObject/NoExportTypes.h"
 #include "ShellBreakPauseChangeSignatureDelegate.h"
 #include "MuleRefueledDelegate.h"
 #include "EEscortMissionState.h"
 #include "CannisterRegisteredDelegate.h"
 #include "EscortObjective.generated.h"
 
-class AActor;
+class AEscortMule;
 class UCurveFloat;
 class UDebrisPositioning;
-class AEscortDestination;
 class UDebrisBase;
+class AActor;
+class AEscortDestination;
 class UCarvedResourceData;
 class UResourceData;
-class AEscortMule;
 class AExtractorItem;
 class UCappedResource;
 class UHealthComponentBase;
@@ -59,7 +59,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DebrisRadius;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UDebrisBase*> ObjectDebris;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

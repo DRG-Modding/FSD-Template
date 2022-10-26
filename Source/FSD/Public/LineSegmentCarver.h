@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class ALineSegmentCarver : public AGenerationItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     ULineSegmentCarverComponent* LineComponent;
     
     ALineSegmentCarver();

@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "TreasureWeight.h"
 #include "EInputKeys.h"
+#include "TreasureWeight.h"
 #include "TreasureContainer.generated.h"
 
-class UItemAquisitionSource;
-class USceneComponent;
-class UOncePerPlayerUsableComponent;
-class UTreasureRewarder;
 class APlayerCharacter;
+class USceneComponent;
+class UTreasureRewarder;
+class UOncePerPlayerUsableComponent;
+class UItemAquisitionSource;
 
 UCLASS(Blueprintable)
 class FSD_API ATreasureContainer : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* Root;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UOncePerPlayerUsableComponent* CollectUsable;
     
 protected:
@@ -34,7 +34,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTreasureWeight> PossibleRewarders;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UTreasureRewarder* TreasureRewarder;
     
 private:

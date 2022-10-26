@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SimpleMeshWithCachedTreeComponent.h"
 #include "VoronoiProperties.h"
+#include "SimpleMeshWithCachedTreeComponent.h"
 #include "CSGVoronoiComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

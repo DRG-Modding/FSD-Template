@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "DamageData.h"
 #include "Components/ActorComponent.h"
 #include "DelegateDelegate.h"
-#include "DamageData.h"
 #include "PawnAlertComponent.generated.h"
 
 class APawn;

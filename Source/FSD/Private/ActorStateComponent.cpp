@@ -3,7 +3,7 @@
 
 class UActorStateComponent;
 
-void UActorStateComponent::OnRep_CurrentState(UActorStateComponent* PreviousState) {
+void UActorStateComponent::OnRep_CurrentState(UActorStateComponent* previousState) {
 }
 
 bool UActorStateComponent::IsStateActive() const {

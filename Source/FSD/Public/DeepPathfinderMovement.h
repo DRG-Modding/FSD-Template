@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DeepPathFinderPreference.h"
-#include "DeepPathFinderType.h"
-#include "DeepRepPath.h"
 #include "GameFramework/PawnMovementComponent.h"
 #include "AsyncPathRequestsInterface.h"
-#include "PauseMovementElapsedDelegate.h"
+#include "DeepPathFinderPreference.h"
+#include "DeepPathFinderType.h"
 #include "DeepPathFinderSize.h"
 #include "Engine/EngineTypes.h"
+#include "FakeMoverState.h"
 #include "PathBeginDelegate.h"
+#include "PauseMovementElapsedDelegate.h"
 #include "PathFinishedDelegate.h"
 #include "RefreshDestinationDelegate.h"
-#include "EDeepMovementState.h"
-#include "FakeMoverState.h"
 #include "PathStateChangedDelegateDelegate.h"
+#include "HandleRotationOptions.h"
+#include "DeepRepPath.h"
 #include "UObject/NoExportTypes.h"
 #include "EDeepMovementMode.h"
-#include "HandleRotationOptions.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/LatentActionManager.h"
+#include "EDeepMovementState.h"
 #include "EOffsetFrom.h"
 #include "UObject/NoExportTypes.h"
 #include "DeepPathfinderMovement.generated.h"
@@ -153,7 +153,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     EDeepMovementMode MoveMode;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UPawnStatsComponent* PawnStats;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -235,7 +235,7 @@ public:
     void StopAttackStance();
     
     UFUNCTION(BlueprintCallable)
-    bool StartMoveToActor(AActor* Dest, float NewAcceptanceRadius);
+    bool StartMoveToActor(AActor* Dest, float NewAcceptanceRadius, bool ToCenterOfMass);
     
     UFUNCTION(BlueprintCallable)
     bool StartMoveTo(const FVector& Dest, float NewAcceptanceRadius);
@@ -262,6 +262,9 @@ public:
     void SetMaxSpeed(const float Speed);
     
     UFUNCTION(BlueprintCallable)
+    void SetMaxAcceleration(float Value);
+    
+    UFUNCTION(BlueprintCallable)
     void SetHandleRotation(const bool flag);
     
     UFUNCTION(BlueprintCallable)
@@ -277,7 +280,7 @@ public:
     bool PathExistTo(const FVector& Dest);
     
     UFUNCTION(BlueprintCallable)
-    bool PathExistsBetween(const FVector& From, const FVector& to);
+    bool PathExistsBetween(const FVector& From, const FVector& To);
     
 private:
     UFUNCTION()
@@ -296,10 +299,10 @@ public:
     UFUNCTION(BlueprintCallable)
     float GetVerticalAngleSpeed();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     void GetRandomSpawnPointAtApproximateDistance_Async(const FVector& Origin, float Distance, bool& success, FVector& outPos, FLatentActionInfo LatentInfo);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     void GetRandomReachablePointAtApproximateDistance_Async(const FVector& Origin, float Distance, bool& success, FVector& outPos, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
@@ -316,6 +319,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     EDeepMovementState GetMovementState() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    float GetMaxAcceleration() const;
     
     UFUNCTION(BlueprintCallable)
     bool GetIsStrafing();
@@ -344,7 +350,7 @@ public:
     UFUNCTION(BlueprintCallable)
     FVector FindNearestPathfinderPointOverrideType(const FVector& Pos, DeepPathFinderType overrideType, float MaxDistance);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     void FindNearestPathfinderPoint_Async(const FVector& Pos, float MaxDistance, bool& success, FVector& outPos, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

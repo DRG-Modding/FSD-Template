@@ -1,57 +1,57 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UpgradeLoadout.h"
-#include "GameFramework/SaveGame.h"
+#include "ESonyControllerLightMode.h"
 #include "VanityMasteryResult.h"
-#include "WatchedTutorial.h"
-#include "ResourcesSave.h"
-#include "PromotionRewardsSave.h"
-#include "EFSDFaction.h"
-#include "EventRewardSave.h"
-#include "MilestoneSave.h"
+#include "GameFramework/SaveGame.h"
 #include "SchematicSave.h"
-#include "ConsoleOptionsInSaveGame.h"
-#include "DrinkSave.h"
-#include "ForgingSave.h"
-#include "UObject/NoExportTypes.h"
+#include "MilestoneSave.h"
+#include "ItemUINotifications.h"
 #include "MissionStatSave.h"
+#include "ItemNotificationInfo.h"
+#include "ESonyInputSettingsFloats.h"
+#include "SkinList.h"
+#include "SonyInputSettings.h"
+#include "WatchedTutorial.h"
+#include "UObject/NoExportTypes.h"
 #include "PerkClaimsSave.h"
 #include "CharacterPerksSave.h"
-#include "ESonyInputSettingsBools.h"
 #include "AchievementSave.h"
+#include "UnLockedMissionParameters.h"
 #include "VanityMasterySave.h"
 #include "FSDEventRewardsSave.h"
-#include "ESonyControllerLightMode.h"
-#include "SeasonSave.h"
-#include "UnLockedMissionParameters.h"
+#include "PromotionRewardsSave.h"
 #include "GameDLCSave.h"
+#include "SeasonSave.h"
+#include "DrinkSave.h"
+#include "EFSDFaction.h"
 #include "UObject/NoExportTypes.h"
 #include "CampaignSave.h"
 #include "DeepDiveSave.h"
-#include "CharacterSave.h"
-#include "ItemUpgradeSelection.h"
-#include "ESonyInputSettingsFloats.h"
 #include "ESonyControllerMotionMapping.h"
-#include "ItemNotificationInfo.h"
-#include "SkinList.h"
-#include "ItemUINotifications.h"
-#include "OptionsInSaveGame.h"
+#include "CharacterSave.h"
+#include "ESonyInputSettingsBools.h"
+#include "ForgingSave.h"
+#include "ItemUpgradeSelection.h"
+#include "UpgradeLoadout.h"
+#include "EventRewardSave.h"
+#include "ResourcesSave.h"
 #include "GDKWinOptionsInSaveGame.h"
-#include "SonyInputSettings.h"
+#include "ConsoleOptionsInSaveGame.h"
+#include "OptionsInSaveGame.h"
 #include "EItemCategory.h"
 #include "FSDSaveGame.generated.h"
 
 class UItemSkin;
-class APlayerCharacter;
 class UItemID;
+class APlayerCharacter;
 class UResourceData;
-class UFSDGameInstance;
-class UVanityItem;
-class UFSDSaveGame;
 class UPlayerCharacterID;
+class UFSDGameInstance;
 class UObject;
+class UVanityItem;
 class AActor;
+class UFSDSaveGame;
 
 UCLASS(Blueprintable)
 class FSD_API UFSDSaveGame : public USaveGame {
@@ -397,7 +397,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetSonyInputSettingLightMode(ESonyControllerLightMode NewValue);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void SetSonyInputSettingFloat(UObject* WorldContext, ESonyInputSettingsFloats Setting, float NewValue);
     
     UFUNCTION(BlueprintCallable)
@@ -484,7 +484,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void MarkFirstSchematicMessageSeen();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void LevelUpCharacter(UObject* WorldContext, UPlayerCharacterID* characterID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -636,7 +636,7 @@ public:
     UFUNCTION(BlueprintCallable)
     bool DeductPerkPoints(int32 Amount);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void CheckPromotionAchievementProgress(UObject* WorldContext, bool IsRetroactive);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -651,7 +651,7 @@ public:
     UFUNCTION(BlueprintCallable)
     int32 AddCredits(int32 Amount);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     int32 AddClassXP(UObject* WorldContext, UPlayerCharacterID* characterID, int32 XP);
     
 };

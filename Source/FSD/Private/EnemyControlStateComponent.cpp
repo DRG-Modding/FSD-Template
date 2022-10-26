@@ -1,13 +1,10 @@
 #include "EnemyControlStateComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UAnimMontage;
 class UAIPlayerControlComponent;
+class UAnimMontage;
 
 void UEnemyControlStateComponent::ServerExit_Implementation() {
-}
-bool UEnemyControlStateComponent::ServerExit_Validate() {
-    return true;
 }
 
 void UEnemyControlStateComponent::OnRep_StateData(const FControlEnemyState& oldState) {

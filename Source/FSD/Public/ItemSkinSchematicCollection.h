@@ -4,11 +4,11 @@
 #include "EItemSkinCollectionType.h"
 #include "ItemSkinSchematicCollection.generated.h"
 
-class USchematicPricingTier;
-class USchematic;
-class UItemSkin;
 class USchematicCategory;
+class UItemSkin;
+class USchematicPricingTier;
 class USchematicRarity;
+class USchematic;
 
 UCLASS(Blueprintable)
 class FSD_API UItemSkinSchematicCollection : public UDataAsset {
@@ -33,7 +33,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EItemSkinCollectionType LastGeneratedCollectionType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<USchematic*> Schematics;
     
 public:

@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "AnimatedItem.h"
 #include "Upgradable.h"
+#include "AnimatedItem.h"
 #include "GraplingGunState.h"
 #include "GrapplingHookGun.generated.h"
 
-class AGrapplingHookGun;
-class UAnimMontage;
 class UCoolDownItemAggregator;
+class UAnimMontage;
+class AGrapplingHookGun;
 
 UCLASS(Abstract, Blueprintable)
 class AGrapplingHookGun : public AAnimatedItem, public IUpgradable {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCoolDownItemAggregator* CoolDownAggregator;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

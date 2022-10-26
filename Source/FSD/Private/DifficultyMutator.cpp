@@ -8,10 +8,6 @@ UDifficultyMutator::UDifficultyMutator() {
     this->EnemyCountModifierMultiplier = 1.00f;
     this->WeakpointDamageMultiplier = 1.00f;
     this->HazardBonus = 0.00f;
-    this->FriendlyFireModifierMultiplier = 1.00f;
-    this->EnemyWaveIntervalModifier = 0.00f;
-    this->EnemyNormalWaveIntervalModifier = 0.00f;
-    this->EnemyNormalWaveDifficultyMultiplier = 1.00f;
     this->ProjectileSpeedModifier = 1.00f;
     this->AttackCooldownModifier = 1.00f;
     this->SpeedModifier = 1.00f;

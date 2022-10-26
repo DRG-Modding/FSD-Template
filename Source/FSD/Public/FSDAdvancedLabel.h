@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Blueprint/UserWidget.h"
-#include "Fonts/SlateFontInfo.h"
 #include "EFSDInputSource.h"
 #include "ActionIconMapping.h"
+#include "Fonts/SlateFontInfo.h"
+#include "UObject/NoExportTypes.h"
 #include "FSDAdvancedLabel.generated.h"
 
-class UTexture2D;
 class UTextBlock;
+class UTexture2D;
 class UImage;
 class UHorizontalBox;
 

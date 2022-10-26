@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Engine/DataAsset.h"
+#include "RandFloatInterval.h"
 #include "EliteEnemyEntry.h"
 #include "GameplayTagContainer.h"
 #include "RandRange.h"
-#include "RandFloatInterval.h"
 #include "EnemySettings.generated.h"
 
-class UEnemyDescriptor;
 class UEnemyID;
+class UEnemyDescriptor;
 class UDamageComponent;
 
 UCLASS(Blueprintable)

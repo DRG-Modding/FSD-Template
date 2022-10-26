@@ -10,6 +10,9 @@ class AFSDGameSession : public AGameSession {
 public:
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TArray<FUniqueNetIdRepl> KickedPlayers;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FUniqueNetIdRepl> BannedPlayers;
     
 public:
