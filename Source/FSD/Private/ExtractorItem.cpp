@@ -1,10 +1,10 @@
 #include "ExtractorItem.h"
 #include "Net/UnrealNetwork.h"
+#include "Components/PointLightComponent.h"
+#include "FSDAudioComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Components/BoxComponent.h"
 #include "Particles/ParticleSystemComponent.h"
-#include "FSDAudioComponent.h"
-#include "Components/PointLightComponent.h"
 
 class AResourceChunk;
 

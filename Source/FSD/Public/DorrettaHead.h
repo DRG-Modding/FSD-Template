@@ -3,8 +3,8 @@
 #include "CarriableItem.h"
 #include "DorrettaHead.generated.h"
 
-class UCarriableInstantUsable;
 class UCarriableComponent;
+class UCarriableInstantUsable;
 
 UCLASS(Blueprintable)
 class ADorrettaHead : public ACarriableItem {

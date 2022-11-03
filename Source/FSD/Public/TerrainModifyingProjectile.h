@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RevertToNormalDelegate.h"
 #include "Projectile.h"
+#include "RevertToNormalDelegate.h"
 #include "UObject/NoExportTypes.h"
 #include "TerrainModifyingProjectile.generated.h"
 

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PawnStatEntry.h"
 #include "Engine/NetSerialization.h"
+#include "PawnStatEntry.h"
 #include "PawnStatEntriesArray.generated.h"
 
 class UPawnStatsComponent;

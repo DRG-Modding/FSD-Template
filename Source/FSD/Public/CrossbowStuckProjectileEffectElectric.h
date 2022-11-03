@@ -4,8 +4,8 @@
 #include "CrossbowStuckProjectileEffect.h"
 #include "CrossbowStuckProjectileEffectElectric.generated.h"
 
-class AActor;
 class ACrossbowElectroBeam;
+class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCrossbowStuckProjectileEffectElectric : public UCrossbowStuckProjectileEffect {

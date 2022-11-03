@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "CharacterUseState.h"
 #include "Components/ActorComponent.h"
 #include "BeginUsingDelegateDelegate.h"
-#include "ECustomUsableType.h"
 #include "EndUsingDelegateDelegate.h"
 #include "DepositingEventDelegate.h"
-#include "CharacterUseState.h"
+#include "ECustomUsableType.h"
 #include "CharacterUseComponent.generated.h"
 
 class UUsableComponentBase;

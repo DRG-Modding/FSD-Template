@@ -5,11 +5,11 @@
 #include "DetPack.generated.h"
 
 class ADetPackItem;
-class USingleUsableComponent;
 class UProjectileMovementComponent;
-class APlayerCharacter;
-class UExplosionComponent;
 class USimpleHealthComponent;
+class UExplosionComponent;
+class APlayerCharacter;
+class USingleUsableComponent;
 class UHealthComponentBase;
 
 UCLASS(Blueprintable)

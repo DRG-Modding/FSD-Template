@@ -10,19 +10,19 @@
 #include "UObject/NoExportTypes.h"
 #include "ExtractorItem.generated.h"
 
-class USkeletalMeshComponent;
-class UBoxComponent;
-class AResourceChunk;
 class UFirstPersonParticleSystemComponent;
-class UPointLightComponent;
-class USoundCue;
+class UBoxComponent;
 class UFSDAudioComponent;
+class UPointLightComponent;
+class USkeletalMeshComponent;
 class UParticleSystemComponent;
+class AResourceChunk;
 class UAnimMontage;
 class UParticleSystem;
 class UForceFeedbackEffect;
 class UResourceData;
 class UDialogDataAsset;
+class USoundCue;
 
 UCLASS(Blueprintable)
 class FSD_API AExtractorItem : public AAnimatedItem, public IThrowable {

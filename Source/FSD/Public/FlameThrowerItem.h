@@ -8,19 +8,19 @@
 #include "UObject/NoExportTypes.h"
 #include "FlameThrowerItem.generated.h"
 
-class UProjectileLauncherBaseComponent;
-class UParticleSystem;
 class UParticleSystemComponent;
-class UDamageComponent;
-class UStickyFlameSpawner;
 class UMotionAudioController;
+class UDamageComponent;
 class UStatusEffect;
+class UStickyFlameSpawner;
+class UParticleSystem;
 class UItemUpgrade;
 class USoundCue;
-class UPrimitiveComponent;
+class UProjectileLauncherBaseComponent;
 class AActor;
 class UFSDPhysicalMaterial;
 class UHealthComponentBase;
+class UPrimitiveComponent;
 
 UCLASS(Abstract, Blueprintable)
 class AFlameThrowerItem : public AAmmoDrivenWeapon {

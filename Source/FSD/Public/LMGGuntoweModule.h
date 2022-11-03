@@ -5,10 +5,10 @@
 #include "LMGGuntoweModule.generated.h"
 
 class UAudioComponent;
-class UHitscanComponent;
-class UDamageComponent;
 class USceneComponent;
 class USoundCue;
+class UHitscanComponent;
+class UDamageComponent;
 class UParticleSystem;
 
 UCLASS(Blueprintable)

@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UpgradeValues.h"
-#include "StandardItemUpgrade.h"
 #include "EAssaultRifleUpgrade.h"
+#include "StandardItemUpgrade.h"
+#include "UpgradeValues.h"
 #include "AssaultRifleUpgrade.generated.h"
 
-class AItem;
 class AFSDPlayerState;
+class AItem;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UAssaultRifleUpgrade : public UStandardItemUpgrade {

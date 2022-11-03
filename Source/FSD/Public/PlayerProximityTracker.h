@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "ProximityTriggerItem.h"
+#include "Components/ActorComponent.h"
 #include "PlayerSphere.h"
-#include "UObject/NoExportTypes.h"
 #include "PlayerProximityDelegateDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "PlayerProximityTracker.generated.h"
 
 class UObject;

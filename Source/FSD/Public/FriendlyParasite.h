@@ -5,11 +5,11 @@
 #include "Engine/EngineTypes.h"
 #include "FriendlyParasite.generated.h"
 
-class UDamageComponent;
 class AFSDPawn;
 class USphereComponent;
-class UHealthComponentBase;
 class UPrimitiveComponent;
+class UHealthComponentBase;
+class UDamageComponent;
 class AActor;
 
 UCLASS(Blueprintable)

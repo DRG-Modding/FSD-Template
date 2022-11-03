@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "DecalData.h"
 #include "PhysicalMaterials/PhysicalMaterial.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "DecalData.h"
 #include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "FSDPhysicalMaterial.generated.h"
 
+class UFXSystemComponent;
+class UFXSystemAsset;
 class UMaterialInstance;
 class USoundCue;
-class UFXSystemAsset;
-class UReactiveTerrain;
+class UPrimitiveComponent;
 class UNiagaraSystem;
-class UFXSystemComponent;
+class UReactiveTerrain;
 class UObject;
 class UFSDPhysicalMaterial;
-class UPrimitiveComponent;
 
 UCLASS(Blueprintable, CollapseCategories)
 class UFSDPhysicalMaterial : public UPhysicalMaterial {
@@ -73,6 +73,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsWeakPoint;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool AllowFrozenBonus;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsSubhealthCollider;

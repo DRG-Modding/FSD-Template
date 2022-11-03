@@ -2,8 +2,8 @@
 
 class USoundClass;
 class APlayerController;
-class UObject;
 class UDifficultySetting;
+class UObject;
 class UFSDGameUserSettings;
 
 void UFSDGameUserSettings::UpdateVolumeSettings(USoundClass* CharacterVoices, USoundClass* MissionControl, USoundClass* Master, USoundClass* Music, USoundClass* SFX, USoundClass* UI, USoundClass* Voice) {

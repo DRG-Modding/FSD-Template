@@ -1,7 +1,7 @@
 #include "PromotionRewardsLibrary.h"
 
-class APlayerController;
 class UObject;
+class APlayerController;
 
 bool UPromotionRewardsLibrary::ClaimPromotionRewards(UObject* WorldContext, APlayerController* PlayerController, TArray<FClaimableRewardEntry>& OutRewards, bool& OutFirstPromotion) {
     return false;

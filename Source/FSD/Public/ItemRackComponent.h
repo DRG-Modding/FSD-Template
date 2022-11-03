@@ -4,10 +4,10 @@
 #include "ItemRackDelegateDelegate.h"
 #include "ItemRackComponent.generated.h"
 
-class UUsableComponent;
 class APlayerCharacter;
-class USceneComponent;
 class URackableItemComponent;
+class USceneComponent;
+class UUsableComponent;
 class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -7,10 +7,10 @@
 #include "PlagueCleanupItem.generated.h"
 
 class UCrosshairAggregator;
-class UInstantUsable;
-class UBoxComponent;
 class USphereComponent;
 class USoundCue;
+class UInstantUsable;
+class UBoxComponent;
 class UAnimMontage;
 class UKeepInsideWorld;
 class UAudioComponent;

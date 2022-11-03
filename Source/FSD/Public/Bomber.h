@@ -7,12 +7,12 @@
 #include "Bomber.generated.h"
 
 class AActor;
-class UPrimitiveComponent;
 class UAudioComponent;
-class UParticleSystem;
-class UParticleSystemComponent;
 class AProjectile;
+class UParticleSystemComponent;
+class UParticleSystem;
 class USoundBase;
+class UPrimitiveComponent;
 
 UCLASS(Blueprintable)
 class ABomber : public AAFlyingBug {

@@ -4,11 +4,11 @@
 #include "TextCounterEntry.h"
 #include "MultiTextCounterAction.generated.h"
 
-class UObject;
-class UTextBlock;
-class USoundCue;
 class UAudioComponent;
+class UTextBlock;
 class UMultiTextCounterAction;
+class UObject;
+class USoundCue;
 
 UCLASS(Blueprintable)
 class UMultiTextCounterAction : public UTickableActionBase {

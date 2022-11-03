@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "CoilgunAfflictionEntry.generated.h"
 
-class UStatusEffect;
 class UStatusEffectsComponent;
+class UStatusEffect;
 
 USTRUCT(BlueprintType)
 struct FCoilgunAfflictionEntry {

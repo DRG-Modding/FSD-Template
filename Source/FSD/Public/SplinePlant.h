@@ -6,11 +6,11 @@
 #include "UObject/NoExportTypes.h"
 #include "SplinePlant.generated.h"
 
-class USceneComponent;
+class USoundCue;
 class USplineComponent;
 class UStaticMesh;
 class UAudioComponent;
-class USoundCue;
+class USceneComponent;
 class USplineMeshComponent;
 
 UCLASS(Blueprintable)

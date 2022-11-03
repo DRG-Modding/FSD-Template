@@ -8,8 +8,8 @@
 #include "DrillOperationData.h"
 #include "MeltOperationData.h"
 #include "SplineSegmentCarveOperationData.h"
-#include "TerrainSpawnDebrisOperationData.h"
 #include "CSGBuildOperationData.h"
+#include "TerrainSpawnDebrisOperationData.h"
 #include "TerrainLateJoinData.generated.h"
 
 USTRUCT(BlueprintType)

@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DamageData.h"
 #include "TemperatureComponent.h"
+#include "DamageData.h"
 #include "EnemyTemperatureComponent.generated.h"
 
-class UHealthComponent;
-class UEnemyDetonationSetting;
 class UPawnStatsComponent;
+class UEnemyDetonationSetting;
 class UDamageTag;
+class UHealthComponent;
 class UStatusEffectsComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

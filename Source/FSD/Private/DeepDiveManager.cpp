@@ -2,8 +2,8 @@
 #include "FSDEventsHandler.h"
 
 class UDeepDive;
-class UGeneratedMission;
 class UBiome;
+class UGeneratedMission;
 
 void UDeepDiveManager::StartDeepDive(UDeepDive* DeepDive) {
 }

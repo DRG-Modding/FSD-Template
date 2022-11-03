@@ -9,10 +9,10 @@
 #include "FakePhysGrabberComponent.h"
 
 class AActor;
-class APawn;
-class UDamageTag;
 class UPrimitiveComponent;
+class APawn;
 class UHealthComponent;
+class UDamageTag;
 class UHealthComponentBase;
 
 void ASharkEnemy::SetVulnerable() {

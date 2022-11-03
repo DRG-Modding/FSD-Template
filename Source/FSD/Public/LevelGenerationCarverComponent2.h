@@ -5,8 +5,8 @@
 #include "BakeSettings.h"
 #include "LevelGenerationCarverComponent2.generated.h"
 
-class UCSGPreviewComponent;
 class ACSGBuilder;
+class UCSGPreviewComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ULevelGenerationCarverComponent2 : public UPrimitiveComponent {

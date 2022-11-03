@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ActiveStatusEffectBank.h"
 #include "Components/ActorComponent.h"
+#include "ActiveStatusEffectBank.h"
 #include "StatusEffectsComponent.generated.h"
 
-class UObject;
 class UHealthComponentBase;
+class UObject;
+class AActor;
 class UStatusEffectExclusiveKey;
 class UStatusEffect;
-class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UStatusEffectsComponent : public UActorComponent {

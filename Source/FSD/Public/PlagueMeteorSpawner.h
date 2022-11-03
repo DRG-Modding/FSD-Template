@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DebrisLocationFinder.h"
 #include "RandRange.h"
+#include "DebrisLocationFinder.h"
 #include "PlagueMeteorSpawner.generated.h"
 
 class APlagueMeteor;

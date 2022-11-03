@@ -3,10 +3,10 @@
 #include "Components/ActorComponent.h"
 #include "InfectionMasterComponent.generated.h"
 
-class UStaticMeshComponent;
 class UHealthComponent;
-class UStaticMesh;
 class UMaterialInterface;
+class UStaticMesh;
+class UStaticMeshComponent;
 class UHealthComponentBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

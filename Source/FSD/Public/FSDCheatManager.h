@@ -5,12 +5,12 @@
 #include "CheatEventDelegate.h"
 #include "FSDCheatManager.generated.h"
 
-class AFSDAIController;
-class AActor;
-class UBaseCritterDescriptor;
 class UEnemyDescriptor;
 class UPlayerCharacterID;
+class AActor;
+class UBaseCritterDescriptor;
 class APawn;
+class AFSDAIController;
 class UObject;
 class APlayerCharacter;
 class UResourceData;

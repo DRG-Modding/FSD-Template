@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
-#include "Engine/EngineTypes.h"
 #include "EffectTriggeredDelegateDelegate.h"
+#include "Engine/EngineTypes.h"
 #include "StatusEffectTriggerComponent.generated.h"
 
-class UPrimitiveComponent;
 class UStatusEffect;
+class UPrimitiveComponent;
 class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -9,9 +9,9 @@
 
 class UMissionWarning;
 class UBiome;
-class UMutator;
 class UMissionTemplate;
 class UObjective;
+class UMutator;
 class UMissionMutator;
 class UMissionComplexity;
 class UMissionDuration;

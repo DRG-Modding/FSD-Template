@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Fonts/SlateFontInfo.h"
 #include "Blueprint/UserWidget.h"
+#include "UObject/NoExportTypes.h"
 #include "EFSDInputSource.h"
 #include "ActionIconMapping.h"
-#include "Fonts/SlateFontInfo.h"
-#include "UObject/NoExportTypes.h"
 #include "FSDAdvancedLabel.generated.h"
 
 class UTextBlock;

@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "WidgetToRenderTargetComponent.generated.h"
 
-class UUserWidget;
 class ULocalPlayer;
+class UUserWidget;
 class UMaterialInterface;
 class UTextureRenderTarget2D;
 class UMaterialInstanceDynamic;

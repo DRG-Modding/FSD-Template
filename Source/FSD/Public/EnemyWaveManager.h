@@ -6,11 +6,11 @@
 #include "RandRange.h"
 #include "EnemyWaveManager.generated.h"
 
-class UEnemyWaveController;
 class UObject;
+class UEnemyWaveController;
+class APawn;
 class UEnemySpawnManager;
 class AFSDGameMode;
-class APawn;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UEnemyWaveManager : public UActorComponent {

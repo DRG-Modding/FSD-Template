@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EPickaxePartLocation.h"
 #include "SavablePrimaryDataAsset.h"
+#include "EPickaxePartLocation.h"
 #include "PickaxePart.generated.h"
 
-class UItemAquisitionBase;
 class UPickaxePartItem;
+class UItemAquisitionBase;
 
 UCLASS(Blueprintable)
 class FSD_API UPickaxePart : public USavablePrimaryDataAsset {

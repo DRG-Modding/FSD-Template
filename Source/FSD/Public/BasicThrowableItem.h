@@ -6,13 +6,13 @@
 #include "Engine/EngineTypes.h"
 #include "BasicThrowableItem.generated.h"
 
-class UInstantUsable;
-class UBoxComponent;
-class UCarriableComponent;
-class USphereComponent;
-class UStaticMeshComponent;
-class UFirstPersonStaticMeshComponent;
 class USoundCue;
+class UInstantUsable;
+class UCarriableComponent;
+class UBoxComponent;
+class UStaticMeshComponent;
+class USphereComponent;
+class UFirstPersonStaticMeshComponent;
 class APlayerCharacter;
 class UPrimitiveComponent;
 class AActor;

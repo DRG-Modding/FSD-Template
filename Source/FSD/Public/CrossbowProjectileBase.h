@@ -9,20 +9,20 @@
 #include "EInputKeys.h"
 #include "CrossbowProjectileBase.generated.h"
 
-class UCrossbowStuckProjectileEffectBanshee;
+class UCrossbowProjectileRicochet;
 class ACrossbowProjectileStuck;
 class UCrossbowProjectileRecallable;
 class UCrossbowProjectileMagnetic;
-class UCrossbowProjectileRicochet;
+class UCrossbowStuckProjectileEffectBanshee;
 class UTexture2D;
-class UStaticMesh;
 class UStatusEffect;
 class USoundCue;
 class USphereComponent;
 class UDamageComponent;
-class USceneComponent;
 class UTerrainDetectComponent;
+class UStaticMesh;
 class APlayerCharacter;
+class USceneComponent;
 
 UCLASS(Blueprintable)
 class ACrossbowProjectileBase : public AProjectile {

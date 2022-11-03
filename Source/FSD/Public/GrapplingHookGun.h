@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Upgradable.h"
 #include "AnimatedItem.h"
 #include "GraplingGunState.h"
+#include "Upgradable.h"
 #include "GrapplingHookGun.generated.h"
 
+class AGrapplingHookGun;
 class UCoolDownItemAggregator;
 class UAnimMontage;
-class AGrapplingHookGun;
 
 UCLASS(Abstract, Blueprintable)
 class AGrapplingHookGun : public AAnimatedItem, public IUpgradable {

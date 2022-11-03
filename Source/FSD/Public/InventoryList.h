@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ItemFilterDelegateDelegate.h"
 #include "Engine/DataAsset.h"
 #include "EItemCategory.h"
+#include "ItemFilterDelegateDelegate.h"
 #include "InventoryList.generated.h"
 
-class AActor;
 class UItemID;
 class UTexture2D;
 class UMaterialInterface;
+class AActor;
 class UObject;
 
 UCLASS(Blueprintable)

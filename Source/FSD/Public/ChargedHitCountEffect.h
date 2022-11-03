@@ -4,8 +4,8 @@
 #include "ChargedHitCountEffect.generated.h"
 
 class UDamageClass;
-class USoundCue;
 class UParticleSystem;
+class USoundCue;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UChargedHitCountEffect : public UWeaponHitCountEffect {

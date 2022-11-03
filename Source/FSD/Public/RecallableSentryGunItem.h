@@ -7,9 +7,9 @@
 class UItemPlacerAggregator;
 class ARecallableSentryGun;
 class ARecallableSentryGunItem;
-class UItemUpgrade;
 class UCapacityHoldingItemAggregator;
 class AItem;
+class UItemUpgrade;
 
 UCLASS(Blueprintable)
 class ARecallableSentryGunItem : public ARecallableItem {

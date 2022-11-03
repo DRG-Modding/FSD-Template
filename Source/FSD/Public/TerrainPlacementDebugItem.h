@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DebrisCapsule.h"
 #include "TerrainPlacementBox.h"
 #include "EDebrisColliderType.h"
+#include "DebrisCapsule.h"
 #include "UObject/NoExportTypes.h"
 #include "TerrainPlacementDebugItem.generated.h"
 

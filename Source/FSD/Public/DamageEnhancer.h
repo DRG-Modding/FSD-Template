@@ -2,18 +2,18 @@
 #include "CoreMinimal.h"
 #include "Grenade.h"
 #include "Targetable.h"
-#include "EnhancedTrace.h"
 #include "UObject/NoExportTypes.h"
+#include "EnhancedTrace.h"
 #include "Engine/EngineTypes.h"
 #include "DamageEnhancer.generated.h"
 
-class USphereComponent;
 class UHitscanComponent;
 class UBoxComponent;
-class UStaticMeshComponent;
 class UHealthComponent;
 class UDamageComponent;
+class USphereComponent;
 class UReflectionHitscanComponent;
+class UStaticMeshComponent;
 class UCapsuleHitscanComponent;
 class UHitscanBaseComponent;
 class UPrimitiveComponent;

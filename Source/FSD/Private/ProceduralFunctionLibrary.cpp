@@ -2,10 +2,10 @@
 #include "Templates/SubclassOf.h"
 
 class UObject;
-class UFXSystemAsset;
 class UObjective;
-class UBiome;
+class UFXSystemAsset;
 class AProceduralSetup;
+class UBiome;
 class UDebrisPositioning;
 
 void UProceduralFunctionLibrary::SpawnTerrainImpact(UObject* WorldContextObject, UFXSystemAsset* particle, const FVector& Location, FRotator Rotation) {

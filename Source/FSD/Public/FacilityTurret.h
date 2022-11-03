@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EnemyPawn.h"
-#include "Curves/CurveFloat.h"
 #include "UObject/NoExportTypes.h"
+#include "Curves/CurveFloat.h"
 #include "FacilityTurret.generated.h"
 
 class USceneComponent;
 class USkeletalMeshComponent;
-class USoundCue;
 class AActor;
+class USoundCue;
 
 UCLASS(Blueprintable)
 class FSD_API AFacilityTurret : public AEnemyPawn {

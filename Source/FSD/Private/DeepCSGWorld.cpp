@@ -3,16 +3,16 @@
 #include "AsyncPathRequests.h"
 
 class UPrimitiveComponent;
-class UDebrisMesh;
 class UDebrisBase;
+class AActor;
+class UDebrisMesh;
 class UTerrainMaterial;
 class ADebrisDataActor;
-class AActor;
+class ACSGBuilder;
 class ADeepCSGWorld;
-class UStaticMesh;
 class USTLMeshCarver;
 class UStaticMeshCarver;
-class ACSGBuilder;
+class UStaticMesh;
 
 void ADeepCSGWorld::UnRegisterScannerComponent(UPrimitiveComponent* Component) {
 }

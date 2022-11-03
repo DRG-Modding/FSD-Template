@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "BoomerangMover.h"
 #include "Grenade.h"
 #include "UObject/NoExportTypes.h"
 #include "EBoomerangState.h"
 #include "BoomerangSyncer.h"
+#include "BoomerangMover.h"
 #include "BouncyBoomerang.generated.h"
 
 class USceneComponent;
 class UNiagaraSystem;
 class UDamageComponent;
 class UStatusEffect;
-class USoundCue;
 class UParticleSystem;
+class USoundCue;
 class AFSDPawn;
 
 UCLASS(Blueprintable)
@@ -85,7 +85,7 @@ protected:
     FVector CatchLocationOffset;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<UStatusEffect> SnareSTE;
+    TArray<TSubclassOf<UStatusEffect>> OnDamageStatusEffects;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UNiagaraSystem* EnemyHitNiagaraSystem;

@@ -4,10 +4,10 @@
 #include "EInputKeys.h"
 #include "WalkingStateComponent.generated.h"
 
-class APlayerCharacter;
+class UTrackBuilderMovement;
 class USoundBase;
 class UAudioComponent;
-class UTrackBuilderMovement;
+class APlayerCharacter;
 
 UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UWalkingStateComponent : public UCharacterStateComponent {

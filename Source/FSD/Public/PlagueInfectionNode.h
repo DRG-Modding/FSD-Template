@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "FirstPlayerNearCenterDelegate.h"
 #include "GameFramework/Actor.h"
-#include "DelegateDelegate.h"
 #include "PlagueCenterKilledDelegate.h"
+#include "FirstPlayerNearCenterDelegate.h"
+#include "DelegateDelegate.h"
 #include "PlagueInfectionNode.generated.h"
 
-class USimpleHealthComponent;
-class UTerrainMaterial;
-class UDebrisPositioning;
 class UCurveFloat;
+class UTerrainMaterial;
+class USimpleHealthComponent;
+class UDebrisPositioning;
 class UHealthComponentBase;
 
 UCLASS(Abstract, Blueprintable)

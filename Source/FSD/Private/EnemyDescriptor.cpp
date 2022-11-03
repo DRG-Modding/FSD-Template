@@ -1,9 +1,9 @@
 #include "EnemyDescriptor.h"
 #include "Templates/SubclassOf.h"
 
-class UEnemyDescriptor;
 class UBiome;
 class APawn;
+class UEnemyDescriptor;
 
 TSubclassOf<APawn> UEnemyDescriptor::GetEnemyClass(UBiome* Biome, bool IsElite) const {
     return NULL;

@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FSDPawn.h"
 #include "EventParticipant.h"
+#include "FSDPawn.h"
 #include "UObject/NoExportTypes.h"
 #include "EGuntowerModuleState.h"
 #include "TowerModuleBase.generated.h"
 
+class UStaticMeshComponent;
+class USkeletalMesh;
+class UEnemyHealthComponent;
 class USceneComponent;
 class USkeletalMeshComponent;
-class UStaticMeshComponent;
-class UEnemyHealthComponent;
-class USkeletalMesh;
 class USoundCue;
 class UParticleSystem;
 

@@ -4,9 +4,9 @@
 #include "ResourceData.h"
 #include "CollectableResourceData.generated.h"
 
+class UDebrisBase;
 class UDebrisPositioning;
 class UCollectableResourceCreator;
-class UDebrisBase;
 class AActor;
 
 UCLASS(Blueprintable)

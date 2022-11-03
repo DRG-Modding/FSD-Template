@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FadeData.h"
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "FadingDoneDelegate.h"
+#include "FadeData.h"
 #include "FadeScreenSubSystem.generated.h"
 
 class UObject;

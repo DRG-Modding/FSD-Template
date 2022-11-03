@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PendingRewardsStats.h"
-#include "Subsystems/GameInstanceSubsystem.h"
 #include "PendingRewards.h"
+#include "Subsystems/GameInstanceSubsystem.h"
 #include "ClaimableRewardEntry.h"
+#include "PendingRewardsStats.h"
 #include "RewardsSubSystem.generated.h"
 
-class AFSDPlayerController;
 class UObject;
+class AFSDPlayerController;
 
 UCLASS(Blueprintable)
 class URewardsSubSystem : public UGameInstanceSubsystem {

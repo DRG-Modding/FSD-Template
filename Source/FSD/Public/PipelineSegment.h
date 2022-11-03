@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/EngineTypes.h"
 #include "TrackBuilderSegment.h"
-#include "UObject/NoExportTypes.h"
 #include "EPipelineBuildState.h"
+#include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "EInputKeys.h"
 #include "PipelineSegment.generated.h"
 
-class APipelineSegment;
-class USimpleHealthComponent;
 class UStaticMesh;
-class UMaterialInterface;
-class USingleUsableComponent;
-class APipelineStart;
-class UDroneUseComponent;
-class APlayerCharacter;
-class USplineComponent;
 class USplineMeshComponent;
+class APipelineSegment;
+class USingleUsableComponent;
+class UTrackBuilderUsable;
+class UMaterialInterface;
+class UPathfinderSplineSegmentCollisionComponent;
+class UDroneUseComponent;
+class USplineComponent;
+class USimpleHealthComponent;
 class USkeletalMeshComponent;
 class UStaticMeshComponent;
-class UPathfinderSplineSegmentCollisionComponent;
+class APipelineStart;
+class APlayerCharacter;
 class UHealthComponentBase;
-class UTrackBuilderUsable;
 
 UCLASS(Abstract, Blueprintable)
 class APipelineSegment : public ATrackBuilderSegment {

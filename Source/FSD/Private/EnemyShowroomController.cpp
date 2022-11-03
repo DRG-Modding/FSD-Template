@@ -2,8 +2,8 @@
 
 class UEnemyShowroomController;
 class UAnimSequenceBase;
-class AEnemyShowroomItem;
 class UObject;
+class AEnemyShowroomItem;
 
 
 void UEnemyShowroomController::PlayAttack(UAnimSequenceBase* Animation) {

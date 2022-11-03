@@ -4,8 +4,8 @@
 #include "Projectile.h"
 #include "FlameWallProjectile.generated.h"
 
-class AFlameWallSegment;
 class AActor;
+class AFlameWallSegment;
 
 UCLASS(Abstract, Blueprintable)
 class AFlameWallProjectile : public AProjectile {

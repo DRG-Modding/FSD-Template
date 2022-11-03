@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "Objective.h"
+#include "UObject/NoExportTypes.h"
 #include "HackableBuildingObjective.generated.h"
 
-class ARessuplyPod;
-class AProceduralSetup;
 class UDebrisPositioning;
+class AProceduralSetup;
+class ARessuplyPod;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UHackableBuildingObjective : public UObjective {

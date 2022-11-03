@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 
 class ULightComponent;
-class UCurveFloat;
 class AActor;
+class UCurveFloat;
 class AFlare;
 
 void AFlare::StartLightFunction(ULightComponent* mainLight, TArray<ULightComponent*> spotLights, UCurveFloat* flutterCurve, UCurveFloat* fadeInCurve) {

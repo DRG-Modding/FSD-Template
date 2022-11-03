@@ -5,9 +5,9 @@
 #include "UObject/NoExportTypes.h"
 #include "MultiprojectileSpawner.generated.h"
 
-class UDataAsset;
-class AActor;
 class UMultiprojectileSpawner;
+class AActor;
+class UDataAsset;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UMultiprojectileSpawner : public UActorComponent {

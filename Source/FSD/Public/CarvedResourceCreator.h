@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "IRandRange.h"
 #include "ResourceCreator.h"
 #include "CarveOptionsCellSize.h"
+#include "IRandRange.h"
 #include "ECarveFilterType.h"
 #include "UDebrisCarveMesh.h"
 #include "ResourceDebris.h"
 #include "CarvedResourceCreator.generated.h"
 
-class AActor;
 class UCarvedResourceData;
 class UDebrisPositioning;
 class UTerrainMaterial;
+class AActor;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UCarvedResourceCreator : public UResourceCreator {

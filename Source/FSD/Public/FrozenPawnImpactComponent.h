@@ -7,11 +7,11 @@
 #include "FrozenPawnImpactComponent.generated.h"
 
 class UPhysicalMaterial;
-class UParticleSystem;
+class AActor;
 class USoundCue;
 class UPhysicsAsset;
+class UParticleSystem;
 class UPrimitiveComponent;
-class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFrozenPawnImpactComponent : public UActorComponent {

@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "LocalVoiceStatusDelegate.h"
+#include "EDisconnectReason.h"
 #include "PlatformComponent.h"
 #include "EMinersManualSinglePage.h"
 #include "EHUDVisibilityReason.h"
 #include "EMinersManualSection.h"
 #include "UObject/NoExportTypes.h"
-#include "EDisconnectReason.h"
 #include "FSDPlayerControllerBase.generated.h"
 
 class UMaterialParameterCollection;
@@ -70,6 +70,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OpenStandaloneMinersManual(EMinersManualSection Section, const FGuid& ID);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsPlayerBlocked(const FString& UserId);
     
     UFUNCTION(BlueprintCallable)
     bool IsHUDVisibleFlagSet(EHUDVisibilityReason reason);

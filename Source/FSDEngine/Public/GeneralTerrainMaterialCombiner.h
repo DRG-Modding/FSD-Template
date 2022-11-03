@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "GeneralMatPatterns.h"
 #include "GeneralMatPropertiesEmpty.h"
 #include "GeneralMatProperties.h"
-#include "GeneralMatPatterns.h"
 #include "GeneralTerrainMaterialCombiner.generated.h"
 
 USTRUCT(BlueprintType)

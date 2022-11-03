@@ -5,10 +5,10 @@
 #include "AnimatedItem.h"
 #include "RessuplyPodItem.generated.h"
 
+class UObject;
 class AActor;
 class UItemPlacerAggregator;
 class ARessuplyPod;
-class UObject;
 
 UCLASS(Blueprintable)
 class ARessuplyPodItem : public AAnimatedItem {

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "Rotator_NoQuantize.h"
+#include "UObject/NoExportTypes.h"
 #include "RoomItem.generated.h"
 
 class AActor;

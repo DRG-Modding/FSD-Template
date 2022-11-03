@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
+#include "UObject/NoExportTypes.h"
 #include "StartTimelineEventDelegate.h"
 #include "COnStateChangedDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "ElevatorPlant.generated.h"
 
 class USoundCue;

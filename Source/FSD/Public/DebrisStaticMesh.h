@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EDebrisMeshShadows.h"
 #include "EDebrisMeshCollisionProfile.h"
-#include "ESpecialDebrisType.h"
 #include "DecalData.h"
+#include "ESpecialDebrisType.h"
+#include "EDebrisMeshShadows.h"
 #include "DebrisStaticMesh.generated.h"
 
-class UMaterialInterface;
 class UStaticMesh;
-class UFXSystemAsset;
+class UMaterialInterface;
 class USoundCue;
+class UFXSystemAsset;
 
 USTRUCT(BlueprintType)
 struct FDebrisStaticMesh {

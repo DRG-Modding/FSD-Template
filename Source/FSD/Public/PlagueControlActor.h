@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "TerrainDetectInterface.h"
 #include "GameFramework/Actor.h"
+#include "TerrainDetectInterface.h"
 #include "PlacementObstruction.h"
 #include "PlagueControlActor.generated.h"
 
-class ACleanupPodItem;
+class UTerrainMaterial;
 class UNiagaraComponent;
 class UPlagueUsable;
-class UTerrainMaterial;
+class ACleanupPodItem;
 class APlagueInfectionNode;
 class APlayerCharacter;
 
@@ -50,6 +50,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DebrisLightDistanceFromGround;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float RemoveDebrisLightUpdateRate;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool DebugDrawDebrisLight;

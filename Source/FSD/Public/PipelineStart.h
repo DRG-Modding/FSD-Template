@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EPipelineBuildState.h"
 #include "GameFramework/Actor.h"
+#include "EPipelineBuildState.h"
 #include "PipelineStart.generated.h"
 
-class APipelineFinish;
-class APipelineStart;
-class UTrackBuilderUsable;
 class APipelineSegment;
 class AFSDRefinery;
+class APipelineStart;
+class UTrackBuilderUsable;
+class APipelineFinish;
 class ATrackBuilderSegment;
 
 UCLASS(Abstract, Blueprintable)

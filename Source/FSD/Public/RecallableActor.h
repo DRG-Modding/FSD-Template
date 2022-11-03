@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "DeepPathfinderCharacter.h"
 #include "UObject/NoExportTypes.h"
-#include "ReturnedSignatureDelegate.h"
 #include "Upgradable.h"
 #include "ERecallableActorState.h"
 #include "UObject/NoExportTypes.h"
+#include "ReturnedSignatureDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "RecallableActor.generated.h"
 
-class AActor;
 class ARecallableActor;
+class AActor;
 
 UCLASS(Abstract, Blueprintable)
 class ARecallableActor : public ADeepPathfinderCharacter, public IUpgradable {

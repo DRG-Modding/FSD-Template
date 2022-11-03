@@ -2,23 +2,23 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "TreasureContainer.h"
-#include "UObject/NoExportTypes.h"
 #include "EInputKeys.h"
+#include "UObject/NoExportTypes.h"
 #include "TreasureBox.generated.h"
 
-class URepairableComponent;
-class URepairableUsable;
-class UStaticMeshComponent;
-class USingleUsableComponent;
-class USkeletalMeshComponent;
 class UTerrainPlacementComponent;
+class URepairableComponent;
 class AActor;
-class APlayerCharacter;
+class URepairableUsable;
+class USingleUsableComponent;
+class UStaticMeshComponent;
+class USkeletalMeshComponent;
 class UAnimSequenceBase;
 class UTreasureRewarder;
 class AProceduralSetup;
 class UDebrisPositioning;
 class UCurveFloat;
+class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class FSD_API ATreasureBox : public ATreasureContainer {

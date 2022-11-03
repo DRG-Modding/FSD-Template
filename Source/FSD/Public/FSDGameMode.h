@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "GameFramework/GameMode.h"
 #include "MatchStartedSignatureDelegate.h"
+#include "GameFramework/GameMode.h"
 #include "AllReadySignatureDelegate.h"
 #include "PlayerLoggedInDelegate.h"
 #include "CallDonkeyDelegate.h"
@@ -10,26 +10,26 @@
 #include "EPauseReason.h"
 #include "FSDGameMode.generated.h"
 
-class UObjectivesManager;
-class APlayerCharacter;
-class UPheromoneSpawnerComponent;
-class UCritterManager;
+class UDifficultyManager;
+class AFSDPlayerController;
 class UEnemySpawnManager;
-class UFormationsManagerComponent;
+class UPheromoneSpawnerComponent;
+class UObjectivesManager;
 class UKeepInsideWorld;
 class UMissionManager;
 class UEncounterManager;
-class UEnemyWaveManager;
-class AFSDPlayerController;
-class APlayerController;
+class UCritterManager;
+class UFormationsManagerComponent;
 class AMiningPod;
 class AMolly;
 class ABosco;
 class UWidget;
 class UEnemyDescriptor;
+class UEnemyWaveManager;
 class AActor;
 class AFSDGameMode;
-class UDifficultyManager;
+class APlayerController;
+class APlayerCharacter;
 
 UCLASS(Blueprintable, NonTransient)
 class FSD_API AFSDGameMode : public AGameMode {

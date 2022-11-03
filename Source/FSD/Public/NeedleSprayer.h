@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "WeaponFireOwner.h"
+#include "UObject/NoExportTypes.h"
+#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "NeedleSprayer.generated.h"
 
-class UFSDAudioComponent;
-class UNiagaraComponent;
-class USceneComponent;
-class USkeletalMeshComponent;
 class UHitscanComponent;
+class USceneComponent;
+class UFSDAudioComponent;
+class USkeletalMeshComponent;
 class UPointLightComponent;
+class UNiagaraComponent;
 class UAnimMontage;
 class APlayerCharacter;
 

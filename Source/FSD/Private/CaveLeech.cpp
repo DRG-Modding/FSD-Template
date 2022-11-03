@@ -4,8 +4,8 @@
 #include "GrabberComponent.h"
 #include "Components/SceneComponent.h"
 
-class AActor;
 class UHealthComponentBase;
+class AActor;
 
 void ACaveLeech::OnRep_State() {
 }

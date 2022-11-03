@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "GuntowerModule.h"
-#include "WeaponFireOwner.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "WeaponFireOwner.h"
 #include "UObject/NoExportTypes.h"
 #include "HostileGuntowerModule.generated.h"
 
-class UParticleSystemComponent;
-class UHealthComponentBase;
 class USkeletalMeshComponent;
+class UParticleSystemComponent;
 class UEnemyComponent;
 class APlayerCharacter;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class AHostileGuntowerModule : public AGuntowerModule, public IWeaponFireOwner {

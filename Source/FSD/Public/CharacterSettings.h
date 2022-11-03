@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
+#include "UObject/NoExportTypes.h"
 #include "CharacterSettings.generated.h"
 
-class UUseAnimationSetting;
 class APlayerCharacter;
-class UInventoryList;
 class UPlayerCharacterID;
+class UInventoryList;
 class USkeletalMesh;
 class ACarriableItem;
+class UUseAnimationSetting;
 class UCampaignManager;
 class UCharacterVanityItems;
 class UDialogDataAsset;

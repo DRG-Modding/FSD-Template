@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ObjectiveUpdatedSignatureDelegate.h"
 #include "Components/ActorComponent.h"
+#include "ObjectiveUpdatedSignatureDelegate.h"
+#include "CreditsReward.h"
 #include "MissionShouts.h"
 #include "ObjectiveMissionIcon.h"
-#include "CreditsReward.h"
 #include "Objective.generated.h"
 
-class UObjectiveWidget;
-class UOptionalObjectiveWidget;
 class UMissionStat;
+class UObjectiveWidget;
+class UTexture2D;
+class UOptionalObjectiveWidget;
 class UBiome;
 class UResourceData;
-class UTexture2D;
 class UObjective;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -6,10 +6,10 @@
 #include "PickaxeSettings.generated.h"
 
 class UPlayerCharacterID;
+class UItemID;
 class APickaxePreviewActor;
 class UAnimMontage;
 class UPickaxePart;
-class UItemID;
 
 UCLASS(Blueprintable)
 class UPickaxeSettings : public UDataAsset {

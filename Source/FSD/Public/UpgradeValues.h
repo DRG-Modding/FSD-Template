@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EItemPreviewStatus.h"
 #include "EUpgradeCalucationType.h"
+#include "EItemPreviewStatus.h"
 #include "UpgradeValues.generated.h"
 
 USTRUCT(BlueprintType)

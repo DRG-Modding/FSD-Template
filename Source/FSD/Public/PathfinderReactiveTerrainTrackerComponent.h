@@ -4,8 +4,8 @@
 #include "RandRange.h"
 #include "PathfinderReactiveTerrainTrackerComponent.generated.h"
 
-class UFSDPhysicalMaterial;
 class UStatusEffectsComponent;
+class UFSDPhysicalMaterial;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPathfinderReactiveTerrainTrackerComponent : public UReactiveTerrainTrackerComponent {

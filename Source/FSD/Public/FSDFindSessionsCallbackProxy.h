@@ -6,9 +6,9 @@
 #include "FSDFindSessionsCallbackProxy.generated.h"
 
 class UFSDFindSessionsCallbackProxy;
+class UObject;
 class UFSDFindSteamSessions;
 class APlayerController;
-class UObject;
 
 UCLASS(Blueprintable, MinimalAPI)
 class UFSDFindSessionsCallbackProxy : public UOnlineBlueprintCallProxyBase {

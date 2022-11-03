@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EEnemyHealthScaling.h"
 #include "EliteEnemyBan.h"
+#include "EEnemyHealthScaling.h"
 #include "EliteEnemyEntry.generated.h"
 
 class UStatusEffect;

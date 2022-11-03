@@ -3,8 +3,8 @@
 #include "InstantUsable.h"
 #include "BPInstantUsable.generated.h"
 
-class USceneComponent;
 class APlayerCharacter;
+class USceneComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UBPInstantUsable : public UInstantUsable {

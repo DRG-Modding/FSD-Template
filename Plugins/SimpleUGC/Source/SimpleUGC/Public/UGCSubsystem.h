@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Subsystems/EngineSubsystem.h"
-#include "EUGCPackageError.h"
-#include "Engine/LatentActionManager.h"
 #include "EModioRequestType.h"
+#include "EUGCPackageError.h"
 #include "HasHiddenModsData.h"
+#include "Engine/LatentActionManager.h"
 #include "UGCSubsystem.generated.h"
 
 class UUGCRegistry;
@@ -24,6 +24,7 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FUGCModManagementStateChanged, bool, Enabled);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FUGCLocalUserModsInstalled);
     DECLARE_DYNAMIC_DELEGATE(FUGCHiddenMods);
+    DECLARE_DYNAMIC_MULTICAST_DELEGATE(FUGCEscapeMenuOpened);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FUGCAuthenticatedModioUser, bool, Authenticated);
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -80,6 +81,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsLocalUserModsInstalled;
     
+    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FUGCEscapeMenuOpened OnEscapeMenuOpened;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FString> CrashingDisabledMods;
     
@@ -109,6 +113,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void SetModsAsRecentlyInstalled(TArray<FString> RecentMods);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetModidngSettingsMenuEnabled(bool bEnabled);
     
     UFUNCTION(BlueprintCallable)
     void SetCheckGameVersion(bool ShouldCheck);
@@ -157,6 +164,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<FString> GetNamesOfModsPendingInstall();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool GetModdingSettingsMenuEnabled();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetCheckGameVersion();

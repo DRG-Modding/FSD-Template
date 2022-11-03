@@ -4,9 +4,9 @@
 #include "ScaledMeshAfflictionTypeItem.h"
 #include "AfflictionSettings.generated.h"
 
-class UParticleSystem;
 class USoundCue;
 class UPawnAffliction;
+class UFXSystemAsset;
 
 UCLASS(Blueprintable)
 class UAfflictionSettings : public UDataAsset {
@@ -46,13 +46,13 @@ public:
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
-    TArray<UParticleSystem*> BurningParticles;
+    TArray<UFXSystemAsset*> BurningParticles;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
-    TArray<UParticleSystem*> EletrocutedParticles;
+    TArray<UFXSystemAsset*> EletrocutedParticles;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
-    TArray<UParticleSystem*> ExplodingParticles;
+    TArray<UFXSystemAsset*> ExplodingParticles;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
     TArray<USoundCue*> ExplodingSounds;

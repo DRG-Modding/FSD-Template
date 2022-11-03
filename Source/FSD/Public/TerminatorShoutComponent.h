@@ -9,8 +9,8 @@
 #include "TerminatorShoutComponent.generated.h"
 
 class UMeshComponent;
-class UPointLightComponent;
 class UAudioComponent;
+class UPointLightComponent;
 class USoundCue;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

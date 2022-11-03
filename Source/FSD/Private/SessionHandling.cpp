@@ -1,11 +1,11 @@
 #include "SessionHandling.h"
 #include "Templates/SubclassOf.h"
 
+class UDifficultySetting;
 class UObject;
 class UFSDGameInstance;
 class UPlayerCharacterID;
 class APlayerCharacter;
-class UDifficultySetting;
 class UBiome;
 class UMissionTemplate;
 
@@ -95,10 +95,6 @@ FString USessionHandling::GetFriendlyServerName(UObject* WorldContextObject) {
 }
 
 bool USessionHandling::GetCurrentSessionState(FString& sessionState, FString& ID) {
-    return false;
-}
-
-bool USessionHandling::GetBlockedUsersList(int32 localUserNum, TArray<FFriendInfo>& BlockedPlayers) {
     return false;
 }
 

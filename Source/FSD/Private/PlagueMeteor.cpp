@@ -1,9 +1,9 @@
 #include "PlagueMeteor.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/SceneComponent.h"
-#include "Components/StaticMeshComponent.h"
-#include "TerrainPlacementComponent.h"
 #include "DamageComponent.h"
+#include "Components/StaticMeshComponent.h"
+#include "Components/SceneComponent.h"
+#include "TerrainPlacementComponent.h"
 
 class ARockCrackerPod;
 class AProceduralSetup;

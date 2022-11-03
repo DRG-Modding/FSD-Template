@@ -6,8 +6,8 @@
 #include "IconGeneratable.h"
 #include "ItemPreviewActor.generated.h"
 
-class UItemSkin;
 class UIconGenerationCameraKey;
+class UItemSkin;
 class USkinEffect;
 
 UCLASS(Blueprintable)

@@ -5,10 +5,10 @@
 #include "EliminationTarget.h"
 #include "EliminationObjective.generated.h"
 
-class AActor;
-class UCaveInfluencer;
 class UDebrisPositioning;
+class AActor;
 class UDebrisBase;
+class UCaveInfluencer;
 class AFSDPawn;
 class UHealthComponentBase;
 class UEnemyDescriptor;

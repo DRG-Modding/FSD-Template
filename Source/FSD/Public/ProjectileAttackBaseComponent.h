@@ -1,14 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ProjetileSpawnedDelegateDelegate.h"
 #include "AttackBaseComponent.h"
 #include "EProjectileAttackRotationType.h"
 #include "ProjectileAttackDelegateDelegate.h"
+#include "ProjetileSpawnedDelegateDelegate.h"
 #include "ProjectileAttackBaseComponent.generated.h"
 
+class UProjectileAttack;
 class UAnimMontage;
 class AActor;
-class UProjectileAttack;
+class UTargetValidator;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UProjectileAttackBaseComponent : public UAttackBaseComponent {
@@ -26,6 +27,9 @@ protected:
     
     UPROPERTY(EditAnywhere)
     EProjectileAttackRotationType RotationHandling;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTargetValidator* FinalValidationCheck;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ProjectilesIgnoreEachOther;

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RawInputDeviceAxisProperties.h"
 #include "RawInputDeviceButtonProperties.h"
+#include "RawInputDeviceAxisProperties.h"
 #include "RawInputDeviceConfiguration.generated.h"
 
 USTRUCT(BlueprintType)

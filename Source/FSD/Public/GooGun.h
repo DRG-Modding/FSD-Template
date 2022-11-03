@@ -4,10 +4,10 @@
 #include "EGooGunFireMode.h"
 #include "GooGun.generated.h"
 
-class UFXSystemComponent;
 class UAnimMontage;
-class UFXSystemAsset;
 class USoundCue;
+class UFXSystemAsset;
+class UFXSystemComponent;
 
 UCLASS(Abstract, Blueprintable)
 class AGooGun : public AAmmoDrivenWeapon {

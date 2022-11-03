@@ -4,11 +4,11 @@
 #include "EItemSkinCollectionType.h"
 #include "ItemSkinSchematicCollection.generated.h"
 
-class USchematicCategory;
+class USchematic;
 class UItemSkin;
 class USchematicPricingTier;
+class USchematicCategory;
 class USchematicRarity;
-class USchematic;
 
 UCLASS(Blueprintable)
 class FSD_API UItemSkinSchematicCollection : public UDataAsset {

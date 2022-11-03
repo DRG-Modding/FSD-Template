@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/Interface.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/Interface.h"
 #include "UObject/NoExportTypes.h"
 #include "Targetable.generated.h"
 
-class UParticleSystem;
 class UHealthComponentBase;
+class UParticleSystem;
 
 UINTERFACE(Blueprintable)
 class UTargetable : public UInterface {

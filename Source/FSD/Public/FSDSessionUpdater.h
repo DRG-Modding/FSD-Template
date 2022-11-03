@@ -4,8 +4,8 @@
 #include "NewFSDSessionIDDelegate.h"
 #include "FSDSessionUpdater.generated.h"
 
-class UFSDSessionHandler;
 class UFSDLobbyHandler;
+class UFSDSessionHandler;
 
 UCLASS(Blueprintable)
 class UFSDSessionUpdater : public UObject {

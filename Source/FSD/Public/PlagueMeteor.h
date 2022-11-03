@@ -7,12 +7,12 @@
 #include "Curves/CurveFloat.h"
 #include "PlagueMeteor.generated.h"
 
+class UStaticMesh;
+class AImpactIndicator;
 class USceneComponent;
 class UStaticMeshComponent;
-class AImpactIndicator;
 class UTerrainPlacementComponent;
 class UDamageComponent;
-class UStaticMesh;
 class UDebrisPositioning;
 class ARockCrackerPod;
 class AProceduralSetup;

@@ -9,8 +9,8 @@
 
 class AProceduralSetup;
 class UDebrisPositioning;
-class UCurveFloat;
 class APlayerCharacter;
+class UCurveFloat;
 
 void ATreasureBox::PlaceResources(AProceduralSetup* setup, float Radius, UDebrisPositioning* DebrisPositioning, const TArray<FVector>& locationsToAvoid, UCurveFloat* AvoidCostCurve) {
 }

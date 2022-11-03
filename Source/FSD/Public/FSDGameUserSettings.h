@@ -1,41 +1,41 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETurn180Mode.h"
-#include "ChatFontSizeChangedDelegate.h"
-#include "InputSourceChangedSignatureDelegate.h"
-#include "GameFramework/GameUserSettings.h"
-#include "BoolConfigChangedDelegate.h"
-#include "FloatConfigChangedDelegate.h"
 #include "StringConfigChangedDelegate.h"
-#include "Rendering/RenderingCommon.h"
+#include "GameFramework/GameUserSettings.h"
+#include "FloatConfigChangedDelegate.h"
+#include "ENVidiaReflexMode.h"
+#include "BoolConfigChangedDelegate.h"
 #include "LanguageChangedDelegate.h"
 #include "CustomKeyBinding.h"
-#include "ENVidiaReflexMode.h"
 #include "ModdingUISettings.h"
+#include "ChatFontSizeChangedDelegate.h"
 #include "ColorVisionDeficiencyDelegateDelegate.h"
 #include "ColorVisionDeficiencySettings.h"
 #include "ModdingSettingsChangedDelegate.h"
 #include "UDLSSMode.h"
+#include "Rendering/RenderingCommon.h"
 #include "EConsoleGraphicsMode.h"
-#include "ESteamSearchRegion.h"
+#include "ESaveSlotChangeProcedure.h"
 #include "HUDElements.h"
 #include "CharacterOptions.h"
+#include "InputSourceChangedSignatureDelegate.h"
 #include "Int32ConfigChangedDelegate.h"
-#include "UObject/NoExportTypes.h"
+#include "ETurn180Mode.h"
 #include "UObject/NoExportTypes.h"
 #include "GameFramework/GameUserSettings.h"
 #include "CustomKeyBindingsChangedDelegate.h"
 #include "EFSDInputSource.h"
 #include "ControllerSettings.h"
+#include "UObject/NoExportTypes.h"
 #include "EVolumeType.h"
-#include "ESaveSlotChangeProcedure.h"
+#include "ESteamSearchRegion.h"
 #include "FSDGameUserSettings.generated.h"
 
-class USoundClass;
-class UObject;
 class APlayerController;
-class UDifficultySetting;
 class UFSDGameUserSettings;
+class USoundClass;
+class UDifficultySetting;
+class UObject;
 
 UCLASS(Blueprintable)
 class UFSDGameUserSettings : public UGameUserSettings {

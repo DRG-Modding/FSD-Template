@@ -3,8 +3,8 @@
 #include "AnimatedItem.h"
 #include "TerrainScannerItem.generated.h"
 
-class UAnimMontage;
 class USceneComponent;
+class UAnimMontage;
 class USceneCaptureComponent2D;
 
 UCLASS(Blueprintable)

@@ -5,9 +5,9 @@
 #include "UpgradeValues.h"
 #include "GatlingHotShellsBonusUpgrade.generated.h"
 
+class UDamageClass;
 class AFSDPlayerState;
 class AActor;
-class UDamageClass;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UGatlingHotShellsBonusUpgrade : public UItemUpgrade {

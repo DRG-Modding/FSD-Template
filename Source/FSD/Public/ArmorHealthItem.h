@@ -20,6 +20,9 @@ public:
     bool NewAffectedByArmorBreak;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool OverrideArmorDamageEnabled;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FArmorHealthSubItem> ArmorBones;
     
     FSD_API FArmorHealthItem();

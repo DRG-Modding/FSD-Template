@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "TracerData.h"
 #include "AmmoDrivenWeapon.h"
 #include "BoltActionWeaponFullyFocusedDelegateDelegate.h"
+#include "TracerData.h"
 #include "BoltActionWeapon.generated.h"
 
-class UFSDPhysicalMaterial;
-class UHitscanBaseComponent;
 class UDamageComponent;
+class UHitscanBaseComponent;
 class UStatusEffect;
-class UParticleSystem;
 class USoundCue;
+class UParticleSystem;
 class AActor;
+class UFSDPhysicalMaterial;
 class UHealthComponentBase;
 class UPrimitiveComponent;
 

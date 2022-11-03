@@ -4,18 +4,18 @@
 #include "EDrinkableAlcoholStrength.h"
 #include "DrinkableDataAsset.generated.h"
 
-class ADrinkableItem;
 class UTexture2D;
-class ADrinkableActor;
 class UDialogDataAsset;
 class UDrinkableDataAsset;
 class UMissionStat;
+class ADrinkableActor;
+class ADrinkableItem;
 class UTemporaryBuff;
 class UDrinkEffectComponent;
 class UResourceData;
-class APlayerController;
 class UObject;
 class APlayerCharacter;
+class APlayerController;
 
 UCLASS(Blueprintable)
 class UDrinkableDataAsset : public USavableDataAsset {

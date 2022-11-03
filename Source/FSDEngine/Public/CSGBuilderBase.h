@@ -5,8 +5,8 @@
 #include "BakeSettings.h"
 #include "CSGBuilderBase.generated.h"
 
-class UBakeConfig;
 class UTerrainMaterialCore;
+class UBakeConfig;
 class UCSGPreviewComponent;
 
 UCLASS(Blueprintable)

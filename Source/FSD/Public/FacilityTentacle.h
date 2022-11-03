@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TentacleBase.h"
-#include "TriggerAI.h"
 #include "EFacilityTentacleState.h"
+#include "TriggerAI.h"
 #include "TentacleTarget.h"
 #include "UObject/NoExportTypes.h"
 #include "FacilityTentacle.generated.h"

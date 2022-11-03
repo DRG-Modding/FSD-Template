@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MineHitEventDelegate.h"
 #include "Components/ActorComponent.h"
+#include "MineHitEventDelegate.h"
 #include "Engine/NetSerialization.h"
 #include "DroneMiningToolBase.generated.h"
 

@@ -4,10 +4,10 @@
 #include "ChargeChangedSignatureDelegate.h"
 #include "ChargedWeapon.generated.h"
 
-class UFXSystemComponent;
 class USoundCue;
-class UFXSystemAsset;
 class UAnimMontage;
+class UFXSystemAsset;
+class UFXSystemComponent;
 
 UCLASS(Abstract, Blueprintable)
 class AChargedWeapon : public AAmmoDrivenWeapon {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Styling/SlateColor.h"
 #include "Engine/DataAsset.h"
+#include "Styling/SlateColor.h"
 #include "EFSDFaction.h"
 #include "CommunityGoalFaction.generated.h"
 

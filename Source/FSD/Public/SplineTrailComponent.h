@@ -8,9 +8,9 @@
 #include "UObject/NoExportTypes.h"
 #include "SplineTrailComponent.generated.h"
 
-class UCapsuleComponent;
-class UStaticMesh;
 class UFSDPhysicalMaterial;
+class UStaticMesh;
+class UCapsuleComponent;
 class USplineComponent;
 class USplineMeshComponent;
 

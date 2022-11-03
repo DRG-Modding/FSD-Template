@@ -1,7 +1,7 @@
 #include "FoamPuddle.h"
 #include "Net/UnrealNetwork.h"
-#include "NiagaraComponent.h"
 #include "Components/SceneComponent.h"
+#include "NiagaraComponent.h"
 
 class UPrimitiveComponent;
 class AActor;
@@ -26,7 +26,13 @@ AFoamPuddle::AFoamPuddle() {
     this->PuddleRoot = CreateDefaultSubobject<USceneComponent>(TEXT("PuddleRoot"));
     this->NS_Foam = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NS_Vacuum_FP"));
     this->PickupSound = NULL;
+    this->PickupSoundCooldown = 0.50f;
+    this->PickupFilledSound = NULL;
+    this->PickupFilledCooldown = 0.50f;
     this->VacuumedSound = NULL;
+    this->VacuumedCooldown = 0.50f;
+    this->VacuumedSoundFilled = NULL;
+    this->VacuumedSoundFilledCooldown = 0.50f;
     this->InitialDebrisRadius = 75.00f;
     this->TotalRadiusGrowth = 100.00f;
     this->GrowthTime = 2.00f;

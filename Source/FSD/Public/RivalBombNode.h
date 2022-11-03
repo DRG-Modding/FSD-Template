@@ -8,8 +8,8 @@
 class ASplineCableActor;
 class ARivalBombNode;
 class APlayerCharacter;
-class ARivalBomb;
 class UHackingUsableComponent;
+class ARivalBomb;
 
 UCLASS(Blueprintable)
 class ARivalBombNode : public AActor {

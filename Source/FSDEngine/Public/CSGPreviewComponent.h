@@ -4,8 +4,8 @@
 #include "ChunkId.h"
 #include "CSGPreviewComponent.generated.h"
 
-class ACSGBuilderBase;
 class UBakeConfig;
+class ACSGBuilderBase;
 class UDeepProceduralMeshComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

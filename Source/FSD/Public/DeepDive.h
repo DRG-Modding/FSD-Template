@@ -4,8 +4,8 @@
 #include "DeepDiveRewardItem.h"
 #include "DeepDive.generated.h"
 
-class UGeneratedMission;
 class UBiome;
+class UGeneratedMission;
 class UDeepDiveTemplate;
 
 UCLASS(Blueprintable)

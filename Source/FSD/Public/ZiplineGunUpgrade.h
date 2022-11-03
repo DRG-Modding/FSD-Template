@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UpgradeValues.h"
-#include "StandardItemUpgrade.h"
 #include "EZiplineGunUpgrades.h"
+#include "StandardItemUpgrade.h"
+#include "UpgradeValues.h"
 #include "ZiplineGunUpgrade.generated.h"
 
 class AZipLineProjectile;

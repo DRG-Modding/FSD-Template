@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "AutoCarverComponent.h"
 
-class AMiningPod;
 class UObject;
+class AMiningPod;
 
 AMiningPod* AMiningPod::SpawnPodAtLocation(UObject* WorldContextObject, TSubclassOf<AMiningPod> podClass, const FTransform& Transform) {
     return NULL;

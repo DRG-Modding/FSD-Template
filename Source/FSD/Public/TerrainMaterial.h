@@ -7,13 +7,13 @@
 #include "UObject/NoExportTypes.h"
 #include "TerrainMaterial.generated.h"
 
-class UMaterialInstance;
 class UResourceData;
-class UDialogDataAsset;
 class UTerrainType;
+class UDialogDataAsset;
 class UFXSystemAsset;
-class USoundCue;
+class UMaterialInstance;
 class UTerrainMaterial;
+class USoundCue;
 class UFXSystemComponent;
 class UObject;
 

@@ -5,9 +5,9 @@ class UPerkAsset;
 class APlayerController;
 class UObject;
 class UPlayerCharacterID;
-class UPerkDelegateItem;
 class UPerkHUDIconWidget;
 class UPerkHUDActivationWidget;
+class UPerkDelegateItem;
 
 bool UPerkAsset::UseCharge(APlayerController* PlayerController) {
     return false;

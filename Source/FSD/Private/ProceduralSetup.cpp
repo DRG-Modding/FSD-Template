@@ -1,15 +1,15 @@
 #include "ProceduralSetup.h"
 #include "Net/UnrealNetwork.h"
+#include "ProceduralResources.h"
 #include "NoisyPathfinderComponent.h"
 #include "ProceduralTunnelComponent.h"
 #include "PLSEncounterComponent.h"
 #include "ProceduralVeinsComponent.h"
-#include "ProceduralResources.h"
 #include "ProceduralObjectColliders.h"
 
 class AProceduralSetup;
-class ADeepCSGWorld;
 class UMissionDNA;
+class ADeepCSGWorld;
 class UTunnelParameters;
 class URoomGeneratorBase;
 class UCaveInfluencer;

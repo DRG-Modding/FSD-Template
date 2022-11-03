@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "RessuplyPodItem.h"
 #include "PlaceableInterface.h"
-#include "EPlaceableObstructionType.h"
 #include "UObject/NoExportTypes.h"
+#include "EPlaceableObstructionType.h"
 #include "CleanupPodItem.generated.h"
 
-class APlagueControlActor;
 class APlagueInfectionNode;
+class APlagueControlActor;
 
 UCLASS(Blueprintable)
 class ACleanupPodItem : public ARessuplyPodItem, public IPlaceableInterface {

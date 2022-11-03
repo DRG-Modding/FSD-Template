@@ -5,11 +5,11 @@
 #include "UObject/NoExportTypes.h"
 #include "RockEnemiesEvent.generated.h"
 
-class AProjectile;
-class APawn;
-class UHealthComponentBase;
-class USkeletalMeshComponent;
 class UEnemyGroupDescriptor;
+class AProjectile;
+class UHealthComponentBase;
+class APawn;
+class USkeletalMeshComponent;
 class UParticleSystem;
 
 UCLASS(Blueprintable)

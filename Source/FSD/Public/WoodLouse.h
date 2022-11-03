@@ -7,15 +7,15 @@
 #include "GameplayTagContainer.h"
 #include "WoodLouse.generated.h"
 
+class UStatusEffect;
+class UAudioComponent;
+class UFakeMoverSettings;
 class USceneComponent;
 class UPawnSensingComponent;
-class UStatusEffect;
-class UFakeMoverSettings;
 class AProjectile;
 class AActor;
 class USoundBase;
 class UDamageClass;
-class UAudioComponent;
 class APawn;
 
 UCLASS(Blueprintable)

@@ -1,11 +1,11 @@
 #include "GameData.h"
 #include "Templates/SubclassOf.h"
 
-class UAsyncManager;
-class UDifficultySetting;
-class UInventoryList;
-class UPlayerCharacterID;
 class APlayerCharacter;
+class UAsyncManager;
+class UPlayerCharacterID;
+class UInventoryList;
+class UDifficultySetting;
 class UObject;
 class UHUDVisibilityGroup;
 class UMissionStat;

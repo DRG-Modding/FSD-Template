@@ -5,8 +5,8 @@
 #include "EventRewardDispenser.generated.h"
 
 class AFSDPlayerState;
-class AEventRewardFrame;
 class USchematic;
+class AEventRewardFrame;
 class APlayerCharacter;
 
 UCLASS(Blueprintable)

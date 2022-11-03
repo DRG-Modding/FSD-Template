@@ -3,8 +3,8 @@
 #include "FSDUserWidget.h"
 #include "HUDHealthBarSignatureDelegate.h"
 #include "UObject/NoExportTypes.h"
-#include "EHealthbarType.h"
 #include "HealthBarLooks.h"
+#include "EHealthbarType.h"
 #include "HUDHealthBar.generated.h"
 
 class UHealth;

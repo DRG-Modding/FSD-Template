@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Curves/CurveFloat.h"
 #include "Subsystems/WorldSubsystem.h"
+#include "Curves/CurveFloat.h"
 #include "UObject/NoExportTypes.h"
 #include "FadeVisibilitySubSystem.generated.h"
 
-class UMeshComponent;
 class UPrimitiveComponent;
+class UMeshComponent;
 class ULightComponent;
 
 UCLASS(Blueprintable)

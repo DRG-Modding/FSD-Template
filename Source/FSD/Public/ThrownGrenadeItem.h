@@ -11,8 +11,8 @@
 class UPlayerAnimInstance;
 class UItemCharacterAnimationSet;
 class AGrenade;
-class UGrenadeAnimationSet;
 class UStaticMeshComponent;
+class UGrenadeAnimationSet;
 class UFSDAudioComponent;
 
 UCLASS(Blueprintable)

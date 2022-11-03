@@ -8,6 +8,7 @@
 
 class USceneComponent;
 class USkeletalMeshComponent;
+class UDialogDataAsset;
 
 UCLASS(Blueprintable)
 class ADisplayCase : public AActor {
@@ -42,6 +43,12 @@ protected:
     float RotaionSpeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float BeerMugSpawnChancePercent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float BarrelSpawnChancePercent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TimeMultiplier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -50,11 +57,17 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_ContentIndex, meta=(AllowPrivateAccess=true))
     int32 ContentIndex;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UDialogDataAsset* BeerMugShout;
+    
 public:
     ADisplayCase();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
+    UFUNCTION(BlueprintCallable)
+    void PlayReactionAnimation();
+    
     UFUNCTION(BlueprintCallable)
     void OnRep_ContentIndex();
     
@@ -64,10 +77,6 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ChangeContent();
-    
-protected:
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void All_PlayReactionAnimation();
     
 };
 

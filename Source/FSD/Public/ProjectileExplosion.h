@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ScaledEffect.h"
-#include "ExplosionBaseComponent.h"
 #include "Engine/EngineTypes.h"
+#include "ExplosionBaseComponent.h"
+#include "ScaledEffect.h"
 #include "UObject/NoExportTypes.h"
 #include "ProjectileExplosion.generated.h"
 
-class UForceFeedbackAttenuation;
-class USoundCue;
 class UForceFeedbackEffect;
+class USoundCue;
+class UForceFeedbackAttenuation;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UProjectileExplosion : public UExplosionBaseComponent {

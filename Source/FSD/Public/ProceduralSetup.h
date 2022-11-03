@@ -2,44 +2,44 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
-#include "EncountersSpawnedDelegateDelegate.h"
 #include "UObject/NoExportTypes.h"
 #include "EncounterSpecialItem.h"
-#include "GeneratedDebris.h"
-#include "PathObstacle.h"
-#include "GemResourceAmount.h"
+#include "EncountersSpawnedDelegateDelegate.h"
+#include "Engine/LatentActionManager.h"
 #include "CarvedResource.h"
+#include "GemResourceAmount.h"
 #include "CollectableSpawnableItem.h"
 #include "ESpawnSettings.h"
 #include "RoomNode.h"
 #include "TunnelNode.h"
 #include "GeneratedInfluenceSets.h"
 #include "GeneratedInstantCarvers.h"
+#include "GeneratedDebris.h"
+#include "PathObstacle.h"
 #include "InfluenceMap.h"
-#include "Engine/LatentActionManager.h"
 #include "EDebrisItemPass.h"
 #include "UObject/NoExportTypes.h"
 #include "RandRange.h"
 #include "DebrisCapsule.h"
 #include "ProceduralSetup.generated.h"
 
-class UPLSEncounterComponent;
 class UProceduralTunnelComponent;
 class USpecialEvent;
 class UNoisyPathfinderComponent;
+class UPLSEncounterComponent;
 class UProceduralVeinsComponent;
+class UBiome;
 class UProceduralResources;
 class UProceduralObjectColliders;
-class AFSDPlayerController;
 class ADeepCSGWorld;
+class URoomGeneratorBase;
+class AFSDPlayerController;
 class UFloodFillSettings;
 class UMissionDNA;
-class UTunnelParameters;
-class UBiome;
+class UCaveInfluencer;
 class UResourceData;
 class AProceduralSetup;
-class URoomGeneratorBase;
-class UCaveInfluencer;
+class UTunnelParameters;
 
 UCLASS(Blueprintable)
 class FSD_API AProceduralSetup : public AActor {

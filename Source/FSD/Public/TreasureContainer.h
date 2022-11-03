@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "EInputKeys.h"
 #include "TreasureWeight.h"
+#include "EInputKeys.h"
 #include "TreasureContainer.generated.h"
 
-class APlayerCharacter;
 class USceneComponent;
-class UTreasureRewarder;
-class UOncePerPlayerUsableComponent;
 class UItemAquisitionSource;
+class UOncePerPlayerUsableComponent;
+class UTreasureRewarder;
+class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class FSD_API ATreasureContainer : public AActor {

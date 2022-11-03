@@ -8,9 +8,9 @@
 #include "ERicochetBehavior.h"
 #include "HitscanBaseComponent.generated.h"
 
+class UDamageClass;
 class UDamageComponent;
 class AActor;
-class UDamageClass;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UHitscanBaseComponent : public UWeaponFireComponent {

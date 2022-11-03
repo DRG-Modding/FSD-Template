@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "Components/ActorComponent.h"
 #include "RejoinFloat.h"
+#include "Components/ActorComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "RejoinInt.h"
 #include "PlayerRejoinState.generated.h"
 

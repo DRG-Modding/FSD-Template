@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
 #include "SaveGameIDInterface.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "ResourceData.generated.h"
 

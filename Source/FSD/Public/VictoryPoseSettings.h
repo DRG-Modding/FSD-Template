@@ -4,10 +4,10 @@
 #include "Engine/DataAsset.h"
 #include "VictoryPoseSettings.generated.h"
 
-class UActorComponent;
-class AActor;
 class UVictoryPose;
 class UTexture2D;
+class UActorComponent;
+class AActor;
 
 UCLASS(Blueprintable)
 class UVictoryPoseSettings : public UDataAsset {

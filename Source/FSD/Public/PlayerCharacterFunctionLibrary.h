@@ -4,9 +4,9 @@
 #include "UObject/NoExportTypes.h"
 #include "PlayerCharacterFunctionLibrary.generated.h"
 
-class UObject;
 class AActor;
 class AFSDPlayerState;
+class UObject;
 class APlayerCharacter;
 
 UCLASS(Blueprintable)

@@ -3,8 +3,8 @@
 #include "Components/BoxComponent.h"
 #include "InstantUsable.h"
 
-class APlayerCharacter;
 class UDrinkableDataAsset;
+class APlayerCharacter;
 
 void ASpaceRigBar::SpawnDrinkables(UDrinkableDataAsset* Drinkable, APlayerCharacter* User) {
 }

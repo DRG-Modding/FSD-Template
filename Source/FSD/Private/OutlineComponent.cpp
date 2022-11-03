@@ -1,9 +1,9 @@
 #include "OutlineComponent.h"
 
-class UPrimitiveComponent;
-class UHealthComponentBase;
-class AItem;
 class AActor;
+class UHealthComponentBase;
+class UPrimitiveComponent;
+class AItem;
 
 void UOutlineComponent::UnlockOutline() {
 }

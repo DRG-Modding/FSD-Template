@@ -5,12 +5,12 @@
 #include "UObject/NoExportTypes.h"
 #include "Schematic.generated.h"
 
+class UPlayerCharacterID;
 class USchematic;
+class USchematicRarity;
 class USchematicCategory;
 class USchematicPricingTier;
 class USchematicItem;
-class UPlayerCharacterID;
-class USchematicRarity;
 class UResourceData;
 class UFSDSaveGame;
 class UObject;

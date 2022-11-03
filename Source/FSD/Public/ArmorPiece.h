@@ -7,10 +7,10 @@
 #include "LoadoutItem.h"
 #include "ArmorPiece.generated.h"
 
-class UItemID;
 class ALoadoutItemProxy;
 class UPawnStat;
 class UUpgradableGearComponent;
+class UItemID;
 class AArmorPiece;
 class AItem;
 

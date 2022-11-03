@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "HealthComponentBase.h"
-#include "HealthChangedSigDelegate.h"
-#include "EHealthbarType.h"
+#include "DamageData.h"
 #include "DamageSigDelegate.h"
+#include "HealthChangedSigDelegate.h"
 #include "ArmorHealedSigDelegate.h"
 #include "DeathSigDetailedDelegate.h"
 #include "HealthSegmentChangeDelegate.h"
-#include "DamageData.h"
+#include "EHealthbarType.h"
 #include "HealthComponent.generated.h"
 
 class AActor;

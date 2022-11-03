@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
+#include "UObject/NoExportTypes.h"
 #include "EDropPodState.h"
 #include "DropPod.generated.h"
 
+class UObject;
+class UCurveFloat;
 class UAutoCarverComponent;
 class ADropPod;
-class UCurveFloat;
-class UObject;
 
 UCLASS(Blueprintable)
 class FSD_API ADropPod : public AActor {

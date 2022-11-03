@@ -5,10 +5,10 @@
 #include "UpgradeValues.h"
 #include "DamageConversionUpgrade.generated.h"
 
+class UDamageCondition;
+class UDamageClass;
 class AFSDPlayerState;
 class AActor;
-class UDamageClass;
-class UDamageCondition;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UDamageConversionUpgrade : public UItemUpgrade {

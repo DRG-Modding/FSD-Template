@@ -5,17 +5,17 @@
 #include "UObject/NoExportTypes.h"
 #include "CharacterVanityItems.generated.h"
 
-class UArmorMaterialVanityItem;
-class UHeadVanityItem;
 class UMoustacheVanityItem;
-class UVanitySchematicBank;
 class UArmorVanityItem;
+class UHeadVanityItem;
 class UBeardVanityItem;
+class UVanitySchematicBank;
+class UArmorMaterialVanityItem;
 class UEyeBrowsVanityItem;
 class USideburnsVanityItem;
+class UVanityItem;
 class UBeardColorVanityItem;
 class USkinColorVanityItem;
-class UVanityItem;
 class UPlayerCharacterID;
 class UObject;
 

@@ -4,8 +4,8 @@
 #include "SchematicBankInterface.h"
 #include "OverclockBank.generated.h"
 
-class UOverclockUpgrade;
 class USchematic;
+class UOverclockUpgrade;
 class UItemID;
 
 UCLASS(Blueprintable)

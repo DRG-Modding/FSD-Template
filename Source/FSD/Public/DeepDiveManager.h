@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DeepDiveTesterItem.h"
 #include "UObject/Object.h"
-#include "UObject/NoExportTypes.h"
+#include "DeepDiveTesterItem.h"
 #include "DeepDiveBank.h"
+#include "UObject/NoExportTypes.h"
 #include "DeepDiveManager.generated.h"
 
 class UFSDEventsHandler;

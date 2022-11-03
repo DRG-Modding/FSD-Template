@@ -5,9 +5,9 @@
 #include "UObject/NoExportTypes.h"
 #include "GuntowerLineProjectile.generated.h"
 
+class UParticleSystemComponent;
 class USceneComponent;
 class UDamageComponent;
-class UParticleSystemComponent;
 
 UCLASS(Blueprintable)
 class AGuntowerLineProjectile : public AProjectile {

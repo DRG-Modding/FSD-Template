@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "FloatPerkEffect.h"
 #include "PerkAsset.h"
 #include "FloatPerkRank.h"
-#include "FloatPerkEffect.h"
 #include "FloatPerkAsset.generated.h"
 
 class UObject;

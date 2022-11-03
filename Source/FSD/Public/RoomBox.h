@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Rotator_NoQuantize.h"
+#include "UObject/NoExportTypes.h"
 #include "RoomBox.generated.h"
 
 class UFloodFillSettings;

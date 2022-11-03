@@ -1,8 +1,8 @@
 #include "KillEnemiesObjective.h"
 #include "Net/UnrealNetwork.h"
 
-class APawn;
 class UHealthComponentBase;
+class APawn;
 
 void UKillEnemiesObjective::RegisterTargetSpawned(APawn* Target) const {
 }

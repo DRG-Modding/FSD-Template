@@ -48,7 +48,6 @@ ABouncyBoomerang::ABouncyBoomerang() {
     this->HitPlayerRange = 50.00f;
     this->CatchSoundRange = 50.00f;
     this->HitTerrainRange = 175.00f;
-    this->SnareSTE = NULL;
     this->EnemyHitNiagaraSystem = NULL;
     this->EnemyHitParticleSystem = NULL;
     this->ImpactSound = NULL;

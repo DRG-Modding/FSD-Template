@@ -3,9 +3,9 @@
 #include "UObject/Object.h"
 #include "UGCLatentActionManager.generated.h"
 
-class UModioModInfoWrapper;
-class UModioTermsWrapper;
 class UTexture2DDynamic;
+class UModioTermsWrapper;
+class UModioModInfoWrapper;
 
 UCLASS(Blueprintable)
 class UUGCLatentActionManager : public UObject {
@@ -13,6 +13,9 @@ class UUGCLatentActionManager : public UObject {
 public:
     UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<UModioTermsWrapper> LatestModioTermsAndConditions;
+    
+    UPROPERTY(EditAnywhere, Transient)
+    TMap<int64, UModioModInfoWrapper*> ModioModMetaDatas;
     
     UPROPERTY(EditAnywhere, Transient)
     TMap<int64, UTexture2DDynamic*> ModioModThumbnails;

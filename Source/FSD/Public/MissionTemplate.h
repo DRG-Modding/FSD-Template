@@ -8,16 +8,16 @@
 #include "ObjectiveMissionIcon.h"
 #include "MissionTemplate.generated.h"
 
-class AFSDGameMode;
+class UWorld;
+class UDebrisActorComponent;
 class UObjective;
-class UMissionComplexity;
 class UMutator;
 class AProceduralSetup;
-class UWorld;
+class AFSDGameMode;
+class UMissionComplexity;
 class UMissionDuration;
 class UTexture2D;
 class UMissionDNA;
-class UDebrisActorComponent;
 class UTutorialComponent;
 class UGeneratedMission;
 class UFSDSaveGame;

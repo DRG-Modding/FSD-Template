@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CraftingCost.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
-#include "VanityMasterySettings.h"
 #include "VanityMasterySave.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
+#include "CraftingCost.h"
+#include "VanityMasterySettings.h"
 #include "VanityMasteryResult.h"
 #include "VanityMasteryLibrary.generated.h"
 

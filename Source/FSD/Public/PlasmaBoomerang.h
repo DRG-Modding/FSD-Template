@@ -4,13 +4,13 @@
 #include "Engine/EngineTypes.h"
 #include "PlasmaBoomerang.generated.h"
 
+class UCurveVector;
 class USceneComponent;
+class AActor;
 class UBoxComponent;
+class UPrimitiveComponent;
 class UDamageComponent;
 class UStaticMeshComponent;
-class UCurveVector;
-class UPrimitiveComponent;
-class AActor;
 
 UCLASS(Abstract, Blueprintable)
 class APlasmaBoomerang : public AGrenade {

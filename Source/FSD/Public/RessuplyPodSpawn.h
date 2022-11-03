@@ -3,8 +3,8 @@
 #include "RessuplyPod.h"
 #include "RessuplyPodSpawn.generated.h"
 
-class AFSDPlayerController;
 class APlayerCharacter;
+class AFSDPlayerController;
 
 UCLASS(Blueprintable)
 class ARessuplyPodSpawn : public ARessuplyPod {

@@ -2,20 +2,20 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "SavableDataAsset.h"
-#include "RefundableInterface.h"
 #include "EUpgradeClass.h"
+#include "RefundableInterface.h"
 #include "EUpgradeTiers.h"
 #include "ItemUpgradeStatText.h"
-#include "CraftingCost.h"
 #include "UpgradeValues.h"
+#include "CraftingCost.h"
 #include "ItemUpgrade.generated.h"
 
+class UResourceData;
 class UItemUpgradeCategory;
 class UItemUpgrade;
-class UResourceData;
-class AFSDPlayerState;
 class UItemUpgradeElement;
 class AActor;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UItemUpgrade : public USavableDataAsset, public IRefundableInterface {

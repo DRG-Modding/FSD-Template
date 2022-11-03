@@ -4,8 +4,8 @@
 #include "HackingToolWidget.generated.h"
 
 class USoundCue;
-class UHackingUsableComponent;
 class UDialogDataAsset;
+class UHackingUsableComponent;
 class AHackingToolItem;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)

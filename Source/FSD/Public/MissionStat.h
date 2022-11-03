@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
+#include "UObject/NoExportTypes.h"
 #include "EMissionStatType.h"
 #include "MissionStat.generated.h"
 
 class UObject;
-class UFSDAchievement;
 class UMissionStat;
+class UFSDAchievement;
 class UMissionStatCategory;
 class APlayerCharacter;
 class UPlayerCharacterID;

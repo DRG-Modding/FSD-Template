@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "DualAnimatedItem.h"
+#include "RejoinListener.h"
 #include "Upgradable.h"
 #include "UpgradableGear.h"
-#include "RejoinListener.h"
 #include "EDoubleDrillState.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
@@ -11,15 +11,15 @@
 #include "Engine/NetSerialization.h"
 #include "DoubleDrillItem.generated.h"
 
-class UFirstPersonParticleSystemComponent;
-class UDamageClass;
-class UFSDPhysicalMaterial;
-class UDoubleDrillAggregator;
-class UDamageComponent;
 class UFSDAudioComponent;
+class UDamageComponent;
+class UFirstPersonParticleSystemComponent;
+class UDoubleDrillAggregator;
+class UFSDPhysicalMaterial;
 class UAnimMontage;
 class UParticleSystem;
 class UForceFeedbackEffect;
+class UDamageClass;
 class UDialogDataAsset;
 class AActor;
 

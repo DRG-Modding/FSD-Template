@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "DeepDiveSaveRewardItem.h"
+#include "UObject/NoExportTypes.h"
 #include "DeepDiveItem.generated.h"
 
 USTRUCT(BlueprintType)

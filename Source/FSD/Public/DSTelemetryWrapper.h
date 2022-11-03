@@ -4,12 +4,12 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "DSTelemetryWrapper.generated.h"
 
-class AFSDPlayerController;
-class UDSTelemetry;
-class APlayerController;
-class USeasonChallenge;
 class AActor;
+class UDSTelemetry;
 class APlayerCharacter;
+class AFSDPlayerController;
+class USeasonChallenge;
+class APlayerController;
 class UGeneratedMission;
 
 UCLASS(Blueprintable)
@@ -73,9 +73,6 @@ private:
     
     UFUNCTION(BlueprintCallable)
     void OnNewMission(UGeneratedMission* mission);
-    
-    UFUNCTION(BlueprintCallable)
-    void OnNewFSDSessionID(const FString& sessionId);
     
     UFUNCTION(BlueprintCallable)
     void OnNewCharacter();

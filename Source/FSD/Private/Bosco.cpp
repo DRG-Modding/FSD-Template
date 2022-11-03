@@ -1,19 +1,19 @@
 #include "Bosco.h"
 #include "Net/UnrealNetwork.h"
 #include "UpgradableBoscoComponent.h"
+#include "HitscanComponent.h"
 #include "BoscoAbillityComponent.h"
 #include "HealthComponent.h"
 #include "DamageComponent.h"
+#include "DroneSkinnableComponent.h"
 #include "Perception/PawnSensingComponent.h"
 #include "DroneMiningToolBase.h"
 #include "BobbingComponent.h"
-#include "Components/SpotLightComponent.h"
-#include "Components/SkeletalMeshComponent.h"
-#include "HitscanComponent.h"
 #include "Components/PointLightComponent.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "Components/SpotLightComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "Components/AudioComponent.h"
-#include "DroneSkinnableComponent.h"
 
 class UTerrainMaterial;
 

@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
+#include "UObject/NoExportTypes.h"
 #include "EPerkHUDActivationLocation.h"
 #include "EPerkUsageType.h"
 #include "EPerkTierState.h"
 #include "PerkAsset.generated.h"
 
-class UTexture2D;
 class UDialogDataAsset;
-class UPerkLogic;
 class UPerkHUDIconWidget;
+class UTexture2D;
+class UPerkLogic;
 class UPerkHUDActivationWidget;
-class UObject;
 class APlayerController;
+class UObject;
 class UPlayerCharacterID;
 class UPerkAsset;
 class UPerkDelegateItem;

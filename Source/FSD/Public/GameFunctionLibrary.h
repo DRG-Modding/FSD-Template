@@ -3,22 +3,22 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "GameFunctionLibrary.generated.h"
 
-class UWindowWidget;
-class UGoogleAnalyticsWrapper;
 class UObject;
-class UFSDGameInstance;
-class UWindowManager;
-class UCampaignManager;
 class UAudioComponent;
-class APlayerCharacter;
+class UWindowManager;
 class USoundBase;
+class UWindowWidget;
+class APlayerCharacter;
+class UGoogleAnalyticsWrapper;
 class AFSDGameModeSpaceRig;
 class UFSDSaveGame;
 class AFSDGameState;
 class AFSDGameMode;
+class UFSDGameInstance;
 class UGameData;
 class UDeepDiveManager;
 class ADeepCSGWorld;
+class UCampaignManager;
 class UAsyncManager;
 
 UCLASS(Blueprintable)

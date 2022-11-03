@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "Throwable.h"
-#include "CarriableEventDelegate.h"
 #include "UObject/NoExportTypes.h"
+#include "CarriableEventDelegate.h"
 #include "CarriableComponent.generated.h"
 
 class APlayerCharacter;
-class UUseAnimationSetting;
-class UItemCharacterAnimationSet;
 class UDialogDataAsset;
+class UItemCharacterAnimationSet;
+class UUseAnimationSetting;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCarriableComponent : public UActorComponent, public IThrowable {

@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MissionBiomeItem.h"
 #include "Engine/DataAsset.h"
 #include "IRandRange.h"
-#include "MissionTemplateItem.h"
+#include "MissionBiomeItem.h"
 #include "RequiredMissionItem.h"
+#include "MissionTemplateItem.h"
 #include "GlobalMissionSetup.generated.h"
 
 class UPlanetZone;

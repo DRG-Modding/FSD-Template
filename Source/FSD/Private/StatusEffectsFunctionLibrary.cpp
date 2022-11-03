@@ -2,8 +2,8 @@
 #include "Templates/SubclassOf.h"
 
 class UStatusEffect;
-class AActor;
 class UDamageClass;
+class AActor;
 
 float UStatusEffectsFunctionLibrary::GetMaxResistance(TSubclassOf<UStatusEffect> StatusEffect) {
     return 0.0f;

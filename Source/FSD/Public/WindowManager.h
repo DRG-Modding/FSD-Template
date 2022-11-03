@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Components/SlateWrapperTypes.h"
 #include "Components/ActorComponent.h"
 #include "WindowManagerDelegateDelegate.h"
+#include "Components/SlateWrapperTypes.h"
 #include "WindowManager.generated.h"
 
-class UWindowWidget;
-class UUserWidget;
 class USoundCue;
+class UUserWidget;
+class UWindowWidget;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UWindowManager : public UActorComponent {

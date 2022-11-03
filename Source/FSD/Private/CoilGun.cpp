@@ -3,9 +3,9 @@
 #include "NiagaraComponent.h"
 #include "CoilgunTrailSpawner.h"
 
-class UPrimitiveComponent;
 class AActor;
 class UHealthComponentBase;
+class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
 class ACoilgunWeaponTrail;
 

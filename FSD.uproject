@@ -22,11 +22,6 @@
 				"SlateCore",
 				"DiscordSDK"
 			]
-		},
-		{
-			"Name": "DSTelemetry",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
@@ -350,9 +345,16 @@
 		{
 			"Name": "Reflex",
 			"Enabled": true
+		},
+		{
+			"Name": "DSTelemetry",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
-		"Windows"
+		"Windows",
+		"WindowsNoEditor",
+		"LinuxAArch64NoEditor",
+		"LinuxNoEditor"
 	]
 }

@@ -5,11 +5,11 @@
 #include "DelegateDelegate.h"
 #include "Molly.generated.h"
 
-class UNiagaraSystem;
-class UDialogDataAsset;
-class APlayerCharacter;
 class UResourceBank;
+class APlayerCharacter;
 class UOutlineComponent;
+class UDialogDataAsset;
+class UNiagaraSystem;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API AMolly : public AMULE {

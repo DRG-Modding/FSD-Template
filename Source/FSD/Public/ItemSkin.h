@@ -5,12 +5,12 @@
 #include "EItemSkinType.h"
 #include "ItemSkin.generated.h"
 
-class UItemSkin;
-class UItemAquisitionBase;
 class UDynamicIcon;
+class UItemAquisitionBase;
+class UItemSkin;
+class UItemID;
 class UItemSkinSet;
 class USkinEffect;
-class UItemID;
 class UPlayerCharacterID;
 class UObject;
 class AFSDPlayerState;

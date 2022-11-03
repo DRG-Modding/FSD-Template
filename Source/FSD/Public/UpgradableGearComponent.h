@@ -2,25 +2,25 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
+#include "CraftingCost.h"
 #include "UpgradeTier.h"
 #include "MasteryItem.h"
 #include "GearStatEntry.h"
 #include "EItemUpgradeStatus.h"
-#include "CraftingCost.h"
 #include "UpgradableGearComponent.generated.h"
 
-class UOverclockBank;
+class UItemUpgrade;
 class UItemData;
 class AActor;
+class UPlayerCharacterID;
+class UOverclockBank;
 class UTexture2D;
-class UItemUpgrade;
 class UResourceData;
+class APlayerCharacter;
 class UItemID;
 class AFSDPlayerController;
-class APlayerCharacter;
 class UObject;
 class AFSDPlayerState;
-class UPlayerCharacterID;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UUpgradableGearComponent : public UActorComponent {

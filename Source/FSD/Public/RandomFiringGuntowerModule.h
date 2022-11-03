@@ -5,8 +5,8 @@
 #include "RandomFiringGuntowerModule.generated.h"
 
 class UStaticMeshComponent;
-class UParticleSystem;
 class UParticleSystemComponent;
+class UParticleSystem;
 class UAudioComponent;
 class UDamageComponent;
 

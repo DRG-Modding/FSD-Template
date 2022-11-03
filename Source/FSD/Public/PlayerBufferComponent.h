@@ -5,12 +5,12 @@
 #include "BoolDelegateDelegate.h"
 #include "PlayerBufferComponent.generated.h"
 
-class UStatusEffect;
-class UMeshComponent;
 class UParticleSystemComponent;
+class UMeshComponent;
+class UStatusEffect;
 class UParticleSystem;
-class APlayerCharacter;
 class UHealthComponentBase;
+class APlayerCharacter;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPlayerBufferComponent : public UActorComponent {

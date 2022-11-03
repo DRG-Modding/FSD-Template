@@ -4,8 +4,8 @@
 #include "EnemyPawn.h"
 #include "InsectSwarmSpawner.generated.h"
 
-class UStaticMeshComponent;
 class AInsectSwarmEnemy;
+class UStaticMeshComponent;
 class AActor;
 
 UCLASS(Abstract, Blueprintable)

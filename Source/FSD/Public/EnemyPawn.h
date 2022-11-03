@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "NetMontageAble.h"
 #include "FSDPawn.h"
 #include "QueuedMontage.h"
+#include "NetMontageAble.h"
 #include "EnemyPawn.generated.h"
 
 class UEnemyPawnAfflictionComponent;
-class UMaterialInterface;
-class UPawnStatsComponent;
 class UEnemyHealthComponent;
+class UPawnStatsComponent;
+class UMaterialInterface;
 class UEnemyComponent;
 class UMeshComponent;
 class USkeletalMeshComponent;

@@ -5,8 +5,8 @@
 #include "DroneStream.generated.h"
 
 class USceneComponent;
-class UPrimitiveComponent;
 class UCapsuleComponent;
+class UPrimitiveComponent;
 
 UCLASS(Blueprintable)
 class ADroneStream : public AActor {

@@ -8,10 +8,10 @@
 #include "ProceduralFunctionLibrary.generated.h"
 
 class UObject;
-class UFXSystemAsset;
 class UObjective;
-class UBiome;
+class UFXSystemAsset;
 class AProceduralSetup;
+class UBiome;
 class UDebrisPositioning;
 
 UCLASS(Blueprintable)

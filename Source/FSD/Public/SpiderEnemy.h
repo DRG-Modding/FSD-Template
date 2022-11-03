@@ -4,10 +4,10 @@
 #include "EnemyAttacker.h"
 #include "SpiderEnemy.generated.h"
 
-class UStaticMesh;
-class UPawnStatsComponent;
 class UHitReactionComponent;
 class AActor;
+class UPawnStatsComponent;
+class UStaticMesh;
 class UStaticMeshComponent;
 
 UCLASS(Blueprintable)

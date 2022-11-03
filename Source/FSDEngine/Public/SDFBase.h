@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BuilderBase.h"
 #include "SDFBaseProperties.h"
+#include "BuilderBase.h"
 #include "UObject/NoExportTypes.h"
 #include "SDFBase.generated.h"
 

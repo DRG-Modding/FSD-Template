@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "UObject/NoExportTypes.h"
 #include "RoomGeneratorGroupInstance.h"
+#include "UObject/NoExportTypes.h"
 #include "GameplayTagContainer.h"
 #include "RoomGeneratorGroup.generated.h"
 

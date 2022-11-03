@@ -5,8 +5,8 @@
 #include "StatusEffectsFunctionLibrary.generated.h"
 
 class UStatusEffect;
-class AActor;
 class UDamageClass;
+class AActor;
 
 UCLASS(Blueprintable)
 class UStatusEffectsFunctionLibrary : public UBlueprintFunctionLibrary {

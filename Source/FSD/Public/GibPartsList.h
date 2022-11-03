@@ -3,9 +3,9 @@
 #include "Engine/DataAsset.h"
 #include "GibPartsList.generated.h"
 
-class UMaterialInstance;
 class UStaticMesh;
 class UNiagaraComponent;
+class UMaterialInstance;
 
 UCLASS(Blueprintable)
 class UGibPartsList : public UDataAsset {

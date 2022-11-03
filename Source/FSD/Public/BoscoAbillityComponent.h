@@ -2,16 +2,17 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
-#include "AbillityChargeUsedSigDelegate.h"
 #include "Upgradable.h"
-#include "ABillityChargeProgressDelegate.h"
+#include "AbillityChargeUsedSigDelegate.h"
 #include "AbilityDataUpdatedDelegate.h"
+#include "ABillityChargeProgressDelegate.h"
+#include "BoscoAbilityTarget.h"
 #include "BoscoAbillityComponent.generated.h"
 
-class ADroneStream;
 class UItemUpgrade;
-class AProjectileBase;
 class ABosco;
+class AProjectileBase;
+class ADroneStream;
 class UBoscoProjectileAbillity;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -28,6 +29,9 @@ public:
     FAbilityDataUpdated OnAbilityDataUpdated;
     
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    FBoscoAbilityTarget Target;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UItemUpgrade*> upgrades;
     

@@ -4,9 +4,9 @@
 #include "UObject/NoExportTypes.h"
 #include "ObjectInfoComponent.generated.h"
 
+class UTexture2D;
 class UPrimitiveComponent;
 class UDialogDataAsset;
-class UTexture2D;
 class APlayerController;
 class UActorContextWidget;
 

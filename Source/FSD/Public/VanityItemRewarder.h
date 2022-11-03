@@ -3,8 +3,8 @@
 #include "TreasureRewarder.h"
 #include "VanityItemRewarder.generated.h"
 
-class UPlayerCharacterID;
 class UVanityItem;
+class UPlayerCharacterID;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UVanityItemRewarder : public UTreasureRewarder {

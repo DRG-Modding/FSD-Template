@@ -4,9 +4,9 @@
 #include "LaserPointerData.h"
 #include "LaserPointerMarker.generated.h"
 
-class UPrimitiveComponent;
 class UTerrainMaterial;
 class APlayerCharacter;
+class UPrimitiveComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ALaserPointerMarker : public AActor {

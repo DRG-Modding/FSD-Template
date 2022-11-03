@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EFSDInputSource.h"
 #include "Blueprint/UserWidget.h"
+#include "UObject/NoExportTypes.h"
+#include "EFSDInputSource.h"
 #include "Styling/SlateTypes.h"
 #include "InputDisplay.h"
-#include "UObject/NoExportTypes.h"
 #include "RichTextInputWidget.generated.h"
 
 class URichTextBlock;

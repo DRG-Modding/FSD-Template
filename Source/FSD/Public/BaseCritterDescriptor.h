@@ -4,8 +4,8 @@
 #include "DeepPathFinderType.h"
 #include "BaseCritterDescriptor.generated.h"
 
-class UBiome;
 class AFSDPawn;
+class UBiome;
 class UDebrisPositioning;
 
 UCLASS(Abstract, Blueprintable)

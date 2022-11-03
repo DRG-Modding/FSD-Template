@@ -2,19 +2,19 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Objective.h"
-#include "UObject/NoExportTypes.h"
 #include "DelegateDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "SalvageObjective.generated.h"
 
-class UGemResourceData;
-class URepairableComponent;
 class UDebrisPositioning;
 class AMiningPod;
 class UDebrisBase;
+class UGemResourceData;
 class AMiniMule;
-class AProceduralSetup;
 class AActor;
+class URepairableComponent;
+class AProceduralSetup;
 class UCurveFloat;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

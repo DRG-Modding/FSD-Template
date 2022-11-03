@@ -3,18 +3,18 @@
 #include "Templates/SubclassOf.h"
 #include "AmmoDrivenWeapon.h"
 #include "UObject/NoExportTypes.h"
+#include "LockCounter.h"
 #include "TracerData.h"
 #include "UObject/NoExportTypes.h"
-#include "LockCounter.h"
 #include "Engine/EngineTypes.h"
 #include "LockOnWeapon.generated.h"
 
-class AActor;
-class UStatusEffect;
-class UActorTrackingWidget;
-class UHitscanComponent;
 class ALockOnBeam;
+class AActor;
+class UActorTrackingWidget;
+class UStatusEffect;
 class UDamageComponent;
+class UHitscanComponent;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API ALockOnWeapon : public AAmmoDrivenWeapon {

@@ -3,11 +3,11 @@
 #include "Templates/SubclassOf.h"
 #include "FSDProjectileMovementComponent.h"
 
-class AProjectileBase;
 class UObject;
-class USceneComponent;
 class APawn;
+class AProjectileBase;
 class AProjectile;
+class USceneComponent;
 class UFSDPhysicalMaterial;
 
 AProjectileBase* AProjectile::SpawnProjectileFromSelf(UObject* WorldContextObject, TSubclassOf<AProjectileBase> ProjectileClass, FVector Origin, FRotator velocityDirection) {

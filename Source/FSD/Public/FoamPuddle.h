@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
+#include "UObject/NoExportTypes.h"
+#include "Curves/CurveFloat.h"
 #include "Engine/EngineTypes.h"
 #include "EVacuumState.h"
-#include "Curves/CurveFloat.h"
 #include "FoamPuddle.generated.h"
 
-class UNiagaraComponent;
-class USceneComponent;
 class USoundCue;
+class USceneComponent;
+class UNiagaraComponent;
 class UPrimitiveComponent;
 
 UCLASS(Blueprintable)
@@ -38,7 +38,25 @@ private:
     USoundCue* PickupSound;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float PickupSoundCooldown;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    USoundCue* PickupFilledSound;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float PickupFilledCooldown;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* VacuumedSound;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float VacuumedCooldown;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    USoundCue* VacuumedSoundFilled;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float VacuumedSoundFilledCooldown;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float InitialDebrisRadius;

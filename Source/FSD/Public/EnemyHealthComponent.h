@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "HealthComponent.h"
-#include "EEnemyHealthScaling.h"
 #include "UObject/NoExportTypes.h"
+#include "EEnemyHealthScaling.h"
 #include "EnemyHealthComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

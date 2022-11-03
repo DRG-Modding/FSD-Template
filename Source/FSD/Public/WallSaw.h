@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
+#include "FakeSawMover.h"
 #include "SawFakeMoveState.h"
 #include "GameFramework/Actor.h"
-#include "FakeSawMover.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "WallSaw.generated.h"
 
-class UPrimitiveComponent;
-class UCapsuleComponent;
 class UCurveFloat;
+class UCapsuleComponent;
 class UParticleSystemComponent;
+class UPrimitiveComponent;
 
 UCLASS(Blueprintable)
 class AWallSaw : public AActor {

@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OnProfileUIClosedBPDelegate.h"
-#include "OnShowWebUrlClosedBPDelegate.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
-#include "EBlueprintablePrivilegeResults.h"
-#include "EBlueprintableUserPrivileges.h"
-#include "OnGetUserPrivilegeCompleteBPDelegateDelegate.h"
 #include "EInviteBlockReason.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
+#include "OnShowWebUrlClosedBPDelegate.h"
+#include "OnGetUserPrivilegeCompleteBPDelegateDelegate.h"
+#include "EBlueprintableUserPrivileges.h"
+#include "EBlueprintablePrivilegeResults.h"
+#include "OnProfileUIClosedBPDelegate.h"
 #include "FSDOnlineSystemUtils.generated.h"
 
 class APlayerState;

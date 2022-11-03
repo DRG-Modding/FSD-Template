@@ -5,8 +5,8 @@
 
 class UFirstPersonSkeletalMeshComponent;
 class USkeletalMeshComponent;
-class UFXSystemAsset;
 class UAnimMontage;
+class UFXSystemAsset;
 
 UCLASS(Abstract, Blueprintable)
 class ADualWieldWeapon : public AAmmoDrivenWeapon {

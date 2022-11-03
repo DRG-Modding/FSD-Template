@@ -5,9 +5,9 @@
 #include "UObject/NoExportTypes.h"
 #include "SpecialEventBlueprintLibrary.generated.h"
 
+class UPlayerCharacterID;
 class USchematic;
 class UObject;
-class UPlayerCharacterID;
 
 UCLASS(Blueprintable)
 class USpecialEventBlueprintLibrary : public UBlueprintFunctionLibrary {

@@ -5,10 +5,10 @@
 #include "AnimatedItem.generated.h"
 
 class USkinnableComponent;
-class USkeletalMeshComponent;
 class UPlayerAnimInstance;
-class UAnimMontage;
+class USkeletalMeshComponent;
 class UItemCharacterAnimationSet;
+class UAnimMontage;
 
 UCLASS(Abstract, Blueprintable)
 class AAnimatedItem : public AItem {

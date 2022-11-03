@@ -3,9 +3,9 @@
 #include "Templates/SubclassOf.h"
 #include "DamageComponent.h"
 
+class AActor;
 class UObject;
 class ARessuplyPod;
-class AActor;
 
 void ARessuplyPod::SetIdling() {
 }

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DeveloperSettings.h"
-#include "EFSR2HistoryFormat.h"
 #include "EFSR2QualityMode.h"
+#include "EFSR2HistoryFormat.h"
 #include "FSR2Settings.generated.h"
 
 UCLASS(Blueprintable, DefaultConfig, config = Engine)

@@ -5,8 +5,8 @@
 
 class UMaterialInterface;
 class USkeletalMeshComponent;
-class UBeardColorVanityItem;
 class UIconSceneCaptureComponent;
+class UBeardColorVanityItem;
 
 UCLASS(Blueprintable)
 class AIconGenerationCharacter : public AIconGenerationBase {

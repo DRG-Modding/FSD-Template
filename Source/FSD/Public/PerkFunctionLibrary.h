@@ -6,10 +6,10 @@
 #include "EPerkUsageType.h"
 #include "PerkFunctionLibrary.generated.h"
 
-class UObject;
 class UPerkAsset;
-class APlayerCharacter;
+class UObject;
 class UPlayerCharacterID;
+class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class UPerkFunctionLibrary : public UBlueprintFunctionLibrary {

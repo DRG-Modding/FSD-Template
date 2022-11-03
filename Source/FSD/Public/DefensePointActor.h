@@ -6,9 +6,9 @@
 #include "EInputKeys.h"
 #include "DefensePointActor.generated.h"
 
-class USingleUsableComponent;
 class AGameEvent;
 class APlayerCharacter;
+class USingleUsableComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ADefensePointActor : public AActor {

@@ -10,8 +10,8 @@
 class USphereComponent;
 class USimpleHealthComponent;
 class USoundBase;
-class UPrimitiveComponent;
 class UStatusEffect;
+class UPrimitiveComponent;
 
 UCLASS(Blueprintable)
 class AGooGunPuddle : public AActor {

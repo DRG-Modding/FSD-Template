@@ -4,8 +4,8 @@
 #include "RecallableActor.h"
 #include "RecallableSentryGun.generated.h"
 
-class ASentryGun;
 class APlayerCharacter;
+class ASentryGun;
 
 UCLASS(Abstract, Blueprintable)
 class ARecallableSentryGun : public ARecallableActor {

@@ -5,9 +5,9 @@
 #include "FSDPawn.h"
 #include "DeepPathfinderCharacter.generated.h"
 
+class UDeepPatherFinderCharacterAfflictionComponent;
 class UDeepPathfinderMovement;
 class USkeletalMeshComponent;
-class UDeepPatherFinderCharacterAfflictionComponent;
 class UPawnAffliction;
 class UMaterialInterface;
 

@@ -4,8 +4,8 @@
 #include "UObject/NoExportTypes.h"
 #include "SentryGunAnimInstance.generated.h"
 
-class ASentryGun;
 class ARedeployableSentryGun;
+class ASentryGun;
 
 UCLASS(Abstract, Blueprintable, NonTransient)
 class USentryGunAnimInstance : public UAnimInstance {

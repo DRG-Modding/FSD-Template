@@ -1,7 +1,7 @@
 #include "AIFunctionLibrary.h"
 
-class UObject;
 class AActor;
+class UObject;
 class APlayerCharacter;
 class APawn;
 class UAttackerPositioningComponent;

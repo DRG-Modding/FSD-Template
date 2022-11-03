@@ -3,11 +3,11 @@
 #include "CSGBuilderBase.h"
 #include "CSGBuilder.generated.h"
 
-class UCSGPreviewScene;
+class UTerrainMaterialCore;
 class UCSGGroupComponent;
 class UBakeConfig;
-class UTerrainMaterialCore;
 class UCSGBase;
+class UCSGPreviewScene;
 
 UCLASS(Blueprintable)
 class FSDENGINE_API ACSGBuilder : public ACSGBuilderBase {

@@ -3,8 +3,8 @@
 #include "GameFramework/Actor.h"
 #include "DebrisLocationFinder.generated.h"
 
-class UDebrisPositioning;
 class UTerrainPlacementComponent;
+class UDebrisPositioning;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API ADebrisLocationFinder : public AActor {

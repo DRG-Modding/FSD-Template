@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BinaryTerrainMaterialCombiner.h"
 #include "CSGBase.h"
 #include "DeepCSGNode.h"
 #include "DeepCSGFloatTree.h"
 #include "MeshCellNoiseProperties.h"
+#include "BinaryTerrainMaterialCombiner.h"
 #include "UObject/NoExportTypes.h"
 #include "CSGCellNoise.generated.h"
 

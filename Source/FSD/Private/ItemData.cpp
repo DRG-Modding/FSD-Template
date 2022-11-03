@@ -1,8 +1,8 @@
 #include "ItemData.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
 class UTexture2D;
+class AActor;
 
 UTexture2D* UItemData::GetPreviewImage() const {
     return NULL;

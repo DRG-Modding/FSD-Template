@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
+#include "UObject/NoExportTypes.h"
 #include "GameplayTagAssetInterface.h"
+#include "MiningPodDialogs.h"
+#include "GameplayTagContainer.h"
 #include "GameplayTagContainer.h"
 #include "EMiningPodMission.h"
-#include "MiningPodDialogs.h"
 #include "EMiningPodState.h"
 #include "EMiningPodRampState.h"
 #include "UObject/NoExportTypes.h"
-#include "GameplayTagContainer.h"
 #include "MiningPod.generated.h"
 
+class UBoxComponent;
+class UCurveFloat;
 class AMolly;
 class UAutoCarverComponent;
-class UCurveFloat;
-class UObject;
-class AMiningPod;
-class UBoxComponent;
 class UOutlineComponent;
 class UObjectivesManager;
+class AMiningPod;
+class UObject;
 
 UCLASS(Blueprintable)
 class FSD_API AMiningPod : public AActor, public IGameplayTagAssetInterface {

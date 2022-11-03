@@ -4,8 +4,8 @@
 #include "BlueprintRegisterSessionInviteNotificationDelegateDelegate.h"
 #include "RegisterSessionInviteNotificationBlueprintCallProxy.generated.h"
 
-class URegisterSessionInviteNotificationBlueprintCallProxy;
 class UObject;
+class URegisterSessionInviteNotificationBlueprintCallProxy;
 
 UCLASS(Blueprintable)
 class URegisterSessionInviteNotificationBlueprintCallProxy : public UOnlineBlueprintCallProxyBase {

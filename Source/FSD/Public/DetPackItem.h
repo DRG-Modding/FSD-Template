@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Upgradable.h"
 #include "AnimatedItem.h"
+#include "Upgradable.h"
 #include "UpgradableGear.h"
 #include "DetPackItem.generated.h"
 
 class USkeletalMeshComponent;
-class ADetPack;
-class AItem;
 class UAnimMontage;
+class ADetPack;
+class UItemUpgrade;
+class AItem;
 class UForceFeedbackEffect;
 class UCapacityHoldingItemAggregator;
 class UDialogDataAsset;
-class UItemUpgrade;
 
 UCLASS(Blueprintable)
 class ADetPackItem : public AAnimatedItem, public IUpgradable, public IUpgradableGear {

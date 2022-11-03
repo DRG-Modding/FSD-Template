@@ -5,5 +5,6 @@ FArmorHealthItem::FArmorHealthItem() {
     this->HealthIsBreakPercentage = false;
     this->OverrideAffectedByAmorBreak = false;
     this->NewAffectedByArmorBreak = false;
+    this->OverrideArmorDamageEnabled = false;
 }
 

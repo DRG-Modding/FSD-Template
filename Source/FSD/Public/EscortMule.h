@@ -2,28 +2,28 @@
 #include "CoreMinimal.h"
 #include "TriggerAI.h"
 #include "FSDPawn.h"
+#include "DelegateDelegate.h"
 #include "MuleActivatedSignatureDelegate.h"
-#include "SpeedChangedSignatureDelegate.h"
 #include "IntDelegateDelegate.h"
-#include "EEscortMissionState.h"
+#include "EscortMuleMovementState.h"
+#include "SpeedChangedSignatureDelegate.h"
 #include "GaragePathSignatureDelegate.h"
 #include "FloatDelegateDelegate.h"
-#include "DelegateDelegate.h"
+#include "EscortMuleExtractorSlot.h"
 #include "UObject/NoExportTypes.h"
-#include "EscortMuleMovementState.h"
+#include "EEscortMissionState.h"
 #include "UObject/NoExportTypes.h"
 #include "EEscortExtractorState.h"
-#include "EscortMuleExtractorSlot.h"
 #include "EscortMule.generated.h"
 
-class USkeletalMeshComponent;
-class APlayerCharacter;
+class UOutlineComponent;
 class UFriendlyHealthComponent;
 class USimpleObjectInfoComponent;
 class URestrictedResourceBank;
 class UEscortObjective;
+class USkeletalMeshComponent;
+class APlayerCharacter;
 class UInstantUsable;
-class UOutlineComponent;
 class AExtractorItem;
 
 UCLASS(Blueprintable)

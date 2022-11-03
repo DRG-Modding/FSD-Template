@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "Engine/DataAsset.h"
 #include "OnMilestoneClaimedDelegate.h"
+#include "Engine/DataAsset.h"
 #include "OnMilestoneReachedDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "MilestoneTier.h"
 #include "MilestoneAsset.generated.h"
 
-class UTexture2D;
 class UMissionStat;
+class UTexture2D;
 class UPlayerCharacterID;
 class UMilestoneAsset;
 class UObject;

@@ -4,8 +4,8 @@
 #include "LaserPointerTarget.h"
 #include "DroneControllerBase.generated.h"
 
-class ADroneBase;
 class APlayerCharacter;
+class ADroneBase;
 
 UCLASS(Blueprintable)
 class ADroneControllerBase : public AAIController {

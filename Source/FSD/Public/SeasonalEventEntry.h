@@ -3,8 +3,8 @@
 #include "SeasonalEventEntry.generated.h"
 
 class USpecialEvent;
-class UMutator;
 class UMissionTemplate;
+class UMutator;
 
 USTRUCT(BlueprintType)
 struct FSeasonalEventEntry {

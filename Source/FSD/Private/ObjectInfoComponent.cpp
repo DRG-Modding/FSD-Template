@@ -1,8 +1,8 @@
 #include "ObjectInfoComponent.h"
 
+class UTexture2D;
 class UPrimitiveComponent;
 class UDialogDataAsset;
-class UTexture2D;
 class UActorContextWidget;
 class APlayerController;
 

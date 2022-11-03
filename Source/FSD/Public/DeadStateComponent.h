@@ -3,8 +3,8 @@
 #include "CharacterStateComponent.h"
 #include "DeadStateComponent.generated.h"
 
-class UParticleSystem;
 class UAnimMontage;
+class UParticleSystem;
 
 UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UDeadStateComponent : public UCharacterStateComponent {

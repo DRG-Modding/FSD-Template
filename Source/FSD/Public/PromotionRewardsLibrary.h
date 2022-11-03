@@ -4,8 +4,8 @@
 #include "ClaimableRewardEntry.h"
 #include "PromotionRewardsLibrary.generated.h"
 
-class APlayerController;
 class UObject;
+class APlayerController;
 
 UCLASS(Blueprintable)
 class UPromotionRewardsLibrary : public UBlueprintFunctionLibrary {

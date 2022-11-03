@@ -2,25 +2,25 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "ChargedWeapon.h"
+#include "ShotMultiplier.h"
 #include "ContrailSettings.h"
+#include "UObject/NoExportTypes.h"
 #include "CoilMaterial.h"
 #include "Curves/CurveFloat.h"
 #include "Engine/NetSerialization.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "ShotMultiplier.h"
 #include "BulletPathSegment.h"
 #include "CoilGun.generated.h"
 
+class UNiagaraComponent;
+class UPrimitiveComponent;
 class UNiagaraSystem;
 class UDamageComponent;
-class UNiagaraComponent;
 class UCoilgunTrailSpawner;
 class UStaticMesh;
 class UStatusEffect;
 class ACoilgunWeaponTrail;
 class AActor;
-class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
 class UHealthComponentBase;
 

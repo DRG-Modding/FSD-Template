@@ -6,10 +6,10 @@
 #include "FuelLineSegment.generated.h"
 
 class USceneComponent;
-class USplineComponent;
 class USplineMeshComponent;
-class UStaticMeshComponent;
+class USplineComponent;
 class USimpleHealthComponent;
+class UStaticMeshComponent;
 class UHealthComponentBase;
 
 UCLASS(Abstract, Blueprintable)

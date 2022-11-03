@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EnemyAnimInstance.h"
-#include "FootStepNotifyTarget.h"
 #include "EMoveDirection.h"
+#include "FootStepNotifyTarget.h"
 #include "UObject/NoExportTypes.h"
 #include "RandomWalkCycleEntry.h"
 #include "ESpiderDeathAnimationCategory.h"
 #include "SpiderAnimInstance.generated.h"
 
-class UAnimSequenceBase;
-class UEnemyPlaySoundKey;
 class USoundCue;
-class UParticleSystem;
 class UEnemySpawnEffectsKey;
+class UEnemyPlaySoundKey;
+class UParticleSystem;
+class UAnimSequenceBase;
 
 UCLASS(Blueprintable, NonTransient)
 class USpiderAnimInstance : public UEnemyAnimInstance, public IFootStepNotifyTarget {

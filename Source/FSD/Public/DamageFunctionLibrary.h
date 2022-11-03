@@ -6,13 +6,13 @@
 #include "DamageData.h"
 #include "DamageFunctionLibrary.generated.h"
 
-class UObject;
-class UFSDPhysicalMaterial;
-class UDamageTag;
-class UDamageImpulse;
 class UPawnStatsComponent;
+class UFSDPhysicalMaterial;
 class UDamageClass;
+class UDamageTag;
+class UObject;
 class AActor;
+class UDamageImpulse;
 class USkeletalMeshComponent;
 class ULimbDismembermentList;
 

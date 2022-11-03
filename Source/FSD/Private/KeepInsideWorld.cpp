@@ -1,7 +1,7 @@
 #include "KeepInsideWorld.h"
 
-class UObject;
 class AActor;
+class UObject;
 
 void UKeepInsideWorld::UnregisterForKeepInsideWorld(UObject* WorldContextObject, AActor* Actor) {
 }

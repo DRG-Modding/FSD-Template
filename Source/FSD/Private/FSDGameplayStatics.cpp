@@ -1,7 +1,7 @@
 #include "FSDGameplayStatics.h"
 
-class UObject;
 class AActor;
+class UObject;
 class UFXSystemComponent;
 class UDecalComponent;
 class UMaterialInterface;

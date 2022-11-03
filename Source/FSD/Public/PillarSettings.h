@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PillarSegment.h"
-#include "Engine/DataAsset.h"
 #include "RandRange.h"
+#include "Engine/DataAsset.h"
+#include "PillarSegment.h"
 #include "PillarSettings.generated.h"
 
 class UFloodFillSettings;

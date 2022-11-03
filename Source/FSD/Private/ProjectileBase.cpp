@@ -2,11 +2,11 @@
 #include "Net/UnrealNetwork.h"
 #include "Components/SphereComponent.h"
 
-class AProjectileBase;
-class UFSDPhysicalMaterial;
 class UTerrainMaterial;
-class UPrimitiveComponent;
 class UDamageComponent;
+class AProjectileBase;
+class UPrimitiveComponent;
+class UFSDPhysicalMaterial;
 class AActor;
 
 UTerrainMaterial* AProjectileBase::TryGetTerrainMaterial() const {

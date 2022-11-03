@@ -6,9 +6,9 @@
 #include "UpgradeValues.h"
 #include "TriggeredStatusEffectUpgrade.generated.h"
 
+class UStatusEffect;
 class AFSDPlayerState;
 class AActor;
-class UStatusEffect;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UTriggeredStatusEffectUpgrade : public UItemUpgrade {

@@ -8,8 +8,8 @@
 
 class UPointLightComponent;
 class UGrabberComponent;
-class UAudioComponent;
 class UCapsuleComponent;
+class UAudioComponent;
 class UInDangerComponent;
 class USoundBase;
 class UAnimSequenceBase;

@@ -7,18 +7,18 @@
 #include "ECampaignMutators.h"
 #include "Campaign.generated.h"
 
-class APlayerController;
-class UCampaignMission;
-class UPlayerCharacterID;
-class UDialogDataAsset;
-class UReward;
 class UDifficultySetting;
+class UReward;
+class UCampaignMission;
+class UDialogDataAsset;
+class UPlayerCharacterID;
 class UCampaignRequirement;
 class UTexture2D;
-class AFSDPlayerController;
 class UMissionStat;
 class UGameActivityAssignmentType;
 class UCampaign;
+class AFSDPlayerController;
+class APlayerController;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API UCampaign : public UObject {

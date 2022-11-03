@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "CharacterStateComponent.h"
 #include "ZipLineConnectorHandler.h"
-#include "DamageData.h"
 #include "ZipLine.h"
+#include "DamageData.h"
 #include "UObject/NoExportTypes.h"
 #include "ZipLineStateComponent.generated.h"
 
+class USoundBase;
 class AZipLineProjectile;
 class UDialogDataAsset;
-class USoundBase;
 class UAudioComponent;
 
 UCLASS(Abstract, Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

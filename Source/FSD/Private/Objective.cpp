@@ -4,8 +4,8 @@
 
 class UResourceData;
 class UObjectiveWidget;
-class UOptionalObjectiveWidget;
 class UTexture2D;
+class UOptionalObjectiveWidget;
 class UObjective;
 
 void UObjective::SignalObjectiveUpdated() {

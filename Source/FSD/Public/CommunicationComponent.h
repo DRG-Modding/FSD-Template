@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "MissionShoutDelegateDelegate.h"
 #include "Components/ActorComponent.h"
+#include "MissionShoutDelegateDelegate.h"
 #include "MissionShoutEndDelegateDelegate.h"
-#include "GameplayTagContainer.h"
 #include "ActiveOutline.h"
+#include "GameplayTagContainer.h"
 #include "MissionShoutQueueItem.h"
 #include "EShoutType.h"
 #include "UObject/NoExportTypes.h"
 #include "EAsyncLoadPriority.h"
 #include "CommunicationComponent.generated.h"
 
-class UDialogDataAsset;
 class APlayerCharacter;
 class UShoutWidget;
-class UCharacterShoutsData;
 class UAudioComponent;
+class UDialogDataAsset;
+class UCharacterShoutsData;
 class UObject;
 class USoundBase;
 

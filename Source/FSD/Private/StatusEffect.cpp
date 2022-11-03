@@ -21,7 +21,7 @@ UStatusEffect::UStatusEffect() {
     this->MaxResistance = 1.00f;
     this->DamageClass = NULL;
     this->ExclusiveKey = NULL;
-    this->ApplyImmediately = false;
+    this->TriggerTwiceOnPush = false;
     this->CanStack = false;
     this->MaxStack = 10;
     this->Duration = -1.00f;

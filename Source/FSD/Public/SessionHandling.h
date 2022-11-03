@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EMissionStructure.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "FindSessionsCallbackProxy.h"
 #include "EServerSortOrder.h"
-#include "EFSDNATType.h"
+#include "FindSessionsCallbackProxy.h"
 #include "EDisconnectReason.h"
+#include "EFSDNATType.h"
+#include "EMissionStructure.h"
 #include "FriendInfo.h"
 #include "EFSDMissionStatus.h"
 #include "UObject/NoExportTypes.h"
 #include "EServerDistance.h"
 #include "SessionHandling.generated.h"
 
+class UDifficultySetting;
 class UObject;
 class UFSDGameInstance;
 class UPlayerCharacterID;
 class APlayerCharacter;
-class UDifficultySetting;
 class UBiome;
 class UMissionTemplate;
 
@@ -97,9 +97,6 @@ public:
     
     UFUNCTION(BlueprintCallable)
     static bool GetCurrentSessionState(FString& sessionState, FString& ID);
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    static bool GetBlockedUsersList(int32 localUserNum, TArray<FFriendInfo>& BlockedPlayers);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool FSDUpdateSessionInfo(UObject* WorldContextObject);

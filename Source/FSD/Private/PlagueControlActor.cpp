@@ -1,7 +1,7 @@
 #include "PlagueControlActor.h"
 #include "Net/UnrealNetwork.h"
-#include "NiagaraComponent.h"
 #include "PlagueUsable.h"
+#include "NiagaraComponent.h"
 
 class APlayerCharacter;
 
@@ -39,6 +39,7 @@ APlagueControlActor::APlagueControlActor() {
     this->CanCallPodDistance = 800.00f;
     this->IgnoreDebrisLightSphere = 100.00f;
     this->DebrisLightDistanceFromGround = 30.00f;
+    this->RemoveDebrisLightUpdateRate = 0.08f;
     this->DebugDrawDebrisLight = false;
 }
 

@@ -4,9 +4,9 @@
 #include "TattooArmorItem.h"
 #include "ArmorVanityItem.generated.h"
 
-class UAnimInstance;
 class USkeletalMesh;
 class UMaterialInterface;
+class UAnimInstance;
 class UArmorMaterialVanityItem;
 class AFSDPlayerState;
 

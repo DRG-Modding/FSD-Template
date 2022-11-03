@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Craftable.h"
 #include "SavablePrimaryDataAsset.h"
+#include "Craftable.h"
 #include "RefundableInterface.h"
 #include "Aquisitionable.h"
 #include "EVanitySlot.h"
@@ -10,8 +10,8 @@
 #include "VanityItem.generated.h"
 
 class UItemAquisitionBase;
-class UIconGenerationCameraKey;
 class UPlayerCharacterID;
+class UIconGenerationCameraKey;
 class UVanityEventSourceDataAsset;
 class UObject;
 class AFSDPlayerState;

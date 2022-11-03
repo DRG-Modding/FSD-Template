@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UsableChangedSignatureDelegate.h"
 #include "UsableComponent.h"
 #include "UsedBySignatureDelegate.h"
 #include "GenericUsableDelegateDelegate.h"
 #include "ProgressSignatureDelegate.h"
-#include "UsableChangedSignatureDelegate.h"
 #include "UserCountChangedDelegateDelegate.h"
 #include "OnFailedDelegate.h"
 #include "EInputKeys.h"
 #include "SingleUsableComponent.generated.h"
 
-class UDialogDataAsset;
 class USoundCue;
+class UDialogDataAsset;
 class UPawnStat;
 class UTexture2D;
 class UAudioComponent;

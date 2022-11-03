@@ -5,11 +5,11 @@
 #include "UObject/NoExportTypes.h"
 #include "EncounterManager.generated.h"
 
+class UEnemyGroupDescriptor;
 class UEnemyDescriptor;
 class AProceduralSetup;
 class UEnemySpawnManager;
 class UCritterDescriptor;
-class UEnemyGroupDescriptor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UEncounterManager : public UActorComponent {

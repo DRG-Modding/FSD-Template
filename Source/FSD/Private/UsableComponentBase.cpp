@@ -1,8 +1,8 @@
 #include "UsableComponentBase.h"
 
 class UUseConditionSet;
-class APlayerCharacter;
 class UTexture2D;
+class APlayerCharacter;
 
 void UUsableComponentBase::SetUseRestrictions(UUseConditionSet* set) {
 }

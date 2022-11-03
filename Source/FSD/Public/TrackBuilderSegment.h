@@ -8,8 +8,8 @@
 
 class UTrackBuilderUsable;
 class APlayerCharacter;
-class AItem;
 class UTrackBuilderConnectPoint;
+class AItem;
 class ATrackBuilderSegment;
 
 UCLASS(Blueprintable)

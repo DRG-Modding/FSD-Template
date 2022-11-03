@@ -5,8 +5,8 @@
 #include "ScaledMeshAfflictionTypeItem.generated.h"
 
 class UStaticMesh;
-class UFXSystemAsset;
 class USoundCue;
+class UFXSystemAsset;
 
 USTRUCT(BlueprintType)
 struct FScaledMeshAfflictionTypeItem {

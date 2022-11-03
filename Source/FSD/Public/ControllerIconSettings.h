@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DeveloperSettings.h"
-#include "ActionIconMapping.h"
 #include "InputTranslationTable.h"
 #include "InputCoreTypes.h"
+#include "ActionIconMapping.h"
 #include "ControllerIconSettings.generated.h"
 
 UCLASS(Blueprintable, DefaultConfig, Config=Game)

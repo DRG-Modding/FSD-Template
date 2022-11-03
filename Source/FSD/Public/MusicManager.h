@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MusicHandle.h"
-#include "Subsystems/WorldSubsystem.h"
 #include "ActiveAudioItem.h"
+#include "Subsystems/WorldSubsystem.h"
+#include "MusicHandle.h"
 #include "MusicManager.generated.h"
 
+class USoundBase;
 class UMusicCategory;
 class UMusicLibrary;
-class USoundBase;
 
 UCLASS(Blueprintable)
 class UMusicManager : public UWorldSubsystem {

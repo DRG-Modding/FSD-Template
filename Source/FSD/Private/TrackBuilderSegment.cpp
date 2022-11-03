@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 #include "TrackBuilderUsable.h"
 
-class AItem;
 class UTrackBuilderConnectPoint;
+class AItem;
 class AActor;
 class ATrackBuilderSegment;
 

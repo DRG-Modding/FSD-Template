@@ -6,9 +6,9 @@
 #include "Components/StaticMeshComponent.h"
 #include "FirstPersonStaticMeshComponent.h"
 
-class AActor;
-class APlayerCharacter;
 class UPrimitiveComponent;
+class APlayerCharacter;
+class AActor;
 
 void ABasicThrowableItem::ThrowItem(const FVector& throwForce) {
 }

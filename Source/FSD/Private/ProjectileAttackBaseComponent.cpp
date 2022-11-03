@@ -26,6 +26,7 @@ void UProjectileAttackBaseComponent::CancelMontage() {
 UProjectileAttackBaseComponent::UProjectileAttackBaseComponent() {
     this->SocketName = TEXT("RangedAttack");
     this->RotationHandling = EProjectileAttackRotationType::NoTarget_ActorForward;
+    this->FinalValidationCheck = NULL;
     this->ProjectilesIgnoreEachOther = false;
 }
 

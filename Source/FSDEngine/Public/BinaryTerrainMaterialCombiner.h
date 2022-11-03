@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BinaryMatPatterns.h"
 #include "EmptyBinaryMatProperties.h"
 #include "BinaryMatProperties.h"
+#include "BinaryMatPatterns.h"
 #include "BinaryTerrainMaterialCombiner.generated.h"
 
 USTRUCT(BlueprintType)

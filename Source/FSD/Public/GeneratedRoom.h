@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TriggerItem.h"
 #include "RoomLine.h"
-#include "RoomBox.h"
 #include "Pillar.h"
+#include "RoomBox.h"
 #include "ResourceLocation.h"
-#include "RoomItem.h"
 #include "RoomEntrance.h"
+#include "RoomItem.h"
+#include "TriggerItem.h"
 #include "GeneratedRoom.generated.h"
 
 class UTerrainMaterial;

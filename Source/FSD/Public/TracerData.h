@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "TracerData.generated.h"
 
-class USoundCue;
 class UFXSystemAsset;
+class USoundCue;
 
 USTRUCT(BlueprintType)
 struct FTracerData {

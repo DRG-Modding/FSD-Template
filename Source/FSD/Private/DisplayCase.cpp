@@ -3,6 +3,9 @@
 #include "Components/SceneComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 
+void ADisplayCase::PlayReactionAnimation() {
+}
+
 void ADisplayCase::OnRep_ContentIndex() {
 }
 
@@ -11,9 +14,6 @@ bool ADisplayCase::GetCurrentContent(FDisplayContent& currentContent) const {
 }
 
 void ADisplayCase::ChangeContent() {
-}
-
-void ADisplayCase::All_PlayReactionAnimation_Implementation() {
 }
 
 void ADisplayCase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
@@ -27,8 +27,11 @@ ADisplayCase::ADisplayCase() {
     this->ContentAttachPoint = NULL;
     this->ContentMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ContentMesh"));
     this->RotaionSpeed = 0.00f;
+    this->BeerMugSpawnChancePercent = 0.00f;
+    this->BarrelSpawnChancePercent = 0.10f;
     this->TimeMultiplier = 0.50f;
     this->SizeMultiplier = 1.00f;
     this->ContentIndex = -1;
+    this->BeerMugShout = NULL;
 }
 

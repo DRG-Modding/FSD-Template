@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "GameFramework/Actor.h"
 #include "PathObstacle.h"
+#include "GameFramework/Actor.h"
+#include "UObject/NoExportTypes.h"
 #include "NoisyPathfinderTest.generated.h"
 
+class UFloodFillSettings;
 class UTunnelSegmentSetting;
 class UTunnelParameters;
-class UFloodFillSettings;
 class ADeepCSGWorld;
 
 UCLASS(Blueprintable)

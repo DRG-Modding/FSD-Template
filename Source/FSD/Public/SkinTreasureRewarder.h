@@ -3,8 +3,8 @@
 #include "TreasureRewarder.h"
 #include "SkinTreasureRewarder.generated.h"
 
-class UItemSkin;
 class UItemID;
+class UItemSkin;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USkinTreasureRewarder : public UTreasureRewarder {

@@ -3,9 +3,9 @@
 #include "Objective.h"
 #include "ProspectorObjective.generated.h"
 
-class UHealthComponentBase;
-class AProspectorRobot;
 class UDebrisPositioning;
+class AProspectorRobot;
+class UHealthComponentBase;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UProspectorObjective : public UObjective {

@@ -5,9 +5,9 @@
 #include "UObject/NoExportTypes.h"
 #include "ExplosionBaseComponent.generated.h"
 
-class UPhysicalMaterial;
-class UDamageComponent;
 class UPrimitiveComponent;
+class UDamageComponent;
+class UPhysicalMaterial;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UExplosionBaseComponent : public UActorComponent {

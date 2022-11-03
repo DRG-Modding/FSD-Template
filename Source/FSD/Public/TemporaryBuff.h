@@ -3,9 +3,9 @@
 #include "Engine/DataAsset.h"
 #include "TemporaryBuff.generated.h"
 
-class UTexture2D;
-class AFSDPlayerController;
 class APlayerCharacter;
+class AFSDPlayerController;
+class UTexture2D;
 
 UCLASS(Abstract, Blueprintable)
 class UTemporaryBuff : public UDataAsset {

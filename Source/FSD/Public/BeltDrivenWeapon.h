@@ -4,8 +4,8 @@
 #include "BeltDrivenWeapon.generated.h"
 
 class UAudioComponent;
-class USoundCue;
 class UCurveFloat;
+class USoundCue;
 
 UCLASS(Abstract, Blueprintable)
 class ABeltDrivenWeapon : public AAmmoDrivenWeapon {

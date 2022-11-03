@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ItemUpgrade.h"
 #include "ProjectileSwitch.h"
+#include "ItemUpgrade.h"
 #include "UpgradeValues.h"
 #include "WeaponSwitchProjectileUpgrade.generated.h"
 

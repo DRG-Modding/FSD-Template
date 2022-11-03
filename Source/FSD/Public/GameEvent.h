@@ -4,20 +4,20 @@
 #include "GameFramework/Actor.h"
 #include "GameplayTagAssetInterface.h"
 #include "DelegateEventDelegate.h"
+#include "GameplayTagContainer.h"
+#include "GameplayTagContainer.h"
 #include "StageCompleteSigDelegate.h"
 #include "ProgressChangedSigDelegate.h"
-#include "GameplayTagContainer.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "GameplayTagContainer.h"
 #include "GameEvent.generated.h"
 
-class UChildActorComponent;
 class AEventStarterButton;
+class UChildActorComponent;
 class UDialogDataAsset;
 class ARessuplyPod;
-class UDebrisPositioning;
 class AProceduralSetup;
+class UDebrisPositioning;
 
 UCLASS(Blueprintable)
 class FSD_API AGameEvent : public AActor, public IGameplayTagAssetInterface {

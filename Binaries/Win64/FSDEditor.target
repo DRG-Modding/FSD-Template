@@ -412,6 +412,14 @@
 			"Type": "SymbolFile"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/DSTelemetry/Binaries/Win64/UE4Editor-DSTelemetry.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/DSTelemetry/Binaries/Win64/UE4Editor-DSTelemetry.pdb",
+			"Type": "SymbolFile"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/DiscordSDK/Binaries/Win64/UE4Editor-DiscordSDK.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -1369,14 +1377,6 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/Media/WebMMedia/Binaries/Win64/UE4Editor-WebMMediaFactory.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-DSTelemetry.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-DSTelemetry.pdb",
 			"Type": "SymbolFile"
 		},
 		{
@@ -4492,6 +4492,10 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/DSTelemetry/Binaries/Win64/UE4Editor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/DiscordSDK/Binaries/Win64/UE4Editor.modules",
 			"Type": "RequiredResource"
 		},
@@ -4947,6 +4951,10 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/Runtime/Nvidia/Reflex/Reflex.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/DSTelemetry/DSTelemetry.uplugin",
 			"Type": "UFS"
 		},
 		{

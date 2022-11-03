@@ -1,9 +1,9 @@
 #include "NeedleSprayer.h"
-#include "NiagaraComponent.h"
 #include "Components/SceneComponent.h"
+#include "Components/PointLightComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "HitscanComponent.h"
-#include "Components/PointLightComponent.h"
+#include "NiagaraComponent.h"
 
 
 void ANeedleSprayer::OnHit(const FHitResult& Result, bool IsPenetrating) {

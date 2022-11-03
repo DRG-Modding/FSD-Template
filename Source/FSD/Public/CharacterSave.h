@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "ItemLoadout.h"
 #include "UObject/NoExportTypes.h"
 #include "CharacterVanitySave.h"
-#include "ItemLoadout.h"
 #include "VictoryPoseSave.h"
 #include "CharacterSave.generated.h"
 

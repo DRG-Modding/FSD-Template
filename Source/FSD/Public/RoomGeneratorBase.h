@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "GameplayTagContainer.h"
+#include "Engine/DataAsset.h"
 #include "ERoomMirroringSupport.h"
 #include "RoomGeneratorBase.generated.h"
 

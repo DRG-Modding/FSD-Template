@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
 #include "HeroInfo.h"
-#include "UObject/NoExportTypes.h"
 #include "PlayerCharacterData.generated.h"
 
 class UPlayerCharacterID;

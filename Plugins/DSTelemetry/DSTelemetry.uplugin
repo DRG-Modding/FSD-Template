@@ -1,0 +1,25 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "DSTelemetry",
+	"Description": "",
+	"Category": "Other",
+	"CreatedBy": "Koch Media GmbH",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EngineVersion": "4.27.0",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "DSTelemetry",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}

@@ -2,9 +2,9 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
+class UStatusEffect;
 class UProjectileLauncherBaseComponent;
 class AProjectileBase;
-class UStatusEffect;
 class AActor;
 class UAnimMontage;
 

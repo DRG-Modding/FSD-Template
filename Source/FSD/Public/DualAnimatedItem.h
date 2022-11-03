@@ -4,10 +4,10 @@
 #include "DualAnimatedItem.generated.h"
 
 class UAnimInstance;
-class USkeletalMeshComponent;
 class UPlayerAnimInstance;
-class UAnimMontage;
+class USkeletalMeshComponent;
 class UItemCharacterAnimationSet;
+class UAnimMontage;
 
 UCLASS(Abstract, Blueprintable)
 class ADualAnimatedItem : public AItem {

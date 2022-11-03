@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EnemyPawn.h"
-#include "AttackingPointInterface.h"
 #include "Engine/NetSerialization.h"
+#include "AttackingPointInterface.h"
 #include "ECaveLeechState.h"
 #include "UObject/NoExportTypes.h"
 #include "CaveLeech.generated.h"
 
-class UPawnAffliction;
 class USkeletalMeshComponent;
 class UGrabberComponent;
+class UPawnAffliction;
 class AActor;
 class UHealthComponent;
 class USceneComponent;

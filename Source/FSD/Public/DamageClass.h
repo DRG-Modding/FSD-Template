@@ -5,8 +5,8 @@
 
 class UPawnStat;
 class UTexture2D;
-class UDialogDataAsset;
 class UDamageImpulse;
+class UDialogDataAsset;
 
 UCLASS(Blueprintable)
 class UDamageClass : public UDataAsset {

@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "SimpleObjectInfoData.h"
 #include "ObjectInfoComponent.h"
+#include "SimpleObjectInfoData.h"
 #include "SimpleObjectInfoComponent.generated.h"
 
-class USceneComponent;
 class UDialogDataAsset;
 class UTexture2D;
+class USceneComponent;
 class UActorContextWidget;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

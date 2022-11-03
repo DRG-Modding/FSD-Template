@@ -3,8 +3,8 @@
 #include "MusicHandle.h"
 #include "ActiveMusicItem.generated.h"
 
-class USoundBase;
 class UMusicCategory;
+class USoundBase;
 
 USTRUCT(BlueprintType)
 struct FActiveMusicItem {

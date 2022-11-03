@@ -5,11 +5,11 @@
 #include "PlagueCleanerResourceChangedDelegate.h"
 #include "SoapVacuumItem.generated.h"
 
-class UPrimitiveComponent;
 class UCapsuleComponent;
 class UNiagaraComponent;
-class AFoamPuddle;
 class AActor;
+class AFoamPuddle;
+class UPrimitiveComponent;
 class USceneComponent;
 
 UCLASS(Blueprintable)

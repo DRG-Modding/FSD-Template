@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HeightenedSenseTracker.h"
 #include "FloatPerkComponent.h"
+#include "HeightenedSenseTracker.h"
 #include "HeightenedSenseComponent.generated.h"
 
 class UPawnAffliction;

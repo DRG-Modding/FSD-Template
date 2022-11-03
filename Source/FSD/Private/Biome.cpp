@@ -2,12 +2,12 @@
 #include "Templates/SubclassOf.h"
 
 class UTerrainMaterial;
-class UObject;
-class UTexture2D;
-class AActor;
-class ADebrisDataActor;
 class UMaterialInstance;
+class AActor;
+class UObject;
+class ADebrisDataActor;
 class UUserWidget;
+class UTexture2D;
 class UParticleSystem;
 class USoundCue;
 

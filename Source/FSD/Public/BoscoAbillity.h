@@ -4,8 +4,8 @@
 #include "EBoscoAbillityTargetPreference.h"
 #include "BoscoAbillity.generated.h"
 
-class USoundBase;
 class UAnimSequenceBase;
+class USoundBase;
 
 UCLASS(Blueprintable)
 class UBoscoAbillity : public UDataAsset {

@@ -4,28 +4,28 @@
 #include "AmmoDrivenWeapon.h"
 #include "LensActivedDelegateDelegate.h"
 #include "LensDeactivedDelegateDelegate.h"
-#include "MicrowaveLense.h"
-#include "Engine/NetSerialization.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/NetSerialization.h"
+#include "MicrowaveLense.h"
 #include "MultiHitscanHit.h"
 #include "UObject/NoExportTypes.h"
 #include "MultiHitScanHits.h"
 #include "MicrowaveWeapon.generated.h"
 
-class UDamageComponent;
-class UHealthComponentBase;
 class UFirstPersonNiagaraComponent;
+class UEnemyTemperatureComponent;
+class UDamageComponent;
+class USoundCue;
 class UCapsuleHitscanComponent;
 class UNiagaraComponent;
 class UStatusEffect;
 class ABoil;
+class UPrimitiveComponent;
 class UNiagaraSystem;
 class UParticleSystem;
-class USoundCue;
 class AActor;
 class UFSDPhysicalMaterial;
-class UEnemyTemperatureComponent;
-class UPrimitiveComponent;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class FSD_API AMicrowaveWeapon : public AAmmoDrivenWeapon {

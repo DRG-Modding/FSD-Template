@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "DashSigDelegate.h"
-#include "Engine/NetSerialization.h"
-#include "Curves/CurveFloat.h"
 #include "EDashPointsGenerationMode.h"
+#include "Engine/NetSerialization.h"
 #include "UObject/NoExportTypes.h"
+#include "Curves/CurveFloat.h"
 #include "DashPoints.generated.h"
 
-class UHealthComponentBase;
 class AActor;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UDashPoints : public UActorComponent {

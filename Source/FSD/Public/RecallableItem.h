@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "Upgradable.h"
 #include "AnimatedItem.h"
+#include "Upgradable.h"
+#include "UObject/NoExportTypes.h"
 #include "RecallableItem.generated.h"
 
-class AActor;
 class ARecallableActor;
+class AActor;
 
 UCLASS(Abstract, Blueprintable)
 class ARecallableItem : public AAnimatedItem, public IUpgradable {

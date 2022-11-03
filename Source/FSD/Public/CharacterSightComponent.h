@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/EngineTypes.h"
 #include "Components/ActorComponent.h"
+#include "Engine/EngineTypes.h"
 #include "ReplicatedCharacterData.h"
 #include "UObject/NoExportTypes.h"
 #include "CharacterSightComponent.generated.h"
 
-class UTemperatureComponent;
 class AActor;
 class USimpleObjectInfoComponent;
-class UPrimitiveComponent;
 class APlayerCharacter;
+class UPrimitiveComponent;
+class UTemperatureComponent;
 class UPawnAfflictionComponent;
 class UHealth;
 class IHealth;

@@ -5,8 +5,8 @@
 #include "UObject/NoExportTypes.h"
 #include "CaveLeechAnimInstance.generated.h"
 
-class USceneComponent;
 class ACaveLeech;
+class USceneComponent;
 
 UCLASS(Blueprintable, NonTransient)
 class UCaveLeechAnimInstance : public UAnimInstance {

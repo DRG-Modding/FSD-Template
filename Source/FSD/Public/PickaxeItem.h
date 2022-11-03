@@ -3,29 +3,29 @@
 #include "Templates/SubclassOf.h"
 #include "Item.h"
 #include "UpgradableGear.h"
-#include "CoolDownProgressStyle.h"
 #include "PickaxePartEquip.h"
+#include "CoolDownProgressStyle.h"
 #include "GameplayTagContainer.h"
-#include "EPickaxeState.h"
-#include "Engine/NetSerialization.h"
 #include "EPickaxePartLocation.h"
+#include "EPickaxeState.h"
 #include "PickaxeMeshInstance.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/NetSerialization.h"
+#include "Engine/NetSerialization.h"
 #include "PickaxeItem.generated.h"
 
+class UFXSystemAsset;
+class UStatusEffect;
 class UDamageComponent;
 class UItemCharacterAnimationSet;
+class UFSDPhysicalMaterial;
+class UAnimMontage;
 class USceneComponent;
 class UPlayerAnimInstance;
-class UAnimMontage;
-class UStatusEffect;
-class UFXSystemAsset;
 class USoundCue;
 class UForceFeedbackEffect;
 class UMaterialInterface;
 class UPrimitiveComponent;
-class UFSDPhysicalMaterial;
 
 UCLASS(Abstract, Blueprintable)
 class APickaxeItem : public AItem, public IUpgradableGear, public IPickaxePartEquip {

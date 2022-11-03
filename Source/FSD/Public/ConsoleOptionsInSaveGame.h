@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ControllerSettings.h"
-#include "UDLSSMode.h"
 #include "HUDElements.h"
 #include "EConsoleGraphicsMode.h"
+#include "UDLSSMode.h"
 #include "CharacterOptions.h"
 #include "CustomKeyBinding.h"
 #include "ConsoleOptionsInSaveGame.generated.h"

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Engine/EngineTypes.h"
 #include "WeaponFireComponent.h"
+#include "Engine/EngineTypes.h"
 #include "Engine/NetSerialization.h"
 #include "ZiplineLauncherComponent.generated.h"
 

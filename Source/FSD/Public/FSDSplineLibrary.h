@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "Engine/EngineTypes.h"
-#include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
+#include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
@@ -15,11 +15,11 @@
 #include "EPreciousMaterialOptions.h"
 #include "FSDSplineLibrary.generated.h"
 
-class USplineMeshComponent;
 class USplineComponent;
 class AActor;
 class UObject;
 class UTerrainMaterial;
+class USplineMeshComponent;
 
 UCLASS(Blueprintable)
 class UFSDSplineLibrary : public UBlueprintFunctionLibrary {

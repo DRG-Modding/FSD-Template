@@ -5,9 +5,9 @@
 #include "UpgradeValues.h"
 #include "WeaponHitCounterUpgrade.generated.h"
 
+class UWeaponHitCounterComponent;
 class AActor;
 class AFSDPlayerState;
-class UWeaponHitCounterComponent;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UWeaponHitCounterUpgrade : public UItemUpgrade {

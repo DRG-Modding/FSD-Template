@@ -8,12 +8,12 @@
 #include "TerminatorTarget.h"
 #include "TerminatorTentacle.generated.h"
 
-class UAnimSequenceBase;
-class UAnimMontage;
 class USkeletalMeshComponent;
+class UAnimMontage;
+class UAnimSequenceBase;
 class UGrabberComponent;
-class UHealthComponentBase;
 class AActor;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class FSD_API ATerminatorTentacle : public ATentacleBase, public ITriggerAI, public IAttackingPointInterface {

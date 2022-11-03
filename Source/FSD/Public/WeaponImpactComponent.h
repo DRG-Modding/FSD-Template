@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "HightAccelerationSignatureDelegate.h"
 #include "ImpactedSignatureDelegate.h"
+#include "HightAccelerationSignatureDelegate.h"
 #include "WeaponImpactComponent.generated.h"
 
 class USkeletalMeshComponent;

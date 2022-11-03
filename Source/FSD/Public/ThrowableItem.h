@@ -2,15 +2,15 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
-#include "Upgradable.h"
 #include "AnimatedItem.h"
+#include "Upgradable.h"
 #include "ThrowableItem.generated.h"
 
-class AActor;
-class UItemUpgrade;
 class AThrowableActor;
 class UAnimMontage;
 class AItem;
+class UItemUpgrade;
+class AActor;
 
 UCLASS(Blueprintable)
 class AThrowableItem : public AAnimatedItem, public IUpgradable {

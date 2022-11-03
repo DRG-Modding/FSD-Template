@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
+#include "UObject/NoExportTypes.h"
 #include "ECommunityGoalTier.h"
 #include "ECommunityGoalType.h"
 #include "CommunityGoal.generated.h"
 
 class UCommunityGoalCategory;
-class UCommnuityRewardSetup;
 class UObject;
+class UCommnuityRewardSetup;
 
 UCLASS(Blueprintable)
 class UCommunityGoal : public UDataAsset {

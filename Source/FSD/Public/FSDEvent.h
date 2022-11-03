@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
-#include "ClaimableRewardView.h"
+#include "UObject/NoExportTypes.h"
 #include "FSDEventActivateChangedDelegate.h"
 #include "EHolidayType.h"
+#include "ClaimableRewardView.h"
 #include "FSDEvent.generated.h"
 
-class UWorld;
-class ADebrisDataActor;
 class UDrinkableDataAsset;
+class UWorld;
+class UFSDEvent;
+class ADebrisDataActor;
 class UCampaign;
 class UTexture2D;
-class APlayerController;
 class UObject;
-class UFSDEvent;
+class APlayerController;
 
 UCLASS(Blueprintable)
 class FSD_API UFSDEvent : public UDataAsset {

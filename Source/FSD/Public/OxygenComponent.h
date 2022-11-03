@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "OxygenDelegateDelegate.h"
 #include "Components/ActorComponent.h"
-#include "OxygenTriggerDelegateDelegate.h"
+#include "OxygenDelegateDelegate.h"
 #include "OxygenActiveDelegateDelegate.h"
+#include "OxygenTriggerDelegateDelegate.h"
 #include "OxygenCallback.h"
 #include "OxygenComponent.generated.h"
 
-class UStatusEffect;
 class UHealthComponentBase;
+class UStatusEffect;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UOxygenComponent : public UActorComponent {

@@ -4,8 +4,8 @@
 #include "UObject/NoExportTypes.h"
 #include "PlayerAfflictionOverlayWidget.generated.h"
 
-class UTexture2D;
 class UPlayerAfflictionOverlay;
+class UTexture2D;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UPlayerAfflictionOverlayWidget : public UUserWidget {

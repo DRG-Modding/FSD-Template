@@ -23,6 +23,10 @@ void AFSDPlayerControllerBase::Server_Cheat_SwitchCharacter_Implementation(UPlay
 
 
 
+bool AFSDPlayerControllerBase::IsPlayerBlocked(const FString& UserId) {
+    return false;
+}
+
 bool AFSDPlayerControllerBase::IsHUDVisibleFlagSet(EHUDVisibilityReason reason) {
     return false;
 }

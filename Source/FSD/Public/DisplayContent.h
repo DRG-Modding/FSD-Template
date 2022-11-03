@@ -1,10 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "DisplayContent.generated.h"
 
-class USkeletalMesh;
 class UAnimationAsset;
+class USkeletalMesh;
 
 USTRUCT(BlueprintType)
 struct FDisplayContent {
@@ -21,6 +22,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector PivotOffset;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FRotator RotationOffset;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Scale;

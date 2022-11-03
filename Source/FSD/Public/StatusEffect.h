@@ -3,14 +3,14 @@
 #include "Templates/SubclassOf.h"
 #include "UObject/Object.h"
 #include "GameplayTagContainer.h"
-#include "RandRange.h"
 #include "GameplayTagContainer.h"
+#include "RandRange.h"
 #include "StatusEffect.generated.h"
 
+class UStatusEffectExclusiveKey;
 class UPawnAffliction;
 class UStatusEffectItem;
 class UDamageClass;
-class UStatusEffectExclusiveKey;
 class UStatusEffect;
 class AActor;
 
@@ -35,7 +35,7 @@ protected:
     UStatusEffectExclusiveKey* ExclusiveKey;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool ApplyImmediately;
+    bool TriggerTwiceOnPush;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRandRange ApplyEffectsInterval;
