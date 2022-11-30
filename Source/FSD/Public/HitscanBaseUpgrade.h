@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "StandardItemUpgrade.h"
-#include "EHitScanBaseUpgradeType.h"
 #include "UpgradeValues.h"
+#include "EHitScanBaseUpgradeType.h"
 #include "HitscanBaseUpgrade.generated.h"
 
 class AFSDPlayerState;

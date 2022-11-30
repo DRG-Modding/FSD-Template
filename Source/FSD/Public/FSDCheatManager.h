@@ -5,15 +5,16 @@
 #include "CheatEventDelegate.h"
 #include "FSDCheatManager.generated.h"
 
-class UEnemyDescriptor;
+class APawn;
+class UResourceData;
 class UPlayerCharacterID;
 class AActor;
 class UBaseCritterDescriptor;
-class APawn;
+class UEnemyDescriptor;
 class AFSDAIController;
 class UObject;
+class UItemID;
 class APlayerCharacter;
-class UResourceData;
 
 UCLASS(Blueprintable)
 class FSD_API UFSDCheatManager : public UCheatManager {
@@ -178,6 +179,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Exec)
     void D_EnableMovieMode(bool Value);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObjectm"))
+    static void Cheat_UnlockWeapon(UObject* WorldContextObjectm, UItemID* ItemID);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_UnlockAllWeapons(UObject* WorldContextObject);
@@ -444,6 +448,9 @@ public:
     void C_Schematic_GiveRandom();
     
     UFUNCTION(BlueprintCallable, Exec)
+    void C_Salvage_FixMiniMules();
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void C_Revive();
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -537,6 +544,9 @@ public:
     void C_MissionMap_TestDistribution();
     
     UFUNCTION(BlueprintCallable, Exec)
+    void C_MissionMap_Rotate();
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void C_MissionMap_ForceWarning(int32 Index);
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -544,6 +554,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_MissionMap_DoubleWarning(int32 indexA, int32 indexB);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_MissionMap_AutoRotate(bool Enabled);
     
     UFUNCTION(BlueprintCallable, Exec, meta=(WorldContext="WorldContextObject"))
     void C_MinersManual_EnableWorkInProgress(UObject* WorldContextObject);
@@ -673,9 +686,6 @@ public:
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_Campaign_Advance();
-    
-    UFUNCTION(BlueprintCallable, Exec)
-    void C_AutoRotateMissionMap(bool Enabled);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_AddXP(int32 Number);

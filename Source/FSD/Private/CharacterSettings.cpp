@@ -1,8 +1,8 @@
 #include "CharacterSettings.h"
 
 class UAsyncManager;
-class UInventoryList;
 class UPlayerCharacterID;
+class UInventoryList;
 
 void UCharacterSettings::PreloadAllInventories(UAsyncManager* AsyncManager) {
 }

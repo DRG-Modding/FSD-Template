@@ -8,22 +8,22 @@
 #include "Engine/EngineTypes.h"
 #include "PatrolBot.generated.h"
 
-class UEnemyComponent;
+class UHealthComponentBase;
+class UPawnAlertComponent;
 class UHackingUsableComponent;
 class UDamageComponent;
-class UPrimitiveComponent;
 class UPawnSensingComponent;
+class UEnemyComponent;
 class USphereComponent;
 class UParticleSystemComponent;
-class AActor;
-class UPawnAlertComponent;
 class UPlayerImpactCooldownComponent;
 class UAvoidCeilingComponent;
-class UFakeMoverSettings;
 class UAudioComponent;
 class UProjectileAttackComponent;
 class USoundCue;
-class UHealthComponentBase;
+class UFakeMoverSettings;
+class AActor;
+class UPrimitiveComponent;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API APatrolBot : public AEnemyDeepPathfinderCharacter {

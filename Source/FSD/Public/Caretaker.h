@@ -4,14 +4,14 @@
 #include "ECaretakerSpawnType.h"
 #include "Caretaker.generated.h"
 
-class UEnemyHealthComponent;
-class USceneComponent;
-class USkeletalMeshComponent;
-class UPassthroughSubHealthComponent;
-class UCaretakerActionComponent;
 class UHealthDamageTracker;
+class USceneComponent;
+class UCaretakerActionComponent;
 class UPawnStatsComponent;
 class UAnimSequenceBase;
+class USkeletalMeshComponent;
+class UPassthroughSubHealthComponent;
+class UEnemyHealthComponent;
 
 UCLASS(Blueprintable)
 class FSD_API ACaretaker : public AFSDPawn {

@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Targetable.h"
 #include "TaggedActor.h"
+#include "Targetable.h"
 #include "WormSpawnDelegateDelegate.h"
 #include "Curves/CurveFloat.h"
 #include "WormPod.generated.h"
 
-class AActor;
-class UAnimMontage;
 class USceneComponent;
 class USkeletalMeshComponent;
 class USimpleHealthComponent;
+class UAnimMontage;
+class AActor;
 class UEnemyDescriptor;
 class UFXSystemAsset;
 class USoundCue;

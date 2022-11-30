@@ -6,8 +6,8 @@
 #include "GameplayTagContainer.h"
 #include "HomingDroneBomb.generated.h"
 
-class UEnemyHealthComponent;
 class USoundCue;
+class UEnemyHealthComponent;
 
 UCLASS(Blueprintable)
 class AHomingDroneBomb : public AProjectile, public IGameplayTagAssetInterface {

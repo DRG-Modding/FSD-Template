@@ -3,9 +3,9 @@
 #include "Objective.h"
 #include "PlagueObjective.generated.h"
 
+class APlagueControlActor;
 class APlagueInfectionNode;
 class UDialogDataAsset;
-class APlagueControlActor;
 class UEnemyWaveController;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -1,15 +1,15 @@
 #include "SeasonsSubsystem.h"
 
-class AFSDPlayerState;
+class UTextureRenderTarget2D;
 class UObject;
+class UPickaxePart;
 class UMissionStat;
+class AFSDPlayerState;
 class USeasonChallenge;
 class UDataAsset;
 class UVanityItem;
 class UPlayerCharacterID;
-class UTextureRenderTarget2D;
 class UItemSkin;
-class UPickaxePart;
 class USeasonEventData;
 class AFSDPlayerController;
 
@@ -175,6 +175,5 @@ bool USeasonsSubsystem::BuyTreeNode(UObject* WorldContextObject, AFSDPlayerContr
 }
 
 USeasonsSubsystem::USeasonsSubsystem() {
-    this->ForceSeasonEventIndex = -999;
 }
 

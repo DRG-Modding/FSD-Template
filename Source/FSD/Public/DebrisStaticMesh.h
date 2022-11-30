@@ -1,9 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EDebrisMeshShadows.h"
 #include "EDebrisMeshCollisionProfile.h"
 #include "DecalData.h"
-#include "ESpecialDebrisType.h"
-#include "EDebrisMeshShadows.h"
 #include "DebrisStaticMesh.generated.h"
 
 class UStaticMesh;
@@ -46,7 +45,7 @@ public:
     bool Durable;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    ESpecialDebrisType SpecialDebrisType;
+    int32 SpecialDebrisType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool SpawnWhenCarving;

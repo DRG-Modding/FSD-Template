@@ -1,7 +1,7 @@
 #include "EnemyComponent.h"
 
-class UEnemyID;
 class UTexture2D;
+class UEnemyID;
 
 UEnemyID* UEnemyComponent::GetID() {
     return NULL;

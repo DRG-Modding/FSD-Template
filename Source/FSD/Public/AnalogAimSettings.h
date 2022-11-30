@@ -9,9 +9,6 @@ USTRUCT(BlueprintType)
 struct FAnalogAimSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool ShowDebugOutput;
-    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D AimRate;

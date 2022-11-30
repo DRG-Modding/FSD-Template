@@ -5,10 +5,10 @@
 #include "ERedeployableSentryGunState.h"
 #include "RedeployableSentryGun.generated.h"
 
-class UActorTrackingComponent;
 class ARedeployableSentryGun;
-class APlayerCharacter;
+class UActorTrackingComponent;
 class UOutlineComponent;
+class APlayerCharacter;
 class ASentryElectroBeam;
 class AActor;
 class USkeletalMeshComponent;

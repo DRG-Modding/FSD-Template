@@ -3,8 +3,8 @@
 #include "DamageComponent.h"
 #include "Components/SphereComponent.h"
 
-class UPrimitiveComponent;
 class UHealthComponentBase;
+class UPrimitiveComponent;
 class AActor;
 
 void AFriendlyParasite::SelectNewTarget(UHealthComponentBase* Health) {

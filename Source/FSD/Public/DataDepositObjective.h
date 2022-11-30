@@ -3,8 +3,8 @@
 #include "Objective.h"
 #include "DataDepositObjective.generated.h"
 
-class UDebrisPositioning;
 class AFacilityPowerStation;
+class UDebrisPositioning;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UDataDepositObjective : public UObjective {

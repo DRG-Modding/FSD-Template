@@ -13,6 +13,9 @@ FVector AEscortMuleAIController::GetPathEndTagent() {
     return FVector{};
 }
 
+void AEscortMuleAIController::GetFullPath(TArray<FVector>& outPath) const {
+}
+
 void AEscortMuleAIController::FindDozerPath(FVector StartPosition) {
 }
 

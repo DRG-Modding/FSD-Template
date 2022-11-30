@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "PickaxeSet.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "EPickaxePartLocation.h"
-#include "PickaxeSet.h"
 #include "PickaxeFunctionLibrary.generated.h"
 
 class UObject;

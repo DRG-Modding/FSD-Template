@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UICheckDelegateDelegate.h"
 #include "UObject/Object.h"
 #include "CommunityGoalStateData.h"
 #include "CommunityFactionData.h"
+#include "UICheckDelegateDelegate.h"
 #include "OnFreeBeersChangedDelegateDelegate.h"
 #include "FactionsDataDelegateDelegate.h"
 #include "GoalStateDelegateDelegate.h"

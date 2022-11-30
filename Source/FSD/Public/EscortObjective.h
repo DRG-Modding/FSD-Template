@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Objective.h"
-#include "ShellBreakTimerSignatureDelegate.h"
-#include "UObject/NoExportTypes.h"
-#include "ShellBreakPauseChangeSignatureDelegate.h"
 #include "MuleRefueledDelegate.h"
 #include "EEscortMissionState.h"
+#include "Objective.h"
+#include "ShellBreakTimerSignatureDelegate.h"
+#include "ShellBreakPauseChangeSignatureDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "CannisterRegisteredDelegate.h"
 #include "EscortObjective.generated.h"
 
-class UDebrisPositioning;
-class UCurveFloat;
 class UDebrisBase;
+class UCurveFloat;
+class UDebrisPositioning;
 class AActor;
 class AEscortDestination;
 class UCarvedResourceData;
@@ -146,7 +146,7 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable)
-    void RecordFailStage(bool muleDied);
+    void RecordFailStage(bool muleDied, bool missionAborted);
     
     UFUNCTION(BlueprintCallable)
     void OnResourceChanged(UCappedResource* CappedResource, float Amount);

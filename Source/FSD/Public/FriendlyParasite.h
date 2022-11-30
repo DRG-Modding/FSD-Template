@@ -5,12 +5,12 @@
 #include "Engine/EngineTypes.h"
 #include "FriendlyParasite.generated.h"
 
-class AFSDPawn;
+class UHealthComponentBase;
+class AActor;
 class USphereComponent;
 class UPrimitiveComponent;
-class UHealthComponentBase;
 class UDamageComponent;
-class AActor;
+class AFSDPawn;
 
 UCLASS(Blueprintable)
 class AFriendlyParasite : public AEnemyDeepPathfinderCharacter {

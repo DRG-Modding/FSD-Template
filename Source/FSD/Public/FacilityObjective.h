@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Objective.h"
-#include "SubObjective.h"
 #include "EnemySpawnedDelegateDelegate.h"
+#include "SubObjective.h"
 #include "RandInterval.h"
 #include "IRandRange.h"
 #include "UObject/NoExportTypes.h"
@@ -12,14 +12,14 @@
 #include "FacilityObjective.generated.h"
 
 class ARessuplyPod;
+class UEnemyDescriptor;
 class AActor;
 class APawn;
-class UEnemyDescriptor;
-class UDebrisPositioning;
 class ATetherStation;
 class UResourceData;
 class AProceduralSetup;
 class UEncounterManager;
+class UDebrisPositioning;
 class UCappedResource;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -135,7 +135,7 @@ public:
     void ProgressCurrentObjective();
     
     UFUNCTION(BlueprintCallable)
-    AActor* PlaceObjectInRoom(AProceduralSetup* setup, const FRoomNode& RoomNode, UDebrisPositioning* Positioning, TSubclassOf<AActor> placementActor);
+    AActor* PlaceObjectInRoom(AProceduralSetup* setup, const FRoomNode& RoomNode, UDebrisPositioning* Positioning, TSubclassOf<AActor> placementActor, const int32 RandomSeed, const bool checkImportantLocations);
     
     UFUNCTION(BlueprintCallable)
     void OnResourceChanged(UCappedResource* Resource, float Amount);
@@ -168,6 +168,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetShieldGeneratorCount() const;
+    
+    UFUNCTION(BlueprintCallable)
+    int32 GetObjectTransformInRoom(FTransform& Transform, AProceduralSetup* setup, const FRoomNode& RoomNode, UDebrisPositioning* Positioning, TSubclassOf<AActor> placementActor, const int32 RandomSeed, const bool checkImportantLocations);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetFacilityRoomIndex() const;

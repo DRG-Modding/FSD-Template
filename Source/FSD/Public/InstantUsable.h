@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UsableChangedSignatureDelegate.h"
 #include "UsableComponent.h"
 #include "UsedBySignatureDelegate.h"
+#include "UsableChangedSignatureDelegate.h"
 #include "InstantUsable.generated.h"
 
 class USoundCue;

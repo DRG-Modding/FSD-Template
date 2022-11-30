@@ -4,24 +4,24 @@
 #include "GameFramework/PlayerState.h"
 #include "PlayerSpawnedSignatureDelegate.h"
 #include "PlayerVoiceSignatureDelegate.h"
-#include "SupplyStatusChangedDelegateDelegate.h"
 #include "SelectedCharacterChangedDelegateDelegate.h"
+#include "XPReward.h"
+#include "SupplyStatusChangedDelegateDelegate.h"
 #include "EnemyKilledSignatureDelegate.h"
-#include "CharacterProgress.h"
 #include "PlayerNameChangedSignatureDelegate.h"
 #include "FractionLevelGeneratedDelegateDelegate.h"
-#include "LevelGenerationStateSignatureDelegate.h"
 #include "RewardTexts.h"
-#include "XPReward.h"
+#include "LevelGenerationStateSignatureDelegate.h"
 #include "EGameOwnerStatus.h"
+#include "CharacterProgress.h"
 #include "CreditsReward.h"
 #include "EChatSenderType.h"
 #include "FSDPlayerState.generated.h"
 
-class UPlayerRejoinState;
 class APlayerCharacter;
 class UVanityItem;
 class UPlayerStatsComponent;
+class UPlayerRejoinState;
 class USaveGameStateComponent;
 class UPlayerResourceComponent;
 class UPlayerCharacterID;
@@ -65,7 +65,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ShouldCopyProperties;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_GameOwnerStatus)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_GameOwnerStatus, meta=(AllowPrivateAccess=true))
     uint8 gameOwnerStatus;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -110,10 +110,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UPlayerResourceComponent* PlayerResources;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_SupplyAmmoStatus)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_SupplyAmmoStatus, meta=(AllowPrivateAccess=true))
     uint8 SupplyAmmoStatus;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_SupplyHealthStatus)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_SupplyHealthStatus, meta=(AllowPrivateAccess=true))
     uint8 SupplyHealthStatus;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -139,7 +139,7 @@ protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerSetSelectedCharacter(TSubclassOf<APlayerCharacter> NewCharacter);
     
-    UFUNCTION(Reliable, Server)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetSupplyStatus(uint8 StatusHealth, uint8 StatusAmmo);
     
 public:

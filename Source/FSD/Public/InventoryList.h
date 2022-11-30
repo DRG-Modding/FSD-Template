@@ -6,10 +6,10 @@
 #include "ItemFilterDelegateDelegate.h"
 #include "InventoryList.generated.h"
 
-class UItemID;
-class UTexture2D;
-class UMaterialInterface;
 class AActor;
+class UTexture2D;
+class UItemID;
+class UMaterialInterface;
 class UObject;
 
 UCLASS(Blueprintable)

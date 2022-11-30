@@ -6,28 +6,28 @@
 #include "AllReadySignatureDelegate.h"
 #include "PlayerLoggedInDelegate.h"
 #include "CallDonkeyDelegate.h"
-#include "UObject/NoExportTypes.h"
 #include "EPauseReason.h"
+#include "UObject/NoExportTypes.h"
 #include "FSDGameMode.generated.h"
 
-class UDifficultyManager;
-class AFSDPlayerController;
+class UMissionManager;
 class UEnemySpawnManager;
 class UPheromoneSpawnerComponent;
+class UEnemyWaveManager;
 class UObjectivesManager;
 class UKeepInsideWorld;
-class UMissionManager;
 class UEncounterManager;
-class UCritterManager;
-class UFormationsManagerComponent;
 class AMiningPod;
+class UCritterManager;
+class AFSDPlayerController;
+class UFormationsManagerComponent;
 class AMolly;
-class ABosco;
 class UWidget;
+class ABosco;
 class UEnemyDescriptor;
-class UEnemyWaveManager;
 class AActor;
 class AFSDGameMode;
+class UDifficultyManager;
 class APlayerController;
 class APlayerCharacter;
 
@@ -186,6 +186,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TSubclassOf<AMolly> GetMuleClass() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool GetMissionWasAborted();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UEncounterManager* GetEncounterManager() const;

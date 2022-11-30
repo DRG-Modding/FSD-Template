@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Components/SplineMeshComponent.h"
 #include "Curves/CurveFloat.h"
+#include "Components/SplineMeshComponent.h"
 #include "UObject/NoExportTypes.h"
 #include "SplinePlant.generated.h"
 
-class USoundCue;
-class USplineComponent;
-class UStaticMesh;
-class UAudioComponent;
 class USceneComponent;
+class UAudioComponent;
+class USplineComponent;
+class USoundCue;
+class UStaticMesh;
 class USplineMeshComponent;
 
 UCLASS(Blueprintable)
@@ -48,7 +48,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UStaticMesh> SegmentMeshPtr;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ESplineMeshAxis::Type> SegmentForwardAxis;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -5,8 +5,8 @@
 #include "Craftable.generated.h"
 
 class UObject;
-class AFSDPlayerState;
 class UPlayerCharacterID;
+class AFSDPlayerState;
 
 UINTERFACE(BlueprintType, meta=(CannotImplementInterfaceInBlueprint))
 class FSD_API UCraftable : public UInterface {

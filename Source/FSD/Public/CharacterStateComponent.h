@@ -4,16 +4,16 @@
 #include "PlaySoundInterface.h"
 #include "CharacterStateComponent.generated.h"
 
-class UPlayerMovementComponent;
 class APlayerCharacter;
 class UDialogDataAsset;
+class UPlayerMovementComponent;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCharacterStateComponent : public UActorComponent, public IPlaySoundInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 StateId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -54,7 +54,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetStateTime() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     uint8 GetStateID() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

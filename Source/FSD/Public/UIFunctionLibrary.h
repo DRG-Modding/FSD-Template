@@ -3,10 +3,10 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "UIFunctionLibrary.generated.h"
 
-class UMissionNameBank;
 class UObject;
-class UNewsTextLists;
+class UMissionNameBank;
 class UPlayerCharacterID;
+class UNewsTextLists;
 
 UCLASS(Blueprintable)
 class UUIFunctionLibrary : public UBlueprintFunctionLibrary {

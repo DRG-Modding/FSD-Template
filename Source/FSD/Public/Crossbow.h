@@ -6,10 +6,10 @@
 #include "Crossbow.generated.h"
 
 class AProjectileBase;
-class UStatusEffect;
-class UCrossbowProjectileRecallable;
 class AActor;
+class UStatusEffect;
 class ACrossbowProjectileStuck;
+class UCrossbowProjectileRecallable;
 class UStaticMesh;
 class UAnimMontage;
 class USoundCue;
@@ -88,6 +88,15 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimMontage* CharacterSwitchMontage;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UAnimMontage* ReloadMontage;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UAnimMontage* ReloadMontage_TP;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UAnimMontage* CharacterReloadMontage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundCue*> ReloadSoundCues;

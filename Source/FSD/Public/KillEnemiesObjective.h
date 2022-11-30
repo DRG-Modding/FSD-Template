@@ -5,8 +5,8 @@
 
 class UDebrisPositioning;
 class UEnemyDescriptor;
-class UHealthComponentBase;
 class APawn;
+class UHealthComponentBase;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UKillEnemiesObjective : public UObjective {

@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "ProjectileAttackComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "ProjectileThrowerAttack.generated.h"
 
-class UAnimMontage;
-class USkeletalMesh;
 class UAnimInstance;
+class USkeletalMesh;
+class UAnimMontage;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UProjectileThrowerAttack : public UProjectileAttackComponent {

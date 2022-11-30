@@ -7,8 +7,8 @@
 #include "DropPod.generated.h"
 
 class UObject;
-class UCurveFloat;
 class UAutoCarverComponent;
+class UCurveFloat;
 class ADropPod;
 
 UCLASS(Blueprintable)

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EPreviewCellSize.h"
 #include "BakeSettings.h"
+#include "EPreviewCellSize.h"
 #include "CSGSDFInstanceProperties.generated.h"
 
 class ASDFBuilder;

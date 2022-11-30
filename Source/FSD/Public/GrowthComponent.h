@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "Curves/CurveFloat.h"
+#include "Components/ActorComponent.h"
 #include "GrowthComponent.generated.h"
 
 class USceneComponent;

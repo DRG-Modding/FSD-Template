@@ -6,5 +6,6 @@ UENUM(BlueprintType)
 enum class ESpecialDebrisType : uint8 {
     None,
     Plague,
+    LitPlague,
 };
 

@@ -4,6 +4,8 @@
 #include "SeasonEvent.h"
 #include "SeasonMissionResult.generated.h"
 
+class UTexture2D;
+
 USTRUCT(BlueprintType)
 struct FSeasonMissionResult {
     GENERATED_BODY()
@@ -13,6 +15,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 XPFromChallenges;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 XPFromRewards;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float XPMultiplier;
@@ -28,6 +33,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSeasonEvent> CompletedEvents;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UTexture2D* EndScreenImage;
     
     FSD_API FSeasonMissionResult();
 };

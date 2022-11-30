@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EnemyPawn.h"
 #include "Engine/NetSerialization.h"
+#include "EnemyPawn.h"
 #include "AttackingPointInterface.h"
 #include "ECaveLeechState.h"
 #include "UObject/NoExportTypes.h"

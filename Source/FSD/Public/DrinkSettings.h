@@ -6,8 +6,8 @@
 #include "DrinkSettings.generated.h"
 
 class UResourceData;
-class UDrinkableDataAsset;
 class UObject;
+class UDrinkableDataAsset;
 
 UCLASS(Blueprintable)
 class UDrinkSettings : public UDataAsset {

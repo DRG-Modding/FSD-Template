@@ -4,12 +4,12 @@
 #include "EInputKeys.h"
 #include "DetPack.generated.h"
 
-class ADetPackItem;
 class UProjectileMovementComponent;
 class USimpleHealthComponent;
 class UExplosionComponent;
-class APlayerCharacter;
+class ADetPackItem;
 class USingleUsableComponent;
+class APlayerCharacter;
 class UHealthComponentBase;
 
 UCLASS(Blueprintable)

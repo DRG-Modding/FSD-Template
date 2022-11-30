@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EAfflictionSocket.h"
 #include "AfflictionEffect.h"
+#include "EAfflictionSocket.h"
 #include "AttachedParticlesAfflictionEffect.generated.h"
 
 class UFXSystemAsset;

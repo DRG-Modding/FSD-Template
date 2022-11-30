@@ -3,8 +3,8 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "PlayerMovementComponent.generated.h"
 
-class USoundBase;
 class APlayerCharacter;
+class USoundBase;
 class UCharacterStateComponent;
 class AActor;
 

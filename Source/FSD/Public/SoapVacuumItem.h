@@ -5,12 +5,12 @@
 #include "PlagueCleanerResourceChangedDelegate.h"
 #include "SoapVacuumItem.generated.h"
 
+class UPrimitiveComponent;
 class UCapsuleComponent;
+class USceneComponent;
+class AFoamPuddle;
 class UNiagaraComponent;
 class AActor;
-class AFoamPuddle;
-class UPrimitiveComponent;
-class USceneComponent;
 
 UCLASS(Blueprintable)
 class ASoapVacuumItem : public APlagueCleanupItem {

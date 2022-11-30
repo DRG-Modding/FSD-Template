@@ -8,15 +8,14 @@
 #include "UObject/NoExportTypes.h"
 #include "FSDPhysicalMaterial.generated.h"
 
-class UFXSystemComponent;
+class UReactiveTerrain;
+class UPrimitiveComponent;
+class UFSDPhysicalMaterial;
+class USoundCue;
 class UFXSystemAsset;
 class UMaterialInstance;
-class USoundCue;
-class UPrimitiveComponent;
-class UNiagaraSystem;
-class UReactiveTerrain;
+class UFXSystemComponent;
 class UObject;
-class UFSDPhysicalMaterial;
 
 UCLASS(Blueprintable, CollapseCategories)
 class UFSDPhysicalMaterial : public UPhysicalMaterial {
@@ -49,9 +48,6 @@ public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFXSystemAsset* ImpactParticles;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UNiagaraSystem* ImpactNParticles;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInstance* ImpactMaterialOverride;

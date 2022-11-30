@@ -1,11 +1,11 @@
 #include "PerkAsset.h"
 #include "Templates/SubclassOf.h"
 
+class UPerkHUDIconWidget;
 class UPerkAsset;
 class APlayerController;
 class UObject;
 class UPlayerCharacterID;
-class UPerkHUDIconWidget;
 class UPerkHUDActivationWidget;
 class UPerkDelegateItem;
 

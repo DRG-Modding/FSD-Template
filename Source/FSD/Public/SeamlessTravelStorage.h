@@ -3,10 +3,10 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "SeamlessTravelStorage.generated.h"
 
-class USeamlessTravelEventKey;
-class UDifficultySetting;
 class UPlayer;
+class UDifficultySetting;
 class UResourceData;
+class USeamlessTravelEventKey;
 
 UCLASS(Blueprintable)
 class USeamlessTravelStorage : public UGameInstanceSubsystem {

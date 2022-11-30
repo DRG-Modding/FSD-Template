@@ -6,9 +6,9 @@
 
 class USchematic;
 class UItemSkin;
-class USchematicPricingTier;
 class USchematicCategory;
 class USchematicRarity;
+class USchematicPricingTier;
 
 UCLASS(Blueprintable)
 class FSD_API UItemSkinSchematicCollection : public UDataAsset {

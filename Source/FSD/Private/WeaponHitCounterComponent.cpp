@@ -1,7 +1,7 @@
 #include "WeaponHitCounterComponent.h"
 
-class UPrimitiveComponent;
 class UHealthComponentBase;
+class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
 class AActor;
 

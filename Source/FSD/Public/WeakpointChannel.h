@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "WeakpointChannel.generated.h"
 
-class UFSDPhysicalMaterial;
 class UMaterialInstanceDynamic;
+class UFSDPhysicalMaterial;
 
 USTRUCT(BlueprintType)
 struct FWeakpointChannel {

@@ -3,9 +3,9 @@
 #include "Components/SceneComponent.h"
 #include "DamageComponent.h"
 
-class USoundCue;
 class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
+class USoundCue;
 class UFXSystemAsset;
 
 
@@ -52,7 +52,7 @@ void APickaxeItem::All_SimulateHitBlock_Implementation(FVector_NetQuantize Posit
 void APickaxeItem::All_SimulateDigDebris_Implementation(FVector_NetQuantize Position, UFXSystemAsset* Particles, USoundCue* cue) {
 }
 
-void APickaxeItem::All_SimulateDigBlock_Implementation(FVector_NetQuantize Position, bool spawnParticles, int32 Material, float Density, bool isSpecial) {
+void APickaxeItem::All_SimulateDigBlock_Implementation(FVector_NetQuantize Position, bool SpawnParticles, int32 Material, float Density, bool isSpecial) {
 }
 
 void APickaxeItem::All_SimulateDamageTarget_Implementation(UPrimitiveComponent* TargetComponent, bool isSpecial, const FVector_NetQuantize& ImpactPoint, const FVector_NetQuantizeNormal& ImpactNormal, UFSDPhysicalMaterial* PhysMaterial, uint8 BoneIndex) {
@@ -86,6 +86,7 @@ APickaxeItem::APickaxeItem() {
     this->RockMiningBonus = 0;
     this->DirtMiningBonus = 0;
     this->DamageRange = 200.00f;
+    this->MiningRange = 300.00f;
     this->DamageRadius = 50.00f;
     this->OnDamageEnemySlowdownEffect = NULL;
     this->MiningSound = NULL;

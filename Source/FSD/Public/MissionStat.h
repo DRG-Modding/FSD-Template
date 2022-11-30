@@ -8,8 +8,8 @@
 
 class UObject;
 class UMissionStat;
-class UFSDAchievement;
 class UMissionStatCategory;
+class UFSDAchievement;
 class APlayerCharacter;
 class UPlayerCharacterID;
 class UTexture2D;
@@ -50,6 +50,9 @@ protected:
     
 public:
     UMissionStat();
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
+    float SetStatValue(UObject* WorldContext, APlayerCharacter* Character, float Amount);
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FText MissionStatToText(EMissionStatType StatType, float Value);
     

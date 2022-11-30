@@ -1,53 +1,53 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ScaledEffect.h"
-#include "GameEventCompletedDelegateDelegate.h"
+#include "EnemyKilledDelegateDelegate.h"
+#include "BoolDelegateDelegate.h"
 #include "GameFramework/GameState.h"
 #include "Int32DelegateEventDelegate.h"
-#include "CountDownStartedDelegate.h"
+#include "GameEventCompletedDelegateDelegate.h"
 #include "DelegateEventDelegate.h"
-#include "GeneratedMissionSeed.h"
-#include "PlayerCharacterDelegateDelegate.h"
 #include "PlayerDelegateDelegate.h"
-#include "EnemyKilledDelegateDelegate.h"
-#include "FSDChatMessage.h"
+#include "PlayerCharacterDelegateDelegate.h"
 #include "BoscoReviveCounterChangedDelegate.h"
-#include "BoolDelegateDelegate.h"
-#include "FSDLocalizedChatMessage.h"
+#include "FSDChatMessage.h"
 #include "ObjectivesDelegateDelegate.h"
 #include "DifficultyDelegateDelegate.h"
+#include "CountDownStartedDelegate.h"
 #include "CountdownDelegate.h"
-#include "ReplicatedObjectives.h"
-#include "CurrentLeaderChangedDelegate.h"
 #include "CreditsReward.h"
+#include "ReplicatedObjectives.h"
+#include "GeneratedMissionSeed.h"
+#include "CurrentLeaderChangedDelegate.h"
+#include "FSDLocalizedChatMessage.h"
+#include "ScaledEffect.h"
 #include "Engine/NetSerialization.h"
 #include "FSDGameState.generated.h"
 
-class UGeneratedMission;
-class AMiningPod;
-class UResourceData;
-class AFSDPlayerState;
-class ADeepCSGWorld;
+class APlayerCharacter;
 class UFSDEvent;
-class UPlayerCharacterID;
+class AGameStats;
+class AMiningPod;
+class APlayerState;
+class UTeamResourcesComponent;
+class ADeepCSGWorld;
 class AProceduralSetup;
 class UPrimitiveComponent;
 class USpawnEffectsComponent;
 class UDynamicMeshScaler;
 class UGemProximityTracker;
-class APlayerState;
 class UAttackerManagerComponent;
 class UDifficultyManager;
-class AGameStats;
 class USoundMixManagerComponent;
 class USeasonReplicatorComponent;
-class UTeamResourcesComponent;
-class APlayerCharacter;
 class UDifficultySetting;
+class USoundCue;
 class UPlayerProximityTracker;
 class UShowroomManager;
+class UGeneratedMission;
+class AFSDPlayerState;
 class UObjective;
-class USoundCue;
+class UResourceData;
+class UPlayerCharacterID;
 
 UCLASS(Blueprintable)
 class FSD_API AFSDGameState : public AGameState {
@@ -271,7 +271,7 @@ protected:
     bool AllDwarvesDown;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
-    bool MissionAborted;
+    bool missionAborted;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_CountdownRemaining, meta=(AllowPrivateAccess=true))
     int32 CountdownRemaining;

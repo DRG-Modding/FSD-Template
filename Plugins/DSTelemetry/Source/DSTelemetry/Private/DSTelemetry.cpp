@@ -2,8 +2,8 @@
 
 class UDJSONObject;
 class UDJSONArray;
-class UDSTelemetry;
 class UObject;
+class UDSTelemetry;
 
 void UDSTelemetry::Terminate() {
 }

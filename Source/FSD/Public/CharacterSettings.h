@@ -8,16 +8,16 @@
 class APlayerCharacter;
 class UPlayerCharacterID;
 class UInventoryList;
-class USkeletalMesh;
 class ACarriableItem;
+class USkeletalMesh;
 class UUseAnimationSetting;
 class UCampaignManager;
+class UAsyncManager;
 class UCharacterVanityItems;
 class UDialogDataAsset;
 class UDebrisPositioning;
 class UTerrainPlacementComponent;
 class UPlayerCharacterData;
-class UAsyncManager;
 
 UCLASS(Blueprintable)
 class UCharacterSettings : public UDataAsset {

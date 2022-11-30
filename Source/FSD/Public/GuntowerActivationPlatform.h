@@ -3,15 +3,15 @@
 #include "OnFinishedDelegate.h"
 #include "GameFramework/Actor.h"
 #include "ProgressUpdatedDelegate.h"
-#include "PlayersInsideChangedDelegate.h"
 #include "Engine/EngineTypes.h"
+#include "PlayersInsideChangedDelegate.h"
 #include "GuntowerActivationPlatform.generated.h"
 
 class USceneComponent;
+class AGuntowerModule;
 class USkeletalMeshComponent;
 class UCapsuleComponent;
 class UHealthComponentBase;
-class AGuntowerModule;
 class AFSDPlayerState;
 class UPrimitiveComponent;
 

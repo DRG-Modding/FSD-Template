@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "DecalData.h"
 #include "UObject/NoExportTypes.h"
 #include "ScaledEffect.h"
+#include "DecalData.h"
 #include "UObject/NoExportTypes.h"
 #include "FSDGameplayStatics.generated.h"
 
-class UFXSystemComponent;
-class AActor;
 class UObject;
+class UFXSystemComponent;
 class UDecalComponent;
+class AActor;
 class UMaterialInterface;
 class UAudioComponent;
 

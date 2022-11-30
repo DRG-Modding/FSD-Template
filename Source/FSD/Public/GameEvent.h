@@ -4,12 +4,12 @@
 #include "GameFramework/Actor.h"
 #include "GameplayTagAssetInterface.h"
 #include "DelegateEventDelegate.h"
-#include "GameplayTagContainer.h"
-#include "GameplayTagContainer.h"
 #include "StageCompleteSigDelegate.h"
 #include "ProgressChangedSigDelegate.h"
+#include "GameplayTagContainer.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "GameplayTagContainer.h"
 #include "GameEvent.generated.h"
 
 class AEventStarterButton;

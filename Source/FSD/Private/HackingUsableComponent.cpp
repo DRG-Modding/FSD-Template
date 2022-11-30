@@ -1,8 +1,8 @@
 #include "HackingUsableComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UHackingToolWidget;
 class APlayerCharacter;
+class UHackingToolWidget;
 
 void UHackingUsableComponent::OnRep_HackingState(const FHackingUsableState& oldState) {
 }

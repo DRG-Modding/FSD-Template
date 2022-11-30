@@ -6,8 +6,8 @@
 #include "ESingleUsableUpgradeType.h"
 #include "SingleUsableUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AActor;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class USingleUsableUpgrade : public UStandardItemUpgrade {

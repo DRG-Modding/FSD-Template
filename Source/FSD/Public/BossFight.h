@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "BossFight.generated.h"
 
-class AActor;
 class UEnemyComponent;
+class AActor;
 class UEnemyHealthComponent;
 
 USTRUCT(BlueprintType)

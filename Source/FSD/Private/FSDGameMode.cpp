@@ -1,19 +1,19 @@
 #include "FSDGameMode.h"
 #include "Templates/SubclassOf.h"
-#include "EnemySpawnManager.h"
-#include "MissionManager.h"
-#include "PheromoneSpawnerComponent.h"
 #include "ObjectivesManager.h"
-#include "KeepInsideWorld.h"
 #include "CritterManager.h"
+#include "PheromoneSpawnerComponent.h"
+#include "EnemySpawnManager.h"
+#include "KeepInsideWorld.h"
+#include "MissionManager.h"
 #include "FormationsManagerComponent.h"
 
+class UEnemyWaveManager;
 class AActor;
-class AMiningPod;
-class AMolly;
 class AFSDGameMode;
 class AFSDPlayerController;
-class UEnemyWaveManager;
+class AMiningPod;
+class AMolly;
 class UEncounterManager;
 class ABosco;
 class UDifficultyManager;
@@ -59,6 +59,10 @@ AActor* AFSDGameMode::GetPlayerStart(AFSDPlayerController* Controller) {
 
 TSubclassOf<AMolly> AFSDGameMode::GetMuleClass() const {
     return NULL;
+}
+
+bool AFSDGameMode::GetMissionWasAborted() {
+    return false;
 }
 
 UEncounterManager* AFSDGameMode::GetEncounterManager() const {

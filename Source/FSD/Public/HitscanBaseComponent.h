@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Curves/CurveFloat.h"
 #include "WeaponFireComponent.h"
 #include "SpreadChangedDelegateDelegate.h"
-#include "DelegateDelegate.h"
-#include "Curves/CurveFloat.h"
-#include "EImpactDecalSize.h"
 #include "ERicochetBehavior.h"
+#include "DelegateDelegate.h"
+#include "EImpactDecalSize.h"
 #include "HitscanBaseComponent.generated.h"
 
-class UDamageClass;
 class UDamageComponent;
+class UDamageClass;
 class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

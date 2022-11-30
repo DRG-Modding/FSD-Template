@@ -6,10 +6,10 @@
 class UMissionTemplate;
 class UMissionComplexity;
 class UMissionDuration;
-class UMissionMutator;
-class UBiome;
-class UMissionWarning;
 class USpecialEvent;
+class UMissionMutator;
+class UMissionWarning;
+class UBiome;
 class UDifficultySetting;
 
 UCLASS(Blueprintable)
@@ -17,6 +17,9 @@ class APLSTester : public AActor {
     GENERATED_BODY()
 public:
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FString FullSeedString;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PLSSeed;
     

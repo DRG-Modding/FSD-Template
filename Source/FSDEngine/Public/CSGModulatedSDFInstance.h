@@ -8,8 +8,8 @@
 #include "DeepCSGFloatTree.h"
 #include "CSGModulatedSDFInstance.generated.h"
 
-class UBakeConfig;
 class USDFBase;
+class UBakeConfig;
 
 UCLASS(Blueprintable)
 class FSDENGINE_API UCSGModulatedSDFInstance : public UCSGBase {

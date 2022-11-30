@@ -4,8 +4,8 @@
 #include "EPickaxePartLocation.h"
 #include "PickaxePart.generated.h"
 
-class UPickaxePartItem;
 class UItemAquisitionBase;
+class UPickaxePartItem;
 
 UCLASS(Blueprintable)
 class FSD_API UPickaxePart : public USavablePrimaryDataAsset {

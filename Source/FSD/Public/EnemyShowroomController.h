@@ -4,9 +4,9 @@
 #include "EnemyShowroomController.generated.h"
 
 class AEnemyShowroomItem;
-class UEnemyShowroomController;
-class UAnimSequenceBase;
 class UObject;
+class UAnimSequenceBase;
+class UEnemyShowroomController;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UEnemyShowroomController : public UShowroomController {

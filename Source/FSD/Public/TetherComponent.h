@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TeherMessage_DelegateDelegate.h"
 #include "Components/ActorComponent.h"
-#include "TetherPowerChanged_DelegateDelegate.h"
-#include "TetherRangeChangedDelegate.h"
 #include "TetherConnectionChanged_DeletageDelegate.h"
+#include "TetherPowerChanged_DelegateDelegate.h"
+#include "TeherMessage_DelegateDelegate.h"
+#include "TetherRangeChangedDelegate.h"
 #include "ETetherConnectionMode.h"
 #include "ETetherMessageDirection.h"
 #include "TetherMessageSettings.h"

@@ -1,9 +1,9 @@
 #include "TrackBuilderUsable.h"
 #include "Net/UnrealNetwork.h"
 
+class ATrackBuilderSegment;
 class AActor;
 class APlayerCharacter;
-class ATrackBuilderSegment;
 
 void UTrackBuilderUsable::OnRep_NextSegment() {
 }

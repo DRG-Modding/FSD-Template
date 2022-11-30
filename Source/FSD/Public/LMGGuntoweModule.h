@@ -4,11 +4,11 @@
 #include "UObject/NoExportTypes.h"
 #include "LMGGuntoweModule.generated.h"
 
+class UHitscanComponent;
+class UDamageComponent;
 class UAudioComponent;
 class USceneComponent;
 class USoundCue;
-class UHitscanComponent;
-class UDamageComponent;
 class UParticleSystem;
 
 UCLASS(Blueprintable)

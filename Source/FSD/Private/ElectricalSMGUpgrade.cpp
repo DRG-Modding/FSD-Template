@@ -1,8 +1,8 @@
 #include "ElectricalSMGUpgrade.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
 class AFSDPlayerState;
+class AActor;
 
 FUpgradeValues UElectricalSMGUpgrade::GetUpgradedValue(AFSDPlayerState* Player, TSubclassOf<AActor> Item, EElectricalSMGUpgrades NewUpgradeType) {
     return FUpgradeValues{};

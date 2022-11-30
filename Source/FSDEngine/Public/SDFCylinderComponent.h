@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SDFCylinderProperties.h"
 #include "SDFBaseWithTransformComponent.h"
+#include "SDFCylinderProperties.h"
 #include "SDFCylinderComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

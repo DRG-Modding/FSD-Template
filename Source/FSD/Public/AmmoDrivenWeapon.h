@@ -1,32 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AmountChangedSignatureDelegate.h"
 #include "AnimatedItem.h"
-#include "WeaponFireOwner.h"
 #include "RejoinListener.h"
-#include "TracerData.h"
-#include "ItemAnimationItem.h"
+#include "WeaponFireOwner.h"
 #include "Upgradable.h"
+#include "AmmoDrivenGenericEventDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "UpgradableGear.h"
 #include "DelegateDelegate.h"
-#include "AmmoDrivenGenericEventDelegate.h"
+#include "AmountChangedSignatureDelegate.h"
+#include "TracerData.h"
+#include "ItemAnimationItem.h"
 #include "Curves/CurveFloat.h"
 #include "RecoilSettings.h"
 #include "EAmmoWeaponState.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "AmmoDrivenWeapon.generated.h"
 
-class USoundCue;
-class UAnimMontage;
 class UWeaponFireComponent;
 class UAmmoDriveWeaponAggregator;
-class UItemUpgrade;
+class UAnimMontage;
 class UFXSystemAsset;
 class ULightComponent;
+class USoundCue;
+class UDialogDataAsset;
 class UForceFeedbackEffect;
 class UAudioComponent;
-class UDialogDataAsset;
+class UItemUpgrade;
 class APlayerCharacter;
 
 UCLASS(Abstract, Blueprintable)
@@ -243,10 +243,10 @@ protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_ReloadWeapon();
     
-    UFUNCTION(Server, Unreliable)
+    UFUNCTION(BlueprintCallable, Server, Unreliable)
     void Server_PlayBurstFire(uint8 shotCount);
     
-    UFUNCTION(Reliable, Server)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_Gunsling(uint8 Index);
     
 public:
@@ -300,10 +300,10 @@ protected:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_StartReload();
     
-    UFUNCTION(NetMulticast, Unreliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_PlayBurstFire(uint8 shotCount);
     
-    UFUNCTION(NetMulticast, Unreliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_Gunsling(uint8 Index);
     
     

@@ -4,15 +4,15 @@
 #include "Components/ActorComponent.h"
 #include "Upgradable.h"
 #include "AbillityChargeUsedSigDelegate.h"
-#include "AbilityDataUpdatedDelegate.h"
 #include "ABillityChargeProgressDelegate.h"
+#include "AbilityDataUpdatedDelegate.h"
 #include "BoscoAbilityTarget.h"
 #include "BoscoAbillityComponent.generated.h"
 
-class UItemUpgrade;
-class ABosco;
 class AProjectileBase;
+class UItemUpgrade;
 class ADroneStream;
+class ABosco;
 class UBoscoProjectileAbillity;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -49,6 +49,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UBoscoProjectileAbillity* AbilityData;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool InitializeAtBeginPlay;
     
 public:
     UBoscoAbillityComponent();

@@ -4,8 +4,8 @@
 #include "SchematicBankItem.h"
 #include "VictoryPoseSchematicBank.generated.h"
 
-class USchematicCategory;
 class UVictoryPose;
+class USchematicCategory;
 
 UCLASS(Blueprintable)
 class FSD_API UVictoryPoseSchematicBank : public USchematicBankBase {

@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AmmoDrivenWeapon.h"
-#include "UObject/NoExportTypes.h"
 #include "DecalData.h"
 #include "Engine/NetSerialization.h"
+#include "UObject/NoExportTypes.h"
 #include "CryosprayItem.generated.h"
 
-class UProjectileLauncherComponent;
-class UMotionAudioController;
-class UDamageComponent;
-class UStickyFlameSpawner;
-class UParticleSystemComponent;
 class UParticleSystem;
+class UMotionAudioController;
+class UProjectileLauncherComponent;
+class UStickyFlameSpawner;
+class UDamageComponent;
+class UParticleSystemComponent;
 class UFSDAudioComponent;
 class UItemUpgrade;
 class UHealthComponentBase;
@@ -140,7 +140,7 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
-    UFUNCTION(Reliable, Server)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerDoDamage(FVector_NetQuantize Start, FVector_NetQuantize End, uint8 Power);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)

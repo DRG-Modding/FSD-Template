@@ -6,8 +6,8 @@
 #include "CSGBuilderBase.generated.h"
 
 class UTerrainMaterialCore;
-class UBakeConfig;
 class UCSGPreviewComponent;
+class UBakeConfig;
 
 UCLASS(Blueprintable)
 class FSDENGINE_API ACSGBuilderBase : public AActor {

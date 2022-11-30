@@ -1,8 +1,8 @@
 #include "ArmorStatUpgrade.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
 class AFSDPlayerState;
+class AActor;
 class UPawnStat;
 
 FUpgradeValues UArmorStatUpgrade::GetUpgradedStatValue(AFSDPlayerState* Player, TSubclassOf<AActor> armorClass, UPawnStat* NewStat) {

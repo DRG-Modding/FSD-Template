@@ -1,8 +1,8 @@
 #include "VanityItem.h"
 
-class AFSDPlayerState;
 class UObject;
 class UPlayerCharacterID;
+class AFSDPlayerState;
 class UTexture;
 class APlayerCharacter;
 

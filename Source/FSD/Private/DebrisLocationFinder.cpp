@@ -10,5 +10,6 @@ ADebrisLocationFinder::ADebrisLocationFinder() {
     this->MaxIteration = 10;
     this->MaxChunksPerFrame = 3;
     this->DestroyOnFinish = true;
+    this->StopAtEnoughMatches = true;
 }
 

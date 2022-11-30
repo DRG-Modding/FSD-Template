@@ -1,23 +1,23 @@
 #include "FSDGameState.h"
 #include "Net/UnrealNetwork.h"
-#include "SoundMixManagerComponent.h"
 #include "DifficultyManager.h"
+#include "TeamResourcesComponent.h"
+#include "PlayerProximityTracker.h"
 #include "SpawnEffectsComponent.h"
 #include "GemProximityTracker.h"
 #include "AttackerManagerComponent.h"
+#include "SoundMixManagerComponent.h"
 #include "SeasonReplicatorComponent.h"
-#include "TeamResourcesComponent.h"
-#include "PlayerProximityTracker.h"
 #include "ShowroomManager.h"
 
-class UGeneratedMission;
 class AGameStats;
-class AFSDPlayerState;
-class UDifficultySetting;
 class UObjective;
-class UFSDEvent;
-class AProceduralSetup;
+class UGeneratedMission;
+class UDifficultySetting;
 class UResourceData;
+class AFSDPlayerState;
+class AProceduralSetup;
+class UFSDEvent;
 class USoundCue;
 
 void AFSDGameState::StartCountdown(int32 Duration, const FText& countdownName) {
@@ -233,7 +233,7 @@ void AFSDGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
     DOREPLIFETIME(AFSDGameState, ContinuePressed);
     DOREPLIFETIME(AFSDGameState, ContinuesCountdown);
     DOREPLIFETIME(AFSDGameState, AllDwarvesDown);
-    DOREPLIFETIME(AFSDGameState, MissionAborted);
+    DOREPLIFETIME(AFSDGameState, missionAborted);
     DOREPLIFETIME(AFSDGameState, CountdownRemaining);
     DOREPLIFETIME(AFSDGameState, countdownText);
 }
@@ -278,7 +278,7 @@ AFSDGameState::AFSDGameState() {
     this->ContinuePressed = false;
     this->ContinuesCountdown = 0;
     this->AllDwarvesDown = false;
-    this->MissionAborted = false;
+    this->missionAborted = false;
     this->CountdownRemaining = -1;
     this->CanCarryOverResources = true;
     this->CurrentPlayerSessionLeader = NULL;

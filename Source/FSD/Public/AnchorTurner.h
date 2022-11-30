@@ -6,9 +6,9 @@
 #include "DelegateEventDelegate.h"
 #include "AnchorTurner.generated.h"
 
+class USphereComponent;
 class USceneComponent;
 class USkeletalMeshComponent;
-class USphereComponent;
 class UPrimitiveComponent;
 
 UCLASS(Blueprintable)

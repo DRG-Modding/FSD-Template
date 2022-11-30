@@ -4,6 +4,7 @@ UBoscoAbillity::UBoscoAbillity() {
     this->AbillityAnimation = NULL;
     this->VoiceOnUse = NULL;
     this->TargetType = EBoscoAbillityTargetPreference::Self;
+    this->ExitStrategy = NULL;
     this->CoolDown = 0.00f;
     this->WindUp = 0.00f;
     this->Duration = 0.00f;

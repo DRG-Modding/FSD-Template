@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Subsystems/WorldSubsystem.h"
-#include "Curves/CurveFloat.h"
 #include "UObject/NoExportTypes.h"
+#include "Curves/CurveFloat.h"
 #include "FadeVisibilitySubSystem.generated.h"
 
 class UPrimitiveComponent;

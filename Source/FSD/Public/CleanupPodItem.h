@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RessuplyPodItem.h"
 #include "PlaceableInterface.h"
-#include "UObject/NoExportTypes.h"
+#include "RessuplyPodItem.h"
 #include "EPlaceableObstructionType.h"
+#include "UObject/NoExportTypes.h"
 #include "CleanupPodItem.generated.h"
 
-class APlagueInfectionNode;
 class APlagueControlActor;
+class APlagueInfectionNode;
 
 UCLASS(Blueprintable)
 class ACleanupPodItem : public ARessuplyPodItem, public IPlaceableInterface {

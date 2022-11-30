@@ -3,8 +3,8 @@
 #include "Components/ActorComponent.h"
 #include "MissionStatsCollector.generated.h"
 
-class APlayerCharacter;
 class UCappedResource;
+class APlayerCharacter;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UMissionStatsCollector : public UActorComponent {

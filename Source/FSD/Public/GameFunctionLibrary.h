@@ -4,22 +4,22 @@
 #include "GameFunctionLibrary.generated.h"
 
 class UObject;
+class UAsyncManager;
 class UAudioComponent;
 class UWindowManager;
 class USoundBase;
 class UWindowWidget;
 class APlayerCharacter;
 class UGoogleAnalyticsWrapper;
+class UDeepDiveManager;
 class AFSDGameModeSpaceRig;
+class UCampaignManager;
 class UFSDSaveGame;
 class AFSDGameState;
 class AFSDGameMode;
 class UFSDGameInstance;
 class UGameData;
-class UDeepDiveManager;
 class ADeepCSGWorld;
-class UCampaignManager;
-class UAsyncManager;
 
 UCLASS(Blueprintable)
 class FSD_API UGameFunctionLibrary : public UBlueprintFunctionLibrary {

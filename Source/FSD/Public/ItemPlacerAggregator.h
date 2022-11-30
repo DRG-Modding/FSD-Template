@@ -6,9 +6,9 @@
 #include "GameplayTagContainer.h"
 #include "ItemPlacerAggregator.generated.h"
 
-class UDialogDataAsset;
-class AActor;
 class AItemMarker;
+class AActor;
+class UDialogDataAsset;
 class AItem;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

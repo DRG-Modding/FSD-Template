@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/Interface.h"
-#include "EMinersManualSection.h"
-#include "EMinersManualSinglePage.h"
 #include "UObject/NoExportTypes.h"
+#include "EMinersManualSection.h"
+#include "UObject/Interface.h"
+#include "EMinersManualSinglePage.h"
 #include "MinersManualHandler.generated.h"
 
 UINTERFACE(Blueprintable)

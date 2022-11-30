@@ -11,6 +11,7 @@ void UCrossbowProjectileRecallable::GetLifetimeReplicatedProps(TArray<FLifetimeP
     
     DOREPLIFETIME(UCrossbowProjectileRecallable, RecallTarget);
     DOREPLIFETIME(UCrossbowProjectileRecallable, StartTransform);
+    DOREPLIFETIME(UCrossbowProjectileRecallable, IsRecallable);
 }
 
 UCrossbowProjectileRecallable::UCrossbowProjectileRecallable() {
@@ -18,5 +19,6 @@ UCrossbowProjectileRecallable::UCrossbowProjectileRecallable() {
     this->RecallTarget = NULL;
     this->RecallStartTime = 1.00f;
     this->RecallSpeed = 0.30f;
+    this->IsRecallable = false;
 }
 

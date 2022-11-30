@@ -3,10 +3,10 @@
 #include "StatusEffectsComponent.h"
 #include "EnemyTemperatureComponent.h"
 
-class UHealthComponentBase;
-class AActor;
-class USkeletalMeshComponent;
 class AFSDAIController;
+class USkeletalMeshComponent;
+class AActor;
+class UHealthComponentBase;
 
 void AFSDPawn::UnFreeze() {
 }

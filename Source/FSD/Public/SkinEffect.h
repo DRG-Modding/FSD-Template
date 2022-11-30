@@ -3,8 +3,8 @@
 #include "UObject/Object.h"
 #include "SkinEffect.generated.h"
 
-class AActor;
 class UMeshComponent;
+class AActor;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class FSD_API USkinEffect : public UObject {

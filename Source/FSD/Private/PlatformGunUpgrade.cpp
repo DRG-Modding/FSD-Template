@@ -1,8 +1,8 @@
 #include "PlatformGunUpgrade.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
 class AFSDPlayerState;
+class AActor;
 
 FUpgradeValues UPlatformGunUpgrade::GetUpgradedValue(AFSDPlayerState* Player, TSubclassOf<AActor> Item, EPlatformGunUpgrades aUpgradeType) {
     return FUpgradeValues{};

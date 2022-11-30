@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EFSDTargetPlatform.h"
 #include "DLCBase.h"
+#include "EFSDTargetPlatform.h"
 #include "PlatformExclusiveDLC.generated.h"
 
 UCLASS(Blueprintable)

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "EMissionStructure.h"
 #include "DeepDiveTesterItem.h"
+#include "EMissionStructure.h"
 #include "DeepDiveTester.generated.h"
 
 class UBiome;

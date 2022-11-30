@@ -1,7 +1,7 @@
 #include "FSDHUD.h"
 
-class AFSDHUD;
 class APlayerController;
+class AFSDHUD;
 
 bool AFSDHUD::ToggleHUDVisibility(EHUDVisibilityReason reason) {
     return false;

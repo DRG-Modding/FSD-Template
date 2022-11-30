@@ -1,25 +1,25 @@
 #include "FSDGameInstance.h"
 #include "Templates/SubclassOf.h"
-#include "FSDSessionUpdater.h"
 #include "FSDSendToURL.h"
 #include "FSDCloudLoadSave.h"
+#include "FSDSessionUpdater.h"
 
+class UTexture2D;
 class AProceduralSetup;
 class AActor;
-class AFSDPlayerController;
+class UMutator;
 class UGeneratedMission;
-class UIconGenerationManager;
 class UObject;
 class ACharacterSelectionSwitcher;
 class UWorld;
 class UNetDriver;
 class UFSDSaveGame;
-class UMutator;
+class UIconGenerationManager;
 class UTemporaryBuff;
 class APlayerCharacter;
+class AFSDPlayerController;
 class UItemSkin;
 class UHUDWarningWidget;
-class UTexture2D;
 class USoundBase;
 
 void UFSDGameInstance::UpdateGlobelMissionSeed() {
@@ -63,6 +63,9 @@ void UFSDGameInstance::SetProceduralMap(TSubclassOf<AProceduralSetup> procedural
 }
 
 void UFSDGameInstance::SetPendingInviteJoinModding(const FBlueprintSessionResult& Result) {
+}
+
+void UFSDGameInstance::SetOverrideMaxPlayerCount(int32 Count) {
 }
 
 void UFSDGameInstance::SetMinersManualNotification(EMinersManualSection Section, UObject* IdentifyingObject, FText Text) {
@@ -202,6 +205,10 @@ TArray<FBlueprintSessionResult> UFSDGameInstance::GetServersFriendsArePlaying(TA
     return TArray<FBlueprintSessionResult>();
 }
 
+int32 UFSDGameInstance::GetOverrideMaxPlayerCount() const {
+    return 0;
+}
+
 TArray<UMutator*> UFSDGameInstance::GetMutators(TSubclassOf<UMutator> mutatorClass) const {
     return TArray<UMutator*>();
 }
@@ -263,6 +270,9 @@ void UFSDGameInstance::ChangeSkinPreview(UItemSkin* PreviewSkin) {
 }
 
 void UFSDGameInstance::CancelJoin() {
+}
+
+void UFSDGameInstance::CachePSOsOnCommand() {
 }
 
 

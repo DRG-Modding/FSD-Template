@@ -130,6 +130,10 @@ float UDeepPathfinderMovement::GetHorizontalAngleSpeed() {
     return 0.0f;
 }
 
+FVector UDeepPathfinderMovement::GetCurrentMovePos() const {
+    return FVector{};
+}
+
 UFakeMoverSettings* UDeepPathfinderMovement::GetCurrentFakePhysicsMoveSet() {
     return NULL;
 }

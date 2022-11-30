@@ -7,8 +7,8 @@
 
 class USceneComponent;
 class USkeletalMeshComponent;
-class AActor;
 class USoundCue;
+class AActor;
 
 UCLASS(Blueprintable)
 class FSD_API AFacilityTurret : public AEnemyPawn {

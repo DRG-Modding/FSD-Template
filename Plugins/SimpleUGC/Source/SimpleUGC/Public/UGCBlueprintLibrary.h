@@ -3,10 +3,10 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "UGCBlueprintLibrary.generated.h"
 
+class UUGCLatentActionManager;
 class UUGCSettings;
 class UObject;
 class UUGCRegistry;
-class UUGCLatentActionManager;
 
 UCLASS(Blueprintable)
 class SIMPLEUGC_API UUGCBlueprintLibrary : public UBlueprintFunctionLibrary {

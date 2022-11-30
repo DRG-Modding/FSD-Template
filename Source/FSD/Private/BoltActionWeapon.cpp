@@ -3,8 +3,8 @@
 
 class AActor;
 class UFSDPhysicalMaterial;
-class UPrimitiveComponent;
 class UHealthComponentBase;
+class UPrimitiveComponent;
 
 void ABoltActionWeapon::SetOverheated(bool isOverheated) {
 }

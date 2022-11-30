@@ -1,11 +1,11 @@
 #include "TowerEventModule.h"
 #include "Net/UnrealNetwork.h"
-#include "EnemyHealthComponent.h"
 #include "Components/SceneComponent.h"
-#include "ArmorHealthDamageComponent.h"
 #include "Components/SkeletalMeshComponent.h"
-#include "WeakpointGlowComponent.h"
+#include "EnemyHealthComponent.h"
+#include "ArmorHealthDamageComponent.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "WeakpointGlowComponent.h"
 
 
 void ATowerEventModule::HideArmorPlates() {

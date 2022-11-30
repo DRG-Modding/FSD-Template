@@ -5,8 +5,8 @@
 #include "UObject/NoExportTypes.h"
 #include "HackableBuildingObjective.generated.h"
 
-class UDebrisPositioning;
 class AProceduralSetup;
+class UDebrisPositioning;
 class ARessuplyPod;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -10,9 +10,9 @@
 #include "MinersManual.generated.h"
 
 class UMissionTemplate;
-class UBiome;
 class ULoreScreenMasterWidget;
 class UEnemyMinersManualData;
+class UBiome;
 class UObject;
 class UMinersManualData;
 

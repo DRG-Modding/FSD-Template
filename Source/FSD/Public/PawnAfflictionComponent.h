@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "AfflictionChangeDelegateDelegate.h"
 #include "Components/ActorComponent.h"
 #include "PawnAfflictionItem.h"
-#include "AfflictionEntriesArray.h"
+#include "AfflictionChangeDelegateDelegate.h"
 #include "EFrozenBitsSize.h"
+#include "AfflictionEntriesArray.h"
 #include "PawnAfflictionComponent.generated.h"
 
-class UPawnAffliction;
 class UScalingMeshAfflictionEffect;
+class UPawnAffliction;
 class UBurningAfflictionEffect;
 class UHealthComponentBase;
 

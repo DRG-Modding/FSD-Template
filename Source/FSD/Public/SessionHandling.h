@@ -2,22 +2,22 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "EFSDNATType.h"
 #include "EServerSortOrder.h"
 #include "FindSessionsCallbackProxy.h"
-#include "EDisconnectReason.h"
-#include "EFSDNATType.h"
 #include "EMissionStructure.h"
+#include "EDisconnectReason.h"
 #include "FriendInfo.h"
 #include "EFSDMissionStatus.h"
 #include "UObject/NoExportTypes.h"
 #include "EServerDistance.h"
 #include "SessionHandling.generated.h"
 
-class UDifficultySetting;
-class UObject;
 class UFSDGameInstance;
+class UObject;
 class UPlayerCharacterID;
 class APlayerCharacter;
+class UDifficultySetting;
 class UBiome;
 class UMissionTemplate;
 

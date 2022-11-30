@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TentacleBase.h"
-#include "TriggerAI.h"
 #include "AttackingPointInterface.h"
+#include "TriggerAI.h"
 #include "DelegateDelegate.h"
 #include "ETerminatorTentacleState.h"
 #include "TerminatorTarget.h"
 #include "TerminatorTentacle.generated.h"
 
+class UAnimSequenceBase;
 class USkeletalMeshComponent;
 class UAnimMontage;
-class UAnimSequenceBase;
 class UGrabberComponent;
 class AActor;
 class UHealthComponentBase;

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "CSGWarped.h"
 #include "SplineWarpProperties.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/SplineComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "CSGSplineWarp.generated.h"
 

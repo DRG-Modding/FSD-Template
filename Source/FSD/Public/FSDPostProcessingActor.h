@@ -6,11 +6,11 @@
 #include "FSDPostProcessingActor.generated.h"
 
 class APostProcessingManager;
-class UObject;
 class UPostProcessComponent;
+class UMaterialInstanceDynamic;
+class UObject;
 class UBlendableInterface;
 class IBlendableInterface;
-class UMaterialInstanceDynamic;
 class UMaterialInterface;
 
 UCLASS(Abstract, Blueprintable)

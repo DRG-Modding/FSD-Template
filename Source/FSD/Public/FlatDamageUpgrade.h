@@ -5,10 +5,10 @@
 #include "UpgradeValues.h"
 #include "FlatDamageUpgrade.generated.h"
 
-class UDamageCondition;
-class UDamageClass;
 class AFSDPlayerState;
+class UDamageClass;
 class AActor;
+class UDamageCondition;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UFlatDamageUpgrade : public UItemUpgrade {

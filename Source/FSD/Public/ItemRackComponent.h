@@ -5,9 +5,9 @@
 #include "ItemRackComponent.generated.h"
 
 class APlayerCharacter;
-class URackableItemComponent;
-class USceneComponent;
 class UUsableComponent;
+class USceneComponent;
+class URackableItemComponent;
 class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "EOutline.h"
+#include "Components/ActorComponent.h"
 #include "OutlineComponent.generated.h"
 
 class AItem;
-class AActor;
 class UHealthComponentBase;
-class APlayerCharacter;
 class UPrimitiveComponent;
+class APlayerCharacter;
+class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UOutlineComponent : public UActorComponent {
@@ -77,6 +77,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void EnableActivateOnHoldTab();
+    
+    UFUNCTION(BlueprintCallable)
+    void DisableActiveOnHoldTab();
     
     UFUNCTION(BlueprintCallable)
     void AddToOutline(UPrimitiveComponent* Component);

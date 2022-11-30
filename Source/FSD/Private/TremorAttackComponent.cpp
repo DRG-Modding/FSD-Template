@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 
 class UPrimitiveComponent;
-class UBoxComponent;
 class AActor;
+class UBoxComponent;
 class UParticleSystemComponent;
 
 void UTremorAttackComponent::StopParticles() {

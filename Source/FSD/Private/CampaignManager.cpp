@@ -1,12 +1,12 @@
 #include "CampaignManager.h"
 #include "Templates/SubclassOf.h"
 
-class UCampaign;
-class UFSDSaveGame;
-class UDifficultySetting;
-class UObject;
 class AFSDPlayerController;
+class UCampaign;
+class UObject;
+class UFSDSaveGame;
 class UGeneratedMission;
+class UDifficultySetting;
 
 void UCampaignManager::StartNewCampaign(TSubclassOf<UCampaign> campaignClass, UFSDSaveGame* SaveGame) {
 }
@@ -38,6 +38,10 @@ bool UCampaignManager::IsActiveCampaign(UCampaign* Campaign) const {
 }
 
 TArray<TSubclassOf<UCampaign>> UCampaignManager::GetUncompletedCampaigns(AFSDPlayerController* Player) const {
+    return TArray<TSubclassOf<UCampaign>>();
+}
+
+TArray<TSubclassOf<UCampaign>> UCampaignManager::GetCompletedSideCampaigns(AFSDPlayerController* Player) const {
     return TArray<TSubclassOf<UCampaign>>();
 }
 

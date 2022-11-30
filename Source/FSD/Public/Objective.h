@@ -3,17 +3,17 @@
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
 #include "ObjectiveUpdatedSignatureDelegate.h"
-#include "CreditsReward.h"
 #include "MissionShouts.h"
+#include "CreditsReward.h"
 #include "ObjectiveMissionIcon.h"
 #include "Objective.generated.h"
 
-class UMissionStat;
-class UObjectiveWidget;
-class UTexture2D;
 class UOptionalObjectiveWidget;
-class UBiome;
 class UResourceData;
+class UObjectiveWidget;
+class UMissionStat;
+class UBiome;
+class UTexture2D;
 class UObjective;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -5,9 +5,9 @@
 #include "IRandRange.h"
 #include "GemResourceData.generated.h"
 
-class UDebrisBase;
-class UGemResourceCreator;
 class UDebrisPositioning;
+class UGemResourceCreator;
+class UDebrisBase;
 class AGem;
 class AFSDGameState;
 

@@ -2,31 +2,31 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "FSDPlayerControllerBase.h"
-#include "EChatSenderType.h"
 #include "OnPlayerCharacterPossesedDelegate.h"
 #include "ChatOpenedDelegateDelegate.h"
 #include "ESpacerigStartType.h"
+#include "EChatSenderType.h"
 #include "FSDPlayerController.generated.h"
 
 class UTexture2D;
 class UTutorialContentWidget;
-class USoundCue;
+class UPlayerCharacterID;
 class UItemSkin;
-class AFSDPlayerState;
 class UPerkUsageComponent;
-class UVictoryPose;
 class UTerrainLatejoinComponent;
 class USoundMix;
 class UFSDWidgetEffectsComponent;
 class AHUD;
 class AActor;
+class UVictoryPose;
 class UFSDAchievement;
 class UTemporaryBuff;
-class UItemID;
 class APlayerCharacter;
-class UPlayerCharacterID;
+class AFSDPlayerState;
 class UTreasureRewarder;
+class USoundCue;
 class UVanityItem;
+class UItemID;
 class UPickaxePart;
 
 UCLASS(Blueprintable)

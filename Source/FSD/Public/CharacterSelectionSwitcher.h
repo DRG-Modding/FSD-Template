@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EVanitySlot.h"
 #include "GameFramework/Actor.h"
+#include "EVanitySlot.h"
 #include "CharacterSelectionSwitcher.generated.h"
 
-class APlayerCharacter;
 class UVictoryPose;
+class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class ACharacterSelectionSwitcher : public AActor {

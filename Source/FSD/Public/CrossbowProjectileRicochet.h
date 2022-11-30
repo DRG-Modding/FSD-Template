@@ -5,6 +5,7 @@
 #include "Engine/EngineTypes.h"
 #include "CrossbowProjectileRicochet.generated.h"
 
+class ACrossbowProjectileBase;
 class UNiagaraSystem;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -20,6 +21,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RicochetRange;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    ACrossbowProjectileBase* CastedOwner;
     
 public:
     UCrossbowProjectileRicochet();

@@ -2,25 +2,25 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "AnimatedItem.h"
+#include "LaserPointerData.h"
 #include "MarkerPlacedDelegateDelegate.h"
 #include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "LaserPointerData.h"
 #include "UObject/NoExportTypes.h"
 #include "ELaserPointerMarkerType.h"
 #include "UObject/NoExportTypes.h"
 #include "LaserPointerItem.generated.h"
 
 class USceneComponent;
-class AActor;
+class UDialogDataAsset;
+class UTerrainMaterial;
 class ALaserPointerMarker;
 class ALaserPointerWaypoint;
-class UDialogDataAsset;
+class UPrimitiveComponent;
 class UObjectInfoComponent;
-class UTerrainMaterial;
 class AFSDGameState;
 class UObject;
-class UPrimitiveComponent;
+class AActor;
 class UTexture2D;
 
 UCLASS(Abstract, Blueprintable)

@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "DeepPathfinderCharacter.h"
 #include "UObject/NoExportTypes.h"
+#include "DeepPathfinderCharacter.h"
 #include "Upgradable.h"
 #include "ERecallableActorState.h"
-#include "UObject/NoExportTypes.h"
 #include "ReturnedSignatureDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "RecallableActor.generated.h"
 

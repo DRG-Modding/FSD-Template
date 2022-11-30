@@ -4,8 +4,8 @@
 
 class UTerrainMaterial;
 class UDamageComponent;
-class AProjectileBase;
 class UPrimitiveComponent;
+class AProjectileBase;
 class UFSDPhysicalMaterial;
 class AActor;
 

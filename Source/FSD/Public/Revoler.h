@@ -3,8 +3,8 @@
 #include "AmmoDrivenWeapon.h"
 #include "Revoler.generated.h"
 
-class AActor;
 class UFSDPhysicalMaterial;
+class AActor;
 
 UCLASS(Blueprintable)
 class ARevoler : public AAmmoDrivenWeapon {

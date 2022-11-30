@@ -49,10 +49,10 @@ void UUGCSettings::CleanupSlots() {
 UUGCSettings::UUGCSettings() {
     this->slot1.AddDefaulted(4);
     this->slot1Icon = 0;
-    this->slot2.AddDefaulted(29);
+    this->slot2.AddDefaulted(1);
     this->slot2Icon = 9;
     this->slot3Icon = 0;
     this->slot4Icon = 0;
-    this->SelectedSlot = 4;
+    this->SelectedSlot = 2;
 }
 

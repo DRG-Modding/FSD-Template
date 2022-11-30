@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "AnimatedItem.h"
+#include "UObject/NoExportTypes.h"
 #include "CalldownItem.generated.h"
 
+class UResourceData;
 class UItemPlacerAggregator;
 class ARessuplyPod;
-class UResourceData;
 class AActor;
 
 UCLASS(Blueprintable)

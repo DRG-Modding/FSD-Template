@@ -4,10 +4,10 @@
 #include "EHUDVisibilityReason.h"
 #include "FSDHUD.generated.h"
 
-class APlayerController;
-class AFSDHUD;
 class APlayerCharacter;
+class APlayerController;
 class URadarPointComponent;
+class AFSDHUD;
 class APlayerCameraDrone;
 
 UCLASS(Blueprintable, NonTransient)
@@ -24,7 +24,7 @@ public:
     FHudVisibilityChanged OnHUDVisibilityChanged;
     
 protected:
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     uint8 IsVisibleFlags;
     
 public:

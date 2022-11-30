@@ -1,84 +1,84 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "ShowCharacterWorldSignatureDelegate.h"
 #include "Engine/GameInstance.h"
-#include "GenericSignatureDelegate.h"
-#include "ESteamSearchRegion.h"
-#include "ESteamServerJoinStatus.h"
-#include "OnXBoxChangeUserDelegate.h"
-#include "FSDServerSearchOptions.h"
-#include "TemporaryBuffChangedDelegate.h"
 #include "JoinSignatureDelegate.h"
-#include "EDisconnectReason.h"
+#include "ESteamServerJoinStatus.h"
+#include "ECharacterSelectorItemStatus.h"
+#include "PlayerCharacterSignatureDelegate.h"
+#include "ESteamSearchRegion.h"
+#include "TemporaryBuffChangedDelegate.h"
+#include "OnHDRGammaChangedDelegate.h"
+#include "GenericSignatureDelegate.h"
+#include "FSDServerSearchOptions.h"
 #include "OnLoaderStartSigDelegate.h"
 #include "OnPlayLevelSequenceInCharacterWorldSigDelegate.h"
-#include "ShowCharacterWorldSignatureDelegate.h"
 #include "StartForgingDelegate.h"
 #include "ForgingDoneDelegate.h"
-#include "OnHDRGammaChangedDelegate.h"
 #include "TutorialManagerSignatureDelegate.h"
-#include "PlayerCharacterSignatureDelegate.h"
 #include "ShowReconnectControllerDelegate.h"
 #include "OnXBoxAccountPickerClosedDelegate.h"
-#include "NetworkConnectionInfo.h"
-#include "ShowCharacterSelectorEquipSignatureDelegate.h"
+#include "OnXBoxChangeUserDelegate.h"
 #include "CravityChangedSignatureDelegate.h"
 #include "NewPostProcessingManagerDelegate.h"
 #include "SkinSignatureDelegate.h"
 #include "ShowCharacterSelectorSignatureDelegate.h"
 #include "ShowViewer3DSignatureDelegate.h"
 #include "ShowCharacterSelectorEqiupSlotSignatureDelegate.h"
+#include "ShowCharacterSelectorEquipSignatureDelegate.h"
 #include "ShowCharacterSelectorRotateSignatureDelegate.h"
 #include "ShowCharacterSelectorEndScreenSignatureDelegate.h"
-#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "GeneratedMissionSignatureDelegate.h"
 #include "BoscoChangedDelegate.h"
 #include "MinersManualNotificationDelegate.h"
 #include "OnPrivilegeCheckCompleteDelegate.h"
+#include "EDisconnectReason.h"
 #include "EAlwaysLoadedWorlds.h"
 #include "ECharselectionCameraLocation.h"
 #include "FindSessionsCallbackProxy.h"
 #include "EMinersManualSection.h"
-#include "ECharacterSelectorItemStatus.h"
 #include "Engine/EngineBaseTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "NetworkConnectionInfo.h"
 #include "FSDGameInstance.generated.h"
 
-class UDeepDiveManager;
-class USoundSubmix;
-class UWindowWidget;
+class UHUDWarningWidget;
 class USchematic;
 class AMolly;
-class UHUDWarningWidget;
-class ACharacterSelectionSwitcher;
-class UDSTelemetryWrapper;
-class AProceduralSetup;
-class UMissionResultInfo;
-class UNetDriver;
-class UFSDSessionUpdater;
-class UDifficultySetting;
-class APostProcessingManager;
-class UMouseCursorWidget;
-class UFSDSendToURL;
-class ULevelSequence;
-class UFSDCloudLoadSave;
-class AActor;
 class UGeneratedMission;
-class UWorld;
-class APlayerCharacter;
 class UGoogleAnalyticsWrapper;
-class UIconGenerationManager;
-class USpecialEvent;
+class UMissionResultInfo;
 class ABosco;
-class ATutorialManager;
-class UCampaignManager;
-class UFSDSaveGame;
-class UFSDFriendsAndInvites;
-class UTemporaryBuff;
+class UMouseCursorWidget;
+class AProceduralSetup;
 class UObject;
+class UFSDSendToURL;
+class AActor;
+class APlayerCharacter;
+class UDifficultySetting;
+class UDSTelemetryWrapper;
+class UFSDSessionUpdater;
+class USpecialEvent;
+class APostProcessingManager;
+class UWindowWidget;
+class ATutorialManager;
+class ACharacterSelectionSwitcher;
+class UTemporaryBuff;
+class UIconGenerationManager;
+class UFSDSaveGame;
+class UCampaignManager;
+class UDeepDiveManager;
+class UItemSkin;
+class UWorld;
+class UFSDCloudLoadSave;
+class UFSDFriendsAndInvites;
+class ULevelSequence;
+class USoundSubmix;
+class UNetDriver;
 class UMutator;
 class AFSDPlayerController;
-class UItemSkin;
 class UFSDGameUserSettings;
 class UTexture2D;
 class USoundBase;
@@ -505,6 +505,9 @@ public:
     void SetPendingInviteJoinModding(const FBlueprintSessionResult& Result);
     
     UFUNCTION(BlueprintCallable)
+    void SetOverrideMaxPlayerCount(int32 Count);
+    
+    UFUNCTION(BlueprintCallable)
     void SetMinersManualNotification(EMinersManualSection Section, UObject* IdentifyingObject, FText Text);
     
     UFUNCTION(BlueprintCallable)
@@ -574,7 +577,7 @@ private:
     void OnNewFSDSessionID(const FString& sessionId);
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnNetworkFailure(UWorld* World, UNetDriver* NetDriver, TEnumAsByte<ENetworkFailure::Type> failType, const FString& errorMessage);
     
 public:
@@ -636,6 +639,9 @@ public:
     TArray<FBlueprintSessionResult> GetServersFriendsArePlaying(TArray<FBlueprintSessionResult> servers);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetOverrideMaxPlayerCount() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UMutator*> GetMutators(TSubclassOf<UMutator> mutatorClass) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -688,6 +694,11 @@ public:
     UFUNCTION(BlueprintCallable)
     void CancelJoin();
     
+private:
+    UFUNCTION(BlueprintCallable)
+    void CachePSOsOnCommand();
+    
+public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ApplyGameUserSettings(UFSDGameUserSettings* Settings);
     

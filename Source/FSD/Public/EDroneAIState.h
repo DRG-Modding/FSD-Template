@@ -14,5 +14,6 @@ enum class EDroneAIState : uint8 {
     CarryGem,
     UseAbillity,
     Repairing,
+    Cleaning,
 };
 

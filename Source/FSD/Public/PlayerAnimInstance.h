@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FootStepNotifyTarget.h"
 #include "Animation/AnimInstance.h"
-#include "ECharacterState.h"
 #include "UObject/NoExportTypes.h"
+#include "ECharacterState.h"
+#include "FootStepNotifyTarget.h"
 #include "UObject/NoExportTypes.h"
 #include "GliderAnimSync.h"
 #include "ECharacterMoveDirection.h"
 #include "PlayerAnimInstance.generated.h"
 
-class APlayerCharacter;
-class UParticleSystem;
 class USoundCue;
+class UParticleSystem;
+class APlayerCharacter;
 class UItemCharacterAnimationSet;
 class UAnimMontage;
 class UUseAnimationSetting;

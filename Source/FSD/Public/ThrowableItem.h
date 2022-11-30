@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "AnimatedItem.h"
 #include "Upgradable.h"
+#include "UObject/NoExportTypes.h"
 #include "ThrowableItem.generated.h"
 
-class AThrowableActor;
-class UAnimMontage;
-class AItem;
 class UItemUpgrade;
+class AThrowableActor;
+class AItem;
+class UAnimMontage;
 class AActor;
 
 UCLASS(Blueprintable)

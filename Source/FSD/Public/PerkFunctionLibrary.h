@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "EPerkSlotType.h"
 #include "EPerkUsageType.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "PerkFunctionLibrary.generated.h"
 
 class UPerkAsset;
 class UObject;
-class UPlayerCharacterID;
 class APlayerCharacter;
+class UPlayerCharacterID;
 
 UCLASS(Blueprintable)
 class UPerkFunctionLibrary : public UBlueprintFunctionLibrary {

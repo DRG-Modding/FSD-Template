@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EAssaultRifleUpgrade.h"
 #include "StandardItemUpgrade.h"
 #include "UpgradeValues.h"
+#include "EAssaultRifleUpgrade.h"
 #include "AssaultRifleUpgrade.generated.h"
 
 class AFSDPlayerState;

@@ -3,8 +3,8 @@
 #include "GameFramework/Actor.h"
 #include "InfluenceTester.generated.h"
 
-class UCaveInfluencer;
 class USphereComponent;
+class UCaveInfluencer;
 
 UCLASS(Blueprintable)
 class AInfluenceTester : public AActor {

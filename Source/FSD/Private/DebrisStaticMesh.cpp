@@ -10,7 +10,7 @@ FDebrisStaticMesh::FDebrisStaticMesh() {
     this->Fragile = false;
     this->CastShadows = EDebrisMeshShadows::Never;
     this->Durable = false;
-    this->SpecialDebrisType = ESpecialDebrisType::None;
+    this->SpecialDebrisType = 0;
     this->SpawnWhenCarving = false;
     this->OnlySpawnWhenCarving = false;
 }

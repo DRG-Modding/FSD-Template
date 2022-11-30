@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
-#include "PlayerProgress.h"
 #include "CharacterProgress.h"
+#include "PlayerProgress.h"
 #include "MissionPlayerAndCharacterWidget.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

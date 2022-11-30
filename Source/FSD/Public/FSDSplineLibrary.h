@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Engine/EngineTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "UObject/NoExportTypes.h"
-#include "Engine/EngineTypes.h"
-#include "Engine/EngineTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Components/SplineComponent.h"
+#include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Blueprint/UserWidget.h"
 #include "Curve2DAppearance.h"
 #include "UObject/NoExportTypes.h"
@@ -35,7 +35,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static TArray<FTransform> GetSplineComponentTransforms(USplineComponent*& SplineComponent, float StepSize, TEnumAsByte<ESplineCoordinateSpace::Type> Space);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static void GetLocationAndTangentsAtSplinePoint(const USplineComponent* Spline, int32 PointIndex, FVector& Location, FVector& ArriveTangent, FVector& LeaveTangent, TEnumAsByte<ESplineCoordinateSpace::Type> CoordinateSpace);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -56,10 +56,10 @@ public:
     UFUNCTION(BlueprintCallable)
     static void DrawBezier2D(UPARAM(Ref) FPaintContext& Context, FVector2D InStartPos, FVector2D InStartTangent, FVector2D InEndPos, FVector2D InEndTangent, FCurve2DAppearance InAppearance, float Opacity, bool InClampTangents);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FInterpCurveVector2D CreateCurveWithTangents2D(const TArray<FVector2D>& Positions, FVector2D StartTangent, FVector2D EndTangent, TEnumAsByte<EInterpCurveMode> Mode);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FInterpCurveVector2D CreateCurve2D(const TArray<FVector2D>& Positions, TEnumAsByte<EInterpCurveMode> Mode);
     
     UFUNCTION(BlueprintCallable)

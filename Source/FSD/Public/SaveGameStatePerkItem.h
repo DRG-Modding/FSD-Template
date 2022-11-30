@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FSaveGameStatePerkItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     uint8 Rank;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

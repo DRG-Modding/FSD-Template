@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "RagdollItem.h"
+#include "Components/ActorComponent.h"
 #include "RagdollManager.generated.h"
 
 class UMaterialInstanceDynamic;

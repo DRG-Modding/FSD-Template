@@ -1,12 +1,12 @@
 #include "DSTelemetryWrapper.h"
 #include "Templates/SubclassOf.h"
 
-class APlayerCharacter;
-class AFSDPlayerController;
-class USeasonChallenge;
-class APlayerController;
-class AActor;
 class UGeneratedMission;
+class APlayerController;
+class USeasonChallenge;
+class AActor;
+class AFSDPlayerController;
+class APlayerCharacter;
 
 void UDSTelemetryWrapper::RecordTreeOfVanityClaim(int32 NodeID) {
 }

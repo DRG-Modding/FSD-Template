@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ECaveEntranceType.h"
 #include "Components/PrimitiveComponent.h"
+#include "ECaveEntranceType.h"
 #include "ECaveEntrancePriority.h"
 #include "CaveEntranceComponent.generated.h"
 

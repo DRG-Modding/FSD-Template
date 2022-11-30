@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SeasonalEventEntry.h"
+#include "Curves/CurveFloat.h"
 #include "SavableDataAsset.h"
 #include "SeasonLevel.h"
 #include "UnassignedReward.h"
-#include "Curves/CurveFloat.h"
+#include "SeasonalEventEntry.h"
 #include "Season.generated.h"
 
-class UMissionStat;
 class UTreeOfVanity;
 class UGameDLC;
+class UMissionStat;
 class UMissionWarning;
 class UReward;
 
@@ -39,16 +39,16 @@ public:
     UGameDLC* SeasonDLC;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float InSeasonZoneEventChanceModifier;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float InSeasonMissionChanceModifier;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRuntimeFloatCurve SpawnChanceByMissionLength;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FRuntimeFloatCurve MinorSpawnChanceByMissionLenght;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSeasonalEventEntry> SeasonalEvents;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FSeasonalEventEntry> MinorSeasonalEvents;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NumberOfScripChallenges;

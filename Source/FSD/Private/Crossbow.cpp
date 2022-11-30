@@ -2,11 +2,11 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
+class AActor;
 class UStatusEffect;
 class UProjectileLauncherBaseComponent;
-class AProjectileBase;
-class AActor;
 class UAnimMontage;
+class AProjectileBase;
 
 
 void ACrossbow::StartAmmoSwitch() {
@@ -77,5 +77,8 @@ ACrossbow::ACrossbow() {
     this->SwitchMontage = NULL;
     this->SwitchMontage_TP = NULL;
     this->CharacterSwitchMontage = NULL;
+    this->ReloadMontage = NULL;
+    this->ReloadMontage_TP = NULL;
+    this->CharacterReloadMontage = NULL;
 }
 

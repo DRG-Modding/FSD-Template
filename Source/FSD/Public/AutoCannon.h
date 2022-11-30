@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "AmmoDrivenWeapon.h"
 #include "Curves/CurveFloat.h"
+#include "AmmoDrivenWeapon.h"
 #include "AutoCannon.generated.h"
 
 class UStatusEffect;

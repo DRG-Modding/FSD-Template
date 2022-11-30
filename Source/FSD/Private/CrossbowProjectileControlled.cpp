@@ -13,5 +13,7 @@ void UCrossbowProjectileControlled::All_UpdateHomingTarget_Implementation(const 
 }
 
 UCrossbowProjectileControlled::UCrossbowProjectileControlled() {
+    this->HomingTarget = NULL;
+    this->CastedOwner = NULL;
 }
 

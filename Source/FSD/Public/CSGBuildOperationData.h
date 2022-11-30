@@ -3,7 +3,6 @@
 #include "Templates/SubclassOf.h"
 #include "BakeSettings.h"
 #include "MatrixWithExactSync.h"
-#include "UObject/NoExportTypes.h"
 #include "CSGBuildOperationData.generated.h"
 
 class ACSGBuilder;
@@ -23,9 +22,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMatrixWithExactSync Transform;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FBox BoundingBox;
     
     FSD_API FCSGBuildOperationData();
 };

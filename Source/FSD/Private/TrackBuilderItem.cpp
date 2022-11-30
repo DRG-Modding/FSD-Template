@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "CrosshairAggregator.h"
 
-class UTrackBuilderConnectPoint;
 class UTrackBuilderUsable;
+class UTrackBuilderConnectPoint;
 class ATrackBuilderSegment;
 
 void ATrackBuilderItem::UpdatePlacement(const FTransform& InTransform, UTrackBuilderConnectPoint* InConnectPoint, bool bPlacementValid, bool InUpdateServer) {

@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/Object.h"
 #include "UObject/NoExportTypes.h"
-#include "ECampaignType.h"
+#include "UObject/Object.h"
 #include "ECampaignMutators.h"
+#include "ECampaignType.h"
 #include "Campaign.generated.h"
 
 class UDifficultySetting;
 class UReward;
 class UCampaignMission;
 class UDialogDataAsset;
-class UPlayerCharacterID;
 class UCampaignRequirement;
+class UPlayerCharacterID;
 class UTexture2D;
 class UMissionStat;
 class UGameActivityAssignmentType;

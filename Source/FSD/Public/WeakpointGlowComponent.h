@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "DamageData.h"
+#include "Curves/CurveFloat.h"
 #include "Components/ActorComponent.h"
 #include "WeakpointChannel.h"
-#include "Curves/CurveFloat.h"
-#include "DamageData.h"
 #include "WeakpointGlowComponent.generated.h"
 
 class UMeshComponent;
-class UHealthComponentBase;
 class UFSDPhysicalMaterial;
-class UCurveFloat;
 class USkeletalMeshComponent;
+class UHealthComponentBase;
+class UCurveFloat;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UWeakpointGlowComponent : public UActorComponent {
@@ -61,7 +61,7 @@ public:
     void EnableWeakpointRegistration(bool Enabled);
     
 protected:
-    UFUNCTION(NetMulticast, Unreliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_ShowWeakPointHit(uint8 Channel);
     
 public:

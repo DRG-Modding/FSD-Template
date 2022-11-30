@@ -5,8 +5,8 @@
 #include "GameplayTagContainer.h"
 #include "StatusEffectMissionBP.generated.h"
 
-class APawn;
 class UStatusEffect;
+class APawn;
 class UEnemyDescriptor;
 
 UCLASS(Blueprintable)

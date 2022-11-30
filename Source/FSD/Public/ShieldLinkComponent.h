@@ -4,8 +4,8 @@
 #include "FloatPerkComponent.h"
 #include "ShieldLinkComponent.generated.h"
 
-class UStatusEffect;
 class APlayerCharacter;
+class UStatusEffect;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UShieldLinkComponent : public UFloatPerkComponent {

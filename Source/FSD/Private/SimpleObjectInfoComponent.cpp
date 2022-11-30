@@ -1,7 +1,7 @@
 #include "SimpleObjectInfoComponent.h"
 
-class USceneComponent;
 class UActorContextWidget;
+class USceneComponent;
 class UDialogDataAsset;
 class UTexture2D;
 

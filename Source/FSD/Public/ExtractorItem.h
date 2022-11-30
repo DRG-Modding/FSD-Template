@@ -10,18 +10,18 @@
 #include "UObject/NoExportTypes.h"
 #include "ExtractorItem.generated.h"
 
-class UFirstPersonParticleSystemComponent;
-class UBoxComponent;
-class UFSDAudioComponent;
 class UPointLightComponent;
 class USkeletalMeshComponent;
-class UParticleSystemComponent;
+class UBoxComponent;
 class AResourceChunk;
+class UFirstPersonParticleSystemComponent;
+class UFSDAudioComponent;
+class UParticleSystemComponent;
 class UAnimMontage;
 class UParticleSystem;
+class UDialogDataAsset;
 class UForceFeedbackEffect;
 class UResourceData;
-class UDialogDataAsset;
 class USoundCue;
 
 UCLASS(Blueprintable)
@@ -250,7 +250,7 @@ public:
     UBoxComponent* GetRootCollider() const;
     
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
-    void All_SimulateDigBlock(FVector_NetQuantize Position, bool spawnParticles, int32 Material);
+    void All_SimulateDigBlock(FVector_NetQuantize Position, bool SpawnParticles, int32 Material);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_ChunkSplat(AResourceChunk* chunk);

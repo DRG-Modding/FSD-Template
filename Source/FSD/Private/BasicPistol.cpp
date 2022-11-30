@@ -1,7 +1,7 @@
 #include "BasicPistol.h"
 
-class UPrimitiveComponent;
 class UHealthComponentBase;
+class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
 
 void ABasicPistol::OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial) {

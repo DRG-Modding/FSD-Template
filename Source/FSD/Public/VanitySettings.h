@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
-#include "UObject/NoExportTypes.h"
-#include "ResourceSpawner.h"
-#include "VanitySlotCharacter.h"
 #include "VanityMasterySettings.h"
+#include "Engine/DataAsset.h"
+#include "ResourceSpawner.h"
+#include "UObject/NoExportTypes.h"
 #include "EVanitySlot.h"
+#include "VanitySlotCharacter.h"
 #include "VanitySettings.generated.h"
 
-class UTexture2D;
 class UVanityItem;
 class UDLCBase;
+class UTexture2D;
 class UObject;
 class UPlayerCharacterID;
 

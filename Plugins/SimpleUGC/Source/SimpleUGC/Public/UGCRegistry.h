@@ -6,8 +6,8 @@
 #include "EUGCApprovalStatus.h"
 #include "UGCRegistry.generated.h"
 
-class AActor;
 class UUGCPackage;
+class AActor;
 
 UCLASS(Blueprintable)
 class SIMPLEUGC_API UUGCRegistry : public UObject {

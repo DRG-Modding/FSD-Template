@@ -6,11 +6,11 @@
 #include "FlyingEnemyDeepPathfinderCharacter.generated.h"
 
 class UPhysicalMaterial;
-class AActor;
-class USoundCue;
 class UPhysicsAsset;
 class UParticleSystem;
+class USoundCue;
 class UPrimitiveComponent;
+class AActor;
 
 UCLASS(Blueprintable)
 class AFlyingEnemyDeepPathfinderCharacter : public AEnemyDeepPathfinderCharacter {

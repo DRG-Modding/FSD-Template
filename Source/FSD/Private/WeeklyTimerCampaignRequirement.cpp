@@ -1,7 +1,7 @@
 #include "WeeklyTimerCampaignRequirement.h"
 
-class AFSDPlayerController;
 class UCampaign;
+class AFSDPlayerController;
 
 FTimespan UWeeklyTimerCampaignRequirement::GetWeeklyTimeLeft(AFSDPlayerController* Player) const {
     return FTimespan{};

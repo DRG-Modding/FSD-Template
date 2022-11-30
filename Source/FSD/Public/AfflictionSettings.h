@@ -5,8 +5,8 @@
 #include "AfflictionSettings.generated.h"
 
 class USoundCue;
-class UPawnAffliction;
 class UFXSystemAsset;
+class UPawnAffliction;
 
 UCLASS(Blueprintable)
 class UAfflictionSettings : public UDataAsset {

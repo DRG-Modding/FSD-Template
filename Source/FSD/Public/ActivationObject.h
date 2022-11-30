@@ -4,8 +4,8 @@
 #include "EInputKeys.h"
 #include "ActivationObject.generated.h"
 
-class APlayerCharacter;
 class USingleUsableComponent;
+class APlayerCharacter;
 
 UCLASS(Abstract, Blueprintable)
 class AActivationObject : public AActor {

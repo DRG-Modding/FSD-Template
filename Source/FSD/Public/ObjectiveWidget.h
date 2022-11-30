@@ -3,8 +3,8 @@
 #include "Blueprint/UserWidget.h"
 #include "ObjectiveWidget.generated.h"
 
-class UObjectiveWidget;
 class UObjective;
+class UObjectiveWidget;
 class UTexture2D;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)

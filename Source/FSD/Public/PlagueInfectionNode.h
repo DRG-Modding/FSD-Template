@@ -2,15 +2,15 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
-#include "PlagueCenterKilledDelegate.h"
 #include "FirstPlayerNearCenterDelegate.h"
+#include "PlagueCenterKilledDelegate.h"
 #include "DelegateDelegate.h"
 #include "PlagueInfectionNode.generated.h"
 
-class UCurveFloat;
-class UTerrainMaterial;
 class USimpleHealthComponent;
 class UDebrisPositioning;
+class UTerrainMaterial;
+class UCurveFloat;
 class UHealthComponentBase;
 
 UCLASS(Abstract, Blueprintable)

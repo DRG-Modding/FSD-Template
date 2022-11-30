@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "TunnelPath.h"
 #include "RoomNodeBase.h"
-#include "UObject/NoExportTypes.h"
 #include "RoomEntrance.h"
+#include "UObject/NoExportTypes.h"
 #include "TunnelNode.generated.h"
 
 class UTunnelParameters;

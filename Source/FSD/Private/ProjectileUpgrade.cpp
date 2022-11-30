@@ -1,8 +1,8 @@
 #include "ProjectileUpgrade.h"
 #include "Templates/SubclassOf.h"
 
-class AFSDPlayerState;
 class AActor;
+class AFSDPlayerState;
 
 FUpgradeValues UProjectileUpgrade::GetUpgradedValue(TSubclassOf<AActor> Item, TSubclassOf<AActor> upgradedItem, AFSDPlayerState* Player, EProjectileUpgrade NewUpgradeType) {
     return FUpgradeValues{};

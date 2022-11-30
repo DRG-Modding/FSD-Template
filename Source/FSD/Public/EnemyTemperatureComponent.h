@@ -4,10 +4,10 @@
 #include "DamageData.h"
 #include "EnemyTemperatureComponent.generated.h"
 
-class UPawnStatsComponent;
-class UEnemyDetonationSetting;
 class UDamageTag;
 class UHealthComponent;
+class UEnemyDetonationSetting;
+class UPawnStatsComponent;
 class UStatusEffectsComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -63,10 +63,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 WarmingCooldown;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     uint8 FireDetonationStack;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     uint8 IceDetonationStack;
     
 public:

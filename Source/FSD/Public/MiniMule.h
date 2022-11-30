@@ -26,5 +26,8 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<AGem*> FindLegsInLevelSortedByDistance() const;
     
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
+    void CheatRepair();
+    
 };
 

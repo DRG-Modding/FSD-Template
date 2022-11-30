@@ -2,16 +2,16 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Pawn.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "PlayerCameraDrone.generated.h"
 
-class UPrimitiveComponent;
+class AVanityCharacter;
 class UAnimationAsset;
 class UPawnMovementComponent;
-class AActor;
 class ALaserPointerMarker;
-class AVanityCharacter;
+class AActor;
+class UPrimitiveComponent;
 
 UCLASS(Abstract, Blueprintable)
 class APlayerCameraDrone : public APawn {

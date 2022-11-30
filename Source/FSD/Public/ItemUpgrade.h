@@ -2,17 +2,17 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "SavableDataAsset.h"
-#include "EUpgradeClass.h"
 #include "RefundableInterface.h"
 #include "EUpgradeTiers.h"
+#include "EUpgradeClass.h"
 #include "ItemUpgradeStatText.h"
 #include "UpgradeValues.h"
 #include "CraftingCost.h"
 #include "ItemUpgrade.generated.h"
 
-class UResourceData;
 class UItemUpgradeCategory;
 class UItemUpgrade;
+class UResourceData;
 class UItemUpgradeElement;
 class AActor;
 class AFSDPlayerState;

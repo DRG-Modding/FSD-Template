@@ -3,10 +3,10 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "SchematicBlueprintLibrary.generated.h"
 
-class UPlayerCharacterID;
 class USchematic;
 class UItemSkinSchematicCollection;
 class UObject;
+class UPlayerCharacterID;
 class USchematicCategory;
 class UItemUpgrade;
 

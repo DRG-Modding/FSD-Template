@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "WeaponFireOwner.h"
 #include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
-#include "UObject/NoExportTypes.h"
+#include "WeaponFireOwner.h"
 #include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "NeedleSprayer.generated.h"
 
-class UHitscanComponent;
-class USceneComponent;
-class UFSDAudioComponent;
-class USkeletalMeshComponent;
-class UPointLightComponent;
 class UNiagaraComponent;
+class USceneComponent;
+class USkeletalMeshComponent;
+class UFSDAudioComponent;
+class UHitscanComponent;
+class UPointLightComponent;
 class UAnimMontage;
 class APlayerCharacter;
 
@@ -41,6 +41,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UNiagaraComponent* ImpactParticleComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    USceneComponent* ShotOriginPivot;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
@@ -77,6 +80,9 @@ protected:
     float AvoidCloseOffset;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float ShotOriginOffset;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxRearms;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -87,6 +93,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool DrawDebugLines;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float DebugLinesDuration;
     
 public:
     ANeedleSprayer();

@@ -7,9 +7,9 @@
 
 class ASplineCableActor;
 class ARivalBombNode;
-class APlayerCharacter;
-class UHackingUsableComponent;
 class ARivalBomb;
+class UHackingUsableComponent;
+class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class ARivalBombNode : public AActor {

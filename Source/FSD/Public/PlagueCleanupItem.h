@@ -6,11 +6,11 @@
 #include "EInputKeys.h"
 #include "PlagueCleanupItem.generated.h"
 
-class UCrosshairAggregator;
-class USphereComponent;
+class UBoxComponent;
 class USoundCue;
 class UInstantUsable;
-class UBoxComponent;
+class UCrosshairAggregator;
+class USphereComponent;
 class UAnimMontage;
 class UKeepInsideWorld;
 class UAudioComponent;

@@ -4,8 +4,8 @@
 #include "GDAudio.generated.h"
 
 class USoundAttenuation;
-class UDynamicReverbComponent;
 class AFSDReverbVolume;
+class UDynamicReverbComponent;
 
 USTRUCT(BlueprintType)
 struct FGDAudio {

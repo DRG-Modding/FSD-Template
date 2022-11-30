@@ -3,10 +3,10 @@
 #include "AmmoDrivenWeapon.h"
 #include "BurstWeapon.generated.h"
 
-class UPrimitiveComponent;
-class UHealthComponentBase;
-class UDamageComponent;
 class UFSDPhysicalMaterial;
+class UPrimitiveComponent;
+class UDamageComponent;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class ABurstWeapon : public AAmmoDrivenWeapon {

@@ -6,13 +6,13 @@
 #include "Engine/EngineTypes.h"
 #include "Bomber.generated.h"
 
-class AActor;
 class UAudioComponent;
 class AProjectile;
 class UParticleSystemComponent;
 class UParticleSystem;
-class USoundBase;
 class UPrimitiveComponent;
+class USoundBase;
+class AActor;
 
 UCLASS(Blueprintable)
 class ABomber : public AAFlyingBug {

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EGrapplingHookUpgrade.h"
 #include "StandardItemUpgrade.h"
+#include "EGrapplingHookUpgrade.h"
 #include "UpgradeValues.h"
 #include "GrapplingHookUpgrade.generated.h"
 

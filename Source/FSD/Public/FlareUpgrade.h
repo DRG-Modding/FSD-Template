@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "StandardItemUpgrade.h"
-#include "EFlareUpgradeType.h"
 #include "UpgradeValues.h"
+#include "EFlareUpgradeType.h"
 #include "FlareUpgrade.generated.h"
 
 class AActor;

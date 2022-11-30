@@ -2,15 +2,15 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UObject/Object.h"
-#include "GameplayTagContainer.h"
-#include "GameplayTagContainer.h"
 #include "RandRange.h"
+#include "GameplayTagContainer.h"
+#include "GameplayTagContainer.h"
 #include "StatusEffect.generated.h"
 
 class UStatusEffectExclusiveKey;
 class UPawnAffliction;
-class UStatusEffectItem;
 class UDamageClass;
+class UStatusEffectItem;
 class UStatusEffect;
 class AActor;
 

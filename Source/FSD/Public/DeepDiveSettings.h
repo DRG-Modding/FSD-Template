@@ -8,8 +8,8 @@ class UDeepDiveTemplate;
 class UMutator;
 class UMissionMutator;
 class UMissionWarning;
-class UMissionNameBank;
 class UDialogDataAsset;
+class UMissionNameBank;
 
 UCLASS(Blueprintable)
 class UDeepDiveSettings : public UDataAsset {

@@ -3,8 +3,8 @@
 #include "UObject/Interface.h"
 #include "NetMontageAble.generated.h"
 
-class UAnimMontage;
 class USkeletalMeshComponent;
+class UAnimMontage;
 class UAnimInstance;
 
 UINTERFACE(BlueprintType, meta=(CannotImplementInterfaceInBlueprint))

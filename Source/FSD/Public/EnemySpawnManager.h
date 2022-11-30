@@ -2,22 +2,22 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
-#include "EnemyDestroyedSignatureDelegate.h"
 #include "EnemySpawnedSignatureDelegate.h"
-#include "SpawnQueueItem.h"
+#include "EnemyDestroyedSignatureDelegate.h"
 #include "SpawnRarityModifierItem.h"
-#include "GameplayTagContainer.h"
-#include "UObject/NoExportTypes.h"
 #include "EnemySpawnedDelegateDelegate.h"
+#include "GameplayTagContainer.h"
+#include "SpawnQueueItem.h"
+#include "UObject/NoExportTypes.h"
 #include "EnemySpawnManager.generated.h"
 
-class UEnemyDescriptor;
+class AActor;
+class UStatusEffect;
 class USpawnEffectsComponent;
 class APawn;
-class UStatusEffect;
+class UEnemyDescriptor;
 class AProceduralSetup;
 class UHealthComponentBase;
-class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UEnemySpawnManager : public UActorComponent {

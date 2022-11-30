@@ -7,8 +7,8 @@
 #include "FSDAudioComponent.h"
 
 class AProjectileBase;
-class UPrimitiveComponent;
 class UHealthComponentBase;
+class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
 
 void ACryosprayItem::ServerDoDamage_Implementation(FVector_NetQuantize Start, FVector_NetQuantize End, uint8 Power) {

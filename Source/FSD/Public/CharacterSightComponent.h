@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "Engine/EngineTypes.h"
-#include "ReplicatedCharacterData.h"
+#include "Components/ActorComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "ReplicatedCharacterData.h"
 #include "CharacterSightComponent.generated.h"
 
 class AActor;
-class USimpleObjectInfoComponent;
-class APlayerCharacter;
 class UPrimitiveComponent;
+class APlayerCharacter;
 class UTemperatureComponent;
+class USimpleObjectInfoComponent;
 class UPawnAfflictionComponent;
 class UHealth;
 class IHealth;
+class UCharacterSightSensorBase;
 class UTargetable;
 class ITargetable;
-class UCharacterSightSensorBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCharacterSightComponent : public UActorComponent {
@@ -31,7 +31,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TargetMaxDistance;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ECollisionChannel> TraceChannel;
     
     UPROPERTY(EditAnywhere, Transient)

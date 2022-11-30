@@ -6,8 +6,8 @@
 #include "UpgradeValues.h"
 #include "MicroMissileLauncherUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AItem;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UMicroMissileLauncherUpgrade : public UStandardItemUpgrade {

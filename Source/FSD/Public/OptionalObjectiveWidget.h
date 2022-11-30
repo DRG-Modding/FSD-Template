@@ -3,8 +3,8 @@
 #include "Blueprint/UserWidget.h"
 #include "OptionalObjectiveWidget.generated.h"
 
-class UOptionalObjectiveWidget;
 class UObjective;
+class UOptionalObjectiveWidget;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UOptionalObjectiveWidget : public UUserWidget {

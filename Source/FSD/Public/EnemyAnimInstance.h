@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "IsAttackingChangedDelegateDelegate.h"
-#include "Animation/AnimInstance.h"
 #include "AnimNotifyDelegateDelegate.h"
+#include "Animation/AnimInstance.h"
 #include "NameDelegateDelegate.h"
+#include "IsAttackingChangedDelegateDelegate.h"
 #include "EnemyAnimInstance.generated.h"
 
-class UHealthComponentBase;
 class USkeletalMeshComponent;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable, NonTransient)
 class UEnemyAnimInstance : public UAnimInstance {

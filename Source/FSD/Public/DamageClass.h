@@ -3,10 +3,10 @@
 #include "Engine/DataAsset.h"
 #include "DamageClass.generated.h"
 
+class UDialogDataAsset;
 class UPawnStat;
 class UTexture2D;
 class UDamageImpulse;
-class UDialogDataAsset;
 
 UCLASS(Blueprintable)
 class UDamageClass : public UDataAsset {

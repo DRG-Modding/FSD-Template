@@ -3,8 +3,8 @@
 #include "Components/ActorComponent.h"
 #include "KeepInsideWorld.generated.h"
 
-class UObject;
 class AActor;
+class UObject;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UKeepInsideWorld : public UActorComponent {

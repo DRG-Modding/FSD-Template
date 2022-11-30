@@ -4,8 +4,8 @@
 #include "EGooGunFireMode.h"
 #include "GooGun.generated.h"
 
-class UAnimMontage;
 class USoundCue;
+class UAnimMontage;
 class UFXSystemAsset;
 class UFXSystemComponent;
 

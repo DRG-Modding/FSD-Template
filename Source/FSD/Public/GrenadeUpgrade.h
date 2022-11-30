@@ -6,8 +6,8 @@
 #include "UpgradeValues.h"
 #include "GrenadeUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AGrenade;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UGrenadeUpgrade : public UStandardItemUpgrade {

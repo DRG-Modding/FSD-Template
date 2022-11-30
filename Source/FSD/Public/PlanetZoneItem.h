@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "PlanetZoneItem.generated.h"
 
-class UGeneratedMission;
-class UBiome;
 class UPlanetZone;
+class UBiome;
+class UGeneratedMission;
 
 USTRUCT(BlueprintType)
 struct FPlanetZoneItem {

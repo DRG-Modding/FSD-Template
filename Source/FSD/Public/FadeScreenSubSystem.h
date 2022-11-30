@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Subsystems/GameInstanceSubsystem.h"
 #include "FadingDoneDelegate.h"
+#include "Subsystems/GameInstanceSubsystem.h"
 #include "FadeData.h"
 #include "FadeScreenSubSystem.generated.h"
 

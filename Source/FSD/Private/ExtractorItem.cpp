@@ -1,10 +1,10 @@
 #include "ExtractorItem.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/PointLightComponent.h"
+#include "Particles/ParticleSystemComponent.h"
 #include "FSDAudioComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Components/BoxComponent.h"
-#include "Particles/ParticleSystemComponent.h"
+#include "Components/PointLightComponent.h"
 
 class AResourceChunk;
 
@@ -52,7 +52,7 @@ UBoxComponent* AExtractorItem::GetRootCollider() const {
     return NULL;
 }
 
-void AExtractorItem::All_SimulateDigBlock_Implementation(FVector_NetQuantize Position, bool spawnParticles, int32 Material) {
+void AExtractorItem::All_SimulateDigBlock_Implementation(FVector_NetQuantize Position, bool SpawnParticles, int32 Material) {
 }
 
 void AExtractorItem::All_ChunkSplat_Implementation(AResourceChunk* chunk) {

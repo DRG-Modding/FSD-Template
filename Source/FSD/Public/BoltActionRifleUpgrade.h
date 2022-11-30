@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "StandardItemUpgrade.h"
-#include "UpgradeValues.h"
 #include "EBoltActionRifleUpgrades.h"
+#include "UpgradeValues.h"
 #include "BoltActionRifleUpgrade.generated.h"
 
 class AFSDPlayerState;

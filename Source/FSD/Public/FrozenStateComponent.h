@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RandRange.h"
 #include "CharacterStateComponent.h"
+#include "RandRange.h"
 #include "FrozenStateComponent.generated.h"
 
-class USoundBase;
 class UFSDPhysicalMaterial;
+class USoundBase;
 
 UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFrozenStateComponent : public UCharacterStateComponent {

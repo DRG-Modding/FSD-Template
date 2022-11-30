@@ -1,9 +1,9 @@
 #include "InventoryList.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
 class UObject;
 class UItemID;
+class AActor;
 
 UItemID* UInventoryList::GetPreviousUnlockedItem(UObject* WorldContextObject, EItemCategory Category, UItemID* currentItem) const {
     return NULL;

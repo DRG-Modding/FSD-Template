@@ -1,8 +1,8 @@
 #include "CooldownUpgrade.h"
 #include "Templates/SubclassOf.h"
 
-class AFSDPlayerState;
 class AActor;
+class AFSDPlayerState;
 
 FUpgradeValues UCooldownUpgrade::GetUpgradedValue(TSubclassOf<AActor> Item, AFSDPlayerState* Player) {
     return FUpgradeValues{};

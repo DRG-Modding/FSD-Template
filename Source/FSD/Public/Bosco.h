@@ -1,53 +1,54 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "SaveGameIDInterface.h"
+#include "Engine/NetSerialization.h"
 #include "DeepPathfinderCharacter.h"
 #include "WeaponFireOwner.h"
-#include "ItemIDInterface.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "UpgradableGear.h"
-#include "Upgradable.h"
-#include "SaveGameIDInterface.h"
 #include "Skinnable.h"
+#include "Upgradable.h"
+#include "ItemIDInterface.h"
 #include "NotifyMessageReceiver.h"
 #include "DamageData.h"
-#include "GameplayTagContainer.h"
+#include "EDroneAIState.h"
+#include "EAbilityIndex.h"
 #include "ReviveUsedSigDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "StateChangedSigDelegate.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "GameplayTagContainer.h"
 #include "BoscoLightSetting.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "Engine/NetSerialization.h"
-#include "EDroneAIState.h"
 #include "Bosco.generated.h"
 
-class USoundCue;
-class UPointLightComponent;
-class USkeletalMeshComponent;
-class APlayerCharacter;
-class UItemID;
+class UBoscoAbillity;
+class UUpgradableBoscoComponent;
 class UHealthComponent;
+class UParticleSystemComponent;
 class UBoscoAbillityComponent;
+class UItemID;
 class UDamageComponent;
-class UDroneSkinnableComponent;
 class UPawnSensingComponent;
 class UDroneMiningToolBase;
+class USoundCue;
 class UBobbingComponent;
+class UAnimSequenceBase;
+class USkeletalMeshComponent;
 class UHitscanComponent;
-class UBoscoProjectileAbillity;
 class USpotLightComponent;
-class UParticleSystemComponent;
+class UPointLightComponent;
 class UAudioComponent;
 class UDialogDataAsset;
 class USoundBase;
-class UItemUpgrade;
-class UUpgradableBoscoComponent;
-class UAnimSequenceBase;
-class UBoscoAbillity;
 class AActor;
+class UItemUpgrade;
+class UBoscoProjectileAbillity;
+class UDroneSkinnableComponent;
 class UParticleSystem;
 class ABoscoController;
 class UTerrainMaterial;
+class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class FSD_API ABosco : public ADeepPathfinderCharacter, public IWeaponFireOwner, public IUpgradableGear, public IUpgradable, public ISaveGameIDInterface, public ISkinnable, public IItemIDInterface, public INotifyMessageReceiver {
@@ -126,12 +127,6 @@ public:
     UDialogDataAsset* GeneralCallShout;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UDialogDataAsset* RocketAbillityShout;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UDialogDataAsset* CryoGrenadeAbillityShout;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDialogDataAsset* VacuumShout;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -157,6 +152,9 @@ public:
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FReviveUsedSig OnReviveused;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool ShouldSelfDestructOnMultiplePlayers;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FStateChangedSig OnStateChanged;
@@ -324,6 +322,9 @@ protected:
 public:
     ABosco();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+    
+    UFUNCTION(BlueprintCallable)
+    void UsePlayerActivatedAbillity(EAbilityIndex Index, AActor* aTarget, const FVector& aLocation);
     
     UFUNCTION(BlueprintCallable)
     void UseABillity();

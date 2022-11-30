@@ -5,8 +5,8 @@
 #include "UpgradeValues.h"
 #include "PushDynamicStatusEffectDamageBonusUpgrade.generated.h"
 
-class UStatusEffectItem;
 class AFSDPlayerState;
+class UStatusEffectItem;
 class AActor;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)

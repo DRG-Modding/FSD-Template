@@ -6,11 +6,11 @@
 #include "ItemSkin.generated.h"
 
 class UDynamicIcon;
+class UItemSkinSet;
 class UItemAquisitionBase;
 class UItemSkin;
-class UItemID;
-class UItemSkinSet;
 class USkinEffect;
+class UItemID;
 class UPlayerCharacterID;
 class UObject;
 class AFSDPlayerState;

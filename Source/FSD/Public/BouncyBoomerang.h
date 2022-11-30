@@ -4,16 +4,16 @@
 #include "Grenade.h"
 #include "UObject/NoExportTypes.h"
 #include "EBoomerangState.h"
-#include "BoomerangSyncer.h"
 #include "BoomerangMover.h"
+#include "BoomerangSyncer.h"
 #include "BouncyBoomerang.generated.h"
 
 class USceneComponent;
-class UNiagaraSystem;
 class UDamageComponent;
 class UStatusEffect;
-class UParticleSystem;
+class UNiagaraSystem;
 class USoundCue;
+class UParticleSystem;
 class AFSDPawn;
 
 UCLASS(Blueprintable)

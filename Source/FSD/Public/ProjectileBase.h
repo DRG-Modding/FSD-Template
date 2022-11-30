@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "ProjectileImpact.h"
+#include "GameFramework/Actor.h"
 #include "EOnProjectileImpactBehaviourEnum.h"
 #include "Engine/NetSerialization.h"
-#include "Engine/NetSerialization.h"
+#include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/NetSerialization.h"
 #include "ProjectileBase.generated.h"
 
-class UTerrainMaterial;
-class USoundCue;
-class USphereComponent;
 class UProjectileUpgradeElement;
+class USphereComponent;
+class UFSDPhysicalMaterial;
+class USoundCue;
+class UTerrainMaterial;
 class UPrimitiveComponent;
 class AProjectileBase;
-class UFSDPhysicalMaterial;
 class UDamageComponent;
 class UItemUpgrade;
 

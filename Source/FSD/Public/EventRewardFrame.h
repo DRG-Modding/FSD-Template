@@ -3,8 +3,8 @@
 #include "GameFramework/Actor.h"
 #include "EventRewardFrame.generated.h"
 
-class USpecialEventUsableComponent;
 class AEventRewardDispenser;
+class USpecialEventUsableComponent;
 
 UCLASS(Blueprintable)
 class AEventRewardFrame : public AActor {

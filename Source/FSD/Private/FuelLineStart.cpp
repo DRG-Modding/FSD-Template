@@ -1,9 +1,9 @@
 #include "FuelLineStart.h"
 #include "Net/UnrealNetwork.h"
-#include "OutlineComponent.h"
+#include "SimpleObjectInfoComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "FuelLineStartUsable.h"
-#include "SimpleObjectInfoComponent.h"
+#include "OutlineComponent.h"
 
 class UTrackBuilderUsable;
 class ATrackBuilderSegment;

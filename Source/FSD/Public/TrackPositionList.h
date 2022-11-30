@@ -3,8 +3,8 @@
 #include "UObject/NoExportTypes.h"
 #include "TrackPositionList.generated.h"
 
-class UGemTracker;
 class UMaterialInstanceDynamic;
+class UGemTracker;
 
 USTRUCT(BlueprintType)
 struct FTrackPositionList {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "ItemUpgrade.h"
+#include "UObject/NoExportTypes.h"
 #include "WeaponChargeProgressDamageBonus.generated.h"
 
 class UDamageClass;

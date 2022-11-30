@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "AnimatedItem.h"
 #include "Upgradable.h"
 #include "PlaceableInterface.h"
+#include "UObject/NoExportTypes.h"
 #include "PlaceableItem.generated.h"
 
+class AActor;
 class UCapacityHoldingItemAggregator;
 class UItemPlacerAggregator;
-class AActor;
 
 UCLASS(Blueprintable)
 class APlaceableItem : public AAnimatedItem, public IUpgradable, public IPlaceableInterface {

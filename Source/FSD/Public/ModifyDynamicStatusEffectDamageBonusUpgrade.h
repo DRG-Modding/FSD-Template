@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "StandardItemUpgrade.h"
-#include "UpgradeValues.h"
 #include "EModifyStatusEffectDamageUpgrade.h"
+#include "UpgradeValues.h"
 #include "ModifyDynamicStatusEffectDamageBonusUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AActor;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UModifyDynamicStatusEffectDamageBonusUpgrade : public UStandardItemUpgrade {

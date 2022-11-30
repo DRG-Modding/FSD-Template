@@ -1,15 +1,16 @@
 #include "FSDCheatManager.h"
 #include "Templates/SubclassOf.h"
 
-class UEnemyDescriptor;
-class UPlayerCharacterID;
-class UBaseCritterDescriptor;
-class APlayerCharacter;
 class APawn;
-class AFSDAIController;
-class UObject;
-class AActor;
 class UResourceData;
+class UPlayerCharacterID;
+class UItemID;
+class UBaseCritterDescriptor;
+class UEnemyDescriptor;
+class UObject;
+class AFSDAIController;
+class AActor;
+class APlayerCharacter;
 
 void UFSDCheatManager::SwitchCharacter(UPlayerCharacterID* characterID) {
 }
@@ -146,6 +147,9 @@ void UFSDCheatManager::D_EnableMovieModeInSpacerig(bool Value) {
 }
 
 void UFSDCheatManager::D_EnableMovieMode(bool Value) {
+}
+
+void UFSDCheatManager::Cheat_UnlockWeapon(UObject* WorldContextObjectm, UItemID* ItemID) {
 }
 
 void UFSDCheatManager::Cheat_UnlockAllWeapons(UObject* WorldContextObject) {
@@ -412,6 +416,9 @@ void UFSDCheatManager::C_Schematics_ClearHasSeenFirstMessage() {
 void UFSDCheatManager::C_Schematic_GiveRandom() {
 }
 
+void UFSDCheatManager::C_Salvage_FixMiniMules() {
+}
+
 void UFSDCheatManager::C_Revive() {
 }
 
@@ -505,6 +512,9 @@ void UFSDCheatManager::C_ProjectileDebugPrintToggle() {
 void UFSDCheatManager::C_MissionMap_TestDistribution() {
 }
 
+void UFSDCheatManager::C_MissionMap_Rotate() {
+}
+
 void UFSDCheatManager::C_MissionMap_ForceWarning(int32 Index) {
 }
 
@@ -512,6 +522,9 @@ void UFSDCheatManager::C_MissionMap_ForceAnomaly(int32 Index) {
 }
 
 void UFSDCheatManager::C_MissionMap_DoubleWarning(int32 indexA, int32 indexB) {
+}
+
+void UFSDCheatManager::C_MissionMap_AutoRotate(bool Enabled) {
 }
 
 void UFSDCheatManager::C_MinersManual_EnableWorkInProgress(UObject* WorldContextObject) {
@@ -641,9 +654,6 @@ void UFSDCheatManager::C_Campaign_CompleteCurrent() {
 }
 
 void UFSDCheatManager::C_Campaign_Advance() {
-}
-
-void UFSDCheatManager::C_AutoRotateMissionMap(bool Enabled) {
 }
 
 void UFSDCheatManager::C_AddXP(int32 Number) {

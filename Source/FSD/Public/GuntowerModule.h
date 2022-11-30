@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EventParticipant.h"
 #include "FSDPawn.h"
+#include "EventParticipant.h"
 #include "UObject/NoExportTypes.h"
 #include "GuntowerModule.generated.h"
 
-class UStaticMeshComponent;
-class AActor;
-class USoundCue;
-class UAnimSequenceBase;
 class UParticleSystem;
+class USoundCue;
+class AActor;
+class UStaticMeshComponent;
 class USkeletalMeshComponent;
+class UAnimSequenceBase;
 class UGunTowerHealthComponent;
 class AGuntowerEvent;
 class AGuntowerModule;

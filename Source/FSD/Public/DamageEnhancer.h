@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Grenade.h"
-#include "Targetable.h"
 #include "UObject/NoExportTypes.h"
+#include "Targetable.h"
 #include "EnhancedTrace.h"
 #include "Engine/EngineTypes.h"
 #include "DamageEnhancer.generated.h"
 
-class UHitscanComponent;
+class UStaticMeshComponent;
 class UBoxComponent;
 class UHealthComponent;
 class UDamageComponent;
 class USphereComponent;
+class UHitscanComponent;
 class UReflectionHitscanComponent;
-class UStaticMeshComponent;
 class UCapsuleHitscanComponent;
 class UHitscanBaseComponent;
 class UPrimitiveComponent;

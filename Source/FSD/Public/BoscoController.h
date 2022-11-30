@@ -1,18 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FSDAIController.h"
+#include "Templates/SubclassOf.h"
 #include "FollowTargetChangedDelegate.h"
+#include "UObject/NoExportTypes.h"
+#include "FSDAIController.h"
 #include "GameplayTagContainer.h"
 #include "LaserPointerTarget.h"
 #include "EInputKeys.h"
-#include "UObject/NoExportTypes.h"
 #include "BoscoController.generated.h"
 
-class AActor;
-class UTerrainMaterial;
 class UBehaviorTree;
-class APlayerCharacter;
+class UTerrainMaterial;
+class UMissionWarning;
+class AActor;
 class UDroneUseComponent;
+class APlayerCharacter;
 class AFSDPlayerState;
 class UHealthComponentBase;
 
@@ -39,6 +41,15 @@ public:
     TArray<UTerrainMaterial*> PlagueMaterials;
     
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UMissionWarning* PlagueWarning;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<TSubclassOf<AActor>> VacuumableTypes;
+    
+    UPROPERTY(EditAnywhere, Transient)
+    TArray<TWeakObjectPtr<AActor>> VacuumTargets;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SearchForEnemiesInterval;
     

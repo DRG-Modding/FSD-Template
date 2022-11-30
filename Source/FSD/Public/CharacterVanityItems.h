@@ -6,17 +6,17 @@
 #include "CharacterVanityItems.generated.h"
 
 class UMoustacheVanityItem;
-class UArmorVanityItem;
-class UHeadVanityItem;
-class UBeardVanityItem;
-class UVanitySchematicBank;
-class UArmorMaterialVanityItem;
 class UEyeBrowsVanityItem;
+class UPlayerCharacterID;
+class UHeadVanityItem;
+class UVanitySchematicBank;
+class UBeardVanityItem;
+class UArmorVanityItem;
+class UArmorMaterialVanityItem;
 class USideburnsVanityItem;
-class UVanityItem;
 class UBeardColorVanityItem;
 class USkinColorVanityItem;
-class UPlayerCharacterID;
+class UVanityItem;
 class UObject;
 
 UCLASS(Blueprintable)

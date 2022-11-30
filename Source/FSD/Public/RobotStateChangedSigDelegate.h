@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "RobotStateChangedSigDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FRobotStateChangedSig, uint8, aState);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FRobotStateChangedSig, uint8, aState);
 

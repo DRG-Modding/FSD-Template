@@ -6,9 +6,9 @@
 #include "Engine/EngineTypes.h"
 #include "StatusEffectTriggerComponent.generated.h"
 
+class AActor;
 class UStatusEffect;
 class UPrimitiveComponent;
-class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UStatusEffectTriggerComponent : public UActorComponent {

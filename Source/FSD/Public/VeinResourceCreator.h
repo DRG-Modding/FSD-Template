@@ -5,10 +5,10 @@
 #include "RandRange.h"
 #include "VeinResourceCreator.generated.h"
 
-class UVeinResourceData;
 class UDebrisPositioning;
-class UFloodFillSettings;
+class UVeinResourceData;
 class UDebrisBase;
+class UFloodFillSettings;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UVeinResourceCreator : public UResourceCreator {

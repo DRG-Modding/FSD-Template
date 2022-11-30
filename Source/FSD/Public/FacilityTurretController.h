@@ -4,9 +4,9 @@
 #include "Perception/AIPerceptionTypes.h"
 #include "FacilityTurretController.generated.h"
 
-class AActor;
-class UAIPerceptionComponent;
 class UHealthComponentBase;
+class UAIPerceptionComponent;
+class AActor;
 
 UCLASS(Blueprintable)
 class AFacilityTurretController : public AFSDAIController {

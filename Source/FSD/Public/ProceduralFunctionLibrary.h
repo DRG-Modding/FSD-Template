@@ -7,11 +7,11 @@
 #include "RoomNode.h"
 #include "ProceduralFunctionLibrary.generated.h"
 
-class UObject;
 class UObjective;
+class UObject;
 class UFXSystemAsset;
-class AProceduralSetup;
 class UBiome;
+class AProceduralSetup;
 class UDebrisPositioning;
 
 UCLASS(Blueprintable)

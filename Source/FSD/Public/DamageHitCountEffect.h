@@ -6,8 +6,8 @@
 
 class UStatusEffect;
 class UDamageClass;
-class UParticleSystem;
 class USoundCue;
+class UParticleSystem;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UDamageHitCountEffect : public UWeaponHitCountEffect {

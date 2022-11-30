@@ -7,19 +7,19 @@
 #include "ObjectiveMissionIcon.h"
 #include "GeneratedMission.generated.h"
 
-class UMissionWarning;
 class UBiome;
+class UMissionDNA;
 class UMissionTemplate;
-class UObjective;
+class UGeneratedMission;
 class UMutator;
+class UObjective;
+class UMissionWarning;
 class UMissionMutator;
 class UMissionComplexity;
 class UMissionDuration;
-class UMissionDNA;
-class ULevelSequence;
 class AProceduralSetup;
+class ULevelSequence;
 class AFSDPlayerController;
-class UGeneratedMission;
 
 UCLASS(Blueprintable)
 class FSD_API UGeneratedMission : public UObject {

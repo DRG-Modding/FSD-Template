@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "HealthSegmentChangeDelegate.h"
 #include "HealthComponentBase.h"
-#include "DamageData.h"
 #include "DamageSigDelegate.h"
 #include "HealthChangedSigDelegate.h"
 #include "ArmorHealedSigDelegate.h"
 #include "DeathSigDetailedDelegate.h"
-#include "HealthSegmentChangeDelegate.h"
 #include "EHealthbarType.h"
+#include "DamageData.h"
 #include "HealthComponent.generated.h"
 
-class AActor;
 class USubHealthComponent;
+class AActor;
 class UPawnStat;
 class UPawnStatsComponent;
 

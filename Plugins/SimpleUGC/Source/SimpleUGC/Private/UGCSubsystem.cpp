@@ -40,9 +40,6 @@ void UUGCSubsystem::K2_RequestModMetaData(UObject* WorldContext, FLatentActionIn
 void UUGCSubsystem::K2_RequestModDependencyList(UObject* WorldContext, FLatentActionInfo LatentInfo, const FString& ModId, FString& outParentId, TArray<FString>& outModIds) {
 }
 
-void UUGCSubsystem::K2_RequestHasHostHiddenMods(UObject* WorldContext, FLatentActionInfo LatentInfo, TArray<FString> sHostModIds, TArray<FString> sClientModIds, bool& outHidden) {
-}
-
 void UUGCSubsystem::K2_RequestFetchModUpdates() {
 }
 
@@ -55,6 +52,10 @@ bool UUGCSubsystem::IsModPendingUninstall(UUGCPackage* InMod) const {
 
 bool UUGCSubsystem::HasOutstadingRequestOfType(EModioRequestType requestType) {
     return false;
+}
+
+TArray<EModioRequestType> UUGCSubsystem::GetQueuedModioRequests() {
+    return TArray<EModioRequestType>();
 }
 
 TArray<FString> UUGCSubsystem::GetNamesOfModsPendingUninstall() {
@@ -73,7 +74,7 @@ bool UUGCSubsystem::GetCheckGameVersion() {
     return false;
 }
 
-bool UUGCSubsystem::FetchModsForSession(TArray<FString> HostMods, UUGCSubsystem::FUGRequiredModsFetched OnModsFetched, UUGCSubsystem::FUGCHiddenMods OnHostHasHiddenMods) {
+bool UUGCSubsystem::FetchModsForSession(TArray<FString> HostMods, UUGCSubsystem::FUGRequiredModsFetched OnModsFetched) {
     return false;
 }
 

@@ -6,8 +6,8 @@
 #include "Engine/EngineTypes.h"
 #include "FakePhysicsProjectile.generated.h"
 
-class UPrimitiveComponent;
 class UFakeMoverSettings;
+class UPrimitiveComponent;
 class AActor;
 
 UCLASS(Blueprintable)

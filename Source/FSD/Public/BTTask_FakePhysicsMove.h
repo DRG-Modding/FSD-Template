@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BehaviorTree/Tasks/BTTask_BlackboardBase.h"
 #include "UObject/NoExportTypes.h"
+#include "BehaviorTree/Tasks/BTTask_BlackboardBase.h"
 #include "BTTask_FakePhysicsMove.generated.h"
 
 class UFakeMoverSettings;

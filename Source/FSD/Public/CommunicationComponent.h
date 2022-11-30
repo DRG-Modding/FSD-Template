@@ -2,21 +2,21 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
-#include "MissionShoutDelegateDelegate.h"
 #include "MissionShoutEndDelegateDelegate.h"
-#include "ActiveOutline.h"
-#include "GameplayTagContainer.h"
-#include "MissionShoutQueueItem.h"
 #include "EShoutType.h"
+#include "MissionShoutDelegateDelegate.h"
+#include "GameplayTagContainer.h"
+#include "ActiveOutline.h"
+#include "MissionShoutQueueItem.h"
 #include "UObject/NoExportTypes.h"
 #include "EAsyncLoadPriority.h"
 #include "CommunicationComponent.generated.h"
 
-class APlayerCharacter;
 class UShoutWidget;
-class UAudioComponent;
+class APlayerCharacter;
 class UDialogDataAsset;
 class UCharacterShoutsData;
+class UAudioComponent;
 class UObject;
 class USoundBase;
 

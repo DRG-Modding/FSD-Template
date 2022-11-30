@@ -8,8 +8,8 @@
 
 class UProjectileAttack;
 class UAnimMontage;
-class AActor;
 class UTargetValidator;
+class AActor;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UProjectileAttackBaseComponent : public UAttackBaseComponent {

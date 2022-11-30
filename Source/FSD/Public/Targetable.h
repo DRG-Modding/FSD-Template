@@ -5,8 +5,8 @@
 #include "UObject/NoExportTypes.h"
 #include "Targetable.generated.h"
 
-class UHealthComponentBase;
 class UParticleSystem;
+class UHealthComponentBase;
 
 UINTERFACE(Blueprintable)
 class UTargetable : public UInterface {

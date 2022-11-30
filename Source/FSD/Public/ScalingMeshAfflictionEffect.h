@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AfflictionEffect.h"
-#include "ScalingMeshAfflictionItem.h"
 #include "EFrozenAfflictionType.h"
+#include "ScalingMeshAfflictionItem.h"
 #include "ScalingMeshAfflictionEffect.generated.h"
 
 class UMaterialInterface;

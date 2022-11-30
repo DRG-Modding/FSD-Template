@@ -1,7 +1,7 @@
 #include "InputFunctionLibrary.h"
 
-class APlayerController;
 class UTexture2D;
+class APlayerController;
 
 void UInputFunctionLibrary::SetMouseSmoothingOn(bool smoothingOn) {
 }

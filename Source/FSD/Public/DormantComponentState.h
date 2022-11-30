@@ -12,7 +12,7 @@ public:
     UPROPERTY(EditAnywhere, Export)
     TWeakObjectPtr<UActorComponent> Component;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ECollisionEnabled::Type> Collision;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -3,6 +3,7 @@
 #include "Engine/DataAsset.h"
 #include "SpecialEvent.generated.h"
 
+class UMissionTemplate;
 class USpecialEventSpawner;
 
 UCLASS(Blueprintable)
@@ -12,11 +13,12 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Weight;
     
-protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<UMissionTemplate*> BannedMissions;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USpecialEventSpawner* EventSpawner;
     
-public:
     USpecialEvent();
 };
 

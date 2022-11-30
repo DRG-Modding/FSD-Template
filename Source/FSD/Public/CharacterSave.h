@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ItemLoadout.h"
-#include "UObject/NoExportTypes.h"
-#include "CharacterVanitySave.h"
 #include "VictoryPoseSave.h"
+#include "UObject/NoExportTypes.h"
+#include "ItemLoadout.h"
+#include "CharacterVanitySave.h"
 #include "CharacterSave.generated.h"
 
 class APlayerCharacter;

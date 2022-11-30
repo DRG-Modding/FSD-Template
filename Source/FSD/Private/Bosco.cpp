@@ -1,21 +1,25 @@
 #include "Bosco.h"
 #include "Net/UnrealNetwork.h"
+#include "Components/PointLightComponent.h"
+#include "Components/SpotLightComponent.h"
+#include "BobbingComponent.h"
 #include "UpgradableBoscoComponent.h"
-#include "HitscanComponent.h"
+#include "Particles/ParticleSystemComponent.h"
 #include "BoscoAbillityComponent.h"
 #include "HealthComponent.h"
 #include "DamageComponent.h"
-#include "DroneSkinnableComponent.h"
 #include "Perception/PawnSensingComponent.h"
 #include "DroneMiningToolBase.h"
-#include "BobbingComponent.h"
-#include "Components/PointLightComponent.h"
 #include "Components/SkeletalMeshComponent.h"
-#include "Components/SpotLightComponent.h"
-#include "Particles/ParticleSystemComponent.h"
+#include "HitscanComponent.h"
 #include "Components/AudioComponent.h"
+#include "DroneSkinnableComponent.h"
 
+class AActor;
 class UTerrainMaterial;
+
+void ABosco::UsePlayerActivatedAbillity(EAbilityIndex Index, AActor* aTarget, const FVector& aLocation) {
+}
 
 void ABosco::UseABillity() {
 }
@@ -132,8 +136,6 @@ ABosco::ABosco() {
     this->PickupGemShout = NULL;
     this->ReviveThankShout = NULL;
     this->GeneralCallShout = NULL;
-    this->RocketAbillityShout = NULL;
-    this->CryoGrenadeAbillityShout = NULL;
     this->VacuumShout = NULL;
     this->MineResponse = NULL;
     this->CombatResponse = NULL;
@@ -142,6 +144,7 @@ ABosco::ABosco() {
     this->AbillityResponse = NULL;
     this->CurrentResponse = NULL;
     this->ResponseTime = 0.00f;
+    this->ShouldSelfDestructOnMultiplePlayers = true;
     this->SeeTargetTime = 0.50f;
     this->AbillityErrorSound = NULL;
     this->INcreasedMiningArea = 15.00f;

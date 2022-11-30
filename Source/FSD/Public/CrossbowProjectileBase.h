@@ -2,47 +2,49 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Projectile.h"
+#include "UObject/NoExportTypes.h"
 #include "OnCrossbowDamageDealtDelegate.h"
 #include "ECrossbowEffectApplication.h"
 #include "Engine/EngineTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "EInputKeys.h"
 #include "CrossbowProjectileBase.generated.h"
 
-class UCrossbowProjectileRicochet;
-class ACrossbowProjectileStuck;
-class UCrossbowProjectileRecallable;
-class UCrossbowProjectileMagnetic;
-class UCrossbowStuckProjectileEffectBanshee;
 class UTexture2D;
+class UStaticMesh;
+class UCrossbowStuckProjectileEffectBanshee;
+class UCrossbowProjectileMagnetic;
+class UCrossbowProjectileRicochet;
+class UNiagaraComponent;
+class UCrossbowProjectileRecallable;
+class ACrossbowProjectileStuck;
 class UStatusEffect;
 class USoundCue;
-class USphereComponent;
 class UDamageComponent;
-class UTerrainDetectComponent;
-class UStaticMesh;
-class APlayerCharacter;
-class USceneComponent;
 
 UCLASS(Blueprintable)
 class ACrossbowProjectileBase : public AProjectile {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FOnCrossbowDamageDealt OnDamageDealt;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StatusEffectTime;
     
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Replicated, meta=(AllowPrivateAccess=true))
-    UCrossbowProjectileRecallable* RecallComponent;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_BansheePulseActive, meta=(AllowPrivateAccess=true))
+    bool BansheePulseActive;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Replicated, meta=(AllowPrivateAccess=true))
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UCrossbowProjectileMagnetic* MagneticComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UCrossbowProjectileRicochet* RicochetComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UCrossbowStuckProjectileEffectBanshee* BansheeComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UNiagaraComponent* BansheePulseComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UCrossbowStuckProjectileEffectBanshee> BansheeComponentClass;
@@ -56,9 +58,6 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UTexture2D> TriforkIcon;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FOnCrossbowDamageDealt OnDamageDealt;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ACrossbowProjectileStuck> SpawnableStuckProjectile;
     
@@ -68,7 +67,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ECrossbowEffectApplication EffectApplication;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 SelectionPriority;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -84,20 +83,17 @@ protected:
     bool IsASpecialProjectile;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    USphereComponent* LaserCollider;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UDamageComponent* DamageComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTerrainDetectComponent* TerrainDetectComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UStaticMesh* ProjectileMesh;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float KillTrailAfterTime;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_OnlyTrailShown, meta=(AllowPrivateAccess=true))
+    bool OnlyTrailShown;
     
 public:
     ACrossbowProjectileBase();
@@ -107,13 +103,12 @@ private:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_HandleImpact(const FHitResult& HitResult, const FVector& RelativeLocation);
     
-protected:
     UFUNCTION(BlueprintCallable)
-    void OnUsedBy(APlayerCharacter* Player, EInputKeys Key);
+    void OnRep_OnlyTrailShown();
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnArrowInitialized();
+    UFUNCTION(BlueprintCallable)
+    void OnRep_BansheePulseActive();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLocallyControlled() const;
@@ -127,17 +122,6 @@ public:
 protected:
     UFUNCTION(BlueprintCallable)
     void ApplyDamageEffects(const FHitResult& HitResult, const FVector& RelativeLocation);
-    
-public:
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void All_SetBansheePulseVisible(bool Enabled);
-    
-private:
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void All_OnCavePointRemoved(USceneComponent* Point);
-    
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void All_HideEverythingButTrail(bool NewVisibility);
     
 };
 

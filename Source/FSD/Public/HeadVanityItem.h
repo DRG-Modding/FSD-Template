@@ -5,8 +5,10 @@
 #include "EHeadVanityType.h"
 #include "HeadVanityItem.generated.h"
 
+class UPlayerCharacterID;
 class USkeletalMesh;
 class UVanityAnimInstance;
+class UArmorVanityItem;
 class UMaterialInterface;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -39,6 +41,12 @@ protected:
     bool HideAll;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool RequiresSlimArmor;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<UArmorVanityItem*> ForceThickAmorsHack;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool HideHead;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -46,6 +54,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UMaterialInterface> MaterialOverride;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TMap<UPlayerCharacterID*, TSoftObjectPtr<UMaterialInterface>> ClassMaterials;
     
 public:
     UHeadVanityItem();

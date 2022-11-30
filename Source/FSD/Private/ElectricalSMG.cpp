@@ -1,7 +1,7 @@
 #include "ElectricalSMG.h"
 
-class UPrimitiveComponent;
 class UHealthComponentBase;
+class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
 
 void AElectricalSMG::OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial) {

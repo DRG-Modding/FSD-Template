@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "CablePathSettings.h"
+#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "SplineCableActor.generated.h"
 
-class UMaterialInterface;
 class USplineComponent;
 class UStaticMesh;
+class UMaterialInterface;
 class USplineMeshComponent;
 
 UCLASS(Abstract, Blueprintable)

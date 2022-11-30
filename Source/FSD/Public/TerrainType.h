@@ -3,8 +3,8 @@
 #include "Engine/DataAsset.h"
 #include "TerrainType.generated.h"
 
-class USoundCue;
 class UParticleSystem;
+class USoundCue;
 
 UCLASS(Blueprintable, MinimalAPI)
 class UTerrainType : public UDataAsset {

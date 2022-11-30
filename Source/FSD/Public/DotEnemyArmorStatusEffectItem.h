@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "StatusEffectItem.h"
 #include "RandRange.h"
+#include "StatusEffectItem.h"
 #include "DotEnemyArmorStatusEffectItem.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

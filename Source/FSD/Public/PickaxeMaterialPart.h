@@ -3,9 +3,9 @@
 #include "PickaxePartItem.h"
 #include "PickaxeMaterialPart.generated.h"
 
+class UDynamicIcon;
 class UMaterialInterface;
 class UMaterialInstanceDynamic;
-class UDynamicIcon;
 class UObject;
 
 UCLASS(Blueprintable, EditInlineNew)

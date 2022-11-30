@@ -6,9 +6,9 @@
 #include "Curves/CurveFloat.h"
 #include "DisplayCase.generated.h"
 
+class UDialogDataAsset;
 class USceneComponent;
 class USkeletalMeshComponent;
-class UDialogDataAsset;
 
 UCLASS(Blueprintable)
 class ADisplayCase : public AActor {

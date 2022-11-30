@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "UObject/NoExportTypes.h"
+#include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "AnimNotifyState_OverrideItemOffset.generated.h"
 
 UCLASS(Blueprintable, CollapseCategories, EditInlineNew, MinimalAPI)

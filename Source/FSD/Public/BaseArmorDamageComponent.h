@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "ArmorDamageEffects.h"
 #include "ArmorShatterDelegateDelegate.h"
+#include "ArmorDamageEffects.h"
 #include "BaseArmorDamageComponent.generated.h"
 
 class UFSDPhysicalMaterial;

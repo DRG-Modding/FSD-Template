@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "EnableDownedBombUIDelegateDelegate.h"
 #include "CharacterStateComponent.h"
 #include "DeathIntroSettings.h"
-#include "EnableDownedBombUIDelegateDelegate.h"
 #include "DownedStateComponent.generated.h"
 
 class UDamageComponent;

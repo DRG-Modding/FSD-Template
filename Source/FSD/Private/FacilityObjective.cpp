@@ -2,13 +2,13 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class AProceduralSetup;
-class UEncounterManager;
-class UDebrisPositioning;
-class ATetherStation;
-class AActor;
-class APawn;
 class UCappedResource;
+class UEncounterManager;
+class AProceduralSetup;
+class UDebrisPositioning;
+class AActor;
+class ATetherStation;
+class APawn;
 class ARessuplyPod;
 
 void UFacilityObjective::SpawnFacilityEncounters(AProceduralSetup* setup, UEncounterManager* Encounters, UDebrisPositioning* Positioning) {
@@ -31,7 +31,7 @@ void UFacilityObjective::SecondGeneratorEncounterSpawn(APawn* spawned) {
 void UFacilityObjective::ProgressCurrentObjective() {
 }
 
-AActor* UFacilityObjective::PlaceObjectInRoom(AProceduralSetup* setup, const FRoomNode& RoomNode, UDebrisPositioning* Positioning, TSubclassOf<AActor> placementActor) {
+AActor* UFacilityObjective::PlaceObjectInRoom(AProceduralSetup* setup, const FRoomNode& RoomNode, UDebrisPositioning* Positioning, TSubclassOf<AActor> placementActor, const int32 RandomSeed, const bool checkImportantLocations) {
     return NULL;
 }
 
@@ -64,6 +64,10 @@ TArray<AActor*> UFacilityObjective::GetShieldGenerators() {
 }
 
 int32 UFacilityObjective::GetShieldGeneratorCount() const {
+    return 0;
+}
+
+int32 UFacilityObjective::GetObjectTransformInRoom(FTransform& Transform, AProceduralSetup* setup, const FRoomNode& RoomNode, UDebrisPositioning* Positioning, TSubclassOf<AActor> placementActor, const int32 RandomSeed, const bool checkImportantLocations) {
     return 0;
 }
 

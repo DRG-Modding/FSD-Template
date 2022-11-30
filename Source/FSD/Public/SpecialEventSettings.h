@@ -4,9 +4,9 @@
 #include "Curves/CurveFloat.h"
 #include "SpecialEventSettings.generated.h"
 
-class UDebrisPositioning;
-class USpecialEvent;
 class AEventRewardFrame;
+class USpecialEvent;
+class UDebrisPositioning;
 
 UCLASS(Blueprintable)
 class USpecialEventSettings : public UDataAsset {

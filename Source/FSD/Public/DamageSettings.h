@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "DecalData.h"
 #include "Engine/DataAsset.h"
 #include "Curves/CurveFloat.h"
+#include "DecalData.h"
 #include "DamageSettings.generated.h"
 
 class UStatusEffect;
-class UNiagaraSystem;
 class UDamageComponent;
+class UNiagaraSystem;
 class USoundCue;
 class UDamageTag;
 class UDamageImpulse;

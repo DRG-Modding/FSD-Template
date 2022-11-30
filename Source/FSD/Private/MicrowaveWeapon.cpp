@@ -3,8 +3,8 @@
 #include "CapsuleHitscanComponent.h"
 
 class UPrimitiveComponent;
-class AActor;
 class UFSDPhysicalMaterial;
+class AActor;
 class UHealthComponentBase;
 
 void AMicrowaveWeapon::UpdateMuzzleAnim(bool InIsFiring) {

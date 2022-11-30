@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FloatDelegateDelegate.h"
 #include "Components/ActorComponent.h"
 #include "IntDelegateDelegate.h"
+#include "FloatDelegateDelegate.h"
 #include "OnInfectionStateChangedDelegateDelegate.h"
 #include "EInfectionState.h"
 #include "PlayerInfectionComponent.generated.h"

@@ -5,9 +5,9 @@
 #include "ESchematicType.h"
 #include "SchematicCategory.generated.h"
 
-class UEventRewardType;
 class UTexture2D;
 class UDialogDataAsset;
+class UEventRewardType;
 
 UCLASS(Blueprintable)
 class USchematicCategory : public USavableDataAsset {

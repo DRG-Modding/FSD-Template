@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "ESchematicType.h"
-#include "SchematicType.h"
+#include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
+#include "SchematicType.h"
 #include "SchematicSettings.generated.h"
 
 class UDataTable;
@@ -12,8 +12,8 @@ class USchematic;
 class USchematicBank;
 class UItemSkinSchematicCollection;
 class USchematicBankBase;
-class USchematicPricingTier;
 class USchematicCategory;
+class USchematicPricingTier;
 class USchematicRarity;
 class UItemID;
 

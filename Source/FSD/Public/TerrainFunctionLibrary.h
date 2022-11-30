@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "UObject/NoExportTypes.h"
 #include "ESpecialDebrisType.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "DeepPathFinderSize.h"
 #include "TerrainFunctionLibrary.generated.h"
 
-class UTerrainMaterial;
 class UObject;
+class UTerrainMaterial;
 
 UCLASS(Blueprintable)
 class UTerrainFunctionLibrary : public UBlueprintFunctionLibrary {
@@ -16,7 +16,7 @@ class UTerrainFunctionLibrary : public UBlueprintFunctionLibrary {
 public:
     UTerrainFunctionLibrary();
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, meta=(WorldContext="WorldContextObject"))
-    static bool GetDebrisTransformsInSphere(UObject* WorldContextObject, TArray<FMatrix>& outPositions, const FVector& Location, const float& Radius, const ESpecialDebrisType& debrisType, float minDistToOther);
+    static bool GetDebrisTransformsInSphere(UObject* WorldContextObject, TArray<FMatrix>& outPositions, const FVector& Location, const float& Radius, const ESpecialDebrisType& debrisType, float minDistToOther, bool calcPriority);
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static TArray<FVector> GetAllNavPointsInSphere(UObject* WorldContextObject, FVector Origin, float Radius, DeepPathFinderSize pfSize);

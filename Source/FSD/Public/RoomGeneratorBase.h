@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayTagContainer.h"
 #include "Engine/DataAsset.h"
 #include "ERoomMirroringSupport.h"
+#include "GameplayTagContainer.h"
 #include "RoomGeneratorBase.generated.h"
 
 UCLASS(Abstract, Blueprintable)

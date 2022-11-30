@@ -4,10 +4,10 @@
 #include "FSDProjectileMovementComponent.h"
 
 class UObject;
-class APawn;
 class AProjectileBase;
-class AProjectile;
 class USceneComponent;
+class APawn;
+class AProjectile;
 class UFSDPhysicalMaterial;
 
 AProjectileBase* AProjectile::SpawnProjectileFromSelf(UObject* WorldContextObject, TSubclassOf<AProjectileBase> ProjectileClass, FVector Origin, FRotator velocityDirection) {

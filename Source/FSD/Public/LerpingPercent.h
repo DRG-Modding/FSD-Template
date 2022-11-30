@@ -7,7 +7,7 @@ struct FLerpingPercent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     uint8 TargetPercent;
     
 public:

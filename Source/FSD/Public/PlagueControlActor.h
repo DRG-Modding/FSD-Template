@@ -2,19 +2,18 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
-#include "TerrainDetectInterface.h"
 #include "PlacementObstruction.h"
 #include "PlagueControlActor.generated.h"
 
+class UPlagueUsable;
+class APlagueInfectionNode;
 class UTerrainMaterial;
 class UNiagaraComponent;
-class UPlagueUsable;
 class ACleanupPodItem;
-class APlagueInfectionNode;
 class APlayerCharacter;
 
 UCLASS(Blueprintable)
-class APlagueControlActor : public AActor, public ITerrainDetectInterface {
+class APlagueControlActor : public AActor {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
@@ -80,7 +79,5 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanDropWeaponPod(float& timeLeft);
     
-    
-    // Fix for true pure virtual functions not being implemented
 };
 

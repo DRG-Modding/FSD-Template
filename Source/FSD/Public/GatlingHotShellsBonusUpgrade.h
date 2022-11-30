@@ -5,8 +5,8 @@
 #include "UpgradeValues.h"
 #include "GatlingHotShellsBonusUpgrade.generated.h"
 
-class UDamageClass;
 class AFSDPlayerState;
+class UDamageClass;
 class AActor;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)

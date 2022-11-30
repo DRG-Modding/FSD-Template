@@ -3,8 +3,8 @@
 class UObject;
 class UMaterialInstance;
 class UMaterialInstanceConstant;
-class UMaterialInstanceDynamic;
 class UArmorMaterialVanityItem;
+class UMaterialInstanceDynamic;
 
 UMaterialInstanceConstant* UArmorMaterialVanityItem::SetArmorMaterialToTwoSided(UMaterialInstance* Parent) {
     return NULL;

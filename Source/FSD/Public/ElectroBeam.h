@@ -6,11 +6,11 @@
 #include "Engine/NetSerialization.h"
 #include "ElectroBeam.generated.h"
 
+class UStatusEffect;
 class UCapsuleComponent;
 class UParticleSystemComponent;
-class UStatusEffect;
-class UAudioComponent;
 class USceneComponent;
+class UAudioComponent;
 class UHealthComponentBase;
 
 UCLASS(Abstract, Blueprintable)

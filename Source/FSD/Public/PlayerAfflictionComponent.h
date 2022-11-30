@@ -3,8 +3,8 @@
 #include "PawnAfflictionComponent.h"
 #include "PlayerAfflictionComponent.generated.h"
 
-class UPlayerAfflictionOverlay;
 class APlayerCharacter;
+class UPlayerAfflictionOverlay;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPlayerAfflictionComponent : public UPawnAfflictionComponent {

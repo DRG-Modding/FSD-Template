@@ -4,12 +4,12 @@
 #include "RecallableItem.h"
 #include "RecallableSentryGunItem.generated.h"
 
-class UItemPlacerAggregator;
 class ARecallableSentryGun;
 class ARecallableSentryGunItem;
-class UCapacityHoldingItemAggregator;
-class AItem;
 class UItemUpgrade;
+class UCapacityHoldingItemAggregator;
+class UItemPlacerAggregator;
+class AItem;
 
 UCLASS(Blueprintable)
 class ARecallableSentryGunItem : public ARecallableItem {

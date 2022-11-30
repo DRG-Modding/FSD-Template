@@ -1,41 +1,41 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "StringConfigChangedDelegate.h"
+#include "Int32ConfigChangedDelegate.h"
+#include "GameFramework/GameUserSettings.h"
+#include "ColorVisionDeficiencyDelegateDelegate.h"
+#include "ESteamSearchRegion.h"
+#include "BoolConfigChangedDelegate.h"
 #include "GameFramework/GameUserSettings.h"
 #include "FloatConfigChangedDelegate.h"
-#include "ENVidiaReflexMode.h"
-#include "BoolConfigChangedDelegate.h"
 #include "LanguageChangedDelegate.h"
-#include "CustomKeyBinding.h"
+#include "StringConfigChangedDelegate.h"
 #include "ModdingUISettings.h"
+#include "EConsoleGraphicsMode.h"
 #include "ChatFontSizeChangedDelegate.h"
-#include "ColorVisionDeficiencyDelegateDelegate.h"
 #include "ColorVisionDeficiencySettings.h"
 #include "ModdingSettingsChangedDelegate.h"
 #include "UDLSSMode.h"
 #include "Rendering/RenderingCommon.h"
-#include "EConsoleGraphicsMode.h"
 #include "ESaveSlotChangeProcedure.h"
+#include "ENVidiaReflexMode.h"
 #include "HUDElements.h"
 #include "CharacterOptions.h"
 #include "InputSourceChangedSignatureDelegate.h"
-#include "Int32ConfigChangedDelegate.h"
-#include "ETurn180Mode.h"
 #include "UObject/NoExportTypes.h"
-#include "GameFramework/GameUserSettings.h"
 #include "CustomKeyBindingsChangedDelegate.h"
 #include "EFSDInputSource.h"
+#include "CustomKeyBinding.h"
 #include "ControllerSettings.h"
 #include "UObject/NoExportTypes.h"
 #include "EVolumeType.h"
-#include "ESteamSearchRegion.h"
+#include "ETurn180Mode.h"
 #include "FSDGameUserSettings.generated.h"
 
-class APlayerController;
-class UFSDGameUserSettings;
 class USoundClass;
-class UDifficultySetting;
 class UObject;
+class APlayerController;
+class UDifficultySetting;
+class UFSDGameUserSettings;
 
 UCLASS(Blueprintable)
 class UFSDGameUserSettings : public UGameUserSettings {
@@ -310,7 +310,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool Dx12ToBeApplied;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EWindowMode::Type> InFullscreenModeToBeApplied;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -796,7 +796,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMouseXSensitivity() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetModdingServerFilterEnabled(uint8 ServerFilter);
     
 protected:
@@ -828,7 +828,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetGamma() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TEnumAsByte<EWindowMode::Type> GetFullscreenModeToBeApplied();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

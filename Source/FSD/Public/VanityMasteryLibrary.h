@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VanityMasterySave.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "CraftingCost.h"
-#include "VanityMasterySettings.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "VanityMasteryResult.h"
+#include "VanityMasterySettings.h"
+#include "VanityMasterySave.h"
 #include "VanityMasteryLibrary.generated.h"
 
 class UObject;

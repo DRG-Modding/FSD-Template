@@ -1,8 +1,8 @@
 #include "TowerModuleBase.h"
 #include "Net/UnrealNetwork.h"
-#include "EnemyHealthComponent.h"
-#include "Components/SceneComponent.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Components/SceneComponent.h"
+#include "EnemyHealthComponent.h"
 
 void ATowerModuleBase::SetState(EGuntowerModuleState NewState) {
 }

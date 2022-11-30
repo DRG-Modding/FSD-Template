@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "StandardItemUpgrade.h"
-#include "UpgradeValues.h"
 #include "EChargedWeaponUpgrades.h"
+#include "UpgradeValues.h"
 #include "ChargedWeaponUpgrade.generated.h"
 
 class AFSDPlayerState;

@@ -5,20 +5,20 @@
 #include "DamageData.h"
 #include "AFlyingBug.generated.h"
 
+class UOutlineComponent;
+class UHealthComponentBase;
+class USphereComponent;
 class UEnemyComponent;
 class UPawnStatsComponent;
-class UAudioComponent;
-class UOutlineComponent;
 class UPawnSensingComponent;
-class AActor;
 class UPawnAlertComponent;
-class USphereComponent;
+class UAudioComponent;
 class UFrozenPawnImpactComponent;
 class UHitReactionComponent;
+class AActor;
 class USoundBase;
-class UHealthComponentBase;
-class UDamageTag;
 class UHealthComponent;
+class UDamageTag;
 
 UCLASS(Blueprintable)
 class AAFlyingBug : public AEnemyDeepPathfinderCharacter {
@@ -132,7 +132,7 @@ public:
     bool GetIsInAttackStance() const;
     
 protected:
-    UFUNCTION(NetMulticast, Unreliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_Ragdoll(const FVector_NetQuantize& Location, const FVector_NetQuantize& Impulse, uint8 BoneIndex);
     
 public:

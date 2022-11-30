@@ -8,16 +8,16 @@
 #include "ReflectionTraceResult.h"
 #include "HeavyParticleCannon.generated.h"
 
-class USoundBase;
+class UFSDPhysicalMaterial;
 class UFirstPersonNiagaraComponent;
+class USoundBase;
+class UStickyFlameSpawner;
 class UDamageComponent;
 class UReflectionHitscanComponent;
-class UStickyFlameSpawner;
-class UTerrainType;
 class UNiagaraComponent;
 class UNiagaraSystem;
+class UTerrainType;
 class AActor;
-class UFSDPhysicalMaterial;
 
 UCLASS(Blueprintable)
 class AHeavyParticleCannon : public AAmmoDrivenWeapon {

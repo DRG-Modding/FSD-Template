@@ -5,10 +5,10 @@
 #include "Engine/EngineTypes.h"
 #include "AdicPuddle.generated.h"
 
-class USphereComponent;
-class USoundBase;
 class UStatusEffect;
+class USphereComponent;
 class UPrimitiveComponent;
+class USoundBase;
 
 UCLASS(Blueprintable)
 class AAdicPuddle : public AActor {

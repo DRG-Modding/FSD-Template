@@ -41,5 +41,6 @@ AWallSaw::AWallSaw() {
     this->VelOverTime = NULL;
     this->GroundParticles = NULL;
     this->PopWeakpointRadius = 100.00f;
+    this->PlayerHitRangeFromCenter = 100.00f;
 }
 

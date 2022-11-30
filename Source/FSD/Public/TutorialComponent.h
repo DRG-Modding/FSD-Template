@@ -4,9 +4,9 @@
 #include "TutorialComponent.generated.h"
 
 class ATutorialManager;
-class AFSDPlayerController;
 class APlayerCharacter;
 class AFSDPlayerState;
+class AFSDPlayerController;
 class UFSDSaveGame;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

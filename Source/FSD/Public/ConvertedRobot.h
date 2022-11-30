@@ -6,33 +6,33 @@
 #include "RobotStateChangedSigDelegate.h"
 #include "RobotShieldSwitchSigDelegate.h"
 #include "IntroductionStartedDelegate.h"
-#include "UObject/NoExportTypes.h"
 #include "Curves/CurveFloat.h"
+#include "UObject/NoExportTypes.h"
 #include "ERobotState.h"
 #include "UObject/NoExportTypes.h"
 #include "EInputKeys.h"
 #include "ConvertedRobot.generated.h"
 
 class UHitscanComponent;
-class USoundCue;
+class UOutlineComponent;
 class UEnemyComponent;
 class UPawnStatsComponent;
-class UOutlineComponent;
-class USceneComponent;
 class USingleUsableComponent;
-class UPointLightComponent;
+class UAudioComponent;
+class USceneComponent;
+class UAnimSequenceBase;
 class USkeletalMeshComponent;
+class UPointLightComponent;
 class USpotLightComponent;
 class UStaticMeshComponent;
-class UAudioComponent;
 class UDamageComponent;
-class AProjectile;
 class USoundBase;
 class UParticleSystem;
 class AActor;
 class AParasiteEnemy;
-class UAnimSequenceBase;
 class APlayerCharacter;
+class AProjectile;
+class USoundCue;
 class APawn;
 
 UCLASS(Blueprintable)

@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/SceneComponent.h"
 #include "SplineTrailMaterial.h"
+#include "Components/SceneComponent.h"
 #include "Components/SplineMeshComponent.h"
-#include "UObject/NoExportTypes.h"
 #include "Curves/CurveFloat.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "SplineTrailComponent.generated.h"
 
-class UFSDPhysicalMaterial;
 class UStaticMesh;
+class UFSDPhysicalMaterial;
 class UCapsuleComponent;
 class USplineComponent;
 class USplineMeshComponent;
@@ -25,7 +25,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSplineTrailMaterial> MaterialSettings;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ESplineMeshAxis::Type> ForwardAxis;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

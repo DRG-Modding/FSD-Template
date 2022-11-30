@@ -2,6 +2,7 @@
 
 FBoomerangMover::FBoomerangMover() {
     this->Speed = 0.00f;
+    this->TimeScale = 0.00f;
     this->TickRate = 0.00f;
     this->TickTime = 0.00f;
     this->AccumulatedTime = 0.00f;

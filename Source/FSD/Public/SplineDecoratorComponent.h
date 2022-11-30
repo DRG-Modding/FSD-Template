@@ -5,8 +5,8 @@
 #include "UObject/NoExportTypes.h"
 #include "SplineDecoratorComponent.generated.h"
 
-class UMaterialInterface;
 class USplineComponent;
+class UMaterialInterface;
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API USplineDecoratorComponent : public UInstancedStaticMeshComponent {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SDFBaseComponent.h"
 #include "SDFSmoothingProperties.h"
+#include "SDFBaseComponent.h"
 #include "SDFIntersectOpComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

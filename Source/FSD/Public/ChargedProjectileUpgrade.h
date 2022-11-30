@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "StandardItemUpgrade.h"
 #include "EChargedProjectileUpgrades.h"
+#include "StandardItemUpgrade.h"
 #include "UpgradeValues.h"
 #include "ChargedProjectileUpgrade.generated.h"
 
-class AItem;
-class AFSDPlayerState;
 class AActor;
+class AFSDPlayerState;
+class AItem;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UChargedProjectileUpgrade : public UStandardItemUpgrade {

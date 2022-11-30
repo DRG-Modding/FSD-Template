@@ -3,12 +3,11 @@
 #include "Subsystems/EngineSubsystem.h"
 #include "EModioRequestType.h"
 #include "EUGCPackageError.h"
-#include "HasHiddenModsData.h"
 #include "Engine/LatentActionManager.h"
 #include "UGCSubsystem.generated.h"
 
-class UUGCRegistry;
 class UUGCSettings;
+class UUGCRegistry;
 class UUGCLatentActionManager;
 class UUGCPackage;
 class UObject;
@@ -20,6 +19,7 @@ public:
     DECLARE_DYNAMIC_DELEGATE_TwoParams(FUGRequiredModsFetched, const TArray<FString>&, ModsToEnable, const TArray<FString>&, ModsToInstall);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FUGModProgressDone, const FString&, ModName, const FString&, ModId);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FUGInstallError, const FString&, ModName, EUGCPackageError, ErrorType);
+    DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FUGCRequestHandled, EModioRequestType, requestType);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_FiveParams(FUGCModProgress, const FString&, Name, const TArray<FString>&, ModsPendingDownload, bool, Downloading, int32, Progress, int32, Total);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FUGCModManagementStateChanged, bool, Enabled);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FUGCLocalUserModsInstalled);
@@ -84,6 +84,9 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FUGCEscapeMenuOpened OnEscapeMenuOpened;
     
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FUGCRequestHandled OnModioRequestHandled;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FString> CrashingDisabledMods;
     
@@ -102,9 +105,6 @@ private:
     
     UPROPERTY(EditAnywhere, Transient)
     TArray<int64> ModioAddDependecyRequestsIds;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<FHasHiddenModsData> ModioHostHasHiddenModsIds;
     
 public:
     UUGCSubsystem();
@@ -144,9 +144,6 @@ public:
     UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContext"))
     void K2_RequestModDependencyList(UObject* WorldContext, FLatentActionInfo LatentInfo, const FString& ModId, FString& outParentId, TArray<FString>& outModIds);
     
-    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContext"))
-    void K2_RequestHasHostHiddenMods(UObject* WorldContext, FLatentActionInfo LatentInfo, TArray<FString> sHostModIds, TArray<FString> sClientModIds, bool& outHidden);
-    
     UFUNCTION(BlueprintCallable)
     void K2_RequestFetchModUpdates();
     
@@ -158,6 +155,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasOutstadingRequestOfType(EModioRequestType requestType);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    TArray<EModioRequestType> GetQueuedModioRequests();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<FString> GetNamesOfModsPendingUninstall();
@@ -172,7 +172,7 @@ public:
     bool GetCheckGameVersion();
     
     UFUNCTION(BlueprintCallable)
-    bool FetchModsForSession(TArray<FString> HostMods, UUGCSubsystem::FUGRequiredModsFetched OnModsFetched, UUGCSubsystem::FUGCHiddenMods OnHostHasHiddenMods);
+    bool FetchModsForSession(TArray<FString> HostMods, UUGCSubsystem::FUGRequiredModsFetched OnModsFetched);
     
     UFUNCTION(BlueprintCallable)
     void EnableModioModManagement();

@@ -7,5 +7,6 @@ UCrossbowProjectileRicochet::UCrossbowProjectileRicochet() {
     this->NiagaraTrailParticleSystem = NULL;
     this->RicochetMax = 3;
     this->RicochetRange = 1000.00f;
+    this->CastedOwner = NULL;
 }
 

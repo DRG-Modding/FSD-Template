@@ -2,9 +2,9 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
+class ARecallableSentryGunItem;
 class AActor;
 class AItem;
-class ARecallableSentryGunItem;
 
 void UInventoryComponent::UpdateFromSaveGameInSlot(EItemCategory Category) {
 }

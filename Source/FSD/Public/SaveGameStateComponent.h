@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "ItemUpgradesChangedDelegateDelegate.h"
 #include "Components/ActorComponent.h"
 #include "LoadoutChangedDelegateDelegate.h"
-#include "ItemUpgradesChangedDelegateDelegate.h"
+#include "SaveGameStatePerkItem.h"
 #include "PlayerProgressChangedSignatureDelegate.h"
 #include "CharacterProgressChangedSignatureDelegate.h"
-#include "CharacterProgress.h"
-#include "SaveGameStatePerkItem.h"
 #include "ItemLoadout.h"
-#include "PlayerProgress.h"
 #include "ActiveCampaingMission.h"
 #include "ItemUpgradeSelection.h"
+#include "CharacterProgress.h"
+#include "PlayerProgress.h"
 #include "SaveGameStateComponent.generated.h"
 
-class UItemUpgrade;
 class AActor;
+class UItemUpgrade;
 class UVictoryPose;
 class UPlayerCharacterID;
 class UGeneratedMission;

@@ -5,9 +5,9 @@
 #include "GuntowerEvent.generated.h"
 
 class USceneComponent;
+class AGuntowerModule;
 class USkeletalMeshComponent;
 class UDamageComponent;
-class AGuntowerModule;
 
 UCLASS(Blueprintable)
 class AGuntowerEvent : public AGameEvent {

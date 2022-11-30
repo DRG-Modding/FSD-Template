@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "PostProcessingBlendable.h"
+#include "GameFramework/Actor.h"
 #include "PostProcessingManager.generated.h"
 
-class UMaterialInstanceDynamic;
 class AFSDPostProcessingActor;
+class UMaterialInstanceDynamic;
 
 UCLASS(Blueprintable)
 class APostProcessingManager : public AActor {

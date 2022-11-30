@@ -5,8 +5,8 @@
 #include "CarveOptionsCellSize.h"
 #include "LevelGenerationCarverComponent.generated.h"
 
-class UStaticMeshCarver;
 class USTLMeshCarver;
+class UStaticMeshCarver;
 class UStaticMesh;
 class UTerrainMaterialBase;
 

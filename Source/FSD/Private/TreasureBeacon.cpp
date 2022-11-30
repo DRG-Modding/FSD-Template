@@ -1,7 +1,7 @@
 #include "TreasureBeacon.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/SceneComponent.h"
 #include "TerrainPlacementComponent.h"
+#include "Components/SceneComponent.h"
 
 void ATreasureBeacon::SpawnDebreeParts() const {
 }

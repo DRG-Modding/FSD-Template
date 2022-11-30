@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "FSDAIController.h"
 #include "AsyncPathRequestsInterface.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "EscortMuleAIController.generated.h"
 
 class UEscortObjective;
@@ -55,6 +55,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetPathEndTagent();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    void GetFullPath(TArray<FVector>& outPath) const;
     
     UFUNCTION(BlueprintCallable)
     void FindDozerPath(FVector StartPosition);

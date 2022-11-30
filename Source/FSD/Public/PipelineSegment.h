@@ -2,26 +2,26 @@
 #include "CoreMinimal.h"
 #include "TrackBuilderSegment.h"
 #include "EPipelineBuildState.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "EInputKeys.h"
 #include "PipelineSegment.generated.h"
 
-class UStaticMesh;
-class USplineMeshComponent;
 class APipelineSegment;
-class USingleUsableComponent;
-class UTrackBuilderUsable;
+class UStaticMesh;
 class UMaterialInterface;
-class UPathfinderSplineSegmentCollisionComponent;
+class USingleUsableComponent;
 class UDroneUseComponent;
-class USplineComponent;
 class USimpleHealthComponent;
+class USplineComponent;
+class USplineMeshComponent;
 class USkeletalMeshComponent;
-class UStaticMeshComponent;
 class APipelineStart;
+class UStaticMeshComponent;
+class UPathfinderSplineSegmentCollisionComponent;
 class APlayerCharacter;
 class UHealthComponentBase;
+class UTrackBuilderUsable;
 
 UCLASS(Abstract, Blueprintable)
 class APipelineSegment : public ATrackBuilderSegment {
@@ -55,7 +55,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector EditorEndLocation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ETraceTypeQuery> CarvingTraceType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EVanitySlot.h"
 #include "UObject/Object.h"
+#include "EVanitySlot.h"
 #include "PickaxeSet.h"
 #include "GenerateIconInfo.h"
 #include "Engine/LatentActionManager.h"
@@ -9,15 +9,15 @@
 #include "IconGenerationManager.generated.h"
 
 class AIconGenerationCharacter;
-class UTextureRenderTarget2D;
 class AIconGenerationPickaxe;
 class AIconGenerationWeapon;
-class UPlayerCharacterID;
 class UVanityItem;
-class AIconGenerationBase;
-class UPickaxePart;
+class UTextureRenderTarget2D;
 class UIconGenerationManager;
+class AIconGenerationBase;
 class UItemSkin;
+class UPlayerCharacterID;
+class UPickaxePart;
 
 UCLASS(Blueprintable)
 class UIconGenerationManager : public UObject {

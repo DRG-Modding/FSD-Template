@@ -5,8 +5,8 @@
 #include "Components/SlateWrapperTypes.h"
 #include "FSDUserWidget.generated.h"
 
-class APlayerCharacter;
 class AFSDPlayerState;
+class APlayerCharacter;
 class AItem;
 
 UCLASS(Blueprintable, EditInlineNew)

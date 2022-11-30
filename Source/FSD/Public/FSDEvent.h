@@ -1,19 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "UObject/NoExportTypes.h"
+#include "EncounterSpecialItem.h"
 #include "FSDEventActivateChangedDelegate.h"
 #include "EHolidayType.h"
+#include "UObject/NoExportTypes.h"
 #include "ClaimableRewardView.h"
 #include "FSDEvent.generated.h"
 
 class UDrinkableDataAsset;
-class UWorld;
-class UFSDEvent;
 class ADebrisDataActor;
 class UCampaign;
+class UWorld;
 class UTexture2D;
 class UObject;
+class UFSDEvent;
 class APlayerController;
 
 UCLASS(Blueprintable)
@@ -41,6 +42,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDrinkableDataAsset* SpecialEventBeer;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FEncounterSpecialItem> EventEncounters;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSoftClassPtr<ADebrisDataActor>> EventDebris;

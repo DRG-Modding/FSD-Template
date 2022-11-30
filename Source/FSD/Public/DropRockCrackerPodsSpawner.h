@@ -3,8 +3,8 @@
 #include "DebrisLocationFinder.h"
 #include "DropRockCrackerPodsSpawner.generated.h"
 
-class APlagueMeteor;
 class AActor;
+class APlagueMeteor;
 
 UCLASS(Blueprintable)
 class ADropRockCrackerPodsSpawner : public ADebrisLocationFinder {

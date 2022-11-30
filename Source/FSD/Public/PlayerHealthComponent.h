@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "HealthComponent.h"
 #include "HitSigDelegate.h"
+#include "HealthComponent.h"
 #include "RejoinListener.h"
+#include "HealthRegeneratingChangedDelegate.h"
 #include "FullHealthSignatureDelegate.h"
 #include "HealthRegenerationParams.h"
-#include "HealthRegeneratingChangedDelegate.h"
 #include "AudioWithCooldown.h"
 #include "PlayerHealthComponent.generated.h"
 

@@ -2,26 +2,26 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Item.h"
+#include "UObject/NoExportTypes.h"
 #include "UpgradableGear.h"
 #include "PickaxePartEquip.h"
+#include "EPickaxePartLocation.h"
 #include "CoolDownProgressStyle.h"
 #include "GameplayTagContainer.h"
-#include "EPickaxePartLocation.h"
 #include "EPickaxeState.h"
 #include "PickaxeMeshInstance.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/NetSerialization.h"
 #include "Engine/NetSerialization.h"
 #include "PickaxeItem.generated.h"
 
 class UFXSystemAsset;
-class UStatusEffect;
-class UDamageComponent;
 class UItemCharacterAnimationSet;
-class UFSDPhysicalMaterial;
 class UAnimMontage;
-class USceneComponent;
 class UPlayerAnimInstance;
+class USceneComponent;
+class UDamageComponent;
+class UStatusEffect;
+class UFSDPhysicalMaterial;
 class USoundCue;
 class UForceFeedbackEffect;
 class UMaterialInterface;
@@ -88,6 +88,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DamageRange;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float MiningRange;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DamageRadius;
@@ -195,7 +198,7 @@ protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_DigBlock(FVector carvePos, FVector carveDirection, int32 TerrainMaterial, bool isSpecial);
     
-    UFUNCTION(Reliable, Server)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_DamageTarget(UPrimitiveComponent* TargetComponent, bool isSpecial, const FVector_NetQuantize& ImpactPoint, const FVector_NetQuantizeNormal& ImpactNormal, UFSDPhysicalMaterial* PhysMaterial, uint8 BoneIndex);
     
 public:
@@ -221,9 +224,9 @@ protected:
     void All_SimulateDigDebris(FVector_NetQuantize Position, UFXSystemAsset* Particles, USoundCue* cue);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
-    void All_SimulateDigBlock(FVector_NetQuantize Position, bool spawnParticles, int32 Material, float Density, bool isSpecial);
+    void All_SimulateDigBlock(FVector_NetQuantize Position, bool SpawnParticles, int32 Material, float Density, bool isSpecial);
     
-    UFUNCTION(NetMulticast, Unreliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_SimulateDamageTarget(UPrimitiveComponent* TargetComponent, bool isSpecial, const FVector_NetQuantize& ImpactPoint, const FVector_NetQuantizeNormal& ImpactNormal, UFSDPhysicalMaterial* PhysMaterial, uint8 BoneIndex);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)

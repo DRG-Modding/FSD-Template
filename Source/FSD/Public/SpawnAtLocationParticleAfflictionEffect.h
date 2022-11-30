@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AfflictionEffect.h"
 #include "ScaledEffect.h"
+#include "AfflictionEffect.h"
 #include "SpawnAtLocationParticleAfflictionEffect.generated.h"
 
 UCLASS(Blueprintable)

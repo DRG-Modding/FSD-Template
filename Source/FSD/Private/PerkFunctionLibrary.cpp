@@ -3,8 +3,8 @@
 
 class UPerkAsset;
 class UObject;
-class UPlayerCharacterID;
 class APlayerCharacter;
+class UPlayerCharacterID;
 
 void UPerkFunctionLibrary::SplitPerksByUsage(const TArray<UPerkAsset*>& perks, TArray<UPerkAsset*>& OutPassivePerks, TArray<UPerkAsset*>& OutActivePerks) {
 }

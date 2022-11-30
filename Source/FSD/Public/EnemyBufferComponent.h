@@ -6,11 +6,11 @@
 #include "GameplayTagContainer.h"
 #include "EnemyBufferComponent.generated.h"
 
-class UParticleSystemComponent;
-class UStatusEffect;
-class UParticleSystem;
-class UHealthComponentBase;
 class AFSDPawn;
+class UParticleSystem;
+class UStatusEffect;
+class UParticleSystemComponent;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UEnemyBufferComponent : public UActorComponent {

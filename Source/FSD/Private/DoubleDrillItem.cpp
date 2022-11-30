@@ -1,9 +1,9 @@
 #include "DoubleDrillItem.h"
 #include "Net/UnrealNetwork.h"
 #include "DamageComponent.h"
+#include "DoubleDrillAggregator.h"
 #include "FirstPersonParticleSystemComponent.h"
 #include "FSDAudioComponent.h"
-#include "DoubleDrillAggregator.h"
 
 class AActor;
 class UFSDPhysicalMaterial;
@@ -41,7 +41,7 @@ void ADoubleDrillItem::Client_Resupply_Implementation(float percentage) {
 void ADoubleDrillItem::All_SimulateDigDebris_Implementation(FVector_NetQuantize Position, int32 DebrisIndex) {
 }
 
-void ADoubleDrillItem::All_SimulateDigBlock_Implementation(FVector_NetQuantize Position, bool spawnParticles, int32 Material) {
+void ADoubleDrillItem::All_SimulateDigBlock_Implementation(FVector_NetQuantize Position, bool SpawnParticles, int32 Material) {
 }
 
 void ADoubleDrillItem::All_SimulateDamage_Implementation(const TArray<FDoubleDrillDamageItem>& Targets) {

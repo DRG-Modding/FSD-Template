@@ -3,8 +3,8 @@
 #include "Engine/DataAsset.h"
 #include "AchievementList.generated.h"
 
-class UFSDAchievement;
 class AActor;
+class UFSDAchievement;
 
 UCLASS(Blueprintable)
 class UAchievementList : public UDataAsset {

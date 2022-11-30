@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CSGBaseComponent.h"
 #include "CSGSDFModulatedInstanceProperties.h"
+#include "CSGBaseComponent.h"
 #include "BinaryTerrainMaterialCombiner.h"
 #include "CSGModulatedSDFInstanceComponent.generated.h"
 

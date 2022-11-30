@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "EDebrisCarvedType.h"
+#include "Components/ActorComponent.h"
 #include "VeinResource.h"
 #include "Engine/LatentActionManager.h"
 #include "ProceduralVeinsComponent.generated.h"

@@ -4,8 +4,8 @@
 #include "ItemUpgrade.h"
 #include "AddComponentUpgrade.generated.h"
 
-class AItem;
 class UActorComponent;
+class AItem;
 class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)

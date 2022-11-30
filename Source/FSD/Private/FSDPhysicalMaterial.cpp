@@ -1,7 +1,7 @@
 #include "FSDPhysicalMaterial.h"
 
-class UObject;
 class UFXSystemComponent;
+class UObject;
 class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
 
@@ -26,7 +26,6 @@ UFSDPhysicalMaterial::UFSDPhysicalMaterial() {
     this->RepulsePlayerSound = NULL;
     this->RepulsePlayerParticle = NULL;
     this->ImpactParticles = NULL;
-    this->ImpactNParticles = NULL;
     this->ImpactMaterialOverride = NULL;
     this->ImpactSound = NULL;
     this->MeleeImpactSound = NULL;

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EFNDomainWarpType.h"
 #include "EFNFractalType.h"
 #include "EFNRotationType3D.h"
-#include "EFNDomainWarpType.h"
 #include "WarpNoiseProperties.generated.h"
 
 USTRUCT(BlueprintType)

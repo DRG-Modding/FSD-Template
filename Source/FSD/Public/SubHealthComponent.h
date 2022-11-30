@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EHealthbarType.h"
+#include "SubHealthComponentDelegateDelegate.h"
 #include "Components/ActorComponent.h"
 #include "Health.h"
-#include "EHealthbarType.h"
 #include "HealthChangedSigDelegate.h"
 #include "DamageSigDelegate.h"
-#include "SubHealthComponentDelegateDelegate.h"
 #include "EEnemyHealthScaling.h"
 #include "SubHealthComponent.generated.h"
 

@@ -1,15 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "DelegateDelegate.h"
 #include "DebrisLocationFinder.generated.h"
 
-class UTerrainPlacementComponent;
 class UDebrisPositioning;
+class UTerrainPlacementComponent;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API ADebrisLocationFinder : public AActor {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FDelegate OnFailedDelegate;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FDelegate OnSuceesDelegate;
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDebrisPositioning* Positioning;
@@ -37,6 +44,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool DestroyOnFinish;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool StopAtEnoughMatches;
     
 public:
     ADebrisLocationFinder();

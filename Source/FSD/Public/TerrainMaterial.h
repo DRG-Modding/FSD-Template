@@ -8,13 +8,13 @@
 #include "TerrainMaterial.generated.h"
 
 class UResourceData;
-class UTerrainType;
-class UDialogDataAsset;
-class UFXSystemAsset;
-class UMaterialInstance;
 class UTerrainMaterial;
-class USoundCue;
+class UDialogDataAsset;
 class UFXSystemComponent;
+class UMaterialInstance;
+class UTerrainType;
+class UFXSystemAsset;
+class USoundCue;
 class UObject;
 
 UCLASS(Blueprintable)

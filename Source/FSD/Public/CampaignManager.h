@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "ECampaignType.h"
 #include "UObject/Object.h"
 #include "UObject/NoExportTypes.h"
-#include "ECampaignType.h"
 #include "CampaignManager.generated.h"
 
-class UDifficultySetting;
-class UCampaign;
 class UFSDSaveGame;
 class AFSDPlayerController;
+class UCampaign;
 class UGeneratedMission;
+class UDifficultySetting;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API UCampaignManager : public UObject {
@@ -89,6 +89,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<TSubclassOf<UCampaign>> GetUncompletedCampaigns(AFSDPlayerController* Player) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    TArray<TSubclassOf<UCampaign>> GetCompletedSideCampaigns(AFSDPlayerController* Player) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     UGeneratedMission* GetCampaingMissionFromSeeds(UObject* WorldContextObject, int32 GlobalSeed, int32 MissionSeed) const;

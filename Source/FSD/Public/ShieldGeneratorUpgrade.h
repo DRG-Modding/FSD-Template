@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EShieldGeneratorUpgrades.h"
 #include "StandardItemUpgrade.h"
+#include "EShieldGeneratorUpgrades.h"
 #include "UpgradeValues.h"
 #include "ShieldGeneratorUpgrade.generated.h"
 

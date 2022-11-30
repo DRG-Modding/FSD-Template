@@ -4,8 +4,8 @@
 #include "ItemUpgrade.h"
 #include "SentryGunTypeUpgrade.generated.h"
 
-class ARecallableSentryGun;
 class AItemMarker;
+class ARecallableSentryGun;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class USentryGunTypeUpgrade : public UItemUpgrade {

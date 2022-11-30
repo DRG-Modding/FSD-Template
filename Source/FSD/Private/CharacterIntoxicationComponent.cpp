@@ -1,8 +1,8 @@
 #include "CharacterIntoxicationComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UCurveFloat;
 class UDrinkableDataAsset;
+class UCurveFloat;
 
 
 

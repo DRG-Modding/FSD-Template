@@ -16,5 +16,6 @@ UBoscoAbillityComponent::UBoscoAbillityComponent() {
     this->ProjectileClass = NULL;
     this->StreamClass = NULL;
     this->AbilityData = NULL;
+    this->InitializeAtBeginPlay = false;
 }
 

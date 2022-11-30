@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SplineWarpProperties.h"
 #include "CSGWarpedComponent.h"
+#include "SplineWarpProperties.h"
 #include "CSGSplineWarpComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

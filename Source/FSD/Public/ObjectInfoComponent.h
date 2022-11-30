@@ -4,10 +4,10 @@
 #include "UObject/NoExportTypes.h"
 #include "ObjectInfoComponent.generated.h"
 
-class UTexture2D;
+class APlayerController;
 class UPrimitiveComponent;
 class UDialogDataAsset;
-class APlayerController;
+class UTexture2D;
 class UActorContextWidget;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

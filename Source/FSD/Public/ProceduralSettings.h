@@ -6,8 +6,8 @@
 
 class UMissionTemplate;
 class URoomDecorationObject;
-class UBiome;
 class AProceduralSetup;
+class UBiome;
 
 UCLASS(Blueprintable)
 class UProceduralSettings : public UDataAsset {

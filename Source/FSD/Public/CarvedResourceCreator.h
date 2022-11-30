@@ -2,17 +2,17 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "ResourceCreator.h"
-#include "CarveOptionsCellSize.h"
 #include "IRandRange.h"
 #include "ECarveFilterType.h"
+#include "CarveOptionsCellSize.h"
 #include "UDebrisCarveMesh.h"
 #include "ResourceDebris.h"
 #include "CarvedResourceCreator.generated.h"
 
-class UCarvedResourceData;
 class UDebrisPositioning;
-class UTerrainMaterial;
+class UCarvedResourceData;
 class AActor;
+class UTerrainMaterial;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UCarvedResourceCreator : public UResourceCreator {

@@ -2,21 +2,21 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "EnemyDeepPathfinderCharacter.h"
-#include "EWoodLouseState.h"
-#include "BumpPlayerHit.h"
 #include "GameplayTagContainer.h"
+#include "BumpPlayerHit.h"
+#include "EWoodLouseState.h"
 #include "WoodLouse.generated.h"
 
-class UStatusEffect;
-class UAudioComponent;
 class UFakeMoverSettings;
+class UAudioComponent;
 class USceneComponent;
+class USoundBase;
 class UPawnSensingComponent;
 class AProjectile;
+class UStatusEffect;
 class AActor;
-class USoundBase;
-class UDamageClass;
 class APawn;
+class UDamageClass;
 
 UCLASS(Blueprintable)
 class AWoodLouse : public AEnemyDeepPathfinderCharacter {

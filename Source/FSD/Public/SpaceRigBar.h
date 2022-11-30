@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
-#include "DrinkableBarSlot.h"
 #include "UObject/NoExportTypes.h"
+#include "DrinkableBarSlot.h"
 #include "SpaceRigBar.generated.h"
 
-class UBoxComponent;
-class UInstantUsable;
 class UDrinkableDataAsset;
+class UInstantUsable;
 class UBarMenuWidget;
+class UBoxComponent;
 class APlayerCharacter;
 class ADrinkableActor;
 

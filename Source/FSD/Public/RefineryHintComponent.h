@@ -3,9 +3,9 @@
 #include "TutorialHintComponent.h"
 #include "RefineryHintComponent.generated.h"
 
+class APipelineExtractorPod;
 class APipelineSegment;
 class AFSDRefinery;
-class APipelineExtractorPod;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class URefineryHintComponent : public UTutorialHintComponent {

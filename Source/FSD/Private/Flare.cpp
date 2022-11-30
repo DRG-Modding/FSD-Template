@@ -2,10 +2,10 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class ULightComponent;
 class AActor;
-class UCurveFloat;
+class ULightComponent;
 class AFlare;
+class UCurveFloat;
 
 void AFlare::StartLightFunction(ULightComponent* mainLight, TArray<ULightComponent*> spotLights, UCurveFloat* flutterCurve, UCurveFloat* fadeInCurve) {
 }

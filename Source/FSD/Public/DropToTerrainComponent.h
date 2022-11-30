@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "UObject/NoExportTypes.h"
 #include "OnIsFallingToTerrainChangedDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "DropToTerrainComponent.generated.h"
 
-class UTerrainDetectComponent;
 class USceneComponent;
+class UTerrainDetectComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UDropToTerrainComponent : public UActorComponent {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "UpgradeCostItem.h"
+#include "Engine/DataAsset.h"
 #include "UpgradeSettings.generated.h"
 
 UCLASS(Blueprintable)

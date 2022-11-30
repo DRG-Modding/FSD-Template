@@ -2,23 +2,23 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
-#include "CraftingCost.h"
 #include "UpgradeTier.h"
 #include "MasteryItem.h"
 #include "GearStatEntry.h"
 #include "EItemUpgradeStatus.h"
+#include "CraftingCost.h"
 #include "UpgradableGearComponent.generated.h"
 
 class UItemUpgrade;
 class UItemData;
-class AActor;
-class UPlayerCharacterID;
 class UOverclockBank;
 class UTexture2D;
+class AActor;
+class UPlayerCharacterID;
 class UResourceData;
-class APlayerCharacter;
 class UItemID;
 class AFSDPlayerController;
+class APlayerCharacter;
 class UObject;
 class AFSDPlayerState;
 
@@ -146,7 +146,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static EItemUpgradeStatus GetItemUpgradeStatus(UObject* WorldContextObject, TSubclassOf<AActor> itemClass, UItemUpgrade* ItemUpgrade, UPlayerCharacterID* characterID);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<UItemUpgrade*> GetItemUpgrades(TSubclassOf<AActor> itemClass, TSubclassOf<UItemUpgrade> upgradeClass, AFSDPlayerState* Player, uint8 upgradeIndex);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

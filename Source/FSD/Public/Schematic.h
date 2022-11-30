@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "SavableDataAsset.h"
-#include "ESchematicState.h"
 #include "UObject/NoExportTypes.h"
+#include "ESchematicState.h"
 #include "Schematic.generated.h"
 
-class UPlayerCharacterID;
-class USchematic;
 class USchematicRarity;
-class USchematicCategory;
 class USchematicPricingTier;
+class USchematic;
 class USchematicItem;
+class USchematicCategory;
 class UResourceData;
+class UPlayerCharacterID;
 class UFSDSaveGame;
 class UObject;
 class UTexture;

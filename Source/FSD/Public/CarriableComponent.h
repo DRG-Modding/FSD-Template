@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "Throwable.h"
-#include "UObject/NoExportTypes.h"
 #include "CarriableEventDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "CarriableComponent.generated.h"
 
 class APlayerCharacter;

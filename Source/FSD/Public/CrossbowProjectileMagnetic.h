@@ -4,11 +4,11 @@
 #include "Components/ActorComponent.h"
 #include "CrossbowProjectileMagnetic.generated.h"
 
-class UStatusEffect;
 class AFSDPawn;
+class UStatusEffect;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
-class FSD_API UCrossbowProjectileMagnetic : public UActorComponent {
+class UCrossbowProjectileMagnetic : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:

@@ -1,15 +1,14 @@
 #include "CrossbowProjectileBase.h"
 #include "Net/UnrealNetwork.h"
 
-class APlayerCharacter;
-class USceneComponent;
-
 void ACrossbowProjectileBase::Server_HandleImpact_Implementation(const FHitResult& HitResult, const FVector& RelativeLocation) {
 }
 
-void ACrossbowProjectileBase::OnUsedBy(APlayerCharacter* Player, EInputKeys Key) {
+void ACrossbowProjectileBase::OnRep_OnlyTrailShown() {
 }
 
+void ACrossbowProjectileBase::OnRep_BansheePulseActive() {
+}
 
 bool ACrossbowProjectileBase::IsLocallyControlled() const {
     return false;
@@ -26,30 +25,20 @@ float ACrossbowProjectileBase::GetScaledStatusEffectTime() const {
 void ACrossbowProjectileBase::ApplyDamageEffects(const FHitResult& HitResult, const FVector& RelativeLocation) {
 }
 
-void ACrossbowProjectileBase::All_SetBansheePulseVisible_Implementation(bool Enabled) {
-}
-
-void ACrossbowProjectileBase::All_OnCavePointRemoved_Implementation(USceneComponent* Point) {
-}
-
-void ACrossbowProjectileBase::All_HideEverythingButTrail_Implementation(bool NewVisibility) {
-}
-
 void ACrossbowProjectileBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
-    DOREPLIFETIME(ACrossbowProjectileBase, RecallComponent);
-    DOREPLIFETIME(ACrossbowProjectileBase, MagneticComponent);
-    DOREPLIFETIME(ACrossbowProjectileBase, RicochetComponent);
-    DOREPLIFETIME(ACrossbowProjectileBase, BansheeComponent);
+    DOREPLIFETIME(ACrossbowProjectileBase, BansheePulseActive);
+    DOREPLIFETIME(ACrossbowProjectileBase, OnlyTrailShown);
 }
 
 ACrossbowProjectileBase::ACrossbowProjectileBase() {
     this->StatusEffectTime = 0.00f;
-    this->RecallComponent = NULL;
+    this->BansheePulseActive = false;
     this->MagneticComponent = NULL;
     this->RicochetComponent = NULL;
     this->BansheeComponent = NULL;
+    this->BansheePulseComponent = NULL;
     this->BansheeComponentClass = NULL;
     this->RecallComponentClass = NULL;
     this->SpawnableStuckProjectile = NULL;
@@ -60,10 +49,9 @@ ACrossbowProjectileBase::ACrossbowProjectileBase() {
     this->Penetrates = false;
     this->ImpactSound = NULL;
     this->IsASpecialProjectile = false;
-    this->LaserCollider = NULL;
     this->DamageComponent = NULL;
-    this->TerrainDetectComponent = NULL;
     this->ProjectileMesh = NULL;
     this->KillTrailAfterTime = 3.00f;
+    this->OnlyTrailShown = false;
 }
 

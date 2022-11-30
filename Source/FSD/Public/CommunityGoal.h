@@ -6,8 +6,8 @@
 #include "ECommunityGoalType.h"
 #include "CommunityGoal.generated.h"
 
-class UCommunityGoalCategory;
 class UObject;
+class UCommunityGoalCategory;
 class UCommnuityRewardSetup;
 
 UCLASS(Blueprintable)

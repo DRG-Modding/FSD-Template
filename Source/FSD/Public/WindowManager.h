@@ -6,8 +6,8 @@
 #include "Components/SlateWrapperTypes.h"
 #include "WindowManager.generated.h"
 
-class USoundCue;
 class UUserWidget;
+class USoundCue;
 class UWindowWidget;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

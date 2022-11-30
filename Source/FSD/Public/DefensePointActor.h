@@ -7,8 +7,8 @@
 #include "DefensePointActor.generated.h"
 
 class AGameEvent;
-class APlayerCharacter;
 class USingleUsableComponent;
+class APlayerCharacter;
 
 UCLASS(Abstract, Blueprintable)
 class ADefensePointActor : public AActor {

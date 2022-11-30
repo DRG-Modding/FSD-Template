@@ -3,8 +3,8 @@
 #include "Components/ActorComponent.h"
 #include "InfectionMasterComponent.generated.h"
 
-class UHealthComponent;
 class UMaterialInterface;
+class UHealthComponent;
 class UStaticMesh;
 class UStaticMeshComponent;
 class UHealthComponentBase;
@@ -14,7 +14,7 @@ class UInfectionMasterComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     uint8 InfectionPoints;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

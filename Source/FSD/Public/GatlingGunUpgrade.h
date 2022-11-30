@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EGatlingGunUpgrade.h"
 #include "StandardItemUpgrade.h"
 #include "UpgradeValues.h"
+#include "EGatlingGunUpgrade.h"
 #include "GatlingGunUpgrade.generated.h"
 
 class AFSDPlayerState;

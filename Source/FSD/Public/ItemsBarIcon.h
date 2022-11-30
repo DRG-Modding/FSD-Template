@@ -3,9 +3,9 @@
 #include "Blueprint/UserWidget.h"
 #include "ItemsBarIcon.generated.h"
 
-class AItem;
 class UItemsBar;
 class APlayerCharacter;
+class AItem;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UItemsBarIcon : public UUserWidget {

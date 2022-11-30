@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "MULE.h"
-#include "UObject/NoExportTypes.h"
 #include "DelegateDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "Molly.generated.h"
 
-class UResourceBank;
+class UDialogDataAsset;
 class APlayerCharacter;
 class UOutlineComponent;
-class UDialogDataAsset;
+class UResourceBank;
 class UNiagaraSystem;
 
 UCLASS(Abstract, Blueprintable)

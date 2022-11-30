@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "SavableDataAsset.h"
-#include "TrackedStatInfo.h"
 #include "UObject/NoExportTypes.h"
+#include "TrackedStatInfo.h"
 #include "ChallengeVariation.h"
 #include "SeasonChallenge.generated.h"
 

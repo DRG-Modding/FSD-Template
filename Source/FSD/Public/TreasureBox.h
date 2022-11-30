@@ -2,18 +2,18 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "TreasureContainer.h"
-#include "EInputKeys.h"
 #include "UObject/NoExportTypes.h"
+#include "EInputKeys.h"
 #include "TreasureBox.generated.h"
 
 class UTerrainPlacementComponent;
+class UAnimSequenceBase;
+class USkeletalMeshComponent;
 class URepairableComponent;
-class AActor;
+class UStaticMeshComponent;
 class URepairableUsable;
 class USingleUsableComponent;
-class UStaticMeshComponent;
-class USkeletalMeshComponent;
-class UAnimSequenceBase;
+class AActor;
 class UTreasureRewarder;
 class AProceduralSetup;
 class UDebrisPositioning;

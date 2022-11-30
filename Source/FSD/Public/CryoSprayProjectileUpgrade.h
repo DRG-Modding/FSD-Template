@@ -5,9 +5,9 @@
 #include "UpgradeValues.h"
 #include "CryoSprayProjectileUpgrade.generated.h"
 
-class AItem;
 class AProjectile;
 class AFSDPlayerState;
+class AItem;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UCryoSprayProjectileUpgrade : public UItemUpgrade {

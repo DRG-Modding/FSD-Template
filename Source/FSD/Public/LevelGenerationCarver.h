@@ -5,8 +5,8 @@
 #include "ECarveFilterType.h"
 #include "LevelGenerationCarver.generated.h"
 
-class UStaticMeshCarver;
 class USTLMeshCarver;
+class UStaticMeshCarver;
 class UStaticMesh;
 class UTerrainMaterial;
 

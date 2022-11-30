@@ -7,14 +7,14 @@
 #include "Curves/CurveFloat.h"
 #include "PlagueMeteor.generated.h"
 
-class UStaticMesh;
-class AImpactIndicator;
+class ARockCrackerPod;
+class UTerrainPlacementComponent;
 class USceneComponent;
 class UStaticMeshComponent;
-class UTerrainPlacementComponent;
 class UDamageComponent;
+class UStaticMesh;
+class AImpactIndicator;
 class UDebrisPositioning;
-class ARockCrackerPod;
 class AProceduralSetup;
 
 UCLASS(Blueprintable)
@@ -100,6 +100,9 @@ protected:
     void SignalEventEnded(bool wasSuccess);
     
 public:
+    UFUNCTION(BlueprintCallable)
+    void SetStage(int32 Stage);
+    
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetDropTarget(const FVector& Location);
     
@@ -127,7 +130,13 @@ public:
     void LastaudioSignal();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void Impacted_Latejoin();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Impacted();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool HasLandedOnTopOfRefineryPipes(float minDistanceToPipes) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<ARockCrackerPod*> GetPods();

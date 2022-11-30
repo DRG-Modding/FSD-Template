@@ -12,8 +12,6 @@ USeason::USeason() {
     this->SeasonNumber = 0;
     this->TreeOfVanity = NULL;
     this->SeasonDLC = NULL;
-    this->InSeasonZoneEventChanceModifier = 0.00f;
-    this->InSeasonMissionChanceModifier = 0.00f;
     this->NumberOfScripChallenges = 0;
     this->SeasonWarning = NULL;
 }

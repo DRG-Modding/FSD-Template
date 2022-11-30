@@ -6,8 +6,8 @@
 #include "ItemID.generated.h"
 
 class AActor;
-class UItemSkin;
 class UPlayerCharacterID;
+class UItemSkin;
 class UItemData;
 class AItem;
 

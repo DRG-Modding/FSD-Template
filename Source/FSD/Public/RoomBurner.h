@@ -8,13 +8,13 @@
 
 class UDifficultySetting;
 class UEnemyDescriptor;
+class ADeepCSGWorld;
 class URoomGenerator;
 class UBiome;
 class UMissionMutator;
 class UMissionWarning;
 class USpecialEvent;
 class UMissionTemplate;
-class ADeepCSGWorld;
 class AProceduralSetup;
 
 UCLASS(Blueprintable)

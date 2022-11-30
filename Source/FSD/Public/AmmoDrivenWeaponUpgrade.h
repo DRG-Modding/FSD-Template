@@ -6,8 +6,8 @@
 #include "UpgradeValues.h"
 #include "AmmoDrivenWeaponUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AItem;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UAmmoDrivenWeaponUpgrade : public UStandardItemUpgrade {

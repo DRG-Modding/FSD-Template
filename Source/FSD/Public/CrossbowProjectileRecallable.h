@@ -8,7 +8,7 @@ class UInstantUsable;
 class APlayerCharacter;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
-class FSD_API UCrossbowProjectileRecallable : public UActorComponent {
+class UCrossbowProjectileRecallable : public UActorComponent {
     GENERATED_BODY()
 public:
 private:
@@ -26,6 +26,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FTransform StartTransform;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    bool IsRecallable;
     
 public:
     UCrossbowProjectileRecallable();

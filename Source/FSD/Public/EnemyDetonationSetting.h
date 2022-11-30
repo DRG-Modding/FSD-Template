@@ -3,8 +3,8 @@
 #include "Engine/DataAsset.h"
 #include "EnemyDetonationSetting.generated.h"
 
-class UNiagaraSystem;
 class UDamageComponent;
+class UNiagaraSystem;
 class USoundCue;
 
 UCLASS(Blueprintable)

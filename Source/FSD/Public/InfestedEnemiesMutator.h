@@ -3,8 +3,8 @@
 #include "Mutator.h"
 #include "InfestedEnemiesMutator.generated.h"
 
-class UParticleSystem;
 class AFSDPawn;
+class UParticleSystem;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UInfestedEnemiesMutator : public UMutator {

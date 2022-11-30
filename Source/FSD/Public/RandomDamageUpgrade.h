@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "ItemUpgrade.h"
-#include "RandRange.h"
 #include "UpgradeValues.h"
+#include "RandRange.h"
 #include "RandomDamageUpgrade.generated.h"
 
 class AFSDPlayerState;

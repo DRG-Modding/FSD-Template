@@ -9,13 +9,13 @@
 #include "EInputKeys.h"
 #include "FSDRefinery.generated.h"
 
+class APlayerCharacter;
+class UDialogDataAsset;
 class APipelineSegment;
 class APipelineStart;
 class APipelineExtractorPod;
 class USingleUsableComponent;
-class UDialogDataAsset;
 class ATrackBuilderItem;
-class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class FSD_API AFSDRefinery : public ADropPod {
@@ -79,7 +79,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ERefineryState PreviousRefineryState;
     
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     uint8 RefiningProgressReplicated;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

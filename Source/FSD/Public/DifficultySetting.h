@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "SavableDataAsset.h"
-#include "IRandRange.h"
 #include "RandInterval.h"
+#include "IRandRange.h"
 #include "VeteranComposition.h"
 #include "DifficultySetting.generated.h"
 
-class UObject;
 class UCampaign;
+class UObject;
 class UMissionStat;
 
 UCLASS(Blueprintable)

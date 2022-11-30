@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/PawnMovementComponent.h"
 #include "PauseMovementElapsedDelegate.h"
-#include "DeepPathFinderPreference.h"
-#include "DeepPathFinderSize.h"
 #include "PathBeginDelegate.h"
+#include "GameFramework/PawnMovementComponent.h"
 #include "AsyncPathRequestsInterface.h"
+#include "PathStateChangedDelegateDelegate.h"
+#include "DeepPathFinderPreference.h"
 #include "DeepPathFinderType.h"
+#include "DeepPathFinderSize.h"
 #include "Engine/EngineTypes.h"
 #include "PathFinishedDelegate.h"
 #include "RefreshDestinationDelegate.h"
-#include "EDeepMovementState.h"
-#include "UObject/NoExportTypes.h"
-#include "PathStateChangedDelegateDelegate.h"
 #include "DeepRepPath.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "EOffsetFrom.h"
-#include "EDeepMovementMode.h"
 #include "HandleRotationOptions.h"
-#include "FakeMoverState.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/LatentActionManager.h"
+#include "UObject/NoExportTypes.h"
+#include "EDeepMovementMode.h"
+#include "FakeMoverState.h"
+#include "UObject/NoExportTypes.h"
+#include "EDeepMovementState.h"
+#include "EOffsetFrom.h"
 #include "DeepPathfinderMovement.generated.h"
 
 class ADeepCSGWorld;
@@ -328,6 +328,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     float GetHorizontalAngleSpeed();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    FVector GetCurrentMovePos() const;
     
     UFUNCTION(BlueprintCallable)
     UFakeMoverSettings* GetCurrentFakePhysicsMoveSet();

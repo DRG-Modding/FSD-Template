@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/StaticMeshComponent.h"
-#include "CarveDoneDelegateDelegate.h"
 #include "ECarveFilterType.h"
+#include "CarveDoneDelegateDelegate.h"
 #include "AutoCarverComponent.generated.h"
 
 class UTerrainMaterialBase;
