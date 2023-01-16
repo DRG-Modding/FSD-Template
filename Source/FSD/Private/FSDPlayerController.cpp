@@ -1,25 +1,25 @@
 #include "FSDPlayerController.h"
 #include "Templates/SubclassOf.h"
+#include "FSDWidgetEffectsComponent.h"
 #include "PerkUsageComponent.h"
 #include "TerrainLatejoinComponent.h"
-#include "FSDWidgetEffectsComponent.h"
 
-class AHUD;
-class UTemporaryBuff;
-class UTutorialContentWidget;
-class APlayerCharacter;
-class UTexture2D;
 class AActor;
-class UVictoryPose;
+class UVanityItem;
 class UFSDAchievement;
 class AFSDPlayerState;
-class UPlayerCharacterID;
-class UTreasureRewarder;
-class USoundCue;
-class UVanityItem;
+class AHUD;
 class UItemSkin;
 class UItemID;
+class UPlayerCharacterID;
 class UPickaxePart;
+class APlayerCharacter;
+class UTemporaryBuff;
+class UTreasureRewarder;
+class UTutorialContentWidget;
+class UVictoryPose;
+class UTexture2D;
+class USoundCue;
 
 void AFSDPlayerController::ToggleVoiceOn(bool Enabled) {
 }

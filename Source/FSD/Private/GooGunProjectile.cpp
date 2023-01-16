@@ -1,9 +1,9 @@
 #include "GooGunProjectile.h"
 #include "Templates/SubclassOf.h"
 
-class AGooGunPuddle;
 class AActor;
 class UPrimitiveComponent;
+class AGooGunPuddle;
 
 AGooGunPuddle* AGooGunProjectile::SpawnPuddle(FTransform Transform, TSubclassOf<AGooGunPuddle> PuddleClass) {
     return NULL;

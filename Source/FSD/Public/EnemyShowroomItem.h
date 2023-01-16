@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ShowroomItem.h"
 #include "EShowroomScaling.h"
+#include "ShowroomItem.h"
 #include "EnemyShowroomItem.generated.h"
 
 UCLASS(Blueprintable)

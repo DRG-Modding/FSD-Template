@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "EEnemyControlState.h"
 #include "ControlEnemyState.h"
 #include "CharacterStateComponent.h"
-#include "EEnemyControlState.h"
-#include "UObject/NoExportTypes.h"
 #include "EnemyControlStateComponent.generated.h"
 
 class UAIPlayerControlComponent;

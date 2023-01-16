@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "DailyDealSetup.h"
 #include "DailyDeal.h"
 #include "Engine/DataAsset.h"
-#include "DailyDealSetup.h"
 #include "DailyDealSettings.generated.h"
 
 class UObject;

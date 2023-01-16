@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MULE.h"
-#include "DelegateDelegate.h"
 #include "UObject/NoExportTypes.h"
+#include "DelegateDelegate.h"
+#include "MULE.h"
 #include "Molly.generated.h"
 
-class UDialogDataAsset;
-class APlayerCharacter;
-class UOutlineComponent;
-class UResourceBank;
 class UNiagaraSystem;
+class UDialogDataAsset;
+class UOutlineComponent;
+class APlayerCharacter;
+class UResourceBank;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API AMolly : public AMULE {
@@ -30,7 +30,7 @@ protected:
     UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDelegate OnReachedDropShip;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_CalledBy)
+    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_CalledBy, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<APlayerCharacter> CalledBy;
     
 public:

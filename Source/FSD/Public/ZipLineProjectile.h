@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UObject/NoExportTypes.h"
 #include "Components/TimelineComponent.h"
 #include "GameFramework/Actor.h"
-#include "UObject/NoExportTypes.h"
 #include "ZipLineProjectile.generated.h"
 
+class UPointLightComponent;
 class UStatusEffect;
+class UCurveFloat;
 class UMaterialInstanceDynamic;
 class UTimelineComponent;
-class UCurveFloat;
-class UPointLightComponent;
 
 UCLASS(Abstract, Blueprintable)
 class AZipLineProjectile : public AActor {

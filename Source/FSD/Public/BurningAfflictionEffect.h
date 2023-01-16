@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AfflictionEffect.h"
 #include "EFrozenBitsSize.h"
+#include "AfflictionEffect.h"
 #include "BurningAfflictionEffect.generated.h"
 
 UCLASS(Abstract, Blueprintable)

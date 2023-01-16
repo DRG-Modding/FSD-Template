@@ -2,10 +2,10 @@
 #include "Templates/SubclassOf.h"
 
 class UObject;
-class UTexture2D;
-class APlayerCharacter;
 class UMissionStat;
 class UPlayerCharacterID;
+class APlayerCharacter;
+class UTexture2D;
 
 float UMissionStat::SetStatValue(UObject* WorldContext, APlayerCharacter* Character, float Amount) {
     return 0.0f;

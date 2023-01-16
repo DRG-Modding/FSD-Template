@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct FEliteEnemyBan {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FInt32Interval AffectedPlayerCount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

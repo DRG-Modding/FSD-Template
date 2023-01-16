@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "BossFight.h"
 #include "UObject/Object.h"
 #include "BossFightInterface.h"
-#include "BossFight.h"
 #include "SimpleBossFight.generated.h"
 
 UCLASS(Blueprintable)

@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RessuplyPod.h"
 #include "ERessuplyPodState.h"
+#include "RessuplyPod.h"
 #include "CleanupPod.generated.h"
 
-class USphereComponent;
 class UObjective;
+class USphereComponent;
 
 UCLASS(Blueprintable)
 class ACleanupPod : public ARessuplyPod {

@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "TemperatureComponent.h"
+#include "EPlayerTemperatureState.h"
+#include "PlayerTemperatureShowBarDelegate.h"
 #include "PlayerDefrostingSignatureDelegate.h"
 #include "PlayerTemperatureChangeRateSignatureDelegate.h"
-#include "PlayerTemperatureChangedSignatureDelegate.h"
 #include "PlayerTemperatureStateChangedSignatureDelegate.h"
-#include "PlayerTemperatureShowBarDelegate.h"
-#include "EPlayerTemperatureState.h"
+#include "PlayerTemperatureChangedSignatureDelegate.h"
+#include "TemperatureComponent.h"
 #include "PlayerTemperatureComponent.generated.h"
 
+class UHealthComponentBase;
 class APlayerCharacter;
 class UStatusEffect;
-class UHealthComponentBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPlayerTemperatureComponent : public UTemperatureComponent {
@@ -67,7 +67,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     float TargetTemperature;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_TemperatureChangeSpeed)
+    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_TemperatureChangeSpeed, meta=(AllowPrivateAccess=true))
     int8 TemperatureChangeSpeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_DefrostProgress, meta=(AllowPrivateAccess=true))

@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ResourceData.h"
 #include "IRandRange.h"
+#include "ResourceData.h"
 #include "GemResourceData.generated.h"
 
-class UDebrisPositioning;
-class UGemResourceCreator;
 class UDebrisBase;
-class AGem;
+class UDebrisPositioning;
 class AFSDGameState;
+class UGemResourceCreator;
+class AGem;
 
 UCLASS(Blueprintable)
 class UGemResourceData : public UResourceData {

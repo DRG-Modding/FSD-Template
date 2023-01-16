@@ -3,9 +3,9 @@
 #include "UObject/NoExportTypes.h"
 #include "DamageDataBase.generated.h"
 
-class UFSDPhysicalMaterial;
 class UPrimitiveComponent;
 class UDamageImpulse;
+class UFSDPhysicalMaterial;
 
 USTRUCT(BlueprintType)
 struct FDamageDataBase {
@@ -14,7 +14,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UFSDPhysicalMaterial* PhysMaterial;
     
-    UPROPERTY(EditAnywhere, Export, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UPrimitiveComponent> Component;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

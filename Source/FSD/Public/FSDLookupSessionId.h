@@ -5,8 +5,8 @@
 #include "Net/OnlineBlueprintCallProxyBase.h"
 #include "FSDLookupSessionId.generated.h"
 
-class UFSDLookupSessionId;
 class UObject;
+class UFSDLookupSessionId;
 
 UCLASS(Blueprintable, MinimalAPI)
 class UFSDLookupSessionId : public UOnlineBlueprintCallProxyBase {

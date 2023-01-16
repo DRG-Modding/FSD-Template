@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "PointRemovedEventDelegate.h"
-#include "Components/BoxComponent.h"
 #include "TerrainDetectInterface.h"
+#include "Components/BoxComponent.h"
 #include "TerrainDetectBoxComponent.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

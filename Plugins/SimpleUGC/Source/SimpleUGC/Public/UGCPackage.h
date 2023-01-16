@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
-#include "EUGCApprovalStatus.h"
-#include "EUGCDownloadVersion.h"
 #include "UObject/NoExportTypes.h"
+#include "EUGCDownloadVersion.h"
+#include "EUGCApprovalStatus.h"
+#include "UObject/Object.h"
 #include "UGCPackage.generated.h"
 
 UCLASS(Blueprintable)
@@ -58,7 +58,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ShowStatusForAudioCosmetic;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int64> Dependencies;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

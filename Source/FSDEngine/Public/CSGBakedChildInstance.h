@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CSGBase.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "CSGBakedChildInstanceProperties.h"
-#include "UObject/NoExportTypes.h"
 #include "DeepCSGFloatTree.h"
+#include "CSGBase.h"
 #include "CSGBakedChildInstance.generated.h"
 
 UCLASS(Blueprintable)

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TowerEventModule.h"
 #include "UObject/NoExportTypes.h"
+#include "TowerEventModule.h"
 #include "AimingTowerEventModule.generated.h"
 
 class AActor;

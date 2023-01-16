@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "SavableDataAsset.h"
 #include "UObject/NoExportTypes.h"
-#include "TrackedStatInfo.h"
 #include "ChallengeVariation.h"
+#include "TrackedStatInfo.h"
+#include "SavableDataAsset.h"
 #include "SeasonChallenge.generated.h"
 
+class UCampaign;
 class USeasonChallenge;
 class UTexture2D;
-class UCampaign;
 
 UCLASS(Blueprintable)
 class USeasonChallenge : public USavableDataAsset {

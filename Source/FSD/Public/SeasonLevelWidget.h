@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Blueprint/UserWidget.h"
 #include "RewardClaimedDelegate.h"
 #include "SeasonLevel.h"
+#include "Blueprint/UserWidget.h"
 #include "SeasonLevelWidget.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

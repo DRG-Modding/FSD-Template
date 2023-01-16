@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "RandRange.h"
+#include "Components/ActorComponent.h"
 #include "PheromoneSpawnerComponent.generated.h"
 
-class UEnemyDescriptor;
 class AActor;
+class UEnemyDescriptor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPheromoneSpawnerComponent : public UActorComponent {

@@ -3,8 +3,8 @@
 #include "ResourcesComponent.h"
 #include "PlayerResourceComponent.generated.h"
 
-class UPlayerResourceComponent;
 class APlayerCharacter;
+class UPlayerResourceComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPlayerResourceComponent : public UResourcesComponent {

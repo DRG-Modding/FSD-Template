@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
 #include "EDLSSSettingOverride.h"
+#include "UObject/Object.h"
 #include "DLSSOverrideSettings.generated.h"
 
 UCLASS(Blueprintable, ProjectUserConfig, config = Engine)

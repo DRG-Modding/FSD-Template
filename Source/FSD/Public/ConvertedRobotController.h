@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EnemyAIController.h"
 #include "GameplayTagContainer.h"
+#include "EnemyAIController.h"
 #include "ConvertedRobotController.generated.h"
 
 class UBehaviorTree;

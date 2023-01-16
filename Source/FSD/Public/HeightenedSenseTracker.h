@@ -3,18 +3,18 @@
 #include "HeightenedSenseTracker.generated.h"
 
 class AActor;
-class UHealthComponentBase;
 class UAttackingPointInterface;
 class IAttackingPointInterface;
+class UHealthComponentBase;
 
 USTRUCT(BlueprintType)
 struct FHeightenedSenseTracker {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AActor> Actor;
     
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UHealthComponentBase> HealthComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

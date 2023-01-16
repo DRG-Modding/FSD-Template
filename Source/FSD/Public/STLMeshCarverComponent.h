@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/PrimitiveComponent.h"
 #include "ECarveFilterType.h"
+#include "Components/PrimitiveComponent.h"
 #include "STLMeshCarverComponent.generated.h"
 
-class UTerrainMaterialBase;
 class USTLMeshCarver;
+class UTerrainMaterialBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USTLMeshCarverComponent : public UPrimitiveComponent {

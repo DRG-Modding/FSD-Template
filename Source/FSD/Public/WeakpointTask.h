@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FWeakpointTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FRichCurve GrowCurve;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FRichCurve FadeCurve;
     
     FSD_API FWeakpointTask();

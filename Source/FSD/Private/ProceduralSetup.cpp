@@ -1,18 +1,18 @@
 #include "ProceduralSetup.h"
 #include "Net/UnrealNetwork.h"
-#include "ProceduralResources.h"
 #include "NoisyPathfinderComponent.h"
-#include "ProceduralTunnelComponent.h"
-#include "PLSEncounterComponent.h"
 #include "ProceduralVeinsComponent.h"
+#include "ProceduralTunnelComponent.h"
+#include "ProceduralResources.h"
 #include "ProceduralObjectColliders.h"
+#include "PLSEncounterComponent.h"
 
-class AProceduralSetup;
-class UMissionDNA;
 class ADeepCSGWorld;
-class UTunnelParameters;
-class URoomGeneratorBase;
+class UMissionDNA;
 class UCaveInfluencer;
+class AProceduralSetup;
+class URoomGeneratorBase;
+class UTunnelParameters;
 
 
 void AProceduralSetup::SpawnSpecialEvents() {
@@ -21,7 +21,7 @@ void AProceduralSetup::SpawnSpecialEvents() {
 void AProceduralSetup::SpawnObjectiveEncounter() {
 }
 
-void AProceduralSetup::SpawnObjectiveCriticalItems() {
+void AProceduralSetup::SpawnObjectiveCriticalItems(const ECriticalItemPass& pass) {
 }
 
 void AProceduralSetup::SpawnItems_Async(AProceduralSetup* setup, FLatentActionInfo LatentInfo) {

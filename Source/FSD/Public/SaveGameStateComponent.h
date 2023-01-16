@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ItemUpgradesChangedDelegateDelegate.h"
-#include "Components/ActorComponent.h"
-#include "LoadoutChangedDelegateDelegate.h"
-#include "SaveGameStatePerkItem.h"
-#include "PlayerProgressChangedSignatureDelegate.h"
-#include "CharacterProgressChangedSignatureDelegate.h"
 #include "ItemLoadout.h"
-#include "ActiveCampaingMission.h"
 #include "ItemUpgradeSelection.h"
-#include "CharacterProgress.h"
+#include "CharacterProgressChangedSignatureDelegate.h"
+#include "PlayerProgressChangedSignatureDelegate.h"
+#include "LoadoutChangedDelegateDelegate.h"
+#include "ItemUpgradesChangedDelegateDelegate.h"
+#include "SaveGameStatePerkItem.h"
+#include "ActiveCampaingMission.h"
 #include "PlayerProgress.h"
+#include "CharacterProgress.h"
+#include "Components/ActorComponent.h"
 #include "SaveGameStateComponent.generated.h"
 
 class AActor;
-class UItemUpgrade;
-class UVictoryPose;
-class UPlayerCharacterID;
 class UGeneratedMission;
+class UItemUpgrade;
+class UPlayerCharacterID;
+class UVictoryPose;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USaveGameStateComponent : public UActorComponent {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "Curves/CurveFloat.h"
+#include "Engine/DataAsset.h"
 #include "EffectSettings.generated.h"
 
 class UNiagaraParameterCollection;

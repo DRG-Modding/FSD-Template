@@ -4,8 +4,8 @@
 #include "UObject/NoExportTypes.h"
 #include "GDPlayerAndCharacterProgression.generated.h"
 
-class APlayerCharacter;
 class UPlayerCharacterID;
+class APlayerCharacter;
 
 USTRUCT(BlueprintType)
 struct FGDPlayerAndCharacterProgression {

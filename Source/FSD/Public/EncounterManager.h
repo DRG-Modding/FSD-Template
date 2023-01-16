@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "EncounterManagerItem.h"
 #include "UObject/NoExportTypes.h"
+#include "EncounterManagerItem.h"
+#include "Components/ActorComponent.h"
 #include "EncounterManager.generated.h"
 
-class AProceduralSetup;
-class UCritterDescriptor;
-class UEnemySpawnManager;
 class UEnemyGroupDescriptor;
+class UCritterDescriptor;
 class UEnemyDescriptor;
+class UEnemySpawnManager;
+class AProceduralSetup;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UEncounterManager : public UActorComponent {

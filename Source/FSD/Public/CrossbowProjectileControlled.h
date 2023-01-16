@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "Components/ActorComponent.h"
 #include "CrossbowProjectileControlled.generated.h"
 
-class ACrossbowProjectileBase;
 class USceneComponent;
+class ACrossbowProjectileBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UCrossbowProjectileControlled : public UActorComponent {

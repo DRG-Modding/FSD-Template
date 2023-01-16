@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EChatSenderType.h"
-#include "EChatMessageType.h"
 #include "GameFramework/OnlineReplStructs.h"
+#include "EChatMessageType.h"
+#include "EChatSenderType.h"
 #include "FSDChatMessage.generated.h"
 
 USTRUCT(BlueprintType)

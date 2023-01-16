@@ -6,10 +6,10 @@
 #include "GameDLC.generated.h"
 
 class UObject;
-class UFileMediaSource;
-class UTexture2D;
 class UWindowWidget;
 class UResourceData;
+class UFileMediaSource;
+class UTexture2D;
 
 UCLASS(Blueprintable)
 class UGameDLC : public UDLCBase, public ISaveGameIDInterface {

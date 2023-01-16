@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "DanceItem.h"
+#include "Engine/DataAsset.h"
 #include "DanceSettings.generated.h"
 
 UCLASS(Blueprintable)

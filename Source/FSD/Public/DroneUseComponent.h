@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DroneUseProgressDelegate.h"
-#include "Components/ActorComponent.h"
-#include "DroneFinishedUsingDelegate.h"
 #include "DelegateEventDelegate.h"
 #include "EInputKeys.h"
+#include "DroneFinishedUsingDelegate.h"
+#include "DroneUseProgressDelegate.h"
+#include "Components/ActorComponent.h"
 #include "DroneUseComponent.generated.h"
 
-class USingleUsableComponent;
 class UDialogDataAsset;
 class APlayerCharacter;
+class USingleUsableComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UDroneUseComponent : public UActorComponent {
@@ -31,7 +31,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDialogDataAsset* BoscoLaserpointerShout;
     
-    UPROPERTY(EditAnywhere, Export, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<USingleUsableComponent> SyncToUsable;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))

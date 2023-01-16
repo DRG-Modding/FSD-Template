@@ -1,14 +1,14 @@
 #include "GameData.h"
 #include "Templates/SubclassOf.h"
 
-class UAsyncManager;
-class UPlayerCharacterID;
 class UObject;
-class UInventoryList;
+class UAsyncManager;
 class UDifficultySetting;
-class APlayerCharacter;
 class UHUDVisibilityGroup;
+class UInventoryList;
 class UMissionStat;
+class UPlayerCharacterID;
+class APlayerCharacter;
 
 void UGameData::UnloadPreloadedAssets() {
 }
@@ -84,6 +84,7 @@ UGameData::UGameData() {
     this->VanitySettings = NULL;
     this->KeyBindingSettings = NULL;
     this->DeepDiveSettings = NULL;
+    this->BEESettings = NULL;
     this->EncounterSettings = NULL;
     this->ForgingSettings = NULL;
     this->SchematicSettings = NULL;

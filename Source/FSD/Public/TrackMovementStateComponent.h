@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CharacterStateComponent.h"
 #include "EExitTrackMode.h"
 #include "PipelineMovementData.h"
+#include "CharacterStateComponent.h"
 #include "TrackMovementStateComponent.generated.h"
 
-class AZipLineConnector;
-class UDialogDataAsset;
 class UAudioComponent;
+class UDialogDataAsset;
+class AZipLineConnector;
 class USoundBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

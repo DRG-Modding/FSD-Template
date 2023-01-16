@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/Interface.h"
 #include "GearStatEntry.h"
+#include "UObject/Interface.h"
 #include "UpgradableGear.generated.h"
 
 class AFSDPlayerState;

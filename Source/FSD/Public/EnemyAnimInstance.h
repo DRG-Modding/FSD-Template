@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AnimNotifyDelegateDelegate.h"
-#include "Animation/AnimInstance.h"
 #include "NameDelegateDelegate.h"
 #include "IsAttackingChangedDelegateDelegate.h"
+#include "AnimNotifyDelegateDelegate.h"
+#include "Animation/AnimInstance.h"
 #include "EnemyAnimInstance.generated.h"
 
 class USkeletalMeshComponent;

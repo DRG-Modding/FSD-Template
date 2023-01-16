@@ -4,11 +4,11 @@
 #include "Components/ActorComponent.h"
 #include "OutlineComponent.generated.h"
 
+class AActor;
+class UPrimitiveComponent;
 class AItem;
 class UHealthComponentBase;
-class UPrimitiveComponent;
 class APlayerCharacter;
-class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UOutlineComponent : public UActorComponent {
@@ -41,7 +41,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UPrimitiveComponent*> ExcludedComponents;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<APlayerCharacter> Character;
     
 public:

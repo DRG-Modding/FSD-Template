@@ -4,10 +4,10 @@
 #include "AmmoDrivenWeapon.h"
 #include "ChargedWeapon.generated.h"
 
-class USoundCue;
+class UFXSystemComponent;
 class UFXSystemAsset;
 class UAnimMontage;
-class UFXSystemComponent;
+class USoundCue;
 
 UCLASS(Abstract, Blueprintable)
 class AChargedWeapon : public AAmmoDrivenWeapon {

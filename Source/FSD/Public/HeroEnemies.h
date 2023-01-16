@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "GameplayTagContainer.h"
 #include "EliteEnemyEntry.h"
 #include "RunningMissionBP.h"
-#include "GameplayTagContainer.h"
 #include "HeroEnemies.generated.h"
 
-class UEnemyDescriptor;
 class APawn;
+class UEnemyDescriptor;
 
 UCLASS(Abstract, Blueprintable)
 class UHeroEnemies : public URunningMissionBP {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DebrisActorComponent.h"
 #include "RandRange.h"
+#include "DebrisActorComponent.h"
 #include "DebrisProbabilityComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

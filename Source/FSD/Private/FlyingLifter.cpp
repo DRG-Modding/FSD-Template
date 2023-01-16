@@ -1,10 +1,10 @@
 #include "FlyingLifter.h"
 #include "Net/UnrealNetwork.h"
+#include "Components/AudioComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/PointLightComponent.h"
-#include "InDangerComponent.h"
-#include "Components/AudioComponent.h"
 #include "GrabberComponent.h"
+#include "InDangerComponent.h"
 
 class AActor;
 class UPrimitiveComponent;

@@ -16,7 +16,7 @@ protected:
     TArray<TSubclassOf<UStatusEffect>> ElectricEffects;
     
 private:
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AFSDPawn> TargetEnemy;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

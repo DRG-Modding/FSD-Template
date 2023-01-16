@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SDFBaseWithTransformComponent.h"
 #include "SDFSphereProperties.h"
+#include "SDFBaseWithTransformComponent.h"
 #include "SDFSphereComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

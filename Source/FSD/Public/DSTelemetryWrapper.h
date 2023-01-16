@@ -4,13 +4,13 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "DSTelemetryWrapper.generated.h"
 
-class UDSTelemetry;
-class UGeneratedMission;
-class APlayerController;
-class USeasonChallenge;
 class AActor;
+class UDSTelemetry;
+class APlayerController;
 class AFSDPlayerController;
+class UGeneratedMission;
 class APlayerCharacter;
+class USeasonChallenge;
 
 UCLASS(Blueprintable)
 class UDSTelemetryWrapper : public UGameInstanceSubsystem {

@@ -1,12 +1,12 @@
 #include "FuelLineStart.h"
 #include "Net/UnrealNetwork.h"
-#include "SimpleObjectInfoComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "SimpleObjectInfoComponent.h"
 #include "FuelLineStartUsable.h"
 #include "OutlineComponent.h"
 
-class UTrackBuilderUsable;
 class ATrackBuilderSegment;
+class UTrackBuilderUsable;
 
 
 void AFuelLineStart::OnRep_FuelLineConnected() {

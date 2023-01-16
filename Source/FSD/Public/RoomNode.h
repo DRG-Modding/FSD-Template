@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RoomNodeBase.h"
 #include "UObject/NoExportTypes.h"
 #include "RoomEntrance.h"
 #include "GeneratedRoom.h"
+#include "RoomNodeBase.h"
 #include "RoomGeneratorItem.h"
 #include "RoomNode.generated.h"
 

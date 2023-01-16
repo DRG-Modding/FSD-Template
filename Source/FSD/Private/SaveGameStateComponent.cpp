@@ -1,9 +1,9 @@
 #include "SaveGameStateComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UVictoryPose;
-class UPlayerCharacterID;
 class UGeneratedMission;
+class UPlayerCharacterID;
+class UVictoryPose;
 
 void USaveGameStateComponent::SetCampaign() {
 }

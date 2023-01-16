@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "EnemyAnimInstance.h"
 #include "EProspectorRobotState.h"
+#include "EnemyAnimInstance.h"
 #include "ProspectorAnimInstance.generated.h"
 
 UCLASS(Blueprintable, NonTransient)

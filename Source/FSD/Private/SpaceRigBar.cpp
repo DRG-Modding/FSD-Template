@@ -9,6 +9,9 @@ class APlayerCharacter;
 void ASpaceRigBar::SpawnDrinkables(UDrinkableDataAsset* Drinkable, APlayerCharacter* User) {
 }
 
+void ASpaceRigBar::SetVisibilityOfHolidayMeshes() {
+}
+
 
 
 

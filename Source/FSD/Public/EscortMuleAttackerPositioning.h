@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AttackerPositioningComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "AttackerPositioningComponent.h"
 #include "EscortMuleAttackerPositioning.generated.h"
 
 class UHealthComponentBase;

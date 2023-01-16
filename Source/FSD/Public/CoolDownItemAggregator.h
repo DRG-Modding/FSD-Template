@@ -3,8 +3,8 @@
 #include "ItemAggregator.h"
 #include "CoolDownItemAggregator.generated.h"
 
-class USoundBase;
 class AItem;
+class USoundBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCoolDownItemAggregator : public UItemAggregator {

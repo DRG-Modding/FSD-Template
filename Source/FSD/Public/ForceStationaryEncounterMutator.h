@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Mutator.h"
 #include "IRandRange.h"
+#include "Mutator.h"
 #include "ForceStationaryEncounterMutator.generated.h"
 
 class UEnemyGroupDescriptor;

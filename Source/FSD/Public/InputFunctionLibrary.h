@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
-#include "Input/Events.h"
-#include "Input/Events.h"
-#include "EFSDInputSource.h"
-#include "GameFramework/PlayerInput.h"
 #include "InputCoreTypes.h"
+#include "EFSDInputSource.h"
 #include "EKeyBindingAxis.h"
-#include "GameFramework/PlayerInput.h"
+#include "Input/Events.h"
+#include "Input/Events.h"
 #include "InputDisplay.h"
+#include "GameFramework/PlayerInput.h"
+#include "GameFramework/PlayerInput.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "InputFunctionLibrary.generated.h"
 
 class APlayerController;

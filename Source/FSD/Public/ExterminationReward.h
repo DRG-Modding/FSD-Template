@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RunningMissionBP.h"
 #include "GameplayTagContainer.h"
+#include "RunningMissionBP.h"
 #include "ExterminationReward.generated.h"
 
 class AActor;

@@ -2,8 +2,8 @@
 #include "FSDFindSteamSessions.h"
 
 class UObject;
-class APlayerController;
 class UFSDFindSessionsCallbackProxy;
+class APlayerController;
 
 void UFSDFindSessionsCallbackProxy::OnFSDCompleted(bool bSuccess, const TArray<FBlueprintSessionResult>& Results) {
 }

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EInputInteraction.h"
 #include "UObject/NoExportTypes.h"
+#include "EInputInteraction.h"
 #include "InputDisplay.generated.h"
 
 class UTexture2D;

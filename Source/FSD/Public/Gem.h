@@ -3,8 +3,8 @@
 #include "CarriableItem.h"
 #include "Gem.generated.h"
 
-class UCarriableInstantUsable;
 class UResourceData;
+class UCarriableInstantUsable;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API AGem : public ACarriableItem {

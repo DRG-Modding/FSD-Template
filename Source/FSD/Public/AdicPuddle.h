@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
+#include "GameFramework/Actor.h"
 #include "AdicPuddle.generated.h"
 
-class UStatusEffect;
-class USphereComponent;
 class UPrimitiveComponent;
+class USphereComponent;
+class UStatusEffect;
 class USoundBase;
 
 UCLASS(Blueprintable)

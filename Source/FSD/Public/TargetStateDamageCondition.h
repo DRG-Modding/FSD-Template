@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DamageCondition.h"
 #include "ETargetStateDamageBonusType.h"
+#include "DamageCondition.h"
 #include "TargetStateDamageCondition.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

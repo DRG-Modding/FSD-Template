@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "UObject/NoExportTypes.h"
 #include "EnemySpawnedDelegateDelegate.h"
 #include "DeepPathFinderSize.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "SpawningBlueprintLibrary.generated.h"
 
 class UObject;
-class UEnemyDescriptor;
 class UEnemyGroupDescriptor;
+class UEnemyDescriptor;
 
 UCLASS(Blueprintable)
 class FSD_API USpawningBlueprintLibrary : public UBlueprintFunctionLibrary {

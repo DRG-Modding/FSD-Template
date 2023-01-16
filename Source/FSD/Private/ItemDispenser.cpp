@@ -3,8 +3,8 @@
 #include "Components/SceneComponent.h"
 #include "InstantUsable.h"
 
-class APlayerCharacter;
 class AActor;
+class APlayerCharacter;
 
 void AItemDispenser::SpawnItem() {
 }

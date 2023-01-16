@@ -2,10 +2,10 @@
 #include "NiagaraComponent.h"
 #include "Components/CapsuleComponent.h"
 
-class USceneComponent;
-class AFoamPuddle;
-class UPrimitiveComponent;
 class AActor;
+class USceneComponent;
+class UPrimitiveComponent;
+class AFoamPuddle;
 
 void ASoapVacuumItem::Server_StartVacuumingPuddle_Implementation(AFoamPuddle* puddle) {
 }

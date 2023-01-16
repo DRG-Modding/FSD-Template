@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "UObject/Object.h"
 #include "EPackageSortField.h"
 #include "EUGCApprovalStatus.h"
+#include "UObject/Object.h"
 #include "UGCRegistry.generated.h"
 
-class UUGCPackage;
 class AActor;
+class UUGCPackage;
 
 UCLASS(Blueprintable)
 class SIMPLEUGC_API UUGCRegistry : public UObject {
@@ -44,7 +44,7 @@ public:
     void UnmountUGCPackages(TArray<FString> ExcludingModIds);
     
     UFUNCTION(BlueprintCallable)
-    bool UnmountUGCPackage(UUGCPackage* Package, bool RemoveFromUserSettings);
+    bool UnmountUGCPackage(UUGCPackage* Package, bool RemoveFromUserSettings, bool RemoveFromDisk);
     
     UFUNCTION(BlueprintCallable)
     void UnmountSandboxUGCPackages();

@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Grenade.h"
 #include "UObject/NoExportTypes.h"
 #include "EBoomerangState.h"
-#include "BoomerangMover.h"
 #include "BoomerangSyncer.h"
+#include "BoomerangMover.h"
+#include "Grenade.h"
 #include "BouncyBoomerang.generated.h"
 
 class USceneComponent;
+class UNiagaraSystem;
+class AFSDPawn;
 class UDamageComponent;
 class UStatusEffect;
-class UNiagaraSystem;
-class USoundCue;
 class UParticleSystem;
-class AFSDPawn;
+class USoundCue;
 
 UCLASS(Blueprintable)
 class ABouncyBoomerang : public AGrenade {
@@ -117,7 +117,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     AFSDPawn* PredictedNextEnemy;
     
-    UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_RandomSeed)
+    UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_RandomSeed, meta=(AllowPrivateAccess=true))
     uint32 RandomSeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_State, meta=(AllowPrivateAccess=true))

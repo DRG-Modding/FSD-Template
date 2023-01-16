@@ -10,7 +10,7 @@ class UPetComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, ReplicatedUsing=ReceiveOwningPlayerChanged)
+    UPROPERTY(EditAnywhere, ReplicatedUsing=ReceiveOwningPlayerChanged, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<APlayerCharacter> OwningPlayer;
     
 public:

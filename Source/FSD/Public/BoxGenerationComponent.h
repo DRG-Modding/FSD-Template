@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GenerationComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "GenerationComponent.h"
 #include "BoxGenerationComponent.generated.h"
 
 class UFloodFillSettings;

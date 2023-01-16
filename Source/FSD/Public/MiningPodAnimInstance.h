@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Animation/AnimInstance.h"
 #include "EMiningPodState.h"
 #include "EMiningPodRampState.h"
+#include "Animation/AnimInstance.h"
 #include "MiningPodAnimInstance.generated.h"
 
 UCLASS(Blueprintable, NonTransient)

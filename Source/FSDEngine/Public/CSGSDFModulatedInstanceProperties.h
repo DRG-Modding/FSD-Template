@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "ESDFModulateMode.h"
-#include "BakeSettings.h"
 #include "EPreviewCellSize.h"
+#include "BakeSettings.h"
 #include "SDFModulateLayer.h"
 #include "CSGSDFModulatedInstanceProperties.generated.h"
 

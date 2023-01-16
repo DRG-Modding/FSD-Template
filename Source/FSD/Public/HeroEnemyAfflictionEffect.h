@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AfflictionEffect.h"
 #include "GameplayTagContainer.h"
+#include "AfflictionEffect.h"
 #include "HeroEnemyAfflictionEffect.generated.h"
 
 UCLASS(Abstract, Blueprintable)

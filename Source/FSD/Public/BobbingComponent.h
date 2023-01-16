@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/SceneComponent.h"
 #include "MovedIntoSomethingDelegate.h"
+#include "Components/SceneComponent.h"
 #include "BobbingComponent.generated.h"
 
 class AActor;

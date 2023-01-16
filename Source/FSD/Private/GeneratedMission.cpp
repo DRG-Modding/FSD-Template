@@ -1,11 +1,11 @@
 #include "GeneratedMission.h"
 #include "Templates/SubclassOf.h"
 
+class UMissionDNA;
 class AFSDPlayerController;
-class AProceduralSetup;
 class UGeneratedMission;
 class UMutator;
-class UMissionDNA;
+class AProceduralSetup;
 
 
 bool UGeneratedMission::IsSingleMission() const {
@@ -58,7 +58,6 @@ UGeneratedMission::UGeneratedMission() {
     this->GlobalSeed = 0;
     this->Template = NULL;
     this->PrimaryObjective = NULL;
-    this->SecondaryObjective = NULL;
     this->MissionMutator = NULL;
     this->ComplexityLimit = NULL;
     this->DurationLimit = NULL;

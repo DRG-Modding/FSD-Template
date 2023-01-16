@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EDiscordBiomeType.h"
 #include "EDiscordMissionType.h"
+#include "EDiscordBiomeType.h"
 #include "DiscordFSDRichPresence.generated.h"
 
 USTRUCT(BlueprintType)

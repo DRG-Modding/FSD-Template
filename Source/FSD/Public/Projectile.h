@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ProjectileBase.h"
-#include "ProjectileState.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
+#include "ProjectileState.h"
+#include "ProjectileBase.h"
 #include "Projectile.generated.h"
 
-class AActor;
-class UFSDProjectileMovementComponent;
 class UObject;
+class AActor;
+class USceneComponent;
 class APawn;
 class AProjectile;
-class USceneComponent;
+class UFSDProjectileMovementComponent;
 class UFSDPhysicalMaterial;
 
 UCLASS(Abstract, Blueprintable)

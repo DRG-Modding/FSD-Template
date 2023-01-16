@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TerrainPlacementBox.h"
+#include "UObject/NoExportTypes.h"
 #include "EDebrisColliderType.h"
 #include "DebrisCapsule.h"
-#include "UObject/NoExportTypes.h"
+#include "TerrainPlacementBox.h"
 #include "TerrainPlacementDebugItem.generated.h"
 
 USTRUCT(BlueprintType)

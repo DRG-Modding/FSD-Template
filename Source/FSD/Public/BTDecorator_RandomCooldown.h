@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BehaviorTree/BTDecorator.h"
 #include "RandRange.h"
 #include "BehaviorTree/BehaviorTreeTypes.h"
+#include "BehaviorTree/BTDecorator.h"
 #include "BTDecorator_RandomCooldown.generated.h"
 
 UCLASS(Blueprintable)

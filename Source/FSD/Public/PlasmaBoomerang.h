@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Grenade.h"
 #include "Engine/EngineTypes.h"
+#include "Grenade.h"
 #include "PlasmaBoomerang.generated.h"
 
-class USceneComponent;
-class UStaticMeshComponent;
-class UBoxComponent;
-class UPrimitiveComponent;
-class UDamageComponent;
-class UCurveVector;
 class AActor;
+class USceneComponent;
+class UPrimitiveComponent;
+class UStaticMeshComponent;
+class UDamageComponent;
+class UBoxComponent;
+class UCurveVector;
 
 UCLASS(Abstract, Blueprintable)
 class APlasmaBoomerang : public AGrenade {

@@ -1,7 +1,7 @@
 #include "MultiprojectileSpawner.h"
 
-class UDataAsset;
 class AActor;
+class UDataAsset;
 class UMultiprojectileSpawner;
 
 bool UMultiprojectileSpawner::GetIsFiring() const {

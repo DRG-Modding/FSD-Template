@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "WeaponFireComponent.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/NetSerialization.h"
+#include "WeaponFireComponent.h"
 #include "ProjectileLauncherBaseComponent.generated.h"
 
 class AProjectileBase;

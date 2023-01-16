@@ -3,10 +3,10 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "BossFightSubSystem.generated.h"
 
+class AActor;
+class UUserWidget;
 class UBossFightInterface;
 class IBossFightInterface;
-class UUserWidget;
-class AActor;
 
 UCLASS(Blueprintable)
 class UBossFightSubSystem : public UGameInstanceSubsystem {

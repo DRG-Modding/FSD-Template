@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "DelegateEventDelegate.h"
+#include "Components/ActorComponent.h"
 #include "ObjectivesManager.generated.h"
 
 class UObjective;

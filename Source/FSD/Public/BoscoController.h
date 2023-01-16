@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "FollowTargetChangedDelegate.h"
 #include "UObject/NoExportTypes.h"
-#include "FSDAIController.h"
-#include "GameplayTagContainer.h"
 #include "LaserPointerTarget.h"
 #include "EInputKeys.h"
+#include "GameplayTagContainer.h"
+#include "FollowTargetChangedDelegate.h"
+#include "FSDAIController.h"
 #include "BoscoController.generated.h"
 
-class UBehaviorTree;
-class UTerrainMaterial;
-class UMissionWarning;
 class AActor;
 class UDroneUseComponent;
-class APlayerCharacter;
-class AFSDPlayerState;
 class UHealthComponentBase;
+class AFSDPlayerState;
+class UMissionWarning;
+class APlayerCharacter;
+class UTerrainMaterial;
+class UBehaviorTree;
 
 UCLASS(Blueprintable)
 class ABoscoController : public AFSDAIController {
@@ -47,7 +47,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<AActor>> VacuumableTypes;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<TWeakObjectPtr<AActor>> VacuumTargets;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

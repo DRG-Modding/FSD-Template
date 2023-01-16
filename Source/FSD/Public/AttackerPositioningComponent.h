@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "AttackerInfo.h"
 #include "Components/ActorComponent.h"
-#include "UObject/NoExportTypes.h"
 #include "AttackerPositioningComponent.generated.h"
 
 class AActor;

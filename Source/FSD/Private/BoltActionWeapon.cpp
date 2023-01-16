@@ -2,9 +2,9 @@
 #include "Net/UnrealNetwork.h"
 
 class AActor;
-class UFSDPhysicalMaterial;
-class UHealthComponentBase;
 class UPrimitiveComponent;
+class UHealthComponentBase;
+class UFSDPhysicalMaterial;
 
 void ABoltActionWeapon::SetOverheated(bool isOverheated) {
 }

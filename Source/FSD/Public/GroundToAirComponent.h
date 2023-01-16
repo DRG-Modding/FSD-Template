@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "StateStats.h"
 #include "ChangedStateSigDelegate.h"
+#include "StateStats.h"
+#include "Components/ActorComponent.h"
 #include "GroundToAirComponent.generated.h"
 
 class ADeepPathfinderCharacter;
@@ -52,7 +52,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_StateChange, meta=(AllowPrivateAccess=true))
     bool IsFlying;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<ADeepPathfinderCharacter> OwningPathfinder;
     
 public:

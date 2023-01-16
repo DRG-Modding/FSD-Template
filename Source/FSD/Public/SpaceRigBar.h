@@ -1,17 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
+#include "EHolidayType.h"
 #include "DrinkableBarSlot.h"
+#include "HolidayMeshItems.h"
+#include "GameFramework/Actor.h"
 #include "SpaceRigBar.generated.h"
 
-class UDrinkableDataAsset;
-class UInstantUsable;
 class UBarMenuWidget;
-class UBoxComponent;
-class APlayerCharacter;
+class UInstantUsable;
+class UDrinkableDataAsset;
 class ADrinkableActor;
+class APlayerCharacter;
+class UBoxComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ASpaceRigBar : public AActor {
@@ -41,6 +43,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_DrinkableSpecial, meta=(AllowPrivateAccess=true))
     UDrinkableDataAsset* DrinkableSpecial;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TMap<EHolidayType, FHolidayMeshItems> HolidayComponentMap;
+    
 public:
     ASpaceRigBar();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
@@ -48,6 +53,9 @@ public:
 protected:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SpawnDrinkables(UDrinkableDataAsset* Drinkable, APlayerCharacter* User);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetVisibilityOfHolidayMeshes();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveFinishedSpawningDrinkables(UDrinkableDataAsset* DrinkableData, APlayerCharacter* Customer);

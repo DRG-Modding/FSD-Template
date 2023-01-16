@@ -4,8 +4,8 @@
 #include "UObject/NoExportTypes.h"
 #include "CoolDownProgressStyle.generated.h"
 
-class UTexture2D;
 class UCoolDownProgressWidget;
+class UTexture2D;
 class USoundCue;
 
 USTRUCT(BlueprintType)

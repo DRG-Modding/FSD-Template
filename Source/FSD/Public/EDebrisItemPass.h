@@ -5,6 +5,7 @@
 UENUM(BlueprintType)
 enum class EDebrisItemPass : uint8 {
     PrePlacement,
+    Plague,
     Main,
 };
 

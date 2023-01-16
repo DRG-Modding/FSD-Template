@@ -1,8 +1,8 @@
 #include "CharacterUseComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UUsableComponentBase;
 class AActor;
+class UUsableComponentBase;
 
 void UCharacterUseComponent::Server_SetState_Implementation(const FCharacterUseState& NewState) {
 }

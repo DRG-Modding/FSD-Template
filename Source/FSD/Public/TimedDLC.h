@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DLCBase.h"
 #include "UObject/NoExportTypes.h"
+#include "DLCBase.h"
 #include "TimedDLC.generated.h"
 
 UCLASS(Blueprintable)

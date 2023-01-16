@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "BiomeNoiseItem.generated.h"
 
-class UFloodFillSettings;
 class UDetailNoise;
+class UFloodFillSettings;
 
 USTRUCT(BlueprintType)
 struct FBiomeNoiseItem {

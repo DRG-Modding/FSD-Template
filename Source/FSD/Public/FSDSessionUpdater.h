@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
 #include "NewFSDSessionIDDelegate.h"
+#include "UObject/Object.h"
 #include "FSDSessionUpdater.generated.h"
 
 class UFSDLobbyHandler;

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Reward.h"
 #include "IRandRange.h"
+#include "Reward.h"
 #include "WeeklyResourceReward.generated.h"
 
 class UResourceData;

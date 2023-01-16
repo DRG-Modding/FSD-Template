@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameEvent.h"
 #include "ProgressShout.h"
+#include "GameEvent.h"
 #include "MeteorDefenseEvent.generated.h"
 
 class APlagueMeteor;

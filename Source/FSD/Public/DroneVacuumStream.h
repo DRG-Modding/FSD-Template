@@ -3,8 +3,8 @@
 #include "DroneStream.h"
 #include "DroneVacuumStream.generated.h"
 
-class AFoamPuddle;
 class USceneComponent;
+class AFoamPuddle;
 
 UCLASS(Blueprintable)
 class ADroneVacuumStream : public ADroneStream {

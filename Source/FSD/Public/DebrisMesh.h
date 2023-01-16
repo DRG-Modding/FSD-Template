@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DebrisBase.h"
 #include "DebrisStaticMesh.h"
+#include "DebrisBase.h"
 #include "DebrisMesh.generated.h"
 
 class UMaterialInterface;

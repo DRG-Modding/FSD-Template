@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SpiderAnimInstance.h"
 #include "UObject/NoExportTypes.h"
+#include "SpiderAnimInstance.h"
 #include "PatrolBotAnimInstance.generated.h"
 
 class APatrolBot;

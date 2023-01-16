@@ -4966,10 +4966,6 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(ProjectDir)/Plugins/FSDEditorTools/FSDReferenceViewer/FSDReferenceViewer.uplugin",
-			"Type": "UFS"
-		},
-		{
 			"Path": "$(ProjectDir)/Plugins/FSDTests/FSDTests.uplugin",
 			"Type": "UFS"
 		},

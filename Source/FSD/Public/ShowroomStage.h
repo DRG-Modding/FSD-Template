@@ -4,8 +4,8 @@
 #include "GameFramework/Actor.h"
 #include "ShowroomStage.generated.h"
 
-class USceneCaptureComponent2D;
 class USceneComponent;
+class USceneCaptureComponent2D;
 class UShowroomController;
 class UTextureRenderTarget2D;
 

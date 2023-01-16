@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Engine/DataAsset.h"
 #include "CraftingCost.h"
+#include "Engine/DataAsset.h"
 #include "ItemData.generated.h"
 
-class UItemID;
-class UTexture2D;
 class AActor;
 class UResourceData;
+class UItemID;
+class UTexture2D;
 
 UCLASS(Blueprintable)
 class FSD_API UItemData : public UPrimaryDataAsset {

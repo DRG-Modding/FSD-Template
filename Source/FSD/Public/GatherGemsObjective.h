@@ -3,8 +3,8 @@
 #include "ResourceBasedObjective.h"
 #include "GatherGemsObjective.generated.h"
 
-class UGemResourceData;
 class UCappedResource;
+class UGemResourceData;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UGatherGemsObjective : public UResourceBasedObjective {

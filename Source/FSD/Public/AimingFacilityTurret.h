@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FacilityTurret.h"
-#include "EIndicatorMode.h"
 #include "UObject/NoExportTypes.h"
+#include "EIndicatorMode.h"
+#include "FacilityTurret.h"
 #include "AimingFacilityTurret.generated.h"
 
 class UParticleSystemComponent;
@@ -79,7 +79,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_IndicatorMode, meta=(AllowPrivateAccess=true))
     EIndicatorMode IndicatorMode;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FInt32Interval BurstCount;
     
 public:

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "StatusEffectItem.h"
 #include "ETemperatureIntensity.h"
+#include "StatusEffectItem.h"
 #include "HeatSourceStatusEffectItem.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

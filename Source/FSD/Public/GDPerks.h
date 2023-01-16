@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "GDPerks.generated.h"
 
-class UPerkAsset;
 class UFloatPerkAsset;
+class UPerkAsset;
 
 USTRUCT(BlueprintType)
 struct FGDPerks {

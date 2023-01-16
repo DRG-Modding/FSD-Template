@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PerkHUDWidget.h"
 #include "EPerkHUDActivationLocation.h"
+#include "PerkHUDWidget.h"
 #include "PerkHUDActivationWidget.generated.h"
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)

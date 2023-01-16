@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SavableDataAsset.h"
-#include "VanityNode.h"
 #include "UObject/NoExportTypes.h"
+#include "VanityNode.h"
+#include "SavableDataAsset.h"
 #include "TreeOfVanity.generated.h"
 
 class UReward;

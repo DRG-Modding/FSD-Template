@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DebrisActorComponent.h"
 #include "Curves/CurveFloat.h"
+#include "DebrisActorComponent.h"
 #include "InfluencerComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

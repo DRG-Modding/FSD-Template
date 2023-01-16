@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/Object.h"
 #include "BakeSettings.h"
+#include "UObject/Object.h"
 #include "BakeConfig.generated.h"
 
 class UBuilderBase;

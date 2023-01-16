@@ -4,10 +4,10 @@
 #include "Engine/DataAsset.h"
 #include "ProceduralSettings.generated.h"
 
-class UMissionTemplate;
-class URoomDecorationObject;
-class AProceduralSetup;
 class UBiome;
+class UMissionTemplate;
+class AProceduralSetup;
+class URoomDecorationObject;
 
 UCLASS(Blueprintable)
 class UProceduralSettings : public UDataAsset {

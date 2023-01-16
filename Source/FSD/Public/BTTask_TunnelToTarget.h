@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BehaviorTree/BTTaskNode.h"
-#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "BehaviorTree/BehaviorTreeTypes.h"
+#include "BehaviorTree/BTTaskNode.h"
 #include "BTTask_TunnelToTarget.generated.h"
 
 UCLASS(Blueprintable)
@@ -19,7 +19,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BurrowDuration;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FFloatInterval DurationClamp;
     
 public:

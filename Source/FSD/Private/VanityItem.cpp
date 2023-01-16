@@ -1,10 +1,10 @@
 #include "VanityItem.h"
 
 class UObject;
-class UPlayerCharacterID;
 class AFSDPlayerState;
-class UTexture;
+class UPlayerCharacterID;
 class APlayerCharacter;
+class UTexture;
 
 bool UVanityItem::RemoveFromOwned(UObject* WorldContext) {
     return false;

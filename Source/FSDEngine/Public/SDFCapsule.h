@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SDFBaseWithTransform.h"
 #include "SDFCapsuleProperties.h"
+#include "SDFBaseWithTransform.h"
 #include "SDFCapsule.generated.h"
 
 UCLASS(Blueprintable)

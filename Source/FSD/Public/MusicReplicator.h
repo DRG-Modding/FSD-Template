@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "ActiveMusicItem.h"
+#include "GameFramework/Actor.h"
 #include "MusicReplicator.generated.h"
 
 UCLASS(Blueprintable)

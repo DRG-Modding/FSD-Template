@@ -5,9 +5,9 @@
 #include "Projectile.h"
 #include "GooGunProjectile.generated.h"
 
-class AGooGunPuddle;
 class AActor;
 class UPrimitiveComponent;
+class AGooGunPuddle;
 
 UCLASS(Blueprintable)
 class AGooGunProjectile : public AProjectile {

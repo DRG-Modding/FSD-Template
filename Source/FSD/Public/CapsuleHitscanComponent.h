@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HitscanBaseComponent.h"
-#include "OnHitDelegateDelegate.h"
 #include "MultiHitScanHits.h"
+#include "OnHitDelegateDelegate.h"
+#include "HitscanBaseComponent.h"
 #include "CapsuleHitscanComponent.generated.h"
 
-class ADamageEnhancer;
 class AActor;
+class ADamageEnhancer;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCapsuleHitscanComponent : public UHitscanBaseComponent {

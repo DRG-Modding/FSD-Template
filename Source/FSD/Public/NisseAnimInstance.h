@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SimpleMovingEnemyAnimInstance.h"
 #include "ENisseState.h"
+#include "SimpleMovingEnemyAnimInstance.h"
 #include "NisseAnimInstance.generated.h"
 
 UCLASS(Blueprintable, NonTransient)

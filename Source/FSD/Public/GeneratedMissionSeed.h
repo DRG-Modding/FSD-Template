@@ -4,12 +4,12 @@
 #include "GeneratedMissionSeed.generated.h"
 
 class UBiome;
-class UMissionComplexity;
-class UMissionTemplate;
 class UFSDEvent;
 class UMissionDuration;
-class UMissionMutator;
+class UMissionComplexity;
 class UMissionWarning;
+class UMissionTemplate;
+class UMissionMutator;
 
 USTRUCT(BlueprintType)
 struct FGeneratedMissionSeed {

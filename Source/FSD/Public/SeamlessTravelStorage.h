@@ -4,8 +4,8 @@
 #include "SeamlessTravelStorage.generated.h"
 
 class UPlayer;
-class UDifficultySetting;
 class UResourceData;
+class UDifficultySetting;
 class USeamlessTravelEventKey;
 
 UCLASS(Blueprintable)

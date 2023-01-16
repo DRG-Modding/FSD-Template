@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/StaticMeshComponent.h"
 #include "PFCollisionType.h"
+#include "Components/StaticMeshComponent.h"
 #include "PathfinderCollisionComponent.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

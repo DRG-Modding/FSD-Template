@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "PerkUsage.h"
 #include "Components/ActorComponent.h"
 #include "RejoinListener.h"
-#include "PerkUsage.h"
 #include "PerkUsageComponent.generated.h"
 
 class UPerkAsset;

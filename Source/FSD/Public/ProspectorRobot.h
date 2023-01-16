@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EnemyDeepPathfinderCharacter.h"
 #include "EProspectorRobotState.h"
+#include "EnemyDeepPathfinderCharacter.h"
 #include "ProspectorRobot.generated.h"
 
 class AActor;

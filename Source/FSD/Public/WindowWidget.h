@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Blueprint/UserWidget.h"
 #include "InputCoreTypes.h"
+#include "Blueprint/UserWidget.h"
 #include "WindowWidget.generated.h"
 
 class UWindowWidget;

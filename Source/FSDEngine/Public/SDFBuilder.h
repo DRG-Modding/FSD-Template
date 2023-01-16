@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CSGBuilderBase.h"
 #include "EPreviewCellSize.h"
+#include "CSGBuilderBase.h"
 #include "SDFBuilder.generated.h"
 
 class UTerrainMaterialCore;

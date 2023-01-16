@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "DamageSigDelegate.h"
+#include "Components/ActorComponent.h"
 #include "HealthDamageTracker.generated.h"
 
 class UHealthComponentBase;

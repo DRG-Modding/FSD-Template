@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "CharacterShouts.h"
+#include "Engine/DataAsset.h"
 #include "CharacterShoutsData.generated.h"
 
 UCLASS(Blueprintable)

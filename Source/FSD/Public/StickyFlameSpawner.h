@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Components/ActorComponent.h"
-#include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/NetSerialization.h"
+#include "Engine/EngineTypes.h"
 #include "Engine/NetSerialization.h"
+#include "Components/ActorComponent.h"
 #include "StickyFlameSpawner.generated.h"
 
 class AStickyFlame;

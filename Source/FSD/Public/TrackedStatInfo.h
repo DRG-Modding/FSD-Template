@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "TrackedStatInfo.generated.h"
 
+class UDataAsset;
 class UMissionStat;
 class UTexture2D;
-class UDataAsset;
 
 USTRUCT(BlueprintType)
 struct FTrackedStatInfo {

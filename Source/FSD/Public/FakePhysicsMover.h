@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
-#include "FakeMoveState.h"
-#include "FakeMoverState.h"
 #include "UObject/NoExportTypes.h"
+#include "FakeMoverState.h"
+#include "FakeMoveState.h"
+#include "GameFramework/Actor.h"
 #include "FakePhysicsMover.generated.h"
 
-class UFakeMoverSettings;
 class USceneComponent;
+class UFakeMoverSettings;
 
 UCLASS(Blueprintable)
 class AFakePhysicsMover : public AActor {

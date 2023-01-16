@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "ClaimableRewardEntry.h"
 #include "PromotionRewardsRank.h"
+#include "Engine/DataAsset.h"
 #include "PromotionRewardsSettings.generated.h"
 
 UCLASS(Blueprintable)

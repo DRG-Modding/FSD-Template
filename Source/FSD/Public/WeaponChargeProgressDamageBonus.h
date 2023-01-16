@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ItemUpgrade.h"
 #include "UObject/NoExportTypes.h"
+#include "ItemUpgrade.h"
 #include "WeaponChargeProgressDamageBonus.generated.h"
 
 class UDamageClass;
@@ -14,10 +14,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDamageClass* DamageClass;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FFloatInterval ChargeRange;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FFloatInterval DamageBonusRange;
     
 public:

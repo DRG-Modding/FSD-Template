@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Components/ActorComponent.h"
 #include "UObject/NoExportTypes.h"
 #include "SpawnActorDelegateDelegate.h"
+#include "Components/ActorComponent.h"
 #include "SpawnActorWithDebrisPosComponent.generated.h"
 
 class AActor;
-class AProceduralSetup;
 class UDebrisPositioning;
+class AProceduralSetup;
 class UCurveFloat;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

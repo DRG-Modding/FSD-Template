@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "FSDPawn.h"
 #include "EventParticipant.h"
-#include "UObject/NoExportTypes.h"
 #include "GuntowerModule.generated.h"
 
+class AActor;
+class USkeletalMeshComponent;
+class UStaticMeshComponent;
+class UGunTowerHealthComponent;
+class AGuntowerModule;
+class AGuntowerEvent;
+class UAnimSequenceBase;
 class UParticleSystem;
 class USoundCue;
-class AActor;
-class UStaticMeshComponent;
-class USkeletalMeshComponent;
-class UAnimSequenceBase;
-class UGunTowerHealthComponent;
-class AGuntowerEvent;
-class AGuntowerModule;
 
 UCLASS(Blueprintable)
 class AGuntowerModule : public AFSDPawn, public IEventParticipant {

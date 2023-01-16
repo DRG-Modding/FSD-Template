@@ -4,12 +4,12 @@
 #include "Engine/DataAsset.h"
 #include "MissionWarning.generated.h"
 
-class URunningMissionBP;
-class UMutator;
 class UObjective;
+class URunningMissionBP;
+class UMissionStat;
+class UMutator;
 class UMissionMutator;
 class UTexture2D;
-class UMissionStat;
 
 UCLASS(Blueprintable)
 class UMissionWarning : public UDataAsset {

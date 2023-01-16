@@ -1,9 +1,9 @@
 #include "ImpactAudioComponent.h"
 #include "Templates/SubclassOf.h"
 
-class UHealthComponentBase;
 class AActor;
 class USceneComponent;
+class UHealthComponentBase;
 class UImpactAudioComponent;
 
 void UImpactAudioComponent::OnOwnerDeath(UHealthComponentBase* HealthComponent) {

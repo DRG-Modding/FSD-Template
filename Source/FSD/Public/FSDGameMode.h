@@ -1,34 +1,35 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UObject/NoExportTypes.h"
+#include "EPauseReason.h"
+#include "ECriticalItemPass.h"
+#include "CallDonkeyDelegate.h"
+#include "PlayerLoggedInDelegate.h"
+#include "AllReadySignatureDelegate.h"
 #include "MatchStartedSignatureDelegate.h"
 #include "GameFramework/GameMode.h"
-#include "AllReadySignatureDelegate.h"
-#include "PlayerLoggedInDelegate.h"
-#include "CallDonkeyDelegate.h"
-#include "EPauseReason.h"
-#include "UObject/NoExportTypes.h"
 #include "FSDGameMode.generated.h"
 
-class UMissionManager;
-class UEnemySpawnManager;
-class UPheromoneSpawnerComponent;
-class UEnemyWaveManager;
-class UObjectivesManager;
-class UKeepInsideWorld;
-class UEncounterManager;
-class AMiningPod;
-class UCritterManager;
-class AFSDPlayerController;
-class UFormationsManagerComponent;
-class AMolly;
+class AActor;
 class UWidget;
 class ABosco;
-class UEnemyDescriptor;
-class AActor;
-class AFSDGameMode;
+class UCritterManager;
 class UDifficultyManager;
+class UEnemyDescriptor;
+class UEncounterManager;
+class UEnemyWaveManager;
+class UPheromoneSpawnerComponent;
+class UEnemySpawnManager;
+class UFormationsManagerComponent;
+class AFSDGameMode;
 class APlayerController;
+class AFSDPlayerController;
+class UKeepInsideWorld;
+class UMissionManager;
+class AMiningPod;
+class AMolly;
+class UObjectivesManager;
 class APlayerCharacter;
 
 UCLASS(Blueprintable, NonTransient)
@@ -129,7 +130,7 @@ public:
     void StartGame();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void SpawnMissionCriticalItems();
+    void SpawnMissionCriticalItems(const ECriticalItemPass& pass);
     
 protected:
     UFUNCTION(BlueprintCallable)

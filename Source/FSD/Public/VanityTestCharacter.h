@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EVanitySlot.h"
 #include "VanityTestCharacterItem.h"
 #include "GameFramework/Character.h"
-#include "EVanitySlot.h"
 #include "VanityTestCharacter.generated.h"
 
 class USkeletalMesh;

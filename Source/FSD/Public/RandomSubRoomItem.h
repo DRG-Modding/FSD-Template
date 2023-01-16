@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GenerationItem.h"
 #include "GameplayTagContainer.h"
+#include "GenerationItem.h"
 #include "RandomSubRoomItem.generated.h"
 
 class URoomGeneratorGroup;

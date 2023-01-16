@@ -1,12 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FSDPhysicsActor.h"
-#include "AttachChangeSigDelegate.h"
-#include "Throwable.h"
-#include "OnCarriableDepositedDelegate.h"
 #include "UObject/NoExportTypes.h"
+#include "AttachChangeSigDelegate.h"
+#include "OnCarriableDepositedDelegate.h"
+#include "FSDPhysicsActor.h"
+#include "Throwable.h"
 #include "CarriableItem.generated.h"
 
+class AActor;
 class APlayerCharacter;
 
 UCLASS(Abstract, Blueprintable)
@@ -33,7 +34,7 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void Receive_OnDeposited(APlayerCharacter* fromPlayer);
+    void Receive_OnDeposited(APlayerCharacter* fromPlayer, AActor* toActor);
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

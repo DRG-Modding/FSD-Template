@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Blueprint/UserWidget.h"
-#include "VisibilityChangedDelegateDelegate.h"
 #include "Components/SlateWrapperTypes.h"
+#include "VisibilityChangedDelegateDelegate.h"
+#include "Blueprint/UserWidget.h"
 #include "FSDUserWidget.generated.h"
 
+class AItem;
 class AFSDPlayerState;
 class APlayerCharacter;
-class AItem;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UFSDUserWidget : public UUserWidget {

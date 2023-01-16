@@ -8,5 +8,6 @@ FSeasonMissionResult::FSeasonMissionResult() {
     this->TokenGain = 0;
     this->LevelIncreased = false;
     this->EndScreenImage = NULL;
+    this->EndScreenResourceIcon = NULL;
 }
 

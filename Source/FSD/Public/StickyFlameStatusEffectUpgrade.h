@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ItemUpgrade.h"
 #include "UpgradeValues.h"
+#include "ItemUpgrade.h"
 #include "StickyFlameStatusEffectUpgrade.generated.h"
 
 class AActor;
-class UStatusEffect;
 class AFSDPlayerState;
+class UStatusEffect;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UStickyFlameStatusEffectUpgrade : public UItemUpgrade {

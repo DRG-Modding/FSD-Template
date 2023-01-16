@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BaseCritterDescriptor.h"
 #include "IRandRange.h"
+#include "BaseCritterDescriptor.h"
 #include "CritterDescriptor.generated.h"
 
 UCLASS(Blueprintable)

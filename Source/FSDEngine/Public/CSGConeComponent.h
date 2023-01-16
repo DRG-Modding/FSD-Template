@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ConvexMeshWithCachedTreeComponent.h"
 #include "CSGConeProperties.h"
+#include "ConvexMeshWithCachedTreeComponent.h"
 #include "CSGConeComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

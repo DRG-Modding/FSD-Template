@@ -3,11 +3,11 @@
 #include "Components/ActorComponent.h"
 #include "WeaponHitCounterComponent.generated.h"
 
-class UFSDPhysicalMaterial;
 class AActor;
-class UWeaponHitCountEffect;
-class UHealthComponentBase;
 class UPrimitiveComponent;
+class UHealthComponentBase;
+class UFSDPhysicalMaterial;
+class UWeaponHitCountEffect;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UWeaponHitCounterComponent : public UActorComponent {

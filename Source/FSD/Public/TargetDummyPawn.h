@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "GameplayTagContainer.h"
+#include "GameplayTagContainer.h"
 #include "GameFramework/Actor.h"
-#include "GameplayTagAssetInterface.h"
 #include "Targetable.h"
-#include "GameplayTagContainer.h"
-#include "GameplayTagContainer.h"
+#include "GameplayTagAssetInterface.h"
 #include "TargetDummyPawn.generated.h"
 
 UCLASS(Abstract, Blueprintable)

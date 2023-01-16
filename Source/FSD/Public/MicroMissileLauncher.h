@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AmmoDrivenWeapon.h"
 #include "EMicroMissileLauncherFireMode.h"
+#include "AmmoDrivenWeapon.h"
 #include "MicroMissileLauncher.generated.h"
 
-class USoundCue;
 class UAnimMontage;
+class USoundCue;
 
 UCLASS(Abstract, Blueprintable)
 class AMicroMissileLauncher : public AAmmoDrivenWeapon {

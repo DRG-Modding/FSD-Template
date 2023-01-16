@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Components/ActorComponent.h"
 #include "DelegateDelegate.h"
 #include "EndMissionResult.h"
+#include "Components/ActorComponent.h"
 #include "PlayerStatsComponent.generated.h"
 
 class UCappedResource;

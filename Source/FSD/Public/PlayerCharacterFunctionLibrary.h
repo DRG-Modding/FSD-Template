@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "UObject/NoExportTypes.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "PlayerCharacterFunctionLibrary.generated.h"
 
 class UObject;
+class AActor;
 class AFSDPlayerState;
 class APlayerCharacter;
-class AActor;
 
 UCLASS(Blueprintable)
 class UPlayerCharacterFunctionLibrary : public UBlueprintFunctionLibrary {

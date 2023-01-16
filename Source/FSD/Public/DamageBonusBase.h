@@ -5,8 +5,8 @@
 #include "DamageBonusBase.generated.h"
 
 class UDamageCondition;
-class UDamageBonusBase;
 class UDamageComponent;
+class UDamageBonusBase;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UDamageBonusBase : public UDataAsset {

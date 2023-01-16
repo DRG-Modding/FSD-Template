@@ -3,8 +3,8 @@
 #include "Engine/DataAsset.h"
 #include "TerrainMaterialsCollection.generated.h"
 
-class UTerrainMaterial;
 class UTerrainType;
+class UTerrainMaterial;
 
 UCLASS(Blueprintable, MinimalAPI)
 class UTerrainMaterialsCollection : public UDataAsset {

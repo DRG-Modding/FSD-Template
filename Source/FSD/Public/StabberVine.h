@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TentacleBase.h"
 #include "TentacleTarget.h"
+#include "TentacleBase.h"
 #include "StabberVine.generated.h"
 
 UCLASS(Abstract, Blueprintable)

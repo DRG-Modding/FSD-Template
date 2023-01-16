@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "SavableDataAsset.h"
-#include "RefundableInterface.h"
 #include "EUpgradeTiers.h"
 #include "EUpgradeClass.h"
 #include "ItemUpgradeStatText.h"
-#include "UpgradeValues.h"
 #include "CraftingCost.h"
+#include "UpgradeValues.h"
+#include "SavableDataAsset.h"
+#include "RefundableInterface.h"
 #include "ItemUpgrade.generated.h"
 
+class AActor;
+class UResourceData;
+class AFSDPlayerState;
+class UItemUpgradeElement;
 class UItemUpgradeCategory;
 class UItemUpgrade;
-class UResourceData;
-class UItemUpgradeElement;
-class AActor;
-class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UItemUpgrade : public USavableDataAsset, public IRefundableInterface {

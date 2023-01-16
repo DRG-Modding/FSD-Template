@@ -1,7 +1,7 @@
 #include "FSDAdvancedLabel.h"
 
-class UImage;
 class UTextBlock;
+class UImage;
 class UHorizontalBox;
 class UTexture2D;
 

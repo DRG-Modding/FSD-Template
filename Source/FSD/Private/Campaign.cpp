@@ -2,12 +2,12 @@
 #include "Templates/SubclassOf.h"
 
 class UObject;
-class AFSDPlayerController;
+class UCampaignMission;
 class UCampaign;
 class UDifficultySetting;
-class UCampaignMission;
-class UTexture2D;
 class APlayerController;
+class AFSDPlayerController;
+class UTexture2D;
 
 bool UCampaign::IsComplete() const {
     return false;

@@ -4,8 +4,8 @@
 #include "DamageBonusBase.h"
 #include "StatusDamageBonus.generated.h"
 
-class UStatusEffect;
 class UDamageClass;
+class UStatusEffect;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UStatusDamageBonus : public UDamageBonusBase {

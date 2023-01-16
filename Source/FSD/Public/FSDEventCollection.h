@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "FSDEventActivateChangedDelegate.h"
+#include "Engine/DataAsset.h"
 #include "FSDEventCollection.generated.h"
 
 class UFSDEvent;

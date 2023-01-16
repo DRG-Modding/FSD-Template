@@ -1,7 +1,7 @@
 #include "PathfinderVehicle.h"
-#include "HealthComponent.h"
-#include "DeepPathfinderMovement.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "DeepPathfinderMovement.h"
+#include "HealthComponent.h"
 
 APathfinderVehicle::APathfinderVehicle() {
     this->PathfinderMovement = CreateDefaultSubobject<UDeepPathfinderMovement>(TEXT("PathfinderMovement"));

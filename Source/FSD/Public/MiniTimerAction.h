@@ -3,8 +3,8 @@
 #include "TickableActionBase.h"
 #include "MiniTimerAction.generated.h"
 
-class UMiniTimerAction;
 class UObject;
+class UMiniTimerAction;
 
 UCLASS(Blueprintable)
 class UMiniTimerAction : public UTickableActionBase {

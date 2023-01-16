@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "InstantUsable.h"
-#include "UserAddedDelegate.h"
 #include "GameFramework/OnlineReplStructs.h"
+#include "UserAddedDelegate.h"
+#include "InstantUsable.h"
 #include "OncePerPlayerUsableComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/DataAsset.h"
 #include "OptionalUICategory.generated.h"
 
-class UOptionalUICategory;
 class UObject;
+class UOptionalUICategory;
 
 UCLASS(Blueprintable)
 class UOptionalUICategory : public UDataAsset {

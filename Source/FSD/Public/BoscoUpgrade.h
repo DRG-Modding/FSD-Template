@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "StandardItemUpgrade.h"
 #include "EBoscoUpgrades.h"
 #include "UpgradeValues.h"
+#include "StandardItemUpgrade.h"
 #include "BoscoUpgrade.generated.h"
 
 class AActor;

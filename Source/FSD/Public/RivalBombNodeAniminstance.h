@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Animation/AnimInstance.h"
 #include "UObject/NoExportTypes.h"
 #include "ERivalBombNodeState.h"
+#include "Animation/AnimInstance.h"
 #include "RivalBombNodeAniminstance.generated.h"
 
 UCLASS(Blueprintable, NonTransient)

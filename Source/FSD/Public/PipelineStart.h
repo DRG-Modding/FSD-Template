@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "EPipelineBuildState.h"
+#include "GameFramework/Actor.h"
 #include "PipelineStart.generated.h"
 
 class ATrackBuilderSegment;
-class APipelineStart;
-class UTrackBuilderUsable;
-class APipelineFinish;
-class APipelineSegment;
 class AFSDRefinery;
+class UTrackBuilderUsable;
+class APipelineStart;
+class APipelineSegment;
+class APipelineFinish;
 
 UCLASS(Abstract, Blueprintable)
 class APipelineStart : public AActor {
@@ -36,7 +36,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AFSDRefinery* Refinery;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<TWeakObjectPtr<APipelineSegment>> BrokenSegments;
     
 public:

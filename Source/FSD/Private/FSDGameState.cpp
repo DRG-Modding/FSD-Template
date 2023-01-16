@@ -1,24 +1,28 @@
 #include "FSDGameState.h"
 #include "Net/UnrealNetwork.h"
+#include "AttackerManagerComponent.h"
 #include "DifficultyManager.h"
-#include "TeamResourcesComponent.h"
-#include "PlayerProximityTracker.h"
 #include "SpawnEffectsComponent.h"
 #include "GemProximityTracker.h"
-#include "AttackerManagerComponent.h"
-#include "SoundMixManagerComponent.h"
+#include "PlayerProximityTracker.h"
 #include "SeasonReplicatorComponent.h"
 #include "ShowroomManager.h"
+#include "SoundMixManagerComponent.h"
+#include "TeamResourcesComponent.h"
 
-class AGameStats;
 class UObjective;
-class UGeneratedMission;
-class UDifficultySetting;
 class UResourceData;
-class AFSDPlayerState;
-class AProceduralSetup;
+class UDifficultySetting;
+class AFSDGameState;
 class UFSDEvent;
+class AFSDPlayerState;
+class UGeneratedMission;
+class AGameStats;
+class AProceduralSetup;
 class USoundCue;
+
+void AFSDGameState::WaitForInitialGenerationDone(AFSDGameState* GameState, FLatentActionInfo LatentInfo) {
+}
 
 void AFSDGameState::StartCountdown(int32 Duration, const FText& countdownName) {
 }
@@ -115,10 +119,6 @@ TArray<UObjective*> AFSDGameState::GetSecondaryObjectives() const {
     return TArray<UObjective*>();
 }
 
-UObjective* AFSDGameState::GetSecondaryObjective() const {
-    return NULL;
-}
-
 AProceduralSetup* AFSDGameState::GetProceduralSetup() {
     return NULL;
 }
@@ -208,7 +208,7 @@ bool AFSDGameState::AllMissionEndResultsReceived() const {
 void AFSDGameState::All_SpawnScaledEffectAt_Implementation(FScaledEffect Effect, FVector_NetQuantize Location) {
 }
 
-void AFSDGameState::All_SpawnScaledEffectAndCueAt_Implementation(FScaledEffect Effect, USoundCue* Audio, FVector_NetQuantize Location) {
+void AFSDGameState::All_SpawnScaledEffectAndCueAt_Implementation(FScaledEffect Effect, USoundCue* audio, FVector_NetQuantize Location) {
 }
 
 void AFSDGameState::All_ServerQuit_Implementation() {

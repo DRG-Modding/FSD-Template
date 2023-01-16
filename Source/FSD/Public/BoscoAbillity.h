@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "EBoscoAbillityTargetPreference.h"
+#include "Engine/DataAsset.h"
 #include "BoscoAbillity.generated.h"
 
-class UAnimSequenceBase;
-class UDialogDataAsset;
 class UAbilityExitStrategy;
+class UDialogDataAsset;
+class UAnimSequenceBase;
 
 UCLASS(Blueprintable)
 class UBoscoAbillity : public UDataAsset {

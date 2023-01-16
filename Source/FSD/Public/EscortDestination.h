@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
 #include "ShellCrackedSignatureDelegate.h"
+#include "GameFramework/Actor.h"
 #include "EscortDestination.generated.h"
 
-class ADeepCSGWorld;
 class UDamageComponent;
+class ADeepCSGWorld;
 class UTerrainMaterial;
 
 UCLASS(Blueprintable)

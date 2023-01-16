@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AfflictionEffect.h"
 #include "AttachMeshesAfflictionItem.h"
+#include "AfflictionEffect.h"
 #include "AttachMeshesAfflictionEffect.generated.h"
 
 class UParticleSystem;

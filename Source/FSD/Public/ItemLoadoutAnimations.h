@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ItemLoadoutAnimations.generated.h"
 
-class UAnimMontage;
 class UAnimSequence;
+class UAnimMontage;
 
 USTRUCT(BlueprintType)
 struct FItemLoadoutAnimations {

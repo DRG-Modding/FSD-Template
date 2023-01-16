@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FSDAIController.h"
 #include "Perception/AIPerceptionTypes.h"
+#include "FSDAIController.h"
 #include "FacilityTurretController.generated.h"
 
+class AActor;
 class UHealthComponentBase;
 class UAIPerceptionComponent;
-class AActor;
 
 UCLASS(Blueprintable)
 class AFacilityTurretController : public AFSDAIController {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "DamageModifierItem.h"
+#include "Engine/DataAsset.h"
 #include "DamageModifier.generated.h"
 
 class UDamageCondition;

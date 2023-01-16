@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TutorialComponent.h"
 #include "TutorialHint.h"
+#include "TutorialComponent.h"
 #include "TutorialHintComponent.generated.h"
 
 class UObject;

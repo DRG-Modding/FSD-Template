@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "DamageData.h"
 #include "Curves/CurveFloat.h"
-#include "Components/ActorComponent.h"
 #include "WeakpointChannel.h"
+#include "Components/ActorComponent.h"
 #include "WeakpointGlowComponent.generated.h"
 
 class UMeshComponent;
-class UFSDPhysicalMaterial;
 class USkeletalMeshComponent;
 class UHealthComponentBase;
+class UFSDPhysicalMaterial;
 class UCurveFloat;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

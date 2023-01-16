@@ -3,8 +3,8 @@
 #include "UObject/NoExportTypes.h"
 #include "TrackPositionList.generated.h"
 
-class UMaterialInstanceDynamic;
 class UGemTracker;
+class UMaterialInstanceDynamic;
 
 USTRUCT(BlueprintType)
 struct FTrackPositionList {
@@ -16,10 +16,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVector4> Positions;
     
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TArray<TWeakObjectPtr<UGemTracker>> Trackers;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TWeakObjectPtr<UMaterialInstanceDynamic>> DynamicMaterials;
     
     FSD_API FTrackPositionList();

@@ -1,9 +1,9 @@
 #include "EventRewardDispenser.h"
 #include "Net/UnrealNetwork.h"
 
+class AFSDPlayerState;
 class APlayerCharacter;
 class USchematic;
-class AFSDPlayerState;
 
 void AEventRewardDispenser::SetSelectedReward(USchematic* InReward) {
 }

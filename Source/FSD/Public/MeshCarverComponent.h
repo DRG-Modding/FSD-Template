@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/StaticMeshComponent.h"
 #include "ECarveFilterType.h"
 #include "CarveOptionsCellSize.h"
+#include "Components/StaticMeshComponent.h"
 #include "MeshCarverComponent.generated.h"
 
 class UTerrainMaterialBase;

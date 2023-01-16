@@ -1,57 +1,57 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "VanityMasteryResult.h"
-#include "GameFramework/SaveGame.h"
-#include "CharacterSave.h"
-#include "DeepDiveSave.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "ItemUINotifications.h"
-#include "DrinkSave.h"
-#include "ESonyInputSettingsFloats.h"
-#include "ESonyControllerMotionMapping.h"
-#include "UnLockedMissionParameters.h"
-#include "PerkClaimsSave.h"
-#include "ESonyInputSettingsBools.h"
-#include "ESonyControllerLightMode.h"
-#include "UObject/NoExportTypes.h"
-#include "MissionStatSave.h"
-#include "EventRewardSave.h"
-#include "MilestoneSave.h"
-#include "CharacterPerksSave.h"
-#include "AchievementSave.h"
+#include "ResourcesSave.h"
+#include "WatchedTutorial.h"
+#include "ConsoleOptionsInSaveGame.h"
+#include "GDKWinOptionsInSaveGame.h"
+#include "OptionsInSaveGame.h"
+#include "SonyInputSettings.h"
 #include "VanityMasterySave.h"
-#include "SchematicSave.h"
-#include "UObject/NoExportTypes.h"
-#include "FSDEventRewardsSave.h"
-#include "PromotionRewardsSave.h"
-#include "GameDLCSave.h"
+#include "VanityMasteryResult.h"
 #include "SeasonSave.h"
-#include "EItemCategory.h"
-#include "EFSDFaction.h"
+#include "GameDLCSave.h"
+#include "UnLockedMissionParameters.h"
 #include "CampaignSave.h"
+#include "DeepDiveSave.h"
+#include "CharacterSave.h"
 #include "ForgingSave.h"
+#include "DrinkSave.h"
 #include "ItemUpgradeSelection.h"
 #include "UpgradeLoadout.h"
 #include "ItemNotificationInfo.h"
 #include "SkinList.h"
-#include "ResourcesSave.h"
-#include "WatchedTutorial.h"
-#include "GDKWinOptionsInSaveGame.h"
-#include "ConsoleOptionsInSaveGame.h"
-#include "OptionsInSaveGame.h"
-#include "SonyInputSettings.h"
+#include "EventRewardSave.h"
+#include "AchievementSave.h"
+#include "CharacterPerksSave.h"
+#include "SchematicSave.h"
+#include "PromotionRewardsSave.h"
+#include "FSDEventRewardsSave.h"
+#include "ESonyControllerMotionMapping.h"
+#include "ESonyControllerLightMode.h"
+#include "ESonyInputSettingsFloats.h"
+#include "ESonyInputSettingsBools.h"
+#include "EItemCategory.h"
+#include "EFSDFaction.h"
+#include "MissionStatSave.h"
+#include "MilestoneSave.h"
+#include "PerkClaimsSave.h"
+#include "GameFramework/SaveGame.h"
 #include "FSDSaveGame.generated.h"
 
-class APlayerCharacter;
-class UItemSkin;
-class UItemID;
+class UObject;
+class AActor;
 class UVanityItem;
-class UPlayerCharacterID;
 class UResourceData;
 class UFSDGameInstance;
-class AActor;
-class UObject;
 class UFSDSaveGame;
+class UItemSkin;
+class UItemID;
+class UPlayerCharacterID;
+class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class FSD_API UFSDSaveGame : public USaveGame {
@@ -341,19 +341,19 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FGuid, int32> SelectedLoadout;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     uint32 userIdx;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     uint32 CurrLoadoutIdx;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 SaveToDiskCounter;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 BackupSaveIndex;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 ExternalBackupSaveIndex;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

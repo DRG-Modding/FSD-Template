@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GenerationItem.h"
 #include "ECaveEntranceType.h"
+#include "GenerationItem.h"
 #include "CaveEntrance.generated.h"
 
 class UCaveEntranceComponent;

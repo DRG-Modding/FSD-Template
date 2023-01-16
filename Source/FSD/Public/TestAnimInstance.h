@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Animation/AnimInstance.h"
 #include "TestAnimInstanceProxy.h"
+#include "Animation/AnimInstance.h"
 #include "TestAnimInstance.generated.h"
 
 UCLASS(Blueprintable, NonTransient)

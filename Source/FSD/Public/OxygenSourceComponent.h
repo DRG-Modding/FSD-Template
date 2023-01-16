@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "OxygenActiveDelegateDelegate.h"
+#include "Components/ActorComponent.h"
 #include "OxygenSourceComponent.generated.h"
 
 class UNoOxygenMutator;

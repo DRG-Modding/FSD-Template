@@ -4,8 +4,8 @@
 #include "Components/ActorComponent.h"
 #include "RagdollManager.generated.h"
 
-class UMaterialInstanceDynamic;
 class AActor;
+class UMaterialInstanceDynamic;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class URagdollManager : public UActorComponent {

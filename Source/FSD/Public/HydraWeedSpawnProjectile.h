@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Projectile.h"
 #include "UObject/NoExportTypes.h"
+#include "Projectile.h"
 #include "HydraWeedSpawnProjectile.generated.h"
 
 UCLASS(Blueprintable)

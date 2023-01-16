@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 
 class AActor;
-class UStatusEffect;
 class AController;
+class UStatusEffect;
 
 UStatusEffect* UPlayerHealthComponent::SetIronWillStatusEffect(TSubclassOf<UStatusEffect> steClass) {
     return NULL;

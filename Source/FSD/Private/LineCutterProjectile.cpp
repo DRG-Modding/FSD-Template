@@ -1,7 +1,7 @@
 #include "LineCutterProjectile.h"
 #include "Net/UnrealNetwork.h"
-#include "DamageComponent.h"
 #include "Components/SceneComponent.h"
+#include "DamageComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 
 void ALineCutterProjectile::UpdateBeamLocations() {

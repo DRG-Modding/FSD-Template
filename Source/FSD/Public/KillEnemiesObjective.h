@@ -3,9 +3,9 @@
 #include "Objective.h"
 #include "KillEnemiesObjective.generated.h"
 
+class APawn;
 class UDebrisPositioning;
 class UEnemyDescriptor;
-class APawn;
 class UHealthComponentBase;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

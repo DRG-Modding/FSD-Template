@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "InstantUsable.h"
 #include "EInputKeys.h"
+#include "InstantUsable.h"
 #include "ShieldBoostUsable.generated.h"
 
 class APlayerCharacter;

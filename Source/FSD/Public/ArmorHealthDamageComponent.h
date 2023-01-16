@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ArmorDamageInfo.h"
-#include "BaseArmorDamageComponent.h"
 #include "AmorPartDestroyedDelegateDelegate.h"
 #include "ArmorPartDamagedDelegateDelegate.h"
+#include "ArmorDamageInfo.h"
 #include "ArmorHealthItem.h"
+#include "BaseArmorDamageComponent.h"
 #include "ArmorHealthDamageComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "RepairedDelegateDelegate.h"
+#include "Components/ActorComponent.h"
 #include "RepairableComponent.generated.h"
 
 class UGemResourceData;

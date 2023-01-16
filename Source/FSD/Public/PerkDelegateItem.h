@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "PerkIntDelegateDelegate.h"
 #include "PerkHighlightedDelegateDelegate.h"
-#include "UObject/Object.h"
-#include "PerkClaimedDelegateDelegate.h"
 #include "PerkEquipDelegateDelegate.h"
+#include "PerkClaimedDelegateDelegate.h"
+#include "UObject/Object.h"
 #include "PerkDelegateItem.generated.h"
 
 UCLASS(Blueprintable)

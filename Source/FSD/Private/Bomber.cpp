@@ -3,8 +3,8 @@
 #include "Components/AudioComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 
-class UPrimitiveComponent;
 class AActor;
+class UPrimitiveComponent;
 
 void ABomber::StopSpinAndDie() {
 }

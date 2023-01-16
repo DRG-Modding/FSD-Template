@@ -5,9 +5,9 @@
 #include "VictoryPoseSettings.generated.h"
 
 class AActor;
-class UTexture2D;
-class UVictoryPose;
 class UActorComponent;
+class UVictoryPose;
+class UTexture2D;
 
 UCLASS(Blueprintable)
 class UVictoryPoseSettings : public UDataAsset {

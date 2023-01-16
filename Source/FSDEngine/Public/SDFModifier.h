@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SDFSingleChildBase.h"
 #include "SDFModifierProperties.h"
+#include "SDFSingleChildBase.h"
 #include "SDFModifier.generated.h"
 
 UCLASS(Blueprintable)

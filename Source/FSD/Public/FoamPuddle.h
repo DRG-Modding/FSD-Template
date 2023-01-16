@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EVacuumState.h"
-#include "GameFramework/Actor.h"
-#include "Curves/CurveFloat.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
+#include "EVacuumState.h"
+#include "Curves/CurveFloat.h"
+#include "GameFramework/Actor.h"
 #include "FoamPuddle.generated.h"
 
-class UNiagaraComponent;
 class USceneComponent;
-class USoundCue;
 class UPrimitiveComponent;
+class UNiagaraComponent;
+class USoundCue;
 
 UCLASS(Blueprintable)
 class AFoamPuddle : public AActor {
@@ -82,7 +82,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Replicated, Transient, meta=(AllowPrivateAccess=true))
     USceneComponent* VacuumSource;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint16 MaxSoapPiles;
     
 public:

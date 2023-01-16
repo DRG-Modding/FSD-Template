@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "Curves/CurveFloat.h"
+#include "Engine/DataAsset.h"
 #include "SpecialEventSettings.generated.h"
 
+class UDebrisPositioning;
 class AEventRewardFrame;
 class USpecialEvent;
-class UDebrisPositioning;
 
 UCLASS(Blueprintable)
 class USpecialEventSettings : public UDataAsset {

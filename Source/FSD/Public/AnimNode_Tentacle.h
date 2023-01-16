@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FSD_API FAnimNode_Tentacle : public FAnimNode_SkeletalControlBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FBoneReference> BonesToModify;
     
     FAnimNode_Tentacle();

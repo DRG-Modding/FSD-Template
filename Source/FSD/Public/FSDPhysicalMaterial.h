@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "DecalData.h"
-#include "PhysicalMaterials/PhysicalMaterial.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "DecalData.h"
+#include "PhysicalMaterials/PhysicalMaterial.h"
 #include "FSDPhysicalMaterial.generated.h"
 
-class UReactiveTerrain;
-class UPrimitiveComponent;
-class UFSDPhysicalMaterial;
-class USoundCue;
-class UFXSystemAsset;
-class UMaterialInstance;
-class UFXSystemComponent;
 class UObject;
+class UPrimitiveComponent;
+class UFXSystemComponent;
+class UFXSystemAsset;
+class UFSDPhysicalMaterial;
+class UReactiveTerrain;
+class UMaterialInstance;
+class USoundCue;
 
 UCLASS(Blueprintable, CollapseCategories)
 class UFSDPhysicalMaterial : public UPhysicalMaterial {
@@ -33,7 +33,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool RepulsePlayer;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FFloatInterval RepulsePlayerVelocity;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

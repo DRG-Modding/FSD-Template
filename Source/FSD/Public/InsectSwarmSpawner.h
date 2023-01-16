@@ -4,9 +4,9 @@
 #include "EnemyPawn.h"
 #include "InsectSwarmSpawner.generated.h"
 
+class AActor;
 class UStaticMeshComponent;
 class AInsectSwarmEnemy;
-class AActor;
 
 UCLASS(Abstract, Blueprintable)
 class AInsectSwarmSpawner : public AEnemyPawn {
@@ -25,7 +25,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float respawnDelay;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AInsectSwarmEnemy> SwarmInstance;
     
 public:

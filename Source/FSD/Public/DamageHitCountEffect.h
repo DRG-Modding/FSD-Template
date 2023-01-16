@@ -4,10 +4,10 @@
 #include "WeaponHitCountEffect.h"
 #include "DamageHitCountEffect.generated.h"
 
-class UStatusEffect;
 class UDamageClass;
-class USoundCue;
+class UStatusEffect;
 class UParticleSystem;
+class USoundCue;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UDamageHitCountEffect : public UWeaponHitCountEffect {

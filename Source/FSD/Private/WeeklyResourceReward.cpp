@@ -1,7 +1,7 @@
 #include "WeeklyResourceReward.h"
 
-class AFSDPlayerController;
 class UResourceData;
+class AFSDPlayerController;
 
 TMap<UResourceData*, float> UWeeklyResourceReward::GetRewards(AFSDPlayerController* Player) const {
     return TMap<UResourceData*, float>();

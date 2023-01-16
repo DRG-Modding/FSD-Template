@@ -1,7 +1,7 @@
 #include "DynamicIcon.h"
 
-class UMaterialInterface;
 class UObject;
+class UMaterialInterface;
 class UMaterialInstanceDynamic;
 
 UMaterialInterface* UDynamicIcon::GetIconMaterial() const {

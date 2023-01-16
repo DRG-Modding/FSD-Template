@@ -9,6 +9,9 @@ void ADisplayCase::PlayReactionAnimation() {
 void ADisplayCase::OnRep_ContentIndex() {
 }
 
+void ADisplayCase::InitializeCase() {
+}
+
 bool ADisplayCase::GetCurrentContent(FDisplayContent& currentContent) const {
     return false;
 }
@@ -26,7 +29,7 @@ ADisplayCase::ADisplayCase() {
     this->Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
     this->ContentAttachPoint = NULL;
     this->ContentMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ContentMesh"));
-    this->RotaionSpeed = 0.00f;
+    this->RotationSpeed = 15.00f;
     this->BeerMugSpawnChancePercent = 0.00f;
     this->BarrelSpawnChancePercent = 0.10f;
     this->TimeMultiplier = 0.50f;

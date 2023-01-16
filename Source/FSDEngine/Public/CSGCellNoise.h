@@ -2,10 +2,10 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "MeshCellNoiseProperties.h"
-#include "CSGBase.h"
 #include "BinaryTerrainMaterialCombiner.h"
 #include "DeepCSGNode.h"
 #include "DeepCSGFloatTree.h"
+#include "CSGBase.h"
 #include "CSGCellNoise.generated.h"
 
 UCLASS(Blueprintable)

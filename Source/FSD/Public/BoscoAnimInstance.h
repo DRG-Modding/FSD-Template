@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Animation/AnimInstance.h"
 #include "EDroneAIState.h"
 #include "BoscoAnimNotifyDelegateDelegate.h"
+#include "Animation/AnimInstance.h"
 #include "BoscoAnimInstance.generated.h"
 
 UCLASS(Blueprintable, NonTransient)

@@ -6,8 +6,8 @@
 
 class AActor;
 class UCollectableResourceCreator;
-class UDebrisPositioning;
 class UDebrisBase;
+class UDebrisPositioning;
 
 UCLASS(Blueprintable)
 class UCollectableResourceData : public UResourceData {

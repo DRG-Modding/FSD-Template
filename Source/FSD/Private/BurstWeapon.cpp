@@ -1,8 +1,8 @@
 #include "BurstWeapon.h"
 #include "DamageComponent.h"
 
-class UHealthComponentBase;
 class UPrimitiveComponent;
+class UHealthComponentBase;
 class UFSDPhysicalMaterial;
 
 void ABurstWeapon::OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial) {

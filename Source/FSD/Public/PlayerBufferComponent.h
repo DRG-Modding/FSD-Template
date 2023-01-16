@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Components/ActorComponent.h"
 #include "BoolDelegateDelegate.h"
+#include "Components/ActorComponent.h"
 #include "PlayerBufferComponent.generated.h"
 
-class UParticleSystem;
 class UMeshComponent;
-class UStatusEffect;
+class UHealthComponentBase;
 class UParticleSystemComponent;
 class APlayerCharacter;
-class UHealthComponentBase;
+class UStatusEffect;
+class UParticleSystem;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPlayerBufferComponent : public UActorComponent {

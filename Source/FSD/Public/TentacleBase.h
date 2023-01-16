@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "EnemyPawn.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "TentacleBase.generated.h"
 
-class AStabberVineRoot;
 class USceneComponent;
+class AStabberVineRoot;
 class USplineComponent;
 
 UCLASS(Abstract, Blueprintable)

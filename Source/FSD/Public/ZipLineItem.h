@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AmmoDrivenWeapon.h"
 #include "GameplayTagContainer.h"
+#include "AmmoDrivenWeapon.h"
 #include "ZipLineItem.generated.h"
 
 class UDialogDataAsset;

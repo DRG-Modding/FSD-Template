@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Components/ActorComponent.h"
-#include "Upgradable.h"
-#include "AbillityChargeUsedSigDelegate.h"
 #include "ABillityChargeProgressDelegate.h"
+#include "AbillityChargeUsedSigDelegate.h"
 #include "AbilityDataUpdatedDelegate.h"
 #include "BoscoAbilityTarget.h"
+#include "Components/ActorComponent.h"
+#include "Upgradable.h"
 #include "BoscoAbillityComponent.generated.h"
 
-class AProjectileBase;
-class UItemUpgrade;
-class ADroneStream;
-class ABosco;
 class UBoscoProjectileAbillity;
+class ABosco;
+class AProjectileBase;
+class ADroneStream;
+class UItemUpgrade;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UBoscoAbillityComponent : public UActorComponent, public IUpgradable {
@@ -41,7 +41,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ADroneStream> StreamClass;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<ABosco> AbillityOwner;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

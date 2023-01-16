@@ -19,7 +19,9 @@ AAnimatedItem::AAnimatedItem() {
     this->FPMesh = CreateDefaultSubobject<UFirstPersonSkeletalMeshComponent>(TEXT("FPMesh"));
     this->TPMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("TPMesh"));
     this->FP_EquipAnimation = NULL;
+    this->FP_IdleAnimation = NULL;
     this->TP_EquipAnimation = NULL;
+    this->TP_IdleAnimation = NULL;
     this->EquipDuration = 0.25f;
     this->CharacterAnimationSet = NULL;
 }

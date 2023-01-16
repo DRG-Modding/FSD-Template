@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
-#include "CellNoise.h"
 #include "DebrisCellNoiseParameters.h"
+#include "CellNoise.h"
+#include "Engine/DataAsset.h"
 #include "CSGTriangleMapper.generated.h"
 
-class UTerrainMaterial;
 class UTerrainType;
+class UTerrainMaterial;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UCSGTriangleMapper : public UDataAsset {

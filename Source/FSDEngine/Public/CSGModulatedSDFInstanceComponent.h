@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "BinaryTerrainMaterialCombiner.h"
 #include "CSGSDFModulatedInstanceProperties.h"
 #include "CSGBaseComponent.h"
-#include "BinaryTerrainMaterialCombiner.h"
 #include "CSGModulatedSDFInstanceComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

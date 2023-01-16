@@ -3,8 +3,8 @@
 #include "UnlockReward.h"
 #include "VictoryPoseReward.generated.h"
 
-class UVictoryPose;
 class UPlayerCharacterID;
+class UVictoryPose;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UVictoryPoseReward : public UUnlockReward {

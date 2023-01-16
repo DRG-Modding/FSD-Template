@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 #include "SingleUsableComponent.h"
 
-class APlayerCharacter;
 class APipelineStart;
+class APlayerCharacter;
 
 void AFSDRefinery::SetRefineryState(ERefineryState InState) {
 }

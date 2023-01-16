@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "ArmorShatterDelegateDelegate.h"
 #include "ArmorDamageEffects.h"
+#include "Components/ActorComponent.h"
 #include "BaseArmorDamageComponent.generated.h"
 
-class UFSDPhysicalMaterial;
 class USkeletalMeshComponent;
+class UFSDPhysicalMaterial;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UBaseArmorDamageComponent : public UActorComponent {

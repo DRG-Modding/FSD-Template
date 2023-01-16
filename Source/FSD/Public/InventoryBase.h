@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "EquippedActorData.h"
+#include "Components/ActorComponent.h"
 #include "InventoryBase.generated.h"
 
 class AActor;
@@ -20,7 +20,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_EquippedActor, meta=(AllowPrivateAccess=true))
     FEquippedActorData EquippedActor;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* LastEquippedActors[2];
     
 public:

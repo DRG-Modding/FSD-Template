@@ -3,8 +3,8 @@
 #include "ResourceBasedObjective.h"
 #include "GatheItemsObjective.generated.h"
 
-class UCollectableResourceData;
 class UCappedResource;
+class UCollectableResourceData;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UGatheItemsObjective : public UResourceBasedObjective {

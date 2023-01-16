@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "InstantUsable.h"
 #include "HackingUsableState.h"
+#include "InstantUsable.h"
 #include "HackingUsableComponent.generated.h"
 
 class UHackingToolWidget;
-class APlayerCharacter;
 class AHackingToolItem;
+class APlayerCharacter;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UHackingUsableComponent : public UInstantUsable {

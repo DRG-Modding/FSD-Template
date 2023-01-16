@@ -4,9 +4,9 @@
 #include "FSDProjectileMovementComponent.h"
 
 class UObject;
-class AProjectileBase;
 class USceneComponent;
 class APawn;
+class AProjectileBase;
 class AProjectile;
 class UFSDPhysicalMaterial;
 

@@ -1,6 +1,16 @@
 #include "CrossbowProjectileBase.h"
 #include "Net/UnrealNetwork.h"
 
+class UDamageComponent;
+
+
+void ACrossbowProjectileBase::SetSimpleDamageComponent(UDamageComponent* Component) {
+}
+
+
+void ACrossbowProjectileBase::SetMainDamageComponent(UDamageComponent* Component) {
+}
+
 void ACrossbowProjectileBase::Server_HandleImpact_Implementation(const FHitResult& HitResult, const FVector& RelativeLocation) {
 }
 
@@ -49,7 +59,8 @@ ACrossbowProjectileBase::ACrossbowProjectileBase() {
     this->Penetrates = false;
     this->ImpactSound = NULL;
     this->IsASpecialProjectile = false;
-    this->DamageComponent = NULL;
+    this->MainDamageComponent = NULL;
+    this->SimpleDamageComponent = NULL;
     this->ProjectileMesh = NULL;
     this->KillTrailAfterTime = 3.00f;
     this->OnlyTrailShown = false;

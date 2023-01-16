@@ -3,8 +3,8 @@
 #include "TreasureRewarder.h"
 #include "VictoryPoseRewarder.generated.h"
 
-class UVictoryPose;
 class UPlayerCharacterID;
+class UVictoryPose;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UVictoryPoseRewarder : public UTreasureRewarder {

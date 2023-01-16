@@ -3,9 +3,9 @@
 #include "AmmoDrivenWeapon.h"
 #include "DualWieldWeapon.generated.h"
 
-class UFirstPersonSkeletalMeshComponent;
-class USkeletalMeshComponent;
 class UFXSystemAsset;
+class USkeletalMeshComponent;
+class UFirstPersonSkeletalMeshComponent;
 class UAnimMontage;
 
 UCLASS(Abstract, Blueprintable)

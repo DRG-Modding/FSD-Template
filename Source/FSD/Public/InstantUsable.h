@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UsableComponent.h"
-#include "UsedBySignatureDelegate.h"
 #include "UsableChangedSignatureDelegate.h"
+#include "UsedBySignatureDelegate.h"
+#include "UsableComponent.h"
 #include "InstantUsable.generated.h"
 
 class USoundCue;
@@ -23,6 +23,15 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* AudioCompletedUse;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool UseDelayedAudio;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float AudioDelay;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool RefreshDelayOnNewUse;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Usable, meta=(AllowPrivateAccess=true))
     bool Usable;

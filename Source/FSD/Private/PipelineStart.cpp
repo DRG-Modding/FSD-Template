@@ -2,9 +2,9 @@
 #include "Net/UnrealNetwork.h"
 #include "TrackBuilderUsable.h"
 
-class APipelineFinish;
 class ATrackBuilderSegment;
 class APipelineSegment;
+class APipelineFinish;
 
 
 void APipelineStart::PipelineCompleted(APipelineFinish* InPipelineFinish) {

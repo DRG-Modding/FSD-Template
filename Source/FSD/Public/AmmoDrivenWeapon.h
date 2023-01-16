@@ -1,33 +1,33 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AnimatedItem.h"
-#include "RejoinListener.h"
-#include "WeaponFireOwner.h"
-#include "Upgradable.h"
-#include "AmmoDrivenGenericEventDelegate.h"
 #include "UObject/NoExportTypes.h"
-#include "UpgradableGear.h"
+#include "UObject/NoExportTypes.h"
 #include "DelegateDelegate.h"
-#include "AmountChangedSignatureDelegate.h"
-#include "TracerData.h"
-#include "ItemAnimationItem.h"
+#include "EAmmoWeaponState.h"
 #include "Curves/CurveFloat.h"
 #include "RecoilSettings.h"
-#include "EAmmoWeaponState.h"
-#include "UObject/NoExportTypes.h"
+#include "ItemAnimationItem.h"
+#include "TracerData.h"
+#include "AmountChangedSignatureDelegate.h"
+#include "AmmoDrivenGenericEventDelegate.h"
+#include "AnimatedItem.h"
+#include "RejoinListener.h"
+#include "UpgradableGear.h"
+#include "Upgradable.h"
+#include "WeaponFireOwner.h"
 #include "AmmoDrivenWeapon.generated.h"
 
-class UWeaponFireComponent;
-class UAmmoDriveWeaponAggregator;
-class UAnimMontage;
 class UFXSystemAsset;
-class ULightComponent;
-class USoundCue;
-class UDialogDataAsset;
-class UForceFeedbackEffect;
 class UAudioComponent;
+class UAmmoDriveWeaponAggregator;
+class UWeaponFireComponent;
+class UDialogDataAsset;
+class ULightComponent;
 class UItemUpgrade;
 class APlayerCharacter;
+class UAnimMontage;
+class UForceFeedbackEffect;
+class USoundCue;
 
 UCLASS(Abstract, Blueprintable)
 class AAmmoDrivenWeapon : public AAnimatedItem, public IWeaponFireOwner, public IUpgradable, public IUpgradableGear, public IRejoinListener {
@@ -67,7 +67,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimMontage* TP_FireAnimation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     UAnimMontage* FP_ReloadAnimation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -76,7 +76,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FItemAnimationItem> GunslingAnimations;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     UAnimMontage* TP_ReloadAnimation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -85,7 +85,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimMontage* WPN_FireLastBullet;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     UAnimMontage* WPN_Reload;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -136,7 +136,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UForceFeedbackEffect* FireForceFeedbackEffect;
     
-    UPROPERTY(EditAnywhere, Export, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UAudioComponent> FireSoundInstance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RoomFeature.h"
 #include "UObject/NoExportTypes.h"
+#include "RoomFeature.h"
 #include "FloodFillProceduralPillar.generated.h"
 
 class UPillarSettings;

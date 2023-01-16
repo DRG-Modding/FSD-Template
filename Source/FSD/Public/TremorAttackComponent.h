@@ -4,10 +4,10 @@
 #include "SpecialDamageAttackComponent.h"
 #include "TremorAttackComponent.generated.h"
 
-class UBoxComponent;
-class UParticleSystemComponent;
-class UPrimitiveComponent;
 class AActor;
+class UPrimitiveComponent;
+class UParticleSystemComponent;
+class UBoxComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UTremorAttackComponent : public USpecialDamageAttackComponent {

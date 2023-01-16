@@ -1,7 +1,7 @@
 #include "TreasureContainer.h"
 #include "Net/UnrealNetwork.h"
-#include "OncePerPlayerUsableComponent.h"
 #include "Components/SceneComponent.h"
+#include "OncePerPlayerUsableComponent.h"
 
 class APlayerCharacter;
 

@@ -3,11 +3,11 @@
 #include "Templates/SubclassOf.h"
 #include "Components/ChildActorComponent.h"
 
+class AActor;
 class ARessuplyPod;
 class UDebrisPositioning;
-class AActor;
-class AProceduralSetup;
 class AEventStarterButton;
+class AProceduralSetup;
 
 void AGameEvent::TrySetupGameEvent() {
 }

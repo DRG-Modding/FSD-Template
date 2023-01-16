@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "TetherConnectionChanged_DeletageDelegate.h"
-#include "TetherPowerChanged_DelegateDelegate.h"
-#include "TeherMessage_DelegateDelegate.h"
-#include "TetherRangeChangedDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "ETetherConnectionMode.h"
 #include "ETetherMessageDirection.h"
+#include "TetherConnectionChanged_DeletageDelegate.h"
+#include "TetherRangeChangedDelegate.h"
+#include "TeherMessage_DelegateDelegate.h"
+#include "TetherPowerChanged_DelegateDelegate.h"
 #include "TetherMessageSettings.h"
-#include "UObject/NoExportTypes.h"
+#include "Components/ActorComponent.h"
 #include "TetherComponent.generated.h"
 
 class UMeshComponent;
@@ -52,7 +52,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ConnectionDistance;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     ETetherConnectionMode ConnectionMode;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

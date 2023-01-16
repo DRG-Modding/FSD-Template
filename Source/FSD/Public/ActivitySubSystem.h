@@ -3,8 +3,8 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "ActivitySubSystem.generated.h"
 
-class APlayerState;
 class UGameActivityType;
+class APlayerState;
 
 UCLASS(Blueprintable)
 class UActivitySubSystem : public UGameInstanceSubsystem {

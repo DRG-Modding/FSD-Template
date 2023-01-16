@@ -3,13 +3,13 @@
 #include "DroneBase.h"
 #include "StateDrivenBosco.generated.h"
 
+class UAudioComponent;
+class UDroneReviveState;
+class UDroneMiningState;
+class UDroneCombatState;
 class UDroneFollowState;
 class UPointLightComponent;
-class UDroneReviveState;
-class UAudioComponent;
-class UDroneMiningState;
 class UParticleSystemComponent;
-class UDroneCombatState;
 
 UCLASS(Blueprintable)
 class AStateDrivenBosco : public ADroneBase {

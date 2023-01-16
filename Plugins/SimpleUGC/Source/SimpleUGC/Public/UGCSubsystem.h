@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Subsystems/EngineSubsystem.h"
-#include "EModioRequestType.h"
-#include "EUGCPackageError.h"
 #include "Engine/LatentActionManager.h"
+#include "EUGCPackageError.h"
+#include "EModioRequestType.h"
+#include "Subsystems/EngineSubsystem.h"
 #include "UGCSubsystem.generated.h"
 
+class UObject;
 class UUGCSettings;
 class UUGCRegistry;
-class UUGCLatentActionManager;
 class UUGCPackage;
-class UObject;
+class UUGCLatentActionManager;
 
 UCLASS(Blueprintable)
 class SIMPLEUGC_API UUGCSubsystem : public UEngineSubsystem {
@@ -95,15 +95,18 @@ private:
     TArray<UUGCPackage*> ModsPendingUninstall;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TArray<UUGCPackage*> ModsPendingUpdate;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<EModioRequestType> ModioRequests;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<int64> ModioSubscribeRequestsIds;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<int64> ModioSubscribeDependecyRequestsIds;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<int64> ModioAddDependecyRequestsIds;
     
 public:
@@ -158,6 +161,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<EModioRequestType> GetQueuedModioRequests();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    TArray<FString> GetNamesOfModsPendingUpdate();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<FString> GetNamesOfModsPendingUninstall();

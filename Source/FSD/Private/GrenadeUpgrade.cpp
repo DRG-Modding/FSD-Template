@@ -1,8 +1,8 @@
 #include "GrenadeUpgrade.h"
 #include "Templates/SubclassOf.h"
 
-class AFSDPlayerState;
 class AGrenade;
+class AFSDPlayerState;
 
 FUpgradeValues UGrenadeUpgrade::GetUpgradedValue(AFSDPlayerState* Player, TSubclassOf<AGrenade> flareClass, EGrenadeUpgradeType NewUpgradeType) {
     return FUpgradeValues{};

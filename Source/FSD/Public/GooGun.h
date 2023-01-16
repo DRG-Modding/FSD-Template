@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AmmoDrivenWeapon.h"
 #include "EGooGunFireMode.h"
+#include "AmmoDrivenWeapon.h"
 #include "GooGun.generated.h"
 
-class USoundCue;
-class UAnimMontage;
-class UFXSystemAsset;
 class UFXSystemComponent;
+class UFXSystemAsset;
+class UAnimMontage;
+class USoundCue;
 
 UCLASS(Abstract, Blueprintable)
 class AGooGun : public AAmmoDrivenWeapon {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RoomFeature.h"
 #include "UObject/NoExportTypes.h"
+#include "RoomFeature.h"
 #include "ResourceFeature.generated.h"
 
 class UResourceData;

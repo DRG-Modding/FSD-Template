@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "DecalData.h"
+#include "Engine/DataAsset.h"
 #include "TerrainMaterialSettings.generated.h"
 
 class UTerrainMaterial;

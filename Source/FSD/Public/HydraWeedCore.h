@@ -3,8 +3,8 @@
 #include "EnemyPawn.h"
 #include "HydraWeedCore.generated.h"
 
-class AHydraWeedShooter;
 class AHydraWeedHealer;
+class AHydraWeedShooter;
 
 UCLASS(Blueprintable)
 class AHydraWeedCore : public AEnemyPawn {

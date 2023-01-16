@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Fonts/SlateFontInfo.h"
-#include "Blueprint/UserWidget.h"
-#include "ActionIconMapping.h"
-#include "EFSDInputSource.h"
 #include "UObject/NoExportTypes.h"
+#include "EFSDInputSource.h"
+#include "Fonts/SlateFontInfo.h"
+#include "ActionIconMapping.h"
+#include "Blueprint/UserWidget.h"
 #include "FSDAdvancedLabel.generated.h"
 
-class UImage;
 class UTextBlock;
-class UTexture2D;
+class UImage;
 class UHorizontalBox;
+class UTexture2D;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UFSDAdvancedLabel : public UUserWidget {

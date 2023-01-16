@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "GDResources.generated.h"
 
-class UGemResourceData;
 class UResourceData;
+class UGemResourceData;
 
 USTRUCT(BlueprintType)
 struct FGDResources {

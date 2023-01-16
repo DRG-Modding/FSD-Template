@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "TestTerrainMaterialItem.generated.h"
 
-class UTerrainMaterial;
 class UFXSystemAsset;
+class UTerrainMaterial;
 class USoundCue;
 
 USTRUCT(BlueprintType)

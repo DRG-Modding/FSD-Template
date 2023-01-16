@@ -4,8 +4,8 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "SimpleHealthComponent.h"
 
-class UAnimMontage;
 class UHealthComponentBase;
+class UAnimMontage;
 
 void AWormPod::SpawnWorms() {
 }

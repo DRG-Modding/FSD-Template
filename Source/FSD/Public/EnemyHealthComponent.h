@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HealthComponent.h"
 #include "UObject/NoExportTypes.h"
 #include "EEnemyHealthScaling.h"
+#include "HealthComponent.h"
 #include "EnemyHealthComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -36,8 +36,8 @@ protected:
     
 public:
     UEnemyHealthComponent();
-    /*UFUNCTION(BlueprintCallable, BlueprintPure)
-    float GetMaxHealth() const;*/
+    //UFUNCTION(BlueprintCallable, BlueprintPure)
+    float GetMaxHealth() const;
     
 };
 

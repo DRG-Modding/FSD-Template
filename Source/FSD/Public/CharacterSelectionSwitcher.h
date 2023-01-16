@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "EVanitySlot.h"
+#include "GameFramework/Actor.h"
 #include "CharacterSelectionSwitcher.generated.h"
 
-class UVictoryPose;
 class APlayerCharacter;
+class UVictoryPose;
 
 UCLASS(Blueprintable)
 class ACharacterSelectionSwitcher : public AActor {
@@ -24,7 +24,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
     AActor* GetViewerActor() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
     APlayerCharacter* GetActiveCharacter() const;
     
 };

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "MineHitEventDelegate.h"
 #include "Engine/NetSerialization.h"
+#include "MineHitEventDelegate.h"
+#include "Components/ActorComponent.h"
 #include "DroneMiningToolBase.generated.h"
 
 class UTerrainMaterial;

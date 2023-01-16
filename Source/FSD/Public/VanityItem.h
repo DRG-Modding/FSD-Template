@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SavablePrimaryDataAsset.h"
-#include "CraftingCost.h"
-#include "Craftable.h"
-#include "RefundableInterface.h"
-#include "Aquisitionable.h"
 #include "EVanitySlot.h"
+#include "CraftingCost.h"
 #include "VanityEventSource.h"
+#include "SavablePrimaryDataAsset.h"
+#include "Craftable.h"
+#include "Aquisitionable.h"
+#include "RefundableInterface.h"
 #include "VanityItem.generated.h"
 
+class UObject;
 class UItemAquisitionBase;
+class AFSDPlayerState;
+class UPlayerCharacterID;
+class APlayerCharacter;
 class UIconGenerationCameraKey;
 class UVanityEventSourceDataAsset;
-class UPlayerCharacterID;
-class UObject;
-class AFSDPlayerState;
 class UTexture;
-class APlayerCharacter;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UVanityItem : public USavablePrimaryDataAsset, public ICraftable, public IRefundableInterface, public IAquisitionable {

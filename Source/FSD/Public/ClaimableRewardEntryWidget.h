@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Blueprint/UserWidget.h"
 #include "ClaimableRewardEntry.h"
+#include "Blueprint/UserWidget.h"
 #include "ClaimableRewardEntryWidget.generated.h"
 
 class UClaimableRewardEntryWidget;

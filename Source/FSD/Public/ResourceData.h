@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
 #include "SaveGameIDInterface.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "ResourceData.generated.h"
 
-class UTexture2D;
-class UMissionStat;
-class AResourceChunk;
 class UObject;
+class AFSDPhysicsActor;
+class UMissionStat;
+class UTexture2D;
 
 UCLASS(Blueprintable)
 class FSD_API UResourceData : public UDataAsset, public ISaveGameIDInterface {
@@ -61,7 +61,7 @@ public:
     bool ShowSeparatelyInEndScreen;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSoftClassPtr<AResourceChunk> Spawnable;
+    TSoftClassPtr<AFSDPhysicsActor> Spawnable;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -75,9 +75,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SeasonXPMultiplier;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UTexture2D* SeasonMultiEndScreenImage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid SavegameID;

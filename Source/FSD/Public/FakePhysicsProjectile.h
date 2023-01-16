@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ProjectileBase.h"
-#include "FakeMoveState.h"
-#include "FakeMoverState.h"
 #include "Engine/EngineTypes.h"
+#include "FakeMoverState.h"
+#include "FakeMoveState.h"
+#include "ProjectileBase.h"
 #include "FakePhysicsProjectile.generated.h"
 
-class UFakeMoverSettings;
-class UPrimitiveComponent;
 class AActor;
+class UPrimitiveComponent;
+class UFakeMoverSettings;
 
 UCLASS(Blueprintable)
 class AFakePhysicsProjectile : public AProjectileBase {

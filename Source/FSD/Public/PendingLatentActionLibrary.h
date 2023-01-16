@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "Engine/LatentActionManager.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "PendingLatentActionLibrary.generated.h"
 
 class UObject;

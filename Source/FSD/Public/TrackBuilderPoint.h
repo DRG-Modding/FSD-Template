@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETrackBuildPlacementState.h"
 #include "Engine/NetSerialization.h"
+#include "ETrackBuildPlacementState.h"
 #include "TrackBuilderPoint.generated.h"
 
 class UTrackBuilderConnectPoint;
@@ -22,7 +22,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bPointValid;
     
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UTrackBuilderConnectPoint> ConnectPoint;
     
     FSD_API FTrackBuilderPoint();

@@ -3,9 +3,9 @@
 #include "Components/ActorComponent.h"
 #include "DifficultyManager.generated.h"
 
-class AFSDGameMode;
-class AFSDGameState;
 class UDifficultySetting;
+class AFSDGameState;
+class AFSDGameMode;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UDifficultyManager : public UActorComponent {

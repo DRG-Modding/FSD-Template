@@ -3,10 +3,10 @@
 #include "IconGenerationBase.h"
 #include "IconGenerationCharacter.generated.h"
 
-class UMaterialInterface;
 class USkeletalMeshComponent;
 class UBeardColorVanityItem;
 class UIconSceneCaptureComponent;
+class UMaterialInterface;
 
 UCLASS(Blueprintable)
 class AIconGenerationCharacter : public AIconGenerationBase {

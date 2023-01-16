@@ -1,31 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PauseMovementElapsedDelegate.h"
-#include "PathBeginDelegate.h"
-#include "GameFramework/PawnMovementComponent.h"
-#include "AsyncPathRequestsInterface.h"
-#include "PathStateChangedDelegateDelegate.h"
-#include "DeepPathFinderPreference.h"
-#include "DeepPathFinderType.h"
-#include "DeepPathFinderSize.h"
-#include "Engine/EngineTypes.h"
-#include "PathFinishedDelegate.h"
-#include "RefreshDestinationDelegate.h"
-#include "DeepRepPath.h"
-#include "HandleRotationOptions.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/LatentActionManager.h"
 #include "UObject/NoExportTypes.h"
-#include "EDeepMovementMode.h"
-#include "FakeMoverState.h"
-#include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "EDeepMovementState.h"
+#include "EDeepMovementMode.h"
 #include "EOffsetFrom.h"
+#include "PathStateChangedDelegateDelegate.h"
+#include "RefreshDestinationDelegate.h"
+#include "PathFinishedDelegate.h"
+#include "PathBeginDelegate.h"
+#include "PauseMovementElapsedDelegate.h"
+#include "DeepPathFinderPreference.h"
+#include "DeepPathFinderSize.h"
+#include "DeepPathFinderType.h"
+#include "DeepRepPath.h"
+#include "HandleRotationOptions.h"
+#include "FakeMoverState.h"
+#include "GameFramework/PawnMovementComponent.h"
+#include "AsyncPathRequestsInterface.h"
 #include "DeepPathfinderMovement.generated.h"
 
+class AActor;
 class ADeepCSGWorld;
 class UFakeMoverSettings;
-class AActor;
 class UPawnStatsComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -65,7 +65,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AngleSpeedFilterFactor;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 AIAvoidanceWeight;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -114,10 +114,10 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ADeepCSGWorld* CSGWorld;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_PathMovedDist)
+    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_PathMovedDist, meta=(AllowPrivateAccess=true))
     uint32 PathMovedDist;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     uint32 LocalPathMovedDist;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_Path, meta=(AllowPrivateAccess=true))

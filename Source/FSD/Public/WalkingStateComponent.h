@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CharacterStateComponent.h"
 #include "EInputKeys.h"
+#include "CharacterStateComponent.h"
 #include "WalkingStateComponent.generated.h"
 
-class UTrackBuilderMovement;
-class USoundBase;
 class UAudioComponent;
 class APlayerCharacter;
+class UTrackBuilderMovement;
+class USoundBase;
 
 UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UWalkingStateComponent : public UCharacterStateComponent {

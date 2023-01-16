@@ -1,31 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "AmmoDrivenWeapon.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "Engine/NetSerialization.h"
+#include "MultiHitscanHit.h"
+#include "MultiHitScanHits.h"
 #include "LensDeactivedDelegateDelegate.h"
 #include "LensActivedDelegateDelegate.h"
 #include "MicrowaveLense.h"
-#include "MultiHitscanHit.h"
-#include "Engine/NetSerialization.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "MultiHitScanHits.h"
+#include "AmmoDrivenWeapon.h"
 #include "MicrowaveWeapon.generated.h"
 
-class UFirstPersonNiagaraComponent;
-class UEnemyTemperatureComponent;
-class UParticleSystem;
-class UCapsuleHitscanComponent;
-class UDamageComponent;
-class UNiagaraComponent;
-class UStatusEffect;
-class ABoil;
-class UNiagaraSystem;
-class UFSDPhysicalMaterial;
-class USoundCue;
 class AActor;
 class UPrimitiveComponent;
+class UNiagaraComponent;
+class UNiagaraSystem;
+class UCapsuleHitscanComponent;
+class UDamageComponent;
+class UEnemyTemperatureComponent;
 class UHealthComponentBase;
+class UFirstPersonNiagaraComponent;
+class UFSDPhysicalMaterial;
+class ABoil;
+class UStatusEffect;
+class UParticleSystem;
+class USoundCue;
 
 UCLASS(Blueprintable)
 class FSD_API AMicrowaveWeapon : public AAmmoDrivenWeapon {
@@ -167,7 +167,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ColdTempAmpMultiplier;
     
-    UPROPERTY(EditAnywhere, Export, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UEnemyTemperatureComponent> RadiantSuperheaterTarget;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

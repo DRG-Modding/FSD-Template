@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "FloatPerkComponent.h"
 #include "DamageData.h"
+#include "FloatPerkComponent.h"
 #include "ThornsPerkComponent.generated.h"
 
 class UDamageClass;

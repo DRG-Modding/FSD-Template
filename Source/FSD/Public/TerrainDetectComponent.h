@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/SceneComponent.h"
-#include "TerrainDetectInterface.h"
 #include "UObject/NoExportTypes.h"
 #include "PointRemovedEventDelegate.h"
+#include "Components/SceneComponent.h"
+#include "TerrainDetectInterface.h"
 #include "TerrainDetectComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

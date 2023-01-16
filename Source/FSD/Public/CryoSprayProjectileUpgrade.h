@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ItemUpgrade.h"
 #include "UpgradeValues.h"
+#include "ItemUpgrade.h"
 #include "CryoSprayProjectileUpgrade.generated.h"
 
+class AItem;
 class AProjectile;
 class AFSDPlayerState;
-class AItem;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UCryoSprayProjectileUpgrade : public UItemUpgrade {

@@ -3,11 +3,11 @@
 #include "GameEvent.h"
 #include "AmberEvent.generated.h"
 
-class UDamageComponent;
 class UAmberEventEnemyPool;
-class AFSDPawn;
-class UHealthComponentBase;
 class APawn;
+class AFSDPawn;
+class UDamageComponent;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class AAmberEvent : public AGameEvent {
@@ -23,7 +23,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AFSDPawn*> spawnedEnemies;
     
-    UPROPERTY(EditAnywhere, Replicated, Transient)
+    UPROPERTY(EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UAmberEventEnemyPool> CurrentPool;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

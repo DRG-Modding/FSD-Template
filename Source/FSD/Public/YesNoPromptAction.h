@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintAsyncActionBase.h"
-#include "YesNoPromptWidget.h"
 #include "YesNoPromptSettings.h"
+#include "YesNoPromptWidget.h"
+#include "Kismet/BlueprintAsyncActionBase.h"
 #include "YesNoPromptAction.generated.h"
 
-class UYesNoPromptWidget;
-class UYesNoPromptAction;
 class UObject;
 class UResourceData;
+class UYesNoPromptAction;
+class UYesNoPromptWidget;
 
 UCLASS(Blueprintable)
 class UYesNoPromptAction : public UBlueprintAsyncActionBase {
@@ -26,7 +26,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UYesNoPromptWidget::FOnYesNoClickedDelegate YesNoDelegate;
     
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UYesNoPromptWidget> ActivePrompt;
     
 public:

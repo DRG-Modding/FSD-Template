@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/NetSerialization.h"
-#include "EnemyPawn.h"
-#include "AttackingPointInterface.h"
-#include "ECaveLeechState.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/NetSerialization.h"
+#include "ECaveLeechState.h"
+#include "AttackingPointInterface.h"
+#include "EnemyPawn.h"
 #include "CaveLeech.generated.h"
 
+class AActor;
+class USceneComponent;
 class USkeletalMeshComponent;
+class UHealthComponentBase;
+class UHealthComponent;
 class UGrabberComponent;
 class UPawnAffliction;
-class AActor;
-class UHealthComponent;
-class USceneComponent;
-class UHealthComponentBase;
 
 UCLASS(Abstract, Blueprintable)
 class ACaveLeech : public AEnemyPawn, public IAttackingPointInterface {
@@ -89,7 +89,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     FVector_NetQuantize TentacleVelocity;
     
-    UPROPERTY(EditAnywhere, Replicated, Transient)
+    UPROPERTY(EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AActor> Target;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))

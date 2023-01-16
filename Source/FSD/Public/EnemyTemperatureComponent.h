@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TemperatureComponent.h"
 #include "DamageData.h"
+#include "TemperatureComponent.h"
 #include "EnemyTemperatureComponent.generated.h"
 
 class UDamageTag;
-class UHealthComponent;
 class UEnemyDetonationSetting;
+class UHealthComponent;
 class UPawnStatsComponent;
 class UStatusEffectsComponent;
 

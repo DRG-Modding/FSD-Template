@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "UObject/NoExportTypes.h"
 #include "Curves/CurveFloat.h"
 #include "Components/SplineMeshComponent.h"
-#include "UObject/NoExportTypes.h"
+#include "GameFramework/Actor.h"
 #include "SplinePlant.generated.h"
 
 class USceneComponent;
 class UAudioComponent;
-class USplineComponent;
+class USplineMeshComponent;
 class USoundCue;
 class UStaticMesh;
-class USplineMeshComponent;
+class USplineComponent;
 
 UCLASS(Blueprintable)
 class FSD_API ASplinePlant : public AActor {

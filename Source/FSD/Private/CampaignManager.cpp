@@ -1,12 +1,12 @@
 #include "CampaignManager.h"
 #include "Templates/SubclassOf.h"
 
-class AFSDPlayerController;
-class UCampaign;
 class UObject;
+class UCampaign;
+class UDifficultySetting;
+class AFSDPlayerController;
 class UFSDSaveGame;
 class UGeneratedMission;
-class UDifficultySetting;
 
 void UCampaignManager::StartNewCampaign(TSubclassOf<UCampaign> campaignClass, UFSDSaveGame* SaveGame) {
 }

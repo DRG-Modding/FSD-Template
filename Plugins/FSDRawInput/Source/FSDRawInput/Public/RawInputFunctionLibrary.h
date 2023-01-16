@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "RegisteredDeviceInfo.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "RawInputFunctionLibrary.generated.h"
 
 UCLASS(Blueprintable)

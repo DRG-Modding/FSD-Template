@@ -1,7 +1,7 @@
 #include "FrozenPawnImpactComponent.h"
 
-class UPrimitiveComponent;
 class AActor;
+class UPrimitiveComponent;
 
 void UFrozenPawnImpactComponent::TriggerFrozenRagdoll() {
 }

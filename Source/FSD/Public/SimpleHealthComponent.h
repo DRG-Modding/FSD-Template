@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HealthComponentBase.h"
 #include "UObject/NoExportTypes.h"
+#include "HealthComponentBase.h"
 #include "SimpleHealthComponent.generated.h"
 
+class UDamageTag;
 class UEnemyComponent;
 class UPawnStat;
-class UDamageTag;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USimpleHealthComponent : public UHealthComponentBase {
@@ -31,7 +31,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector HealthBarOffsetWorld;
     
-    UPROPERTY(EditAnywhere, Export, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UEnemyComponent> EnemyComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

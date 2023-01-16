@@ -1,7 +1,7 @@
 #include "UGCSubsystem.h"
 
-class UUGCPackage;
 class UObject;
+class UUGCPackage;
 
 void UUGCSubsystem::SetPackagesAsRecentlyInstalled(TArray<UUGCPackage*> RecentMods) {
 }
@@ -56,6 +56,10 @@ bool UUGCSubsystem::HasOutstadingRequestOfType(EModioRequestType requestType) {
 
 TArray<EModioRequestType> UUGCSubsystem::GetQueuedModioRequests() {
     return TArray<EModioRequestType>();
+}
+
+TArray<FString> UUGCSubsystem::GetNamesOfModsPendingUpdate() {
+    return TArray<FString>();
 }
 
 TArray<FString> UUGCSubsystem::GetNamesOfModsPendingUninstall() {

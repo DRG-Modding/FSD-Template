@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ChallengeInfo.h"
 #include "SeasonEvent.h"
+#include "ChallengeInfo.h"
 #include "SeasonMissionResult.generated.h"
 
 class UTexture2D;
@@ -36,6 +36,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture2D* EndScreenImage;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UTexture2D* EndScreenResourceIcon;
     
     FSD_API FSeasonMissionResult();
 };

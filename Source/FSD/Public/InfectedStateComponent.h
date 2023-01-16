@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CharacterStateComponent.h"
 #include "RandRange.h"
+#include "CharacterStateComponent.h"
 #include "InfectedStateComponent.generated.h"
 
 class UFSDPhysicalMaterial;
+class UPawnAffliction;
 class USoundBase;
 class UAnimMontage;
-class UPawnAffliction;
 
 UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UInfectedStateComponent : public UCharacterStateComponent {

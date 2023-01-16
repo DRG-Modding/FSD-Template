@@ -3,19 +3,36 @@
 #include "Templates/SubclassOf.h"
 
 class AActor;
-class UStatusEffect;
-class UProjectileLauncherBaseComponent;
-class UAnimMontage;
+class UStaticMeshComponent;
 class AProjectileBase;
+class UProjectileLauncherBaseComponent;
+class UStatusEffect;
 
 
 void ACrossbow::StartAmmoSwitch() {
 }
 
+
+void ACrossbow::SetAnimatedTPMeshComponent(UStaticMeshComponent* Component) {
+}
+
+
+void ACrossbow::SetAnimatedFPMeshComponent(UStaticMeshComponent* Component) {
+}
+
 void ACrossbow::Server_UpdateRetrievableArrows_Implementation(const int32& defaultAmmo, const int32& specialAmmo) {
 }
 
-void ACrossbow::Server_CallSwitchAmmoType_Implementation(UProjectileLauncherBaseComponent* projectileLauncher) {
+void ACrossbow::Server_SwitchAmmoType_Implementation(UProjectileLauncherBaseComponent* projectileLauncher, const ECrossbowSwitchState State) {
+}
+
+void ACrossbow::Server_SetSwitchIsQueued_Implementation(bool IsQueued) {
+}
+
+void ACrossbow::OnRep_SwitchIsQueued() {
+}
+
+void ACrossbow::OnRep_IsDefaultArrowEquipped() {
 }
 
 void ACrossbow::OnProjectileFired(AProjectileBase* Projectile) {
@@ -45,15 +62,14 @@ void ACrossbow::Client_CallAddSpecialAmmo_Implementation(const int32& Amount) {
 void ACrossbow::Client_CallAddDefaultAmmo_Implementation(const int32& Amount) {
 }
 
-void ACrossbow::All_SetTPReloadAnim_Implementation(UAnimMontage* TPMontage, UAnimMontage* WeaponMontage) {
-}
-
 void ACrossbow::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
     DOREPLIFETIME(ACrossbow, SpecialArrow);
     DOREPLIFETIME(ACrossbow, SpecialStatusEffectBonusTimeScale);
     DOREPLIFETIME(ACrossbow, IsDefaultArrowEquipped);
+    DOREPLIFETIME(ACrossbow, SwitchIsQueued);
+    DOREPLIFETIME(ACrossbow, SwitchState);
 }
 
 ACrossbow::ACrossbow() {
@@ -68,6 +84,11 @@ ACrossbow::ACrossbow() {
     this->CanTrifork = false;
     this->IsDefaultArrowEquipped = true;
     this->RecallProgress = 0.00f;
+    this->AnimatedFPMesh = NULL;
+    this->AnimatedTPMesh = NULL;
+    this->SwitchIsQueued = false;
+    this->SwitchState = ECrossbowSwitchState::Normal;
+    this->OutOfAmmoSwapDelay = 0.50f;
     this->AnimatedArrowSpawnable = NULL;
     this->ExtraShotAngleDifference = 10.00f;
     this->HoveringRecallable = NULL;

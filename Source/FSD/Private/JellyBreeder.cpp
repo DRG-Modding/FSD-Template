@@ -1,8 +1,8 @@
 #include "JellyBreeder.h"
 #include "Net/UnrealNetwork.h"
 
-class AProjectile;
 class AActor;
+class AProjectile;
 
 void AJellyBreeder::SpawnEnemies(AProjectile* Egg, int32 AmountToSpawn) {
 }

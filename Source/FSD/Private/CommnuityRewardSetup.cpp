@@ -1,7 +1,7 @@
 #include "CommnuityRewardSetup.h"
 
-class UResourceData;
 class UObject;
+class UResourceData;
 
 TMap<UResourceData*, int32> UCommnuityRewardSetup::GetResourcesTierOnlyReward(int32 Tier) {
     return TMap<UResourceData*, int32>();

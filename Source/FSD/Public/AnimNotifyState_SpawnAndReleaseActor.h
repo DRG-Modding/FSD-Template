@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
-#include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "UObject/NoExportTypes.h"
+#include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "AnimNotifyState_SpawnAndReleaseActor.generated.h"
 
 class AActor;

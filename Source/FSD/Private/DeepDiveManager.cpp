@@ -1,11 +1,11 @@
 #include "DeepDiveManager.h"
 #include "FSDEventsHandler.h"
 
+class UBiome;
 class UDeepDive;
 class UGeneratedMission;
-class UBiome;
 
-void UDeepDiveManager::StartDeepDive(UDeepDive* DeepDive) {
+void UDeepDiveManager::SetDeepDive(UDeepDive* DeepDive) {
 }
 
 void UDeepDiveManager::ReInitialize() {
@@ -43,10 +43,6 @@ int32 UDeepDiveManager::FindDeepDiveSeed(UDeepDive* DeepDive) const {
 }
 
 bool UDeepDiveManager::CompleteCurrentSingleMission() {
-    return false;
-}
-
-bool UDeepDiveManager::AreAllSelectedClassesQualified() const {
     return false;
 }
 

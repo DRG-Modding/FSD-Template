@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
-#include "Skinnable.h"
 #include "IconGeneratable.h"
+#include "Skinnable.h"
 #include "ItemPreviewActor.generated.h"
 
-class UIconGenerationCameraKey;
 class UItemSkin;
 class USkinEffect;
+class UIconGenerationCameraKey;
 
 UCLASS(Blueprintable)
 class AItemPreviewActor : public AActor, public ISkinnable, public IIconGeneratable {

@@ -3,9 +3,9 @@
 #include "AmmoDrivenWeapon.h"
 #include "LineCutter.generated.h"
 
+class AProjectileBase;
 class UItemUpgrade;
 class ALineCutterProjectile;
-class AProjectileBase;
 
 UCLASS(Blueprintable)
 class ALineCutter : public AAmmoDrivenWeapon {
@@ -24,7 +24,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UItemUpgrade*> upgrades;
     
-    UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_LastProjectile)
+    UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_LastProjectile, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<ALineCutterProjectile> LastProjectile;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "SavableDataAsset.h"
-#include "RandInterval.h"
 #include "IRandRange.h"
 #include "VeteranComposition.h"
+#include "RandInterval.h"
+#include "SavableDataAsset.h"
 #include "DifficultySetting.generated.h"
 
-class UCampaign;
 class UObject;
+class UCampaign;
 class UMissionStat;
 
 UCLASS(Blueprintable)

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DamageAttackComponent.h"
 #include "MeleeAttackDelegateDelegate.h"
+#include "DamageAttackComponent.h"
 #include "MeleeAttackComponent.generated.h"
 
 class UAttackEffect;

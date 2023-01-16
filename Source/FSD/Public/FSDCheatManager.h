@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "GameFramework/CheatManager.h"
 #include "CheatEventDelegate.h"
+#include "GameFramework/CheatManager.h"
 #include "FSDCheatManager.generated.h"
 
-class APawn;
-class UResourceData;
-class UPlayerCharacterID;
+class UObject;
 class AActor;
+class APawn;
+class AFSDAIController;
+class UResourceData;
 class UBaseCritterDescriptor;
 class UEnemyDescriptor;
-class AFSDAIController;
-class UObject;
 class UItemID;
+class UPlayerCharacterID;
 class APlayerCharacter;
 
 UCLASS(Blueprintable)
@@ -623,6 +623,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Exec, meta=(WorldContext="WorldContextObject"))
     static void C_FadeFromBlack(UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_Facility_SpawnDataCore();
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_Facility_DisableShields();

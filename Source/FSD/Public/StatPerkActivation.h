@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FloatPerkActivation.h"
 #include "EPawnStatType.h"
+#include "FloatPerkActivation.h"
 #include "StatPerkActivation.generated.h"
 
 class UPawnStat;

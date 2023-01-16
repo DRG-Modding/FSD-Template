@@ -2,6 +2,10 @@
 
 class UFSDEvent;
 
+bool UFSDEventManager::IsEventTypeActive(const EHolidayType FSDEvent) const {
+    return false;
+}
+
 bool UFSDEventManager::IsEventActive(const UFSDEvent* FSDEvent) const {
     return false;
 }

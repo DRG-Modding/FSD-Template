@@ -128,23 +128,6 @@
 !/Plugins/**/Binaries/Win64/*
 *.pdb
 
-# Ignore content folders
-!/Content/Blueprints/Gimmick/ex/g_ex_SavePoint.uasset
-!/Content/EditorCmn/TemplateMap0.umap
-!/Content/EditorCmn/TemplateMap0Thumbnail.uasset
-!/Content/EditorCmn/TemplateMap1.umap
-!/Content/EditorCmn/TemplateMap1Thumbnail.uasset
-!/Content/EditorCmn/TempMap_kh02.umap
-!/Content/EditorCmn/TempMap_kh02_Thumb.uasset
-!/Content/Maps/Common/Light_Rig/SKY_201610071320_zSunny_HDR.uasset
-!/Content/Maps/Common/Materials/M_Generic.uasset
-!/Content/Maps/Common/Sky/SM_SkySphere.uasset
-!/Content/Maps/Common/Textures/T_Placeholder_Grey.uasset
-!/Content/Maps/Common/Textures/T_Placeholder_GreyLinear.uasset
-!/Content/Maps/Example_Map.umap
-!/Content/Maps/TresGameTitle.umap
-!/Content/Mods/ExampleLogicMod/ModActor.uasset
-!/Content/LogicMods.uasset
 
 # Ignore intermediate folders
 Intermediate/

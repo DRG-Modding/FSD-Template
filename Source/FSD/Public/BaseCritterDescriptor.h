@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "DeepPathFinderType.h"
+#include "Engine/DataAsset.h"
 #include "BaseCritterDescriptor.generated.h"
 
 class AFSDPawn;

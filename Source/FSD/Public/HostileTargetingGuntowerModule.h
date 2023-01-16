@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HostileGuntowerModule.h"
 #include "Perception/AIPerceptionTypes.h"
+#include "HostileGuntowerModule.h"
 #include "HostileTargetingGuntowerModule.generated.h"
 
 class AActor;

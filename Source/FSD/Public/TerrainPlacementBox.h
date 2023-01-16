@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETerrainPlacementBoxType.h"
 #include "UObject/NoExportTypes.h"
+#include "ETerrainPlacementBoxType.h"
 #include "TerrainPlacementBox.generated.h"
 
 USTRUCT(BlueprintType)

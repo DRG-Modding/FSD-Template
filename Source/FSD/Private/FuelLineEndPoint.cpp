@@ -1,10 +1,10 @@
 #include "FuelLineEndPoint.h"
 #include "Net/UnrealNetwork.h"
-#include "FuelLineConnectPoint.h"
 #include "Components/StaticMeshComponent.h"
+#include "FuelLineConnectPoint.h"
 
-class UTrackBuilderConnectPoint;
 class ATrackBuilderSegment;
+class UTrackBuilderConnectPoint;
 
 void AFuelLineEndPoint::SetOpenForConnection(bool Open) {
 }

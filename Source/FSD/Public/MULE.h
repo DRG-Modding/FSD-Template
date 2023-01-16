@@ -3,8 +3,8 @@
 #include "DeepPathfinderCharacter.h"
 #include "MULE.generated.h"
 
-class UHealthComponent;
 class USimpleObjectInfoComponent;
+class UHealthComponent;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API AMULE : public ADeepPathfinderCharacter {

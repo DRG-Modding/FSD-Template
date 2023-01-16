@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Subsystems/GameInstanceSubsystem.h"
-#include "NewMessageSigDelegate.h"
 #include "FSDChatMessage.h"
+#include "NewMessageSigDelegate.h"
+#include "Subsystems/GameInstanceSubsystem.h"
 #include "MessagingSubSystem.generated.h"
 
 UCLASS(Blueprintable)

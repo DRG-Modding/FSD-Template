@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DeveloperSettings.h"
-#include "EFSR2HistoryFormat.h"
 #include "EFSR2QualityMode.h"
+#include "EFSR2HistoryFormat.h"
+#include "Engine/DeveloperSettings.h"
 #include "FSR2Settings.generated.h"
 
 UCLASS(Blueprintable, DefaultConfig, config = Engine)
@@ -27,10 +27,10 @@ public:
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UseNativeVulkan;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     EFSR2QualityMode QualityMode;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     EFSR2HistoryFormat HistoryFormat;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))

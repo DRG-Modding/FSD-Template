@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EliteEnemyBan.h"
 #include "EEnemyHealthScaling.h"
+#include "EliteEnemyBan.h"
 #include "EliteEnemyEntry.generated.h"
 
-class UStatusEffect;
 class UActorComponent;
+class UStatusEffect;
 
 USTRUCT(BlueprintType)
 struct FEliteEnemyEntry {

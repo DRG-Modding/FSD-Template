@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "PlagueCleanupItem.h"
-#include "WeaponFireOwner.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "PlagueCleanerResourceChangedDelegate.h"
-#include "UObject/NoExportTypes.h"
+#include "PlagueCleanupItem.h"
+#include "WeaponFireOwner.h"
 #include "PlagueSoaperItem.generated.h"
 
-class UProjectileLauncherComponent;
 class AProjectileBase;
 class APlayerCharacter;
+class UProjectileLauncherComponent;
 
 UCLASS(Blueprintable)
 class APlagueSoaperItem : public APlagueCleanupItem, public IWeaponFireOwner {

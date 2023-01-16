@@ -32,7 +32,10 @@ UFSDEvent::UFSDEvent() {
     this->EventType = EHolidayType::None;
     this->bHasClaimableRewards = false;
     this->bFreeBeerEvent = false;
+    this->bFreeBeerConfettiVisible = true;
     this->SpecialEventBeer = NULL;
+    this->SeasonEndScreenImage = NULL;
+    this->UseDifferentBarLightColor = false;
     this->bIsEventDebrisInDeepDives = true;
 }
 

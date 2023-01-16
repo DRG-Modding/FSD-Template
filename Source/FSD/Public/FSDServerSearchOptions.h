@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESteamServerJoinStatus.h"
 #include "EGameType.h"
+#include "ESteamServerJoinStatus.h"
 #include "ESteamSearchRegion.h"
 #include "FSDServerSearchOptions.generated.h"
 

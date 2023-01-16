@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CharacterStateComponent.h"
 #include "RandRange.h"
+#include "CharacterStateComponent.h"
 #include "FrozenStateComponent.generated.h"
 
 class UFSDPhysicalMaterial;

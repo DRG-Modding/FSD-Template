@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RejoinListener.h"
-#include "ThrowableItem.h"
-#include "UpgradableGear.h"
 #include "CoolDownProgressStyle.h"
+#include "ThrowableItem.h"
+#include "RejoinListener.h"
+#include "UpgradableGear.h"
 #include "ShieldGeneratorItem.generated.h"
 
 class UCapacityHoldingItemAggregator;

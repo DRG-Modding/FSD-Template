@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
+#include "Components/ActorComponent.h"
 #include "ExplosionBaseComponent.generated.h"
 
 class UPrimitiveComponent;

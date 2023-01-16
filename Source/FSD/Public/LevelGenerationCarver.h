@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MatrixWithExactSync.h"
-#include "CarveOptionsCellSize.h"
 #include "ECarveFilterType.h"
+#include "CarveOptionsCellSize.h"
+#include "MatrixWithExactSync.h"
 #include "LevelGenerationCarver.generated.h"
 
 class USTLMeshCarver;
-class UStaticMeshCarver;
-class UStaticMesh;
 class UTerrainMaterial;
+class UStaticMesh;
+class UStaticMeshCarver;
 
 USTRUCT(BlueprintType)
 struct FLevelGenerationCarver {

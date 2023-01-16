@@ -1,8 +1,8 @@
 #include "DetPackItem.h"
 #include "Net/UnrealNetwork.h"
-#include "FirstPersonSkeletalMeshComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "CapacityHoldingItemAggregator.h"
+#include "FirstPersonSkeletalMeshComponent.h"
 
 void ADetPackItem::Simulate_ThrowGrenade_Implementation() {
 }

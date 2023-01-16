@@ -1,9 +1,9 @@
 #include "TerrainMaterial.h"
 
+class UObject;
+class UFXSystemComponent;
 class UTerrainMaterial;
 class UMaterialInstance;
-class UFXSystemComponent;
-class UObject;
 
 void UTerrainMaterial::TestMaterialEffects(UTerrainMaterial* Material, TArray<FTestTerrainMaterialItem>& Items) {
 }

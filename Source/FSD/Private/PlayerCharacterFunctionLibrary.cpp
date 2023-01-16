@@ -1,9 +1,9 @@
 #include "PlayerCharacterFunctionLibrary.h"
 
 class UObject;
+class AActor;
 class AFSDPlayerState;
 class APlayerCharacter;
-class AActor;
 
 bool UPlayerCharacterFunctionLibrary::SetPlayerVoiceMuted(UObject* WorldContextObject, AFSDPlayerState* PlayerState, bool Mute, bool TrySystemWide, int32 localUserNum) {
     return false;

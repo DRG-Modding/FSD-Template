@@ -12,6 +12,12 @@ class UFirstPersonSkeletalMeshComponent : public USkeletalMeshComponent {
 public:
     UFirstPersonSkeletalMeshComponent();
     UFUNCTION(BlueprintCallable)
+    static void SetFirstPersonFOVEnabled(bool bEnabled);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    static bool GetSetFirstPersonFOVEnabled();
+    
+    UFUNCTION(BlueprintCallable)
     static FVector CalcFirstPersonFOVPositionCorrection(APlayerController* PlayerController, const FVector& origPos);
     
 };

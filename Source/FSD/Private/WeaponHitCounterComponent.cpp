@@ -1,9 +1,9 @@
 #include "WeaponHitCounterComponent.h"
 
-class UHealthComponentBase;
-class UPrimitiveComponent;
-class UFSDPhysicalMaterial;
 class AActor;
+class UPrimitiveComponent;
+class UHealthComponentBase;
+class UFSDPhysicalMaterial;
 
 void UWeaponHitCounterComponent::Server_OnReloading_Implementation() {
 }

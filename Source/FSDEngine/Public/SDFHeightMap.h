@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SDFBase.h"
 #include "SDFHeightMaproperties.h"
+#include "SDFBase.h"
 #include "SDFHeightMap.generated.h"
 
 class UHeightMapWithMinMaxQuadTree;

@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "ScaledMeshAfflictionTypeItem.h"
+#include "Engine/DataAsset.h"
 #include "AfflictionSettings.generated.h"
 
-class USoundCue;
 class UFXSystemAsset;
 class UPawnAffliction;
+class USoundCue;
 
 UCLASS(Blueprintable)
 class UAfflictionSettings : public UDataAsset {

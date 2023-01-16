@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "CharacterViewInfo.generated.h"
 
-class APlayerCharacter;
 class UVanityItem;
+class APlayerCharacter;
 class UVictoryPose;
 
 USTRUCT(BlueprintType)

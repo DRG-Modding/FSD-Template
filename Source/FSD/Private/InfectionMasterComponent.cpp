@@ -9,7 +9,7 @@ void UInfectionMasterComponent::OnRep_RandomSeed() {
 void UInfectionMasterComponent::OnDeath(UHealthComponentBase* enemy) {
 }
 
-void UInfectionMasterComponent::DealWeakpointDamage() {
+void UInfectionMasterComponent::DealWeakpointDamage(const FName& SocketName) {
 }
 
 void UInfectionMasterComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
@@ -20,6 +20,8 @@ void UInfectionMasterComponent::GetLifetimeReplicatedProps(TArray<FLifetimePrope
 }
 
 UInfectionMasterComponent::UInfectionMasterComponent() {
+    this->WeakpointPopSTE = NULL;
+    this->WeakpointPopSTERange = 300.00f;
     this->InfectionPoints = 3;
     this->ExtraInfectionPointsWithMorePlayers = false;
     this->SpikeScale = 1.00f;

@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FSDPhysicsActor.h"
 #include "UObject/NoExportTypes.h"
+#include "FSDPhysicsActor.h"
 #include "ResourceChunk.generated.h"
 
-class USimpleObjectInfoComponent;
-class USoundCue;
 class UResourceData;
+class USimpleObjectInfoComponent;
 class APlayerCharacter;
+class USoundCue;
 
 UCLASS(Blueprintable)
 class FSD_API AResourceChunk : public AFSDPhysicsActor {
@@ -38,7 +38,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<APlayerCharacter*> OverlappingPlayers;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_CollectedBy)
+    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_CollectedBy, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<APlayerCharacter> CollectedBy;
     
 public:

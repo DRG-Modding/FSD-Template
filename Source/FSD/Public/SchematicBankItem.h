@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "SchematicBankItem.generated.h"
 
-class USchematicRarity;
 class USchematicPricingTier;
 class USchematic;
+class USchematicRarity;
 
 USTRUCT(BlueprintType)
 struct FSchematicBankItem {

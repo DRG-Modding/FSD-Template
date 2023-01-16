@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "Curves/CurveFloat.h"
+#include "GameFramework/Actor.h"
 #include "ImpactIndicator.generated.h"
 
 class USceneComponent;

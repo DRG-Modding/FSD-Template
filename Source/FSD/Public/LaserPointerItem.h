@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "AnimatedItem.h"
-#include "LaserPointerData.h"
-#include "MarkerPlacedDelegateDelegate.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "ELaserPointerMarkerType.h"
-#include "UObject/NoExportTypes.h"
+#include "MarkerPlacedDelegateDelegate.h"
+#include "LaserPointerData.h"
+#include "AnimatedItem.h"
 #include "LaserPointerItem.generated.h"
 
-class USceneComponent;
-class UDialogDataAsset;
-class UTerrainMaterial;
-class ALaserPointerMarker;
-class ALaserPointerWaypoint;
-class UPrimitiveComponent;
-class UObjectInfoComponent;
-class AFSDGameState;
 class UObject;
 class AActor;
+class USceneComponent;
+class UPrimitiveComponent;
+class UDialogDataAsset;
+class UObjectInfoComponent;
+class AFSDGameState;
+class ALaserPointerWaypoint;
+class ALaserPointerMarker;
+class UTerrainMaterial;
 class UTexture2D;
 
 UCLASS(Abstract, Blueprintable)
@@ -37,7 +37,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ALaserPointerMarker> SecondaryMarkerType;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<ALaserPointerMarker> ActiveMarker;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -67,10 +67,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FHitResult LookAtHit;
     
-    UPROPERTY(EditAnywhere, Export, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UObjectInfoComponent> LookAtInfo;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UTerrainMaterial> LookAtTerrainMaterial;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

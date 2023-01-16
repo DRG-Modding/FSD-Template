@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "TaggedActor.h"
-#include "Targetable.h"
 #include "WormSpawnDelegateDelegate.h"
 #include "Curves/CurveFloat.h"
+#include "Targetable.h"
+#include "TaggedActor.h"
 #include "WormPod.generated.h"
 
+class AActor;
 class USceneComponent;
+class UFXSystemAsset;
 class USkeletalMeshComponent;
+class UEnemyDescriptor;
+class UHealthComponentBase;
 class USimpleHealthComponent;
 class UAnimMontage;
-class AActor;
-class UEnemyDescriptor;
-class UFXSystemAsset;
 class USoundCue;
-class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class AWormPod : public ATaggedActor, public ITargetable {

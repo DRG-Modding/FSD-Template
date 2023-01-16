@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SimpleObjectInfoComponent.h"
 #include "MixerEnemyNameChangeDelegate.h"
+#include "SimpleObjectInfoComponent.h"
 #include "EnemyComponent.generated.h"
 
-class UEnemyFamily;
 class UDialogDataAsset;
-class UTexture2D;
+class UEnemyFamily;
 class UEnemyID;
+class UTexture2D;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UEnemyComponent : public USimpleObjectInfoComponent {

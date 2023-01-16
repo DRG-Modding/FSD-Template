@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "DialogStruct.h"
+#include "Engine/DataAsset.h"
 #include "DialogDataAsset.generated.h"
 
-class USoundSubmixBase;
 class UObject;
+class USoundSubmixBase;
 
 UCLASS(Blueprintable)
 class UDialogDataAsset : public UDataAsset {

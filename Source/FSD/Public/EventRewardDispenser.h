@@ -4,10 +4,10 @@
 #include "GameFramework/Actor.h"
 #include "EventRewardDispenser.generated.h"
 
+class AFSDPlayerState;
 class AEventRewardFrame;
 class APlayerCharacter;
 class USchematic;
-class AFSDPlayerState;
 
 UCLASS(Blueprintable)
 class AEventRewardDispenser : public AActor {

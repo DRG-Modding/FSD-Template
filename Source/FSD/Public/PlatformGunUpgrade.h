@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ItemUpgrade.h"
 #include "EPlatformGunUpgrades.h"
 #include "UpgradeValues.h"
+#include "ItemUpgrade.h"
 #include "PlatformGunUpgrade.generated.h"
 
-class AFSDPlayerState;
 class AActor;
+class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UPlatformGunUpgrade : public UItemUpgrade {

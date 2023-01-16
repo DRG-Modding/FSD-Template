@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "Engine/LatentActionManager.h"
+#include "Components/ActorComponent.h"
 #include "ProceduralResources.generated.h"
 
 class AProceduralSetup;

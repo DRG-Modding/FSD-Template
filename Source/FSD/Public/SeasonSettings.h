@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/DataAsset.h"
 #include "SeasonSettings.generated.h"
 
 class UMissionStat;
-class USeason;
 class USeasonChallenge;
+class USeason;
 class UCurveFloat;
 
 UCLASS(Blueprintable)

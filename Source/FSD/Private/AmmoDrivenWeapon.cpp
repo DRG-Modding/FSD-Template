@@ -60,6 +60,9 @@ void AAmmoDrivenWeapon::All_Gunsling_Implementation(uint8 Index) {
 void AAmmoDrivenWeapon::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
+    DOREPLIFETIME(AAmmoDrivenWeapon, FP_ReloadAnimation);
+    DOREPLIFETIME(AAmmoDrivenWeapon, TP_ReloadAnimation);
+    DOREPLIFETIME(AAmmoDrivenWeapon, WPN_Reload);
     DOREPLIFETIME(AAmmoDrivenWeapon, ClipCount);
     DOREPLIFETIME(AAmmoDrivenWeapon, IsFiring);
 }

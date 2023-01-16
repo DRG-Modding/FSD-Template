@@ -1,26 +1,26 @@
 #include "FSDGameInstance.h"
 #include "Templates/SubclassOf.h"
-#include "FSDSendToURL.h"
 #include "FSDCloudLoadSave.h"
 #include "FSDSessionUpdater.h"
+#include "FSDSendToURL.h"
 
-class UTexture2D;
-class AProceduralSetup;
-class AActor;
-class UMutator;
-class UGeneratedMission;
 class UObject;
-class ACharacterSelectionSwitcher;
-class UWorld;
 class UNetDriver;
-class UFSDSaveGame;
-class UIconGenerationManager;
-class UTemporaryBuff;
-class APlayerCharacter;
+class AActor;
+class ACharacterSelectionSwitcher;
 class AFSDPlayerController;
-class UItemSkin;
+class UFSDSaveGame;
+class UGeneratedMission;
+class UIconGenerationManager;
 class UHUDWarningWidget;
+class UItemSkin;
+class UMutator;
+class APlayerCharacter;
+class AProceduralSetup;
+class UTemporaryBuff;
 class USoundBase;
+class UTexture2D;
+class UWorld;
 
 void UFSDGameInstance::UpdateGlobelMissionSeed() {
 }
@@ -325,7 +325,6 @@ UFSDGameInstance::UFSDGameInstance() {
     this->IconGenerationManagerClass = NULL;
     this->IconGenerationManager = NULL;
     this->CampaignManager = NULL;
-    this->DeepDiveManager = NULL;
     this->GeneratedMission = NULL;
     this->DesiredDifficulty = NULL;
     this->SaveGame = NULL;

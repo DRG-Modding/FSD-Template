@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "Curves/CurveFloat.h"
+#include "Components/SplineMeshComponent.h"
 #include "SplineTrailMaterial.h"
 #include "Components/SceneComponent.h"
-#include "Components/SplineMeshComponent.h"
-#include "Curves/CurveFloat.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "SplineTrailComponent.generated.h"
 
-class UStaticMesh;
-class UFSDPhysicalMaterial;
 class UCapsuleComponent;
-class USplineComponent;
+class UFSDPhysicalMaterial;
 class USplineMeshComponent;
+class UStaticMesh;
+class USplineComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API USplineTrailComponent : public USceneComponent {

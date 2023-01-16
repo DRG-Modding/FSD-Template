@@ -1,7 +1,7 @@
 #include "FlyingEnemyDeepPathfinderCharacter.h"
 
-class UPrimitiveComponent;
 class AActor;
+class UPrimitiveComponent;
 
 void AFlyingEnemyDeepPathfinderCharacter::TriggerFrozenRagdoll() {
 }

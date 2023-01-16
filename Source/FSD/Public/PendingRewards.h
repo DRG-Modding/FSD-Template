@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "XPReward.h"
-#include "PendingRewardsStats.h"
 #include "CreditsReward.h"
+#include "PendingRewardsStats.h"
+#include "XPReward.h"
 #include "PendingRewards.generated.h"
 
 USTRUCT(BlueprintType)

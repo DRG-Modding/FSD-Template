@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GenerationComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "GenerationComponent.h"
 #include "PillarGenerationComponent.generated.h"
 
 class UPillarSettings;

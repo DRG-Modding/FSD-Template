@@ -1,15 +1,15 @@
 #include "UpgradableGearComponent.h"
 #include "Templates/SubclassOf.h"
 
-class AFSDPlayerController;
-class UItemID;
-class UItemUpgrade;
-class APlayerCharacter;
 class UObject;
 class AActor;
-class AFSDPlayerState;
 class UResourceData;
+class AFSDPlayerState;
+class AFSDPlayerController;
+class UItemUpgrade;
+class UItemID;
 class UPlayerCharacterID;
+class APlayerCharacter;
 class UTexture2D;
 
 void UUpgradableGearComponent::SetGearStatText(FGearStatEntry& Entry, FText Text) {

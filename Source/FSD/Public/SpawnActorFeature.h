@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "RoomFeature.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "EItemAdjustmentType.h"
-#include "UObject/NoExportTypes.h"
+#include "RoomFeature.h"
 #include "SpawnActorFeature.generated.h"
 
 class AActor;

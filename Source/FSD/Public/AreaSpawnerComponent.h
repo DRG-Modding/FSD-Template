@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Components/ActorComponent.h"
-#include "DeepPathFinderSize.h"
 #include "UObject/NoExportTypes.h"
+#include "DeepPathFinderSize.h"
+#include "Components/ActorComponent.h"
 #include "AreaSpawnerComponent.generated.h"
 
 class AActor;

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "RuntimeSpawnedDebris.generated.h"
 
-class UDebrisInstances;
 class UDebrisMesh;
+class UDebrisInstances;
 
 USTRUCT(BlueprintType)
 struct FRuntimeSpawnedDebris {

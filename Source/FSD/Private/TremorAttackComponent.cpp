@@ -1,10 +1,10 @@
 #include "TremorAttackComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UPrimitiveComponent;
 class AActor;
-class UBoxComponent;
+class UPrimitiveComponent;
 class UParticleSystemComponent;
+class UBoxComponent;
 
 void UTremorAttackComponent::StopParticles() {
 }

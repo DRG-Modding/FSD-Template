@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Components/InstancedStaticMeshComponent.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "SplineDecoratorComponent.generated.h"
 
-class USplineComponent;
 class UMaterialInterface;
+class USplineComponent;
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API USplineDecoratorComponent : public UInstancedStaticMeshComponent {

@@ -1,15 +1,15 @@
 #include "FSDCheatManager.h"
 #include "Templates/SubclassOf.h"
 
+class UObject;
+class AActor;
 class APawn;
+class AFSDAIController;
 class UResourceData;
-class UPlayerCharacterID;
-class UItemID;
 class UBaseCritterDescriptor;
 class UEnemyDescriptor;
-class UObject;
-class AFSDAIController;
-class AActor;
+class UItemID;
+class UPlayerCharacterID;
 class APlayerCharacter;
 
 void UFSDCheatManager::SwitchCharacter(UPlayerCharacterID* characterID) {
@@ -591,6 +591,9 @@ void UFSDCheatManager::C_FailMission() {
 }
 
 void UFSDCheatManager::C_FadeFromBlack(UObject* WorldContextObject) {
+}
+
+void UFSDCheatManager::C_Facility_SpawnDataCore() {
 }
 
 void UFSDCheatManager::C_Facility_DisableShields() {

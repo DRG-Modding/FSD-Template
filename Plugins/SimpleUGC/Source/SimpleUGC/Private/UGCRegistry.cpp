@@ -5,7 +5,7 @@ class UUGCPackage;
 void UUGCRegistry::UnmountUGCPackages(TArray<FString> ExcludingModIds) {
 }
 
-bool UUGCRegistry::UnmountUGCPackage(UUGCPackage* Package, bool RemoveFromUserSettings) {
+bool UUGCRegistry::UnmountUGCPackage(UUGCPackage* Package, bool RemoveFromUserSettings, bool RemoveFromDisk) {
     return false;
 }
 

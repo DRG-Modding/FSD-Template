@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SavablePrimaryDataAsset.h"
 #include "EPickaxePartLocation.h"
+#include "SavablePrimaryDataAsset.h"
 #include "PickaxePart.generated.h"
 
 class UItemAquisitionBase;

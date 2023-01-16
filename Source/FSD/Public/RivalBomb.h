@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "GameEvent.h"
 #include "UObject/NoExportTypes.h"
+#include "GameEvent.h"
 #include "RivalBomb.generated.h"
 
+class UDebrisPositioning;
 class AGem;
 class ARivalBombNode;
-class UDebrisPositioning;
 class UCurveFloat;
 
 UCLASS(Blueprintable)

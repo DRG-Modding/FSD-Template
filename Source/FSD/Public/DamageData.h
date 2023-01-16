@@ -3,9 +3,9 @@
 #include "DamageDataBase.h"
 #include "DamageData.generated.h"
 
+class AActor;
 class AController;
 class UDamageClass;
-class AActor;
 
 USTRUCT(BlueprintType)
 struct FDamageData : public FDamageDataBase {
@@ -14,10 +14,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UDamageClass* DamageClass;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AController> Instigator;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AActor> DamageCauser;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

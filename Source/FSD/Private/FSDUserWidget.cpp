@@ -1,7 +1,7 @@
 #include "FSDUserWidget.h"
 
-class AFSDPlayerState;
 class AItem;
+class AFSDPlayerState;
 
 void UFSDUserWidget::SetOpacity(float alpha) {
 }

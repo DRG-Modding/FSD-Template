@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "FloatDelegateDelegate.h"
+#include "Components/ActorComponent.h"
 #include "EnemyTemperatureReplicatorComponent.generated.h"
 
 class UEnemyTemperatureComponent;
@@ -20,7 +20,7 @@ public:
     FFloatDelegate OnIsOnFireChanged;
     
 protected:
-    UPROPERTY(EditAnywhere, Export, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UEnemyTemperatureComponent> EnemyTemperatureComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_TemperatureEffect, meta=(AllowPrivateAccess=true))

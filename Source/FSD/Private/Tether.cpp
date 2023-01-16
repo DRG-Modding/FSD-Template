@@ -1,11 +1,11 @@
 #include "Tether.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/SkeletalMeshComponent.h"
-#include "InstantUsable.h"
 #include "NiagaraComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "CarriableComponent.h"
-#include "Components/SphereComponent.h"
+#include "InstantUsable.h"
 #include "DamageComponent.h"
+#include "Components/SphereComponent.h"
 
 void ATether::SetIsOnGround(bool NewIsOnGround) {
 }

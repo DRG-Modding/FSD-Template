@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CharacterProgress.h"
 #include "PlayerProgress.h"
+#include "CharacterProgress.h"
 #include "EndMissionResult.generated.h"
 
 class USchematic;

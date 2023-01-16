@@ -1,31 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Item.h"
 #include "UObject/NoExportTypes.h"
-#include "UpgradableGear.h"
-#include "PickaxePartEquip.h"
-#include "EPickaxePartLocation.h"
 #include "CoolDownProgressStyle.h"
+#include "Engine/NetSerialization.h"
 #include "GameplayTagContainer.h"
+#include "Engine/NetSerialization.h"
+#include "EPickaxePartLocation.h"
 #include "EPickaxeState.h"
 #include "PickaxeMeshInstance.h"
-#include "Engine/NetSerialization.h"
-#include "Engine/NetSerialization.h"
+#include "Item.h"
+#include "UpgradableGear.h"
+#include "PickaxePartEquip.h"
 #include "PickaxeItem.generated.h"
 
-class UFXSystemAsset;
-class UItemCharacterAnimationSet;
-class UAnimMontage;
-class UPlayerAnimInstance;
 class USceneComponent;
-class UDamageComponent;
-class UStatusEffect;
-class UFSDPhysicalMaterial;
-class USoundCue;
-class UForceFeedbackEffect;
-class UMaterialInterface;
 class UPrimitiveComponent;
+class UFXSystemAsset;
+class UDamageComponent;
+class UFSDPhysicalMaterial;
+class UItemCharacterAnimationSet;
+class UPlayerAnimInstance;
+class UStatusEffect;
+class UMaterialInterface;
+class UAnimMontage;
+class UForceFeedbackEffect;
+class USoundCue;
 
 UCLASS(Abstract, Blueprintable)
 class APickaxeItem : public AItem, public IUpgradableGear, public IPickaxePartEquip {
@@ -149,7 +149,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float QMiningReducedPlayRatePct;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     double QMiningLastHitTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

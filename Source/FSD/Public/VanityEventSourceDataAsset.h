@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "VanityEventSource.h"
+#include "Engine/DataAsset.h"
 #include "VanityEventSourceDataAsset.generated.h"
 
 UCLASS(Blueprintable)

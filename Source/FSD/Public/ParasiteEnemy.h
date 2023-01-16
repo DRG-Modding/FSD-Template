@@ -4,12 +4,12 @@
 #include "ParasiteEnemy.generated.h"
 
 class USceneComponent;
-class UStaticMeshComponent;
 class USkeletalMeshComponent;
+class UStaticMeshComponent;
 class UHealthComponentBase;
 class UOutlineComponent;
-class UParticleSystem;
 class USoundBase;
+class UParticleSystem;
 
 UCLASS(Blueprintable)
 class AParasiteEnemy : public AEnemyPawn {

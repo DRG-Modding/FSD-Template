@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Net/OnlineBlueprintCallProxyBase.h"
 #include "BlueprintRegisterSessionInviteNotificationDelegateDelegate.h"
+#include "Net/OnlineBlueprintCallProxyBase.h"
 #include "RegisterSessionInviteNotificationBlueprintCallProxy.generated.h"
 
 class UObject;

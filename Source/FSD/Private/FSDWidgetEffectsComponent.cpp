@@ -1,7 +1,7 @@
 #include "FSDWidgetEffectsComponent.h"
 
-class UWidget;
 class UObject;
+class UWidget;
 class UUserWidget;
 class UTextBlock;
 

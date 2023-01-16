@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ShowroomController.h"
 #include "EItemCategory.h"
+#include "ShowroomController.h"
 #include "CharacterShowroomController.generated.h"
 
-class APlayerCharacter;
-class UCharacterShowroomController;
 class UObject;
 class UPlayerCharacterID;
+class APlayerCharacter;
+class UCharacterShowroomController;
 class UShowroomCameraKey;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

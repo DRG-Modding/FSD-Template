@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SingleUsableComponent.h"
 #include "ItemRackDelegateDelegate.h"
+#include "SingleUsableComponent.h"
 #include "ItemRackComponent.generated.h"
 
-class APlayerCharacter;
-class UUsableComponent;
-class USceneComponent;
-class URackableItemComponent;
 class AActor;
+class USceneComponent;
+class UUsableComponent;
+class APlayerCharacter;
+class URackableItemComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UItemRackComponent : public USingleUsableComponent {

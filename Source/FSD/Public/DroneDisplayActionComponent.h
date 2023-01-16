@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/SceneComponent.h"
 #include "EDroneActions.h"
+#include "Components/SceneComponent.h"
 #include "DroneDisplayActionComponent.generated.h"
 
 class UTextRenderComponent;

@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CarriableItem.h"
-#include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
+#include "CarriableItem.h"
 #include "ResourcePouch.generated.h"
 
+class AActor;
 class UCarriableInstantUsable;
 class USoundCue;
-class AActor;
 
 UCLASS(Blueprintable)
 class AResourcePouch : public ACarriableItem {

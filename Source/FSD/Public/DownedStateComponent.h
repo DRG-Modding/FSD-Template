@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "EnableDownedBombUIDelegateDelegate.h"
-#include "CharacterStateComponent.h"
 #include "DeathIntroSettings.h"
+#include "CharacterStateComponent.h"
 #include "DownedStateComponent.generated.h"
 
 class UDamageComponent;

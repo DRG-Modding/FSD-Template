@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "StandardItemUpgrade.h"
 #include "ELineCutterUpgradeType.h"
 #include "UpgradeValues.h"
+#include "StandardItemUpgrade.h"
 #include "LineCutterUpgrade.generated.h"
 
 class AActor;

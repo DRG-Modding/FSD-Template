@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "SpawnEffectsArray.h"
+#include "Components/ActorComponent.h"
 #include "SpawnEffectsComponent.generated.h"
 
 class UMaterialInstance;

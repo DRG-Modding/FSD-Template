@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "GameFramework/Actor.h"
-#include "DropInfo.h"
 #include "UObject/NoExportTypes.h"
 #include "Curves/CurveFloat.h"
+#include "DropInfo.h"
+#include "GameFramework/Actor.h"
 #include "PlagueMeteor.generated.h"
 
-class ARockCrackerPod;
-class UTerrainPlacementComponent;
 class USceneComponent;
 class UStaticMeshComponent;
 class UDamageComponent;
-class UStaticMesh;
-class AImpactIndicator;
 class UDebrisPositioning;
+class AImpactIndicator;
 class AProceduralSetup;
+class ARockCrackerPod;
+class UTerrainPlacementComponent;
+class UStaticMesh;
 
 UCLASS(Blueprintable)
 class FSD_API APlagueMeteor : public AActor {
@@ -158,6 +158,9 @@ protected:
     void DropRockCrackerPods(int32 Amount, float MinRadius, float maRadius, AProceduralSetup* setup);
     
 public:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void DestroyAndSpawnHearts_FailSafe();
+    
     UFUNCTION(BlueprintCallable)
     void AdvanceStage();
     

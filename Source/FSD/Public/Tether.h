@@ -4,12 +4,12 @@
 #include "Tether.generated.h"
 
 class UNiagaraComponent;
-class UCarriableComponent;
 class USkeletalMeshComponent;
-class UParticleSystem;
+class UCarriableComponent;
 class UInstantUsable;
-class USphereComponent;
 class UDamageComponent;
+class USphereComponent;
+class UParticleSystem;
 class USoundCue;
 
 UCLASS(Blueprintable)

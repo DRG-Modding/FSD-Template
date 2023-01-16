@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EnemyDeepPathfinderCharacter.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
+#include "EnemyDeepPathfinderCharacter.h"
 #include "FlyingEnemyDeepPathfinderCharacter.generated.h"
 
-class UPhysicalMaterial;
-class UPhysicsAsset;
-class UParticleSystem;
-class USoundCue;
-class UPrimitiveComponent;
 class AActor;
+class UPrimitiveComponent;
+class UPhysicalMaterial;
+class UParticleSystem;
+class UPhysicsAsset;
+class USoundCue;
 
 UCLASS(Blueprintable)
 class AFlyingEnemyDeepPathfinderCharacter : public AEnemyDeepPathfinderCharacter {

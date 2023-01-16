@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "SavableDataAsset.h"
 #include "EItemCategory.h"
+#include "SavableDataAsset.h"
 #include "ItemID.generated.h"
 
 class AActor;
-class UPlayerCharacterID;
+class AItem;
 class UItemSkin;
 class UItemData;
-class AItem;
+class UPlayerCharacterID;
 
 UCLASS(Blueprintable)
 class FSD_API UItemID : public USavableDataAsset {

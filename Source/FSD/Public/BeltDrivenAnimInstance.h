@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AmmoDrivenWeaponAnimInstance.h"
 #include "UObject/NoExportTypes.h"
+#include "AmmoDrivenWeaponAnimInstance.h"
 #include "BeltDrivenAnimInstance.generated.h"
 
 UCLASS(Blueprintable, NonTransient)

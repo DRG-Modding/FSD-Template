@@ -1,8 +1,8 @@
 #include "PlayerCameraDrone.h"
 #include "GameFramework/FloatingPawnMovement.h"
 
-class UPrimitiveComponent;
 class AActor;
+class UPrimitiveComponent;
 
 bool APlayerCameraDrone::ToggleSplineMeshVisibility() {
     return false;

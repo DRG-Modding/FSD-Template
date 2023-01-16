@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GunTowerModuleAnimInstance.h"
 #include "UObject/NoExportTypes.h"
+#include "GunTowerModuleAnimInstance.h"
 #include "RandomFireModuleAnimInstance.generated.h"
 
 UCLASS(Blueprintable, NonTransient)

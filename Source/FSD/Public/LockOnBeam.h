@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "BeamCollision.h"
+#include "GameFramework/Actor.h"
 #include "LockOnBeam.generated.h"
 
-class ALockOnWeapon;
 class USceneComponent;
-class USplineComponent;
+class ALockOnWeapon;
 class USplineMeshComponent;
 class UMaterialInterface;
+class USplineComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ALockOnBeam : public AActor {
@@ -45,10 +45,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BeamThicknessScale;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<ALockOnWeapon> Item;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AActor> TargetActor;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

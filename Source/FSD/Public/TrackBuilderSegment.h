@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
-#include "TrackBuilderPoint.h"
 #include "ETrackBuildPlacementState.h"
+#include "TrackBuilderPoint.h"
+#include "GameFramework/Actor.h"
 #include "TrackBuilderSegment.generated.h"
 
-class APlayerCharacter;
-class UTrackBuilderUsable;
-class UTrackBuilderConnectPoint;
 class AItem;
 class ATrackBuilderSegment;
+class UTrackBuilderConnectPoint;
+class UTrackBuilderUsable;
+class APlayerCharacter;
 
 UCLASS(Blueprintable)
 class FSD_API ATrackBuilderSegment : public AActor {
@@ -20,10 +20,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTrackBuilderUsable* NextSegmentUsable;
     
-    UPROPERTY(EditAnywhere, Replicated, Transient)
+    UPROPERTY(EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<APlayerCharacter> BuiltByCharacter;
     
-    UPROPERTY(EditAnywhere, Export, Replicated, Transient)
+    UPROPERTY(EditAnywhere, Export, Replicated, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UTrackBuilderUsable> BuiltFromUsable;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CSGBaseComponent.h"
 #include "BinaryTerrainMaterialCombiner.h"
+#include "CSGBaseComponent.h"
 #include "SimpleMeshWithCachedTreeComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -1,9 +1,9 @@
 #include "GameModeFunctionLibrary.h"
 
-class AFSDGameState;
-class USeamlessTravelEventKey;
 class UObject;
 class AActor;
+class AFSDGameState;
+class USeamlessTravelEventKey;
 
 bool UGameModeFunctionLibrary::IsCloseToImportantLocation(AFSDGameState* GameState, const FVector& Location) {
     return false;

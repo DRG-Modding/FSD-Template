@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PlaceableInterface.h"
-#include "RessuplyPodItem.h"
-#include "EPlaceableObstructionType.h"
 #include "UObject/NoExportTypes.h"
+#include "EPlaceableObstructionType.h"
+#include "RessuplyPodItem.h"
+#include "PlaceableInterface.h"
 #include "CleanupPodItem.generated.h"
 
-class APlagueControlActor;
 class APlagueInfectionNode;
+class APlagueControlActor;
 
 UCLASS(Blueprintable)
 class ACleanupPodItem : public ARessuplyPodItem, public IPlaceableInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<APlagueControlActor> PlagueController;
     
 public:

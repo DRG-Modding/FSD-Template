@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "CommunityReward.h"
+#include "Engine/DataAsset.h"
 #include "CommnuityRewardBundle.generated.h"
 
 class UObject;

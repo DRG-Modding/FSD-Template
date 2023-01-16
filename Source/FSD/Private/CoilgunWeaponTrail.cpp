@@ -1,11 +1,11 @@
 #include "CoilgunWeaponTrail.h"
 #include "Net/UnrealNetwork.h"
-#include "Components/CapsuleComponent.h"
-#include "NiagaraComponent.h"
 #include "Components/SceneComponent.h"
+#include "NiagaraComponent.h"
+#include "Components/CapsuleComponent.h"
 
-class UPrimitiveComponent;
 class AActor;
+class UPrimitiveComponent;
 
 void ACoilgunWeaponTrail::OnRep_TrailHalfLength() {
 }

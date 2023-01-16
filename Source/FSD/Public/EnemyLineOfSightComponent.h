@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "LoSDelegateDelegate.h"
+#include "Components/ActorComponent.h"
 #include "EnemyLineOfSightComponent.generated.h"
 
 class UMeshComponent;

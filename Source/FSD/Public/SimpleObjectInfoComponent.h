@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ObjectInfoComponent.h"
 #include "SimpleObjectInfoData.h"
+#include "ObjectInfoComponent.h"
 #include "SimpleObjectInfoComponent.generated.h"
 
 class USceneComponent;
 class UDialogDataAsset;
-class UTexture2D;
 class UActorContextWidget;
+class UTexture2D;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USimpleObjectInfoComponent : public UObjectInfoComponent {
@@ -45,7 +45,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UActorContextWidget> ContextWidgetClass;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<TWeakObjectPtr<USceneComponent>, FSimpleObjectInfoData> ComponentMap;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))

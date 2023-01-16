@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/Object.h"
 #include "FSDEventsHandler.generated.h"
 
 UCLASS(Blueprintable)

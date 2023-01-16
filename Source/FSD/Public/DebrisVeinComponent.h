@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DebrisActorComponent.h"
 #include "EDebrisCarvedType.h"
+#include "DebrisActorComponent.h"
 #include "DebrisVeinComponent.generated.h"
 
 class UTerrainMaterial;

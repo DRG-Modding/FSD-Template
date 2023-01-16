@@ -4,8 +4,8 @@
 #include "DamageComponent.h"
 
 class UObject;
-class ARessuplyPod;
 class AActor;
+class ARessuplyPod;
 
 void ARessuplyPod::SetIdling() {
 }

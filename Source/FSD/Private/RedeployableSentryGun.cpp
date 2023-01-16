@@ -3,9 +3,9 @@
 #include "ActorTrackingComponent.h"
 #include "OutlineComponent.h"
 
-class APlayerCharacter;
 class AActor;
 class USkeletalMeshComponent;
+class APlayerCharacter;
 
 void ARedeployableSentryGun::ToggleOutlineAndIcon(bool Visible) {
 }

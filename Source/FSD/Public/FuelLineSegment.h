@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "TrackBuilderSegment.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "FuelLineSegment.generated.h"
 
-class USplineMeshComponent;
 class USceneComponent;
-class USplineComponent;
 class UStaticMeshComponent;
-class USimpleHealthComponent;
 class UHealthComponentBase;
+class USimpleHealthComponent;
+class USplineMeshComponent;
+class USplineComponent;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API AFuelLineSegment : public ATrackBuilderSegment {

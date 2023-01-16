@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ItemAggregator.h"
 #include "UObject/NoExportTypes.h"
 #include "GameplayTagContainer.h"
+#include "ItemAggregator.h"
 #include "ItemPlacerAggregator.generated.h"
 
-class AItemMarker;
 class AActor;
-class UDialogDataAsset;
 class AItem;
+class UDialogDataAsset;
+class AItemMarker;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UItemPlacerAggregator : public UItemAggregator {
@@ -18,7 +18,7 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FPlacementUpdatedDelegate, bool, InPlacementValid, const FTransform&, InPlacement);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FMarkerDelegate, AItemMarker*, Marker);
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<TWeakObjectPtr<AActor>> IgnoreActors;
     
 protected:

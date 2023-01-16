@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RoomFeature.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "GameplayTagContainer.h"
-#include "UObject/NoExportTypes.h"
+#include "RoomFeature.h"
 #include "RandomSubRoomFeature.generated.h"
 
 class URoomGeneratorGroup;

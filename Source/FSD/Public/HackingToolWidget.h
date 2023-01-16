@@ -3,10 +3,10 @@
 #include "Blueprint/UserWidget.h"
 #include "HackingToolWidget.generated.h"
 
-class UHackingUsableComponent;
-class USoundCue;
-class AHackingToolItem;
 class UDialogDataAsset;
+class UHackingUsableComponent;
+class AHackingToolItem;
+class USoundCue;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class FSD_API UHackingToolWidget : public UUserWidget {
@@ -30,10 +30,10 @@ public:
     FHackingUnequipDelegate OnRequestUnequipHackingTool;
     
 protected:
-    UPROPERTY(EditAnywhere, Export, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UHackingUsableComponent> HackingUsable;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AHackingToolItem> HackingTool;
     
 public:

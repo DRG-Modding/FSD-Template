@@ -3,8 +3,8 @@
 #include "Engine/DataAsset.h"
 #include "GameDLCSettings.generated.h"
 
-class UGameDLC;
 class UObject;
+class UGameDLC;
 
 UCLASS(Blueprintable)
 class FSD_API UGameDLCSettings : public UDataAsset {

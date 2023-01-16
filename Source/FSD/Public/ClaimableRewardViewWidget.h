@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Blueprint/UserWidget.h"
 #include "ClaimableRewardView.h"
+#include "Blueprint/UserWidget.h"
 #include "ClaimableRewardViewWidget.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

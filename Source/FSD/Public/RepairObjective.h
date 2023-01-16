@@ -4,9 +4,9 @@
 #include "RepairObjective.generated.h"
 
 class AActor;
+class UDebrisPositioning;
 class UGemResourceData;
 class URepairableComponent;
-class UDebrisPositioning;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class URepairObjective : public UObjective {

@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "SeasonalEventEntry.generated.h"
 
-class USpecialEvent;
 class UMissionTemplate;
 class UMutator;
+class USpecialEvent;
 
 USTRUCT(BlueprintType)
 struct FSeasonalEventEntry {

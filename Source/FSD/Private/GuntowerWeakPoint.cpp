@@ -1,7 +1,7 @@
 #include "GuntowerWeakPoint.h"
 #include "Components/SceneComponent.h"
-#include "EnemyHealthComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "EnemyHealthComponent.h"
 #include "WeakpointGlowComponent.h"
 
 class UHealthComponentBase;

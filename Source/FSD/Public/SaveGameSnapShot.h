@@ -3,15 +3,15 @@
 #include "Templates/SubclassOf.h"
 #include "SaveGameSnapShot.generated.h"
 
+class UResourceData;
 class UFSDSaveGame;
 class APlayerCharacter;
-class UResourceData;
 
 USTRUCT(BlueprintType)
 struct FSaveGameSnapShot {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UFSDSaveGame> SaveGame;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

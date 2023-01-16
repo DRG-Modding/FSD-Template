@@ -3,29 +3,29 @@
 
 class UObject;
 class UWidget;
-class UWidgetAnimation;
-class UImage;
-class UOverlay;
-class UUniformGridSlot;
-class UCanvasPanel;
-class USizeBox;
-class UProgressBar;
-class UPanelWidget;
-class UTextBlock;
 class UUserWidget;
-class APlayerController;
 class UWindowWidget;
-class AFSDPlayerState;
+class APlayerController;
 class UFSDCheatManager;
+class AFSDPlayerState;
+class UTextBlock;
+class UCanvasPanelSlot;
+class UCanvasPanel;
+class UPanelWidget;
+class UProgressBar;
+class UOverlaySlot;
+class UOverlay;
+class UImage;
+class UHorizontalBoxSlot;
+class UHorizontalBox;
+class USizeBox;
+class UWidgetAnimation;
+class UVerticalBoxSlot;
 class UVerticalBox;
+class UUniformGridSlot;
+class UUniformGridPanel;
 class USpacer;
 class UTexture2D;
-class UVerticalBoxSlot;
-class UHorizontalBox;
-class UHorizontalBoxSlot;
-class UOverlaySlot;
-class UUniformGridPanel;
-class UCanvasPanelSlot;
 
 void UFSDWidgetBlueprintLibrary::ToggleAnimationLooping(UObject* WorldContext, UWidgetAnimation* InAnimation, FWidgetAnimationSettings InSettings, bool InLoop, bool& OutPlayingChanged, bool& OutIsPlaying) {
 }

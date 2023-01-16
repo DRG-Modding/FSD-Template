@@ -1,7 +1,7 @@
 #include "StickyFlame.h"
 #include "Net/UnrealNetwork.h"
-#include "Particles/ParticleSystemComponent.h"
 #include "Components/AudioComponent.h"
+#include "Particles/ParticleSystemComponent.h"
 #include "StatusEffectTriggerComponent.h"
 
 void AStickyFlame::OnRep_IsActive() {
@@ -18,7 +18,7 @@ void AStickyFlame::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLife
 
 AStickyFlame::AStickyFlame() {
     this->FlameParticles = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("FlameParticles"));
-    this->Audio = CreateDefaultSubobject<UAudioComponent>(TEXT("Audio"));
+    this->audio = CreateDefaultSubobject<UAudioComponent>(TEXT("audio"));
     this->StatusTriggerComponent = CreateDefaultSubobject<UStatusEffectTriggerComponent>(TEXT("StatusEffectTrigger"));
     this->FlameLifetime = 0.00f;
     this->FlameExtinguishTime = 1.50f;

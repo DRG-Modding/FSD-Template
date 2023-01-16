@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Projectile.h"
 #include "UObject/NoExportTypes.h"
-#include "OnCrossbowDamageDealtDelegate.h"
-#include "ECrossbowEffectApplication.h"
 #include "Engine/EngineTypes.h"
+#include "ECrossbowEffectApplication.h"
+#include "OnCrossbowDamageDealtDelegate.h"
+#include "Projectile.h"
 #include "CrossbowProjectileBase.generated.h"
 
-class UTexture2D;
-class UStaticMesh;
-class UCrossbowStuckProjectileEffectBanshee;
-class UCrossbowProjectileMagnetic;
-class UCrossbowProjectileRicochet;
 class UNiagaraComponent;
+class UCrossbowProjectileRicochet;
 class UCrossbowProjectileRecallable;
+class UCrossbowProjectileMagnetic;
 class ACrossbowProjectileStuck;
-class UStatusEffect;
-class USoundCue;
+class UCrossbowStuckProjectileEffectBanshee;
 class UDamageComponent;
+class UStatusEffect;
+class UTexture2D;
+class USoundCue;
+class UStaticMesh;
 
 UCLASS(Blueprintable)
 class ACrossbowProjectileBase : public AProjectile {
@@ -84,7 +84,10 @@ protected:
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
-    UDamageComponent* DamageComponent;
+    UDamageComponent* MainDamageComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UDamageComponent* SimpleDamageComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UStaticMesh* ProjectileMesh;
@@ -98,6 +101,19 @@ private:
 public:
     ACrossbowProjectileBase();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+    
+protected:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetSimpleDamageComponentFromBP();
+    
+    UFUNCTION(BlueprintCallable)
+    void SetSimpleDamageComponent(UDamageComponent* Component);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetMainDamageComponentFromBP();
+    
+    UFUNCTION(BlueprintCallable)
+    void SetMainDamageComponent(UDamageComponent* Component);
     
 private:
     UFUNCTION(BlueprintCallable, Reliable, Server)

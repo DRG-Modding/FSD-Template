@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DeveloperSettings.h"
 #include "FSDTranslationProgress.h"
+#include "Engine/DeveloperSettings.h"
 #include "FSDLocalizationSettings.generated.h"
 
 UCLASS(Blueprintable, DefaultConfig, Config=Game)

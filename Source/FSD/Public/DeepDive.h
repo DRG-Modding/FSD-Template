@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
 #include "DeepDiveRewardItem.h"
+#include "UObject/Object.h"
 #include "DeepDive.generated.h"
 
-class UGeneratedMission;
-class UDeepDiveTemplate;
 class UBiome;
+class UDeepDiveTemplate;
+class UGeneratedMission;
 
 UCLASS(Blueprintable)
 class UDeepDive : public UObject {

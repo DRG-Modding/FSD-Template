@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "GameplayTagContainer.h"
+#include "GameplayTagContainer.h"
 #include "RunningMissionBP.h"
-#include "GameplayTagContainer.h"
-#include "GameplayTagContainer.h"
 #include "StatusEffectEnemies.generated.h"
 
-class UStatusEffect;
-class UEnemyDescriptor;
 class APawn;
+class UEnemyDescriptor;
+class UStatusEffect;
 
 UCLASS(Abstract, Blueprintable)
 class UStatusEffectEnemies : public URunningMissionBP {

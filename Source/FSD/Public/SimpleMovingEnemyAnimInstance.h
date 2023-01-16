@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EnemyAnimInstance.h"
 #include "UObject/NoExportTypes.h"
+#include "EnemyAnimInstance.h"
 #include "SimpleMovingEnemyAnimInstance.generated.h"
 
 UCLASS(Blueprintable, NonTransient)

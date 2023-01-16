@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Projectile.h"
-#include "RevertToNormalDelegate.h"
 #include "UObject/NoExportTypes.h"
+#include "RevertToNormalDelegate.h"
+#include "Projectile.h"
 #include "TerrainModifyingProjectile.generated.h"
 
-class UStaticMesh;
 class UTerrainMaterial;
+class UStaticMesh;
 
 UCLASS(Blueprintable)
 class ATerrainModifyingProjectile : public AProjectile {

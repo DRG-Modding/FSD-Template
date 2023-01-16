@@ -1,19 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "AmmoDrivenWeapon.h"
+#include "ECrossbowSwitchState.h"
 #include "ProjectileSwitch.h"
+#include "AmmoDrivenWeapon.h"
 #include "Crossbow.generated.h"
 
-class AProjectileBase;
 class AActor;
-class UStatusEffect;
-class ACrossbowProjectileStuck;
+class UStaticMeshComponent;
+class AProjectileBase;
 class UCrossbowProjectileRecallable;
-class UStaticMesh;
+class ACrossbowProjectileStuck;
+class UProjectileLauncherBaseComponent;
+class UStatusEffect;
 class UAnimMontage;
 class USoundCue;
-class UProjectileLauncherBaseComponent;
+class UStaticMesh;
 
 UCLASS(Blueprintable)
 class ACrossbow : public AAmmoDrivenWeapon {
@@ -52,13 +54,28 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool CanTrifork;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsDefaultArrowEquipped, meta=(AllowPrivateAccess=true))
     bool IsDefaultArrowEquipped;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RecallProgress;
     
 private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UStaticMeshComponent* AnimatedFPMesh;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UStaticMeshComponent* AnimatedTPMesh;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_SwitchIsQueued, meta=(AllowPrivateAccess=true))
+    bool SwitchIsQueued;
+    
+    UPROPERTY(EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
+    ECrossbowSwitchState SwitchState;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float OutOfAmmoSwapDelay;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> AnimatedArrowSpawnable;
     
@@ -113,11 +130,34 @@ private:
     UFUNCTION(BlueprintCallable)
     void StartAmmoSwitch();
     
+protected:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetAnimatedTPMeshComponentFromBP(AActor* animatedArrow);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetAnimatedTPMeshComponent(UStaticMeshComponent* Component);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetAnimatedFPMeshComponentFromBP(AActor* animatedArrow);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetAnimatedFPMeshComponent(UStaticMeshComponent* Component);
+    
+private:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_UpdateRetrievableArrows(const int32& defaultAmmo, const int32& specialAmmo);
     
+    UFUNCTION(Reliable, Server)
+    void Server_SwitchAmmoType(UProjectileLauncherBaseComponent* projectileLauncher, const ECrossbowSwitchState State);
+    
     UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_CallSwitchAmmoType(UProjectileLauncherBaseComponent* projectileLauncher);
+    void Server_SetSwitchIsQueued(bool IsQueued);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnRep_SwitchIsQueued();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnRep_IsDefaultArrowEquipped();
     
 protected:
     UFUNCTION(BlueprintCallable)
@@ -145,9 +185,6 @@ private:
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_CallAddDefaultAmmo(const int32& Amount);
-    
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void All_SetTPReloadAnim(UAnimMontage* TPMontage, UAnimMontage* WeaponMontage);
     
 };
 

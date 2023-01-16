@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "EquippedVanity.h"
-#include "EHeadVanityType.h"
-#include "TattooArmorItem.h"
 #include "EVanitySlot.h"
+#include "EHeadVanityType.h"
+#include "EquippedVanity.h"
+#include "TattooArmorItem.h"
+#include "Components/ActorComponent.h"
 #include "CharacterVanityComponent.generated.h"
 
-class UMaterialInstanceDynamic;
-class UBeardColorVanityItem;
-class UCharacterVanityItems;
-class UMaterialInterface;
+class UObject;
+class USkeletalMeshComponent;
 class UVanityItem;
 class UArmorMaterialVanityItem;
-class USkeletalMeshComponent;
-class UObject;
+class UBeardColorVanityItem;
+class UCharacterVanityItems;
 class UPlayerCharacterID;
+class UMaterialInterface;
+class UMaterialInstanceDynamic;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCharacterVanityComponent : public UActorComponent {
@@ -58,7 +58,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UMaterialInterface*> CachedMaterials;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TMap<EVanitySlot, USkeletalMeshComponent*> VanityMeshes;
     
 public:
@@ -96,7 +96,7 @@ public:
     bool HasSpawnedInMedbay() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    UVanityItem* GetEquippedVanityItem(EVanitySlot Slot) const;
+    UVanityItem* GetEquippedVanityItem(EVanitySlot Slot, bool ignorePreviewItems) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UCharacterVanityItems* GetAvailableVanityItems() const;

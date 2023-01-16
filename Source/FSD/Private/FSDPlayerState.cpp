@@ -5,10 +5,10 @@
 #include "PlayerRejoinState.h"
 #include "SaveGameStateComponent.h"
 
+class AFSDPlayerController;
 class UPlayerCharacterID;
 class APlayerCharacter;
 class UPlayerResourceComponent;
-class AFSDPlayerController;
 
 void AFSDPlayerState::SetSelectedCharacterID(UPlayerCharacterID* characterID) {
 }

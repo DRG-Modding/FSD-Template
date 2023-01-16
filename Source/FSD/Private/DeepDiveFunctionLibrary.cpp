@@ -1,9 +1,9 @@
 #include "DeepDiveFunctionLibrary.h"
 
-class UDeepDive;
 class UObject;
-class UGeneratedMission;
 class UDeepDiveTemplate;
+class UDeepDive;
+class UGeneratedMission;
 
 bool UDeepDiveFunctionLibrary::IsEliteDeepDiveMission(UObject* WorldContextObject, UGeneratedMission* mission) {
     return false;

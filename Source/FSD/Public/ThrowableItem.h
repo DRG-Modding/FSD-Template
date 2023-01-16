@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UObject/NoExportTypes.h"
 #include "AnimatedItem.h"
 #include "Upgradable.h"
-#include "UObject/NoExportTypes.h"
 #include "ThrowableItem.generated.h"
 
+class AActor;
+class AItem;
 class UItemUpgrade;
 class AThrowableActor;
-class AItem;
 class UAnimMontage;
-class AActor;
 
 UCLASS(Blueprintable)
 class AThrowableItem : public AAnimatedItem, public IUpgradable {
@@ -39,16 +39,19 @@ protected:
     float CooldownAfterThrow;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float CooldownAfterDetonation;
+    bool CanThrowBeforeEquipAnimFinish;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool CanThrowBeforeEquipAnimFinish;
+    float CooldownAfterEquip;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool AddPlayerVelocityToThrow;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ThrowDelay;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float ThrowZOffset;
+    FVector ThrowOffset;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     float CooldownLeft;
@@ -59,7 +62,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AItem> LoadoutItem;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<TWeakObjectPtr<AThrowableActor>> ThrownActors;
     
 public:
@@ -71,7 +74,7 @@ protected:
     void Simulate_Throw(TSubclassOf<AThrowableActor> ActorClass);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_Throw(TSubclassOf<AThrowableActor> ActorClass);
+    void Server_Throw(TSubclassOf<AThrowableActor> ActorClass, const FVector& Location);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveItemThrown(AThrowableActor* thrownActor);
@@ -81,9 +84,6 @@ protected:
     
     UFUNCTION(BlueprintCallable)
     void OnThrownActorDestroyed(AActor* Actor);
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    FVector GetThrowLocation() const;
     
     
     // Fix for true pure virtual functions not being implemented

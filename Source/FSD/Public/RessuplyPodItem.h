@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "AnimatedItem.h"
 #include "UObject/NoExportTypes.h"
+#include "AnimatedItem.h"
 #include "RessuplyPodItem.generated.h"
 
-class AActor;
-class UItemPlacerAggregator;
-class ARessuplyPod;
 class UObject;
+class AActor;
+class ARessuplyPod;
+class UItemPlacerAggregator;
 
 UCLASS(Blueprintable)
 class ARessuplyPodItem : public AAnimatedItem {

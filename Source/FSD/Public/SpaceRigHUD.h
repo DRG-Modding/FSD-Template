@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FSDHUD.h"
 #include "NotificationEntry.h"
+#include "FSDHUD.h"
 #include "SpaceRigHUD.generated.h"
 
-class UWindowWidget;
 class UObject;
+class UWindowWidget;
 
 UCLASS(Blueprintable, NonTransient)
 class ASpaceRigHUD : public AFSDHUD {

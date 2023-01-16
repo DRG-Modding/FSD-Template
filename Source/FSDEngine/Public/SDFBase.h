@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BuilderBase.h"
 #include "UObject/NoExportTypes.h"
 #include "SDFBaseProperties.h"
+#include "BuilderBase.h"
 #include "SDFBase.generated.h"
 
 UCLASS(Abstract, Blueprintable)

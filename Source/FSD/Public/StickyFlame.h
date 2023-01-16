@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "GameFramework/Actor.h"
 #include "DecalData.h"
+#include "GameFramework/Actor.h"
 #include "StickyFlame.generated.h"
 
-class UParticleSystemComponent;
 class UAudioComponent;
+class UParticleSystemComponent;
 class UStatusEffectTriggerComponent;
 
 UCLASS(Blueprintable)
@@ -18,7 +18,7 @@ protected:
     UParticleSystemComponent* FlameParticles;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UAudioComponent* Audio;
+    UAudioComponent* audio;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UStatusEffectTriggerComponent* StatusTriggerComponent;

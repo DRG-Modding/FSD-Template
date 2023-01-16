@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "DelegateDelegate.h"
+#include "GameFramework/Actor.h"
 #include "DebrisLocationFinder.generated.h"
 
 class UDebrisPositioning;

@@ -1,10 +1,10 @@
 #include "ExtractorItem.h"
 #include "Net/UnrealNetwork.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "Components/PointLightComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "FSDAudioComponent.h"
-#include "Components/SkeletalMeshComponent.h"
 #include "Components/BoxComponent.h"
-#include "Components/PointLightComponent.h"
 
 class AResourceChunk;
 
@@ -74,7 +74,7 @@ AExtractorItem::AExtractorItem() {
     this->DroppedCollider = CreateDefaultSubobject<UBoxComponent>(TEXT("Root"));
     this->DroppedMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("DropppedMesh"));
     this->FP_DrillParticles = NULL;
-    this->AudioComponent = CreateDefaultSubobject<UFSDAudioComponent>(TEXT("Audio"));
+    this->AudioComponent = CreateDefaultSubobject<UFSDAudioComponent>(TEXT("audio"));
     this->SurfaceLight = CreateDefaultSubobject<UPointLightComponent>(TEXT("SurfaceLight"));
     this->MeltingParticles = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("MeltingEffect"));
     this->InvalidSurfaceParticles = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("InvalidSurfaceParticles"));

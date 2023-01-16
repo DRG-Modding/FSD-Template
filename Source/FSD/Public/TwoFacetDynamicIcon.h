@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DynamicIcon.h"
 #include "UObject/NoExportTypes.h"
+#include "DynamicIcon.h"
 #include "TwoFacetDynamicIcon.generated.h"
 
 class UTexture2D;

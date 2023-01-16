@@ -1,7 +1,7 @@
 #include "FSDGameModeSpaceRig.h"
 
-class AFSDPlayerController;
 class AActor;
+class AFSDPlayerController;
 
 AActor* AFSDGameModeSpaceRig::GetFreeSpawnOfType(ESpacerigStartType aType, AFSDPlayerController* AController) {
     return NULL;

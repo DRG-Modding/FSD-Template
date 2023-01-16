@@ -4,22 +4,23 @@
 #include "GameFunctionLibrary.generated.h"
 
 class UObject;
-class UAsyncManager;
 class UAudioComponent;
-class UWindowManager;
-class USoundBase;
+class UAsyncManager;
 class UWindowWidget;
-class APlayerCharacter;
-class UGoogleAnalyticsWrapper;
-class UDeepDiveManager;
-class AFSDGameModeSpaceRig;
 class UCampaignManager;
-class UFSDSaveGame;
+class ADeepCSGWorld;
 class AFSDGameState;
+class AFSDGameModeSpaceRig;
 class AFSDGameMode;
 class UFSDGameInstance;
+class UFSDSaveGame;
 class UGameData;
-class ADeepCSGWorld;
+class UGoogleAnalyticsWrapper;
+class UMissionModeManager;
+class IMissionModeManager;
+class APlayerCharacter;
+class UWindowManager;
+class USoundBase;
 
 UCLASS(Blueprintable)
 class FSD_API UGameFunctionLibrary : public UBlueprintFunctionLibrary {
@@ -99,7 +100,7 @@ public:
     static UGameData* GetFSDGameData();
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
-    static UDeepDiveManager* GetDeepDiveManager(UObject* WorldContextObject);
+    static TScriptInterface<IMissionModeManager> GetDeepDiveManager(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static ADeepCSGWorld* GetCSGWorld(UObject* WorldContextObject);

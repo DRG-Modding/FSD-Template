@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VanityItem.h"
 #include "ECharacterHeadMesh.h"
 #include "EHeadVanityType.h"
+#include "VanityItem.h"
 #include "HeadVanityItem.generated.h"
 
-class UPlayerCharacterID;
-class USkeletalMesh;
-class UVanityAnimInstance;
 class UArmorVanityItem;
+class UPlayerCharacterID;
+class UVanityAnimInstance;
 class UMaterialInterface;
+class USkeletalMesh;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UHeadVanityItem : public UVanityItem {

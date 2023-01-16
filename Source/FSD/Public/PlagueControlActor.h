@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "GameFramework/Actor.h"
 #include "PlacementObstruction.h"
+#include "GameFramework/Actor.h"
 #include "PlagueControlActor.generated.h"
 
-class UPlagueUsable;
-class APlagueInfectionNode;
-class UTerrainMaterial;
 class UNiagaraComponent;
 class ACleanupPodItem;
+class UPlagueUsable;
+class APlagueInfectionNode;
 class APlayerCharacter;
+class UTerrainMaterial;
 
 UCLASS(Blueprintable)
 class APlagueControlActor : public AActor {
@@ -56,7 +56,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool DebugDrawDebrisLight;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<APlagueInfectionNode> TargetedPlagueNode;
     
 public:

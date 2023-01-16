@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UObject/NoExportTypes.h"
 #include "ECampaignType.h"
 #include "UObject/Object.h"
-#include "UObject/NoExportTypes.h"
 #include "CampaignManager.generated.h"
 
-class UFSDSaveGame;
-class AFSDPlayerController;
 class UCampaign;
-class UGeneratedMission;
 class UDifficultySetting;
+class AFSDPlayerController;
+class UFSDSaveGame;
+class UGeneratedMission;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API UCampaignManager : public UObject {

@@ -1,8 +1,8 @@
 #include "AttackBaseComponent.h"
 #include "Templates/SubclassOf.h"
 
-class UAttackBaseComponent;
 class AActor;
+class UAttackBaseComponent;
 
 UAttackBaseComponent* UAttackBaseComponent::ReplaceAttackComponent(UAttackBaseComponent* componentToReplace, TSubclassOf<UAttackBaseComponent> newComponentClass) {
     return NULL;

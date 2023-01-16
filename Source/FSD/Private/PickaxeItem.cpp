@@ -4,9 +4,9 @@
 #include "DamageComponent.h"
 
 class UPrimitiveComponent;
+class UFXSystemAsset;
 class UFSDPhysicalMaterial;
 class USoundCue;
-class UFXSystemAsset;
 
 
 void APickaxeItem::SetSpecialCoolDownDuration(float newCooldownDuration) {

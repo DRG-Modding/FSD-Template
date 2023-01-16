@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "Hackprogress_DelegateDelegate.h"
+#include "GameFramework/Actor.h"
 #include "FacilityPowerStation.generated.h"
 
 UCLASS(Blueprintable)

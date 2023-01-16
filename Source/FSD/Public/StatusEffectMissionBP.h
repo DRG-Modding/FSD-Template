@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "RunningMissionBP.h"
 #include "GameplayTagContainer.h"
+#include "RunningMissionBP.h"
 #include "StatusEffectMissionBP.generated.h"
 
-class UStatusEffect;
 class APawn;
 class UEnemyDescriptor;
+class UStatusEffect;
 
 UCLASS(Blueprintable)
 class UStatusEffectMissionBP : public URunningMissionBP {

@@ -1,54 +1,54 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SaveGameIDInterface.h"
-#include "Engine/NetSerialization.h"
-#include "DeepPathfinderCharacter.h"
-#include "WeaponFireOwner.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "UpgradableGear.h"
-#include "Skinnable.h"
-#include "Upgradable.h"
-#include "ItemIDInterface.h"
-#include "NotifyMessageReceiver.h"
+#include "UObject/NoExportTypes.h"
+#include "GameplayTagContainer.h"
 #include "DamageData.h"
+#include "Engine/NetSerialization.h"
+#include "UObject/NoExportTypes.h"
 #include "EDroneAIState.h"
 #include "EAbilityIndex.h"
-#include "ReviveUsedSigDelegate.h"
-#include "UObject/NoExportTypes.h"
 #include "StateChangedSigDelegate.h"
-#include "GameplayTagContainer.h"
+#include "ReviveUsedSigDelegate.h"
 #include "BoscoLightSetting.h"
-#include "UObject/NoExportTypes.h"
+#include "DeepPathfinderCharacter.h"
+#include "NotifyMessageReceiver.h"
+#include "UpgradableGear.h"
+#include "Upgradable.h"
+#include "ItemIDInterface.h"
+#include "SaveGameIDInterface.h"
+#include "Skinnable.h"
+#include "WeaponFireOwner.h"
 #include "Bosco.generated.h"
 
-class UBoscoAbillity;
-class UUpgradableBoscoComponent;
-class UHealthComponent;
-class UParticleSystemComponent;
-class UBoscoAbillityComponent;
-class UItemID;
-class UDamageComponent;
-class UPawnSensingComponent;
-class UDroneMiningToolBase;
-class USoundCue;
-class UBobbingComponent;
-class UAnimSequenceBase;
-class USkeletalMeshComponent;
-class UHitscanComponent;
-class USpotLightComponent;
-class UPointLightComponent;
-class UAudioComponent;
-class UDialogDataAsset;
-class USoundBase;
 class AActor;
-class UItemUpgrade;
-class UBoscoProjectileAbillity;
-class UDroneSkinnableComponent;
-class UParticleSystem;
+class USkeletalMeshComponent;
+class UAudioComponent;
 class ABoscoController;
-class UTerrainMaterial;
+class UBoscoAbillityComponent;
+class UBoscoProjectileAbillity;
+class UBoscoAbillity;
+class UBobbingComponent;
+class UDamageComponent;
+class UDialogDataAsset;
+class UDroneMiningToolBase;
+class UHealthComponent;
+class UPointLightComponent;
+class UParticleSystemComponent;
+class UHitscanComponent;
+class UItemUpgrade;
+class UItemID;
 class APlayerCharacter;
+class UDroneSkinnableComponent;
+class UTerrainMaterial;
+class UUpgradableBoscoComponent;
+class USoundBase;
+class UAnimSequenceBase;
+class UParticleSystem;
+class USoundCue;
+class USpotLightComponent;
+class UPawnSensingComponent;
 
 UCLASS(Blueprintable)
 class FSD_API ABosco : public ADeepPathfinderCharacter, public IWeaponFireOwner, public IUpgradableGear, public IUpgradable, public ISaveGameIDInterface, public ISkinnable, public IItemIDInterface, public INotifyMessageReceiver {
@@ -277,7 +277,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* ReviveSirens;
     
-    UPROPERTY(EditAnywhere, Export, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UAudioComponent> ReviveSirensComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Engine/DataAsset.h"
-#include "EEnemyDescriptorCheatClass.h"
-#include "EVeteranScaling.h"
-#include "ECreatureSize.h"
-#include "EEnemySignificance.h"
 #include "UObject/NoExportTypes.h"
-#include "EnemyDebris.h"
-#include "DeepPathFinderType.h"
+#include "ECreatureSize.h"
+#include "EEnemyDescriptorCheatClass.h"
+#include "EEnemySignificance.h"
+#include "EVeteranScaling.h"
 #include "GameplayTagContainer.h"
+#include "DeepPathFinderType.h"
 #include "SpawnRarityItem.h"
+#include "EnemyDebris.h"
+#include "Engine/DataAsset.h"
 #include "EnemyDescriptor.generated.h"
 
-class UMissionTemplate;
-class UBiome;
-class UEnemyID;
-class APawn;
-class UEnemyDescriptor;
-class UDebrisPositioning;
-class UCaveInfluencer;
 class AActor;
+class APawn;
+class UBiome;
+class UDebrisPositioning;
+class UEnemyDescriptor;
+class UMissionTemplate;
+class UEnemyID;
+class UCaveInfluencer;
 
 UCLASS(Blueprintable)
 class FSD_API UEnemyDescriptor : public UDataAsset {
@@ -57,7 +57,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UsesSpawnEffects;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     ECreatureSize CreatureSize;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))

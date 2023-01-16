@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EnemyDeepPathfinderCharacter.h"
-#include "IsAttackingDelegate.h"
 #include "Engine/EngineTypes.h"
+#include "IsAttackingDelegate.h"
+#include "EnemyDeepPathfinderCharacter.h"
 #include "FriendlyParasite.generated.h"
 
-class UHealthComponentBase;
 class AActor;
-class USphereComponent;
 class UPrimitiveComponent;
-class UDamageComponent;
 class AFSDPawn;
+class UDamageComponent;
+class UHealthComponentBase;
+class USphereComponent;
 
 UCLASS(Blueprintable)
 class AFriendlyParasite : public AEnemyDeepPathfinderCharacter {

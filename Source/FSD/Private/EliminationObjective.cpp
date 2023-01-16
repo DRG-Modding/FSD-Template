@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 
 class AFSDPawn;
-class UHealthComponentBase;
 class UEnemyDescriptor;
+class UHealthComponentBase;
 
 void UEliminationObjective::RegisterEliminationTargets(const TArray<AFSDPawn*>& Targets) {
 }

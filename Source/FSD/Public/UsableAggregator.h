@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ItemAggregator.h"
 #include "AggregatorVisibilityChangedDelegateDelegate.h"
+#include "ItemAggregator.h"
 #include "UsableAggregator.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "TerminatorShoutState.h"
+#include "Components/AudioComponent.h"
 #include "DelegateDelegate.h"
 #include "ETerminatorShoutState.h"
+#include "TerminatorShoutState.h"
 #include "TerminatorTalkMaterial.h"
-#include "Components/AudioComponent.h"
+#include "Components/ActorComponent.h"
 #include "TerminatorShoutComponent.generated.h"
 
 class UMeshComponent;
-class UPointLightComponent;
 class UAudioComponent;
+class UPointLightComponent;
 class USoundCue;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

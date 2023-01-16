@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 #include "Components/SceneComponent.h"
 #include "Components/SkeletalMeshComponent.h"
-#include "EnemyHealthComponent.h"
 #include "ArmorHealthDamageComponent.h"
+#include "EnemyHealthComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "WeakpointGlowComponent.h"
 

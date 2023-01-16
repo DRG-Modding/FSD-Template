@@ -26,6 +26,5 @@ UResourceData::UResourceData() {
     this->CreditValue = 0;
     this->XPValue = 1;
     this->SeasonXPMultiplier = -1.00f;
-    this->SeasonMultiEndScreenImage = NULL;
 }
 

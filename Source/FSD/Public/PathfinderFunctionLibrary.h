@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "UObject/NoExportTypes.h"
 #include "DeepPathFinderSize.h"
 #include "DeepPathFinderType.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "PathfinderFunctionLibrary.generated.h"
 
 class UObject;

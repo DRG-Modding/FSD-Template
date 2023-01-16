@@ -1,9 +1,9 @@
 #include "DSTelemetry.h"
 
-class UDJSONObject;
-class UDJSONArray;
 class UObject;
 class UDSTelemetry;
+class UDJSONObject;
+class UDJSONArray;
 
 void UDSTelemetry::Terminate() {
 }

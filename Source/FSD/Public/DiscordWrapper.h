@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DiscordServerInviteData.h"
-#include "UObject/Object.h"
-#include "DiscordEoMData.h"
+#include "DiscordEoMDataDelegateDelegate.h"
+#include "ResponseSuccessChangedDelegate.h"
+#include "OnDiscordUserInServerDelegate.h"
 #include "OnDiscordServerCountLoadedDelegate.h"
 #include "OnDiscordServerInfoLoadedDelegate.h"
-#include "ResponseSuccessChangedDelegate.h"
-#include "DiscordEoMDataDelegateDelegate.h"
 #include "DiscordRewardNotification.h"
-#include "OnDiscordUserInServerDelegate.h"
+#include "DiscordServerInviteData.h"
+#include "DiscordEoMData.h"
+#include "UObject/Object.h"
 #include "DiscordWrapper.generated.h"
 
 UCLASS(Blueprintable)

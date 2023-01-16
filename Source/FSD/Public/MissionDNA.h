@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
 #include "GameplayTagContainer.h"
+#include "UObject/Object.h"
 #include "MissionDNA.generated.h"
 
-class UMissionComplexity;
 class UMissionDuration;
+class UMissionComplexity;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API UMissionDNA : public UObject {

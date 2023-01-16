@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FSDGameMode.h"
 #include "ESpacerigStartType.h"
+#include "FSDGameMode.h"
 #include "FSDGameModeSpaceRig.generated.h"
 
 class AActor;

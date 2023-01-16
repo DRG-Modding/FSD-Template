@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "EItemSkinCollectionType.h"
+#include "Engine/DataAsset.h"
 #include "ItemSkinSchematicCollection.generated.h"
 
-class USchematic;
+class USchematicPricingTier;
 class UItemSkin;
 class USchematicCategory;
+class USchematic;
 class USchematicRarity;
-class USchematicPricingTier;
 
 UCLASS(Blueprintable)
 class FSD_API UItemSkinSchematicCollection : public UDataAsset {

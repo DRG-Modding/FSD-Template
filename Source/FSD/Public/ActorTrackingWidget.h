@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "FSDUserWidget.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Layout/Margin.h"
-#include "UObject/NoExportTypes.h"
+#include "FSDUserWidget.h"
 #include "ActorTrackingWidget.generated.h"
 
-class APlayerController;
-class USceneComponent;
 class AActor;
+class USceneComponent;
 class UActorTrackingWidget;
+class APlayerController;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UActorTrackingWidget : public UFSDUserWidget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, Export, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<USceneComponent> TargetComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

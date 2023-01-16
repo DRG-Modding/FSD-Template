@@ -4,8 +4,8 @@
 #include "Engine/NetSerialization.h"
 #include "ProjectileImpact.generated.h"
 
-class UPrimitiveComponent;
 class AActor;
+class UPrimitiveComponent;
 class UPhysicalMaterial;
 
 USTRUCT(BlueprintType)
@@ -18,10 +18,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector_NetQuantizeNormal Normal;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AActor> Actor;
     
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UPrimitiveComponent> Component;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

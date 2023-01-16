@@ -3,8 +3,8 @@
 #include "UnlockReward.h"
 #include "VanityReward.generated.h"
 
-class UPlayerCharacterID;
 class UVanityItem;
+class UPlayerCharacterID;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UVanityReward : public UUnlockReward {
