@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Components/ActorComponent.h"
 #include "Engine/LatentActionManager.h"
 #include "EDebrisCarvedType.h"
 #include "VeinResource.h"
-#include "Components/ActorComponent.h"
 #include "ProceduralVeinsComponent.generated.h"
 
 class AProceduralSetup;

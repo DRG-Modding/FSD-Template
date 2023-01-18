@@ -4,11 +4,11 @@
 #include "Item.h"
 #include "AnimatedItem.generated.h"
 
-class USkeletalMeshComponent;
+class UAnimMontage;
 class UItemCharacterAnimationSet;
 class UPlayerAnimInstance;
+class USkeletalMeshComponent;
 class USkinnableComponent;
-class UAnimMontage;
 
 UCLASS(Abstract, Blueprintable)
 class AAnimatedItem : public AItem {

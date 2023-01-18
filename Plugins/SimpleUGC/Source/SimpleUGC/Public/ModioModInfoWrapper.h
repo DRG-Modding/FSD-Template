@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EUGCApprovalStatus.h"
 #include "UObject/Object.h"
+#include "EUGCApprovalStatus.h"
 #include "ModioModInfoWrapper.generated.h"
 
 UCLASS(Blueprintable)

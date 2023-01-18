@@ -1,31 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+#include "GameFramework/PlayerState.h"
+#include "CharacterProgress.h"
+#include "CreditsReward.h"
 #include "EChatSenderType.h"
 #include "EGameOwnerStatus.h"
-#include "PlayerVoiceSignatureDelegate.h"
-#include "PlayerSpawnedSignatureDelegate.h"
-#include "SelectedCharacterChangedDelegateDelegate.h"
-#include "SupplyStatusChangedDelegateDelegate.h"
+#include "EnemyKilledSignatureDelegate.h"
 #include "FractionLevelGeneratedDelegateDelegate.h"
 #include "LevelGenerationStateSignatureDelegate.h"
 #include "PlayerNameChangedSignatureDelegate.h"
-#include "EnemyKilledSignatureDelegate.h"
-#include "CharacterProgress.h"
-#include "CreditsReward.h"
-#include "XPReward.h"
+#include "PlayerSpawnedSignatureDelegate.h"
+#include "PlayerVoiceSignatureDelegate.h"
 #include "RewardTexts.h"
-#include "GameFramework/PlayerState.h"
+#include "SelectedCharacterChangedDelegateDelegate.h"
+#include "SupplyStatusChangedDelegateDelegate.h"
+#include "Templates/SubclassOf.h"
+#include "XPReward.h"
 #include "FSDPlayerState.generated.h"
 
-class UVanityItem;
 class AFSDPlayerController;
-class UPlayerCharacterID;
 class APlayerCharacter;
-class UPlayerStatsComponent;
-class UPlayerResourceComponent;
+class UPlayerCharacterID;
 class UPlayerRejoinState;
+class UPlayerResourceComponent;
+class UPlayerStatsComponent;
 class USaveGameStateComponent;
+class UVanityItem;
 
 UCLASS(Blueprintable)
 class FSD_API AFSDPlayerState : public APlayerState {

@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
 #include "BakeSettings.h"
-#include "GameFramework/Actor.h"
 #include "CSGBuilderBase.generated.h"
 
-class UTerrainMaterialCore;
 class UBakeConfig;
 class UCSGPreviewComponent;
+class UTerrainMaterialCore;
 
 UCLASS(Blueprintable)
 class FSDENGINE_API ACSGBuilderBase : public AActor {

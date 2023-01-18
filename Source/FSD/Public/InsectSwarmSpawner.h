@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "EnemyPawn.h"
+#include "Templates/SubclassOf.h"
 #include "InsectSwarmSpawner.generated.h"
 
 class AActor;
-class UStaticMeshComponent;
 class AInsectSwarmEnemy;
+class UStaticMeshComponent;
 
 UCLASS(Abstract, Blueprintable)
 class AInsectSwarmSpawner : public AEnemyPawn {

@@ -1,9 +1,9 @@
 #include "CryoSprayProjectileUpgrade.h"
 #include "Templates/SubclassOf.h"
 
+class AFSDPlayerState;
 class AItem;
 class AProjectile;
-class AFSDPlayerState;
 
 FUpgradeValues UCryoSprayProjectileUpgrade::GetUpgradedValue(TSubclassOf<AItem> Item, AFSDPlayerState* Player, TSubclassOf<AProjectile> NewProjectileClass) {
     return FUpgradeValues{};

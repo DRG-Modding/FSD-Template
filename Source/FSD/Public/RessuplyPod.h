@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
-#include "GameplayTagContainer.h"
-#include "GameplayTagContainer.h"
-#include "ERessuplyPodState.h"
 #include "GameFramework/Actor.h"
 #include "GameplayTagAssetInterface.h"
+#include "GameplayTagContainer.h"
+#include "GameplayTagContainer.h"
+#include "UObject/NoExportTypes.h"
+#include "ERessuplyPodState.h"
+#include "Templates/SubclassOf.h"
 #include "RessuplyPod.generated.h"
 
-class UObject;
 class ARessuplyPod;
+class UCurveFloat;
 class UDamageComponent;
 class UDialogDataAsset;
-class UCurveFloat;
+class UObject;
 
 UCLASS(Blueprintable)
 class ARessuplyPod : public AActor, public IGameplayTagAssetInterface {

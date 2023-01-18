@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "BoscoCarryingDetailComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

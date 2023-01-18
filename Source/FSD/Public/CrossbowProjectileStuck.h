@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "EInputKeys.h"
 #include "ECrossbowStuckType.h"
+#include "EInputKeys.h"
 #include "FSDPhysicsActor.h"
+#include "Templates/SubclassOf.h"
 #include "CrossbowProjectileStuck.generated.h"
 
-class USceneComponent;
-class UNiagaraComponent;
-class UCrossbowProjectileRecallable;
 class ACrossbowProjectileBase;
+class APlayerCharacter;
+class UCrossbowProjectileRecallable;
 class UCrossbowStuckProjectileEffectBanshee;
 class UHealthComponentBase;
+class UNiagaraComponent;
+class USceneComponent;
 class USphereComponent;
-class APlayerCharacter;
 class UStatusEffect;
 
 UCLASS(Blueprintable)

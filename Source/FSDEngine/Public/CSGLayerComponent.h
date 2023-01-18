@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MeshLayerProperties.h"
-#include "GeneralTerrainMaterialCombiner.h"
 #include "CSGGroupComponent.h"
+#include "GeneralTerrainMaterialCombiner.h"
+#include "MeshLayerProperties.h"
 #include "CSGLayerComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

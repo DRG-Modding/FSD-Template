@@ -1,6 +1,6 @@
 #include "SentryGun.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Net/UnrealNetwork.h"
 
 class AActor;
 

@@ -1,13 +1,13 @@
 #include "EscortMule.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/SkeletalMeshComponent.h"
-#include "SimpleObjectInfoComponent.h"
 #include "FriendlyHealthComponent.h"
+#include "Net/UnrealNetwork.h"
 #include "OutlineComponent.h"
 #include "RestrictedResourceBank.h"
+#include "SimpleObjectInfoComponent.h"
 
-class UInstantUsable;
 class APlayerCharacter;
+class UInstantUsable;
 
 bool AEscortMule::TryHeal(APlayerCharacter* User, float Amount) {
     return false;

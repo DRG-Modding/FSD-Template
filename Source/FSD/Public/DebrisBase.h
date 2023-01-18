@@ -4,8 +4,8 @@
 #include "CSGTriangleMapper.h"
 #include "DebrisBase.generated.h"
 
-class UObject;
 class UCurveFloat;
+class UObject;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class FSD_API UDebrisBase : public UCSGTriangleMapper {

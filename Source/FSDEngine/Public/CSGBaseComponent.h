@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MeshBaseProperties.h"
 #include "CSGBuilderBaseSceneComponent.h"
+#include "MeshBaseProperties.h"
 #include "CSGBaseComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

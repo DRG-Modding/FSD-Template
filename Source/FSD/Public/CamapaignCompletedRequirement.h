@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "CampaignRequirement.h"
+#include "Templates/SubclassOf.h"
 #include "CamapaignCompletedRequirement.generated.h"
 
 class UCampaign;

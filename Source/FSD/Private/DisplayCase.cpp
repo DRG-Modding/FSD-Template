@@ -1,7 +1,7 @@
 #include "DisplayCase.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/SceneComponent.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Net/UnrealNetwork.h"
 
 void ADisplayCase::PlayReactionAnimation() {
 }

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "PushPoint.generated.h"
 
-class USphereComponent;
 class APlayerCharacter;
+class USphereComponent;
 
 USTRUCT(BlueprintType)
 struct FPushPoint {

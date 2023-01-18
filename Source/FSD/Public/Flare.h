@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "FSDPhysicsActor.h"
-#include "LoadoutItem.h"
-#include "UpgradableGear.h"
 #include "ItemIDInterface.h"
+#include "LoadoutItem.h"
 #include "SaveGameIDInterface.h"
+#include "Templates/SubclassOf.h"
+#include "UpgradableGear.h"
 #include "Flare.generated.h"
 
 class AActor;
-class AItem;
 class AFlare;
-class ULightComponent;
-class UItemID;
+class AItem;
 class UCurveFloat;
+class UItemID;
+class ULightComponent;
 class USoundCue;
 
 UCLASS(Abstract, Blueprintable)

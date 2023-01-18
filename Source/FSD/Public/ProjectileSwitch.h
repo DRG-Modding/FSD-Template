@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "EProjectileSwitchCriteria.h"
+#include "Templates/SubclassOf.h"
 #include "ProjectileSwitch.generated.h"
 
 class AProjectileBase;

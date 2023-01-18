@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Components/SceneComponent.h"
+#include "Templates/SubclassOf.h"
 #include "ActorTrackingComponent.generated.h"
 
 class UActorTrackingWidget;

@@ -1,7 +1,7 @@
 #include "BEEMissionTemplate.h"
 
-class UMissionDuration;
 class UMissionComplexity;
+class UMissionDuration;
 class UMissionTemplate;
 
 bool UBEEMissionTemplate::IsDurationAllowed(UMissionTemplate* mission, UMissionDuration* Duration) const {

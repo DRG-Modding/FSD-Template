@@ -2,20 +2,20 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
-#include "EInputKeys.h"
 #include "CarriableItem.h"
+#include "EInputKeys.h"
 #include "BasicThrowableItem.generated.h"
 
 class AActor;
-class UPrimitiveComponent;
-class UStaticMeshComponent;
-class UCarriableComponent;
-class UInstantUsable;
-class UFirstPersonStaticMeshComponent;
-class USphereComponent;
 class APlayerCharacter;
 class UBoxComponent;
+class UCarriableComponent;
+class UFirstPersonStaticMeshComponent;
+class UInstantUsable;
+class UPrimitiveComponent;
 class USoundCue;
+class USphereComponent;
+class UStaticMeshComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ABasicThrowableItem : public ACarriableItem {

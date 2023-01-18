@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
+#include "Templates/SubclassOf.h"
 #include "SpawnActorDelegateDelegate.generated.h"
 
 class AActor;

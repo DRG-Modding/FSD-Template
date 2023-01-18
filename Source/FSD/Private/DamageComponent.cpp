@@ -2,9 +2,9 @@
 #include "Templates/SubclassOf.h"
 
 class AActor;
-class UPrimitiveComponent;
 class UDamageComponent;
 class UFSDPhysicalMaterial;
+class UPrimitiveComponent;
 
 void UDamageComponent::PreTestDamageConditions() {
 }

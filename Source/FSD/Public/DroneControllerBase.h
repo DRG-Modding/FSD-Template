@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "LaserPointerTarget.h"
 #include "AIController.h"
+#include "LaserPointerTarget.h"
 #include "DroneControllerBase.generated.h"
 
 class ADroneBase;

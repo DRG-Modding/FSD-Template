@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "EGooGunProjectileUpgrades.h"
-#include "UpgradeValues.h"
 #include "StandardItemUpgrade.h"
+#include "Templates/SubclassOf.h"
+#include "UpgradeValues.h"
 #include "GooGunProjectileUpgrade.generated.h"
 
 class AActor;

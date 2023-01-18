@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/SplineComponent.h"
-#include "SplineWarpProperties.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "CSGWarped.h"
+#include "SplineWarpProperties.h"
 #include "CSGSplineWarp.generated.h"
 
 UCLASS(Blueprintable)

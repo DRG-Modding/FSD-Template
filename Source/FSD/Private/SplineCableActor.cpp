@@ -1,6 +1,6 @@
 #include "SplineCableActor.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/SplineComponent.h"
+#include "Net/UnrealNetwork.h"
 
 void ASplineCableActor::SpawnBetweenTransforms(FTransform InStart, FTransform InEnd) {
 }

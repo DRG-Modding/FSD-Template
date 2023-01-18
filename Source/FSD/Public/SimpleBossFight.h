@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BossFight.h"
 #include "UObject/Object.h"
+#include "BossFight.h"
 #include "BossFightInterface.h"
 #include "SimpleBossFight.generated.h"
 

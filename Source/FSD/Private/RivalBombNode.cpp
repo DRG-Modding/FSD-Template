@@ -1,6 +1,6 @@
 #include "RivalBombNode.h"
-#include "Net/UnrealNetwork.h"
 #include "HackingUsableComponent.h"
+#include "Net/UnrealNetwork.h"
 
 class APlayerCharacter;
 

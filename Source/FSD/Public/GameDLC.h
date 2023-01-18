@@ -5,11 +5,11 @@
 #include "SaveGameIDInterface.h"
 #include "GameDLC.generated.h"
 
-class UObject;
-class UWindowWidget;
-class UResourceData;
 class UFileMediaSource;
+class UObject;
+class UResourceData;
 class UTexture2D;
+class UWindowWidget;
 
 UCLASS(Blueprintable)
 class UGameDLC : public UDLCBase, public ISaveGameIDInterface {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "IsInDangerSigDelegate.h"
 #include "Components/ActorComponent.h"
+#include "IsInDangerSigDelegate.h"
 #include "InDangerComponent.generated.h"
 
 class UHealthComponentBase;

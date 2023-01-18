@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "ERedeployableSentryGunState.h"
 #include "SentryGun.h"
+#include "Templates/SubclassOf.h"
 #include "RedeployableSentryGun.generated.h"
 
 class AActor;
-class USkeletalMeshComponent;
-class UActorTrackingComponent;
-class ASentryElectroBeam;
-class UOutlineComponent;
 class APlayerCharacter;
 class ARedeployableSentryGun;
+class ASentryElectroBeam;
+class UActorTrackingComponent;
+class UOutlineComponent;
+class USkeletalMeshComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ARedeployableSentryGun : public ASentryGun {

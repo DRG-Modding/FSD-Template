@@ -1,7 +1,7 @@
 #include "GrapplingHookGun.h"
+#include "CoolDownItemAggregator.h"
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
-#include "CoolDownItemAggregator.h"
 
 class AGrapplingHookGun;
 

@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "EFacilityTentacleState.h"
-#include "TentacleTarget.h"
 #include "TentacleBase.h"
+#include "TentacleTarget.h"
 #include "TriggerAI.h"
 #include "FacilityTentacle.generated.h"
 
-class USkeletalMeshComponent;
-class UDebrisPositioning;
 class UAnimMontage;
+class UDebrisPositioning;
+class USkeletalMeshComponent;
 
 UCLASS(Blueprintable)
 class FSD_API AFacilityTentacle : public ATentacleBase, public ITriggerAI {

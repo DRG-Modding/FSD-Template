@@ -3,8 +3,8 @@
 
 class AActor;
 class AItem;
-class UItemSkin;
 class UItemData;
+class UItemSkin;
 
 bool UItemID::IsItemClassChildOf(TSubclassOf<AActor> InParentClass) const {
     return false;

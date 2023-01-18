@@ -4,10 +4,10 @@
 #include "DamageComponent.h"
 
 class AActor;
-class UPrimitiveComponent;
 class ACoilgunWeaponTrail;
-class UHealthComponentBase;
 class UFSDPhysicalMaterial;
+class UHealthComponentBase;
+class UPrimitiveComponent;
 
 void ACoilGun::UpdateAfflictions() {
 }

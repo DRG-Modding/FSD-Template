@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "ECharselectionCameraLocation.h"
+#include "Templates/SubclassOf.h"
 #include "ShowCharacterSelectorSignatureDelegate.generated.h"
 
 class APlayerCharacter;

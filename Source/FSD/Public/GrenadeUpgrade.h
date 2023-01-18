@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "EGrenadeUpgradeType.h"
-#include "UpgradeValues.h"
 #include "StandardItemUpgrade.h"
+#include "Templates/SubclassOf.h"
+#include "UpgradeValues.h"
 #include "GrenadeUpgrade.generated.h"
 
-class AGrenade;
 class AFSDPlayerState;
+class AGrenade;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UGrenadeUpgrade : public UStandardItemUpgrade {

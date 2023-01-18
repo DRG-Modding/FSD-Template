@@ -4,8 +4,8 @@
 
 class AActor;
 class AFlare;
-class ULightComponent;
 class UCurveFloat;
+class ULightComponent;
 
 void AFlare::StartLightFunction(ULightComponent* mainLight, TArray<ULightComponent*> spotLights, UCurveFloat* flutterCurve, UCurveFloat* fadeInCurve) {
 }

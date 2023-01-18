@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "WarpedProperties.h"
 #include "CSGSingleChildBase.h"
+#include "WarpedProperties.h"
 #include "CSGWarped.generated.h"
 
 UCLASS(Blueprintable)

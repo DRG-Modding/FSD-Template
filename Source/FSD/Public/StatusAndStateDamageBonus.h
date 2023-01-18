@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "ETargetStateDamageBonusType.h"
 #include "DamageBonusBase.h"
+#include "ETargetStateDamageBonusType.h"
+#include "Templates/SubclassOf.h"
 #include "StatusAndStateDamageBonus.generated.h"
 
 class UDamageClass;

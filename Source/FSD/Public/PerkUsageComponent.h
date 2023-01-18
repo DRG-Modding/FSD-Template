@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PerkUsage.h"
 #include "Components/ActorComponent.h"
+#include "PerkUsage.h"
 #include "RejoinListener.h"
 #include "PerkUsageComponent.generated.h"
 

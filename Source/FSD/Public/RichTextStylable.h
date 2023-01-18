@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Fonts/SlateFontInfo.h"
-#include "Styling/SlateColor.h"
-#include "TextStyleOverride.h"
 #include "Components/RichTextBlock.h"
+#include "Styling/SlateColor.h"
+#include "Fonts/SlateFontInfo.h"
+#include "TextStyleOverride.h"
 #include "RichTextStylable.generated.h"
 
 UCLASS(Blueprintable)

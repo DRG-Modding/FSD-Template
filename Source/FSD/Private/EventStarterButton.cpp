@@ -1,6 +1,6 @@
 #include "EventStarterButton.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/SceneComponent.h"
+#include "Net/UnrealNetwork.h"
 #include "SingleUsableComponent.h"
 
 class APlayerCharacter;

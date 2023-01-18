@@ -3,9 +3,9 @@
 #include "Templates/SubclassOf.h"
 #include "SaveGameSnapShot.generated.h"
 
-class UResourceData;
-class UFSDSaveGame;
 class APlayerCharacter;
+class UFSDSaveGame;
+class UResourceData;
 
 USTRUCT(BlueprintType)
 struct FSaveGameSnapShot {

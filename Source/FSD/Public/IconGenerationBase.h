@@ -3,8 +3,8 @@
 #include "GameFramework/Actor.h"
 #include "IconGenerationBase.generated.h"
 
-class USceneCaptureComponent2D;
 class UMaterialInterface;
+class USceneCaptureComponent2D;
 
 UCLASS(Blueprintable)
 class AIconGenerationBase : public AActor {

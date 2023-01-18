@@ -4,8 +4,8 @@
 #include "TutorialManager.generated.h"
 
 class AFSDPlayerController;
-class UFSDSaveGame;
 class APlayerCharacter;
+class UFSDSaveGame;
 class UTutorialComponent;
 
 UCLASS(Abstract, Blueprintable)

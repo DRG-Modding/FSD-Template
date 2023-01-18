@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "LineSegmentCarverPoint.h"
 #include "GenerationComponent.h"
+#include "LineSegmentCarverPoint.h"
 #include "LineSegmentCarverComponent.generated.h"
 
 class UFloodFillSettings;

@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "Projectile.h"
+#include "Templates/SubclassOf.h"
 #include "GooGunProjectile.generated.h"
 
 class AActor;
-class UPrimitiveComponent;
 class AGooGunPuddle;
+class UPrimitiveComponent;
 
 UCLASS(Blueprintable)
 class AGooGunProjectile : public AProjectile {

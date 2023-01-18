@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+#include "GameFramework/Actor.h"
+#include "Curves/CurveFloat.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "EVacuumState.h"
-#include "Curves/CurveFloat.h"
-#include "GameFramework/Actor.h"
+#include "Templates/SubclassOf.h"
 #include "FoamPuddle.generated.h"
 
-class USceneComponent;
-class UPrimitiveComponent;
 class UNiagaraComponent;
+class UPrimitiveComponent;
+class USceneComponent;
 class USoundCue;
 
 UCLASS(Blueprintable)

@@ -1,6 +1,6 @@
 #include "AmmoDrivenWeapon.h"
-#include "Net/UnrealNetwork.h"
 #include "AmmoDriveWeaponAggregator.h"
+#include "Net/UnrealNetwork.h"
 
 
 void AAmmoDrivenWeapon::Server_StopReload_Implementation(float BlendOutTime) {

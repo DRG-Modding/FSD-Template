@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+#include "Components/ActorComponent.h"
 #include "DelegateDelegate.h"
 #include "EndMissionResult.h"
-#include "Components/ActorComponent.h"
+#include "Templates/SubclassOf.h"
 #include "PlayerStatsComponent.generated.h"
 
-class UCappedResource;
 class APlayerCharacter;
+class UCappedResource;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPlayerStatsComponent : public UActorComponent {

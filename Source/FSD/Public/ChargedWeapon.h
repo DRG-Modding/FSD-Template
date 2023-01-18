@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ChargeChangedSignatureDelegate.h"
 #include "AmmoDrivenWeapon.h"
+#include "ChargeChangedSignatureDelegate.h"
 #include "ChargedWeapon.generated.h"
 
-class UFXSystemComponent;
-class UFXSystemAsset;
 class UAnimMontage;
+class UFXSystemAsset;
+class UFXSystemComponent;
 class USoundCue;
 
 UCLASS(Abstract, Blueprintable)

@@ -1,8 +1,8 @@
 #include "HeavyParticleCannon.h"
-#include "Net/UnrealNetwork.h"
 #include "NiagaraComponent.h"
 #include "DamageComponent.h"
 #include "FirstPersonNiagaraComponent.h"
+#include "Net/UnrealNetwork.h"
 #include "ReflectionHitscanComponent.h"
 #include "StickyFlameSpawner.h"
 

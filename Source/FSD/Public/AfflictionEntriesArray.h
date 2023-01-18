@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AfflictionEntry.h"
 #include "Engine/NetSerialization.h"
+#include "AfflictionEntry.h"
 #include "AfflictionEntriesArray.generated.h"
 
 class UPawnAfflictionComponent;

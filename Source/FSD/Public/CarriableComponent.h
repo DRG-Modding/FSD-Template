@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Components/ActorComponent.h"
 #include "UObject/NoExportTypes.h"
 #include "CarriableEventDelegate.h"
-#include "Components/ActorComponent.h"
 #include "Throwable.h"
 #include "CarriableComponent.generated.h"
 
+class APlayerCharacter;
 class UDialogDataAsset;
 class UItemCharacterAnimationSet;
-class APlayerCharacter;
 class UUseAnimationSetting;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

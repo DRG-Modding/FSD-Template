@@ -5,14 +5,14 @@
 #include "SavableDataAsset.h"
 #include "Schematic.generated.h"
 
-class UObject;
-class UResourceData;
-class USchematicPricingTier;
 class UFSDSaveGame;
+class UObject;
 class UPlayerCharacterID;
-class USchematicItem;
-class USchematicCategory;
+class UResourceData;
 class USchematic;
+class USchematicCategory;
+class USchematicItem;
+class USchematicPricingTier;
 class USchematicRarity;
 class UTexture;
 

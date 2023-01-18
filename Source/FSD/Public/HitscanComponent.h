@@ -3,14 +3,14 @@
 #include "Engine/NetSerialization.h"
 #include "Engine/NetSerialization.h"
 #include "HitDelegateDelegate.h"
-#include "IRandRange.h"
 #include "HitscanBaseComponent.h"
+#include "IRandRange.h"
 #include "HitscanComponent.generated.h"
 
 class AActor;
-class UPrimitiveComponent;
-class UFXSystemAsset;
 class UFSDPhysicalMaterial;
+class UFXSystemAsset;
+class UPrimitiveComponent;
 class USoundCue;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

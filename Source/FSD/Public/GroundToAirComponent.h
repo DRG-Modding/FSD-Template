@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Components/ActorComponent.h"
 #include "ChangedStateSigDelegate.h"
 #include "StateStats.h"
-#include "Components/ActorComponent.h"
 #include "GroundToAirComponent.generated.h"
 
 class ADeepPathfinderCharacter;

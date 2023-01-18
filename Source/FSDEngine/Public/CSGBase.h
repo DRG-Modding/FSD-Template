@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "MeshBaseProperties.h"
 #include "BuilderBase.h"
+#include "MeshBaseProperties.h"
 #include "CSGBase.generated.h"
 
 UCLASS(Abstract, Blueprintable)

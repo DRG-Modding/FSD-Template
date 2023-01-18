@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DamageData.h"
-#include "EHealthbarType.h"
-#include "HealthSegmentChangeDelegate.h"
 #include "ArmorHealedSigDelegate.h"
+#include "DamageData.h"
 #include "DamageSigDelegate.h"
-#include "HealthChangedSigDelegate.h"
 #include "DeathSigDetailedDelegate.h"
+#include "EHealthbarType.h"
+#include "HealthChangedSigDelegate.h"
 #include "HealthComponentBase.h"
+#include "HealthSegmentChangeDelegate.h"
 #include "HealthComponent.generated.h"
 
 class AActor;
-class UPawnStatsComponent;
 class UPawnStat;
+class UPawnStatsComponent;
 class USubHealthComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

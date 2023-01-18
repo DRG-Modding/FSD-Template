@@ -1,8 +1,8 @@
 #include "HitscanBaseUpgrade.h"
 #include "Templates/SubclassOf.h"
 
-class AItem;
 class AFSDPlayerState;
+class AItem;
 
 FUpgradeValues UHitscanBaseUpgrade::GetUpgradedValue(TSubclassOf<AItem> Item, AFSDPlayerState* Player, EHitScanBaseUpgradeType NewUpgradeType) {
     return FUpgradeValues{};

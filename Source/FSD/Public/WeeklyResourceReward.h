@@ -4,8 +4,8 @@
 #include "Reward.h"
 #include "WeeklyResourceReward.generated.h"
 
-class UResourceData;
 class AFSDPlayerController;
+class UResourceData;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UWeeklyResourceReward : public UReward {

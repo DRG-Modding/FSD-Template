@@ -1,9 +1,9 @@
 #include "VanityItem.h"
 
-class UObject;
 class AFSDPlayerState;
-class UPlayerCharacterID;
 class APlayerCharacter;
+class UObject;
+class UPlayerCharacterID;
 class UTexture;
 
 bool UVanityItem::RemoveFromOwned(UObject* WorldContext) {

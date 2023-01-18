@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "Templates/SubclassOf.h"
 #include "StatusEffectsFunctionLibrary.generated.h"
 
 class AActor;

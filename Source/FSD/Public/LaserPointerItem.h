@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
-#include "ELaserPointerMarkerType.h"
-#include "MarkerPlacedDelegateDelegate.h"
-#include "LaserPointerData.h"
 #include "AnimatedItem.h"
+#include "ELaserPointerMarkerType.h"
+#include "LaserPointerData.h"
+#include "MarkerPlacedDelegateDelegate.h"
+#include "Templates/SubclassOf.h"
 #include "LaserPointerItem.generated.h"
 
-class UObject;
 class AActor;
-class USceneComponent;
-class UPrimitiveComponent;
-class UDialogDataAsset;
-class UObjectInfoComponent;
 class AFSDGameState;
-class ALaserPointerWaypoint;
 class ALaserPointerMarker;
+class ALaserPointerWaypoint;
+class UDialogDataAsset;
+class UObject;
+class UObjectInfoComponent;
+class UPrimitiveComponent;
+class USceneComponent;
 class UTerrainMaterial;
 class UTexture2D;
 

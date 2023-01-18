@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "AnimatedItem.h"
-#include "Upgradable.h"
 #include "PlaceableInterface.h"
+#include "Templates/SubclassOf.h"
+#include "Upgradable.h"
 #include "PlaceableItem.generated.h"
 
 class AActor;

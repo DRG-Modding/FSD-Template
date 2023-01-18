@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SDFCylinderProperties.h"
 #include "SDFBaseWithTransform.h"
+#include "SDFCylinderProperties.h"
 #include "SDFCylinder.generated.h"
 
 UCLASS(Blueprintable)

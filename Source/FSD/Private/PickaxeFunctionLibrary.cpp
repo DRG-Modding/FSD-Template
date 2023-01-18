@@ -1,7 +1,7 @@
 #include "PickaxeFunctionLibrary.h"
 
-class UObject;
 class UItemID;
+class UObject;
 class UPickaxePart;
 
 bool UPickaxeFunctionLibrary::RemovePickaxePartFromOwned(UObject* WorldContextObject, const UPickaxePart* part) {

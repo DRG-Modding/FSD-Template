@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CSGLayers.h"
 #include "BinaryTerrainMaterialCombiner.h"
+#include "CSGLayers.h"
 #include "CSGAddMaterialLayersProperties.generated.h"
 
 USTRUCT(BlueprintType)

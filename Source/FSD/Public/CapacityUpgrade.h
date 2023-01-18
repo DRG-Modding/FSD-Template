@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "StandardItemUpgrade.h"
 #include "Templates/SubclassOf.h"
 #include "UpgradeValues.h"
-#include "StandardItemUpgrade.h"
 #include "CapacityUpgrade.generated.h"
 
 class AActor;

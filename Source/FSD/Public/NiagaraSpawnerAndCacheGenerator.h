@@ -3,8 +3,8 @@
 #include "GameFramework/Actor.h"
 #include "NiagaraSpawnerAndCacheGenerator.generated.h"
 
-class UFXSystemComponent;
 class UFXSystemAsset;
+class UFXSystemComponent;
 
 UCLASS(Blueprintable)
 class ANiagaraSpawnerAndCacheGenerator : public AActor {

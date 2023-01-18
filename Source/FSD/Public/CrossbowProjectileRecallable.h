@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "CrossbowProjectileRecallable.generated.h"
 
-class UInstantUsable;
 class APlayerCharacter;
+class UInstantUsable;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCrossbowProjectileRecallable : public UActorComponent {

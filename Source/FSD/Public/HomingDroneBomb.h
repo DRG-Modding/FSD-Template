@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "GameplayTagAssetInterface.h"
 #include "GameplayTagContainer.h"
 #include "GameplayTagContainer.h"
 #include "Projectile.h"
-#include "GameplayTagAssetInterface.h"
 #include "HomingDroneBomb.generated.h"
 
 class UEnemyHealthComponent;

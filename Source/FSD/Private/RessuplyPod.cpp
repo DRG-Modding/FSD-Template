@@ -1,11 +1,11 @@
 #include "RessuplyPod.h"
+#include "DamageComponent.h"
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
-#include "DamageComponent.h"
 
-class UObject;
 class AActor;
 class ARessuplyPod;
+class UObject;
 
 void ARessuplyPod::SetIdling() {
 }

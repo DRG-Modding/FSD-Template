@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Engine/NetSerialization.h"
 #include "Engine/NetSerialization.h"
 #include "AmmoDrivenWeapon.h"
+#include "Templates/SubclassOf.h"
 #include "ElectricalSMG.generated.h"
 
-class UPrimitiveComponent;
-class UHealthComponentBase;
 class UFSDPhysicalMaterial;
-class UStatusEffect;
+class UHealthComponentBase;
 class UParticleSystem;
+class UPrimitiveComponent;
 class USoundCue;
+class UStatusEffect;
 
 UCLASS(Blueprintable)
 class AElectricalSMG : public AAmmoDrivenWeapon {

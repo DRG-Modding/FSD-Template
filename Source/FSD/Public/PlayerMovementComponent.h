@@ -4,8 +4,8 @@
 #include "PlayerMovementComponent.generated.h"
 
 class AActor;
-class UCharacterStateComponent;
 class APlayerCharacter;
+class UCharacterStateComponent;
 class USoundBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

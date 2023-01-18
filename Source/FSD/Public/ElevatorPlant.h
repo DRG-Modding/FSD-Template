@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "StartTimelineEventDelegate.h"
-#include "COnStateChangedDelegate.h"
 #include "GameFramework/Actor.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "COnStateChangedDelegate.h"
+#include "StartTimelineEventDelegate.h"
 #include "ElevatorPlant.generated.h"
 
-class USceneComponent;
 class UAudioComponent;
-class USplineMeshComponent;
 class UCurveFloat;
+class USceneComponent;
 class USoundCue;
+class USplineMeshComponent;
 
 UCLASS(Blueprintable)
 class AElevatorPlant : public AActor {

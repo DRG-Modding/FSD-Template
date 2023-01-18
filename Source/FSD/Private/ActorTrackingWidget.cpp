@@ -2,9 +2,9 @@
 #include "Templates/SubclassOf.h"
 
 class AActor;
-class USceneComponent;
-class UActorTrackingWidget;
 class APlayerController;
+class UActorTrackingWidget;
+class USceneComponent;
 
 void UActorTrackingWidget::SetTargetComponent(USceneComponent* Component) {
 }

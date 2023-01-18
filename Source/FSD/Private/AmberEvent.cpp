@@ -1,6 +1,6 @@
 #include "AmberEvent.h"
-#include "Net/UnrealNetwork.h"
 #include "DamageComponent.h"
+#include "Net/UnrealNetwork.h"
 
 class APawn;
 class UHealthComponentBase;

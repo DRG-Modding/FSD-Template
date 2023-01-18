@@ -1,6 +1,6 @@
 #include "GatlingGun.h"
-#include "Net/UnrealNetwork.h"
 #include "DamageComponent.h"
+#include "Net/UnrealNetwork.h"
 
 class AActor;
 class UFSDPhysicalMaterial;

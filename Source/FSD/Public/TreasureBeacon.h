@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
+#include "Templates/SubclassOf.h"
 #include "TreasureBeacon.generated.h"
 
-class USceneComponent;
-class UDebrisPositioning;
 class ATreasureContainer;
-class UTerrainPlacementComponent;
 class UCurveFloat;
+class UDebrisPositioning;
+class USceneComponent;
+class UTerrainPlacementComponent;
 
 UCLASS(Blueprintable)
 class FSD_API ATreasureBeacon : public AActor {

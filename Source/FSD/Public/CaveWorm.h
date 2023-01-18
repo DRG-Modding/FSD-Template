@@ -5,10 +5,10 @@
 #include "DeepPathfinderCharacter.h"
 #include "CaveWorm.generated.h"
 
+class AResourceChunk;
+class UHealthComponentBase;
 class UObject;
 class UResourceData;
-class UHealthComponentBase;
-class AResourceChunk;
 class USimpleHealthComponent;
 
 UCLASS(Blueprintable, MinimalAPI)

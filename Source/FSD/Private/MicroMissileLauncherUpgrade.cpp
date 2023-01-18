@@ -1,8 +1,8 @@
 #include "MicroMissileLauncherUpgrade.h"
 #include "Templates/SubclassOf.h"
 
-class AItem;
 class AFSDPlayerState;
+class AItem;
 
 FUpgradeValues UMicroMissileLauncherUpgrade::GetUpgradedValue(TSubclassOf<AItem> Item, AFSDPlayerState* Player, EMicroMissileLauncherUpgrades NewUpgradeType) {
     return FUpgradeValues{};

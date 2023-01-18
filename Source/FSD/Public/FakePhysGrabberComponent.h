@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GrabAvoidClassEntry.h"
 #include "AvoidActorEntry.h"
+#include "GrabAvoidClassEntry.h"
 #include "GrabberComponent.h"
 #include "FakePhysGrabberComponent.generated.h"
 

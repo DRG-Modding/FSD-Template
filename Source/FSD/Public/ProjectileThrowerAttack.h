@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "ProjectileAttackComponent.h"
+#include "Templates/SubclassOf.h"
 #include "ProjectileThrowerAttack.generated.h"
 
 class UAnimInstance;

@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EDLSSSettingOverride.h"
 #include "UObject/Object.h"
+#include "EDLSSSettingOverride.h"
 #include "DLSSOverrideSettings.generated.h"
 
-UCLASS(Blueprintable, ProjectUserConfig, config = Engine)
+UCLASS(Blueprintable, Config=Engine, ProjectUserConfig)
 class DLSS_API UDLSSOverrideSettings : public UObject {
     GENERATED_BODY()
 public:

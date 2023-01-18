@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Engine/DataAsset.h"
+#include "Templates/SubclassOf.h"
 #include "StatusEffectSettings.generated.h"
 
 class UStatusEffect;

@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BEELoaderSequence.h"
 #include "Engine/DataAsset.h"
+#include "BEELoaderSequence.h"
 #include "BEESettings.generated.h"
 
-class UUserWidget;
 class UBEEMissionTemplate;
 class UDialogDataAsset;
-class UMissionWarning;
-class UMissionNameBank;
-class UMutator;
 class UMissionMutator;
+class UMissionNameBank;
+class UMissionWarning;
+class UMutator;
+class UUserWidget;
 
 UCLASS(Blueprintable)
 class UBEESettings : public UDataAsset {

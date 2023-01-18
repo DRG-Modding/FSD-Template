@@ -1,18 +1,18 @@
 #include "DeepCSGWorld.h"
-#include "Templates/SubclassOf.h"
 #include "AsyncPathRequests.h"
+#include "Templates/SubclassOf.h"
 
 class AActor;
-class UPrimitiveComponent;
-class UDebrisBase;
-class ADeepCSGWorld;
-class UDebrisMesh;
-class ADebrisDataActor;
-class USTLMeshCarver;
-class UTerrainMaterial;
-class UStaticMesh;
 class ACSGBuilder;
+class ADebrisDataActor;
+class ADeepCSGWorld;
+class UDebrisBase;
+class UDebrisMesh;
+class UPrimitiveComponent;
+class USTLMeshCarver;
+class UStaticMesh;
 class UStaticMeshCarver;
+class UTerrainMaterial;
 
 void ADeepCSGWorld::UnRegisterScannerComponent(UPrimitiveComponent* Component) {
 }

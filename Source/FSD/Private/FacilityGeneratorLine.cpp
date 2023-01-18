@@ -1,7 +1,7 @@
 #include "FacilityGeneratorLine.h"
+#include "Components/SplineComponent.h"
 #include "Net/UnrealNetwork.h"
 #include "SplineDecoratorComponent.h"
-#include "Components/SplineComponent.h"
 
 void AFacilityGeneratorLine::SetConnected(bool InConnected) {
 }

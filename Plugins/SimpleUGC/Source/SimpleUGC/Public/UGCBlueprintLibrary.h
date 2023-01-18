@@ -4,9 +4,9 @@
 #include "UGCBlueprintLibrary.generated.h"
 
 class UObject;
-class UUGCSettings;
-class UUGCRegistry;
 class UUGCLatentActionManager;
+class UUGCRegistry;
+class UUGCSettings;
 
 UCLASS(Blueprintable)
 class SIMPLEUGC_API UUGCBlueprintLibrary : public UBlueprintFunctionLibrary {

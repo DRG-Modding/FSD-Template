@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "CrossbowStuckProjectileEffect.h"
+#include "Templates/SubclassOf.h"
 #include "CrossbowStuckProjectileEffectElectric.generated.h"
 
 class AActor;

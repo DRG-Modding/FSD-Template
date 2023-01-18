@@ -6,8 +6,8 @@
 #include "EnemyPawn.h"
 #include "TentacleBase.generated.h"
 
-class USceneComponent;
 class AStabberVineRoot;
+class USceneComponent;
 class USplineComponent;
 
 UCLASS(Abstract, Blueprintable)

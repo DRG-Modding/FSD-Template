@@ -1,7 +1,7 @@
 #include "StickyFlame.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/AudioComponent.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "Net/UnrealNetwork.h"
 #include "StatusEffectTriggerComponent.h"
 
 void AStickyFlame::OnRep_IsActive() {

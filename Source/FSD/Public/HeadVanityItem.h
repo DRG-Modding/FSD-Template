@@ -6,10 +6,10 @@
 #include "HeadVanityItem.generated.h"
 
 class UArmorVanityItem;
-class UPlayerCharacterID;
-class UVanityAnimInstance;
 class UMaterialInterface;
+class UPlayerCharacterID;
 class USkeletalMesh;
+class UVanityAnimInstance;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UHeadVanityItem : public UVanityItem {

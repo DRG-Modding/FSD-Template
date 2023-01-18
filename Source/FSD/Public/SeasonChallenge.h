@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "ChallengeVariation.h"
-#include "TrackedStatInfo.h"
 #include "SavableDataAsset.h"
+#include "Templates/SubclassOf.h"
+#include "TrackedStatInfo.h"
 #include "SeasonChallenge.generated.h"
 
 class UCampaign;

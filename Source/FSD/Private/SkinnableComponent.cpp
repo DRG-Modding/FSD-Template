@@ -1,8 +1,8 @@
 #include "SkinnableComponent.h"
 
 class AFSDPlayerState;
-class UItemSkin;
 class UItemID;
+class UItemSkin;
 
 void USkinnableComponent::UpdateSkin(AFSDPlayerState* Player) {
 }

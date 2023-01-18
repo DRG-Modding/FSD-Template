@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
-#include "LaserPointerTarget.h"
-#include "EInputKeys.h"
 #include "GameplayTagContainer.h"
-#include "FollowTargetChangedDelegate.h"
+#include "UObject/NoExportTypes.h"
+#include "EInputKeys.h"
 #include "FSDAIController.h"
+#include "FollowTargetChangedDelegate.h"
+#include "LaserPointerTarget.h"
+#include "Templates/SubclassOf.h"
 #include "BoscoController.generated.h"
 
 class AActor;
+class AFSDPlayerState;
+class APlayerCharacter;
+class UBehaviorTree;
 class UDroneUseComponent;
 class UHealthComponentBase;
-class AFSDPlayerState;
 class UMissionWarning;
-class APlayerCharacter;
 class UTerrainMaterial;
-class UBehaviorTree;
 
 UCLASS(Blueprintable)
 class ABoscoController : public AFSDAIController {

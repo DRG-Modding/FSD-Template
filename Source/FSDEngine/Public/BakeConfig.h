@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/Object.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "BakeSettings.h"
-#include "UObject/Object.h"
 #include "BakeConfig.generated.h"
 
 class UBuilderBase;

@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ArmorDamageInfo.h"
 #include "ArmorPrimitiveDamagedDelegateDelegate.h"
 #include "ArmorPrimitiveDestroyedDelegate.h"
-#include "ArmorDamageInfo.h"
-#include "CompositeArmorItem.h"
 #include "BaseArmorDamageComponent.h"
+#include "CompositeArmorItem.h"
 #include "CompositeArmorComponent.generated.h"
 
-class UPrimitiveComponent;
 class UFXSystemAsset;
+class UPrimitiveComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCompositeArmorComponent : public UBaseArmorDamageComponent {

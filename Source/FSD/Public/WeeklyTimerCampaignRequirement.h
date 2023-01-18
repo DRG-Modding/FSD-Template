@@ -4,8 +4,8 @@
 #include "CampaignRequirement.h"
 #include "WeeklyTimerCampaignRequirement.generated.h"
 
-class UCampaign;
 class AFSDPlayerController;
+class UCampaign;
 
 UCLASS(Blueprintable, EditInlineNew)
 class FSD_API UWeeklyTimerCampaignRequirement : public UCampaignRequirement {

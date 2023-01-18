@@ -3,14 +3,14 @@
 #include "UObject/NoExportTypes.h"
 #include "EMoveDirection.h"
 #include "ESpiderDeathAnimationCategory.h"
-#include "RandomWalkCycleEntry.h"
 #include "EnemyAnimInstance.h"
 #include "FootStepNotifyTarget.h"
+#include "RandomWalkCycleEntry.h"
 #include "SpiderAnimInstance.generated.h"
 
-class UEnemySpawnEffectsKey;
-class UEnemyPlaySoundKey;
 class UAnimSequenceBase;
+class UEnemyPlaySoundKey;
+class UEnemySpawnEffectsKey;
 class UParticleSystem;
 class USoundCue;
 

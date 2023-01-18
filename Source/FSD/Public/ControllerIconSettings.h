@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Engine/DeveloperSettings.h"
 #include "InputCoreTypes.h"
 #include "ActionIconMapping.h"
 #include "InputTranslationTable.h"
-#include "Engine/DeveloperSettings.h"
 #include "ControllerIconSettings.generated.h"
 
-UCLASS(Blueprintable, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
 class UControllerIconSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:

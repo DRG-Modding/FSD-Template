@@ -1,7 +1,7 @@
 #include "TrackBuilderItem.h"
+#include "CrosshairAggregator.h"
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
-#include "CrosshairAggregator.h"
 
 class ATrackBuilderSegment;
 class UTrackBuilderConnectPoint;

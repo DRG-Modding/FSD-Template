@@ -3,10 +3,10 @@
 #include "Templates/SubclassOf.h"
 
 class AActor;
-class UDebrisPositioning;
 class AProceduralSetup;
-class URepairableComponent;
 class UCurveFloat;
+class UDebrisPositioning;
+class URepairableComponent;
 
 void USalvageObjective::PointRepaired() {
 }

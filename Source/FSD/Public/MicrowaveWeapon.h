@@ -1,31 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/NetSerialization.h"
-#include "MultiHitscanHit.h"
-#include "MultiHitScanHits.h"
-#include "LensDeactivedDelegateDelegate.h"
-#include "LensActivedDelegateDelegate.h"
-#include "MicrowaveLense.h"
 #include "AmmoDrivenWeapon.h"
+#include "LensActivedDelegateDelegate.h"
+#include "LensDeactivedDelegateDelegate.h"
+#include "MicrowaveLense.h"
+#include "MultiHitScanHits.h"
+#include "MultiHitscanHit.h"
+#include "Templates/SubclassOf.h"
 #include "MicrowaveWeapon.generated.h"
 
 class AActor;
-class UPrimitiveComponent;
-class UNiagaraComponent;
-class UNiagaraSystem;
+class ABoil;
 class UCapsuleHitscanComponent;
 class UDamageComponent;
 class UEnemyTemperatureComponent;
-class UHealthComponentBase;
-class UFirstPersonNiagaraComponent;
 class UFSDPhysicalMaterial;
-class ABoil;
-class UStatusEffect;
+class UFirstPersonNiagaraComponent;
+class UHealthComponentBase;
+class UNiagaraComponent;
+class UNiagaraSystem;
 class UParticleSystem;
+class UPrimitiveComponent;
 class USoundCue;
+class UStatusEffect;
 
 UCLASS(Blueprintable)
 class FSD_API AMicrowaveWeapon : public AAmmoDrivenWeapon {

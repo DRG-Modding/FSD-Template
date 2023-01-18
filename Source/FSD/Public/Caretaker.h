@@ -4,14 +4,14 @@
 #include "FSDPawn.h"
 #include "Caretaker.generated.h"
 
-class USceneComponent;
-class USkeletalMeshComponent;
+class UAnimSequenceBase;
 class UCaretakerActionComponent;
 class UEnemyHealthComponent;
 class UHealthDamageTracker;
-class UPawnStatsComponent;
 class UPassthroughSubHealthComponent;
-class UAnimSequenceBase;
+class UPawnStatsComponent;
+class USceneComponent;
+class USkeletalMeshComponent;
 
 UCLASS(Blueprintable)
 class FSD_API ACaretaker : public AFSDPawn {

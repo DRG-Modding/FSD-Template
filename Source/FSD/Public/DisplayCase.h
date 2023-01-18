@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Curves/CurveFloat.h"
-#include "DisplayContent.h"
-#include "DisplayCaseDelegateDelegate.h"
 #include "GameFramework/Actor.h"
+#include "Curves/CurveFloat.h"
+#include "DisplayCaseDelegateDelegate.h"
+#include "DisplayContent.h"
 #include "DisplayCase.generated.h"
 
+class UDialogDataAsset;
 class USceneComponent;
 class USkeletalMeshComponent;
-class UDialogDataAsset;
 
 UCLASS(Blueprintable)
 class ADisplayCase : public AActor {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "BakeSettings.h"
+#include "Templates/SubclassOf.h"
 #include "CSGChildInstanceProperties.generated.h"
 
 class ACSGBuilder;

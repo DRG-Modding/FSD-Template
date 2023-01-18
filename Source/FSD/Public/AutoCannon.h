@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Curves/CurveFloat.h"
 #include "AmmoDrivenWeapon.h"
+#include "Templates/SubclassOf.h"
 #include "AutoCannon.generated.h"
 
-class UStatusEffect;
 class UAnimMontage;
+class UStatusEffect;
 
 UCLASS(Abstract, Blueprintable)
 class AAutoCannon : public AAmmoDrivenWeapon {

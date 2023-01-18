@@ -1,8 +1,8 @@
 #include "HangingFireCracker.h"
 #include "NiagaraComponent.h"
 #include "Components/SkeletalMeshComponent.h"
-#include "InstantUsable.h"
 #include "FSDAudioComponent.h"
+#include "InstantUsable.h"
 
 void AHangingFireCracker::StartFire() {
 }

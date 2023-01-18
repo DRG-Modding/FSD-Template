@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "UObject/NoExportTypes.h"
 #include "TickableActionBase.h"
 #include "MoveComponentToAction.generated.h"
 
+class UMoveComponentToAction;
 class UObject;
 class USceneComponent;
-class UMoveComponentToAction;
 
 UCLASS(Blueprintable)
 class UMoveComponentToAction : public UTickableActionBase {

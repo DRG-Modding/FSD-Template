@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+#include "PhysicalMaterials/PhysicalMaterial.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "DecalData.h"
-#include "PhysicalMaterials/PhysicalMaterial.h"
+#include "Templates/SubclassOf.h"
 #include "FSDPhysicalMaterial.generated.h"
 
+class UFSDPhysicalMaterial;
+class UFXSystemAsset;
+class UFXSystemComponent;
+class UMaterialInstance;
 class UObject;
 class UPrimitiveComponent;
-class UFXSystemComponent;
-class UFXSystemAsset;
-class UFSDPhysicalMaterial;
 class UReactiveTerrain;
-class UMaterialInstance;
 class USoundCue;
 
 UCLASS(Blueprintable, CollapseCategories)

@@ -1,7 +1,7 @@
 #include "MULE.h"
+#include "HealthComponent.h"
 #include "Net/UnrealNetwork.h"
 #include "SimpleObjectInfoComponent.h"
-#include "HealthComponent.h"
 
 void AMULE::SetIsDown(bool NewIsDown) {
 }

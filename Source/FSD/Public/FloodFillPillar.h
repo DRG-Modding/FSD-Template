@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RandRange.h"
 #include "RandLinePoint.h"
+#include "RandRange.h"
 #include "RoomFeature.h"
 #include "FloodFillPillar.generated.h"
 

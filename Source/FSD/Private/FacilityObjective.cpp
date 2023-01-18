@@ -4,12 +4,12 @@
 
 class AActor;
 class APawn;
-class UCappedResource;
+class AProceduralSetup;
 class ARessuplyPod;
+class ATetherStation;
+class UCappedResource;
 class UDebrisPositioning;
 class UEncounterManager;
-class AProceduralSetup;
-class ATetherStation;
 
 void UFacilityObjective::SpawnFacilityEncounters(AProceduralSetup* setup, UEncounterManager* Encounters, UDebrisPositioning* Positioning) {
 }

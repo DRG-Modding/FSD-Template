@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "EItemCategory.h"
 #include "SavableDataAsset.h"
+#include "Templates/SubclassOf.h"
 #include "ItemID.generated.h"
 
 class AActor;
 class AItem;
-class UItemSkin;
 class UItemData;
+class UItemSkin;
 class UPlayerCharacterID;
 
 UCLASS(Blueprintable)

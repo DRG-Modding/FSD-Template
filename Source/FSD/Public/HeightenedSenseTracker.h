@@ -3,8 +3,8 @@
 #include "HeightenedSenseTracker.generated.h"
 
 class AActor;
-class UAttackingPointInterface;
 class IAttackingPointInterface;
+class UAttackingPointInterface;
 class UHealthComponentBase;
 
 USTRUCT(BlueprintType)

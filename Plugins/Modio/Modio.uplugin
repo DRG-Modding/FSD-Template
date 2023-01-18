@@ -12,7 +12,7 @@
 	"SupportURL": "http://discord.mod.io",
 	"EngineVersion": "4.27.0",
 	"CanContainContent": true,
-	"IsBetaVersion": false,
+	"IsBetaVersion": true,
 	"IsExperimentalVersion": false,
 	"Installed": true,
 	"Modules": [
@@ -25,12 +25,6 @@
 				"Mac",
 				"Linux"
 			]
-		}
-	],
-	"LocalizationTargets": [
-		{
-			"Name": "ModioUI",
-			"LoadingPolicy": "Always"
 		}
 	]
 }

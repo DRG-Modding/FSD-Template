@@ -7,10 +7,10 @@ public class PS5_Mock : ModuleRules {
         ShadowVariableWarningLevel = WarningLevel.Warning;
         
         PublicDependencyModuleNames.AddRange(new string[] {
-            "AudioExtensions",
-            "Core",
-            "CoreUObject",
-            "Engine",
-        });
+                    "AudioExtensions",
+                    "Core",
+                    "CoreUObject",
+                    "Engine",
+                });
     }
 }

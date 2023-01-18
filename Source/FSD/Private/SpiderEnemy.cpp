@@ -1,6 +1,6 @@
 #include "SpiderEnemy.h"
-#include "Net/UnrealNetwork.h"
 #include "HitReactionComponent.h"
+#include "Net/UnrealNetwork.h"
 #include "PawnStatsComponent.h"
 
 class AActor;

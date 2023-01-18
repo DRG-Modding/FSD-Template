@@ -1,7 +1,7 @@
 #include "GuntowerLineProjectile.h"
 #include "Components/SceneComponent.h"
-#include "DamageComponent.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "DamageComponent.h"
 
 void AGuntowerLineProjectile::TurnOffParticles() {
 }

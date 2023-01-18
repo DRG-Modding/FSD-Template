@@ -1,8 +1,8 @@
 #include "CharacterVanityItems.h"
 
 class UObject;
-class UVanityItem;
 class UPlayerCharacterID;
+class UVanityItem;
 
 void UCharacterVanityItems::SortVanityItems(UObject* WorldContextObject, UPlayerCharacterID* characterID, TArray<UVanityItem*>& VanityItems) {
 }

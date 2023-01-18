@@ -3,8 +3,8 @@
 #include "UObject/Object.h"
 #include "DJSONArray.generated.h"
 
-class UDJSONObject;
 class UDJSONArray;
+class UDJSONObject;
 
 UCLASS(Blueprintable)
 class DSTELEMETRY_API UDJSONArray : public UObject {

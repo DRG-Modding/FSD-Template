@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
 #include "DecalData.h"
-#include "GameFramework/Actor.h"
 #include "StickyFlame.generated.h"
 
 class UAudioComponent;

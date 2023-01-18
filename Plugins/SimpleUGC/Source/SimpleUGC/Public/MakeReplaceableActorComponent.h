@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
+#include "Templates/SubclassOf.h"
 #include "MakeReplaceableActorComponent.generated.h"
 
 class AActor;

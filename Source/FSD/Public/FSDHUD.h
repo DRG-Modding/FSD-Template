@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHUDVisibilityReason.h"
 #include "GameFramework/HUD.h"
+#include "EHUDVisibilityReason.h"
 #include "FSDHUD.generated.h"
 
-class APlayerController;
 class AFSDHUD;
-class APlayerCharacter;
 class APlayerCameraDrone;
+class APlayerCharacter;
+class APlayerController;
 class URadarPointComponent;
 
 UCLASS(Blueprintable, NonTransient)

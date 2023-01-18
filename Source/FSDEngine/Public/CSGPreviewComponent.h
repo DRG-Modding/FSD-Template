@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ChunkId.h"
 #include "Components/SceneComponent.h"
+#include "ChunkId.h"
 #include "CSGPreviewComponent.generated.h"
 
-class UBakeConfig;
 class ACSGBuilderBase;
+class UBakeConfig;
 class UDeepProceduralMeshComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

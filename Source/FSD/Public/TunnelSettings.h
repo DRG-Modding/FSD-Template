@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
+#include "UObject/NoExportTypes.h"
 #include "TunnelSettings.generated.h"
 
 class UFloodFillSettings;

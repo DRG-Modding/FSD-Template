@@ -3,9 +3,9 @@
 #include "Templates/SubclassOf.h"
 
 class UObjective;
-class UResourceData;
-class UOptionalObjectiveWidget;
 class UObjectiveWidget;
+class UOptionalObjectiveWidget;
+class UResourceData;
 class UTexture2D;
 
 void UObjective::SignalObjectiveUpdated() {

@@ -1,39 +1,39 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+#include "Curves/CurveFloat.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "EInputKeys.h"
 #include "ERobotState.h"
-#include "RobotShieldSwitchSigDelegate.h"
-#include "IntroductionStartedDelegate.h"
-#include "Curves/CurveFloat.h"
 #include "EnemyDeepPathfinderCharacter.h"
-#include "WeaponFireOwner.h"
+#include "IntroductionStartedDelegate.h"
+#include "RobotShieldSwitchSigDelegate.h"
 #include "RobotStateChangedSigDelegate.h"
+#include "Templates/SubclassOf.h"
+#include "WeaponFireOwner.h"
 #include "ConvertedRobot.generated.h"
 
 class AActor;
-class USceneComponent;
-class USkeletalMeshComponent;
-class UAudioComponent;
+class AParasiteEnemy;
 class APawn;
-class UStaticMeshComponent;
+class APlayerCharacter;
 class AProjectile;
+class UAnimSequenceBase;
+class UAudioComponent;
 class UDamageComponent;
 class UEnemyComponent;
-class UPointLightComponent;
 class UHitscanComponent;
 class UOutlineComponent;
-class UPawnStatsComponent;
-class AParasiteEnemy;
-class APlayerCharacter;
-class USingleUsableComponent;
-class USoundBase;
-class UAnimSequenceBase;
 class UParticleSystem;
+class UPawnStatsComponent;
+class UPointLightComponent;
+class USceneComponent;
+class USingleUsableComponent;
+class USkeletalMeshComponent;
+class USoundBase;
 class USoundCue;
 class USpotLightComponent;
+class UStaticMeshComponent;
 
 UCLASS(Blueprintable)
 class AConvertedRobot : public AEnemyDeepPathfinderCharacter, public IWeaponFireOwner {

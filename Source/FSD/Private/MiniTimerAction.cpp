@@ -1,7 +1,7 @@
 #include "MiniTimerAction.h"
 
-class UObject;
 class UMiniTimerAction;
+class UObject;
 
 UMiniTimerAction* UMiniTimerAction::MiniTimer(UObject* WorldContext, float InDuration) {
     return NULL;

@@ -5,12 +5,12 @@
 #include "PlasmaBoomerang.generated.h"
 
 class AActor;
-class USceneComponent;
-class UPrimitiveComponent;
-class UStaticMeshComponent;
-class UDamageComponent;
 class UBoxComponent;
 class UCurveVector;
+class UDamageComponent;
+class UPrimitiveComponent;
+class USceneComponent;
+class UStaticMeshComponent;
 
 UCLASS(Abstract, Blueprintable)
 class APlasmaBoomerang : public AGrenade {

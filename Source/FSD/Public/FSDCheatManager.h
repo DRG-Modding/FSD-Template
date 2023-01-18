@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "CheatEventDelegate.h"
 #include "GameFramework/CheatManager.h"
+#include "CheatEventDelegate.h"
+#include "Templates/SubclassOf.h"
 #include "FSDCheatManager.generated.h"
 
-class UObject;
 class AActor;
-class APawn;
 class AFSDAIController;
-class UResourceData;
+class APawn;
+class APlayerCharacter;
 class UBaseCritterDescriptor;
 class UEnemyDescriptor;
 class UItemID;
+class UObject;
 class UPlayerCharacterID;
-class APlayerCharacter;
+class UResourceData;
 
 UCLASS(Blueprintable)
 class FSD_API UFSDCheatManager : public UCheatManager {

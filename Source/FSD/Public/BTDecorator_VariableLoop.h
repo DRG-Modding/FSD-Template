@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "IRandRange.h"
 #include "BehaviorTree/BTDecorator.h"
+#include "IRandRange.h"
 #include "BTDecorator_VariableLoop.generated.h"
 
 UCLASS(Blueprintable)

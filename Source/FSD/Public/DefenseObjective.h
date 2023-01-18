@@ -3,8 +3,8 @@
 #include "Objective.h"
 #include "DefenseObjective.generated.h"
 
-class UDebrisPositioning;
 class ADefensePointActor;
+class UDebrisPositioning;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UDefenseObjective : public UObjective {

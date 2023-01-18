@@ -3,9 +3,9 @@
 #include "DamageComponent.h"
 
 class AActor;
-class UPrimitiveComponent;
-class UHealthComponentBase;
 class UFSDPhysicalMaterial;
+class UHealthComponentBase;
+class UPrimitiveComponent;
 
 void AMicrowaveWeapon::UpdateMuzzleAnim(bool InIsFiring) {
 }

@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "CrosshairCreatedDelegate.h"
 #include "ItemAggregator.h"
+#include "Templates/SubclassOf.h"
 #include "Upgradable.h"
 #include "CrosshairAggregator.generated.h"
 
+class APlayerController;
+class UCustomAmmoCountWidget;
 class UObject;
 class UUserWidget;
-class UCustomAmmoCountWidget;
-class APlayerController;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCrosshairAggregator : public UItemAggregator, public IUpgradable {

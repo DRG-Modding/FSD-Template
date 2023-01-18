@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FSDTranslationProgress.h"
 #include "Engine/DeveloperSettings.h"
+#include "FSDTranslationProgress.h"
 #include "FSDLocalizationSettings.generated.h"
 
-UCLASS(Blueprintable, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
 class UFSDLocalizationSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:

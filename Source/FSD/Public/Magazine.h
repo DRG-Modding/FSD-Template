@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
-#include "GameFramework/Actor.h"
 #include "Skinnable.h"
 #include "Magazine.generated.h"
 

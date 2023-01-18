@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ItemUpgrade.h"
+#include "RandRange.h"
 #include "Templates/SubclassOf.h"
 #include "UpgradeValues.h"
-#include "RandRange.h"
-#include "ItemUpgrade.h"
 #include "RandomDamageUpgrade.generated.h"
 
 class AActor;

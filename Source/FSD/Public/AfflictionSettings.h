@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ScaledMeshAfflictionTypeItem.h"
 #include "Engine/DataAsset.h"
+#include "ScaledMeshAfflictionTypeItem.h"
 #include "AfflictionSettings.generated.h"
 
 class UFXSystemAsset;

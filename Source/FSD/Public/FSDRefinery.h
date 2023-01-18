@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "DropPod.h"
 #include "EInputKeys.h"
 #include "EPipelineBuildState.h"
 #include "ERefineryState.h"
-#include "DropPod.h"
+#include "Templates/SubclassOf.h"
 #include "FSDRefinery.generated.h"
 
-class UDialogDataAsset;
-class ATrackBuilderItem;
-class APipelineStart;
-class APipelineSegment;
 class APipelineExtractorPod;
+class APipelineSegment;
+class APipelineStart;
 class APlayerCharacter;
+class ATrackBuilderItem;
+class UDialogDataAsset;
 class USingleUsableComponent;
 
 UCLASS(Blueprintable)

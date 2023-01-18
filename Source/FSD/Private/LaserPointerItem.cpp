@@ -1,8 +1,8 @@
 #include "LaserPointerItem.h"
 #include "Components/SceneComponent.h"
 
-class UObject;
 class AActor;
+class UObject;
 class UPrimitiveComponent;
 class UTerrainMaterial;
 

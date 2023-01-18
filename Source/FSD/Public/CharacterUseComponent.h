@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Components/ActorComponent.h"
+#include "BeginUsingDelegateDelegate.h"
+#include "CharacterUseState.h"
+#include "DepositingEventDelegate.h"
 #include "ECustomUsableType.h"
 #include "EndUsingDelegateDelegate.h"
-#include "BeginUsingDelegateDelegate.h"
-#include "DepositingEventDelegate.h"
-#include "CharacterUseState.h"
-#include "Components/ActorComponent.h"
 #include "CharacterUseComponent.generated.h"
 
 class AActor;

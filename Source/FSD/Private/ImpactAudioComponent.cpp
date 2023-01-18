@@ -2,9 +2,9 @@
 #include "Templates/SubclassOf.h"
 
 class AActor;
-class USceneComponent;
 class UHealthComponentBase;
 class UImpactAudioComponent;
+class USceneComponent;
 
 void UImpactAudioComponent::OnOwnerDeath(UHealthComponentBase* HealthComponent) {
 }

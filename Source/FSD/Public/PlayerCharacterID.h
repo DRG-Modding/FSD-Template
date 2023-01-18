@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "SavableDataAsset.h"
+#include "Templates/SubclassOf.h"
 #include "PlayerCharacterID.generated.h"
 
-class UPlayerCharacterData;
 class APlayerCharacter;
+class UPlayerCharacterData;
 
 UCLASS(Blueprintable)
 class FSD_API UPlayerCharacterID : public USavableDataAsset {

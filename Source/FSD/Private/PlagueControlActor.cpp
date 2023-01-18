@@ -1,6 +1,6 @@
 #include "PlagueControlActor.h"
-#include "Net/UnrealNetwork.h"
 #include "NiagaraComponent.h"
+#include "Net/UnrealNetwork.h"
 #include "PlagueUsable.h"
 
 class APlayerCharacter;

@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EFSR2QualityMode.h"
-#include "EFSR2HistoryFormat.h"
 #include "Engine/DeveloperSettings.h"
+#include "EFSR2HistoryFormat.h"
+#include "EFSR2QualityMode.h"
 #include "FSR2Settings.generated.h"
 
-UCLASS(Blueprintable, DefaultConfig, config = Engine)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig)
 class FSR2TEMPORALUPSCALING_API UFSR2Settings : public UDeveloperSettings {
     GENERATED_BODY()
 public:

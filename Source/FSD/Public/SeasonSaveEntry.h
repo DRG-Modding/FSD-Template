@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "RewardsClaimed.h"
 #include "ChallengeSaveInfo.h"
+#include "RewardsClaimed.h"
 #include "SeasonSaveEntry.generated.h"
 
 USTRUCT(BlueprintType)

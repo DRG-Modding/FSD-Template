@@ -1,33 +1,33 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Curves/CurveFloat.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "AmmoDrivenGenericEventDelegate.h"
+#include "AmountChangedSignatureDelegate.h"
+#include "AnimatedItem.h"
 #include "DelegateDelegate.h"
 #include "EAmmoWeaponState.h"
-#include "Curves/CurveFloat.h"
-#include "RecoilSettings.h"
 #include "ItemAnimationItem.h"
-#include "TracerData.h"
-#include "AmountChangedSignatureDelegate.h"
-#include "AmmoDrivenGenericEventDelegate.h"
-#include "AnimatedItem.h"
+#include "RecoilSettings.h"
 #include "RejoinListener.h"
-#include "UpgradableGear.h"
+#include "TracerData.h"
 #include "Upgradable.h"
+#include "UpgradableGear.h"
 #include "WeaponFireOwner.h"
 #include "AmmoDrivenWeapon.generated.h"
 
-class UFXSystemAsset;
-class UAudioComponent;
-class UAmmoDriveWeaponAggregator;
-class UWeaponFireComponent;
-class UDialogDataAsset;
-class ULightComponent;
-class UItemUpgrade;
 class APlayerCharacter;
+class UAmmoDriveWeaponAggregator;
 class UAnimMontage;
+class UAudioComponent;
+class UDialogDataAsset;
+class UFXSystemAsset;
 class UForceFeedbackEffect;
+class UItemUpgrade;
+class ULightComponent;
 class USoundCue;
+class UWeaponFireComponent;
 
 UCLASS(Abstract, Blueprintable)
 class AAmmoDrivenWeapon : public AAnimatedItem, public IWeaponFireOwner, public IUpgradable, public IUpgradableGear, public IRejoinListener {

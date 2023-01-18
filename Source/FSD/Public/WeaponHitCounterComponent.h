@@ -4,9 +4,9 @@
 #include "WeaponHitCounterComponent.generated.h"
 
 class AActor;
-class UPrimitiveComponent;
-class UHealthComponentBase;
 class UFSDPhysicalMaterial;
+class UHealthComponentBase;
+class UPrimitiveComponent;
 class UWeaponHitCountEffect;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

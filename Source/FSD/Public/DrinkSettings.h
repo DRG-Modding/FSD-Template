@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Engine/DataAsset.h"
 #include "BarleySpawnItem.h"
 #include "RandInterval.h"
-#include "Engine/DataAsset.h"
 #include "DrinkSettings.generated.h"
 
+class UDrinkableDataAsset;
 class UObject;
 class UResourceData;
-class UDrinkableDataAsset;
 
 UCLASS(Blueprintable)
 class UDrinkSettings : public UDataAsset {

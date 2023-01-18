@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RepairedDelegateDelegate.h"
 #include "Components/ActorComponent.h"
+#include "RepairedDelegateDelegate.h"
 #include "RepairableComponent.generated.h"
 
-class UGemResourceData;
 class APlayerCharacter;
+class UGemResourceData;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class URepairableComponent : public UActorComponent {

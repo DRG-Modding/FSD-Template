@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TrackPositionList.h"
 #include "Components/ActorComponent.h"
+#include "TrackPositionList.h"
 #include "GemProximityTracker.generated.h"
 
 class UGemTracker;

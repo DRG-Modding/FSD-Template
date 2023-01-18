@@ -4,12 +4,12 @@
 #include "LookingAtContentWidget.generated.h"
 
 class AActor;
-class USimpleObjectInfoComponent;
-class UPetComponent;
-class UHackingUsableComponent;
-class UHealth;
 class IHealth;
+class UHealth;
+class UHackingUsableComponent;
 class UPawnAfflictionComponent;
+class UPetComponent;
+class USimpleObjectInfoComponent;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class ULookingAtContentWidget : public UUserWidget {

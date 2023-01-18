@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ProfileEntry.h"
-#include "ProfileCategoryTiming.h"
 #include "Subsystems/WorldSubsystem.h"
+#include "ProfileCategoryTiming.h"
+#include "ProfileEntry.h"
 #include "ProfilingSubSystem.generated.h"
 
 UCLASS(Blueprintable)

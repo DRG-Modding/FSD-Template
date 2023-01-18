@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BeamCollision.h"
 #include "GameFramework/Actor.h"
+#include "BeamCollision.h"
 #include "LockOnBeam.generated.h"
 
-class USceneComponent;
 class ALockOnWeapon;
-class USplineMeshComponent;
 class UMaterialInterface;
+class USceneComponent;
 class USplineComponent;
+class USplineMeshComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ALockOnBeam : public AActor {

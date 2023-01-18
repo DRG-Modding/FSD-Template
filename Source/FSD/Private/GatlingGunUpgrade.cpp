@@ -1,8 +1,8 @@
 #include "GatlingGunUpgrade.h"
 #include "Templates/SubclassOf.h"
 
-class AItem;
 class AFSDPlayerState;
+class AItem;
 
 FUpgradeValues UGatlingGunUpgrade::GetUpgradedValue(TSubclassOf<AItem> Item, AFSDPlayerState* Player, EGatlingGunUpgrade NewUpgradeType) {
     return FUpgradeValues{};

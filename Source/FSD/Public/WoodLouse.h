@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "EWoodLouseState.h"
 #include "GameplayTagContainer.h"
 #include "BumpPlayerHit.h"
+#include "EWoodLouseState.h"
 #include "EnemyDeepPathfinderCharacter.h"
+#include "Templates/SubclassOf.h"
 #include "WoodLouse.generated.h"
 
 class AActor;
-class USceneComponent;
-class UAudioComponent;
 class APawn;
 class AProjectile;
+class UAudioComponent;
 class UDamageClass;
 class UFakeMoverSettings;
-class UStatusEffect;
-class USoundBase;
 class UPawnSensingComponent;
+class USceneComponent;
+class USoundBase;
+class UStatusEffect;
 
 UCLASS(Blueprintable)
 class AWoodLouse : public AEnemyDeepPathfinderCharacter {

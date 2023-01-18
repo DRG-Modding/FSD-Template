@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EquippedActorData.h"
 #include "Components/ActorComponent.h"
+#include "EquippedActorData.h"
 #include "InventoryBase.generated.h"
 
 class AActor;

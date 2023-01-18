@@ -5,10 +5,10 @@
 #include "MULE.h"
 #include "Molly.generated.h"
 
-class UNiagaraSystem;
-class UDialogDataAsset;
-class UOutlineComponent;
 class APlayerCharacter;
+class UDialogDataAsset;
+class UNiagaraSystem;
+class UOutlineComponent;
 class UResourceBank;
 
 UCLASS(Abstract, Blueprintable)

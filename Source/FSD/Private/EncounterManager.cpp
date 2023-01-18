@@ -1,8 +1,8 @@
 #include "EncounterManager.h"
 
-class UEnemyGroupDescriptor;
 class UCritterDescriptor;
 class UEnemyDescriptor;
+class UEnemyGroupDescriptor;
 
 void UEncounterManager::ShowSpawnLocations() {
 }

@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EPreviewCellSize.h"
 #include "CSGBuilderBase.h"
+#include "EPreviewCellSize.h"
 #include "SDFBuilder.generated.h"
 
-class UTerrainMaterialCore;
-class USDFUnionOpComponent;
 class USDFBase;
+class USDFUnionOpComponent;
+class UTerrainMaterialCore;
 
 UCLASS(Blueprintable)
 class FSDENGINE_API ASDFBuilder : public ACSGBuilderBase {

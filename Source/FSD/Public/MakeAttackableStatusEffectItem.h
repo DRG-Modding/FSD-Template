@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "StatusEffectItem.h"
+#include "Templates/SubclassOf.h"
 #include "MakeAttackableStatusEffectItem.generated.h"
 
 class UAttackerPositioningComponent;

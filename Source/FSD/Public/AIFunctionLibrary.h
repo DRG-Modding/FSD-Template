@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "UObject/NoExportTypes.h"
 #include "AIFunctionLibrary.generated.h"
 
-class UObject;
 class AActor;
 class APawn;
-class UAttackerPositioningComponent;
 class APlayerCharacter;
+class UAttackerPositioningComponent;
+class UObject;
 
 UCLASS(Blueprintable)
 class UAIFunctionLibrary : public UBlueprintFunctionLibrary {

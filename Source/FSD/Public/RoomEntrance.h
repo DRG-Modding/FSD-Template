@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "ECaveEntranceType.h"
 #include "ECaveEntrancePriority.h"
+#include "ECaveEntranceType.h"
 #include "RoomEntrance.generated.h"
 
 USTRUCT(BlueprintType)

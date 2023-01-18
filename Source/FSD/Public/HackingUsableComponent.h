@@ -4,9 +4,9 @@
 #include "InstantUsable.h"
 #include "HackingUsableComponent.generated.h"
 
-class UHackingToolWidget;
 class AHackingToolItem;
 class APlayerCharacter;
+class UHackingToolWidget;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UHackingUsableComponent : public UInstantUsable {

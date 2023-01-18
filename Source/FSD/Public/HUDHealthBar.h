@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "EHealthbarType.h"
+#include "FSDUserWidget.h"
 #include "HUDHealthBarSignatureDelegate.h"
 #include "HealthBarLooks.h"
-#include "FSDUserWidget.h"
 #include "HUDHealthBar.generated.h"
 
-class UHealth;
 class IHealth;
+class UHealth;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UHUDHealthBar : public UFSDUserWidget {

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "BEETemplateItem.generated.h"
 
-class UMissionDuration;
 class UMissionComplexity;
+class UMissionDuration;
 class UMissionTemplate;
 
 USTRUCT(BlueprintType)

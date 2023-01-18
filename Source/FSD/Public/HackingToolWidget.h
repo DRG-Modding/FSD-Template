@@ -3,9 +3,9 @@
 #include "Blueprint/UserWidget.h"
 #include "HackingToolWidget.generated.h"
 
+class AHackingToolItem;
 class UDialogDataAsset;
 class UHackingUsableComponent;
-class AHackingToolItem;
 class USoundCue;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)

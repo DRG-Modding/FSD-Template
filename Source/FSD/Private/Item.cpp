@@ -4,14 +4,14 @@
 #include "UpgradableItemComponent.h"
 
 class AActor;
-class USceneComponent;
-class UAudioComponent;
 class AItem;
+class UAudioComponent;
 class UItemCharacterAnimationSet;
-class USoundBase;
-class UTexture2D;
-class USoundConcurrency;
+class USceneComponent;
 class USoundAttenuation;
+class USoundBase;
+class USoundConcurrency;
+class UTexture2D;
 
 void AItem::UpdateSkin() {
 }

@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
+#include "Templates/SubclassOf.h"
 #include "InfectionMasterComponent.generated.h"
 
-class UStaticMeshComponent;
-class UHealthComponentBase;
 class UHealthComponent;
-class UStatusEffect;
+class UHealthComponentBase;
 class UMaterialInterface;
 class UStaticMesh;
+class UStaticMeshComponent;
+class UStatusEffect;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UInfectionMasterComponent : public UActorComponent {

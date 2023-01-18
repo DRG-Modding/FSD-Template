@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "GameModeFunctionLibrary.generated.h"
 
-class UObject;
 class AActor;
 class AFSDGameState;
+class UObject;
 class USeamlessTravelEventKey;
 
 UCLASS(Blueprintable)

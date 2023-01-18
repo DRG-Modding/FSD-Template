@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MusicHandle.h"
-#include "ActiveAudioItem.h"
 #include "Subsystems/WorldSubsystem.h"
+#include "ActiveAudioItem.h"
+#include "MusicHandle.h"
 #include "MusicManager.generated.h"
 
 class UMusicCategory;

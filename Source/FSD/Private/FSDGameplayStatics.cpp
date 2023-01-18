@@ -1,11 +1,11 @@
 #include "FSDGameplayStatics.h"
 
-class UObject;
 class AActor;
-class UFXSystemComponent;
 class UAudioComponent;
-class UMaterialInterface;
 class UDecalComponent;
+class UFXSystemComponent;
+class UMaterialInterface;
+class UObject;
 
 UFXSystemComponent* UFSDGameplayStatics::SpawnScaledEmitterAtLocation(UObject* WorldContextObject, FScaledEffect ScaledEffect, FVector Location, FRotator Rotation, bool bAutoDestroy) {
     return NULL;

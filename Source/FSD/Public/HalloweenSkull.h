@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Curves/CurveFloat.h"
+#include "UObject/NoExportTypes.h"
 #include "EnemyDeepPathfinderCharacter.h"
 #include "HalloweenSkull.generated.h"
 

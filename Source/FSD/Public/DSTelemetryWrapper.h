@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Subsystems/GameInstanceSubsystem.h"
+#include "Templates/SubclassOf.h"
 #include "DSTelemetryWrapper.generated.h"
 
 class AActor;
-class UDSTelemetry;
-class APlayerController;
 class AFSDPlayerController;
-class UGeneratedMission;
 class APlayerCharacter;
+class APlayerController;
+class UDSTelemetry;
+class UGeneratedMission;
 class USeasonChallenge;
 
 UCLASS(Blueprintable)

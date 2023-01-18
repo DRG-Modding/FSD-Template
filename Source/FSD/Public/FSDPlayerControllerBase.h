@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "PlatformComponent.h"
-#include "EMinersManualSection.h"
-#include "EHUDVisibilityReason.h"
-#include "EMinersManualSinglePage.h"
-#include "EDisconnectReason.h"
-#include "LocalVoiceStatusDelegate.h"
 #include "GameFramework/PlayerController.h"
+#include "UObject/NoExportTypes.h"
+#include "EDisconnectReason.h"
+#include "EHUDVisibilityReason.h"
+#include "EMinersManualSection.h"
+#include "EMinersManualSinglePage.h"
+#include "LocalVoiceStatusDelegate.h"
+#include "PlatformComponent.h"
 #include "FSDPlayerControllerBase.generated.h"
 
 class UEscapeMenuWindow;
+class UMaterialParameterCollection;
 class UPlayerCharacterID;
 class UWindowManager;
-class UMaterialParameterCollection;
 
 UCLASS(Blueprintable)
 class AFSDPlayerControllerBase : public APlayerController {

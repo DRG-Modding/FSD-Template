@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "ABillityChargeProgressDelegate.h"
-#include "AbillityChargeUsedSigDelegate.h"
-#include "AbilityDataUpdatedDelegate.h"
-#include "BoscoAbilityTarget.h"
 #include "Components/ActorComponent.h"
+#include "ABillityChargeProgressDelegate.h"
+#include "AbilityDataUpdatedDelegate.h"
+#include "AbillityChargeUsedSigDelegate.h"
+#include "BoscoAbilityTarget.h"
+#include "Templates/SubclassOf.h"
 #include "Upgradable.h"
 #include "BoscoAbillityComponent.generated.h"
 
-class UBoscoProjectileAbillity;
 class ABosco;
-class AProjectileBase;
 class ADroneStream;
+class AProjectileBase;
+class UBoscoProjectileAbillity;
 class UItemUpgrade;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

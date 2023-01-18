@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ItemUpgrade.h"
 #include "Templates/SubclassOf.h"
 #include "UpgradeValues.h"
-#include "ItemUpgrade.h"
 #include "WeaponHitCounterUpgrade.generated.h"
 
 class AActor;

@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ItemLoadoutAnimations.h"
 #include "Engine/DataAsset.h"
+#include "ItemLoadoutAnimations.h"
 #include "ItemCharacterAnimationSet.generated.h"
 
-class UItemCharacterAnimationSet;
-class UBlendSpace1D;
-class UAnimSequence;
 class UAnimMontage;
+class UAnimSequence;
+class UBlendSpace1D;
+class UItemCharacterAnimationSet;
 
 UCLASS(Blueprintable)
 class UItemCharacterAnimationSet : public UDataAsset {

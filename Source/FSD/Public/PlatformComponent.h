@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "EPlatformComponentCriteria.h"
+#include "Templates/SubclassOf.h"
 #include "PlatformComponent.generated.h"
 
 class UActorComponent;

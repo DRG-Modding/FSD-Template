@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DamageData.h"
 #include "Engine/NetSerialization.h"
+#include "DamageData.h"
 #include "EnemyDeepPathfinderCharacter.h"
 #include "AFlyingBug.generated.h"
 
 class AActor;
 class UAudioComponent;
 class UDamageTag;
-class UFrozenPawnImpactComponent;
 class UEnemyComponent;
-class UHealthComponentBase;
+class UFrozenPawnImpactComponent;
 class UHealthComponent;
-class USphereComponent;
+class UHealthComponentBase;
 class UHitReactionComponent;
 class UOutlineComponent;
-class UPawnStatsComponent;
 class UPawnAlertComponent;
-class USoundBase;
 class UPawnSensingComponent;
+class UPawnStatsComponent;
+class USoundBase;
+class USphereComponent;
 
 UCLASS(Blueprintable)
 class AAFlyingBug : public AEnemyDeepPathfinderCharacter {

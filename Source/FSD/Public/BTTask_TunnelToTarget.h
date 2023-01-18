@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BehaviorTree/BTTaskNode.h"
+#include "UObject/NoExportTypes.h"
 #include "BTTask_TunnelToTarget.generated.h"
 
 UCLASS(Blueprintable)

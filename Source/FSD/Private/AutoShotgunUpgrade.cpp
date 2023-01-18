@@ -1,8 +1,8 @@
 #include "AutoShotgunUpgrade.h"
 #include "Templates/SubclassOf.h"
 
-class AItem;
 class AFSDPlayerState;
+class AItem;
 
 FUpgradeValues UAutoShotgunUpgrade::GetUpgradedValue(TSubclassOf<AItem> Item, AFSDPlayerState* Player, EAutoShotgunUpgrades NewUpgradeType) {
     return FUpgradeValues{};

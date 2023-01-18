@@ -1,8 +1,8 @@
 #include "ChargedWeaponUpgrade.h"
 #include "Templates/SubclassOf.h"
 
-class AItem;
 class AFSDPlayerState;
+class AItem;
 
 FUpgradeValues UChargedWeaponUpgrade::GetUpgradedValue(TSubclassOf<AItem> Item, AFSDPlayerState* Player, EChargedWeaponUpgrades NewUpgradeType) {
     return FUpgradeValues{};

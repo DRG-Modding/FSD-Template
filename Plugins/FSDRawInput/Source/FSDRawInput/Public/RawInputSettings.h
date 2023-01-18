@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RawInputDeviceConfiguration.h"
 #include "Engine/DeveloperSettings.h"
+#include "RawInputDeviceConfiguration.h"
 #include "RawInputSettings.generated.h"
 
-UCLASS(Blueprintable, DefaultConfig, Config=Input)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Input)
 class URawInputSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:

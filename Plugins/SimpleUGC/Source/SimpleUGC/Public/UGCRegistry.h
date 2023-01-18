@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+#include "UObject/Object.h"
 #include "EPackageSortField.h"
 #include "EUGCApprovalStatus.h"
-#include "UObject/Object.h"
+#include "Templates/SubclassOf.h"
 #include "UGCRegistry.generated.h"
 
 class AActor;

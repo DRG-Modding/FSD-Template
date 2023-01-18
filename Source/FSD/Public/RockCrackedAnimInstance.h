@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ERockCrackerstate.h"
 #include "Animation/AnimInstance.h"
+#include "ERockCrackerstate.h"
 #include "RockCrackedAnimInstance.generated.h"
 
 class ARockCrackerPod;

@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "EItemUpgradeStatus.h"
-#include "CraftingCost.h"
-#include "GearStatEntry.h"
-#include "UpgradeTier.h"
-#include "MasteryItem.h"
 #include "Components/ActorComponent.h"
+#include "CraftingCost.h"
+#include "EItemUpgradeStatus.h"
+#include "GearStatEntry.h"
+#include "MasteryItem.h"
+#include "Templates/SubclassOf.h"
+#include "UpgradeTier.h"
 #include "UpgradableGearComponent.generated.h"
 
-class UObject;
 class AActor;
-class UResourceData;
-class AFSDPlayerState;
 class AFSDPlayerController;
-class UItemUpgrade;
-class UItemData;
-class UOverclockBank;
-class UItemID;
-class UPlayerCharacterID;
+class AFSDPlayerState;
 class APlayerCharacter;
+class UItemData;
+class UItemID;
+class UItemUpgrade;
+class UObject;
+class UOverclockBank;
+class UPlayerCharacterID;
+class UResourceData;
 class UTexture2D;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

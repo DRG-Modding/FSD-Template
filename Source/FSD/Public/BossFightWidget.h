@@ -3,8 +3,8 @@
 #include "Blueprint/UserWidget.h"
 #include "BossFightWidget.generated.h"
 
-class UBossFightInterface;
 class IBossFightInterface;
+class UBossFightInterface;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UBossFightWidget : public UUserWidget {

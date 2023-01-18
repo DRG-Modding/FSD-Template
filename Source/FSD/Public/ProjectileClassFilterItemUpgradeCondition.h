@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "ItemUpgradeCondition.h"
+#include "Templates/SubclassOf.h"
 #include "ProjectileClassFilterItemUpgradeCondition.generated.h"
 
 class AProjectileBase;

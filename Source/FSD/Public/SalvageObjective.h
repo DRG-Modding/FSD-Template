@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "DelegateDelegate.h"
 #include "Objective.h"
+#include "Templates/SubclassOf.h"
 #include "SalvageObjective.generated.h"
 
 class AActor;
+class AMiniMule;
+class AMiningPod;
+class AProceduralSetup;
+class UCurveFloat;
 class UDebrisBase;
 class UDebrisPositioning;
 class UGemResourceData;
-class AMiningPod;
-class AMiniMule;
-class AProceduralSetup;
 class URepairableComponent;
-class UCurveFloat;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API USalvageObjective : public UObjective {

@@ -5,10 +5,10 @@
 #include "ItemRackComponent.generated.h"
 
 class AActor;
-class USceneComponent;
-class UUsableComponent;
 class APlayerCharacter;
 class URackableItemComponent;
+class USceneComponent;
+class UUsableComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UItemRackComponent : public USingleUsableComponent {

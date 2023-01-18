@@ -4,9 +4,9 @@
 #include "VanityItem.h"
 #include "ArmorVanityItem.generated.h"
 
+class AFSDPlayerState;
 class UAnimInstance;
 class UArmorMaterialVanityItem;
-class AFSDPlayerState;
 class UMaterialInterface;
 class USkeletalMesh;
 

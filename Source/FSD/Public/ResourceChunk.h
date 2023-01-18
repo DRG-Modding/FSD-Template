@@ -4,9 +4,9 @@
 #include "FSDPhysicsActor.h"
 #include "ResourceChunk.generated.h"
 
+class APlayerCharacter;
 class UResourceData;
 class USimpleObjectInfoComponent;
-class APlayerCharacter;
 class USoundCue;
 
 UCLASS(Blueprintable)

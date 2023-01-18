@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "Engine/EngineTypes.h"
 #include "GameFramework/Actor.h"
+#include "Engine/EngineTypes.h"
+#include "Templates/SubclassOf.h"
 #include "CoilgunWeaponTrail.generated.h"
 
-class USceneComponent;
-class UPrimitiveComponent;
-class UNiagaraComponent;
 class UCapsuleComponent;
+class UNiagaraComponent;
+class UPrimitiveComponent;
+class USceneComponent;
 class UStatusEffect;
 
 UCLASS(Blueprintable)

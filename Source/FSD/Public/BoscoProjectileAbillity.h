@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "BoscoAbillity.h"
+#include "Templates/SubclassOf.h"
 #include "BoscoProjectileAbillity.generated.h"
 
 class AProjectile;

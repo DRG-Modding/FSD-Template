@@ -1,10 +1,10 @@
 #include "TowerEventModule.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/SceneComponent.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Particles/ParticleSystemComponent.h"
 #include "ArmorHealthDamageComponent.h"
 #include "EnemyHealthComponent.h"
-#include "Particles/ParticleSystemComponent.h"
+#include "Net/UnrealNetwork.h"
 #include "WeakpointGlowComponent.h"
 
 

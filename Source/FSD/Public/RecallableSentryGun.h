@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "RecallableActor.h"
+#include "Templates/SubclassOf.h"
 #include "RecallableSentryGun.generated.h"
 
 class APlayerCharacter;

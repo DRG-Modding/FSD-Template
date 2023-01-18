@@ -3,8 +3,8 @@
 #include "SubHealthComponent.h"
 #include "DestructibleSubHealthComponent.generated.h"
 
-class USceneComponent;
 class UDestructibleSubHealthComponent;
+class USceneComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UDestructibleSubHealthComponent : public USubHealthComponent {

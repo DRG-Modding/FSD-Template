@@ -3,9 +3,9 @@
 #include "ClaimableRewardEntry.h"
 #include "ClaimableRewardView.generated.h"
 
-class UUserWidget;
 class UDialogDataAsset;
 class USoundCue;
+class UUserWidget;
 
 USTRUCT(BlueprintType)
 struct FClaimableRewardView {

@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Engine/DataAsset.h"
+#include "Templates/SubclassOf.h"
 #include "MissionMutator.generated.h"
 
+class UMutator;
 class UObjective;
 class URunningMissionBP;
-class UMutator;
 class UTexture2D;
 
 UCLASS(Blueprintable)

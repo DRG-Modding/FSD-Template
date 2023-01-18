@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EItemSkinType.h"
 #include "Components/ActorComponent.h"
+#include "EItemSkinType.h"
 #include "SkinnableComponent.generated.h"
 
 class AFSDPlayerState;
-class UItemSkin;
 class UItemID;
+class UItemSkin;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API USkinnableComponent : public UActorComponent {

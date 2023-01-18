@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Engine/DataAsset.h"
+#include "Templates/SubclassOf.h"
 #include "VictoryPoseSettings.generated.h"
 
 class AActor;
 class UActorComponent;
-class UVictoryPose;
 class UTexture2D;
+class UVictoryPose;
 
 UCLASS(Blueprintable)
 class UVictoryPoseSettings : public UDataAsset {

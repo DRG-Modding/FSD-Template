@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Animation/AnimNotifies/AnimNotify.h"
+#include "Templates/SubclassOf.h"
 #include "AnimNotify_CameraShake.generated.h"
 
 class UCameraShakeBase;

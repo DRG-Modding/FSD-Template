@@ -3,8 +3,8 @@
 #include "VanityItem.h"
 #include "EyeBrowsVanityItem.generated.h"
 
-class UVanityAnimInstance;
 class USkeletalMesh;
+class UVanityAnimInstance;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UEyeBrowsVanityItem : public UVanityItem {

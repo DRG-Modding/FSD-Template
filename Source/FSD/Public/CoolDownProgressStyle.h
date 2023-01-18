@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
+#include "Templates/SubclassOf.h"
 #include "CoolDownProgressStyle.generated.h"
 
 class UCoolDownProgressWidget;
-class UTexture2D;
 class USoundCue;
+class UTexture2D;
 
 USTRUCT(BlueprintType)
 struct FCoolDownProgressStyle {

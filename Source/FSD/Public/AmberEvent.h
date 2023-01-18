@@ -3,9 +3,9 @@
 #include "GameEvent.h"
 #include "AmberEvent.generated.h"
 
-class UAmberEventEnemyPool;
-class APawn;
 class AFSDPawn;
+class APawn;
+class UAmberEventEnemyPool;
 class UDamageComponent;
 class UHealthComponentBase;
 

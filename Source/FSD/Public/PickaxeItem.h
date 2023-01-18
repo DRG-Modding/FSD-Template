@@ -1,31 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
-#include "CoolDownProgressStyle.h"
-#include "Engine/NetSerialization.h"
 #include "GameplayTagContainer.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/NetSerialization.h"
+#include "Engine/NetSerialization.h"
+#include "CoolDownProgressStyle.h"
 #include "EPickaxePartLocation.h"
 #include "EPickaxeState.h"
-#include "PickaxeMeshInstance.h"
 #include "Item.h"
-#include "UpgradableGear.h"
+#include "PickaxeMeshInstance.h"
 #include "PickaxePartEquip.h"
+#include "Templates/SubclassOf.h"
+#include "UpgradableGear.h"
 #include "PickaxeItem.generated.h"
 
-class USceneComponent;
-class UPrimitiveComponent;
-class UFXSystemAsset;
+class UAnimMontage;
 class UDamageComponent;
 class UFSDPhysicalMaterial;
-class UItemCharacterAnimationSet;
-class UPlayerAnimInstance;
-class UStatusEffect;
-class UMaterialInterface;
-class UAnimMontage;
+class UFXSystemAsset;
 class UForceFeedbackEffect;
+class UItemCharacterAnimationSet;
+class UMaterialInterface;
+class UPlayerAnimInstance;
+class UPrimitiveComponent;
+class USceneComponent;
 class USoundCue;
+class UStatusEffect;
 
 UCLASS(Abstract, Blueprintable)
 class APickaxeItem : public AItem, public IUpgradableGear, public IPickaxePartEquip {

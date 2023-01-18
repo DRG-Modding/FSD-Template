@@ -1,7 +1,7 @@
 #include "GetFriendsListBlueprintCallProxy.h"
 
-class UObject;
 class UGetFriendsListBlueprintCallProxy;
+class UObject;
 
 UGetFriendsListBlueprintCallProxy* UGetFriendsListBlueprintCallProxy::GetFriendsList(UObject* NewWorldContextObject, const FString& ListName) {
     return NULL;

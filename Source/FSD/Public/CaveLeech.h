@@ -2,18 +2,18 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/NetSerialization.h"
-#include "ECaveLeechState.h"
 #include "AttackingPointInterface.h"
+#include "ECaveLeechState.h"
 #include "EnemyPawn.h"
 #include "CaveLeech.generated.h"
 
 class AActor;
+class UGrabberComponent;
+class UHealthComponent;
+class UHealthComponentBase;
+class UPawnAffliction;
 class USceneComponent;
 class USkeletalMeshComponent;
-class UHealthComponentBase;
-class UHealthComponent;
-class UGrabberComponent;
-class UPawnAffliction;
 
 UCLASS(Abstract, Blueprintable)
 class ACaveLeech : public AEnemyPawn, public IAttackingPointInterface {

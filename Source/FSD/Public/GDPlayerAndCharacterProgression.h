@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
+#include "Templates/SubclassOf.h"
 #include "GDPlayerAndCharacterProgression.generated.h"
 
-class UPlayerCharacterID;
 class APlayerCharacter;
+class UPlayerCharacterID;
 
 USTRUCT(BlueprintType)
 struct FGDPlayerAndCharacterProgression {

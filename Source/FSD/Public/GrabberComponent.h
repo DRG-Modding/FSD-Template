@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EOutline.h"
-#include "EGrabbedStateCameraMode.h"
-#include "ReleasedActorSigDelegate.h"
-#include "GrabbedActorSigDelegate.h"
-#include "GameplayTagContainer.h"
 #include "Components/ActorComponent.h"
+#include "GameplayTagContainer.h"
+#include "EGrabbedStateCameraMode.h"
+#include "EOutline.h"
+#include "GrabbedActorSigDelegate.h"
+#include "ReleasedActorSigDelegate.h"
 #include "GrabberComponent.generated.h"
 
 class AActor;
+class ADeepPathfinderCharacter;
+class UAudioComponent;
+class UDialogDataAsset;
 class UPrimitiveComponent;
 class USkeletalMeshComponent;
-class UAudioComponent;
-class ADeepPathfinderCharacter;
-class UDialogDataAsset;
 class USoundCue;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

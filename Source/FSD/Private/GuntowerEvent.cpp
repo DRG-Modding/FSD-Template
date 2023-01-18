@@ -1,6 +1,6 @@
 #include "GuntowerEvent.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Net/UnrealNetwork.h"
 
 void AGuntowerEvent::SpawnModules() {
 }

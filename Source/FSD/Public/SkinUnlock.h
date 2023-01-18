@@ -3,8 +3,8 @@
 #include "UnlockReward.h"
 #include "SkinUnlock.generated.h"
 
-class UItemSkin;
 class UItemID;
+class UItemSkin;
 class UPlayerCharacterID;
 
 UCLASS(Blueprintable, EditInlineNew)

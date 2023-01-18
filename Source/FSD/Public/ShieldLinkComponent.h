@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "FloatPerkComponent.h"
+#include "Templates/SubclassOf.h"
 #include "ShieldLinkComponent.generated.h"
 
 class APlayerCharacter;

@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Animation/AnimNotifies/AnimNotifyState_TimedParticleEffect.h"
+#include "UObject/NoExportTypes.h"
 #include "AnimNotifyState_TimedParticleEffectWithImpactDecals.generated.h"
 
-class UPhysicalMaterial;
 class UMaterialInterface;
+class UPhysicalMaterial;
 
 UCLASS(Blueprintable, CollapseCategories, EditInlineNew)
 class UAnimNotifyState_TimedParticleEffectWithImpactDecals : public UAnimNotifyState_TimedParticleEffect {

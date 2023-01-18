@@ -1,7 +1,7 @@
 #include "PickaxeMaterialPart.h"
 
-class UObject;
 class UMaterialInstanceDynamic;
+class UObject;
 
 UMaterialInstanceDynamic* UPickaxeMaterialPart::CreateIcon(UObject* Owner) const {
     return NULL;

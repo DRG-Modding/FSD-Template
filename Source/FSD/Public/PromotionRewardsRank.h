@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ClaimableRewardEntry.h"
 #include "ClaimableRewardArray.h"
+#include "ClaimableRewardEntry.h"
 #include "PromotionRewardsRank.generated.h"
 
 class UPlayerCharacterID;

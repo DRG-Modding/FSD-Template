@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/SceneComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "RotateToFace.generated.h"
 
 class AActor;

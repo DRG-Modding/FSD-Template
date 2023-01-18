@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SDFRandomizeTransformProperties.h"
 #include "SDFBaseComponent.h"
+#include "SDFRandomizeTransformProperties.h"
 #include "SDFRandomizeTransformComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

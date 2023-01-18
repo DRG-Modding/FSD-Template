@@ -1,9 +1,9 @@
 #include "FlareController.h"
 
-class UObject;
 class AActor;
-class AFlareGunProjectile;
 class AFlare;
+class AFlareGunProjectile;
+class UObject;
 
 void UFlareController::UnregisterFlareGunProjectile(AFlareGunProjectile* flareprj) {
 }

@@ -2,11 +2,11 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "MeshLayerProperties.h"
-#include "GeneralTerrainMaterialCombiner.h"
-#include "DeepCSGTree.h"
-#include "DeepCSGFloatTree.h"
 #include "CSGGroup.h"
+#include "DeepCSGFloatTree.h"
+#include "DeepCSGTree.h"
+#include "GeneralTerrainMaterialCombiner.h"
+#include "MeshLayerProperties.h"
 #include "CSGLayer.generated.h"
 
 UCLASS(Blueprintable)

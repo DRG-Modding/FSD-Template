@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESchematicType.h"
 #include "DeepDiveTemplateItem.h"
+#include "ESchematicType.h"
 #include "RandInterval.h"
 #include "SavableDataAsset.h"
 #include "DeepDiveTemplate.generated.h"
 
 class UDifficultySetting;
-class UMissionDuration;
 class UMissionComplexity;
+class UMissionDuration;
 class UMissionTemplate;
 
 UCLASS(Blueprintable)

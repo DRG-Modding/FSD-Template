@@ -5,11 +5,11 @@
 
 class UBiome;
 class UFSDEvent;
-class UMissionDuration;
 class UMissionComplexity;
-class UMissionWarning;
-class UMissionTemplate;
+class UMissionDuration;
 class UMissionMutator;
+class UMissionTemplate;
+class UMissionWarning;
 
 USTRUCT(BlueprintType)
 struct FGeneratedMissionSeed {

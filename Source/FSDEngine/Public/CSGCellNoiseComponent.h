@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MeshCellNoiseProperties.h"
 #include "BinaryTerrainMaterialCombiner.h"
 #include "CSGBaseComponent.h"
+#include "MeshCellNoiseProperties.h"
 #include "CSGCellNoiseComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

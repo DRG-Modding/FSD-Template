@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "DecalData.h"
 #include "EDebrisMeshCollisionProfile.h"
 #include "EDebrisMeshShadows.h"
-#include "DecalData.h"
 #include "DebrisStaticMesh.generated.h"
 
 class UFXSystemAsset;

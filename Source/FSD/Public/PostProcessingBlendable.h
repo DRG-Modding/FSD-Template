@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "PostProcessingBlendable.generated.h"
 
-class UBlendableInterface;
 class IBlendableInterface;
+class UBlendableInterface;
 
 USTRUCT(BlueprintType)
 struct FPostProcessingBlendable {

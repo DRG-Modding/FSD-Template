@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CSGGridDuplicatorProperties.h"
 #include "CSGDuplicateSingleChildBase.h"
+#include "CSGGridDuplicatorProperties.h"
 #include "CSGGridDuplicator.generated.h"
 
 UCLASS(Blueprintable)

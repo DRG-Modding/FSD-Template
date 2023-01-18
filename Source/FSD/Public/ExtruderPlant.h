@@ -3,9 +3,9 @@
 #include "GameFramework/Actor.h"
 #include "ExtruderPlant.generated.h"
 
-class USkeletalMeshComponent;
-class UAudioComponent;
 class UAnimationAsset;
+class UAudioComponent;
+class USkeletalMeshComponent;
 
 UCLASS(Abstract, Blueprintable)
 class AExtruderPlant : public AActor {

@@ -3,9 +3,9 @@
 #include "DeepPathfinderCharacter.h"
 #include "DroneCharacter.generated.h"
 
-class USimpleObjectInfoComponent;
 class UHealthComponent;
 class UOutlineComponent;
+class USimpleObjectInfoComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ADroneCharacter : public ADeepPathfinderCharacter {

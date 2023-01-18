@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DeepCSGNode.h"
 #include "DeepCSGFloatPlane.h"
+#include "DeepCSGNode.h"
 #include "DeepCSGFloatTree.generated.h"
 
 USTRUCT(BlueprintType)

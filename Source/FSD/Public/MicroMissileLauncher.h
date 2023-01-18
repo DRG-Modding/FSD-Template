@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EMicroMissileLauncherFireMode.h"
 #include "AmmoDrivenWeapon.h"
+#include "EMicroMissileLauncherFireMode.h"
 #include "MicroMissileLauncher.generated.h"
 
 class UAnimMontage;

@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "LaserPointerData.h"
 #include "GameFramework/Actor.h"
+#include "LaserPointerData.h"
 #include "LaserPointerMarker.generated.h"
 
-class UPrimitiveComponent;
 class APlayerCharacter;
+class UPrimitiveComponent;
 class UTerrainMaterial;
 
 UCLASS(Abstract, Blueprintable)

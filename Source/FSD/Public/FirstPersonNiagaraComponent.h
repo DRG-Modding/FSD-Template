@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "Engine/EngineTypes.h"
 #include "NiagaraComponent.h"
+#include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "FirstPersonNiagaraComponent.generated.h"
 
-class USceneComponent;
 class UNiagaraSystem;
+class USceneComponent;
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFirstPersonNiagaraComponent : public UNiagaraComponent {

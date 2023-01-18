@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "EPlaceableObstructionType.h"
 #include "AnimatedItem.h"
+#include "EPlaceableObstructionType.h"
 #include "PlaceableInterface.h"
+#include "Templates/SubclassOf.h"
 #include "TrackBuilderItem.generated.h"
 
-class UCrosshairAggregator;
 class ATrackBuilderSegment;
+class UCrosshairAggregator;
 class UTrackBuilderConnectPoint;
 class UTrackBuilderUsable;
 

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "ItemUpgradeElement.h"
+#include "Templates/SubclassOf.h"
 #include "ReplaceSkeletonMeshUpgradeElement.generated.h"
 
 class UAnimInstance;

@@ -5,8 +5,8 @@
 #include "ProjectileImpact.generated.h"
 
 class AActor;
-class UPrimitiveComponent;
 class UPhysicalMaterial;
+class UPrimitiveComponent;
 
 USTRUCT(BlueprintType)
 struct FProjectileImpact {

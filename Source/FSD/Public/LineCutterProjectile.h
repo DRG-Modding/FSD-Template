@@ -5,13 +5,13 @@
 #include "Engine/EngineTypes.h"
 #include "EImpactDecalSize.h"
 #include "ELineRotation.h"
-#include "ScaledEffect.h"
 #include "Projectile.h"
+#include "ScaledEffect.h"
 #include "LineCutterProjectile.generated.h"
 
-class USceneComponent;
 class UDamageComponent;
 class UParticleSystemComponent;
+class USceneComponent;
 
 UCLASS(Blueprintable)
 class ALineCutterProjectile : public AProjectile {

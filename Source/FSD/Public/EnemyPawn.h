@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "QueuedMontage.h"
 #include "FSDPawn.h"
 #include "NetMontageAble.h"
+#include "QueuedMontage.h"
 #include "EnemyPawn.generated.h"
 
-class UMeshComponent;
 class UAnimInstance;
-class USkeletalMeshComponent;
+class UAnimMontage;
 class UEnemyComponent;
 class UEnemyHealthComponent;
-class UPawnStatsComponent;
 class UEnemyPawnAfflictionComponent;
 class UMaterialInterface;
-class UAnimMontage;
+class UMeshComponent;
+class UPawnStatsComponent;
+class USkeletalMeshComponent;
 
 UCLASS(Abstract, Blueprintable)
 class AEnemyPawn : public AFSDPawn, public INetMontageAble {

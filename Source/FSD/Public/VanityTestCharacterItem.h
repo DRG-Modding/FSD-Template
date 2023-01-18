@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "VanityTestCharacterItem.generated.h"
 
-class UVanityAnimInstance;
 class USkeletalMesh;
+class UVanityAnimInstance;
 
 USTRUCT(BlueprintType)
 struct FVanityTestCharacterItem {

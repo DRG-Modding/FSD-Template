@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
+#include "UObject/NoExportTypes.h"
+#include "Templates/SubclassOf.h"
 #include "PlayerAfflictionOverlay.generated.h"
 
 class UPlayerAfflictionOverlayWidget;
-class UTexture2D;
 class USoundCue;
+class UTexture2D;
 
 UCLASS(Blueprintable)
 class UPlayerAfflictionOverlay : public UDataAsset {

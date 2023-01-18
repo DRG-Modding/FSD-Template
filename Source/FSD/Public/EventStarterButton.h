@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EInputKeys.h"
-#include "BootUpDelegateDelegate.h"
 #include "GameFramework/Actor.h"
+#include "BootUpDelegateDelegate.h"
+#include "EInputKeys.h"
 #include "EventStarterButton.generated.h"
 
-class USceneComponent;
 class APlayerCharacter;
+class USceneComponent;
 class USingleUsableComponent;
 
 UCLASS(Blueprintable)

@@ -1,6 +1,6 @@
 #include "ShieldGeneratorItem.h"
-#include "Net/UnrealNetwork.h"
 #include "CapacityHoldingItemAggregator.h"
+#include "Net/UnrealNetwork.h"
 
 
 

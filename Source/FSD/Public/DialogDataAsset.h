@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DialogStruct.h"
 #include "Engine/DataAsset.h"
+#include "DialogStruct.h"
 #include "DialogDataAsset.generated.h"
 
 class UObject;

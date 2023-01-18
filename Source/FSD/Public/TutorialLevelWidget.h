@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "FSDUserWidget.h"
+#include "Templates/SubclassOf.h"
 #include "TutorialLevelWidget.generated.h"
 
 class UTutorialContentWidget;

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ECommunityGoalIndex.h"
 #include "Engine/DataAsset.h"
+#include "ECommunityGoalIndex.h"
 #include "CommunityGoalSettings.generated.h"
 
 class UCommunityGoal;

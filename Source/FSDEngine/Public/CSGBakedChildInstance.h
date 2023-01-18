@@ -3,8 +3,8 @@
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "CSGBakedChildInstanceProperties.h"
-#include "DeepCSGFloatTree.h"
 #include "CSGBase.h"
+#include "DeepCSGFloatTree.h"
 #include "CSGBakedChildInstance.generated.h"
 
 UCLASS(Blueprintable)

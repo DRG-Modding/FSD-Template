@@ -3,8 +3,8 @@
 #include "ResourceBasedObjective.h"
 #include "ResourceObjective.generated.h"
 
-class UResourceData;
 class UCappedResource;
+class UResourceData;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UResourceObjective : public UResourceBasedObjective {

@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "ECrossbowEffectApplication.h"
 #include "OnCrossbowDamageDealtDelegate.h"
 #include "Projectile.h"
+#include "Templates/SubclassOf.h"
 #include "CrossbowProjectileBase.generated.h"
 
-class UNiagaraComponent;
-class UCrossbowProjectileRicochet;
-class UCrossbowProjectileRecallable;
-class UCrossbowProjectileMagnetic;
 class ACrossbowProjectileStuck;
+class UCrossbowProjectileMagnetic;
+class UCrossbowProjectileRecallable;
+class UCrossbowProjectileRicochet;
 class UCrossbowStuckProjectileEffectBanshee;
 class UDamageComponent;
-class UStatusEffect;
-class UTexture2D;
+class UNiagaraComponent;
 class USoundCue;
 class UStaticMesh;
+class UStatusEffect;
+class UTexture2D;
 
 UCLASS(Blueprintable)
 class ACrossbowProjectileBase : public AProjectile {

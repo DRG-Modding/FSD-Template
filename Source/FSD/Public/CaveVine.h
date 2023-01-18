@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "Engine/EngineTypes.h"
 #include "GameFramework/Actor.h"
+#include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "CaveVine.generated.h"
 
-class USceneComponent;
 class UHealthComponent;
+class USceneComponent;
 class USplineMeshComponent;
 
 UCLASS(Abstract, Blueprintable)

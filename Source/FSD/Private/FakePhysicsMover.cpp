@@ -1,6 +1,6 @@
 #include "FakePhysicsMover.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/SceneComponent.h"
+#include "Net/UnrealNetwork.h"
 
 class UFakeMoverSettings;
 

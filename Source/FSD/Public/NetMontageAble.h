@@ -4,8 +4,8 @@
 #include "NetMontageAble.generated.h"
 
 class UAnimInstance;
-class USkeletalMeshComponent;
 class UAnimMontage;
+class USkeletalMeshComponent;
 
 UINTERFACE(BlueprintType, meta=(CannotImplementInterfaceInBlueprint))
 class UNetMontageAble : public UInterface {

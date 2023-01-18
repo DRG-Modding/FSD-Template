@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Animation/AnimInstance.h"
+#include "UObject/NoExportTypes.h"
 #include "SentryGunAnimInstance.generated.h"
 
-class ASentryGun;
 class ARedeployableSentryGun;
+class ASentryGun;
 
 UCLASS(Abstract, Blueprintable, NonTransient)
 class USentryGunAnimInstance : public UAnimInstance {

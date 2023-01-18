@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "indSteamSessionsResultDelegate.h"
 #include "UObject/Object.h"
+#include "indSteamSessionsResultDelegate.h"
 #include "FSDFindSteamSessions.generated.h"
 
 UCLASS(Blueprintable)

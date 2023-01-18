@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
+#include "UObject/NoExportTypes.h"
+#include "Templates/SubclassOf.h"
 #include "AttackBaseComponent.generated.h"
 
 class AActor;

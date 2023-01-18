@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MeshBoxProperties.h"
 #include "ConvexMeshWithCachedTree.h"
+#include "MeshBoxProperties.h"
 #include "CSGBox.generated.h"
 
 UCLASS(Blueprintable)

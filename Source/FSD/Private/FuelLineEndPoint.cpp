@@ -1,7 +1,7 @@
 #include "FuelLineEndPoint.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/StaticMeshComponent.h"
 #include "FuelLineConnectPoint.h"
+#include "Net/UnrealNetwork.h"
 
 class ATrackBuilderSegment;
 class UTrackBuilderConnectPoint;

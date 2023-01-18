@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Layout/Margin.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "FSDUserWidget.h"
+#include "Templates/SubclassOf.h"
 #include "ActorTrackingWidget.generated.h"
 
 class AActor;
-class USceneComponent;
-class UActorTrackingWidget;
 class APlayerController;
+class UActorTrackingWidget;
+class USceneComponent;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UActorTrackingWidget : public UFSDUserWidget {

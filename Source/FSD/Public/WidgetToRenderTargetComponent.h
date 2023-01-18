@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "Templates/SubclassOf.h"
 #include "WidgetToRenderTargetComponent.generated.h"
 
-class UUserWidget;
-class UMaterialInterface;
-class UTextureRenderTarget2D;
 class ULocalPlayer;
 class UMaterialInstanceDynamic;
+class UMaterialInterface;
+class UTextureRenderTarget2D;
+class UUserWidget;
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UWidgetToRenderTargetComponent : public UActorComponent {

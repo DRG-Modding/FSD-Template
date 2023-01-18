@@ -3,9 +3,9 @@
 #include "Components/CapsuleComponent.h"
 
 class AActor;
-class USceneComponent;
-class UPrimitiveComponent;
 class AFoamPuddle;
+class UPrimitiveComponent;
+class USceneComponent;
 
 void ASoapVacuumItem::Server_StartVacuumingPuddle_Implementation(AFoamPuddle* puddle) {
 }

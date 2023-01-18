@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "UpgradeValues.h"
 #include "GameplayTagContainer.h"
 #include "ItemUpgrade.h"
+#include "Templates/SubclassOf.h"
+#include "UpgradeValues.h"
 #include "TargetSpecificDamageBonusUpgrade.generated.h"
 
 class AActor;

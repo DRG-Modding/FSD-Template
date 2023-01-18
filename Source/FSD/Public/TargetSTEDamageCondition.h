@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "DamageCondition.h"
+#include "Templates/SubclassOf.h"
 #include "TargetSTEDamageCondition.generated.h"
 
 class UStatusEffect;

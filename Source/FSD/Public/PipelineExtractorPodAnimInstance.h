@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ERessuplyPodState.h"
-#include "EPipelineBuildState.h"
-#include "ERefineryState.h"
-#include "EPipelineExtractorPodAnimState.h"
 #include "Animation/AnimInstance.h"
+#include "EPipelineBuildState.h"
+#include "EPipelineExtractorPodAnimState.h"
+#include "ERefineryState.h"
+#include "ERessuplyPodState.h"
 #include "PipelineExtractorPodAnimInstance.generated.h"
 
 class AFSDRefinery;
-class APipelineStart;
-class APipelineSegment;
 class APipelineExtractorPod;
+class APipelineSegment;
+class APipelineStart;
 
 UCLASS(Abstract, Blueprintable, NonTransient)
 class FSD_API UPipelineExtractorPodAnimInstance : public UAnimInstance {

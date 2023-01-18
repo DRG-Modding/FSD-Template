@@ -1,8 +1,8 @@
 #include "Schematic.h"
 
+class UFSDSaveGame;
 class UObject;
 class UResourceData;
-class UFSDSaveGame;
 class USchematicItem;
 class UTexture;
 

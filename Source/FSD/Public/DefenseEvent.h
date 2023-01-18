@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "GameEvent.h"
+#include "Templates/SubclassOf.h"
 #include "DefenseEvent.generated.h"
 
 class UWidget;

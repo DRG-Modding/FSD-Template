@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "AFlyingBug.h"
+#include "Templates/SubclassOf.h"
 #include "Bomber.generated.h"
 
 class AActor;
-class UPrimitiveComponent;
-class UAudioComponent;
 class AProjectile;
-class UParticleSystemComponent;
-class USoundBase;
+class UAudioComponent;
 class UParticleSystem;
+class UParticleSystemComponent;
+class UPrimitiveComponent;
+class USoundBase;
 
 UCLASS(Blueprintable)
 class ABomber : public AAFlyingBug {

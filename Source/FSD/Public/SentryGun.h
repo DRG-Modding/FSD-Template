@@ -1,30 +1,30 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "LaserPointerTarget.h"
-#include "GameplayTagContainer.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "SentryGunMuzzleSetup.h"
-#include "Engine/EngineTypes.h"
-#include "TracerData.h"
-#include "AmmoCountChangedEventDelegate.h"
 #include "GameFramework/Actor.h"
+#include "GameplayTagContainer.h"
+#include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "AmmoCountChangedEventDelegate.h"
+#include "LaserPointerTarget.h"
+#include "SentryGunMuzzleSetup.h"
+#include "Templates/SubclassOf.h"
+#include "TracerData.h"
 #include "Upgradable.h"
 #include "WeaponFireOwner.h"
 #include "SentryGun.generated.h"
 
-class USkeletalMeshComponent;
-class UAudioComponent;
-class UWeaponFireComponent;
-class AProjectile;
-class UHealthComponentBase;
 class APlayerCharacter;
-class USoundBase;
+class AProjectile;
+class UAudioComponent;
+class UHealthComponentBase;
 class UParticleSystem;
+class USkeletalMeshComponent;
+class USoundBase;
 class USoundCue;
+class UWeaponFireComponent;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API ASentryGun : public AActor, public IWeaponFireOwner, public IUpgradable {

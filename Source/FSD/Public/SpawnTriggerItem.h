@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "GenerationItem.h"
+#include "Templates/SubclassOf.h"
 #include "SpawnTriggerItem.generated.h"
 
 class AActor;

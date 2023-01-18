@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "FloatPerkComponent.h"
+#include "Templates/SubclassOf.h"
 #include "BeastMasterComponent.generated.h"
 
-class UActorComponent;
 class AFSDPawn;
-class UDamageComponent;
 class APlayerCharacter;
+class UActorComponent;
+class UDamageComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UBeastMasterComponent : public UFloatPerkComponent {

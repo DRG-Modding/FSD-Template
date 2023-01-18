@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "EMissionStructure.h"
-#include "ObjectiveMissionIcon.h"
-#include "GMMutatorItem.h"
 #include "UObject/Object.h"
+#include "EMissionStructure.h"
+#include "GMMutatorItem.h"
+#include "ObjectiveMissionIcon.h"
+#include "Templates/SubclassOf.h"
 #include "GeneratedMission.generated.h"
 
-class UObjective;
-class UBiome;
-class UMissionDNA;
 class AFSDPlayerController;
-class UGeneratedMission;
-class UMissionDuration;
-class UMissionComplexity;
-class UMissionWarning;
-class UMissionTemplate;
-class UMutator;
-class UMissionMutator;
 class AProceduralSetup;
+class UBiome;
+class UGeneratedMission;
 class ULevelSequence;
+class UMissionComplexity;
+class UMissionDNA;
+class UMissionDuration;
+class UMissionMutator;
+class UMissionTemplate;
+class UMissionWarning;
+class UMutator;
+class UObjective;
 
 UCLASS(Blueprintable)
 class FSD_API UGeneratedMission : public UObject {

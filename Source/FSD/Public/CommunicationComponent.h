@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
+#include "Components/ActorComponent.h"
 #include "GameplayTagContainer.h"
+#include "UObject/NoExportTypes.h"
+#include "ActiveOutline.h"
+#include "AudioCallbackDelegate.h"
 #include "EAsyncLoadPriority.h"
 #include "EShoutType.h"
-#include "ActiveOutline.h"
-#include "MissionShoutQueueItem.h"
 #include "MissionShoutDelegateDelegate.h"
-#include "AudioCallbackDelegate.h"
 #include "MissionShoutEndDelegateDelegate.h"
-#include "Components/ActorComponent.h"
+#include "MissionShoutQueueItem.h"
+#include "Templates/SubclassOf.h"
 #include "CommunicationComponent.generated.h"
 
-class UObject;
+class APlayerCharacter;
 class UAudioComponent;
-class UShoutWidget;
 class UCharacterShoutsData;
 class UDialogDataAsset;
-class APlayerCharacter;
+class UObject;
+class UShoutWidget;
 class USoundBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

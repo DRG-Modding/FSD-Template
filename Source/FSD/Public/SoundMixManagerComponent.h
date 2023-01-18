@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SoundMixManagerItem.h"
 #include "Components/ActorComponent.h"
+#include "SoundMixManagerItem.h"
 #include "SoundMixManagerComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

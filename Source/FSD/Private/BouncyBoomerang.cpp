@@ -1,6 +1,6 @@
 #include "BouncyBoomerang.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/SceneComponent.h"
+#include "Net/UnrealNetwork.h"
 
 class AFSDPawn;
 

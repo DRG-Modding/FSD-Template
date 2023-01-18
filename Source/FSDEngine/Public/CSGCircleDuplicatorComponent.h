@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CSGCircleDuplicatorProperties.h"
 #include "CSGBaseComponent.h"
+#include "CSGCircleDuplicatorProperties.h"
 #include "CSGCircleDuplicatorComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

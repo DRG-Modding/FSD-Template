@@ -1,9 +1,9 @@
 #include "EnemyDeepPathfinderCharacter.h"
-#include "Net/UnrealNetwork.h"
 #include "EnemyHealthComponent.h"
+#include "Net/UnrealNetwork.h"
 
-class UMeshComponent;
 class UMaterialInterface;
+class UMeshComponent;
 
 void AEnemyDeepPathfinderCharacter::SwitchToDynamicBaseShader(UMaterialInterface* baseShader, UMeshComponent* MeshComponent) const {
 }

@@ -3,11 +3,11 @@
 #include "Components/ActorComponent.h"
 #include "TutorialComponent.generated.h"
 
-class AFSDPlayerState;
 class AFSDPlayerController;
-class UFSDSaveGame;
+class AFSDPlayerState;
 class APlayerCharacter;
 class ATutorialManager;
+class UFSDSaveGame;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTutorialComponent : public UActorComponent {

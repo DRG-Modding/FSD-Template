@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EOutline.h"
 #include "Components/ActorComponent.h"
+#include "EOutline.h"
 #include "OutlineComponent.generated.h"
 
 class AActor;
-class UPrimitiveComponent;
 class AItem;
-class UHealthComponentBase;
 class APlayerCharacter;
+class UHealthComponentBase;
+class UPrimitiveComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UOutlineComponent : public UActorComponent {

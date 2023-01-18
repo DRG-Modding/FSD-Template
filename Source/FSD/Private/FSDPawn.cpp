@@ -1,12 +1,12 @@
 #include "FSDPawn.h"
-#include "Net/UnrealNetwork.h"
 #include "EnemyTemperatureComponent.h"
+#include "Net/UnrealNetwork.h"
 #include "StatusEffectsComponent.h"
 
 class AActor;
-class USkeletalMeshComponent;
 class AFSDAIController;
 class UHealthComponentBase;
+class USkeletalMeshComponent;
 
 void AFSDPawn::UnFreeze() {
 }

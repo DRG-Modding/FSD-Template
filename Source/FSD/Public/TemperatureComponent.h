@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETemperatureIntensity.h"
 #include "Components/ActorComponent.h"
+#include "ETemperatureIntensity.h"
 #include "TemperatureComponent.generated.h"
 
 class AActor;

@@ -1,11 +1,11 @@
 #include "PickaxeItem.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/SceneComponent.h"
 #include "DamageComponent.h"
+#include "Net/UnrealNetwork.h"
 
-class UPrimitiveComponent;
-class UFXSystemAsset;
 class UFSDPhysicalMaterial;
+class UFXSystemAsset;
+class UPrimitiveComponent;
 class USoundCue;
 
 

@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/Object.h"
 #include "UObject/NoExportTypes.h"
 #include "DeepDiveBank.h"
 #include "DeepDiveTesterItem.h"
-#include "UObject/Object.h"
 #include "MissionModeManager.h"
 #include "DeepDiveManager.generated.h"
 
-class UUserWidget;
 class UBiome;
 class UDeepDive;
 class UFSDEventsHandler;
 class UGeneratedMission;
+class UUserWidget;
 
 UCLASS(Blueprintable)
 class UDeepDiveManager : public UObject, public IMissionModeManager {

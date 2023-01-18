@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DeepDiveLoaderSequence.h"
 #include "Engine/DataAsset.h"
+#include "DeepDiveLoaderSequence.h"
 #include "DeepDiveSettings.generated.h"
 
-class UUserWidget;
 class UDeepDiveTemplate;
 class UDialogDataAsset;
-class UMissionWarning;
-class UMissionNameBank;
-class UMutator;
 class UMissionMutator;
+class UMissionNameBank;
+class UMissionWarning;
+class UMutator;
+class UUserWidget;
 
 UCLASS(Blueprintable)
 class UDeepDiveSettings : public UDataAsset {

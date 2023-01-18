@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Engine/DataAsset.h"
+#include "Templates/SubclassOf.h"
 #include "DamageBonusBase.generated.h"
 
-class UDamageCondition;
-class UDamageComponent;
 class UDamageBonusBase;
+class UDamageComponent;
+class UDamageCondition;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UDamageBonusBase : public UDataAsset {

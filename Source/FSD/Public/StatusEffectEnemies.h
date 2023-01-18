@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "GameplayTagContainer.h"
 #include "GameplayTagContainer.h"
 #include "RunningMissionBP.h"
+#include "Templates/SubclassOf.h"
 #include "StatusEffectEnemies.generated.h"
 
 class APawn;

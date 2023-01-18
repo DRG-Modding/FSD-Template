@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "LocalizedLanguageInfo.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "LocalizedLanguageInfo.h"
 #include "LocalizationFunctionLibrary.generated.h"
 
 UCLASS(Blueprintable)

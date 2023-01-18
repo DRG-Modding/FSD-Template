@@ -1,6 +1,6 @@
 #include "TerminatorTentacle.h"
-#include "Net/UnrealNetwork.h"
 #include "GrabberComponent.h"
+#include "Net/UnrealNetwork.h"
 
 class AActor;
 class UHealthComponentBase;

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EFSDFaction.h"
-#include "Styling/SlateColor.h"
 #include "Engine/DataAsset.h"
+#include "Styling/SlateColor.h"
+#include "EFSDFaction.h"
 #include "CommunityGoalFaction.generated.h"
 
 class UTexture2D;

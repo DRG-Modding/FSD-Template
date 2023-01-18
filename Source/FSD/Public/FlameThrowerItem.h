@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/NetSerialization.h"
-#include "DecalData.h"
 #include "AmmoDrivenWeapon.h"
+#include "DecalData.h"
+#include "Templates/SubclassOf.h"
 #include "FlameThrowerItem.generated.h"
 
 class AActor;
-class UPrimitiveComponent;
 class UDamageComponent;
-class UHealthComponentBase;
-class UParticleSystemComponent;
 class UFSDPhysicalMaterial;
+class UHealthComponentBase;
 class UItemUpgrade;
 class UMotionAudioController;
+class UParticleSystem;
+class UParticleSystemComponent;
+class UPrimitiveComponent;
 class UProjectileLauncherBaseComponent;
+class USoundCue;
 class UStatusEffect;
 class UStickyFlameSpawner;
-class UParticleSystem;
-class USoundCue;
 
 UCLASS(Abstract, Blueprintable)
 class AFlameThrowerItem : public AAmmoDrivenWeapon {

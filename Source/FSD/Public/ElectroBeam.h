@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/NetSerialization.h"
-#include "GameFramework/Actor.h"
+#include "Templates/SubclassOf.h"
 #include "ElectroBeam.generated.h"
 
-class USceneComponent;
 class UAudioComponent;
 class UCapsuleComponent;
 class UHealthComponentBase;
 class UParticleSystemComponent;
+class USceneComponent;
 class UStatusEffect;
 
 UCLASS(Abstract, Blueprintable)

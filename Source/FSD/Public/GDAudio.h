@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "GDAudio.generated.h"
 
-class UDynamicReverbComponent;
 class AFSDReverbVolume;
+class UDynamicReverbComponent;
 class USoundAttenuation;
 
 USTRUCT(BlueprintType)

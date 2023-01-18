@@ -3,9 +3,9 @@
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "BinaryTerrainMaterialCombiner.h"
-#include "DeepCSGFloatTree.h"
-#include "CSGSDFModulatedInstanceProperties.h"
 #include "CSGBase.h"
+#include "CSGSDFModulatedInstanceProperties.h"
+#include "DeepCSGFloatTree.h"
 #include "CSGModulatedSDFInstance.generated.h"
 
 class UBakeConfig;

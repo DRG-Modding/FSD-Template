@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "ProjectileLauncherBaseComponent.h"
+#include "Templates/SubclassOf.h"
 #include "ChargedProjectileLauncherComponent.generated.h"
 
 class AProjectileBase;

@@ -1,10 +1,10 @@
 #include "MiningPod.h"
+#include "AutoCarverComponent.h"
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
-#include "AutoCarverComponent.h"
 
-class UObject;
 class AMiningPod;
+class UObject;
 
 AMiningPod* AMiningPod::SpawnPodAtLocation(UObject* WorldContextObject, TSubclassOf<AMiningPod> podClass, const FTransform& Transform) {
     return NULL;

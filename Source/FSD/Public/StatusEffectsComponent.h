@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "ActiveStatusEffectBank.h"
 #include "Components/ActorComponent.h"
+#include "ActiveStatusEffectBank.h"
+#include "Templates/SubclassOf.h"
 #include "StatusEffectsComponent.generated.h"
 
-class UObject;
 class AActor;
 class UHealthComponentBase;
+class UObject;
 class UStatusEffect;
 class UStatusEffectExclusiveKey;
 

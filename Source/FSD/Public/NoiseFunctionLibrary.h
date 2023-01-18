@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "NoiseFunctionLibrary.generated.h"
 
-class UObject;
 class AActor;
+class UObject;
 class USceneComponent;
 
 UCLASS(Blueprintable)

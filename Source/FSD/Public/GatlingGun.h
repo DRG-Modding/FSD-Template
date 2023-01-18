@@ -4,9 +4,9 @@
 #include "GatlingGun.generated.h"
 
 class AActor;
-class UFXSystemAsset;
 class UDamageComponent;
 class UFSDPhysicalMaterial;
+class UFXSystemAsset;
 
 UCLASS(Blueprintable)
 class AGatlingGun : public ABeltDrivenWeapon {

@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Engine/DataAsset.h"
+#include "Templates/SubclassOf.h"
 #include "ProceduralSettings.generated.h"
 
+class AProceduralSetup;
 class UBiome;
 class UMissionTemplate;
-class AProceduralSetup;
 class URoomDecorationObject;
 
 UCLASS(Blueprintable)

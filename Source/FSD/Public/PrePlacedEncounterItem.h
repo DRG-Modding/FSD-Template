@@ -3,8 +3,8 @@
 #include "UObject/NoExportTypes.h"
 #include "PrePlacedEncounterItem.generated.h"
 
-class UEnemyDescriptor;
 class AEncounterActor;
+class UEnemyDescriptor;
 
 USTRUCT(BlueprintType)
 struct FPrePlacedEncounterItem {

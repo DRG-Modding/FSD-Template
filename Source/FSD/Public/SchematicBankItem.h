@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "SchematicBankItem.generated.h"
 
-class USchematicPricingTier;
 class USchematic;
+class USchematicPricingTier;
 class USchematicRarity;
 
 USTRUCT(BlueprintType)

@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
-#include "Curves/CurveFloat.h"
-#include "DropInfo.h"
 #include "GameFramework/Actor.h"
+#include "Curves/CurveFloat.h"
+#include "UObject/NoExportTypes.h"
+#include "DropInfo.h"
+#include "Templates/SubclassOf.h"
 #include "PlagueMeteor.generated.h"
 
-class USceneComponent;
-class UStaticMeshComponent;
-class UDamageComponent;
-class UDebrisPositioning;
 class AImpactIndicator;
 class AProceduralSetup;
 class ARockCrackerPod;
-class UTerrainPlacementComponent;
+class UDamageComponent;
+class UDebrisPositioning;
+class USceneComponent;
 class UStaticMesh;
+class UStaticMeshComponent;
+class UTerrainPlacementComponent;
 
 UCLASS(Blueprintable)
 class FSD_API APlagueMeteor : public AActor {

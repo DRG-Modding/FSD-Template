@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "BakeSettings.h"
 #include "Engine/DataAsset.h"
+#include "BakeSettings.h"
+#include "Templates/SubclassOf.h"
 #include "CSGPreviewScene.generated.h"
 
-class UTerrainMaterialCore;
 class ACSGBuilder;
+class UTerrainMaterialCore;
 
 UCLASS(Blueprintable)
 class UCSGPreviewScene : public UDataAsset {

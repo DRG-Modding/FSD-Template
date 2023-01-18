@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ECarveFilterType.h"
 #include "Components/PrimitiveComponent.h"
+#include "ECarveFilterType.h"
 #include "STLMeshCarverComponent.generated.h"
 
 class USTLMeshCarver;

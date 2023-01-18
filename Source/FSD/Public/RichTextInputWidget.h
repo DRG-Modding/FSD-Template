@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Blueprint/UserWidget.h"
+#include "Styling/SlateTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "EFSDInputSource.h"
-#include "Styling/SlateTypes.h"
 #include "InputDisplay.h"
-#include "Blueprint/UserWidget.h"
 #include "RichTextInputWidget.generated.h"
 
-class UTextBlock;
 class URichTextBlock;
+class UTextBlock;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew, HideDropdown)
 class URichTextInputWidget : public UUserWidget {

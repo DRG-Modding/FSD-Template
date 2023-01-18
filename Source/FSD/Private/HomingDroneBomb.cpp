@@ -1,6 +1,6 @@
 #include "HomingDroneBomb.h"
-#include "Net/UnrealNetwork.h"
 #include "EnemyHealthComponent.h"
+#include "Net/UnrealNetwork.h"
 
 void AHomingDroneBomb::UpdateHomingSpeed() {
 }

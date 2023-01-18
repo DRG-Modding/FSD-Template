@@ -1,12 +1,12 @@
 #include "ElectroBeam.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/AudioComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "Net/UnrealNetwork.h"
 
 class AActor;
-class USceneComponent;
 class UHealthComponentBase;
+class USceneComponent;
 
 void AElectroBeam::SetTarget(USceneComponent* TargetPoint) {
 }

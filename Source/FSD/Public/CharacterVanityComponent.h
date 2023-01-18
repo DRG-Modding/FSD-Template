@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EVanitySlot.h"
+#include "Components/ActorComponent.h"
 #include "EHeadVanityType.h"
+#include "EVanitySlot.h"
 #include "EquippedVanity.h"
 #include "TattooArmorItem.h"
-#include "Components/ActorComponent.h"
 #include "CharacterVanityComponent.generated.h"
 
-class UObject;
-class USkeletalMeshComponent;
-class UVanityItem;
 class UArmorMaterialVanityItem;
 class UBeardColorVanityItem;
 class UCharacterVanityItems;
-class UPlayerCharacterID;
-class UMaterialInterface;
 class UMaterialInstanceDynamic;
+class UMaterialInterface;
+class UObject;
+class UPlayerCharacterID;
+class USkeletalMeshComponent;
+class UVanityItem;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCharacterVanityComponent : public UActorComponent {

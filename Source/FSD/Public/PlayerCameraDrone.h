@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+#include "GameFramework/Pawn.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
-#include "GameFramework/Pawn.h"
+#include "Templates/SubclassOf.h"
 #include "PlayerCameraDrone.generated.h"
 
 class AActor;
-class UPrimitiveComponent;
-class UPawnMovementComponent;
 class ALaserPointerMarker;
 class AVanityCharacter;
 class UAnimationAsset;
+class UPawnMovementComponent;
+class UPrimitiveComponent;
 
 UCLASS(Abstract, Blueprintable)
 class APlayerCameraDrone : public APawn {

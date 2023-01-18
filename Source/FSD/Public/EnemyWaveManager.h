@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "RandRange.h"
-#include "WaveEntry.h"
 #include "Components/ActorComponent.h"
+#include "RandRange.h"
+#include "Templates/SubclassOf.h"
+#include "WaveEntry.h"
 #include "EnemyWaveManager.generated.h"
 
-class UObject;
-class APawn;
-class UEnemyWaveController;
-class UEnemySpawnManager;
 class AFSDGameMode;
+class APawn;
+class UEnemySpawnManager;
+class UEnemyWaveController;
+class UObject;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UEnemyWaveManager : public UActorComponent {

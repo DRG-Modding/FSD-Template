@@ -3,9 +3,9 @@
 #include "Templates/SubclassOf.h"
 
 class AActor;
-class UStaticMeshComponent;
 class AProjectileBase;
 class UProjectileLauncherBaseComponent;
+class UStaticMeshComponent;
 class UStatusEffect;
 
 

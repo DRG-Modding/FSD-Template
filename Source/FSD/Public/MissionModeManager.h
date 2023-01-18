@@ -3,9 +3,9 @@
 #include "UObject/Interface.h"
 #include "MissionModeManager.generated.h"
 
+class UGeneratedMission;
 class UObject;
 class UUserWidget;
-class UGeneratedMission;
 
 UINTERFACE(BlueprintType, meta=(CannotImplementInterfaceInBlueprint))
 class UMissionModeManager : public UInterface {

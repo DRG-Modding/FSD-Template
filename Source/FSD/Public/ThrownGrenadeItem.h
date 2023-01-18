@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "EThrownGrenadeItemState.h"
 #include "Item.h"
 #include "RejoinListener.h"
+#include "Templates/SubclassOf.h"
 #include "ThrownGrenadeItem.generated.h"
 
-class UStaticMeshComponent;
 class AGrenade;
 class UFSDAudioComponent;
 class UGrenadeAnimationSet;
 class UItemCharacterAnimationSet;
 class UPlayerAnimInstance;
+class UStaticMeshComponent;
 
 UCLASS(Blueprintable)
 class AThrownGrenadeItem : public AItem, public IRejoinListener {

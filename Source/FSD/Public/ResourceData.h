@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "SaveGameIDInterface.h"
 #include "ResourceData.generated.h"
 
-class UObject;
 class AFSDPhysicsActor;
 class UMissionStat;
+class UObject;
 class UTexture2D;
 
 UCLASS(Blueprintable)

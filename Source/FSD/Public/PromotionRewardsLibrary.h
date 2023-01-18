@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ClaimableRewardEntry.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "ClaimableRewardEntry.h"
 #include "PromotionRewardsLibrary.generated.h"
 
-class UObject;
 class APlayerController;
+class UObject;
 
 UCLASS(Blueprintable)
 class UPromotionRewardsLibrary : public UBlueprintFunctionLibrary {

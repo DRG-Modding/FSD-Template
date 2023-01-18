@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "EDebrisColliderType.h"
-#include "DebrisCapsule.h"
-#include "TerrainPlacementBox.h"
 #include "Components/SceneComponent.h"
+#include "UObject/NoExportTypes.h"
+#include "DebrisCapsule.h"
+#include "EDebrisColliderType.h"
+#include "TerrainPlacementBox.h"
 #include "TerrainPlacementComponent.generated.h"
 
 class AProceduralSetup;

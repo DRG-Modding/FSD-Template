@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "EHolidayType.h"
-#include "FSDEventActivateChangedDelegate.h"
-#include "ClaimableRewardView.h"
-#include "EncounterSpecialItem.h"
 #include "Engine/DataAsset.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "ClaimableRewardView.h"
+#include "EHolidayType.h"
+#include "EncounterSpecialItem.h"
+#include "FSDEventActivateChangedDelegate.h"
 #include "FSDEvent.generated.h"
 
-class UObject;
-class UCampaign;
 class ADebrisDataActor;
+class APlayerController;
+class UCampaign;
 class UDrinkableDataAsset;
 class UFSDEvent;
-class APlayerController;
+class UObject;
+class USoundCue;
 class UTexture2D;
 class UWorld;
-class USoundCue;
 
 UCLASS(Blueprintable)
 class FSD_API UFSDEvent : public UDataAsset {

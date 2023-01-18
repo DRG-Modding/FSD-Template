@@ -2,10 +2,10 @@
 #include "Templates/SubclassOf.h"
 
 class AActor;
-class APlayerController;
 class AFSDPlayerController;
-class UGeneratedMission;
 class APlayerCharacter;
+class APlayerController;
+class UGeneratedMission;
 class USeasonChallenge;
 
 void UDSTelemetryWrapper::RecordTreeOfVanityClaim(int32 NodeID) {

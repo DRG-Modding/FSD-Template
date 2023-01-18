@@ -1,16 +1,16 @@
 #include "DamageEnhancer.h"
 #include "Components/StaticMeshComponent.h"
+#include "Components/SphereComponent.h"
+#include "Components/BoxComponent.h"
 #include "CapsuleHitscanComponent.h"
 #include "DamageComponent.h"
 #include "HealthComponent.h"
-#include "Components/SphereComponent.h"
 #include "HitscanComponent.h"
 #include "ReflectionHitscanComponent.h"
-#include "Components/BoxComponent.h"
 
 class AActor;
-class UPrimitiveComponent;
 class UHitscanBaseComponent;
+class UPrimitiveComponent;
 
 void ADamageEnhancer::HitByHitScan(UHitscanBaseComponent* Component, const FVector& HitPoint, const FVector& Origin) {
 }

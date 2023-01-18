@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "DeepDiveTemplateItem.generated.h"
 
-class UMissionDuration;
 class UMissionComplexity;
+class UMissionDuration;
 class UMissionTemplate;
 
 USTRUCT(BlueprintType)

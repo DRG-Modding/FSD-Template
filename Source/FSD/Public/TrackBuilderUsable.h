@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "InstantUsable.h"
+#include "Templates/SubclassOf.h"
 #include "TrackBuilderUsable.generated.h"
 
 class AActor;
-class USceneComponent;
-class ATrackBuilderSegment;
-class ATrackBuilderItem;
-class UTrackBuilderUsable;
 class APlayerCharacter;
+class ATrackBuilderItem;
+class ATrackBuilderSegment;
+class USceneComponent;
+class UTrackBuilderUsable;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UTrackBuilderUsable : public UInstantUsable {

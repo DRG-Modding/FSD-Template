@@ -1,8 +1,8 @@
 #include "GooGunPuddle.h"
-#include "Net/UnrealNetwork.h"
-#include "Templates/SubclassOf.h"
 #include "Components/SphereComponent.h"
+#include "Net/UnrealNetwork.h"
 #include "SimpleHealthComponent.h"
+#include "Templates/SubclassOf.h"
 
 class AActor;
 class UPrimitiveComponent;

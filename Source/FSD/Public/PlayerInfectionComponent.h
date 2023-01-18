@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "IntDelegateDelegate.h"
-#include "FloatDelegateDelegate.h"
-#include "EInfectionState.h"
-#include "OnInfectionStateChangedDelegateDelegate.h"
 #include "Components/ActorComponent.h"
+#include "EInfectionState.h"
+#include "FloatDelegateDelegate.h"
+#include "IntDelegateDelegate.h"
+#include "OnInfectionStateChangedDelegateDelegate.h"
 #include "PlayerInfectionComponent.generated.h"
 
 class AActor;

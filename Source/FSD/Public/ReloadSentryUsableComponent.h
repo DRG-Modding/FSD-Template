@@ -3,9 +3,9 @@
 #include "UsableComponent.h"
 #include "ReloadSentryUsableComponent.generated.h"
 
-class UAudioComponent;
 class APlayerCharacter;
 class ASentryGun;
+class UAudioComponent;
 class USoundBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

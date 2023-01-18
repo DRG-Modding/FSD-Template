@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHealthbarType.h"
 #include "UObject/Interface.h"
+#include "EHealthbarType.h"
 #include "Health.generated.h"
 
 class AActor;

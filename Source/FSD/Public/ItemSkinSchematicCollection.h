@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EItemSkinCollectionType.h"
 #include "Engine/DataAsset.h"
+#include "EItemSkinCollectionType.h"
 #include "ItemSkinSchematicCollection.generated.h"
 
-class USchematicPricingTier;
 class UItemSkin;
-class USchematicCategory;
 class USchematic;
+class USchematicCategory;
+class USchematicPricingTier;
 class USchematicRarity;
 
 UCLASS(Blueprintable)

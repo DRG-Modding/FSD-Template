@@ -1,19 +1,19 @@
 #include "AFlyingBug.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/AudioComponent.h"
-#include "FrozenPawnImpactComponent.h"
-#include "EnemyComponent.h"
 #include "Components/SphereComponent.h"
-#include "HitReactionComponent.h"
-#include "OutlineComponent.h"
-#include "PawnStatsComponent.h"
-#include "PawnAlertComponent.h"
 #include "Perception/PawnSensingComponent.h"
+#include "EnemyComponent.h"
+#include "FrozenPawnImpactComponent.h"
+#include "HitReactionComponent.h"
+#include "Net/UnrealNetwork.h"
+#include "OutlineComponent.h"
+#include "PawnAlertComponent.h"
+#include "PawnStatsComponent.h"
 
 class AActor;
 class UDamageTag;
-class UHealthComponentBase;
 class UHealthComponent;
+class UHealthComponentBase;
 
 
 void AAFlyingBug::SetRotateTarget(AActor* aTarget) {

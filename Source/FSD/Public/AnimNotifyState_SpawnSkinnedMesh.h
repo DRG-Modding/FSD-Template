@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "EItemCategory.h"
-#include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "AnimNotifyState_SpawnSkinnedMesh.generated.h"
 
 UCLASS(Blueprintable, CollapseCategories, EditInlineNew, MinimalAPI)

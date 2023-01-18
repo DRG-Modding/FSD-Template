@@ -3,9 +3,9 @@
 #include "UObject/NoExportTypes.h"
 #include "DamageDataBase.generated.h"
 
-class UPrimitiveComponent;
 class UDamageImpulse;
 class UFSDPhysicalMaterial;
+class UPrimitiveComponent;
 
 USTRUCT(BlueprintType)
 struct FDamageDataBase {

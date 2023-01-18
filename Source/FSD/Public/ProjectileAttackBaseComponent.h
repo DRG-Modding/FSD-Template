@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ProjetileSpawnedDelegateDelegate.h"
-#include "ProjectileAttackDelegateDelegate.h"
-#include "EProjectileAttackRotationType.h"
 #include "AttackBaseComponent.h"
+#include "EProjectileAttackRotationType.h"
+#include "ProjectileAttackDelegateDelegate.h"
+#include "ProjetileSpawnedDelegateDelegate.h"
 #include "ProjectileAttackBaseComponent.generated.h"
 
 class AActor;
+class UAnimMontage;
 class UProjectileAttack;
 class UTargetValidator;
-class UAnimMontage;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UProjectileAttackBaseComponent : public UAttackBaseComponent {

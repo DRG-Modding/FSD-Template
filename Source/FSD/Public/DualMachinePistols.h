@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "DualWieldWeapon.h"
+#include "Templates/SubclassOf.h"
 #include "DualMachinePistols.generated.h"
 
 class UStatusEffect;

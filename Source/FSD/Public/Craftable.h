@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CraftingCost.h"
 #include "UObject/Interface.h"
+#include "CraftingCost.h"
 #include "Craftable.generated.h"
 
-class UObject;
 class AFSDPlayerState;
+class UObject;
 class UPlayerCharacterID;
 
 UINTERFACE(BlueprintType, meta=(CannotImplementInterfaceInBlueprint))

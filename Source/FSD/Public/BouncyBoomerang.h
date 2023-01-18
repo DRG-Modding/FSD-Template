@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
-#include "EBoomerangState.h"
-#include "BoomerangSyncer.h"
 #include "BoomerangMover.h"
+#include "BoomerangSyncer.h"
+#include "EBoomerangState.h"
 #include "Grenade.h"
+#include "Templates/SubclassOf.h"
 #include "BouncyBoomerang.generated.h"
 
-class USceneComponent;
-class UNiagaraSystem;
 class AFSDPawn;
 class UDamageComponent;
-class UStatusEffect;
+class UNiagaraSystem;
 class UParticleSystem;
+class USceneComponent;
 class USoundCue;
+class UStatusEffect;
 
 UCLASS(Blueprintable)
 class ABouncyBoomerang : public AGrenade {

@@ -1,17 +1,17 @@
 #include "SeasonsSubsystem.h"
 
-class UObject;
-class UDataAsset;
-class UVanityItem;
-class AFSDPlayerState;
 class AFSDPlayerController;
+class AFSDPlayerState;
+class UDataAsset;
 class UItemSkin;
 class UMissionStat;
-class UPlayerCharacterID;
+class UObject;
 class UPickaxePart;
-class USeasonEventData;
+class UPlayerCharacterID;
 class USeasonChallenge;
+class USeasonEventData;
 class UTextureRenderTarget2D;
+class UVanityItem;
 
 FTimespan USeasonsSubsystem::TimeToNewChallenge() {
     return FTimespan{};

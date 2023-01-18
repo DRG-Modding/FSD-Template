@@ -4,11 +4,11 @@
 #include "HostileTargetingGuntowerModule.h"
 #include "LMGGuntoweModule.generated.h"
 
-class USceneComponent;
 class UAudioComponent;
 class UDamageComponent;
 class UHitscanComponent;
 class UParticleSystem;
+class USceneComponent;
 class USoundCue;
 
 UCLASS(Blueprintable)

@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "FSDPawn.h"
 #include "EventParticipant.h"
+#include "FSDPawn.h"
 #include "TowerEventModule.generated.h"
 
-class USceneComponent;
-class USkeletalMeshComponent;
-class UArmorHealthDamageComponent;
-class UStaticMeshComponent;
-class UEnemyHealthComponent;
-class UParticleSystemComponent;
 class ATowerEventModule;
-class UWeakpointGlowComponent;
+class UArmorHealthDamageComponent;
+class UEnemyHealthComponent;
 class UParticleSystem;
-class USoundCue;
+class UParticleSystemComponent;
+class USceneComponent;
 class USkeletalMesh;
+class USkeletalMeshComponent;
+class USoundCue;
 class UStaticMesh;
+class UStaticMeshComponent;
+class UWeakpointGlowComponent;
 
 UCLASS(Blueprintable)
 class FSD_API ATowerEventModule : public AFSDPawn, public IEventParticipant {

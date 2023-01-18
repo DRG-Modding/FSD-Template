@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
 #include "GameplayTagContainer.h"
+#include "UObject/NoExportTypes.h"
 #include "ItemAggregator.h"
+#include "Templates/SubclassOf.h"
 #include "ItemPlacerAggregator.generated.h"
 
 class AActor;
 class AItem;
-class UDialogDataAsset;
 class AItemMarker;
+class UDialogDataAsset;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UItemPlacerAggregator : public UItemAggregator {

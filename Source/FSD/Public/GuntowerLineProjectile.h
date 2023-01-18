@@ -5,9 +5,9 @@
 #include "Projectile.h"
 #include "GuntowerLineProjectile.generated.h"
 
-class USceneComponent;
 class UDamageComponent;
 class UParticleSystemComponent;
+class USceneComponent;
 
 UCLASS(Blueprintable)
 class AGuntowerLineProjectile : public AProjectile {

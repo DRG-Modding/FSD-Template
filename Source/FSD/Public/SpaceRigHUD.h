@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "NotificationEntry.h"
 #include "FSDHUD.h"
+#include "NotificationEntry.h"
 #include "SpaceRigHUD.generated.h"
 
 class UObject;

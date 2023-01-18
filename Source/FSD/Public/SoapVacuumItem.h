@@ -6,11 +6,11 @@
 #include "SoapVacuumItem.generated.h"
 
 class AActor;
-class USceneComponent;
-class UPrimitiveComponent;
-class UNiagaraComponent;
-class UCapsuleComponent;
 class AFoamPuddle;
+class UCapsuleComponent;
+class UNiagaraComponent;
+class UPrimitiveComponent;
+class USceneComponent;
 
 UCLASS(Blueprintable)
 class ASoapVacuumItem : public APlagueCleanupItem {

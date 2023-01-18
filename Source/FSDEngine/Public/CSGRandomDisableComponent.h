@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CSGRandomDisableProperties.h"
 #include "CSGBaseComponent.h"
+#include "CSGRandomDisableProperties.h"
 #include "CSGRandomDisableComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

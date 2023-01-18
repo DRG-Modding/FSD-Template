@@ -4,16 +4,16 @@
 #include "SavableDataAsset.h"
 #include "DrinkableDataAsset.generated.h"
 
-class UObject;
-class UResourceData;
-class UDialogDataAsset;
+class ADrinkableActor;
 class ADrinkableItem;
+class APlayerCharacter;
+class APlayerController;
+class UDialogDataAsset;
 class UDrinkEffectComponent;
 class UDrinkableDataAsset;
-class ADrinkableActor;
-class APlayerController;
 class UMissionStat;
-class APlayerCharacter;
+class UObject;
+class UResourceData;
 class UTemporaryBuff;
 class UTexture2D;
 

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SDFTorusProperties.h"
 #include "SDFBaseWithTransform.h"
+#include "SDFTorusProperties.h"
 #include "SDFTorus.generated.h"
 
 UCLASS(Blueprintable)

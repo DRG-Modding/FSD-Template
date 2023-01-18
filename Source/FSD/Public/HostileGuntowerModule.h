@@ -7,11 +7,11 @@
 #include "WeaponFireOwner.h"
 #include "HostileGuntowerModule.generated.h"
 
-class USkeletalMeshComponent;
+class APlayerCharacter;
 class UEnemyComponent;
 class UHealthComponentBase;
 class UParticleSystemComponent;
-class APlayerCharacter;
+class USkeletalMeshComponent;
 
 UCLASS(Blueprintable)
 class AHostileGuntowerModule : public AGuntowerModule, public IWeaponFireOwner {

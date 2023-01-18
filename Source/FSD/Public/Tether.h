@@ -3,14 +3,14 @@
 #include "CarriableItem.h"
 #include "Tether.generated.h"
 
-class UNiagaraComponent;
-class USkeletalMeshComponent;
 class UCarriableComponent;
-class UInstantUsable;
 class UDamageComponent;
-class USphereComponent;
+class UInstantUsable;
+class UNiagaraComponent;
 class UParticleSystem;
+class USkeletalMeshComponent;
 class USoundCue;
+class USphereComponent;
 
 UCLASS(Blueprintable)
 class FSD_API ATether : public ACarriableItem {

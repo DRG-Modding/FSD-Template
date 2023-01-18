@@ -1,8 +1,8 @@
 #include "PlagueMeteor.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/SceneComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "DamageComponent.h"
+#include "Net/UnrealNetwork.h"
 #include "TerrainPlacementComponent.h"
 
 class AProceduralSetup;

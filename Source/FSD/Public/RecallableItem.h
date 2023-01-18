@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "AnimatedItem.h"
+#include "Templates/SubclassOf.h"
 #include "Upgradable.h"
 #include "RecallableItem.generated.h"
 

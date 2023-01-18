@@ -1,8 +1,8 @@
 #include "PlasmaBoomerang.h"
 #include "Components/SceneComponent.h"
 #include "Components/StaticMeshComponent.h"
-#include "DamageComponent.h"
 #include "Components/BoxComponent.h"
+#include "DamageComponent.h"
 
 class AActor;
 class UPrimitiveComponent;

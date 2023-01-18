@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETargetStateDamageBonusType.h"
 #include "DamageBonusBase.h"
+#include "ETargetStateDamageBonusType.h"
 #include "TargetStateDamageBonus.generated.h"
 
 class UDamageClass;

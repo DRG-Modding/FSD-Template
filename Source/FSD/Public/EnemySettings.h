@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "RandRange.h"
-#include "GameplayTagContainer.h"
-#include "RandFloatInterval.h"
-#include "EliteEnemyEntry.h"
 #include "Engine/DataAsset.h"
+#include "GameplayTagContainer.h"
+#include "EliteEnemyEntry.h"
+#include "RandFloatInterval.h"
+#include "RandRange.h"
+#include "Templates/SubclassOf.h"
 #include "EnemySettings.generated.h"
 
 class UDamageComponent;

@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/LatentActionManager.h"
-#include "EUGCPackageError.h"
-#include "EModioRequestType.h"
 #include "Subsystems/EngineSubsystem.h"
+#include "Engine/LatentActionManager.h"
+#include "EModioRequestType.h"
+#include "EUGCPackageError.h"
 #include "UGCSubsystem.generated.h"
 
 class UObject;
-class UUGCSettings;
-class UUGCRegistry;
-class UUGCPackage;
 class UUGCLatentActionManager;
+class UUGCPackage;
+class UUGCRegistry;
+class UUGCSettings;
 
 UCLASS(Blueprintable)
 class SIMPLEUGC_API UUGCSubsystem : public UEngineSubsystem {

@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "ERivalBombNodeState.h"
 #include "GameFramework/Actor.h"
+#include "ERivalBombNodeState.h"
+#include "Templates/SubclassOf.h"
 #include "RivalBombNode.generated.h"
 
-class UHackingUsableComponent;
 class APlayerCharacter;
-class ARivalBombNode;
 class ARivalBomb;
+class ARivalBombNode;
 class ASplineCableActor;
+class UHackingUsableComponent;
 
 UCLASS(Blueprintable)
 class ARivalBombNode : public AActor {

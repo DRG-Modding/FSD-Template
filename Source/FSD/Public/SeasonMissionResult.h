@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SeasonEvent.h"
 #include "ChallengeInfo.h"
+#include "SeasonEvent.h"
 #include "SeasonMissionResult.generated.h"
 
 class UTexture2D;

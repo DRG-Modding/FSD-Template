@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "EPickaxePartLocation.h"
 #include "PickaxeSet.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "PickaxeFunctionLibrary.generated.h"
 
-class UObject;
 class UItemID;
+class UObject;
 class UPickaxePart;
 
 UCLASS(Blueprintable)

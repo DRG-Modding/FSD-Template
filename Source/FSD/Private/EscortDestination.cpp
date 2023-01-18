@@ -1,6 +1,6 @@
 #include "EscortDestination.h"
-#include "Net/UnrealNetwork.h"
 #include "DamageComponent.h"
+#include "Net/UnrealNetwork.h"
 
 class ADeepCSGWorld;
 class UTerrainMaterial;

@@ -3,8 +3,8 @@
 #include "ItemAquisitionBase.h"
 #include "SchematicAquisition.generated.h"
 
-class USchematicPricingTier;
 class USchematic;
+class USchematicPricingTier;
 class USchematicRarity;
 
 UCLASS(Blueprintable, EditInlineNew)

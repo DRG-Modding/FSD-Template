@@ -4,8 +4,8 @@
 #include "Engine/NetSerialization.h"
 #include "DoubleDrillDamageItem.generated.h"
 
-class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
+class UPrimitiveComponent;
 
 USTRUCT(BlueprintType)
 struct FDoubleDrillDamageItem {

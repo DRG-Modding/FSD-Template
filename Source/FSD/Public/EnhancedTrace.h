@@ -3,8 +3,8 @@
 #include "UObject/NoExportTypes.h"
 #include "EnhancedTrace.generated.h"
 
-class UHitscanBaseComponent;
 class APlayerCharacter;
+class UHitscanBaseComponent;
 
 USTRUCT(BlueprintType)
 struct FEnhancedTrace {

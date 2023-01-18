@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/Object.h"
 #include "UObject/NoExportTypes.h"
 #include "ResourceAddedSignatureDelegate.h"
 #include "ResourceChangedSignatureDelegate.h"
 #include "ResourceFullSignatureDelegate.h"
-#include "UObject/Object.h"
 #include "CappedResource.generated.h"
 
-class UResourceData;
 class UCappedResource;
+class UResourceData;
 
 UCLASS(Blueprintable)
 class UCappedResource : public UObject {

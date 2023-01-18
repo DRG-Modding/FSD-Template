@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "ObjectInfoComponent.generated.h"
 
-class UPrimitiveComponent;
-class UDialogDataAsset;
 class APlayerController;
 class UActorContextWidget;
+class UDialogDataAsset;
+class UPrimitiveComponent;
 class UTexture2D;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

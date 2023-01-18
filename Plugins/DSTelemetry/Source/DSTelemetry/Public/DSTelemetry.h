@@ -3,9 +3,9 @@
 #include "UObject/Object.h"
 #include "DSTelemetry.generated.h"
 
-class UDSTelemetry;
-class UDJSONObject;
 class UDJSONArray;
+class UDJSONObject;
+class UDSTelemetry;
 
 UCLASS(Blueprintable)
 class DSTELEMETRY_API UDSTelemetry : public UObject {

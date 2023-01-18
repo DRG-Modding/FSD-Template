@@ -1,8 +1,8 @@
 #include "ResourcesComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UResourceData;
 class UCappedResource;
+class UResourceData;
 
 void UResourcesComponent::ResourceIncreased(UCappedResource* Resource, float Delta) {
 }

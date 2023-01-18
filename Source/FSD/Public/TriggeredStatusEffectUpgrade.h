@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "ETriggeredStatusEffectType.h"
-#include "UpgradeValues.h"
 #include "ItemUpgrade.h"
+#include "Templates/SubclassOf.h"
+#include "UpgradeValues.h"
 #include "TriggeredStatusEffectUpgrade.generated.h"
 
 class AActor;

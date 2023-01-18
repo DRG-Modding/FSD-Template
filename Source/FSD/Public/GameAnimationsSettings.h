@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/DeveloperSettings.h"
+#include "UObject/NoExportTypes.h"
 #include "GameAnimationsSettings.generated.h"
 
-UCLASS(Blueprintable, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
 class UGameAnimationsSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:

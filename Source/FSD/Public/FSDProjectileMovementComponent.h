@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "Templates/SubclassOf.h"
 #include "FSDProjectileMovementComponent.generated.h"
 
 class AActor;

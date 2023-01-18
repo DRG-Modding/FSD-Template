@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "FirstPersonSkeletalMeshComponent.generated.h"
 
 class APlayerController;

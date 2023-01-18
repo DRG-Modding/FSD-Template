@@ -1,7 +1,7 @@
 #include "GameDLCSettings.h"
 
-class UObject;
 class UGameDLC;
+class UObject;
 
 TArray<UGameDLC*> UGameDLCSettings::GetStoreDLCs(UObject* WorldContext) {
     return TArray<UGameDLC*>();

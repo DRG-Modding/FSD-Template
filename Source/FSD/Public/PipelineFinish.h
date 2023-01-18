@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
 #include "EInputKeys.h"
 #include "ERessuplyPodState.h"
-#include "GameFramework/Actor.h"
+#include "Templates/SubclassOf.h"
 #include "PipelineFinish.generated.h"
 
+class APipelineExtractorPod;
+class APipelineSegment;
+class APlayerCharacter;
 class ARessuplyPod;
 class ATrackBuilderSegment;
-class UTrackBuilderConnectPoint;
-class APipelineSegment;
-class APipelineExtractorPod;
-class APlayerCharacter;
 class USingleUsableComponent;
+class UTrackBuilderConnectPoint;
 
 UCLASS(Abstract, Blueprintable)
 class FSD_API APipelineFinish : public AActor {

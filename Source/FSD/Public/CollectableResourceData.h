@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "ResourceData.h"
+#include "Templates/SubclassOf.h"
 #include "CollectableResourceData.generated.h"
 
 class AActor;

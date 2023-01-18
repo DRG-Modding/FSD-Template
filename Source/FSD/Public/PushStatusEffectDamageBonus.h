@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "DamageBonusBase.h"
+#include "Templates/SubclassOf.h"
 #include "PushStatusEffectDamageBonus.generated.h"
 
 class UStatusEffect;

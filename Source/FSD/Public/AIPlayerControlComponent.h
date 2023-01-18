@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "AIPlayerControlComponent.generated.h"
 
-class UDialogDataAsset;
-class UControlEnemyUsable;
 class UAnimMontage;
+class UControlEnemyUsable;
+class UDialogDataAsset;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UAIPlayerControlComponent : public UActorComponent {

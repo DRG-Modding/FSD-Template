@@ -3,8 +3,8 @@
 #include "Engine/DataAsset.h"
 #include "GibPartsList.generated.h"
 
-class UNiagaraComponent;
 class UMaterialInstance;
+class UNiagaraComponent;
 class UStaticMesh;
 
 UCLASS(Blueprintable)

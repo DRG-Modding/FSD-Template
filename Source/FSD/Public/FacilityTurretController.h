@@ -5,8 +5,8 @@
 #include "FacilityTurretController.generated.h"
 
 class AActor;
-class UHealthComponentBase;
 class UAIPerceptionComponent;
+class UHealthComponentBase;
 
 UCLASS(Blueprintable)
 class AFacilityTurretController : public AFSDAIController {

@@ -3,8 +3,8 @@
 #include "TestTerrainMaterialItem.generated.h"
 
 class UFXSystemAsset;
-class UTerrainMaterial;
 class USoundCue;
+class UTerrainMaterial;
 
 USTRUCT(BlueprintType)
 struct FTestTerrainMaterialItem {

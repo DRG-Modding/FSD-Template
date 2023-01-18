@@ -1,10 +1,10 @@
 #include "CaveWorm.h"
 #include "SimpleHealthComponent.h"
 
+class AResourceChunk;
+class UHealthComponentBase;
 class UObject;
 class UResourceData;
-class UHealthComponentBase;
-class AResourceChunk;
 
 AResourceChunk* ACaveWorm::SpawnResource(UObject* WorldContext, UResourceData* Data, float Size, FTransform Transform, FVector Impulse, FVector DropOffset) {
     return NULL;

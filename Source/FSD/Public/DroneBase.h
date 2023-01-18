@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EDroneState.h"
 #include "DeepPathfinderCharacter.h"
+#include "EDroneState.h"
 #include "DroneBase.generated.h"
 
 class UDroneStateComponentBase;

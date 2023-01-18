@@ -1,8 +1,8 @@
 #include "CharacterShowroomController.h"
 
+class UCharacterShowroomController;
 class UObject;
 class UPlayerCharacterID;
-class UCharacterShowroomController;
 class UShowroomCameraKey;
 
 

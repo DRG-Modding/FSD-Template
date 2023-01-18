@@ -1,7 +1,7 @@
 #include "TetherStation.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/SceneComponent.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Net/UnrealNetwork.h"
 
 class AFacilityGeneratorLine;
 

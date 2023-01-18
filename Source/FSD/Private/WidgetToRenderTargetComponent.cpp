@@ -1,9 +1,9 @@
 #include "WidgetToRenderTargetComponent.h"
 
-class UUserWidget;
-class UTextureRenderTarget2D;
 class ULocalPlayer;
 class UMaterialInstanceDynamic;
+class UTextureRenderTarget2D;
+class UUserWidget;
 
 void UWidgetToRenderTargetComponent::SetWidget(UUserWidget* NewWidget) {
 }

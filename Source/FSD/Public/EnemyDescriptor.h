@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+#include "Engine/DataAsset.h"
+#include "GameplayTagContainer.h"
+#include "DeepPathFinderType.h"
 #include "UObject/NoExportTypes.h"
 #include "ECreatureSize.h"
 #include "EEnemyDescriptorCheatClass.h"
 #include "EEnemySignificance.h"
 #include "EVeteranScaling.h"
-#include "GameplayTagContainer.h"
-#include "DeepPathFinderType.h"
-#include "SpawnRarityItem.h"
 #include "EnemyDebris.h"
-#include "Engine/DataAsset.h"
+#include "SpawnRarityItem.h"
+#include "Templates/SubclassOf.h"
 #include "EnemyDescriptor.generated.h"
 
 class AActor;
 class APawn;
 class UBiome;
+class UCaveInfluencer;
 class UDebrisPositioning;
 class UEnemyDescriptor;
-class UMissionTemplate;
 class UEnemyID;
-class UCaveInfluencer;
+class UMissionTemplate;
 
 UCLASS(Blueprintable)
 class FSD_API UEnemyDescriptor : public UDataAsset {

@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "EUGCDownloadVersion.h"
-#include "EUGCApprovalStatus.h"
 #include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
+#include "EUGCApprovalStatus.h"
+#include "EUGCDownloadVersion.h"
 #include "UGCPackage.generated.h"
 
 UCLASS(Blueprintable)

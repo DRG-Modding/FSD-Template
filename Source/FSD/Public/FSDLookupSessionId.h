@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Net/OnlineBlueprintCallProxyBase.h"
-#include "FoundSessionResultDelegate.h"
 #include "Net/OnlineBlueprintCallProxyBase.h"
+#include "FoundSessionResultDelegate.h"
 #include "FSDLookupSessionId.generated.h"
 
-class UObject;
 class UFSDLookupSessionId;
+class UObject;
 
 UCLASS(Blueprintable, MinimalAPI)
 class UFSDLookupSessionId : public UOnlineBlueprintCallProxyBase {

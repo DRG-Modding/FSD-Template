@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Kismet/BlueprintAsyncActionBase.h"
 #include "YesNoPromptSettings.h"
 #include "YesNoPromptWidget.h"
-#include "Kismet/BlueprintAsyncActionBase.h"
 #include "YesNoPromptAction.generated.h"
 
 class UObject;

@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Blueprint/UserWidget.h"
 #include "Components/SlateWrapperTypes.h"
 #include "VisibilityChangedDelegateDelegate.h"
-#include "Blueprint/UserWidget.h"
 #include "FSDUserWidget.generated.h"
 
-class AItem;
 class AFSDPlayerState;
+class AItem;
 class APlayerCharacter;
 
 UCLASS(Blueprintable, EditInlineNew)

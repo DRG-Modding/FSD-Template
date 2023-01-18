@@ -1,24 +1,24 @@
 #include "FSDGameState.h"
-#include "Net/UnrealNetwork.h"
 #include "AttackerManagerComponent.h"
 #include "DifficultyManager.h"
-#include "SpawnEffectsComponent.h"
 #include "GemProximityTracker.h"
+#include "Net/UnrealNetwork.h"
 #include "PlayerProximityTracker.h"
 #include "SeasonReplicatorComponent.h"
 #include "ShowroomManager.h"
 #include "SoundMixManagerComponent.h"
+#include "SpawnEffectsComponent.h"
 #include "TeamResourcesComponent.h"
 
-class UObjective;
-class UResourceData;
-class UDifficultySetting;
 class AFSDGameState;
-class UFSDEvent;
 class AFSDPlayerState;
-class UGeneratedMission;
 class AGameStats;
 class AProceduralSetup;
+class UDifficultySetting;
+class UFSDEvent;
+class UGeneratedMission;
+class UObjective;
+class UResourceData;
 class USoundCue;
 
 void AFSDGameState::WaitForInitialGenerationDone(AFSDGameState* GameState, FLatentActionInfo LatentInfo) {

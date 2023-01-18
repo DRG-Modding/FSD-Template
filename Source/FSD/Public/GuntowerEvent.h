@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GuntowerModuleLevel.h"
 #include "GameEvent.h"
+#include "GuntowerModuleLevel.h"
 #include "GuntowerEvent.generated.h"
 
+class AGuntowerModule;
+class UDamageComponent;
 class USceneComponent;
 class USkeletalMeshComponent;
-class UDamageComponent;
-class AGuntowerModule;
 
 UCLASS(Blueprintable)
 class AGuntowerEvent : public AGameEvent {

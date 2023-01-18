@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/Interface.h"
+#include "Templates/SubclassOf.h"
 #include "LoadoutItem.generated.h"
 
 class AItem;

@@ -1,15 +1,15 @@
 #include "Biome.h"
 #include "Templates/SubclassOf.h"
 
-class UObject;
 class AActor;
-class UUserWidget;
 class ADebrisDataActor;
-class UTerrainMaterial;
 class UMaterialInstance;
-class UTexture2D;
+class UObject;
 class UParticleSystem;
 class USoundCue;
+class UTerrainMaterial;
+class UTexture2D;
+class UUserWidget;
 
 void UBiome::StartPreload(UObject* WorldContext) const {
 }

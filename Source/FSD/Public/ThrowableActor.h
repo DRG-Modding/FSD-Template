@@ -3,8 +3,8 @@
 #include "GameFramework/Actor.h"
 #include "ThrowableActor.generated.h"
 
-class UProjectileMovementComponent;
 class APlayerCharacter;
+class UProjectileMovementComponent;
 
 UCLASS(Blueprintable)
 class AThrowableActor : public AActor {

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayTagContainer.h"
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BehaviorTree/BTService.h"
+#include "GameplayTagContainer.h"
 #include "BTService_FindAttackable.generated.h"
 
 UCLASS(Blueprintable)

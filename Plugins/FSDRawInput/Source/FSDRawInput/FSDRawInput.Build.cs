@@ -7,11 +7,11 @@ public class FSDRawInput : ModuleRules {
         ShadowVariableWarningLevel = WarningLevel.Warning;
         
         PublicDependencyModuleNames.AddRange(new string[] {
-            "Core",
-            "CoreUObject",
-            "DeveloperSettings",
-            "Engine",
-            "InputCore",
-        });
+                    "Core",
+                    "CoreUObject",
+                    "DeveloperSettings",
+                    "Engine",
+                    "InputCore",
+                });
     }
 }

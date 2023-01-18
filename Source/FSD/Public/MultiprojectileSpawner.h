@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Components/ActorComponent.h"
 #include "UObject/NoExportTypes.h"
 #include "ProjectileSpawnData.h"
-#include "Components/ActorComponent.h"
 #include "MultiprojectileSpawner.generated.h"
 
 class AActor;

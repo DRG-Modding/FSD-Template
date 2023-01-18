@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Components/ActorComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "BodypartHitSigDelegate.h"
 #include "DamageData.h"
+#include "DamageSigDelegate.h"
+#include "DeathSigDelegate.h"
 #include "EHealthbarType.h"
+#include "Health.h"
+#include "HealthChangedSigDelegate.h"
+#include "HitSigDelegate.h"
 #include "OnHitByHitScanDelegate.h"
 #include "OnRadialDamageDelegate.h"
-#include "HitSigDelegate.h"
-#include "BodypartHitSigDelegate.h"
-#include "DamageSigDelegate.h"
-#include "HealthChangedSigDelegate.h"
-#include "DeathSigDelegate.h"
-#include "Components/ActorComponent.h"
-#include "Health.h"
 #include "HealthComponentBase.generated.h"
 
 class AActor;
-class UPrimitiveComponent;
 class UDamageClass;
 class UParticleSystem;
+class UPrimitiveComponent;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UHealthComponentBase : public UActorComponent, public IHealth {

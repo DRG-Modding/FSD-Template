@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "ProjectileAttack.h"
+#include "Templates/SubclassOf.h"
 #include "BallisticProjectileAttack.generated.h"
 
 class AProjectile;

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "AmmoDrivenWeapon.h"
+#include "Templates/SubclassOf.h"
 #include "AssaultRifle.generated.h"
 
 class AActor;

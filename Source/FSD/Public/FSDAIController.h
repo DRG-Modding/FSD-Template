@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DelegateDelegate.h"
-#include "Engine/EngineTypes.h"
-#include "MessageBehaviorTreeDelegate.h"
 #include "AIController.h"
+#include "Engine/EngineTypes.h"
+#include "DelegateDelegate.h"
+#include "MessageBehaviorTreeDelegate.h"
 #include "FSDAIController.generated.h"
 
 class APlayerCharacter;

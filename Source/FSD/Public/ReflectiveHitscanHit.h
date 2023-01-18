@@ -4,8 +4,8 @@
 #include "Engine/NetSerialization.h"
 #include "ReflectiveHitscanHit.generated.h"
 
-class UPrimitiveComponent;
 class UFSDPhysicalMaterial;
+class UPrimitiveComponent;
 
 USTRUCT(BlueprintType)
 struct FReflectiveHitscanHit {

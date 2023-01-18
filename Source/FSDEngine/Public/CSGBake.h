@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "BakeSettings.h"
-#include "BakeEntry.h"
 #include "Engine/DataAsset.h"
+#include "UObject/NoExportTypes.h"
+#include "BakeEntry.h"
+#include "BakeSettings.h"
 #include "CSGBake.generated.h"
 
-class UBakeConfig;
 class ACSGBuilder;
+class UBakeConfig;
 
 UCLASS(Blueprintable, MinimalAPI)
 class UCSGBake : public UDataAsset {

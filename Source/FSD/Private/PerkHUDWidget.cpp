@@ -1,8 +1,8 @@
 #include "PerkHUDWidget.h"
 
-class UPerkAsset;
 class AFSDPlayerState;
 class APlayerCharacter;
+class UPerkAsset;
 
 void UPerkHUDWidget::SetPerkAsset(UPerkAsset* InPerk) {
 }

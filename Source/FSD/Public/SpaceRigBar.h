@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "UObject/NoExportTypes.h"
-#include "EHolidayType.h"
-#include "DrinkableBarSlot.h"
-#include "HolidayMeshItems.h"
 #include "GameFramework/Actor.h"
+#include "UObject/NoExportTypes.h"
+#include "DrinkableBarSlot.h"
+#include "EHolidayType.h"
+#include "HolidayMeshItems.h"
+#include "Templates/SubclassOf.h"
 #include "SpaceRigBar.generated.h"
 
-class UBarMenuWidget;
-class UInstantUsable;
-class UDrinkableDataAsset;
 class ADrinkableActor;
 class APlayerCharacter;
+class UBarMenuWidget;
 class UBoxComponent;
+class UDrinkableDataAsset;
+class UInstantUsable;
 
 UCLASS(Abstract, Blueprintable)
 class ASpaceRigBar : public AActor {
