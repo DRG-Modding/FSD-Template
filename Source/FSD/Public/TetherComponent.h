@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "Components/ActorComponent.h"
 #include "ETetherConnectionMode.h"
 #include "ETetherMessageDirection.h"
 #include "TeherMessage_DelegateDelegate.h"

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/DataAsset.h"
 #include "ECommunityGoalTier.h"
 #include "ECommunityGoalType.h"
 #include "CommunityGoal.generated.h"

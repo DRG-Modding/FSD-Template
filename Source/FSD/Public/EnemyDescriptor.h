@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
-#include "GameplayTagContainer.h"
-#include "DeepPathFinderType.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/DataAsset.h"
+#include "DeepPathFinderType.h"
+#include "GameplayTagContainer.h"
 #include "ECreatureSize.h"
 #include "EEnemyDescriptorCheatClass.h"
 #include "EEnemySignificance.h"

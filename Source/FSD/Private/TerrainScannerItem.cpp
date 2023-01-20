@@ -1,6 +1,6 @@
 #include "TerrainScannerItem.h"
-#include "Components/SceneComponent.h"
 #include "Components/SceneCaptureComponent2D.h"
+#include "Components/SceneComponent.h"
 #include "Net/UnrealNetwork.h"
 
 void ATerrainScannerItem::Server_SetIslookingAtMap_Implementation(bool lookingAtMap) {

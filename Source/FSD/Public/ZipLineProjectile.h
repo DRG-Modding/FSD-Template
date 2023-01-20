@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
 #include "Components/TimelineComponent.h"
-#include "UObject/NoExportTypes.h"
 #include "Templates/SubclassOf.h"
 #include "ZipLineProjectile.generated.h"
 

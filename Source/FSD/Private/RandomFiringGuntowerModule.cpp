@@ -1,7 +1,7 @@
 #include "RandomFiringGuntowerModule.h"
 #include "Components/AudioComponent.h"
-#include "Components/StaticMeshComponent.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "Components/StaticMeshComponent.h"
 #include "DamageComponent.h"
 #include "Net/UnrealNetwork.h"
 

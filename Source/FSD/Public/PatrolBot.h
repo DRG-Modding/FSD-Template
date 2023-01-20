@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Curves/CurveFloat.h"
 #include "Engine/EngineTypes.h"
+#include "Curves/CurveFloat.h"
 #include "EDeepMovementState.h"
 #include "EPatrolBotControlState.h"
 #include "EPatrolBotState.h"

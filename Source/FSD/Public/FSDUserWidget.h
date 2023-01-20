@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Blueprint/UserWidget.h"
 #include "Components/SlateWrapperTypes.h"
+#include "Blueprint/UserWidget.h"
 #include "VisibilityChangedDelegateDelegate.h"
 #include "FSDUserWidget.generated.h"
 

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Blueprint/UserWidget.h"
 #include "InputCoreTypes.h"
+#include "Blueprint/UserWidget.h"
 #include "CustomKeySetting.h"
 #include "EKeyBindingSlot.h"
 #include "InputCaptureWidget.generated.h"

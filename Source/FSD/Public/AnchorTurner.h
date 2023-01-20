@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
+#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
 #include "DelegateEventDelegate.h"
 #include "AnchorTurner.generated.h"

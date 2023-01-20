@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
+#include "GameFramework/Actor.h"
 #include "EDropPodState.h"
 #include "Templates/SubclassOf.h"
 #include "DropPod.generated.h"

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
 #include "PFCollisionType.h"
-#include "UObject/NoExportTypes.h"
 #include "PathfinderSplineSegmentCollisionComponent.generated.h"
 
 class USplineComponent;

@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "UObject/NoExportTypes.h"
-#include "Engine/NetSerialization.h"
-#include "Engine/NetSerialization.h"
+#include "Components/ActorComponent.h"
 #include "Engine/EngineTypes.h"
+#include "Engine/NetSerialization.h"
+#include "Engine/NetSerialization.h"
 #include "Templates/SubclassOf.h"
 #include "StickyFlameSpawner.generated.h"
 

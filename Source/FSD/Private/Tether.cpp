@@ -1,7 +1,7 @@
 #include "Tether.h"
-#include "NiagaraComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Components/SphereComponent.h"
+#include "NiagaraComponent.h"
 #include "CarriableComponent.h"
 #include "DamageComponent.h"
 #include "InstantUsable.h"

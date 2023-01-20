@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "TerrainMaterialCore.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "TestTerrainMaterialDecalItem.h"
 #include "TestTerrainMaterialItem.h"
 #include "TerrainMaterial.generated.h"

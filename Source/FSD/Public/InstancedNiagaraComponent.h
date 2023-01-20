@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/SceneComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "Components/SceneComponent.h"
 #include "InstancedNiagaraComponent.generated.h"
 
 class UNiagaraComponent;

@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "GameFramework/Pawn.h"
+#include "GameplayTagContainer.h"
 #include "GameplayTagAssetInterface.h"
 #include "GameplayTagContainer.h"
-#include "GameplayTagContainer.h"
-#include "UObject/NoExportTypes.h"
 #include "BoolDelegateDelegate.h"
 #include "EPawnAttitude.h"
 #include "ProjectileSpawner.h"

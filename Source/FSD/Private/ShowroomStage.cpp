@@ -1,6 +1,6 @@
 #include "ShowroomStage.h"
-#include "Components/SceneComponent.h"
 #include "Components/SceneCaptureComponent2D.h"
+#include "Components/SceneComponent.h"
 
 
 USceneCaptureComponent2D* AShowroomStage::GetActiveCaptureComponent() {

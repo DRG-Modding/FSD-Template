@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayTagContainer.h"
 #include "UObject/NoExportTypes.h"
+#include "GameplayTagContainer.h"
 #include "ItemAggregator.h"
 #include "Templates/SubclassOf.h"
 #include "ItemPlacerAggregator.generated.h"

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/AudioComponent.h"
 #include "Components/ActorComponent.h"
+#include "Components/AudioComponent.h"
 #include "DelegateDelegate.h"
 #include "ETerminatorShoutState.h"
 #include "TerminatorShoutState.h"

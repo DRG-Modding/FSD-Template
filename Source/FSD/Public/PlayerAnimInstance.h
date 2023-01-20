@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Animation/AnimInstance.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "ECharacterMoveDirection.h"
 #include "ECharacterState.h"
 #include "FootStepNotifyTarget.h"

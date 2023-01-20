@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "GameplayTagContainer.h"
 #include "UObject/NoExportTypes.h"
+#include "Components/ActorComponent.h"
 #include "Engine/EngineTypes.h"
+#include "GameplayTagContainer.h"
 #include "EArmorDamageType.h"
 #include "EDamageComponentType.h"
 #include "OnAsyncAoE_CompleteDelegate.h"

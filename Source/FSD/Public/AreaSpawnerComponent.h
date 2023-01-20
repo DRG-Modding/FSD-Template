@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
 #include "DeepPathFinderSize.h"
-#include "UObject/NoExportTypes.h"
 #include "Templates/SubclassOf.h"
 #include "AreaSpawnerComponent.generated.h"
 

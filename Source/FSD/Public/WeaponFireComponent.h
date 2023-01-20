@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "Components/ActorComponent.h"
 #include "Engine/NetSerialization.h"
 #include "Upgradable.h"
 #include "WeaponFireEndedDelegateDelegate.h"

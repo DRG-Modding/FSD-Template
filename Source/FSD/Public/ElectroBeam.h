@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
+#include "GameFramework/Actor.h"
 #include "Engine/NetSerialization.h"
 #include "Templates/SubclassOf.h"
 #include "ElectroBeam.generated.h"

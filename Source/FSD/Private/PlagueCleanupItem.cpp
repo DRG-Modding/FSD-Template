@@ -1,6 +1,6 @@
 #include "PlagueCleanupItem.h"
-#include "Components/SphereComponent.h"
 #include "Components/BoxComponent.h"
+#include "Components/SphereComponent.h"
 #include "CrosshairAggregator.h"
 #include "InstantUsable.h"
 #include "KeepInsideWorld.h"

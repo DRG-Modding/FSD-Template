@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Particles/ParticleSystemComponent.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "Particles/ParticleSystemComponent.h"
 #include "FirstPersonParticleSystemComponent.generated.h"
 
 class UParticleSystem;

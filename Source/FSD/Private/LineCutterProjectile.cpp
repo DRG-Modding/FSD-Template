@@ -1,6 +1,6 @@
 #include "LineCutterProjectile.h"
-#include "Components/SceneComponent.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "Components/SceneComponent.h"
 #include "DamageComponent.h"
 #include "Net/UnrealNetwork.h"
 

@@ -1,7 +1,7 @@
 #include "SharkEnemy.h"
+#include "Perception/PawnSensingComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "Components/SphereComponent.h"
-#include "Perception/PawnSensingComponent.h"
 #include "DamageComponent.h"
 #include "EnemyComponent.h"
 #include "FakePhysGrabberComponent.h"

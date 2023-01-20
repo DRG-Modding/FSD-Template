@@ -1,6 +1,6 @@
 #include "LMGGuntoweModule.h"
-#include "Components/SceneComponent.h"
 #include "Components/AudioComponent.h"
+#include "Components/SceneComponent.h"
 #include "DamageComponent.h"
 #include "HitscanComponent.h"
 #include "Net/UnrealNetwork.h"

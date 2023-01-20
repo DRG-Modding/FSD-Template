@@ -1,6 +1,6 @@
 #include "SoapVacuumItem.h"
-#include "NiagaraComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "NiagaraComponent.h"
 
 class AActor;
 class AFoamPuddle;

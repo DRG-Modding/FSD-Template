@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/SceneComponent.h"
-#include "Curves/CurveFloat.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Components/SplineMeshComponent.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "Curves/CurveFloat.h"
+#include "Components/SceneComponent.h"
 #include "SplineTrailMaterial.h"
 #include "SplineTrailComponent.generated.h"
 

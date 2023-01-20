@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "EInputKeys.h"
 #include "EPipelineBuildState.h"
 #include "TrackBuilderSegment.h"

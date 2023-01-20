@@ -1,6 +1,6 @@
 #include "WoodLouse.h"
-#include "Components/SceneComponent.h"
 #include "Perception/PawnSensingComponent.h"
+#include "Components/SceneComponent.h"
 #include "Net/UnrealNetwork.h"
 
 class APawn;

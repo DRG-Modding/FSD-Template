@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "Engine/NetSerialization.h"
 #include "Engine/EngineTypes.h"
+#include "Engine/NetSerialization.h"
 #include "DoubleDrillDamageItem.h"
 #include "DualAnimatedItem.h"
 #include "EDoubleDrillState.h"

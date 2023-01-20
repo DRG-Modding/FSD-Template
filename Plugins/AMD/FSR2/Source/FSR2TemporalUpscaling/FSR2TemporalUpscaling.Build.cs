@@ -7,10 +7,10 @@ public class FSR2TemporalUpscaling : ModuleRules {
         ShadowVariableWarningLevel = WarningLevel.Warning;
         
         PublicDependencyModuleNames.AddRange(new string[] {
-                    "Core",
-                    "CoreUObject",
-                    "DeveloperSettings",
-                    "Engine",
-                });
+            "Core",
+            "CoreUObject",
+            "DeveloperSettings",
+            "Engine",
+        });
     }
 }

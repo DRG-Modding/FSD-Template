@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/NetSerialization.h"
 #include "Engine/EngineTypes.h"
+#include "Engine/NetSerialization.h"
 #include "DamageData.h"
 #include "ESharkEnemyState.h"
 #include "EnemyDeepPathfinderCharacter.h"

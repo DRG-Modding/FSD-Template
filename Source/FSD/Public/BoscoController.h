@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayTagContainer.h"
 #include "UObject/NoExportTypes.h"
+#include "GameplayTagContainer.h"
 #include "EInputKeys.h"
 #include "FSDAIController.h"
 #include "FollowTargetChangedDelegate.h"

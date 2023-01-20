@@ -1,7 +1,7 @@
 #include "PlasmaBoomerang.h"
+#include "Components/BoxComponent.h"
 #include "Components/SceneComponent.h"
 #include "Components/StaticMeshComponent.h"
-#include "Components/BoxComponent.h"
 #include "DamageComponent.h"
 
 class AActor;

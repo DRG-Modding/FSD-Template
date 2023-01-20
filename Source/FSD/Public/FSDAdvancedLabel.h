@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Blueprint/UserWidget.h"
-#include "Fonts/SlateFontInfo.h"
 #include "UObject/NoExportTypes.h"
+#include "Fonts/SlateFontInfo.h"
+#include "Blueprint/UserWidget.h"
 #include "ActionIconMapping.h"
 #include "EFSDInputSource.h"
 #include "FSDAdvancedLabel.generated.h"

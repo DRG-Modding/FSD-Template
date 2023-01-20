@@ -1,6 +1,6 @@
 #include "SplinePlant.h"
-#include "Components/SceneComponent.h"
 #include "Components/AudioComponent.h"
+#include "Components/SceneComponent.h"
 #include "Components/SplineComponent.h"
 #include "Net/UnrealNetwork.h"
 

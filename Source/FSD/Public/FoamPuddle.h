@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
-#include "Curves/CurveFloat.h"
 #include "UObject/NoExportTypes.h"
+#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
+#include "Curves/CurveFloat.h"
 #include "EVacuumState.h"
 #include "Templates/SubclassOf.h"
 #include "FoamPuddle.generated.h"

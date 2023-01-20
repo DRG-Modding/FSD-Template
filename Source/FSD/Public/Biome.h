@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Sound/ReverbSettings.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "Sound/ReverbSettings.h"
 #include "BiomeEnemyEntry.h"
 #include "BiomeNoiseItem.h"
 #include "HeatSource.h"

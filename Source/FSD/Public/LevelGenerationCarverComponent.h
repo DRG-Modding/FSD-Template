@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/PrimitiveComponent.h"
-#include "ECarveFilterType.h"
 #include "CarveOptionsCellSize.h"
+#include "ECarveFilterType.h"
 #include "LevelGenerationCarverComponent.generated.h"
 
 class USTLMeshCarver;

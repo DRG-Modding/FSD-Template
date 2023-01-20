@@ -1,6 +1,6 @@
 #include "VanityCharacter.h"
-#include "Components/SkeletalMeshComponent.h"
 #include "Components/ChildActorComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 
 void AVanityCharacter::DisplayVanity() {
 }

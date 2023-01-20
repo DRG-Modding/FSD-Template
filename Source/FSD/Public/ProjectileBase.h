@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
-#include "Engine/NetSerialization.h"
-#include "Engine/NetSerialization.h"
+#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
+#include "Engine/NetSerialization.h"
+#include "Engine/NetSerialization.h"
 #include "EOnProjectileImpactBehaviourEnum.h"
 #include "ProjectileImpact.h"
 #include "ProjectileBase.generated.h"

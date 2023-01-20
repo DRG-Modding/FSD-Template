@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/DataAsset.h"
 #include "EVanitySlot.h"
 #include "ResourceSpawner.h"
 #include "VanityMasterySettings.h"

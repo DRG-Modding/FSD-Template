@@ -1,7 +1,7 @@
 #include "GuntowerActivationPlatform.h"
+#include "Components/CapsuleComponent.h"
 #include "Components/SceneComponent.h"
 #include "Components/SkeletalMeshComponent.h"
-#include "Components/CapsuleComponent.h"
 #include "Net/UnrealNetwork.h"
 
 class AActor;

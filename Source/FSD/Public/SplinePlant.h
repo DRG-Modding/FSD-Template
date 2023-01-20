@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
-#include "Curves/CurveFloat.h"
-#include "Components/SplineMeshComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "GameFramework/Actor.h"
+#include "Components/SplineMeshComponent.h"
+#include "Curves/CurveFloat.h"
 #include "SplinePlant.generated.h"
 
 class UAudioComponent;

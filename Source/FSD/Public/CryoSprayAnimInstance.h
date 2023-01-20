@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Animation/AnimInstance.h"
 #include "UObject/NoExportTypes.h"
+#include "Animation/AnimInstance.h"
 #include "CryoSprayAnimInstance.generated.h"
 
 class ACryosprayItem;

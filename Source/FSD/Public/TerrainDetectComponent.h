@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/SceneComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "Components/SceneComponent.h"
 #include "PointRemovedEventDelegate.h"
 #include "TerrainDetectInterface.h"
 #include "TerrainDetectComponent.generated.h"

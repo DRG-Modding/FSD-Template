@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
 #include "Curves/CurveFloat.h"
-#include "UObject/NoExportTypes.h"
 #include "DropInfo.h"
 #include "Templates/SubclassOf.h"
 #include "PlagueMeteor.generated.h"

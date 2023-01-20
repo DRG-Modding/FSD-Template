@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/GameMode.h"
 #include "UObject/NoExportTypes.h"
+#include "GameFramework/GameMode.h"
 #include "AllReadySignatureDelegate.h"
 #include "CallDonkeyDelegate.h"
 #include "ECriticalItemPass.h"

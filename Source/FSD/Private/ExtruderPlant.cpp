@@ -1,6 +1,6 @@
 #include "ExtruderPlant.h"
-#include "Components/SkeletalMeshComponent.h"
 #include "Components/AudioComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 
 AExtruderPlant::AExtruderPlant() {
     this->SkeletalMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BakeSettings.h"
 #include "Components/PrimitiveComponent.h"
+#include "BakeSettings.h"
 #include "Templates/SubclassOf.h"
 #include "LevelGenerationCarverComponent2.generated.h"
 

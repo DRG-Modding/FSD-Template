@@ -1,6 +1,6 @@
 #include "DroneStream.h"
-#include "Components/SceneComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/SceneComponent.h"
 
 class AActor;
 class UPrimitiveComponent;

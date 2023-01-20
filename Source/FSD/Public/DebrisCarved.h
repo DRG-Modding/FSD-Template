@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ECarveFilterType.h"
 #include "CarveOptionsCellSize.h"
+#include "ECarveFilterType.h"
 #include "DebrisBase.h"
 #include "DebrisInfluence.h"
 #include "EDebrisCarvedType.h"

@@ -1,6 +1,6 @@
 #include "HangingFireCracker.h"
-#include "NiagaraComponent.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "NiagaraComponent.h"
 #include "FSDAudioComponent.h"
 #include "InstantUsable.h"
 

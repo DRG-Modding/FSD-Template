@@ -1,7 +1,7 @@
 #include "AFlyingBug.h"
+#include "Perception/PawnSensingComponent.h"
 #include "Components/AudioComponent.h"
 #include "Components/SphereComponent.h"
-#include "Perception/PawnSensingComponent.h"
 #include "EnemyComponent.h"
 #include "FrozenPawnImpactComponent.h"
 #include "HitReactionComponent.h"

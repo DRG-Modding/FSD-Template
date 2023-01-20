@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/DataAsset.h"
 #include "DeepCSGFloatTree.h"
 #include "DeepCSGFloatTreePacked.h"
 #include "StaticMeshCarver.generated.h"

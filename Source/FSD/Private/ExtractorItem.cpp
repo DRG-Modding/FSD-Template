@@ -1,8 +1,8 @@
 #include "ExtractorItem.h"
-#include "Components/SkeletalMeshComponent.h"
-#include "Components/PointLightComponent.h"
-#include "Particles/ParticleSystemComponent.h"
 #include "Components/BoxComponent.h"
+#include "Particles/ParticleSystemComponent.h"
+#include "Components/PointLightComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "FSDAudioComponent.h"
 #include "Net/UnrealNetwork.h"
 

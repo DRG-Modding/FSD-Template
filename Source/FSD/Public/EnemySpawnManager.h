@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
 #include "GameplayTagContainer.h"
-#include "UObject/NoExportTypes.h"
 #include "EnemyDestroyedSignatureDelegate.h"
 #include "EnemySpawnedDelegateDelegate.h"
 #include "EnemySpawnedSignatureDelegate.h"

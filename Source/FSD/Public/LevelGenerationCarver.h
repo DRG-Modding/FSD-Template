@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MatrixWithExactSync.h"
-#include "ECarveFilterType.h"
 #include "CarveOptionsCellSize.h"
+#include "ECarveFilterType.h"
+#include "MatrixWithExactSync.h"
 #include "LevelGenerationCarver.generated.h"
 
 class USTLMeshCarver;
