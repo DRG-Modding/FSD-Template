@@ -661,7 +661,7 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->ServerSearchPasswordRequired = false;
     this->volumeCharacterVoice = 56.99f;
     this->volumeMissionControl = 58.84f;
-    this->volumeMaster = 61.15f;
+    this->volumeMaster = 108.25f;
     this->volumeSFX = 43.62f;
     this->volumeMusic = 42.23f;
     this->CurrentAudioOutputDeviceId = TEXT("{0.0.0.00000000}.{e5f88e95-6344-4763-bd61-70b04ceb23f9}");

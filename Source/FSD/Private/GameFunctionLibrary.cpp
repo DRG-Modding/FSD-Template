@@ -43,7 +43,7 @@ bool UGameFunctionLibrary::IsPlayingOffline(UObject* WorldContextObject) {
 }
 
 bool UGameFunctionLibrary::IsPlayInEditor(UObject* WorldContextObject) {
-    return false;
+	return true;
 }
 
 UWindowManager* UGameFunctionLibrary::GetWindowManager(UObject* WorldContextObject) {

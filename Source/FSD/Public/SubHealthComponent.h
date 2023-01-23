@@ -53,7 +53,7 @@ public:
     
     
     // Fix for true pure virtual functions not being implemented
-    //UFUNCTION(BlueprintCallable)
+	//UFUNCTION(BlueprintCallable)
     AActor* GetOwner() const override PURE_VIRTUAL(GetOwner, return NULL;);
     
     UFUNCTION(BlueprintCallable)

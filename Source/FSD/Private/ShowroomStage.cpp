@@ -13,7 +13,7 @@ AShowroomStage::AShowroomStage() {
     this->ActiveCaptureComponent = CreateDefaultSubobject<USceneCaptureComponent2D>(TEXT("SceneCapture"));
     this->ControllerClass = NULL;
     this->ControllerInstance = NULL;
-    //this->SceneCapture = CreateDefaultSubobject<USceneCaptureComponent2D>(TEXT("SceneCapture"));
+	//this->SceneCapture = CreateDefaultSubobject<USceneCaptureComponent2D>(TEXT("SceneCapture"));
     this->MinPitch = 0.00f;
     this->MaxPitch = 0.00f;
     this->CameraFocusPoint = CreateDefaultSubobject<USceneComponent>(TEXT("CameraFocusPoint"));
