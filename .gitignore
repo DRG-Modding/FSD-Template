@@ -54,6 +54,7 @@
 # Text files
 !*.txt
 !*.md
+!*.diff
 
 # Script files
 !*.bat

@@ -1,0 +1,63 @@
+diff --git a/Plugins/SimpleUGC/Source/SimpleUGC/Private/UGCSettings.cpp b/Plugins/SimpleUGC/Source/SimpleUGC/Private/UGCSettings.cpp
+index cc9255e5..ac7deea2 100644
+--- a/Plugins/SimpleUGC/Source/SimpleUGC/Private/UGCSettings.cpp
++++ b/Plugins/SimpleUGC/Source/SimpleUGC/Private/UGCSettings.cpp
+@@ -55 +55 @@ UUGCSettings::UUGCSettings() {
+-    this->slot4.AddDefaulted(25);
++    this->slot4.AddDefaulted(26);
+diff --git a/Source/FSD/Private/FSDGameUserSettings.cpp b/Source/FSD/Private/FSDGameUserSettings.cpp
+index 41015481..53031b0a 100644
+--- a/Source/FSD/Private/FSDGameUserSettings.cpp
++++ b/Source/FSD/Private/FSDGameUserSettings.cpp
+@@ -664 +664 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
+-    this->volumeMaster = 61.15f;
++    this->volumeMaster = 108.25f;
+diff --git a/Source/FSD/Private/GameFunctionLibrary.cpp b/Source/FSD/Private/GameFunctionLibrary.cpp
+index d2767a5f..2004f61a 100644
+--- a/Source/FSD/Private/GameFunctionLibrary.cpp
++++ b/Source/FSD/Private/GameFunctionLibrary.cpp
+@@ -46 +46 @@ bool UGameFunctionLibrary::IsPlayInEditor(UObject* WorldContextObject) {
+-    return false;
++	return true;
+diff --git a/Source/FSD/Private/ShowroomStage.cpp b/Source/FSD/Private/ShowroomStage.cpp
+index d5862845..4e6ad2d0 100644
+--- a/Source/FSD/Private/ShowroomStage.cpp
++++ b/Source/FSD/Private/ShowroomStage.cpp
+@@ -16 +16 @@ AShowroomStage::AShowroomStage() {
+-    //this->SceneCapture = CreateDefaultSubobject<USceneCaptureComponent2D>(TEXT("SceneCapture"));
++	//this->SceneCapture = CreateDefaultSubobject<USceneCaptureComponent2D>(TEXT("SceneCapture"));
+diff --git a/Source/FSD/Public/EnemyHealthComponent.h b/Source/FSD/Public/EnemyHealthComponent.h
+index 093b22c6..2a189d5f 100644
+--- a/Source/FSD/Public/EnemyHealthComponent.h
++++ b/Source/FSD/Public/EnemyHealthComponent.h
+@@ -39 +39 @@ public:
+-    //UFUNCTION(BlueprintCallable, BlueprintPure)
++	//UFUNCTION(BlueprintCallable)
+diff --git a/Source/FSD/Public/FriendlyHealthComponent.h b/Source/FSD/Public/FriendlyHealthComponent.h
+index d6c80fb6..78138bd7 100644
+--- a/Source/FSD/Public/FriendlyHealthComponent.h
++++ b/Source/FSD/Public/FriendlyHealthComponent.h
+@@ -33 +33 @@ public:
+-    //UFUNCTION(BlueprintCallable, BlueprintPure)
++	//UFUNCTION(BlueprintCallable)
+diff --git a/Source/FSD/Public/HealthComponent.h b/Source/FSD/Public/HealthComponent.h
+index 3f85aee7..3e340b03 100644
+--- a/Source/FSD/Public/HealthComponent.h
++++ b/Source/FSD/Public/HealthComponent.h
+@@ -98 +98 @@ public:
+-    //UFUNCTION(BlueprintCallable, BlueprintPure)
++	//UFUNCTION(BlueprintCallable)
+diff --git a/Source/FSD/Public/HealthComponentBase.h b/Source/FSD/Public/HealthComponentBase.h
+index ec7cf623..22f71098 100644
+--- a/Source/FSD/Public/HealthComponentBase.h
++++ b/Source/FSD/Public/HealthComponentBase.h
+@@ -117 +117 @@ public:
+-    //UFUNCTION(BlueprintCallable)
++	//UFUNCTION(BlueprintCallable)
+diff --git a/Source/FSD/Public/SubHealthComponent.h b/Source/FSD/Public/SubHealthComponent.h
+index 8d25ea74..7cfde0e9 100644
+--- a/Source/FSD/Public/SubHealthComponent.h
++++ b/Source/FSD/Public/SubHealthComponent.h
+@@ -56 +56 @@ public:
+-    //UFUNCTION(BlueprintCallable)
++	//UFUNCTION(BlueprintCallable)
