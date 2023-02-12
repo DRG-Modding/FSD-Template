@@ -352,6 +352,15 @@
 		}
 	],
 	"TargetPlatforms": [
-		"Windows"
+		"Android",
+		"AllDesktop",
+		"HoloLens",
+		"IOS",
+		"LinuxNoEditor",
+		"LinuxAArch64NoEditor",
+		"Lumin",
+		"MacNoEditor",
+		"TVOS",
+		"WindowsNoEditor"
 	]
 }

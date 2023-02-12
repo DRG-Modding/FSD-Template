@@ -663,14 +663,14 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->volumeMissionControl = 58.84f;
     this->volumeMaster = 108.25f;
     this->volumeSFX = 43.62f;
-    this->volumeMusic = 42.23f;
+    this->volumeMusic = 56.99f;
     this->CurrentAudioOutputDeviceId = TEXT("{0.0.0.00000000}.{e5f88e95-6344-4763-bd61-70b04ceb23f9}");
     this->UseDefaultAudioOutputDevice = true;
     this->Sharpening = 0.00f;
-    this->AntiAliasingType = 1;
+    this->AntiAliasingType = 2;
     this->TemporalAAUpsamplingEnabled = false;
     this->volumeVoice = 99.74f;
-    this->UpscalingType = 1;
+    this->UpscalingType = 0;
     this->AmdFsrMode = 0;
     this->AmdFsr2Mode = 2;
     this->AmdFsrSharpness = 0.22f;
@@ -678,7 +678,7 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->NvidiaDlssMode = UDLSSMode::Auto;
     this->NvidiaDlssSharpness = 0.50f;
     this->FSDResolutionScale = 1.00f;
-    this->ReflexMode = ENVidiaReflexMode::Disabled;
+    this->ReflexMode = ENVidiaReflexMode::Enabled;
     this->soundClassCharacterVoices = NULL;
     this->soundClassMissionControl = NULL;
     this->soundClassMaster = NULL;
