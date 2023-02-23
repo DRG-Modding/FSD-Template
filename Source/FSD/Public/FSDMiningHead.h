@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DropPod.h"
+#include "DroppableOutpost.h"
 #include "FSDMiningHead.generated.h"
 
 class UResourceBank;
 
 UCLASS(Blueprintable)
-class FSD_API AFSDMiningHead : public ADropPod {
+class FSD_API AFSDMiningHead : public ADroppableOutpost {
     GENERATED_BODY()
 public:
 protected:

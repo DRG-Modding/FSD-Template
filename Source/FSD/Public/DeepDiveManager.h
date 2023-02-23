@@ -12,6 +12,7 @@ class UDeepDive;
 class UFSDEventsHandler;
 class UGeneratedMission;
 class UUserWidget;
+class UWidget;
 
 UCLASS(Blueprintable)
 class UDeepDiveManager : public UObject, public IMissionModeManager {
@@ -113,6 +114,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     int32 GetNumberOfStages() const override PURE_VIRTUAL(GetNumberOfStages, return 0;);
+    
+    UFUNCTION(BlueprintCallable)
+    TSoftClassPtr<UWidget> GetMissionModeCheatUI() override PURE_VIRTUAL(GetMissionModeCheatUI, return NULL;);
     
     UFUNCTION(BlueprintCallable)
     TSoftClassPtr<UUserWidget> GetMissionCompleteScreen(bool missionSuccessful) const override PURE_VIRTUAL(GetMissionCompleteScreen, return NULL;);

@@ -7,7 +7,7 @@
 class ADrinkableActor;
 class ADrinkableItem;
 class APlayerCharacter;
-class APlayerController;
+class UDLCBase;
 class UDialogDataAsset;
 class UDrinkEffectComponent;
 class UDrinkableDataAsset;
@@ -43,7 +43,10 @@ public:
     EDrinkableAlcoholStrength AlcoholStrength;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UDrinkableDataAsset* SupporterEdition;
+    UDrinkableDataAsset* SpecialEdition;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UDLCBase* RequiredDLC;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bPlayFireworks;
@@ -104,13 +107,13 @@ public:
     bool IsDrinkFree(UObject* WorldContext);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    bool HasSupporterEdition() const;
+    bool HasSpecialEdition() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
+    UDrinkableDataAsset* GetSpecialEdition(UObject* WorldContext);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UTexture2D* GetDrinkableIcon() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
-    UDrinkableDataAsset* GetDrinkableEdition(UObject* WorldContext, APlayerController* Player);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     static bool AreSpecialDrinksUnlocked(UObject* WorldContext);

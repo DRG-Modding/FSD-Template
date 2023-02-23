@@ -3,7 +3,7 @@
 #include "Projectile.h"
 #include "FlareGunProjectile.generated.h"
 
-class AMiningPod;
+class ATeamTransport;
 
 UCLASS(Blueprintable)
 class AFlareGunProjectile : public AProjectile {
@@ -35,7 +35,7 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnDroppodImpact(AMiningPod* DropPod);
+    void OnDroppodImpact(ATeamTransport* DropPod);
     
 public:
     UFUNCTION(BlueprintCallable)

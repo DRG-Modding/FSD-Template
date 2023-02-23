@@ -32,7 +32,6 @@ AThrowableItem::AThrowableItem() {
     this->CooldownAfterThrow = 1.00f;
     this->CanThrowBeforeEquipAnimFinish = false;
     this->CooldownAfterEquip = 0.25f;
-    this->AddPlayerVelocityToThrow = false;
     this->ThrowDelay = 0.00f;
     this->CooldownLeft = 0.00f;
     this->LoadoutItem = NULL;

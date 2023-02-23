@@ -59,7 +59,7 @@ UTexture2D* UMissionTemplate::GetMissionButtonImage() const {
     return NULL;
 }
 
-UGeneratedMission* UMissionTemplate::GenerateMission(const UObject* WorldContextObject, UBiome* Biome, int32 Seed, int32 GlobalSeed, int32 missionIndex, UMissionComplexity* limitComplexity, UMissionDuration* limitDuration, UMissionMutator* Mutator, TArray<UMissionWarning*> Warnings, TSubclassOf<UObjective> forceSecondary) {
+UGeneratedMission* UMissionTemplate::GenerateMission(const UObject* WorldContextObject, UBiome* Biome, int32 Seed, int32 GlobalSeed, int32 missionIndex, UMissionComplexity* limitComplexity, UMissionDuration* limitDuration, UMissionMutator* Mutator, TArray<UMissionWarning*> Warnings, TArray<TSubclassOf<UObjective>> forceSecondary) {
     return NULL;
 }
 

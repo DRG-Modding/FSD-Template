@@ -607,6 +607,9 @@ public:
     void C_FSDEvent_SetDebugEvent(const FString& EventName);
     
     UFUNCTION(BlueprintCallable, Exec)
+    void C_FSDEvent_ListEvents();
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void C_FSDEvent_ClearSeenRewards();
     
     UFUNCTION(BlueprintCallable, Exec)

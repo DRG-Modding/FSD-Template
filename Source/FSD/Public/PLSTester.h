@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Templates/SubclassOf.h"
 #include "PLSTester.generated.h"
 
 class UBiome;
@@ -10,6 +11,7 @@ class UMissionDuration;
 class UMissionMutator;
 class UMissionTemplate;
 class UMissionWarning;
+class UObjective;
 class USpecialEvent;
 
 UCLASS(Blueprintable)
@@ -43,6 +45,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UMissionWarning*> Warnings;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<TSubclassOf<UObjective>> SecondaryObjectives;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USpecialEvent* SpecialEvent;

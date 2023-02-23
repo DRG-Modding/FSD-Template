@@ -12,10 +12,10 @@ class AActor;
 class ABosco;
 class AFSDGameMode;
 class AFSDPlayerController;
-class AMiningPod;
 class AMolly;
 class APlayerCharacter;
 class APlayerController;
+class ATeamTransport;
 class UDifficultyManager;
 class UEncounterManager;
 class UEnemyWaveManager;
@@ -77,11 +77,11 @@ FSoftObjectPath AFSDGameMode::GetDropPodEscapePath() const {
     return FSoftObjectPath{};
 }
 
-TSubclassOf<AMiningPod> AFSDGameMode::GetDropPodEscapeClass() const {
+TSubclassOf<ATeamTransport> AFSDGameMode::GetDropPodEscapeClass() const {
     return NULL;
 }
 
-TSubclassOf<AMiningPod> AFSDGameMode::GetDropPodClass() const {
+TSubclassOf<ATeamTransport> AFSDGameMode::GetDropPodClass() const {
     return NULL;
 }
 

@@ -15,10 +15,10 @@ class AActor;
 class ABosco;
 class AFSDGameMode;
 class AFSDPlayerController;
-class AMiningPod;
 class AMolly;
 class APlayerCharacter;
 class APlayerController;
+class ATeamTransport;
 class UCritterManager;
 class UDifficultyManager;
 class UEncounterManager;
@@ -80,13 +80,13 @@ protected:
     UFormationsManagerComponent* FormationsManager;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSoftClassPtr<AMiningPod> DropPodClass;
+    TSoftClassPtr<ATeamTransport> DropPodClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftClassPtr<AMolly> MuleClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSoftClassPtr<AMiningPod> DropodEscapeClass;
+    TSoftClassPtr<ATeamTransport> DropodEscapeClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftClassPtr<ABosco> droneClass;
@@ -201,10 +201,10 @@ public:
     FSoftObjectPath GetDropPodEscapePath() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    TSubclassOf<AMiningPod> GetDropPodEscapeClass() const;
+    TSubclassOf<ATeamTransport> GetDropPodEscapeClass() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    TSubclassOf<AMiningPod> GetDropPodClass() const;
+    TSubclassOf<ATeamTransport> GetDropPodClass() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FSoftObjectPath GetDronePath() const;

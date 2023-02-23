@@ -3,6 +3,9 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Net/UnrealNetwork.h"
 
+void ADisplayCase::RefreshContent() {
+}
+
 void ADisplayCase::PlayReactionAnimation() {
 }
 

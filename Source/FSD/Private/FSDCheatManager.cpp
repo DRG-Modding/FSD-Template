@@ -575,6 +575,9 @@ void UFSDCheatManager::C_GameDLC_ResetAnnouncements() {
 void UFSDCheatManager::C_FSDEvent_SetDebugEvent(const FString& EventName) {
 }
 
+void UFSDCheatManager::C_FSDEvent_ListEvents() {
+}
+
 void UFSDCheatManager::C_FSDEvent_ClearSeenRewards() {
 }
 

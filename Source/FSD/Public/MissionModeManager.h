@@ -6,6 +6,7 @@
 class UGeneratedMission;
 class UObject;
 class UUserWidget;
+class UWidget;
 
 UINTERFACE(BlueprintType, meta=(CannotImplementInterfaceInBlueprint))
 class UMissionModeManager : public UInterface {
@@ -35,6 +36,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     virtual int32 GetNumberOfStages() const PURE_VIRTUAL(GetNumberOfStages, return 0;);
+    
+    UFUNCTION(BlueprintCallable)
+    virtual TSoftClassPtr<UWidget> GetMissionModeCheatUI() PURE_VIRTUAL(GetMissionModeCheatUI, return NULL;);
     
     UFUNCTION(BlueprintCallable)
     virtual TSoftClassPtr<UUserWidget> GetMissionCompleteScreen(bool missionSuccessful) const PURE_VIRTUAL(GetMissionCompleteScreen, return NULL;);

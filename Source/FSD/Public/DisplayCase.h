@@ -64,6 +64,9 @@ public:
     ADisplayCase();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
+    UFUNCTION(BlueprintCallable)
+    void RefreshContent();
+    
 protected:
     UFUNCTION(BlueprintCallable)
     void PlayReactionAnimation();

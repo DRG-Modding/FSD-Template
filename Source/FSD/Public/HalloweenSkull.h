@@ -31,6 +31,9 @@ protected:
 public:
     AHalloweenSkull();
 protected:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnJawClosed();
+    
     UFUNCTION(BlueprintCallable)
     void OnAlert();
     

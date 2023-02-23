@@ -7,7 +7,6 @@
 #include "Input/Events.h"
 #include "Input/Events.h"
 #include "EFSDInputSource.h"
-#include "EKeyBindingAxis.h"
 #include "InputDisplay.h"
 #include "InputFunctionLibrary.generated.h"
 
@@ -35,13 +34,13 @@ public:
     static bool IsKeyEventAction(const FKeyEvent& KeyEvent, FName ActionName, bool IgnoreCustomBindings);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    static bool IsInputActionDown(const APlayerController* InPlayerController, FName InActionName);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsAxisMappedToDirectional(FName InActionName, FKey Key, int32 Direction, bool IgnoreCustomBindings);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsActionMappedTo(FName InActionName, FKey Key, bool IgnoreCustomBindings);
-    
-    UFUNCTION(BlueprintCallable)
-    static TArray<FKey> GetInputKeysBoundToAction(const FName& ActionName, EKeyBindingAxis Axis, bool IsGamePadKey);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool GetAxisMapping(FName InActionName, int32 Axis, bool InGamepadKeys, FInputAxisKeyMapping& OutResult);

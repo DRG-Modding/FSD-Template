@@ -7,6 +7,7 @@
 #include "EHolidayType.h"
 #include "EncounterSpecialItem.h"
 #include "FSDEventActivateChangedDelegate.h"
+#include "PlatformSpecificEventPopup.h"
 #include "FSDEvent.generated.h"
 
 class ADebrisDataActor;
@@ -14,6 +15,7 @@ class APlayerController;
 class UCampaign;
 class UDrinkableDataAsset;
 class UFSDEvent;
+class UFSDEventPopupWidget;
 class UObject;
 class USoundCue;
 class UTexture2D;
@@ -27,17 +29,17 @@ public:
     FFSDEventActivateChanged OnActiveChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FName EventName;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    EHolidayType EventType;
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool EnableDangerousSaveGameIDEditing;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid SavegameID;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bHasClaimableRewards;
+    FName EventName;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EHolidayType EventType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bFreeBeerEvent;
@@ -76,7 +78,13 @@ protected:
     TArray<TSoftObjectPtr<UWorld>> UnloadSpacerigSublevels;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bHasClaimableRewards;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FClaimableRewardView ClaimableRewards;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FPlatformSpecificEventPopup> OptionalPopUpWindow;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSoftClassPtr<UCampaign>> Campaigns;
@@ -105,6 +113,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     bool GetIsActive(UObject* WorldContext) const;
+    
+    UFUNCTION(BlueprintCallable)
+    UFSDEventPopupWidget* CreatePopupWindow(APlayerController* InPlayerController);
     
 };
 

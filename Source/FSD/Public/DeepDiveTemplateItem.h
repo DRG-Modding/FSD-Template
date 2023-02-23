@@ -14,10 +14,19 @@ public:
     UMissionTemplate* mission;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 Probability;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UMissionDuration*> AllowedDurations;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UMissionComplexity*> AllowedComplexities;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool CanOnlyAppearOnce;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool CanOnlyAppearOncePerDeepDiveSet;
     
     FSD_API FDeepDiveTemplateItem();
 };

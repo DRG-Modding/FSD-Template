@@ -25,6 +25,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWeeklyCampaignItem MaxtrixCoreHuntSave;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FWeeklyCampaignItem SeededRandomSave;
+    
 public:
     FSD_API FCampaignSave();
 };

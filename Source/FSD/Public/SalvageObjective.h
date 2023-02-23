@@ -8,8 +8,8 @@
 #include "SalvageObjective.generated.h"
 
 class AActor;
+class ADropPod;
 class AMiniMule;
-class AMiningPod;
 class AProceduralSetup;
 class UCurveFloat;
 class UDebrisBase;
@@ -47,7 +47,7 @@ protected:
     TSoftClassPtr<AMiniMule> SalvageActor;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSoftClassPtr<AMiningPod> DamagedPodClass;
+    TSoftClassPtr<ADropPod> DamagedPodClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDebrisPositioning* DamagedPodPositioning;
@@ -56,7 +56,7 @@ protected:
     float DamagedPodMinDistanceToDropZone;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    AMiningPod* DamagedPod;
+    ADropPod* DamagedPod;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_ActorsToSalvage, meta=(AllowPrivateAccess=true))
     int32 ActorsToSalvage;
