@@ -3,9 +3,6 @@
 #include "FuelLineConnectPoint.h"
 #include "Net/UnrealNetwork.h"
 
-class ATrackBuilderSegment;
-class UTrackBuilderConnectPoint;
-
 void AFuelLineEndPoint::SetOpenForConnection(bool Open) {
 }
 

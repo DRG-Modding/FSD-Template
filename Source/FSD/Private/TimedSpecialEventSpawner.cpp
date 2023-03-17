@@ -1,7 +1,5 @@
 #include "TimedSpecialEventSpawner.h"
 
-class UObject;
-
 void UTimedSpecialEventSpawner::UnblockEventSpawn(UObject* blocker) {
 }
 

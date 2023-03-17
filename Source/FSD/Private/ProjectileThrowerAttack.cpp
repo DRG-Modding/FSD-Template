@@ -1,7 +1,5 @@
 #include "ProjectileThrowerAttack.h"
 
-class UAnimMontage;
-
 void UProjectileThrowerAttack::OnThrowerMontageEnded(UAnimMontage* Montage, bool bInterrupted) {
 }
 

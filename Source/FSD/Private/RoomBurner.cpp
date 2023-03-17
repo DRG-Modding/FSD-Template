@@ -1,8 +1,5 @@
 #include "RoomBurner.h"
 
-class AProceduralSetup;
-class URoomGenerator;
-
 void ARoomBurner::SpawnEncounter(AProceduralSetup* setup) {
 }
 

@@ -1,8 +1,6 @@
 #include "ChargedProjectileLauncherComponent.h"
 #include "Templates/SubclassOf.h"
 
-class AProjectileBase;
-
 void UChargedProjectileLauncherComponent::SetProjectileClassCharged(TSubclassOf<AProjectileBase> NewProjectileClass) {
 }
 

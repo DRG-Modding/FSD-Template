@@ -1,8 +1,6 @@
 #include "GlowPlant.h"
 #include "Components/StaticMeshComponent.h"
 
-class UPrimitiveComponent;
-
 void AGlowPlant::OnDeath_Implementation() {
 }
 

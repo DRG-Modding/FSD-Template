@@ -7,6 +7,10 @@ void UClaimableRewardEntryWidget::SetData(FClaimableRewardEntry InData) {
 }
 
 
+
+void UClaimableRewardEntryWidget::MoveIn(float InStartDelay) {
+}
+
 UClaimableRewardEntryWidget::UClaimableRewardEntryWidget() : UUserWidget(FObjectInitializer::Get()) {
 }
 

@@ -4,11 +4,6 @@
 #include "ProjectileLauncherComponent.h"
 #include "StickyFlameSpawner.h"
 
-class AActor;
-class UFSDPhysicalMaterial;
-class UHealthComponentBase;
-class UPrimitiveComponent;
-
 void AFlameThrowerItem::TriggerAoEHeat() {
 }
 

@@ -1,8 +1,5 @@
 #include "HUDVisibilityGroup.h"
 
-class UHUDVisibilityGroup;
-class UWidget;
-
 void UHUDVisibilityGroup::SetModeFromPreset(EHUDVisibilityPresets Preset) {
 }
 

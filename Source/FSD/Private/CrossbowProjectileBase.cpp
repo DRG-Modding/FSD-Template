@@ -1,8 +1,6 @@
 #include "CrossbowProjectileBase.h"
 #include "Net/UnrealNetwork.h"
 
-class UDamageComponent;
-
 
 void ACrossbowProjectileBase::SetSimpleDamageComponent(UDamageComponent* Component) {
 }

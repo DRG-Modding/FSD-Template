@@ -1,9 +1,6 @@
 #include "DeepPathfinderMovement.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class UFakeMoverSettings;
-
 void UDeepPathfinderMovement::UpdateTargetActor(AActor* NewTarget) {
 }
 

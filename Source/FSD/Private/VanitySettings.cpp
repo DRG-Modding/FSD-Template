@@ -1,9 +1,5 @@
 #include "VanitySettings.h"
 
-class UObject;
-class UPlayerCharacterID;
-class UTexture2D;
-
 bool UVanitySettings::HasNewVanityNotification(UObject* WorldContextObject, EVanitySlot Slot, UPlayerCharacterID* characterID) {
     return false;
 }

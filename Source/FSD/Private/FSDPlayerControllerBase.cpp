@@ -1,8 +1,6 @@
 #include "FSDPlayerControllerBase.h"
 #include "WindowManager.h"
 
-class UPlayerCharacterID;
-
 void AFSDPlayerControllerBase::ToggleAnalogCursor(bool Visible) {
 }
 

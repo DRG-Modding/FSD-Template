@@ -1,11 +1,6 @@
 #include "StatusEffectsComponent.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class UHealthComponentBase;
-class UObject;
-class UStatusEffect;
-
 bool UStatusEffectsComponent::TryPushActiveStatusEffect(TSubclassOf<UStatusEffect> StatusEffect, AActor* Target, AActor* Owner) {
     return false;
 }

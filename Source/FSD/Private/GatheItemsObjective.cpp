@@ -1,8 +1,6 @@
 #include "GatheItemsObjective.h"
 #include "Net/UnrealNetwork.h"
 
-class UCappedResource;
-
 void UGatheItemsObjective::OnResourceChanged(UCappedResource* CappedResource, float Amount) {
 }
 

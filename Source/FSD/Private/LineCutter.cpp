@@ -1,8 +1,6 @@
 #include "LineCutter.h"
 #include "Net/UnrealNetwork.h"
 
-class AProjectileBase;
-
 void ALineCutter::Server_StopRotatingProjectile_Implementation() {
 }
 

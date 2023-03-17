@@ -1,8 +1,6 @@
 #include "DrinkableActor.h"
 #include "Net/UnrealNetwork.h"
 
-class APlayerCharacter;
-
 void ADrinkableActor::Pickup(APlayerCharacter* byCharacter) {
 }
 

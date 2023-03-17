@@ -3,8 +3,6 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class AFacilityGeneratorLine;
-
 void ATetherStation::SpawnGeneratorLines(const FTransform& startL, const FTransform& startR, const TArray<FTransform>& endL, const TArray<FTransform>& endR, AFacilityGeneratorLine*& outLineL, AFacilityGeneratorLine*& outLineR) {
 }
 

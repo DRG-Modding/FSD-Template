@@ -1,11 +1,6 @@
 #include "BoltActionWeapon.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class UFSDPhysicalMaterial;
-class UHealthComponentBase;
-class UPrimitiveComponent;
-
 void ABoltActionWeapon::SetOverheated(bool isOverheated) {
 }
 

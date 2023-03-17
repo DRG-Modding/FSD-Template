@@ -3,8 +3,6 @@
 #include "Net/UnrealNetwork.h"
 #include "PlagueUsable.h"
 
-class APlayerCharacter;
-
 void APlagueControlActor::SpawnPodHack(APlayerCharacter* Player) const {
 }
 

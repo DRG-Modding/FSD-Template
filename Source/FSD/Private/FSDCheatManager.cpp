@@ -1,17 +1,6 @@
 #include "FSDCheatManager.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class AFSDAIController;
-class APawn;
-class APlayerCharacter;
-class UBaseCritterDescriptor;
-class UEnemyDescriptor;
-class UItemID;
-class UObject;
-class UPlayerCharacterID;
-class UResourceData;
-
 void UFSDCheatManager::SwitchCharacter(UPlayerCharacterID* characterID) {
 }
 

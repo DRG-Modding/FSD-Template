@@ -1,7 +1,5 @@
 #include "ProjectileAttackComponent.h"
 
-class UAnimMontage;
-
 void UProjectileAttackComponent::AddAttackMontage(UAnimMontage* attackMontage) {
 }
 

@@ -5,9 +5,6 @@
 #include "OutlineComponent.h"
 #include "SimpleObjectInfoComponent.h"
 
-class ATrackBuilderSegment;
-class UTrackBuilderUsable;
-
 
 void AFuelLineStart::OnRep_FuelLineConnected() {
 }

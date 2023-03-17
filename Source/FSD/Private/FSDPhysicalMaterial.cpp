@@ -1,10 +1,5 @@
 #include "FSDPhysicalMaterial.h"
 
-class UFSDPhysicalMaterial;
-class UFXSystemComponent;
-class UObject;
-class UPrimitiveComponent;
-
 UFXSystemComponent* UFSDPhysicalMaterial::SpawnImpactParticlesFromHit(UObject* WorldContextObject, const FHitResult& HitResult) {
     return NULL;
 }

@@ -1,8 +1,6 @@
 #include "HostileTargetingGuntowerModule.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-
 void AHostileTargetingGuntowerModule::OnPerceptionUpdated(AActor* sensedActor, FAIStimulus Stimulus) {
 }
 

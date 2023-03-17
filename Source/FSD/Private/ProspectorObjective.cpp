@@ -1,8 +1,6 @@
 #include "ProspectorObjective.h"
 #include "Net/UnrealNetwork.h"
 
-class UHealthComponentBase;
-
 void UProspectorObjective::OnRep_ActiveProspector() {
 }
 

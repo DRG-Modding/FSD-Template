@@ -1,7 +1,5 @@
 #include "ProceduralResources.h"
 
-class AProceduralSetup;
-
 void UProceduralResources::GenerateResources() {
 }
 

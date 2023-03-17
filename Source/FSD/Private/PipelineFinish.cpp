@@ -3,11 +3,6 @@
 #include "SingleUsableComponent.h"
 #include "TrackBuilderConnectPoint.h"
 
-class APipelineSegment;
-class APlayerCharacter;
-class ARessuplyPod;
-class ATrackBuilderSegment;
-
 
 
 void APipelineFinish::OnRep_PipelineCompleted() {

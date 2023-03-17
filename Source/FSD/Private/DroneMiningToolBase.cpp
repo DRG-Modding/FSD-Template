@@ -1,7 +1,5 @@
 #include "DroneMiningToolBase.h"
 
-class UTerrainMaterial;
-
 void UDroneMiningToolBase::StopMining() {
 }
 

@@ -1,7 +1,5 @@
 #include "DroneControllerBase.h"
 
-class APlayerCharacter;
-
 void ADroneControllerBase::OnShout(APlayerCharacter* ShoutingPlayer) {
 }
 

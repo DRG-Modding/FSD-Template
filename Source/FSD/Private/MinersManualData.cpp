@@ -1,7 +1,5 @@
 #include "MinersManualData.h"
 
-class UTexture2D;
-
 void UMinersManualData::GetText(FText& Headline, FText& richText) {
 }
 

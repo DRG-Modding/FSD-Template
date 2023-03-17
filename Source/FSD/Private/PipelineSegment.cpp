@@ -9,14 +9,6 @@
 #include "SimpleHealthComponent.h"
 #include "SingleUsableComponent.h"
 
-class APipelineSegment;
-class APipelineStart;
-class APlayerCharacter;
-class ATrackBuilderSegment;
-class UHealthComponentBase;
-class UMaterialInterface;
-class UTrackBuilderUsable;
-
 void APipelineSegment::UpdateSplineMesh(USplineMeshComponent* InMesh, float InProgress, bool InMoveEndCap) {
 }
 

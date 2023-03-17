@@ -1,7 +1,5 @@
 #include "ProceduralVeinsComponent.h"
 
-class AProceduralSetup;
-
 void UProceduralVeinsComponent::GenerateResourceVeins_Async(AProceduralSetup*& setup, FLatentActionInfo LatentInfo) {
 }
 

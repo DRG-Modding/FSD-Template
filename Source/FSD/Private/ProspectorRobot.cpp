@@ -1,8 +1,6 @@
 #include "ProspectorRobot.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-
 void AProspectorRobot::SetTarget(AActor* NewTarget) {
 }
 

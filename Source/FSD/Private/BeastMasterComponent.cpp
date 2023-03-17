@@ -1,11 +1,6 @@
 #include "BeastMasterComponent.h"
 #include "Templates/SubclassOf.h"
 
-class AFSDPawn;
-class APlayerCharacter;
-class UActorComponent;
-class UDamageComponent;
-
 void UBeastMasterComponent::SetDamage(UDamageComponent* cmp, float dmg) {
 }
 

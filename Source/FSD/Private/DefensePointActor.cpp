@@ -2,8 +2,6 @@
 #include "Net/UnrealNetwork.h"
 #include "SingleUsableComponent.h"
 
-class APlayerCharacter;
-
 void ADefensePointActor::SetState(EDefendPointState State) {
 }
 

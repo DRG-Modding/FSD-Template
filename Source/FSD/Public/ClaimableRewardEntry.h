@@ -3,6 +3,7 @@
 #include "UObject/NoExportTypes.h"
 #include "ClaimableRewardEntry.generated.h"
 
+class UClaimableRewardEntryWidget;
 class UObject;
 class UReward;
 
@@ -21,6 +22,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UReward*> Rewards;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSoftClassPtr<UClaimableRewardEntryWidget> EntryWidgetOverride;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid SavegameID;

@@ -1,7 +1,5 @@
 #include "ItemUpgradePreviewComponent.h"
 
-class UItemUpgrade;
-
 void UItemUpgradePreviewComponent::SetPreviewUpgrade(UItemUpgrade* InUpgrade) {
 }
 

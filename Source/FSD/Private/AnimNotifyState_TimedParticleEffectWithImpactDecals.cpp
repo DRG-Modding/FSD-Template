@@ -1,7 +1,5 @@
 #include "AnimNotifyState_TimedParticleEffectWithImpactDecals.h"
 
-class UPhysicalMaterial;
-
 void UAnimNotifyState_TimedParticleEffectWithImpactDecals::OnParticleCollision(FName EventName, float EmitterTime, int32 ParticleTime, FVector Location, FVector Velocity, FVector Direction, FVector Normal, FName BoneName, UPhysicalMaterial* PhysMat) const {
 }
 

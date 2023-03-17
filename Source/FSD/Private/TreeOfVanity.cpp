@@ -1,7 +1,5 @@
 #include "TreeOfVanity.h"
 
-class UReward;
-
 void UTreeOfVanity::ClearNodes() {
 }
 

@@ -1,7 +1,5 @@
 #include "ShowroomController.h"
 
-class AActor;
-
 void UShowroomController::SetLightChannels(AActor* Actor) {
 }
 

@@ -1,9 +1,6 @@
 #include "PlayerCharacterID.h"
 #include "Templates/SubclassOf.h"
 
-class APlayerCharacter;
-class UPlayerCharacterData;
-
 UPlayerCharacterData* UPlayerCharacterID::GetCharacterData() const {
     return NULL;
 }

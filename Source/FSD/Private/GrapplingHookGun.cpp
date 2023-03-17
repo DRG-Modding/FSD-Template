@@ -3,8 +3,6 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class AGrapplingHookGun;
-
 void AGrapplingHookGun::StopGrapple() {
 }
 

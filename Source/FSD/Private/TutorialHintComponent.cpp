@@ -1,7 +1,5 @@
 #include "TutorialHintComponent.h"
 
-class UObject;
-
 void UTutorialHintComponent::SetRemainingVisibleTime(float remainingTime) {
 }
 

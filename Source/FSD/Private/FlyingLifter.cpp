@@ -6,9 +6,6 @@
 #include "InDangerComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class UPrimitiveComponent;
-
 bool AFlyingLifter::SelectAnotherTarget() {
     return false;
 }

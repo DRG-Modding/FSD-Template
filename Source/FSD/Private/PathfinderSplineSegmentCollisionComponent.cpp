@@ -1,7 +1,5 @@
 #include "PathfinderSplineSegmentCollisionComponent.h"
 
-class USplineComponent;
-
 void UPathfinderSplineSegmentCollisionComponent::UpdateFromSpline(USplineComponent* SplineComponent, int32 StartIndex) {
 }
 

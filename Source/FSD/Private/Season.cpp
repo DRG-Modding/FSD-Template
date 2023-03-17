@@ -1,7 +1,5 @@
 #include "Season.h"
 
-class UReward;
-
 void USeason::AddUnassignedReward(int32 Index, UReward* Reward) {
 }
 

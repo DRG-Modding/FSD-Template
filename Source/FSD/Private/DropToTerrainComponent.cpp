@@ -1,8 +1,6 @@
 #include "DropToTerrainComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class USceneComponent;
-
 void UDropToTerrainComponent::StopDropDetection(bool stopFalling) {
 }
 

@@ -1,8 +1,6 @@
 #include "DroneUseComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class APlayerCharacter;
-
 void UDroneUseComponent::SyncedUsableUserCountChangedResponse(int32 userCount) {
 }
 

@@ -1,8 +1,6 @@
 #include "ResourceBank.h"
 #include "Net/UnrealNetwork.h"
 
-class APlayerCharacter;
-
 void UResourceBank::All_Depositing_Implementation(APlayerCharacter* Character) {
 }
 

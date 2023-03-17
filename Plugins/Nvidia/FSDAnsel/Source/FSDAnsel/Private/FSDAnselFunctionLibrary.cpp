@@ -1,7 +1,5 @@
 #include "FSDAnselFunctionLibrary.h"
 
-class UObject;
-
 void UFSDAnselFunctionLibrary::StopPhotographySession(UObject* WorldContextObject) {
 }
 

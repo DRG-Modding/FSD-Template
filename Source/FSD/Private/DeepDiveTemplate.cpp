@@ -1,9 +1,5 @@
 #include "DeepDiveTemplate.h"
 
-class UMissionComplexity;
-class UMissionDuration;
-class UMissionTemplate;
-
 bool UDeepDiveTemplate::IsDurationAllowed(UMissionTemplate* mission, UMissionDuration* Duration) const {
     return false;
 }

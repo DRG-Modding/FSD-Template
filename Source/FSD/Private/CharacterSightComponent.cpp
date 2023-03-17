@@ -1,9 +1,6 @@
 #include "CharacterSightComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class UPrimitiveComponent;
-
 void UCharacterSightComponent::Server_UpdateTarget_Implementation(AActor* NewActor, UPrimitiveComponent* NewPrimitive) {
 }
 

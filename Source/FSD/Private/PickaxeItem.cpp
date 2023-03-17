@@ -3,11 +3,6 @@
 #include "DamageComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UFSDPhysicalMaterial;
-class UFXSystemAsset;
-class UPrimitiveComponent;
-class USoundCue;
-
 
 void APickaxeItem::SetSpecialCoolDownDuration(float newCooldownDuration) {
 }

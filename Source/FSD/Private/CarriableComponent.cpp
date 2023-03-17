@@ -1,7 +1,5 @@
 #include "CarriableComponent.h"
 
-class APlayerCharacter;
-
 bool UCarriableComponent::PickupItem(APlayerCharacter* byCharacter) {
     return false;
 }

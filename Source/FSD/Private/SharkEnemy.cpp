@@ -8,13 +8,6 @@
 #include "InDangerComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class APawn;
-class UDamageTag;
-class UHealthComponent;
-class UHealthComponentBase;
-class UPrimitiveComponent;
-
 void ASharkEnemy::SetVulnerable() {
 }
 

@@ -1,7 +1,5 @@
 #include "EnemyMinersManualData.h"
 
-class UTexture2D;
-
 UTexture2D* UEnemyMinersManualData::GetEnemyIcon() const {
     return NULL;
 }

@@ -1,11 +1,6 @@
 #include "CharacterVanityComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UCharacterVanityItems;
-class UObject;
-class UPlayerCharacterID;
-class UVanityItem;
-
 void UCharacterVanityComponent::UpdateMeshes() {
 }
 

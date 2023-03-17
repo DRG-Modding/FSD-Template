@@ -1,7 +1,5 @@
 #include "ResourceData.h"
 
-class UObject;
-
 float UResourceData::GetOwnedAmount(UObject* WorldContextObject) const {
     return 0.0f;
 }

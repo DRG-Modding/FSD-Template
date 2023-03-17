@@ -1,8 +1,6 @@
 #include "OxygenComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UHealthComponentBase;
-
 void UOxygenComponent::RegisterOxygenEvent(FOxygenTriggerDelegate OxygenCallback, float oxygenLevel, bool triggerOnOxygenLoss) {
 }
 

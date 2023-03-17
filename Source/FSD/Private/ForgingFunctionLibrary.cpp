@@ -1,8 +1,5 @@
 #include "ForgingFunctionLibrary.h"
 
-class UObject;
-class USchematic;
-
 USchematic* UForgingFunctionLibrary::PickForgingMasteryDefaultReward(UObject* WorldContextObject, ESchematicType InType) {
     return NULL;
 }

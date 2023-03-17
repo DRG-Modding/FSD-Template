@@ -1,10 +1,6 @@
 #include "StatusDamageBonusUpgrade.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class AFSDPlayerState;
-class UStatusEffect;
-
 FUpgradeValues UStatusDamageBonusUpgrade::GetUpgradedValue(TSubclassOf<AActor> Item, AFSDPlayerState* Player, TSubclassOf<UStatusEffect> StatusEffect) {
     return FUpgradeValues{};
 }

@@ -1,7 +1,5 @@
 #include "GrowthComponent.h"
 
-class USceneComponent;
-
 void UGrowthComponent::StopGrow() {
 }
 

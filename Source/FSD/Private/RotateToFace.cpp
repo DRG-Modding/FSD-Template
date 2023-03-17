@@ -1,7 +1,5 @@
 #include "RotateToFace.h"
 
-class AActor;
-
 void URotateToFace::SetTarget(AActor* NewTarget) {
 }
 

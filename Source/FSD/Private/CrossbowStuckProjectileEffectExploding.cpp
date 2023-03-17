@@ -1,7 +1,5 @@
 #include "CrossbowStuckProjectileEffectExploding.h"
 
-class UHealthComponentBase;
-
 void UCrossbowStuckProjectileEffectExploding::StartTimeoutTimer(UHealthComponentBase* destroyed) {
 }
 

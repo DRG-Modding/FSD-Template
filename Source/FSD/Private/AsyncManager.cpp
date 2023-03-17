@@ -1,7 +1,5 @@
 #include "AsyncManager.h"
 
-class UObject;
-
 UObject* UAsyncManager::SyncLoadAsset(const TSoftObjectPtr<UObject>& Asset) {
     return NULL;
 }

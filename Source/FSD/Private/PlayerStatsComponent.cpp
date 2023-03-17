@@ -1,8 +1,6 @@
 #include "PlayerStatsComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UCappedResource;
-
 void UPlayerStatsComponent::SendMissionAnalytics(bool trackMorkite) {
 }
 

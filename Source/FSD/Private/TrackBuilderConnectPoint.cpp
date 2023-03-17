@@ -1,8 +1,6 @@
 #include "TrackBuilderConnectPoint.h"
 #include "Net/UnrealNetwork.h"
 
-class ATrackBuilderSegment;
-
 void UTrackBuilderConnectPoint::OnRep_ConnectedSegment() {
 }
 

@@ -1,10 +1,5 @@
 #include "BossFightSubSystem.h"
 
-class AActor;
-class IBossFightInterface;
-class UBossFightInterface;
-class UUserWidget;
-
 void UBossFightSubSystem::RemoveCustomBossFightWidget(UUserWidget* InWidget) {
 }
 

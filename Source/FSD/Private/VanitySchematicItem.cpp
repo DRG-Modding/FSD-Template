@@ -1,7 +1,5 @@
 #include "VanitySchematicItem.h"
 
-class UVanityItem;
-
 UVanityItem* UVanitySchematicItem::GetVanityItem() {
     return NULL;
 }

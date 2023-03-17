@@ -1,9 +1,5 @@
 #include "DJSONArray.h"
 
-class UDJSONArray;
-class UDJSONObject;
-class UObject;
-
 UDJSONArray* UDJSONArray::CreateJSONArray(UObject* WorldContextObject) {
     return NULL;
 }

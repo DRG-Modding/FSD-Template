@@ -8,18 +8,6 @@
 #include "PheromoneSpawnerComponent.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class ABosco;
-class AFSDGameMode;
-class AFSDPlayerController;
-class AMolly;
-class APlayerCharacter;
-class APlayerController;
-class ATeamTransport;
-class UDifficultyManager;
-class UEncounterManager;
-class UEnemyWaveManager;
-
 void AFSDGameMode::StartGame() {
 }
 

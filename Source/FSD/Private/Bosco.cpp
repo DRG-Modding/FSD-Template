@@ -15,9 +15,6 @@
 #include "Net/UnrealNetwork.h"
 #include "UpgradableBoscoComponent.h"
 
-class AActor;
-class UTerrainMaterial;
-
 void ABosco::UsePlayerActivatedAbillity(EAbilityIndex Index, AActor* aTarget, const FVector& aLocation) {
 }
 

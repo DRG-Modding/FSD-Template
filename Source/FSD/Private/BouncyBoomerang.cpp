@@ -2,8 +2,6 @@
 #include "Components/SceneComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class AFSDPawn;
-
 void ABouncyBoomerang::OnRep_TargetEnemy(AFSDPawn* lastEnemy) {
 }
 

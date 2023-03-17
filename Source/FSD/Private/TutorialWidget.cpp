@@ -1,7 +1,5 @@
 #include "TutorialWidget.h"
 
-class UTexture2D;
-
 void UTutorialWidget::Show(const FText& Text, const FText& Title, const FText& TaskText, UTexture2D* Image, float Duration) {
 }
 

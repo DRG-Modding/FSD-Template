@@ -1,7 +1,5 @@
 #include "PerkLogic.h"
 
-class APlayerCharacter;
-
 
 APlayerCharacter* UPerkLogic::GetCharacter() const {
     return NULL;

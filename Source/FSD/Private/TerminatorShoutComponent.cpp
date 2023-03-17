@@ -1,7 +1,5 @@
 #include "TerminatorShoutComponent.h"
 
-class USoundCue;
-
 void UTerminatorShoutComponent::SetShoutState(ETerminatorShoutState State, float delayShout) {
 }
 

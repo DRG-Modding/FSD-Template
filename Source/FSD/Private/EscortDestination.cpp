@@ -2,9 +2,6 @@
 #include "DamageComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class ADeepCSGWorld;
-class UTerrainMaterial;
-
 void AEscortDestination::MeltPlatforms(ADeepCSGWorld* CSGWorld, TArray<FVector> meltPoints, float meltRadius) {
 }
 

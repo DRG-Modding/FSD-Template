@@ -4,10 +4,6 @@
 #include "Particles/ParticleSystemComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class UHealthComponentBase;
-class USceneComponent;
-
 void AElectroBeam::SetTarget(USceneComponent* TargetPoint) {
 }
 

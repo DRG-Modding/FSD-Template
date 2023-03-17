@@ -1,7 +1,5 @@
 #include "PlayerAfflictionComponent.h"
 
-class UPlayerAfflictionOverlay;
-
 void UPlayerAfflictionComponent::ShowPlayerOverlay(UPlayerAfflictionOverlay* Overlay) {
 }
 

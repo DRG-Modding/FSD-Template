@@ -1,7 +1,5 @@
 #include "CommunityGoal.h"
 
-class UObject;
-
 float UCommunityGoal::TotalTierProgress(float Value, int32 Members) {
     return 0.0f;
 }

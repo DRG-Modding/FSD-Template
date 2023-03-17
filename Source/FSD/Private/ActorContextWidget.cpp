@@ -1,7 +1,5 @@
 #include "ActorContextWidget.h"
 
-class UPrimitiveComponent;
-
 void UActorContextWidget::Update(UPrimitiveComponent* InContextPrimitive) {
 }
 

@@ -1,8 +1,6 @@
 #include "MeteorDefenseEvent.h"
 #include "Net/UnrealNetwork.h"
 
-class APlagueMeteor;
-
 void AMeteorDefenseEvent::SetMeteor(APlagueMeteor* NewMeteor) {
 }
 

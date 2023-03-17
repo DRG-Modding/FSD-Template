@@ -1,8 +1,6 @@
 #include "DroneVacuumStream.h"
 #include "Components/SceneComponent.h"
 
-class AFoamPuddle;
-
 void ADroneVacuumStream::Server_StartVacuumingPuddle_Implementation(AFoamPuddle* puddle) {
 }
 

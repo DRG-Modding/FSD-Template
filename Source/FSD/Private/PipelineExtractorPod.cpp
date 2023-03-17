@@ -1,8 +1,6 @@
 #include "PipelineExtractorPod.h"
 #include "Net/UnrealNetwork.h"
 
-class APipelineSegment;
-
 void APipelineExtractorPod::SetTargetRotation_Implementation(APipelineSegment* InPipelineSegment) {
 }
 

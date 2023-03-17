@@ -1,7 +1,5 @@
 #include "PlayerProximityTracker.h"
 
-class UObject;
-
 void UPlayerProximityTracker::Receive_RegisterForLocalPlayerProximity(UObject* WorldContextObject, const FVector& Location, float Distance, const FPlayerProximityDelegate& proximityCallback, bool triggerOnlyOnce) {
 }
 

@@ -1,8 +1,5 @@
 #include "VanityMasteryLibrary.h"
 
-class UObject;
-class UPlayerCharacterID;
-
 void UVanityMasteryLibrary::ResetVanityMasteryXP(UObject* WorldContext) {
 }
 

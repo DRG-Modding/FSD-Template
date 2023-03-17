@@ -1,14 +1,6 @@
 #include "FSDSaveGame.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class UFSDGameInstance;
-class UFSDSaveGame;
-class UItemID;
-class UObject;
-class UPlayerCharacterID;
-class UResourceData;
-
 bool UFSDSaveGame::TrySellResource(UResourceData* Resource, int32 Amount, int32& Price) {
     return false;
 }

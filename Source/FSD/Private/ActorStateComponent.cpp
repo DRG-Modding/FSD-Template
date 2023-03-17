@@ -1,8 +1,6 @@
 #include "ActorStateComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UActorStateComponent;
-
 void UActorStateComponent::OnRep_CurrentState(UActorStateComponent* previousState) {
 }
 

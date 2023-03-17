@@ -1,8 +1,5 @@
 #include "HitscanComponent.h"
 
-class UFSDPhysicalMaterial;
-class UPrimitiveComponent;
-
 void UHitscanComponent::Server_RegisterRicochetHit_Terrain_Implementation(FVector_NetQuantize Origin, FVector_NetQuantize Location, FVector_NetQuantizeNormal Normal, UFSDPhysicalMaterial* PhysMaterial) {
 }
 

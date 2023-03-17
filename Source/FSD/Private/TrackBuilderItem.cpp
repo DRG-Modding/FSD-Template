@@ -3,10 +3,6 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class ATrackBuilderSegment;
-class UTrackBuilderConnectPoint;
-class UTrackBuilderUsable;
-
 void ATrackBuilderItem::UpdatePlacement(const FTransform& InTransform, UTrackBuilderConnectPoint* InConnectPoint, bool bPlacementValid, bool InUpdateServer) {
 }
 

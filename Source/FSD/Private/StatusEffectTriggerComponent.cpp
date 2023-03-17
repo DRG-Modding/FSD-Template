@@ -1,8 +1,5 @@
 #include "StatusEffectTriggerComponent.h"
 
-class AActor;
-class UPrimitiveComponent;
-
 void UStatusEffectTriggerComponent::OnOverlapEnd(AActor* MyActor, AActor* OtherActor) {
 }
 

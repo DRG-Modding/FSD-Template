@@ -1,8 +1,6 @@
 #include "CleanupPod.h"
 #include "Components/SphereComponent.h"
 
-class ARessuplyPod;
-
 
 void ACleanupPod::ChangedState(ARessuplyPod* InPod, ERessuplyPodState InState) {
 }

@@ -1,8 +1,6 @@
 #include "CrossbowProjectileRecallable.h"
 #include "Net/UnrealNetwork.h"
 
-class APlayerCharacter;
-
 void UCrossbowProjectileRecallable::Server_SetRecallTarget_Implementation(APlayerCharacter* Player, const FTransform& startTrans) {
 }
 

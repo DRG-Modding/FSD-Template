@@ -3,9 +3,6 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class ADroppableOutpost;
-class UObject;
-
 void ADroppableOutpost::StartDrilling() {
 }
 

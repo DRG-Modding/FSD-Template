@@ -4,23 +4,6 @@
 #include "Templates/SubclassOf.h"
 #include "TerrainLatejoinComponent.h"
 
-class AActor;
-class AFSDPlayerState;
-class AHUD;
-class APlayerCharacter;
-class UFSDAchievement;
-class UItemID;
-class UItemSkin;
-class UPickaxePart;
-class UPlayerCharacterID;
-class USoundCue;
-class UTemporaryBuff;
-class UTexture2D;
-class UTreasureRewarder;
-class UTutorialContentWidget;
-class UVanityItem;
-class UVictoryPose;
-
 void AFSDPlayerController::ToggleVoiceOn(bool Enabled) {
 }
 

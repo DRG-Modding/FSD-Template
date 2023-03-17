@@ -1,8 +1,6 @@
 #include "GameStats.h"
 #include "Net/UnrealNetwork.h"
 
-class UCappedResource;
-
 void AGameStats::OnPlayerMinedGold(UCappedResource* Resource, float Amount) {
 }
 

@@ -1,7 +1,5 @@
 #include "DialogDataAsset.h"
 
-class UObject;
-
 int32 UDialogDataAsset::SelectIndex(UObject* WorldContext) {
     return 0;
 }

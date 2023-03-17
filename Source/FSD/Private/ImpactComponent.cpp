@@ -1,7 +1,5 @@
 #include "ImpactComponent.h"
 
-class USceneComponent;
-
 void UImpactComponent::SetCheckVelocity(bool aCheckVelocity) {
 }
 

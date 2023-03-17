@@ -8,10 +8,6 @@
 #include "HitscanComponent.h"
 #include "ReflectionHitscanComponent.h"
 
-class AActor;
-class UHitscanBaseComponent;
-class UPrimitiveComponent;
-
 void ADamageEnhancer::HitByHitScan(UHitscanBaseComponent* Component, const FVector& HitPoint, const FVector& Origin) {
 }
 

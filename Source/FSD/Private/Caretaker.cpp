@@ -6,8 +6,6 @@
 #include "Net/UnrealNetwork.h"
 #include "PawnStatsComponent.h"
 
-class UCaretakerActionComponent;
-
 void ACaretaker::WakeUp() {
 }
 

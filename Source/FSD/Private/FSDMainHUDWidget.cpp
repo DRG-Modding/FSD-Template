@@ -1,7 +1,5 @@
 #include "FSDMainHUDWidget.h"
 
-class URadarPointComponent;
-
 
 
 

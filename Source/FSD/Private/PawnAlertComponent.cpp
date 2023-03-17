@@ -1,7 +1,5 @@
 #include "PawnAlertComponent.h"
 
-class APawn;
-
 void UPawnAlertComponent::StopAutoAlerting() {
 }
 

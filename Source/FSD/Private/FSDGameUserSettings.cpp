@@ -1,11 +1,5 @@
 #include "FSDGameUserSettings.h"
 
-class APlayerController;
-class UDifficultySetting;
-class UFSDGameUserSettings;
-class UObject;
-class USoundClass;
-
 void UFSDGameUserSettings::UpdateVolumeSettings(USoundClass* CharacterVoices, USoundClass* MissionControl, USoundClass* Master, USoundClass* Music, USoundClass* SFX, USoundClass* UI, USoundClass* Voice) {
 }
 
@@ -661,9 +655,9 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->ServerSearchPasswordRequired = false;
     this->volumeCharacterVoice = 56.99f;
     this->volumeMissionControl = 58.84f;
-    this->volumeMaster = 108.25f;
-    this->volumeSFX = 43.62f;
-    this->volumeMusic = 56.99f;
+    this->volumeMaster = 0.10f;
+    this->volumeSFX = 67.60f;
+    this->volumeMusic = 71.30f;
     this->CurrentAudioOutputDeviceId = TEXT("{0.0.0.00000000}.{e5f88e95-6344-4763-bd61-70b04ceb23f9}");
     this->UseDefaultAudioOutputDevice = true;
     this->Sharpening = 0.00f;
@@ -678,7 +672,7 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->NvidiaDlssMode = UDLSSMode::Auto;
     this->NvidiaDlssSharpness = 0.50f;
     this->FSDResolutionScale = 1.00f;
-    this->ReflexMode = ENVidiaReflexMode::Enabled;
+    this->ReflexMode = ENVidiaReflexMode::Disabled;
     this->soundClassCharacterVoices = NULL;
     this->soundClassMissionControl = NULL;
     this->soundClassMaster = NULL;

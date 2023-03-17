@@ -3,9 +3,6 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class ATeamTransport;
-class UObject;
-
 ATeamTransport* ATeamTransport::SpawnPodAtLocation(UObject* WorldContextObject, TSubclassOf<ATeamTransport> podClass, const FTransform& Transform) {
     return NULL;
 }

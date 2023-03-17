@@ -1,7 +1,5 @@
 #include "DLCBase.h"
 
-class UDLCBase;
-
 void UDLCBase::QueryAllDLC() {
 }
 

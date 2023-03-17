@@ -4,9 +4,6 @@
 #include "Net/UnrealNetwork.h"
 #include "SimpleHealthComponent.h"
 
-class UAnimMontage;
-class UHealthComponentBase;
-
 void AWormPod::SpawnWorms() {
 }
 

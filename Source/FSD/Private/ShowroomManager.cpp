@@ -1,7 +1,5 @@
 #include "ShowroomManager.h"
 
-class UShowroomController;
-
 UShowroomController* UShowroomManager::GetController() {
     return NULL;
 }

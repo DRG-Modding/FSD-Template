@@ -6,8 +6,6 @@
 #include "FSDAudioComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class AResourceChunk;
-
 
 void AExtractorItem::Server_StopMining_Implementation() {
 }

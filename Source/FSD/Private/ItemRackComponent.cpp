@@ -1,10 +1,6 @@
 #include "ItemRackComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class APlayerCharacter;
-class URackableItemComponent;
-
 void UItemRackComponent::RackItem(AActor* NewItem, APlayerCharacter* Character) {
 }
 

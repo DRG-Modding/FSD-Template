@@ -1,7 +1,5 @@
 #include "VictoryPoseSettings.h"
 
-class UVictoryPose;
-
 TArray<UVictoryPose*> UVictoryPoseSettings::GetVictoryPoses() const {
     return TArray<UVictoryPose*>();
 }

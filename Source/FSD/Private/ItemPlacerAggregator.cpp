@@ -1,7 +1,5 @@
 #include "ItemPlacerAggregator.h"
 
-class AActor;
-
 void UItemPlacerAggregator::ToggleValid(bool Valid) {
 }
 

@@ -1,9 +1,6 @@
 #include "FacilityTurretController.h"
 #include "Perception/AIPerceptionComponent.h"
 
-class AActor;
-class UHealthComponentBase;
-
 void AFacilityTurretController::OnTurretsAttackingChanged(bool IsAttacking) {
 }
 

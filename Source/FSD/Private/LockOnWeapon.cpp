@@ -1,8 +1,6 @@
 #include "LockOnWeapon.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-
 void ALockOnWeapon::UpdateRifleEye() {
 }
 

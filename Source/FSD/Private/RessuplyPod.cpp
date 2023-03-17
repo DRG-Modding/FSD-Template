@@ -3,10 +3,6 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class ARessuplyPod;
-class UObject;
-
 void ARessuplyPod::SetIdling() {
 }
 

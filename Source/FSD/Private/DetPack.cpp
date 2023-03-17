@@ -5,9 +5,6 @@
 #include "SimpleHealthComponent.h"
 #include "SingleUsableComponent.h"
 
-class APlayerCharacter;
-class UHealthComponentBase;
-
 void ADetPack::UseFearStaggerUpgrades() {
 }
 

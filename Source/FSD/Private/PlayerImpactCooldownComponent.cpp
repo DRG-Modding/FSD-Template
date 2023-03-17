@@ -1,7 +1,5 @@
 #include "PlayerImpactCooldownComponent.h"
 
-class AActor;
-
 bool UPlayerImpactCooldownComponent::CheckCanImpact(AActor* Actor) {
     return false;
 }

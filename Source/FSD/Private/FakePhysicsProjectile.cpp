@@ -1,9 +1,6 @@
 #include "FakePhysicsProjectile.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class UPrimitiveComponent;
-
 void AFakePhysicsProjectile::SphereBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* Other, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
 }
 

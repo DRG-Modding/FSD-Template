@@ -1,7 +1,5 @@
 #include "RefineryHintComponent.h"
 
-class AFSDRefinery;
-
 
 
 

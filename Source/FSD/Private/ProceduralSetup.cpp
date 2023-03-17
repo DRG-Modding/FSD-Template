@@ -7,13 +7,6 @@
 #include "ProceduralTunnelComponent.h"
 #include "ProceduralVeinsComponent.h"
 
-class ADeepCSGWorld;
-class AProceduralSetup;
-class UCaveInfluencer;
-class UMissionDNA;
-class URoomGeneratorBase;
-class UTunnelParameters;
-
 
 void AProceduralSetup::SpawnSpecialEvents() {
 }

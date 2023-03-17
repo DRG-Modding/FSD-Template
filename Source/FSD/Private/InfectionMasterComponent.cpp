@@ -1,8 +1,6 @@
 #include "InfectionMasterComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UHealthComponentBase;
-
 void UInfectionMasterComponent::OnRep_RandomSeed() {
 }
 

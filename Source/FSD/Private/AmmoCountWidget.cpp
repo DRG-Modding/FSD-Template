@@ -1,7 +1,5 @@
 #include "AmmoCountWidget.h"
 
-class AItem;
-
 
 
 

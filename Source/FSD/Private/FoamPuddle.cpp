@@ -3,9 +3,6 @@
 #include "NiagaraComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class UPrimitiveComponent;
-
 
 
 void AFoamPuddle::OnRep_State(EVacuumState prevState) {

@@ -1,7 +1,5 @@
 #include "MiniMule.h"
 
-class AGem;
-
 void AMiniMule::SetLegsVisibleOnScanner() {
 }
 

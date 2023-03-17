@@ -1,7 +1,5 @@
 #include "SeasonChallenge.h"
 
-class UTexture2D;
-
 UTexture2D* USeasonChallenge::GetIconOutlined() {
     return NULL;
 }

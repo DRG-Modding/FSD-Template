@@ -1,7 +1,5 @@
 #include "FirstPersonSkeletalMeshComponent.h"
 
-class APlayerController;
-
 void UFirstPersonSkeletalMeshComponent::SetFirstPersonFOVEnabled(bool bEnabled) {
 }
 

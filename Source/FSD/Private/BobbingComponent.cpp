@@ -1,7 +1,5 @@
 #include "BobbingComponent.h"
 
-class AActor;
-
 void UBobbingComponent::SetOwner(AActor* AActor) {
 }
 

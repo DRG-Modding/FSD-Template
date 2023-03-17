@@ -5,9 +5,6 @@
 #include "Net/UnrealNetwork.h"
 #include "TerrainPlacementComponent.h"
 
-class AProceduralSetup;
-class ARockCrackerPod;
-
 void APlagueMeteor::SignalEventStarted() {
 }
 

@@ -1,7 +1,5 @@
 #include "OverclockShematicItem.h"
 
-class UUpgradableGearComponent;
-
 UUpgradableGearComponent* UOverclockShematicItem::GetOwningGearComponent() const {
     return NULL;
 }

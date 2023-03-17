@@ -1,8 +1,5 @@
 #include "SplineDecoratorComponent.h"
 
-class UMaterialInterface;
-class USplineComponent;
-
 void USplineDecoratorComponent::Update(float DeltaTime) {
 }
 

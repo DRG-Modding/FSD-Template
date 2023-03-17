@@ -1,7 +1,5 @@
 #include "CampaignMission.h"
 
-class UMissionTemplate;
-
 UMissionTemplate* UCampaignMission::GetMissionTemplate() const {
     return NULL;
 }

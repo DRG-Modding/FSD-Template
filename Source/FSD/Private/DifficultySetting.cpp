@@ -1,7 +1,5 @@
 #include "DifficultySetting.h"
 
-class UObject;
-
 bool UDifficultySetting::IsUnlocked(UObject* WorldContext) const {
     return false;
 }

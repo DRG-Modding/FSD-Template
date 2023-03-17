@@ -1,7 +1,5 @@
 #include "OptionalUIWidget.h"
 
-class UOptionalUICategory;
-
 void UOptionalUIWidget::OnVisibilityChanged(UOptionalUICategory* UICategory, bool IsVisible) {
 }
 

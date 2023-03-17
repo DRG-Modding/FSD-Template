@@ -3,10 +3,6 @@
 #include "Net/UnrealNetwork.h"
 #include "OutlineComponent.h"
 
-class AActor;
-class APlayerCharacter;
-class USkeletalMeshComponent;
-
 void ARedeployableSentryGun::ToggleOutlineAndIcon(bool Visible) {
 }
 

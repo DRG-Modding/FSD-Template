@@ -1,9 +1,6 @@
 #include "DashPoints.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class UHealthComponentBase;
-
 void UDashPoints::UpdateDashPointData() {
 }
 

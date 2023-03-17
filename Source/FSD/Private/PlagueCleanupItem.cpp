@@ -5,8 +5,6 @@
 #include "InstantUsable.h"
 #include "KeepInsideWorld.h"
 
-class APlayerCharacter;
-
 void APlagueCleanupItem::Server_Gunsling_Implementation() {
 }
 

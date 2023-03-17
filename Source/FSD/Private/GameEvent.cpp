@@ -3,12 +3,6 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class AEventStarterButton;
-class AProceduralSetup;
-class ARessuplyPod;
-class UDebrisPositioning;
-
 void AGameEvent::TrySetupGameEvent() {
 }
 

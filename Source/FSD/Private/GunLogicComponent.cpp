@@ -1,7 +1,5 @@
 #include "GunLogicComponent.h"
 
-class UMeshComponent;
-
 void UGunLogicComponent::SetMesh(UMeshComponent* NewMesh) {
 }
 

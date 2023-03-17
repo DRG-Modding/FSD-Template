@@ -1,7 +1,5 @@
 #include "WeaponImpactComponent.h"
 
-class USkeletalMeshComponent;
-
 void UWeaponImpactComponent::EnableImpactCheckhing(USkeletalMeshComponent* cmp) {
 }
 

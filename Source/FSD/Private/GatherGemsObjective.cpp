@@ -1,8 +1,6 @@
 #include "GatherGemsObjective.h"
 #include "Net/UnrealNetwork.h"
 
-class UCappedResource;
-
 void UGatherGemsObjective::OnResourceChanged(UCappedResource* CappedResource, float Amount) {
 }
 

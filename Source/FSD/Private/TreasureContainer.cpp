@@ -3,8 +3,6 @@
 #include "Net/UnrealNetwork.h"
 #include "OncePerPlayerUsableComponent.h"
 
-class APlayerCharacter;
-
 void ATreasureContainer::TestAwardTreasure() {
 }
 

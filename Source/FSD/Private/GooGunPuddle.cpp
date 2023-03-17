@@ -4,10 +4,6 @@
 #include "SimpleHealthComponent.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class UPrimitiveComponent;
-class UStatusEffect;
-
 void AGooGunPuddle::SetStatusEffect(TSubclassOf<UStatusEffect> NewStatusEffect) {
 }
 

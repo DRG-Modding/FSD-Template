@@ -3,10 +3,6 @@
 #include "DamageComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class UHealthComponentBase;
-class UPrimitiveComponent;
-
 void AFriendlyParasite::SelectNewTarget(UHealthComponentBase* Health) {
 }
 

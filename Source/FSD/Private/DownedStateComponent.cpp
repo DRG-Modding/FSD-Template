@@ -1,8 +1,6 @@
 #include "DownedStateComponent.h"
 #include "Templates/SubclassOf.h"
 
-class UDamageComponent;
-
 void UDownedStateComponent::TriggerDownedBombDamage() {
 }
 

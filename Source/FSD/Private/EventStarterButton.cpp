@@ -3,8 +3,6 @@
 #include "Net/UnrealNetwork.h"
 #include "SingleUsableComponent.h"
 
-class APlayerCharacter;
-
 void AEventStarterButton::SetIsEventActive(bool NewIsEventActive) {
 }
 

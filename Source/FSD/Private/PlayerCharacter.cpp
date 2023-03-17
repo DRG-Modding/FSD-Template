@@ -28,37 +28,6 @@
 #include "SingleUsableComponent.h"
 #include "StatusEffectsComponent.h"
 
-class AActor;
-class ADamageEnhancer;
-class AEventRewardDispenser;
-class AFSDPhysicsActor;
-class AFSDPlayerController;
-class AFSDPlayerState;
-class AItem;
-class APlayerCharacter;
-class APlayerController;
-class AShieldGeneratorActor;
-class AZipLineProjectile;
-class UAnimMontage;
-class UAudioComponent;
-class UCappedResource;
-class UCharacterStateComponent;
-class UEnemyDescriptor;
-class UFSDPhysicalMaterial;
-class UInventoryList;
-class UMaterialInstanceDynamic;
-class UObject;
-class UParticleSystem;
-class UPerkHUDActivationWidget;
-class UPlayerAnimInstance;
-class UPlayerFPAnimInstance;
-class UPlayerTPAnimInstance;
-class USchematic;
-class USoundAttenuation;
-class USoundBase;
-class USoundConcurrency;
-class UTexture2D;
-
 void APlayerCharacter::UseZipLine(AZipLineProjectile* ZipLine, const FVector& Start, const FVector& End) {
 }
 

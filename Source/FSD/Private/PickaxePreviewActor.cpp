@@ -1,8 +1,6 @@
 #include "PickaxePreviewActor.h"
 #include "Components/SceneComponent.h"
 
-class UPickaxePart;
-
 void APickaxePreviewActor::PreviewParts(EPickaxePartLocation PreviewLocation, UPickaxePart* PreviewPart) {
 }
 

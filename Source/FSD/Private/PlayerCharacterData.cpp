@@ -1,7 +1,5 @@
 #include "PlayerCharacterData.h"
 
-class UTexture2D;
-
 FText UPlayerCharacterData::GetSwitchToMessage() const {
     return FText::GetEmpty();
 }

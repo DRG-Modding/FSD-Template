@@ -6,7 +6,7 @@
 
 class UClaimableRewardEntryWidget;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UClaimableRewardEntryWidget : public UUserWidget {
     GENERATED_BODY()
 public:
@@ -34,7 +34,14 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ReceiveMoveIn(float InStartDelay);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveDataChanged();
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void MoveIn(float InStartDelay);
     
 };
 

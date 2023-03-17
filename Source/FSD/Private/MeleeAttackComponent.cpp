@@ -1,7 +1,5 @@
 #include "MeleeAttackComponent.h"
 
-class UAnimMontage;
-
 UAnimMontage* UMeleeAttackComponent::SelectMontage_Implementation() const {
     return NULL;
 }

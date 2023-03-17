@@ -1,7 +1,5 @@
 #include "ExterminationReward.h"
 
-class AActor;
-
 void UExterminationReward::OnEnemyKilled(const FGameplayTagContainer& GameplayTags, AActor* killedEnemy) {
 }
 

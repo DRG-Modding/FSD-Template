@@ -1,7 +1,5 @@
 #include "TemperatureComponent.h"
 
-class AActor;
-
 bool UTemperatureComponent::TryPushHeatSource(AActor* Target, float Temperature, ETemperatureIntensity Intensity) {
     return false;
 }

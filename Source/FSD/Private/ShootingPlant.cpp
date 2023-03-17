@@ -1,8 +1,6 @@
 #include "ShootingPlant.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-
 void AShootingPlant::SetTarget(AActor* NewTarget) {
 }
 

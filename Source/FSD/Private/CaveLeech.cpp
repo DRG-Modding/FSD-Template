@@ -4,9 +4,6 @@
 #include "GrabberComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class UHealthComponentBase;
-
 void ACaveLeech::OnRep_State() {
 }
 

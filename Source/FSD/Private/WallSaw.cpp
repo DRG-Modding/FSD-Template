@@ -1,8 +1,6 @@
 #include "WallSaw.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-
 void AWallSaw::UpdateCheckForWeakpoints() {
 }
 

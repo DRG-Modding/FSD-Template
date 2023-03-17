@@ -1,7 +1,5 @@
 #include "FSDXboxUtils.h"
 
-class UObject;
-
 void UFSDXboxUtils::ShowStoreUIForStoreItem(UObject* WorldContextObject, const FString& storeItemName) {
 }
 

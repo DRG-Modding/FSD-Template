@@ -1,7 +1,5 @@
 #include "TerrainScannerStaticMesh.h"
 
-class UHealthComponentBase;
-
 void UTerrainScannerStaticMesh::SetVisibleOnScanner(bool InShowOnScanner) {
 }
 

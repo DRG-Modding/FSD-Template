@@ -1,7 +1,5 @@
 #include "CleanupPodItem.h"
 
-class APlagueInfectionNode;
-
 
 void ACleanupPodItem::Server_Call_CleaningPod_Implementation(const FVector& Location, APlagueInfectionNode* plagueNode) {
 }

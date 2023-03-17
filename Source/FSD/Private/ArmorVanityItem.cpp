@@ -1,7 +1,5 @@
 #include "ArmorVanityItem.h"
 
-class AFSDPlayerState;
-
 void UArmorVanityItem::PreviewArmor(AFSDPlayerState* PlayerState, bool Show, bool useDefaultArmorMaterial) const {
 }
 

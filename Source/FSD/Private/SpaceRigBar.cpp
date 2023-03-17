@@ -3,9 +3,6 @@
 #include "InstantUsable.h"
 #include "Net/UnrealNetwork.h"
 
-class APlayerCharacter;
-class UDrinkableDataAsset;
-
 void ASpaceRigBar::SpawnDrinkables(UDrinkableDataAsset* Drinkable, APlayerCharacter* User) {
 }
 

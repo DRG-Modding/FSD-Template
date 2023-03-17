@@ -1,8 +1,6 @@
 #include "PawnStatsComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UPawnStat;
-
 void UPawnStatsComponent::RemoveModifier(UPawnStat* Stat, float Value) {
 }
 

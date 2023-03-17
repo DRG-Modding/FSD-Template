@@ -13,10 +13,6 @@
 #include "PawnStatsComponent.h"
 #include "SingleUsableComponent.h"
 
-class AActor;
-class APawn;
-class APlayerCharacter;
-
 void AConvertedRobot::UpdateGunsInsideTerrain() {
 }
 

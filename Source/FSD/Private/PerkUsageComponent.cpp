@@ -1,8 +1,6 @@
 #include "PerkUsageComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UPerkAsset;
-
 void UPerkUsageComponent::Server_MarkPerkUsed_Implementation(UPerkAsset* Perk) {
 }
 

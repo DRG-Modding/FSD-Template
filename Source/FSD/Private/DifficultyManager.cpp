@@ -1,7 +1,5 @@
 #include "DifficultyManager.h"
 
-class UDifficultySetting;
-
 UDifficultySetting* UDifficultyManager::SelectDifficulty(int32 Index) {
     return NULL;
 }

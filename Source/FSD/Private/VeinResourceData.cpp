@@ -1,7 +1,5 @@
 #include "VeinResourceData.h"
 
-class UTerrainMaterial;
-
 UTerrainMaterial* UVeinResourceData::GetTerrainMaterial() const {
     return NULL;
 }

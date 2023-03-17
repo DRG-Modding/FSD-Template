@@ -2,8 +2,6 @@
 #include "Net/UnrealNetwork.h"
 #include "SimpleObjectInfoComponent.h"
 
-class UResourceData;
-
 void AResourceChunk::SetCollectOpen() {
 }
 

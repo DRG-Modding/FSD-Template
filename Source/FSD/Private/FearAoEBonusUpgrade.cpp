@@ -1,9 +1,6 @@
 #include "FearAoEBonusUpgrade.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class AFSDPlayerState;
-
 FUpgradeValues UFearAoEBonusUpgrade::GetUpgradedValue(TSubclassOf<AActor> Item, AFSDPlayerState* Player) {
     return FUpgradeValues{};
 }

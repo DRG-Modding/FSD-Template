@@ -1,7 +1,5 @@
 #include "RoomGeneratorGroup.h"
 
-class URoomGenerator;
-
 URoomGenerator* URoomGeneratorGroup::GetRandomRoomWithTags(FRoomGeneratorGroupInstance& groupInstance, const FGameplayTagQuery& queury, FRandomStream& RandomStream) {
     return NULL;
 }

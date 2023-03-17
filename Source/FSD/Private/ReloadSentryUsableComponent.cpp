@@ -1,8 +1,6 @@
 #include "ReloadSentryUsableComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class APlayerCharacter;
-
 void UReloadSentryUsableComponent::SetOwningPlayerCharacter(APlayerCharacter* Player) {
 }
 

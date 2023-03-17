@@ -1,8 +1,5 @@
 #include "RewardsSubSystem.h"
 
-class AFSDPlayerController;
-class UObject;
-
 bool URewardsSubSystem::ShouldPendingRewardsBeShown() const {
     return false;
 }

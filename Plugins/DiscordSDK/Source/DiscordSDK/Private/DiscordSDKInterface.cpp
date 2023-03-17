@@ -1,7 +1,5 @@
 #include "DiscordSDKInterface.h"
 
-class UDiscordSDKInterface;
-
 void UDiscordSDKInterface::RejectInvite(const FString& UserId) {
 }
 

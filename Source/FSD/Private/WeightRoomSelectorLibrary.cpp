@@ -1,7 +1,5 @@
 #include "WeightRoomSelectorLibrary.h"
 
-class URoomGenerator;
-
 void UWeightRoomSelectorLibrary::SetupWeightedRoomSelector(FWeightedRoomSelector& Target, TArray<URoomGenerator*>& Rooms) {
 }
 

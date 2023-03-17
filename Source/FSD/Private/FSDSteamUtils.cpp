@@ -1,7 +1,5 @@
 #include "FSDSteamUtils.h"
 
-class APlayerState;
-
 bool UFSDSteamUtils::PlayerIsFollowingUsOnSteam() {
     return false;
 }

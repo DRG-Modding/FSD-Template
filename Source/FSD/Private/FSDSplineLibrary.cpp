@@ -1,11 +1,5 @@
 #include "FSDSplineLibrary.h"
 
-class AActor;
-class UObject;
-class USplineComponent;
-class USplineMeshComponent;
-class UTerrainMaterial;
-
 bool UFSDSplineLibrary::SplineComponentSphereTrace(USplineComponent*& SplineComponent, float Radius, TEnumAsByte<ETraceTypeQuery> TraceType, float StepSize, TArray<AActor*> IgnoreActors, FHitResult& OutHitResult, FVector Offset) {
     return false;
 }

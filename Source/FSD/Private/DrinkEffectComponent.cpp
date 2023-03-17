@@ -1,7 +1,5 @@
 #include "DrinkEffectComponent.h"
 
-class APlayerCharacter;
-
 void UDrinkEffectComponent::StopEffect() {
 }
 

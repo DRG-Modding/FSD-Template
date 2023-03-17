@@ -1,8 +1,6 @@
 #include "ResourceObjective.h"
 #include "Net/UnrealNetwork.h"
 
-class UCappedResource;
-
 void UResourceObjective::OnResourceChanged(UCappedResource* CappedResource, float Amount) {
 }
 

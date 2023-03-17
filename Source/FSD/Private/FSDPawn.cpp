@@ -3,11 +3,6 @@
 #include "Net/UnrealNetwork.h"
 #include "StatusEffectsComponent.h"
 
-class AActor;
-class AFSDAIController;
-class UHealthComponentBase;
-class USkeletalMeshComponent;
-
 void AFSDPawn::UnFreeze() {
 }
 

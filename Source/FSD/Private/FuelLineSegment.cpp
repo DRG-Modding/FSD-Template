@@ -5,8 +5,6 @@
 #include "Components/StaticMeshComponent.h"
 #include "SimpleHealthComponent.h"
 
-class UHealthComponentBase;
-
 void AFuelLineSegment::ClientUpdateStartTransform_Implementation(const FVector& NewStartLocation) {
 }
 

@@ -1,7 +1,5 @@
 #include "EnemyAnimInstance.h"
 
-class USkeletalMeshComponent;
-
 bool UEnemyAnimInstance::IsSlotPlayingAnyAnimation(FName SlotNodeName) const {
     return false;
 }

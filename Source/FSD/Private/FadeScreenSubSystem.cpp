@@ -1,8 +1,5 @@
 #include "FadeScreenSubSystem.h"
 
-class UObject;
-class UTexture;
-
 bool UFadeScreenSubSystem::IsScreenFadingToBlack(UObject* WorldContext) {
     return false;
 }

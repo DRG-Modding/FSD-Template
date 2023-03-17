@@ -3,8 +3,6 @@
 #include "FriendlyHealthComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class APlayerCharacter;
-
 
 void ARockCrackerPod::SetPodState(ERockCrackerstate NewPodState) {
 }

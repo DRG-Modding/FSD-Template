@@ -2,8 +2,6 @@
 #include "HackingUsableComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class APlayerCharacter;
-
 
 void ARivalBombNode::OnRep_State() {
 }

@@ -6,9 +6,6 @@
 #include "ReflectionHitscanComponent.h"
 #include "StickyFlameSpawner.h"
 
-class AActor;
-class UFSDPhysicalMaterial;
-
 void AHeavyParticleCannon::UpdateBeamsVisibility_Implementation(bool isBeamVisible) {
 }
 

@@ -1,9 +1,5 @@
 #include "SpecialEventBlueprintLibrary.h"
 
-class UObject;
-class UPlayerCharacterID;
-class USchematic;
-
 USchematic* USpecialEventBlueprintLibrary::TryGivePendingReward(UObject* WorldContextObject) {
     return NULL;
 }

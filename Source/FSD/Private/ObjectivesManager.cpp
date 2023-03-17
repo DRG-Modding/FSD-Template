@@ -1,7 +1,5 @@
 #include "ObjectivesManager.h"
 
-class UObjective;
-
 void UObjectivesManager::OnObjectiveChanged(UObjective* obj) {
 }
 

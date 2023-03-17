@@ -3,9 +3,6 @@
 #include "Net/UnrealNetwork.h"
 #include "PawnStatsComponent.h"
 
-class AActor;
-class UStaticMeshComponent;
-
 void ASpiderEnemy::SetLookAtTarget(AActor* Target) {
 }
 

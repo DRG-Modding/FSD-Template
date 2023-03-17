@@ -1,8 +1,5 @@
 #include "FrozenPawnImpactComponent.h"
 
-class AActor;
-class UPrimitiveComponent;
-
 void UFrozenPawnImpactComponent::TriggerFrozenRagdoll() {
 }
 

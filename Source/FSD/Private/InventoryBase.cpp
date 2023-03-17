@@ -1,8 +1,6 @@
 #include "InventoryBase.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-
 void UInventoryBase::Server_SetEquippedActor_Implementation(const FEquippedActorData& Actor, bool CallClientDelayed) {
 }
 

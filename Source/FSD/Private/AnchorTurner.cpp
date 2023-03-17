@@ -4,9 +4,6 @@
 #include "Components/SphereComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class UPrimitiveComponent;
-
 void AAnchorTurner::OnRep_Finished() {
 }
 

@@ -1,8 +1,6 @@
 #include "AimingFacilityTurret.h"
 #include "Net/UnrealNetwork.h"
 
-class UParticleSystemComponent;
-
 void AAimingFacilityTurret::SetupAimindicator(UParticleSystemComponent* NewAimIndicator, UParticleSystemComponent* NewAimIndicatorLock) {
 }
 

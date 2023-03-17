@@ -1,8 +1,6 @@
 #include "CaretakerActionComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class ACaretaker;
-
 void UCaretakerActionComponent::UseAction() {
 }
 

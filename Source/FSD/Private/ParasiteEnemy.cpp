@@ -4,8 +4,6 @@
 #include "Components/StaticMeshComponent.h"
 #include "OutlineComponent.h"
 
-class UHealthComponentBase;
-
 void AParasiteEnemy::OnSelfDeath(UHealthComponentBase* aHealthComponent) {
 }
 

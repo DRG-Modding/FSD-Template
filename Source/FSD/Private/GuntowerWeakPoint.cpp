@@ -4,8 +4,6 @@
 #include "EnemyHealthComponent.h"
 #include "WeakpointGlowComponent.h"
 
-class UHealthComponentBase;
-
 
 void AGuntowerWeakPoint::OnDeath(UHealthComponentBase* HealthComponent) {
 }

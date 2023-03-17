@@ -1,8 +1,5 @@
 #include "VictoryPose.h"
 
-class UObject;
-class UPlayerCharacterID;
-
 void UVictoryPose::Unlock(UObject* WorldContextObject, UPlayerCharacterID* characterID) const {
 }
 

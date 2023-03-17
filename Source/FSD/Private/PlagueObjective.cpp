@@ -1,8 +1,6 @@
 #include "PlagueObjective.h"
 #include "Net/UnrealNetwork.h"
 
-class APlagueInfectionNode;
-
 void UPlagueObjective::OnRep_CurrentPlagueAmount(int32 OldAmount) {
 }
 

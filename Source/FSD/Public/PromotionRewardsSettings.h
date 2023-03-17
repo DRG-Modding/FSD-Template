@@ -2,7 +2,6 @@
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
 #include "ClaimableRewardEntry.h"
-#include "PromotionRewardsRank.h"
 #include "PromotionRewardsSettings.generated.h"
 
 UCLASS(Blueprintable)
@@ -13,7 +12,7 @@ public:
     TArray<FClaimableRewardEntry> FirstPromotionRewards;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<int32, FPromotionRewardsRank> PromotionRanks;
+    TArray<FClaimableRewardEntry> SubsequentPromotionRewards;
     
     UPromotionRewardsSettings();
 };

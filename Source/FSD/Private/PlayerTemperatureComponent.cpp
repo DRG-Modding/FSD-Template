@@ -1,8 +1,6 @@
 #include "PlayerTemperatureComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UHealthComponentBase;
-
 void UPlayerTemperatureComponent::SetNormalTemperature() {
 }
 

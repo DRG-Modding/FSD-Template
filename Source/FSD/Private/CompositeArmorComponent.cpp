@@ -1,8 +1,6 @@
 #include "CompositeArmorComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UPrimitiveComponent;
-
 void UCompositeArmorComponent::OnRep_ArmorDamageInfo(FArmorDamageInfo OldValue) {
 }
 

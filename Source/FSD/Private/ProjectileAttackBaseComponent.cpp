@@ -1,8 +1,5 @@
 #include "ProjectileAttackBaseComponent.h"
 
-class AActor;
-class UAnimMontage;
-
 bool UProjectileAttackBaseComponent::TriggerMontage(AActor* Target) {
     return false;
 }

@@ -1,7 +1,5 @@
 #include "TentacleBase.h"
 
-class AStabberVineRoot;
-
 void ATentacleBase::SetRestingTransform(const FTransform& restingTransform, bool startAtRest) {
 }
 

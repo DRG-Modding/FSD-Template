@@ -1,7 +1,5 @@
 #include "CrossbowStuckProjectileEffectElectric.h"
 
-class AActor;
-
 void UCrossbowStuckProjectileEffectElectric::OnElectrocutionActorDestroyed(AActor* Actor) {
 }
 

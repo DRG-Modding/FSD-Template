@@ -1,7 +1,5 @@
 #include "TutorialComponent.h"
 
-class ATutorialManager;
-
 void UTutorialComponent::RegisterTutorial() {
 }
 

@@ -1,7 +1,5 @@
 #include "PlayerMovementComponent.h"
 
-class AActor;
-
 void UPlayerMovementComponent::RemoveGravityModifier(AActor* SourceActor) {
 }
 

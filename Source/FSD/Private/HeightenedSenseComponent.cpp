@@ -1,7 +1,5 @@
 #include "HeightenedSenseComponent.h"
 
-class AActor;
-
 void UHeightenedSenseComponent::RemoveTracker(AActor* TrackerActor) {
 }
 

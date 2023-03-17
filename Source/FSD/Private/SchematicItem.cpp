@@ -1,8 +1,5 @@
 #include "SchematicItem.h"
 
-class UObject;
-class UTexture;
-
 FText USchematicItem::GetTitle() const {
     return FText::GetEmpty();
 }

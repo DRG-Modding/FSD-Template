@@ -2,9 +2,6 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class AThrowableActor;
-
 void AThrowableItem::Simulate_Throw_Implementation(TSubclassOf<AThrowableActor> ActorClass) {
 }
 

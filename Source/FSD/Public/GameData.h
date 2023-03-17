@@ -3,6 +3,7 @@
 #include "UObject/NoExportTypes.h"
 #include "UObject/Object.h"
 #include "GameplayTagContainer.h"
+#include "AssetsToLoadSettings.h"
 #include "GDAudio.h"
 #include "GDCharacterRetirement.h"
 #include "GDDamageClasses.h"
@@ -256,6 +257,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag XBoxExcludeRoomTag;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FAssetsToLoadSettings AssetsToLoad;
     
 public:
     UGameData();

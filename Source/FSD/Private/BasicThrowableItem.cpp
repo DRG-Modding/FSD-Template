@@ -6,10 +6,6 @@
 #include "FirstPersonStaticMeshComponent.h"
 #include "InstantUsable.h"
 
-class AActor;
-class APlayerCharacter;
-class UPrimitiveComponent;
-
 void ABasicThrowableItem::ThrowItem(const FVector& throwForce) {
 }
 

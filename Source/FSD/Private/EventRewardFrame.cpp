@@ -2,8 +2,6 @@
 #include "Net/UnrealNetwork.h"
 #include "SpecialEventUsableComponent.h"
 
-class AEventRewardDispenser;
-
 void AEventRewardFrame::TurnOff() {
 }
 

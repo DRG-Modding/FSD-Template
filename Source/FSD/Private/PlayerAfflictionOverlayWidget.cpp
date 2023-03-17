@@ -1,7 +1,5 @@
 #include "PlayerAfflictionOverlayWidget.h"
 
-class UPlayerAfflictionOverlay;
-
 
 
 void UPlayerAfflictionOverlayWidget::EndOverlay() {

@@ -1,10 +1,5 @@
 #include "UIFunctionLibrary.h"
 
-class UMissionNameBank;
-class UNewsTextLists;
-class UObject;
-class UPlayerCharacterID;
-
 void UUIFunctionLibrary::SetLoadoutIcon(UObject* WorldContextObject, UPlayerCharacterID* characterID, int32 loadoutIndex, int32 iconIndex) {
 }
 

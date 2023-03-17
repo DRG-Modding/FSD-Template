@@ -1,8 +1,6 @@
 #include "TutorialLevelWidget.h"
 #include "Templates/SubclassOf.h"
 
-class UTutorialContentWidget;
-
 void UTutorialLevelWidget::ShowTutorialWidget(TSubclassOf<UTutorialContentWidget> TutorialWidget, bool ignoreQueue) {
 }
 

@@ -1,7 +1,5 @@
 #include "CommunityGoalSettings.h"
 
-class UCommunityGoal;
-
 UCommunityGoal* UCommunityGoalSettings::GetGoal(ECommunityGoalIndex Goal) const {
     return NULL;
 }

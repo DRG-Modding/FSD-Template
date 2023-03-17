@@ -1,8 +1,6 @@
 #include "RepairObjective.h"
 #include "Net/UnrealNetwork.h"
 
-class URepairableComponent;
-
 void URepairObjective::OnRep_RepairedObjectives() {
 }
 

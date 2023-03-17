@@ -1,8 +1,6 @@
 #include "EnemyBufferComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UHealthComponentBase;
-
 void UEnemyBufferComponent::SetBuffingEnabled(bool Enabled) {
 }
 

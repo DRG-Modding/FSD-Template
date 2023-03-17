@@ -1,7 +1,5 @@
 #include "MissionStatsCollector.h"
 
-class UCappedResource;
-
 void UMissionStatsCollector::OnResourceIncremented(UCappedResource* Resource, float Amount) {
 }
 

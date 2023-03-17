@@ -1,7 +1,5 @@
 #include "TerrainPlacementComponent.h"
 
-class AProceduralSetup;
-
 void UTerrainPlacementComponent::RemoveBlockers() {
 }
 

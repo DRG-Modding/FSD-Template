@@ -2,9 +2,6 @@
 #include "Net/UnrealNetwork.h"
 #include "SimpleHealthComponent.h"
 
-class AActor;
-class UHealthComponentBase;
-
 void APlagueInfectionNode::OnWormSpawned(AActor* worm) {
 }
 

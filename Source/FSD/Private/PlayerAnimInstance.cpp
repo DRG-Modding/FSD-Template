@@ -1,8 +1,5 @@
 #include "PlayerAnimInstance.h"
 
-class UItemCharacterAnimationSet;
-class UUseAnimationSetting;
-
 bool UPlayerAnimInstance::StopUseMontage(bool stopImmediately) {
     return false;
 }

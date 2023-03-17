@@ -1,8 +1,6 @@
 #include "ActivationObject.h"
 #include "SingleUsableComponent.h"
 
-class APlayerCharacter;
-
 void AActivationObject::OnUsedBy(APlayerCharacter* User, EInputKeys Key) {
 }
 

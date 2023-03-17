@@ -1,9 +1,6 @@
 #include "StatusEffect.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class UStatusEffect;
-
 bool UStatusEffect::ShouldInstantiate_Implementation() const {
     return false;
 }

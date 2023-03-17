@@ -1,7 +1,5 @@
 #include "FacilityHackingPodAnimInstance.h"
 
-class AActor;
-
 void UFacilityHackingPodAnimInstance::SetSaluter(AActor* salutingTarget) {
 }
 

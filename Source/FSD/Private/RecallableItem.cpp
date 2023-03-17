@@ -1,8 +1,6 @@
 #include "RecallableItem.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-
 void ARecallableItem::ServerSpawnItem_Implementation(const FVector& Location, const FRotator& Rotation) {
 }
 

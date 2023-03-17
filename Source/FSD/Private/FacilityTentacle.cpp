@@ -1,8 +1,6 @@
 #include "FacilityTentacle.h"
 #include "Net/UnrealNetwork.h"
 
-class UDebrisPositioning;
-
 void AFacilityTentacle::PlayHitReaction(float Amount) {
 }
 

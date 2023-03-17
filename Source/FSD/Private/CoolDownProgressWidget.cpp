@@ -1,7 +1,5 @@
 #include "CoolDownProgressWidget.h"
 
-class UObject;
-
 void UCoolDownProgressWidget::UpdateProgress(float Progress) {
 }
 

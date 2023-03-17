@@ -1,7 +1,5 @@
 #include "DailyDealSettings.h"
 
-class UObject;
-
 bool UDailyDealSettings::IsDailyDealBought(UObject* WorldContextObject) {
     return false;
 }

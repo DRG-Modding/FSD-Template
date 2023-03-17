@@ -1,7 +1,5 @@
 #include "ItemsBar.h"
 
-class AItem;
-
 
 
 

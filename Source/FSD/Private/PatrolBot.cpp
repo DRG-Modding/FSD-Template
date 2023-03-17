@@ -12,10 +12,6 @@
 #include "PlayerImpactCooldownComponent.h"
 #include "ProjectileAttackComponent.h"
 
-class AActor;
-class UHealthComponentBase;
-class UPrimitiveComponent;
-
 void APatrolBot::SetIsPatrolling(bool patroling) {
 }
 

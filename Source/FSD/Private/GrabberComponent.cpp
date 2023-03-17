@@ -1,9 +1,6 @@
 #include "GrabberComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class UPrimitiveComponent;
-
 void UGrabberComponent::Timer_ReleaseTarget() {
 }
 

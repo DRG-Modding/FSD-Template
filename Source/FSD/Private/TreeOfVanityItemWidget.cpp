@@ -1,8 +1,5 @@
 #include "TreeOfVanityItemWidget.h"
 
-class UReward;
-class UTreeOfVanityItemWidget;
-
 void UTreeOfVanityItemWidget::SetIsBought(bool inIsBought) {
 }
 

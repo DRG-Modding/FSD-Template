@@ -1,7 +1,5 @@
 #include "RDGLauncher.h"
 
-class URDGComponent;
-
 void ARDGLauncher::Server_DetonateAll_Implementation() {
 }
 

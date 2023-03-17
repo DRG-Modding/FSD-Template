@@ -1,9 +1,6 @@
 #include "CappedResource.h"
 #include "Net/UnrealNetwork.h"
 
-class UCappedResource;
-class UObject;
-
 float UCappedResource::TransferAll(UCappedResource* Receiver) {
     return 0.0f;
 }

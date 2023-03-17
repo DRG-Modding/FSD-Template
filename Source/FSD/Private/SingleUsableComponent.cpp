@@ -1,8 +1,6 @@
 #include "SingleUsableComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class APlayerCharacter;
-
 void USingleUsableComponent::Use(APlayerCharacter* User, EInputKeys Key, float DeltaTime) {
 }
 

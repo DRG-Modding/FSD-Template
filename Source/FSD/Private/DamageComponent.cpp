@@ -1,11 +1,6 @@
 #include "DamageComponent.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class UDamageComponent;
-class UFSDPhysicalMaterial;
-class UPrimitiveComponent;
-
 void UDamageComponent::PreTestDamageConditions() {
 }
 

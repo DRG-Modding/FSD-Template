@@ -1,7 +1,5 @@
 #include "RichTextInputWidget.h"
 
-class UTextBlock;
-
 void URichTextInputWidget::ScaleTextBlockToHeight(UTextBlock* InTextBlock, float LineHeight) {
 }
 

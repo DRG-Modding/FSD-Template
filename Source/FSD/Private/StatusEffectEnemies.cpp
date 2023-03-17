@@ -1,8 +1,5 @@
 #include "StatusEffectEnemies.h"
 
-class APawn;
-class UEnemyDescriptor;
-
 void UStatusEffectEnemies::OnEnemySpawned(APawn* enemy, UEnemyDescriptor* descriptor) {
 }
 

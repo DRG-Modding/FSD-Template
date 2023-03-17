@@ -4,12 +4,6 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class AFSDPlayerState;
-class AGuntowerModule;
-class UHealthComponentBase;
-class UPrimitiveComponent;
-
 void AGuntowerActivationPlatform::ShutDown() {
 }
 

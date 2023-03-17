@@ -1,7 +1,5 @@
 #include "UGCRegistry.h"
 
-class UUGCPackage;
-
 void UUGCRegistry::UnmountUGCPackages(TArray<FString> ExcludingModIds) {
 }
 

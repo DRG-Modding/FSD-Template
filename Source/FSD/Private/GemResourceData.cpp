@@ -1,7 +1,5 @@
 #include "GemResourceData.h"
 
-class AFSDGameState;
-
 int32 UGemResourceData::GetCollectedGemsCreditValue(AFSDGameState* GameState) {
     return 0;
 }

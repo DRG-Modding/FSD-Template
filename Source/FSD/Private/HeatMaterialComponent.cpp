@@ -1,7 +1,5 @@
 #include "HeatMaterialComponent.h"
 
-class UMaterialInstanceDynamic;
-
 void UHeatMaterialComponent::OnTemperatureChanged(float Temperature, bool Overheated) {
 }
 

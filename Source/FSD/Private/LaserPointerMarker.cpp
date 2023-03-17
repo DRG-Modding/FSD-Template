@@ -1,8 +1,6 @@
 #include "LaserPointerMarker.h"
 #include "Net/UnrealNetwork.h"
 
-class APlayerCharacter;
-
 APlayerCharacter* ALaserPointerMarker::GetCharacter() const {
     return NULL;
 }

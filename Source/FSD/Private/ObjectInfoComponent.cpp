@@ -1,11 +1,5 @@
 #include "ObjectInfoComponent.h"
 
-class APlayerController;
-class UActorContextWidget;
-class UDialogDataAsset;
-class UPrimitiveComponent;
-class UTexture2D;
-
 bool UObjectInfoComponent::HasMissionControlLookAtShout(const UPrimitiveComponent* TargetComponent) const {
     return false;
 }

@@ -10,11 +10,6 @@
 #include "PawnAlertComponent.h"
 #include "PawnStatsComponent.h"
 
-class AActor;
-class UDamageTag;
-class UHealthComponent;
-class UHealthComponentBase;
-
 
 void AAFlyingBug::SetRotateTarget(AActor* aTarget) {
 }

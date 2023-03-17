@@ -1,15 +1,5 @@
 #include "DamageFunctionLibrary.h"
 
-class AActor;
-class UDamageClass;
-class UDamageImpulse;
-class UDamageTag;
-class UFSDPhysicalMaterial;
-class ULimbDismembermentList;
-class UObject;
-class UPawnStatsComponent;
-class USkeletalMeshComponent;
-
 void UDamageFunctionLibrary::SetPhysicalMaterialOnHit(UFSDPhysicalMaterial* PhysMat, FHitResult& Hit) {
 }
 

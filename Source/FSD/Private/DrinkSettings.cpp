@@ -1,8 +1,5 @@
 #include "DrinkSettings.h"
 
-class UDrinkableDataAsset;
-class UObject;
-
 TArray<UDrinkableDataAsset*> UDrinkSettings::GetBarDrinkables(UObject* WorldContext, bool IncludeDailySpecial, bool includeNotUnlocked, bool includePlayerRankTooLow) {
     return TArray<UDrinkableDataAsset*>();
 }

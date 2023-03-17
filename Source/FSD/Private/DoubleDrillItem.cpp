@@ -5,9 +5,6 @@
 #include "FirstPersonParticleSystemComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class UFSDPhysicalMaterial;
-
 void ADoubleDrillItem::Server_StopMining_Implementation() {
 }
 

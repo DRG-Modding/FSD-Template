@@ -1,9 +1,5 @@
 #include "LookingAtContentWidget.h"
 
-class AActor;
-class IHealth;
-class UHealth;
-
 void ULookingAtContentWidget::UpdateCurrentTarget(float DeltaSeconds, AActor* InTargetActor, const TScriptInterface<IHealth>& InTargetHealthComponent) {
 }
 

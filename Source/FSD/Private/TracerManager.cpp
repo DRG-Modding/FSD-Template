@@ -1,7 +1,5 @@
 #include "TracerManager.h"
 
-class UParticleSystem;
-
 void UTracerManager::AddTracer(FVector Origin, const FVector& Destination, float Speed, UParticleSystem* particle, float MinDistance, float Offset, UParticleSystem* Trail) {
 }
 

@@ -1,8 +1,6 @@
 #include "RecallableActor.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-
 void ARecallableActor::SetRecallTarget_Implementation(AActor* NewTarget) {
 }
 

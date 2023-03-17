@@ -1,7 +1,5 @@
 #include "InsectSwarmSpawner.h"
 
-class AActor;
-
 
 
 void AInsectSwarmSpawner::OnSwarmDestroyed(AActor* DestroyedActor) {

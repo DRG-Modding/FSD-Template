@@ -6,9 +6,6 @@
 #include "RestrictedResourceBank.h"
 #include "SimpleObjectInfoComponent.h"
 
-class APlayerCharacter;
-class UInstantUsable;
-
 bool AEscortMule::TryHeal(APlayerCharacter* User, float Amount) {
     return false;
 }

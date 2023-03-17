@@ -1,7 +1,5 @@
 #include "ProjectileLauncherBaseComponent.h"
 
-class AProjectileBase;
-
 void UProjectileLauncherBaseComponent::Server_StopFire_Implementation() {
 }
 

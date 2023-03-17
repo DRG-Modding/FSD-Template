@@ -1,7 +1,5 @@
 #include "CharacterStateComponent.h"
 
-class UPlayerMovementComponent;
-
 
 
 

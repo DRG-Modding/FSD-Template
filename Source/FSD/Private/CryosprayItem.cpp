@@ -6,11 +6,6 @@
 #include "ProjectileLauncherComponent.h"
 #include "StickyFlameSpawner.h"
 
-class AProjectileBase;
-class UFSDPhysicalMaterial;
-class UHealthComponentBase;
-class UPrimitiveComponent;
-
 void ACryosprayItem::ServerDoDamage_Implementation(FVector_NetQuantize Start, FVector_NetQuantize End, uint8 Power) {
 }
 

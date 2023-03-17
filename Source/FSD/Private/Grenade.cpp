@@ -3,9 +3,6 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class AGrenade;
-
 void AGrenade::OnRep_HasExploded() {
 }
 

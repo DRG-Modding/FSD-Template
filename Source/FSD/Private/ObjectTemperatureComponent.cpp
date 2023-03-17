@@ -1,7 +1,5 @@
 #include "ObjectTemperatureComponent.h"
 
-class UHealthComponentBase;
-
 void UObjectTemperatureComponent::TimerCallback() {
 }
 

@@ -1,8 +1,6 @@
 #include "FallingStateComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UFSDPhysicalMaterial;
-
 
 void UFallingStateComponent::Server_TakeFallDamage_Implementation(float Amount) {
 }

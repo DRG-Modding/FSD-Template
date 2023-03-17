@@ -1,7 +1,5 @@
 #include "TerrainScannerSplineMesh.h"
 
-class UHealthComponentBase;
-
 void UTerrainScannerSplineMesh::SetVisibleOnScanner(bool InShowOnScanner) {
 }
 

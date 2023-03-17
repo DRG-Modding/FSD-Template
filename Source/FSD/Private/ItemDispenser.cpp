@@ -3,9 +3,6 @@
 #include "InstantUsable.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class APlayerCharacter;
-
 void AItemDispenser::SpawnItem() {
 }
 

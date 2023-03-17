@@ -1,8 +1,6 @@
 #include "PlayerInfectionComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-
 void UPlayerInfectionComponent::Server_ClearInfection_Implementation() {
 }
 

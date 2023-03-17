@@ -1,7 +1,5 @@
 #include "TentacleBusyComponent.h"
 
-class AActor;
-
 void UTentacleBusyComponent::ReleasedActor(AActor* Escape, bool fullGrab) {
 }
 

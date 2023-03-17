@@ -1,7 +1,5 @@
 #include "SaveGameLibrary.h"
 
-class UObject;
-
 bool USaveGameLibrary::TryGetSaveGameSnapShot(UObject* WorldContext, const FString& Filename, int32 userIdx, FSaveGameSnapShot& OutSnapShot) {
     return false;
 }

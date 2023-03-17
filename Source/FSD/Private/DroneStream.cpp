@@ -2,9 +2,6 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/SceneComponent.h"
 
-class AActor;
-class UPrimitiveComponent;
-
 void ADroneStream::OnEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex) {
 }
 

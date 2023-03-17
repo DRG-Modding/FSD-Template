@@ -1,7 +1,5 @@
 #include "MissionGenerationManager.h"
 
-class UGeneratedMission;
-
 TArray<UGeneratedMission*> UMissionGenerationManager::GetMissions(int32 Seed) {
     return TArray<UGeneratedMission*>();
 }

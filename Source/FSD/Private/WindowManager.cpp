@@ -1,9 +1,6 @@
 #include "WindowManager.h"
 #include "Templates/SubclassOf.h"
 
-class UUserWidget;
-class UWindowWidget;
-
 void UWindowManager::SetSingletonWidgetVisibility(TSubclassOf<UUserWidget> WidgetClass, ESlateVisibility Visibility) {
 }
 

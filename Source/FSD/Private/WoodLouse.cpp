@@ -3,8 +3,6 @@
 #include "Components/SceneComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class APawn;
-
 
 void AWoodLouse::StopSpecial() {
 }

@@ -4,8 +4,6 @@
 #include "EnemyComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UHealthComponentBase;
-
 void AHostileGuntowerModule::OnWeakpointDied(UHealthComponentBase* Health) {
 }
 

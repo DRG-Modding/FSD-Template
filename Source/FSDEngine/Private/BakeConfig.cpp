@@ -1,7 +1,5 @@
 #include "BakeConfig.h"
 
-class UBuilderBase;
-
 FVector UBakeConfig::GetVectorSetting(FName Name, FVector defaultVal) {
     return FVector{};
 }

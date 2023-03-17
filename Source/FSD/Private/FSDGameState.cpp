@@ -10,17 +10,6 @@
 #include "SpawnEffectsComponent.h"
 #include "TeamResourcesComponent.h"
 
-class AFSDGameState;
-class AFSDPlayerState;
-class AGameStats;
-class AProceduralSetup;
-class UDifficultySetting;
-class UFSDEvent;
-class UGeneratedMission;
-class UObjective;
-class UResourceData;
-class USoundCue;
-
 void AFSDGameState::WaitForInitialGenerationDone(AFSDGameState* GameState, FLatentActionInfo LatentInfo) {
 }
 

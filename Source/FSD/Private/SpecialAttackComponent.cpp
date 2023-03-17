@@ -1,7 +1,5 @@
 #include "SpecialAttackComponent.h"
 
-class UAnimMontage;
-
 void USpecialAttackComponent::TriggerAttack(FName Name) {
 }
 
