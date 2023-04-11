@@ -652,12 +652,12 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->bJukeboxStreamerMode = true;
     this->bGraphicSettingsChanged = false;
     this->ServerSearchRegion = 3;
-    this->ServerSearchPasswordRequired = false;
+    this->ServerSearchPasswordRequired = true;
     this->volumeCharacterVoice = 56.99f;
     this->volumeMissionControl = 58.84f;
-    this->volumeMaster = 0.10f;
+    this->volumeMaster = 27.47f;
     this->volumeSFX = 67.60f;
-    this->volumeMusic = 71.30f;
+    this->volumeMusic = 58.38f;
     this->CurrentAudioOutputDeviceId = TEXT("{0.0.0.00000000}.{e5f88e95-6344-4763-bd61-70b04ceb23f9}");
     this->UseDefaultAudioOutputDevice = true;
     this->Sharpening = 0.00f;

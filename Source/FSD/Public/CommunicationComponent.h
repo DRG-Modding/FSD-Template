@@ -4,7 +4,6 @@
 #include "Components/ActorComponent.h"
 #include "GameplayTagContainer.h"
 #include "ActiveOutline.h"
-#include "AudioCallbackDelegate.h"
 #include "EAsyncLoadPriority.h"
 #include "EShoutType.h"
 #include "MissionShoutDelegateDelegate.h"
@@ -72,9 +71,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAudioComponent* MissionControlAudioComponent;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FAudioCallback ShoutCallback;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))

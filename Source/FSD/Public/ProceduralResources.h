@@ -15,6 +15,12 @@ public:
     void GenerateResources();
     
     UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
+    static void GenerateMissingCarvedResources_Async(AProceduralSetup*& setup, FLatentActionInfo LatentInfo);
+    
+    UFUNCTION(BlueprintCallable)
+    void GenerateMissingCarvedResources();
+    
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     static void GenerateCarvedResources_Async(AProceduralSetup*& setup, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
@@ -22,6 +28,12 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void CreateResourcesFromObjectives();
+    
+    UFUNCTION(BlueprintCallable)
+    void CountGeneratedCarvedResources();
+    
+    UFUNCTION(BlueprintCallable)
+    void CountFinalGeneratedCarvedResources();
     
 };
 
