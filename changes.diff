@@ -1,1039 +1,232 @@
-diff --git a/Source/FSD/Private/DeepDiveTemplateItem.cpp b/Source/FSD/Private/DeepDiveTemplateItem.cpp
-index b748fbda..6ac85e50 100644
---- a/Source/FSD/Private/DeepDiveTemplateItem.cpp
-+++ b/Source/FSD/Private/DeepDiveTemplateItem.cpp
-@@ -4,0 +5,3 @@ FDeepDiveTemplateItem::FDeepDiveTemplateItem() {
-+    this->Probability = 0;
-+    this->CanOnlyAppearOnce = false;
-+    this->CanOnlyAppearOncePerDeepDiveSet = false;
-diff --git a/Source/FSD/Private/DisplayCase.cpp b/Source/FSD/Private/DisplayCase.cpp
-index 3d1a3669..ec3e1201 100644
---- a/Source/FSD/Private/DisplayCase.cpp
-+++ b/Source/FSD/Private/DisplayCase.cpp
-@@ -5,0 +6,3 @@
-+void ADisplayCase::RefreshContent() {
+diff --git a/Plugins/SimpleUGC/Source/SimpleUGC/Private/UGCSettings.cpp b/Plugins/SimpleUGC/Source/SimpleUGC/Private/UGCSettings.cpp
+index d3ea3dd6..2b390dd2 100644
+--- a/Plugins/SimpleUGC/Source/SimpleUGC/Private/UGCSettings.cpp
++++ b/Plugins/SimpleUGC/Source/SimpleUGC/Private/UGCSettings.cpp
+@@ -53 +53 @@ UUGCSettings::UUGCSettings() {
+-    this->slot3.AddDefaulted(41);
++    this->slot3.AddDefaulted(39);
+@@ -54,0 +55 @@ UUGCSettings::UUGCSettings() {
++    this->slot4.AddDefaulted(26);
+@@ -56 +57 @@ UUGCSettings::UUGCSettings() {
+-    this->SelectedSlot = 4;
++    this->SelectedSlot = 1;
+diff --git a/Source/FSD/Private/CarvedResourceData.cpp b/Source/FSD/Private/CarvedResourceData.cpp
+index 65f94dea..d76ffc90 100644
+--- a/Source/FSD/Private/CarvedResourceData.cpp
++++ b/Source/FSD/Private/CarvedResourceData.cpp
+@@ -6,0 +7,8 @@ UCarvedResourceCreator* UCarvedResourceData::LoadResourceCreator() const {
++float UCarvedResourceData::GetUnitsPerCarver() const {
++    return 0.0f;
 +}
 +
-diff --git a/Source/FSD/Private/DrinkableDataAsset.cpp b/Source/FSD/Private/DrinkableDataAsset.cpp
-index f4aa32aa..06298171 100644
---- a/Source/FSD/Private/DrinkableDataAsset.cpp
-+++ b/Source/FSD/Private/DrinkableDataAsset.cpp
-@@ -4 +3,0 @@ class APlayerCharacter;
--class APlayerController;
-@@ -36 +35 @@ bool UDrinkableDataAsset::IsDrinkFree(UObject* WorldContext) {
--bool UDrinkableDataAsset::HasSupporterEdition() const {
-+bool UDrinkableDataAsset::HasSpecialEdition() const {
-@@ -40 +39 @@ bool UDrinkableDataAsset::HasSupporterEdition() const {
--UTexture2D* UDrinkableDataAsset::GetDrinkableIcon() const {
-+UDrinkableDataAsset* UDrinkableDataAsset::GetSpecialEdition(UObject* WorldContext) {
-@@ -44 +43 @@ UTexture2D* UDrinkableDataAsset::GetDrinkableIcon() const {
--UDrinkableDataAsset* UDrinkableDataAsset::GetDrinkableEdition(UObject* WorldContext, APlayerController* Player) {
-+UTexture2D* UDrinkableDataAsset::GetDrinkableIcon() const {
-@@ -57 +56,2 @@ UDrinkableDataAsset::UDrinkableDataAsset() {
--    this->SupporterEdition = NULL;
-+    this->SpecialEdition = NULL;
-+    this->RequiredDLC = NULL;
-diff --git a/Source/FSD/Private/DropPod.cpp b/Source/FSD/Private/DropPod.cpp
-index 99400fac..88bb233d 100644
---- a/Source/FSD/Private/DropPod.cpp
-+++ b/Source/FSD/Private/DropPod.cpp
-@@ -2,3 +1,0 @@
--#include "AutoCarverComponent.h"
--#include "Net/UnrealNetwork.h"
--#include "Templates/SubclassOf.h"
-@@ -6,29 +2,0 @@
--class ADropPod;
--class UObject;
--
--void ADropPod::StartDrilling() {
--}
--
--void ADropPod::PrepForTakeOff() {
--}
--
--void ADropPod::OnRep_State() {
--}
--
--
--
--
--
--ADropPod* ADropPod::DropToMission(UObject* WorldContextObject, TSubclassOf<ADropPod> podClass, const FVector& Location) {
--    return NULL;
--}
--
--void ADropPod::Depart() {
--}
--
--void ADropPod::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
--    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
--    
--    DOREPLIFETIME(ADropPod, TargetLocation);
--    DOREPLIFETIME(ADropPod, State);
--}
-@@ -37,9 +4,0 @@ ADropPod::ADropPod() {
--    this->DropHeight = 3500.00f;
--    this->AutoCarver = CreateDefaultSubobject<UAutoCarverComponent>(TEXT("AutoCarver"));
--    this->DepartCurve = NULL;
--    this->CarverRotationSpeed = 100.00f;
--    this->DepartureTime = -1.00f;
--    this->State = EDropPodState::WaitingToDrop;
--    this->DrillSpeed = 500.00f;
--    this->FreeFallAcceleration = 100.00f;
--    this->FreeFallSpeed = 2000.00f;
-diff --git a/Source/FSD/Private/DroppableOutpost.cpp b/Source/FSD/Private/DroppableOutpost.cpp
++float UCarvedResourceData::GetTargetAmount(AProceduralSetup* pls) const {
++    return 0.0f;
++}
++
+diff --git a/Source/FSD/Private/FSDGameUserSettings.cpp b/Source/FSD/Private/FSDGameUserSettings.cpp
+index 9e27a916..3cdb825c 100644
+--- a/Source/FSD/Private/FSDGameUserSettings.cpp
++++ b/Source/FSD/Private/FSDGameUserSettings.cpp
+@@ -655 +655 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
+-    this->ServerSearchPasswordRequired = false;
++    this->ServerSearchPasswordRequired = true;
+@@ -658 +658 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
+-    this->volumeMaster = 0.10f;
++    this->volumeMaster = 27.47f;
+@@ -660 +660 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
+-    this->volumeMusic = 71.30f;
++    this->volumeMusic = 58.38f;
+diff --git a/Source/FSD/Private/HeliumTank.cpp b/Source/FSD/Private/HeliumTank.cpp
 new file mode 100644
-index 00000000..8fb2682b
+index 00000000..69f1f02a
 --- /dev/null
-+++ b/Source/FSD/Private/DroppableOutpost.cpp
-@@ -0,0 +1,47 @@
-+#include "DroppableOutpost.h"
-+#include "AutoCarverComponent.h"
++++ b/Source/FSD/Private/HeliumTank.cpp
+@@ -0,0 +1,24 @@
++#include "HeliumTank.h"
 +#include "Net/UnrealNetwork.h"
-+#include "Templates/SubclassOf.h"
 +
-+class ADroppableOutpost;
-+class UObject;
-+
-+void ADroppableOutpost::StartDrilling() {
++void AHeliumTank::OnUsedBy(APlayerCharacter* User, EInputKeys Key) {
 +}
 +
-+void ADroppableOutpost::PrepForTakeOff() {
++void AHeliumTank::OnShoutStarted(APlayerCharacter* Player, UAudioComponent* audio) {
 +}
 +
-+void ADroppableOutpost::OnRep_State() {
++void AHeliumTank::OnRep_PitchedUsers() {
 +}
 +
-+
-+
-+
-+
-+ADroppableOutpost* ADroppableOutpost::DropOutpostToMission(UObject* WorldContextObject, TSubclassOf<ADroppableOutpost> podClass, const FVector& Location) {
-+    return NULL;
-+}
-+
-+void ADroppableOutpost::Depart() {
-+}
-+
-+void ADroppableOutpost::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
++void AHeliumTank::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
 +    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 +    
-+    DOREPLIFETIME(ADroppableOutpost, TargetLocation);
-+    DOREPLIFETIME(ADroppableOutpost, State);
++    DOREPLIFETIME(AHeliumTank, PitchedUsers);
++    DOREPLIFETIME(AHeliumTank, Leader);
 +}
 +
-+ADroppableOutpost::ADroppableOutpost() {
-+    this->DropHeight = 3500.00f;
-+    this->AutoCarver = CreateDefaultSubobject<UAutoCarverComponent>(TEXT("AutoCarver"));
-+    this->DepartCurve = NULL;
-+    this->CarverRotationSpeed = 100.00f;
-+    this->DepartureTime = -1.00f;
-+    this->State = EDroppableOutpostState::WaitingToDrop;
-+    this->DrillSpeed = 500.00f;
-+    this->FreeFallAcceleration = 100.00f;
-+    this->FreeFallSpeed = 2000.00f;
++AHeliumTank::AHeliumTank() {
++    this->PitchCurve = NULL;
++    this->Leader = NULL;
 +}
 +
-diff --git a/Source/FSD/Private/FSDCheatManager.cpp b/Source/FSD/Private/FSDCheatManager.cpp
-index 69c20bcf..6db738a6 100644
---- a/Source/FSD/Private/FSDCheatManager.cpp
-+++ b/Source/FSD/Private/FSDCheatManager.cpp
-@@ -577,0 +578,3 @@ void UFSDCheatManager::C_FSDEvent_SetDebugEvent(const FString& EventName) {
-+void UFSDCheatManager::C_FSDEvent_ListEvents() {
-+}
-+
-diff --git a/Source/FSD/Private/FSDEvent.cpp b/Source/FSD/Private/FSDEvent.cpp
-index 49182bc7..8356908f 100644
---- a/Source/FSD/Private/FSDEvent.cpp
-+++ b/Source/FSD/Private/FSDEvent.cpp
-@@ -4,0 +5 @@ class UFSDEvent;
-+class UFSDEventPopupWidget;
-@@ -30,0 +32,4 @@ bool UFSDEvent::GetIsActive(UObject* WorldContext) const {
-+UFSDEventPopupWidget* UFSDEvent::CreatePopupWindow(APlayerController* InPlayerController) {
-+    return NULL;
-+}
-+
-@@ -31,0 +37 @@ UFSDEvent::UFSDEvent() {
-+    this->EnableDangerousSaveGameIDEditing = false;
-@@ -33 +38,0 @@ UFSDEvent::UFSDEvent() {
--    this->bHasClaimableRewards = false;
-@@ -39,0 +45 @@ UFSDEvent::UFSDEvent() {
-+    this->bHasClaimableRewards = false;
-diff --git a/Source/FSD/Private/FSDEventPopupWidget.cpp b/Source/FSD/Private/FSDEventPopupWidget.cpp
+diff --git a/Source/FSD/Private/PitchedUsers.cpp b/Source/FSD/Private/PitchedUsers.cpp
 new file mode 100644
-index 00000000..96779e50
+index 00000000..03826fbc
 --- /dev/null
-+++ b/Source/FSD/Private/FSDEventPopupWidget.cpp
-@@ -0,0 +1,6 @@
-+#include "FSDEventPopupWidget.h"
++++ b/Source/FSD/Private/PitchedUsers.cpp
+@@ -0,0 +1,7 @@
++#include "PitchedUsers.h"
 +
-+UFSDEventPopupWidget::UFSDEventPopupWidget() {
-+    this->FSDEvent = NULL;
++FPitchedUsers::FPitchedUsers() {
++    this->Player = NULL;
++    this->Timer = 0.00f;
 +}
 +
-diff --git a/Source/FSD/Private/FSDGameMode.cpp b/Source/FSD/Private/FSDGameMode.cpp
-index 0ff6cbc8..71f3b496 100644
---- a/Source/FSD/Private/FSDGameMode.cpp
-+++ b/Source/FSD/Private/FSDGameMode.cpp
-@@ -15 +14,0 @@ class AFSDPlayerController;
--class AMiningPod;
-@@ -18,0 +18 @@ class APlayerController;
-+class ATeamTransport;
-@@ -80 +80 @@ FSoftObjectPath AFSDGameMode::GetDropPodEscapePath() const {
--TSubclassOf<AMiningPod> AFSDGameMode::GetDropPodEscapeClass() const {
-+TSubclassOf<ATeamTransport> AFSDGameMode::GetDropPodEscapeClass() const {
-@@ -84 +84 @@ TSubclassOf<AMiningPod> AFSDGameMode::GetDropPodEscapeClass() const {
--TSubclassOf<AMiningPod> AFSDGameMode::GetDropPodClass() const {
-+TSubclassOf<ATeamTransport> AFSDGameMode::GetDropPodClass() const {
-diff --git a/Source/FSD/Private/FSDMainHUDWidget.cpp b/Source/FSD/Private/FSDMainHUDWidget.cpp
-index c8f08e1b..f455e98a 100644
---- a/Source/FSD/Private/FSDMainHUDWidget.cpp
-+++ b/Source/FSD/Private/FSDMainHUDWidget.cpp
-@@ -5,0 +6,2 @@ class URadarPointComponent;
+diff --git a/Source/FSD/Private/ProceduralResources.cpp b/Source/FSD/Private/ProceduralResources.cpp
+index e706585b..69fd2f86 100644
+--- a/Source/FSD/Private/ProceduralResources.cpp
++++ b/Source/FSD/Private/ProceduralResources.cpp
+@@ -5,0 +6,6 @@ void UProceduralResources::GenerateResources() {
++void UProceduralResources::GenerateMissingCarvedResources_Async(AProceduralSetup*& setup, FLatentActionInfo LatentInfo) {
++}
 +
++void UProceduralResources::GenerateMissingCarvedResources() {
++}
 +
-diff --git a/Source/FSD/Private/HalloweenSkull.cpp b/Source/FSD/Private/HalloweenSkull.cpp
-index d24cf193..f0705e0a 100644
---- a/Source/FSD/Private/HalloweenSkull.cpp
-+++ b/Source/FSD/Private/HalloweenSkull.cpp
-@@ -2,0 +3 @@
+@@ -14,0 +21,6 @@ void UProceduralResources::CreateResourcesFromObjectives() {
++void UProceduralResources::CountGeneratedCarvedResources() {
++}
 +
-diff --git a/Source/FSD/Private/InputFunctionLibrary.cpp b/Source/FSD/Private/InputFunctionLibrary.cpp
-index 658ff715..d94d8a08 100644
---- a/Source/FSD/Private/InputFunctionLibrary.cpp
-+++ b/Source/FSD/Private/InputFunctionLibrary.cpp
-@@ -25 +25 @@ bool UInputFunctionLibrary::IsKeyEventAction(const FKeyEvent& KeyEvent, FName Ac
--bool UInputFunctionLibrary::IsAxisMappedToDirectional(FName InActionName, FKey Key, int32 Direction, bool IgnoreCustomBindings) {
-+bool UInputFunctionLibrary::IsInputActionDown(const APlayerController* InPlayerController, FName InActionName) {
-@@ -29 +29 @@ bool UInputFunctionLibrary::IsAxisMappedToDirectional(FName InActionName, FKey K
--bool UInputFunctionLibrary::IsActionMappedTo(FName InActionName, FKey Key, bool IgnoreCustomBindings) {
-+bool UInputFunctionLibrary::IsAxisMappedToDirectional(FName InActionName, FKey Key, int32 Direction, bool IgnoreCustomBindings) {
-@@ -33,2 +33,2 @@ bool UInputFunctionLibrary::IsActionMappedTo(FName InActionName, FKey Key, bool
--TArray<FKey> UInputFunctionLibrary::GetInputKeysBoundToAction(const FName& ActionName, EKeyBindingAxis Axis, bool IsGamePadKey) {
--    return TArray<FKey>();
-+bool UInputFunctionLibrary::IsActionMappedTo(FName InActionName, FKey Key, bool IgnoreCustomBindings) {
-+    return false;
-diff --git a/Source/FSD/Private/MiningPod.cpp b/Source/FSD/Private/MiningPod.cpp
-deleted file mode 100644
-index fc23c14f..00000000
---- a/Source/FSD/Private/MiningPod.cpp
-+++ /dev/null
-@@ -1,109 +0,0 @@
--#include "MiningPod.h"
--#include "AutoCarverComponent.h"
--#include "Net/UnrealNetwork.h"
--#include "Templates/SubclassOf.h"
--
--class AMiningPod;
--class UObject;
--
--AMiningPod* AMiningPod::SpawnPodAtLocation(UObject* WorldContextObject, TSubclassOf<AMiningPod> podClass, const FTransform& Transform) {
--    return NULL;
--}
--
--void AMiningPod::SetRampState(EMiningPodRampState NewRampState) {
--}
--
--
--
--
--void AMiningPod::PrepForTakeOff() {
--}
--
--void AMiningPod::PowerUp() {
--}
--
--void AMiningPod::PoweredUp() {
--}
--
--void AMiningPod::OnRep_State() {
--}
--
--
--
--
--
--
--
--
--
--
--void AMiningPod::OnCountdownFinished() {
--}
--
--void AMiningPod::OnCountdownChanged(int32 newTime) {
--}
--
--
--int32 AMiningPod::GetTimeToDeparture() const {
--    return 0;
--}
--
--bool AMiningPod::GetHasLanded() const {
--    return false;
--}
--
--
--
--void AMiningPod::ExitSpacerig() {
--}
--
--void AMiningPod::DropToTarget(UObject* WorldContextObject, TSubclassOf<AMiningPod> podClass, const FTransform& dropLocation, int32 DropDelay) {
--}
--
--AMiningPod* AMiningPod::DropToMission(UObject* WorldContextObject, TSubclassOf<AMiningPod> podClass, const FVector& Location) {
--    return NULL;
--}
--
--void AMiningPod::DepositAllPlayersMaterials() {
--}
--
--void AMiningPod::Depart() {
--}
--
--void AMiningPod::CorrectLocationsForSpawnedOnLocation() {
--}
--
--FVector AMiningPod::AdjustLandingLocationToGround(UObject* WorldContextObjet, const FVector& initialLocation, float maxDownAdjustment) {
--    return FVector{};
--}
--
--void AMiningPod::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
--    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
++void UProceduralResources::CountFinalGeneratedCarvedResources() {
++}
++
+diff --git a/Source/FSD/Private/VeinResourceData.cpp b/Source/FSD/Private/VeinResourceData.cpp
+index a107c61d..b8e431a5 100644
+--- a/Source/FSD/Private/VeinResourceData.cpp
++++ b/Source/FSD/Private/VeinResourceData.cpp
+@@ -6,0 +7,4 @@ UTerrainMaterial* UVeinResourceData::GetTerrainMaterial() const {
++float UVeinResourceData::GetDesiredAmount(AProceduralSetup* pls) const {
++    return 0.0f;
++}
++
+diff --git a/Source/FSD/Public/CarvedResourceData.h b/Source/FSD/Public/CarvedResourceData.h
+index 17716fb3..90baf23a 100644
+--- a/Source/FSD/Public/CarvedResourceData.h
++++ b/Source/FSD/Public/CarvedResourceData.h
+@@ -5,0 +6 @@
++class AProceduralSetup;
+@@ -23,0 +25,6 @@ public:
++    UFUNCTION(BlueprintCallable, BlueprintPure)
++    float GetUnitsPerCarver() const;
++    
++    UFUNCTION(BlueprintCallable, BlueprintPure)
++    float GetTargetAmount(AProceduralSetup* pls) const;
++    
+diff --git a/Source/FSD/Public/CommunicationComponent.h b/Source/FSD/Public/CommunicationComponent.h
+index 1cb1ac49..4c83857f 100644
+--- a/Source/FSD/Public/CommunicationComponent.h
++++ b/Source/FSD/Public/CommunicationComponent.h
+@@ -7 +6,0 @@
+-#include "AudioCallbackDelegate.h"
+@@ -76,3 +74,0 @@ protected:
+-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+-    FAudioCallback ShoutCallback;
 -    
--    DOREPLIFETIME(AMiningPod, TargetLocation);
--    DOREPLIFETIME(AMiningPod, StartLocation);
--    DOREPLIFETIME(AMiningPod, State);
--    DOREPLIFETIME(AMiningPod, rampState);
--}
--
--AMiningPod::AMiningPod() {
--    this->DropHeight = 3500.00f;
--    this->AutoCarver = CreateDefaultSubobject<UAutoCarverComponent>(TEXT("AutoCarver"));
--    this->DropCurve = NULL;
--    this->DepartCurve = NULL;
--    this->CarverDropCurve = NULL;
--    this->CarverRotationSpeed = 100.00f;
--    this->DwarfCheckerBox = NULL;
--    this->DepartureTime = -1.00f;
--    this->MissionType = EMiningPodMission::DropAndReturn;
--    this->WaitForPlayerSpawns = true;
--    this->HasLanded = false;
--    this->PodOutline = NULL;
--    this->State = EMiningPodState::WaitingForGameStart;
--    this->rampState = EMiningPodRampState::Closed;
--    this->TargetDropTime = 0.00f;
--    this->TargetDepartureTime = 0.00f;
--    this->TimeToDrop = 0.00f;
--    this->ObjectivesManager = NULL;
--}
--
-diff --git a/Source/FSD/Private/MissionTemplate.cpp b/Source/FSD/Private/MissionTemplate.cpp
-index eb551df7..009438df 100644
---- a/Source/FSD/Private/MissionTemplate.cpp
-+++ b/Source/FSD/Private/MissionTemplate.cpp
-@@ -62 +62 @@ UTexture2D* UMissionTemplate::GetMissionButtonImage() const {
--UGeneratedMission* UMissionTemplate::GenerateMission(const UObject* WorldContextObject, UBiome* Biome, int32 Seed, int32 GlobalSeed, int32 missionIndex, UMissionComplexity* limitComplexity, UMissionDuration* limitDuration, UMissionMutator* Mutator, TArray<UMissionWarning*> Warnings, TSubclassOf<UObjective> forceSecondary) {
-+UGeneratedMission* UMissionTemplate::GenerateMission(const UObject* WorldContextObject, UBiome* Biome, int32 Seed, int32 GlobalSeed, int32 missionIndex, UMissionComplexity* limitComplexity, UMissionDuration* limitDuration, UMissionMutator* Mutator, TArray<UMissionWarning*> Warnings, TArray<TSubclassOf<UObjective>> forceSecondary) {
-diff --git a/Source/FSD/Private/PlatformSpecificEventPopup.cpp b/Source/FSD/Private/PlatformSpecificEventPopup.cpp
+diff --git a/Source/FSD/Public/HeliumTank.h b/Source/FSD/Public/HeliumTank.h
 new file mode 100644
-index 00000000..368fe9af
+index 00000000..4db0aacb
 --- /dev/null
-+++ b/Source/FSD/Private/PlatformSpecificEventPopup.cpp
-@@ -0,0 +1,6 @@
-+#include "PlatformSpecificEventPopup.h"
-+
-+FPlatformSpecificEventPopup::FPlatformSpecificEventPopup() {
-+    this->TargetPlatform = EFSDTargetPlatform::Steam;
-+}
-+
-diff --git a/Source/FSD/Private/SpaceRigBarMenuItem.cpp b/Source/FSD/Private/SpaceRigBarMenuItem.cpp
-index 2b944f2d..c64b3cf1 100644
---- a/Source/FSD/Private/SpaceRigBarMenuItem.cpp
-+++ b/Source/FSD/Private/SpaceRigBarMenuItem.cpp
-@@ -4,0 +5 @@
-+
-@@ -6,0 +8 @@ USpaceRigBarMenuItem::USpaceRigBarMenuItem() {
-+    this->SpecialEditionSelected = false;
-diff --git a/Source/FSD/Private/TeamTransport.cpp b/Source/FSD/Private/TeamTransport.cpp
-new file mode 100644
-index 00000000..d0b8533c
---- /dev/null
-+++ b/Source/FSD/Private/TeamTransport.cpp
-@@ -0,0 +1,108 @@
-+#include "TeamTransport.h"
-+#include "AutoCarverComponent.h"
-+#include "Net/UnrealNetwork.h"
-+#include "Templates/SubclassOf.h"
-+
-+class ATeamTransport;
-+class UObject;
-+
-+ATeamTransport* ATeamTransport::SpawnPodAtLocation(UObject* WorldContextObject, TSubclassOf<ATeamTransport> podClass, const FTransform& Transform) {
-+    return NULL;
-+}
-+
-+void ATeamTransport::SetRampState(EMiningPodRampState NewRampState) {
-+}
-+
-+
-+
-+
-+void ATeamTransport::PrepForTakeOff() {
-+}
-+
-+void ATeamTransport::PowerUp() {
-+}
-+
-+void ATeamTransport::PoweredUp() {
-+}
-+
-+void ATeamTransport::OnRep_State() {
-+}
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+void ATeamTransport::OnCountdownFinished() {
-+}
-+
-+void ATeamTransport::OnCountdownChanged(int32 newTime) {
-+}
-+
-+
-+int32 ATeamTransport::GetTimeToDeparture() const {
-+    return 0;
-+}
-+
-+bool ATeamTransport::GetHasLanded() const {
-+    return false;
-+}
-+
-+
-+void ATeamTransport::ExitSpacerig() {
-+}
-+
-+void ATeamTransport::DropToTarget(UObject* WorldContextObject, TSubclassOf<ATeamTransport> podClass, const FTransform& dropLocation, int32 DropDelay) {
-+}
-+
-+ATeamTransport* ATeamTransport::DropToMission(UObject* WorldContextObject, TSubclassOf<ATeamTransport> podClass, const FVector& Location) {
-+    return NULL;
-+}
-+
-+void ATeamTransport::DepositAllPlayersMaterials() {
-+}
-+
-+void ATeamTransport::Depart() {
-+}
-+
-+void ATeamTransport::CorrectLocationsForSpawnedOnLocation() {
-+}
-+
-+FVector ATeamTransport::AdjustLandingLocationToGround(UObject* WorldContextObjet, const FVector& initialLocation, float maxDownAdjustment) {
-+    return FVector{};
-+}
-+
-+void ATeamTransport::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-+    
-+    DOREPLIFETIME(ATeamTransport, TargetLocation);
-+    DOREPLIFETIME(ATeamTransport, StartLocation);
-+    DOREPLIFETIME(ATeamTransport, TransportState);
-+    DOREPLIFETIME(ATeamTransport, rampState);
-+}
-+
-+ATeamTransport::ATeamTransport() {
-+    this->DropHeight = 3500.00f;
-+    this->AutoCarver = CreateDefaultSubobject<UAutoCarverComponent>(TEXT("AutoCarver"));
-+    this->DropCurve = NULL;
-+    this->DepartCurve = NULL;
-+    this->CarverDropCurve = NULL;
-+    this->CarverRotationSpeed = 100.00f;
-+    this->DwarfCheckerBox = NULL;
-+    this->DepartureTime = -1.00f;
-+    this->MissionType = EMiningPodMission::DropAndReturn;
-+    this->WaitForPlayerSpawns = true;
-+    this->HasLanded = false;
-+    this->PodOutline = NULL;
-+    this->TransportState = EMiningPodState::WaitingForGameStart;
-+    this->rampState = EMiningPodRampState::Closed;
-+    this->TargetDropTime = 0.00f;
-+    this->TargetDepartureTime = 0.00f;
-+    this->TimeToDrop = 0.00f;
-+    this->ObjectivesManager = NULL;
-+}
-+
-diff --git a/Source/FSD/Private/ThrowableItem.cpp b/Source/FSD/Private/ThrowableItem.cpp
-index c8c024d5..6db0714e 100644
---- a/Source/FSD/Private/ThrowableItem.cpp
-+++ b/Source/FSD/Private/ThrowableItem.cpp
-@@ -35 +34,0 @@ AThrowableItem::AThrowableItem() {
--    this->AddPlayerVelocityToThrow = false;
-diff --git a/Source/FSD/Public/CampaignSave.h b/Source/FSD/Public/CampaignSave.h
-index fbba3353..16167625 100644
---- a/Source/FSD/Public/CampaignSave.h
-+++ b/Source/FSD/Public/CampaignSave.h
-@@ -27,0 +28,3 @@ protected:
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    FWeeklyCampaignItem SeededRandomSave;
-+    
-diff --git a/Source/FSD/Public/DeepDiveManager.h b/Source/FSD/Public/DeepDiveManager.h
-index 5d66e5ec..5050f3cf 100644
---- a/Source/FSD/Public/DeepDiveManager.h
-+++ b/Source/FSD/Public/DeepDiveManager.h
-@@ -14,0 +15 @@ class UUserWidget;
-+class UWidget;
-@@ -116,0 +118,3 @@ public:
-+    UFUNCTION(BlueprintCallable)
-+    TSoftClassPtr<UWidget> GetMissionModeCheatUI() override PURE_VIRTUAL(GetMissionModeCheatUI, return NULL;);
-+    
-diff --git a/Source/FSD/Public/DeepDiveTemplateItem.h b/Source/FSD/Public/DeepDiveTemplateItem.h
-index 53831959..56393f77 100644
---- a/Source/FSD/Public/DeepDiveTemplateItem.h
-+++ b/Source/FSD/Public/DeepDiveTemplateItem.h
-@@ -15,0 +16,3 @@ public:
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    int32 Probability;
-+    
-@@ -21,0 +25,6 @@ public:
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    bool CanOnlyAppearOnce;
-+    
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    bool CanOnlyAppearOncePerDeepDiveSet;
-+    
-diff --git a/Source/FSD/Public/DisplayCase.h b/Source/FSD/Public/DisplayCase.h
-index 7cd84d40..2342b4d5 100644
---- a/Source/FSD/Public/DisplayCase.h
-+++ b/Source/FSD/Public/DisplayCase.h
-@@ -66,0 +67,3 @@ public:
-+    UFUNCTION(BlueprintCallable)
-+    void RefreshContent();
-+    
-diff --git a/Source/FSD/Public/DrinkableDataAsset.h b/Source/FSD/Public/DrinkableDataAsset.h
-index fbba8f5a..567d8ccd 100644
---- a/Source/FSD/Public/DrinkableDataAsset.h
-+++ b/Source/FSD/Public/DrinkableDataAsset.h
-@@ -10 +10 @@ class APlayerCharacter;
--class APlayerController;
-+class UDLCBase;
-@@ -46 +46,4 @@ public:
--    UDrinkableDataAsset* SupporterEdition;
-+    UDrinkableDataAsset* SpecialEdition;
-+    
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    UDLCBase* RequiredDLC;
-@@ -107 +110,4 @@ public:
--    bool HasSupporterEdition() const;
-+    bool HasSpecialEdition() const;
-+    
-+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
-+    UDrinkableDataAsset* GetSpecialEdition(UObject* WorldContext);
-@@ -112,3 +117,0 @@ public:
--    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
--    UDrinkableDataAsset* GetDrinkableEdition(UObject* WorldContext, APlayerController* Player);
--    
-diff --git a/Source/FSD/Public/DropPod.h b/Source/FSD/Public/DropPod.h
-index 0e48c63b..20a7410a 100644
---- a/Source/FSD/Public/DropPod.h
-+++ b/Source/FSD/Public/DropPod.h
-@@ -4,3 +4,2 @@
--#include "GameFramework/Actor.h"
--#include "EDropPodState.h"
--#include "Templates/SubclassOf.h"
-+#include "MiningPodDialogs.h"
-+#include "TeamTransport.h"
-@@ -9,5 +7,0 @@
--class ADropPod;
--class UAutoCarverComponent;
--class UCurveFloat;
--class UObject;
--
-@@ -15 +9 @@ UCLASS(Blueprintable)
--class FSD_API ADropPod : public AActor {
-+class FSD_API ADropPod : public ATeamTransport {
-@@ -19,32 +13 @@ public:
--    float DropHeight;
--    
--    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
--    FVector TargetLocation;
--    
--protected:
--    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
--    UAutoCarverComponent* AutoCarver;
--    
--    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
--    UCurveFloat* DepartCurve;
--    
--    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
--    float CarverRotationSpeed;
--    
--    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
--    FVector CarverScale;
--    
--    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
--    float DepartureTime;
--    
--    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
--    FVector StartLocation;
--    
--    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_State, meta=(AllowPrivateAccess=true))
--    EDropPodState State;
--    
--    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
--    float DrillSpeed;
--    
--    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
--    float FreeFallAcceleration;
-+    FMiningPodDialogs Dialogs;
-@@ -52,4 +14,0 @@ protected:
--    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
--    float FreeFallSpeed;
--    
--public:
-@@ -57,21 +15,0 @@ public:
--    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
--    
--    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
--    void StartDrilling();
--    
--    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
--    void PrepForTakeOff();
--    
--protected:
--    UFUNCTION(BlueprintCallable)
--    void OnRep_State();
--    
--    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
--    void OnPrepForTakeOff();
--    
--    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
--    void OnDroppodImpact();
--    
--    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
--    void OnDrillingStarted();
--    
-@@ -79,8 +17 @@ protected:
--    void OnDeparting();
--    
--public:
--    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
--    static ADropPod* DropToMission(UObject* WorldContextObject, TSubclassOf<ADropPod> podClass, const FVector& Location);
--    
--    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
--    void Depart();
-+    FVector GetDonkeyReturnPickupLocation();
-diff --git a/Source/FSD/Public/DroppableOutpost.h b/Source/FSD/Public/DroppableOutpost.h
-new file mode 100644
-index 00000000..66336e5e
---- /dev/null
-+++ b/Source/FSD/Public/DroppableOutpost.h
-@@ -0,0 +1,89 @@
++++ b/Source/FSD/Public/HeliumTank.h
+@@ -0,0 +1,42 @@
 +#pragma once
 +#include "CoreMinimal.h"
-+#include "UObject/NoExportTypes.h"
 +#include "GameFramework/Actor.h"
-+#include "EDroppableOutpostState.h"
-+#include "Templates/SubclassOf.h"
-+#include "DroppableOutpost.generated.h"
++#include "EInputKeys.h"
++#include "PitchedUsers.h"
++#include "HeliumTank.generated.h"
 +
-+class ADroppableOutpost;
-+class UAutoCarverComponent;
++class AHeliumTank;
++class APlayerCharacter;
++class UAudioComponent;
 +class UCurveFloat;
-+class UObject;
 +
 +UCLASS(Blueprintable)
-+class FSD_API ADroppableOutpost : public AActor {
++class AHeliumTank : public AActor {
 +    GENERATED_BODY()
 +public:
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    float DropHeight;
-+    
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
-+    FVector TargetLocation;
-+    
 +protected:
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-+    UAutoCarverComponent* AutoCarver;
-+    
 +    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    UCurveFloat* DepartCurve;
++    UCurveFloat* PitchCurve;
 +    
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    float CarverRotationSpeed;
++    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_PitchedUsers, meta=(AllowPrivateAccess=true))
++    TArray<FPitchedUsers> PitchedUsers;
 +    
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    FVector CarverScale;
-+    
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    float DepartureTime;
-+    
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-+    FVector StartLocation;
-+    
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_State, meta=(AllowPrivateAccess=true))
-+    EDroppableOutpostState State;
-+    
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    float DrillSpeed;
-+    
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    float FreeFallAcceleration;
-+    
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    float FreeFallSpeed;
++    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
++    AHeliumTank* Leader;
 +    
 +public:
-+    ADroppableOutpost();
++    AHeliumTank();
 +    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 +    
-+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
-+    void StartDrilling();
-+    
-+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
-+    void PrepForTakeOff();
-+    
 +protected:
 +    UFUNCTION(BlueprintCallable)
-+    void OnRep_State();
++    void OnUsedBy(APlayerCharacter* User, EInputKeys Key);
 +    
-+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-+    void OnPrepForTakeOff();
++    UFUNCTION(BlueprintCallable)
++    void OnShoutStarted(APlayerCharacter* Player, UAudioComponent* audio);
 +    
-+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-+    void OnDroppodImpact();
-+    
-+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-+    void OnDrillingStarted();
-+    
-+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-+    void OnDeparting();
-+    
-+public:
-+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
-+    static ADroppableOutpost* DropOutpostToMission(UObject* WorldContextObject, TSubclassOf<ADroppableOutpost> podClass, const FVector& Location);
-+    
-+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
-+    void Depart();
++    UFUNCTION(BlueprintCallable)
++    void OnRep_PitchedUsers();
 +    
 +};
 +
-diff --git a/Source/FSD/Public/EDropPodState.h b/Source/FSD/Public/EDroppableOutpostState.h
-similarity index 61%
-rename from Source/FSD/Public/EDropPodState.h
-rename to Source/FSD/Public/EDroppableOutpostState.h
-index 8b848750..329aa9c3 100644
---- a/Source/FSD/Public/EDropPodState.h
-+++ b/Source/FSD/Public/EDroppableOutpostState.h
-@@ -3 +3 @@
--#include "EDropPodState.generated.h"
-+#include "EDroppableOutpostState.generated.h"
-@@ -6 +6 @@ UENUM(BlueprintType)
--enum class EDropPodState : uint8 {
-+enum class EDroppableOutpostState : uint8 {
-diff --git a/Source/FSD/Public/FSDCheatManager.h b/Source/FSD/Public/FSDCheatManager.h
-index 3881616e..89dd9e40 100644
---- a/Source/FSD/Public/FSDCheatManager.h
-+++ b/Source/FSD/Public/FSDCheatManager.h
-@@ -608,0 +609,3 @@ public:
-+    UFUNCTION(BlueprintCallable, Exec)
-+    void C_FSDEvent_ListEvents();
-+    
-diff --git a/Source/FSD/Public/FSDEvent.h b/Source/FSD/Public/FSDEvent.h
-index 3ccabf23..43160389 100644
---- a/Source/FSD/Public/FSDEvent.h
-+++ b/Source/FSD/Public/FSDEvent.h
-@@ -9,0 +10 @@
-+#include "PlatformSpecificEventPopup.h"
-@@ -16,0 +18 @@ class UFSDEvent;
-+class UFSDEventPopupWidget;
-@@ -30,2 +32,2 @@ protected:
--    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
--    FName EventName;
-+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    bool EnableDangerousSaveGameIDEditing;
-@@ -34 +36 @@ protected:
--    EHolidayType EventType;
-+    FGuid SavegameID;
-@@ -37 +39 @@ protected:
--    FGuid SavegameID;
-+    FName EventName;
-@@ -40 +42 @@ protected:
--    bool bHasClaimableRewards;
-+    EHolidayType EventType;
-@@ -77,0 +80,3 @@ protected:
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    bool bHasClaimableRewards;
-+    
-@@ -80,0 +86,3 @@ protected:
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    TArray<FPlatformSpecificEventPopup> OptionalPopUpWindow;
-+    
-@@ -108,0 +117,3 @@ public:
-+    UFUNCTION(BlueprintCallable)
-+    UFSDEventPopupWidget* CreatePopupWindow(APlayerController* InPlayerController);
-+    
-diff --git a/Source/FSD/Public/FSDEventPopupWidget.h b/Source/FSD/Public/FSDEventPopupWidget.h
+diff --git a/Source/FSD/Public/PitchedUsers.h b/Source/FSD/Public/PitchedUsers.h
 new file mode 100644
-index 00000000..01dd2fa0
+index 00000000..0cafe25e
 --- /dev/null
-+++ b/Source/FSD/Public/FSDEventPopupWidget.h
-@@ -0,0 +1,17 @@
++++ b/Source/FSD/Public/PitchedUsers.h
+@@ -0,0 +1,19 @@
 +#pragma once
 +#include "CoreMinimal.h"
-+#include "WindowWidget.h"
-+#include "FSDEventPopupWidget.generated.h"
++#include "PitchedUsers.generated.h"
 +
-+class UFSDEvent;
++class APlayerCharacter;
 +
-+UCLASS(Abstract, Blueprintable, EditInlineNew)
-+class UFSDEventPopupWidget : public UWindowWidget {
++USTRUCT(BlueprintType)
++struct FPitchedUsers {
 +    GENERATED_BODY()
 +public:
 +    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-+    UFSDEvent* FSDEvent;
++    APlayerCharacter* Player;
 +    
-+    UFSDEventPopupWidget();
++    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
++    float Timer;
++    
++    FSD_API FPitchedUsers();
 +};
 +
-diff --git a/Source/FSD/Public/FSDEventRewardsSave.h b/Source/FSD/Public/FSDEventRewardsSave.h
-index c30d9a50..9e48bcb3 100644
---- a/Source/FSD/Public/FSDEventRewardsSave.h
-+++ b/Source/FSD/Public/FSDEventRewardsSave.h
-@@ -13,0 +14,3 @@ protected:
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    TSet<FGuid> PopupsSeen;
+diff --git a/Source/FSD/Public/ProceduralResources.h b/Source/FSD/Public/ProceduralResources.h
+index 6cbf4470..de1723d1 100644
+--- a/Source/FSD/Public/ProceduralResources.h
++++ b/Source/FSD/Public/ProceduralResources.h
+@@ -16,0 +17,6 @@ public:
++    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
++    static void GenerateMissingCarvedResources_Async(AProceduralSetup*& setup, FLatentActionInfo LatentInfo);
 +    
-diff --git a/Source/FSD/Public/FSDGameMode.h b/Source/FSD/Public/FSDGameMode.h
-index 0f4e610d..6933a8ef 100644
---- a/Source/FSD/Public/FSDGameMode.h
-+++ b/Source/FSD/Public/FSDGameMode.h
-@@ -18 +17,0 @@ class AFSDPlayerController;
--class AMiningPod;
-@@ -21,0 +21 @@ class APlayerController;
-+class ATeamTransport;
-@@ -83 +83 @@ protected:
--    TSoftClassPtr<AMiningPod> DropPodClass;
-+    TSoftClassPtr<ATeamTransport> DropPodClass;
-@@ -89 +89 @@ protected:
--    TSoftClassPtr<AMiningPod> DropodEscapeClass;
-+    TSoftClassPtr<ATeamTransport> DropodEscapeClass;
-@@ -204 +204 @@ public:
--    TSubclassOf<AMiningPod> GetDropPodEscapeClass() const;
-+    TSubclassOf<ATeamTransport> GetDropPodEscapeClass() const;
-@@ -207 +207 @@ public:
--    TSubclassOf<AMiningPod> GetDropPodClass() const;
-+    TSubclassOf<ATeamTransport> GetDropPodClass() const;
-diff --git a/Source/FSD/Public/FSDGameState.h b/Source/FSD/Public/FSDGameState.h
-index 020db692..37377859 100644
---- a/Source/FSD/Public/FSDGameState.h
-+++ b/Source/FSD/Public/FSDGameState.h
-@@ -31 +30,0 @@ class AGameStats;
--class AMiningPod;
-@@ -34,0 +34 @@ class AProceduralSetup;
-+class ATeamTransport;
-@@ -104 +104 @@ public:
--    AMiningPod* EscapePod;
-+    ATeamTransport* EscapePod;
-diff --git a/Source/FSD/Public/FSDMainHUDWidget.h b/Source/FSD/Public/FSDMainHUDWidget.h
-index 87b3793a..7b8e25cf 100644
---- a/Source/FSD/Public/FSDMainHUDWidget.h
-+++ b/Source/FSD/Public/FSDMainHUDWidget.h
-@@ -6,0 +7 @@ class URadarPointComponent;
-+class UWidget;
-@@ -12,0 +14,6 @@ public:
-+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-+    void PushEvent(UWidget* eventWidget, bool Left);
-+    
-+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-+    void PopEvent(UWidget* eventWidget, bool Left);
-+    
-diff --git a/Source/FSD/Public/FSDMiningHead.h b/Source/FSD/Public/FSDMiningHead.h
-index 17617600..aa97e7c4 100644
---- a/Source/FSD/Public/FSDMiningHead.h
-+++ b/Source/FSD/Public/FSDMiningHead.h
-@@ -3 +3 @@
--#include "DropPod.h"
-+#include "DroppableOutpost.h"
-@@ -9 +9 @@ UCLASS(Blueprintable)
--class FSD_API AFSDMiningHead : public ADropPod {
-+class FSD_API AFSDMiningHead : public ADroppableOutpost {
-diff --git a/Source/FSD/Public/FSDRefinery.h b/Source/FSD/Public/FSDRefinery.h
-index 8943ccc0..1c8824d5 100644
---- a/Source/FSD/Public/FSDRefinery.h
-+++ b/Source/FSD/Public/FSDRefinery.h
-@@ -5 +5 @@
--#include "DropPod.h"
-+#include "DroppableOutpost.h"
-@@ -21 +21 @@ UCLASS(Blueprintable)
--class FSD_API AFSDRefinery : public ADropPod {
-+class FSD_API AFSDRefinery : public ADroppableOutpost {
-diff --git a/Source/FSD/Public/FlareGunProjectile.h b/Source/FSD/Public/FlareGunProjectile.h
-index f74bc9e7..942088a7 100644
---- a/Source/FSD/Public/FlareGunProjectile.h
-+++ b/Source/FSD/Public/FlareGunProjectile.h
-@@ -6 +6 @@
--class AMiningPod;
-+class ATeamTransport;
-@@ -38 +38 @@ protected:
--    void OnDroppodImpact(AMiningPod* DropPod);
-+    void OnDroppodImpact(ATeamTransport* DropPod);
-diff --git a/Source/FSD/Public/HalloweenSkull.h b/Source/FSD/Public/HalloweenSkull.h
-index 27811eff..3038612f 100644
---- a/Source/FSD/Public/HalloweenSkull.h
-+++ b/Source/FSD/Public/HalloweenSkull.h
-@@ -33,0 +34,3 @@ protected:
-+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-+    void OnJawClosed();
-+    
-diff --git a/Source/FSD/Public/InputFunctionLibrary.h b/Source/FSD/Public/InputFunctionLibrary.h
-index b4be895e..3ded5bca 100644
---- a/Source/FSD/Public/InputFunctionLibrary.h
-+++ b/Source/FSD/Public/InputFunctionLibrary.h
-@@ -10 +9,0 @@
--#include "EKeyBindingAxis.h"
-@@ -36,0 +36,3 @@ public:
-+    UFUNCTION(BlueprintCallable, BlueprintPure)
-+    static bool IsInputActionDown(const APlayerController* InPlayerController, FName InActionName);
-+    
-@@ -43,3 +44,0 @@ public:
--    UFUNCTION(BlueprintCallable)
--    static TArray<FKey> GetInputKeysBoundToAction(const FName& ActionName, EKeyBindingAxis Axis, bool IsGamePadKey);
--    
-diff --git a/Source/FSD/Public/MissionModeManager.h b/Source/FSD/Public/MissionModeManager.h
-index 9aced0f6..17de693a 100644
---- a/Source/FSD/Public/MissionModeManager.h
-+++ b/Source/FSD/Public/MissionModeManager.h
-@@ -8,0 +9 @@ class UUserWidget;
-+class UWidget;
-@@ -38,0 +40,3 @@ public:
 +    UFUNCTION(BlueprintCallable)
-+    virtual TSoftClassPtr<UWidget> GetMissionModeCheatUI() PURE_VIRTUAL(GetMissionModeCheatUI, return NULL;);
++    void GenerateMissingCarvedResources();
 +    
-diff --git a/Source/FSD/Public/MissionTemplate.h b/Source/FSD/Public/MissionTemplate.h
-index 939978d2..bd77ce8e 100644
---- a/Source/FSD/Public/MissionTemplate.h
-+++ b/Source/FSD/Public/MissionTemplate.h
-@@ -148 +148 @@ public:
--    UGeneratedMission* GenerateMission(const UObject* WorldContextObject, UBiome* Biome, int32 Seed, int32 GlobalSeed, int32 missionIndex, UMissionComplexity* limitComplexity, UMissionDuration* limitDuration, UMissionMutator* Mutator, TArray<UMissionWarning*> Warnings, TSubclassOf<UObjective> forceSecondary);
-+    UGeneratedMission* GenerateMission(const UObject* WorldContextObject, UBiome* Biome, int32 Seed, int32 GlobalSeed, int32 missionIndex, UMissionComplexity* limitComplexity, UMissionDuration* limitDuration, UMissionMutator* Mutator, TArray<UMissionWarning*> Warnings, TArray<TSubclassOf<UObjective>> forceSecondary);
-diff --git a/Source/FSD/Public/PLSTester.h b/Source/FSD/Public/PLSTester.h
-index c8ab3df4..b18f74ea 100644
---- a/Source/FSD/Public/PLSTester.h
-+++ b/Source/FSD/Public/PLSTester.h
-@@ -3,0 +4 @@
-+#include "Templates/SubclassOf.h"
-@@ -12,0 +14 @@ class UMissionWarning;
-+class UObjective;
-@@ -46,0 +49,3 @@ protected:
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    TArray<TSubclassOf<UObjective>> SecondaryObjectives;
+@@ -25,0 +32,6 @@ public:
++    UFUNCTION(BlueprintCallable)
++    void CountGeneratedCarvedResources();
 +    
-diff --git a/Source/FSD/Public/PlatformSpecificEventPopup.h b/Source/FSD/Public/PlatformSpecificEventPopup.h
-new file mode 100644
-index 00000000..752dcd91
---- /dev/null
-+++ b/Source/FSD/Public/PlatformSpecificEventPopup.h
-@@ -0,0 +1,20 @@
-+#pragma once
-+#include "CoreMinimal.h"
-+#include "EFSDTargetPlatform.h"
-+#include "PlatformSpecificEventPopup.generated.h"
-+
-+class UFSDEventPopupWidget;
-+
-+USTRUCT(BlueprintType)
-+struct FPlatformSpecificEventPopup {
-+    GENERATED_BODY()
-+public:
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    EFSDTargetPlatform TargetPlatform;
++    UFUNCTION(BlueprintCallable)
++    void CountFinalGeneratedCarvedResources();
 +    
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    TSoftClassPtr<UFSDEventPopupWidget> PopupWidget;
+diff --git a/Source/FSD/Public/VeinResourceData.h b/Source/FSD/Public/VeinResourceData.h
+index 7d6e7fed..c4a24648 100644
+--- a/Source/FSD/Public/VeinResourceData.h
++++ b/Source/FSD/Public/VeinResourceData.h
+@@ -5,0 +6 @@
++class AProceduralSetup;
+@@ -30,0 +32,3 @@ public:
++    UFUNCTION(BlueprintCallable, BlueprintPure)
++    float GetDesiredAmount(AProceduralSetup* pls) const;
 +    
-+    FSD_API FPlatformSpecificEventPopup();
-+};
-+
-diff --git a/Source/FSD/Public/SalvageObjective.h b/Source/FSD/Public/SalvageObjective.h
-index bb4a2fba..b1bad2cd 100644
---- a/Source/FSD/Public/SalvageObjective.h
-+++ b/Source/FSD/Public/SalvageObjective.h
-@@ -10,0 +11 @@ class AActor;
-+class ADropPod;
-@@ -12 +12,0 @@ class AMiniMule;
--class AMiningPod;
-@@ -50 +50 @@ protected:
--    TSoftClassPtr<AMiningPod> DamagedPodClass;
-+    TSoftClassPtr<ADropPod> DamagedPodClass;
-@@ -59 +59 @@ protected:
--    AMiningPod* DamagedPod;
-+    ADropPod* DamagedPod;
-diff --git a/Source/FSD/Public/SpaceRigBarMenuItem.h b/Source/FSD/Public/SpaceRigBarMenuItem.h
-index 5a14a143..b0e7d558 100644
---- a/Source/FSD/Public/SpaceRigBarMenuItem.h
-+++ b/Source/FSD/Public/SpaceRigBarMenuItem.h
-@@ -15,0 +16,3 @@ protected:
-+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-+    bool SpecialEditionSelected;
-+    
-@@ -23,0 +27,3 @@ public:
-+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
-+    UDrinkableDataAsset* GetSelectedDrinkableType();
-+    
-diff --git a/Source/FSD/Public/MiningPod.h b/Source/FSD/Public/TeamTransport.h
-similarity index 90%
-rename from Source/FSD/Public/MiningPod.h
-rename to Source/FSD/Public/TeamTransport.h
-index 6514fec0..6e9ceb27 100644
---- a/Source/FSD/Public/MiningPod.h
-+++ b/Source/FSD/Public/TeamTransport.h
-@@ -12 +11,0 @@
--#include "MiningPodDialogs.h"
-@@ -14 +13 @@
--#include "MiningPod.generated.h"
-+#include "TeamTransport.generated.h"
-@@ -16 +14,0 @@
--class AMiningPod;
-@@ -17,0 +16 @@ class AMolly;
-+class ATeamTransport;
-@@ -26 +25 @@ UCLASS(Blueprintable)
--class FSD_API AMiningPod : public AActor, public IGameplayTagAssetInterface {
-+class FSD_API ATeamTransport : public AActor, public IGameplayTagAssetInterface {
-@@ -66,3 +64,0 @@ protected:
--    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
--    FMiningPodDialogs Dialogs;
--    
-@@ -85 +81 @@ protected:
--    EMiningPodState State;
-+    EMiningPodState TransportState;
-@@ -103 +99 @@ public:
--    AMiningPod();
-+    ATeamTransport();
-@@ -107 +103 @@ public:
--    static AMiningPod* SpawnPodAtLocation(UObject* WorldContextObject, TSubclassOf<AMiningPod> podClass, const FTransform& Transform);
-+    static ATeamTransport* SpawnPodAtLocation(UObject* WorldContextObject, TSubclassOf<ATeamTransport> podClass, const FTransform& Transform);
-@@ -179,3 +174,0 @@ public:
--    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
--    FVector GetDonkeyReturnPickupLocation();
--    
-@@ -189 +182 @@ public:
--    static void DropToTarget(UObject* WorldContextObject, TSubclassOf<AMiningPod> podClass, const FTransform& dropLocation, int32 DropDelay);
-+    static void DropToTarget(UObject* WorldContextObject, TSubclassOf<ATeamTransport> podClass, const FTransform& dropLocation, int32 DropDelay);
-@@ -192 +185 @@ public:
--    static AMiningPod* DropToMission(UObject* WorldContextObject, TSubclassOf<AMiningPod> podClass, const FVector& Location);
-+    static ATeamTransport* DropToMission(UObject* WorldContextObject, TSubclassOf<ATeamTransport> podClass, const FVector& Location);
-diff --git a/Source/FSD/Public/ThrowableItem.h b/Source/FSD/Public/ThrowableItem.h
-index 7b6c73a0..07d6f003 100644
---- a/Source/FSD/Public/ThrowableItem.h
-+++ b/Source/FSD/Public/ThrowableItem.h
-@@ -47,3 +46,0 @@ protected:
--    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
--    bool AddPlayerVelocityToThrow;
--    
