@@ -3,6 +3,9 @@
 #include "Net/UnrealNetwork.h"
 
 
+void AAmmoDrivenWeapon::UpdateHoldToFire() {
+}
+
 void AAmmoDrivenWeapon::Server_StopReload_Implementation(float BlendOutTime) {
 }
 
@@ -111,6 +114,7 @@ AAmmoDrivenWeapon::AAmmoDrivenWeapon() {
     this->ReloadDuration = 0.00f;
     this->AmmoCount = 0;
     this->ClipCount = 0;
+    this->FireInputBufferTime = 0.00f;
     this->AutoReloadDuration = 0.00f;
     this->AutoReloadCompleteCue = NULL;
     this->SupplyStatusWeight = 1.00f;
@@ -118,6 +122,9 @@ AAmmoDrivenWeapon::AAmmoDrivenWeapon() {
     this->ReloadTimeLeft = 0.00f;
     this->AutomaticReload = false;
     this->CanReload = false;
+    this->HoldToFirePercentOfFireRatePenalty = -1.00f;
+    this->ApplyRecoilAtEndOfBurst = false;
+    this->EndOfBurstRecoilMultiplier = 1.00f;
     this->HasAutomaticFire = false;
     this->IsFiring = false;
     this->WeaponState = EAmmoWeaponState::Equipping;

@@ -1,6 +1,5 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "ClaimableRewardEntry.generated.h"
 
 class UClaimableRewardEntryWidget;
@@ -25,9 +24,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftClassPtr<UClaimableRewardEntryWidget> EntryWidgetOverride;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FGuid SavegameID;
     
     FSD_API FClaimableRewardEntry();
 };

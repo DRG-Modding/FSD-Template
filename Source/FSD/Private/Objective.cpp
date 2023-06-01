@@ -102,6 +102,7 @@ UObjective::UObjective() {
     this->ScaleObjectiveToMission = true;
     this->bHasReturnObjective = false;
     this->RequiredReturnObjectiveCompleted = false;
+    this->ShowObjectiveInHUD = true;
     this->ObjectiveCompletedStat = NULL;
     this->IsPrimaryObjective = -1;
     this->bIsNeededForMissionCompletion = false;

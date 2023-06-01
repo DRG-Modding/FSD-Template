@@ -9,6 +9,7 @@
 class AActor;
 class AProjectile;
 class UAudioComponent;
+class UFXSystemAsset;
 class UParticleSystem;
 class UParticleSystemComponent;
 class UPrimitiveComponent;
@@ -32,7 +33,7 @@ protected:
     TSubclassOf<AProjectile> AcidProjectile;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UParticleSystem* deathParticles;
+    UFXSystemAsset* deathParticles;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* deathSound;
@@ -93,6 +94,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_DropAcid, meta=(AllowPrivateAccess=true))
     bool dropAcid;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool NoDeathSpiral;
     
 public:
     ABomber();

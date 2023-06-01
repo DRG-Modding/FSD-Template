@@ -40,7 +40,7 @@ public:
     bool TryClaimReward(bool isNormalReward);
     
     UFUNCTION(BlueprintCallable)
-    void SetData(int32 inLevel, bool inLastInRow);
+    void SetData(int32 InLevel, bool inLastInRow);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void RefreshState();

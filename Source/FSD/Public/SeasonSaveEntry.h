@@ -45,7 +45,7 @@ protected:
     int32 ClaimedScripChallenges;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 PlagueHeartsdUsed;
+    int32 PlagueHeartsUsed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TimePlayedAtSeasonStart;

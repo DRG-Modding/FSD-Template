@@ -4,7 +4,7 @@ bool USeasonLevelWidget::TryClaimReward(bool isNormalReward) {
     return false;
 }
 
-void USeasonLevelWidget::SetData(int32 inLevel, bool inLastInRow) {
+void USeasonLevelWidget::SetData(int32 InLevel, bool inLastInRow) {
 }
 
 

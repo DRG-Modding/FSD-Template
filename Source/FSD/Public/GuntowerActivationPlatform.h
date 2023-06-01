@@ -13,17 +13,17 @@ class UCapsuleComponent;
 class UHealthComponentBase;
 class UPrimitiveComponent;
 class USceneComponent;
-class USkeletalMeshComponent;
+class UStaticMeshComponent;
 
 UCLASS(Blueprintable)
-class FSD_API AGuntowerActivationPlatform : public AActor {
+class AGuntowerActivationPlatform : public AActor {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* Root;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    USkeletalMeshComponent* SKMesh;
+    UStaticMeshComponent* STMesh;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCapsuleComponent* Trigger;
@@ -115,6 +115,9 @@ protected:
     void ModuleDestroyed(UHealthComponentBase* Health);
     
 public:
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetPlayerCount() const;
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     AGuntowerModule* GetAssignedModule() const;
     

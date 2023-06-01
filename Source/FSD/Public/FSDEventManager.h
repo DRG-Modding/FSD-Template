@@ -5,6 +5,7 @@
 #include "BackendNotificationEvent.h"
 #include "EHolidayType.h"
 #include "FSDEventActivateChangedDelegate.h"
+#include "JettyBootEventSettings.h"
 #include "FSDEventManager.generated.h"
 
 class UFSDEvent;
@@ -51,6 +52,9 @@ protected:
     
 public:
     UFSDEventManager();
+    UFUNCTION(BlueprintCallable)
+    void TryGetJettyBootSettings(bool& OutHasSettings, FJettyBootEventSettings& OutSettings);
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEventTypeActive(const EHolidayType FSDEvent) const;
     

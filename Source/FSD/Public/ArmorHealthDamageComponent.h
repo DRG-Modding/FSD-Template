@@ -5,7 +5,10 @@
 #include "ArmorHealthItem.h"
 #include "ArmorPartDamagedDelegateDelegate.h"
 #include "BaseArmorDamageComponent.h"
+#include "EArmorDamageType.h"
 #include "ArmorHealthDamageComponent.generated.h"
+
+class UPrimitiveComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UArmorHealthDamageComponent : public UBaseArmorDamageComponent {
@@ -46,6 +49,9 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetHealthOnAllItems(float newHealth);
     
+    UFUNCTION(BlueprintCallable)
+    bool SetArmorDamageEnabledOnItem(FName BoneName, bool Enabled);
+    
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void RegrowAllArmor(float baseHealth);
     
@@ -55,6 +61,10 @@ protected:
     
     UFUNCTION(BlueprintCallable)
     void OnRep_ArmorDamageInfo(FArmorDamageInfo OldValue);
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void DealSocketArmorDamage(float Damage, float armorDamageMultiplier, UPrimitiveComponent* collider, bool shatter, EArmorDamageType DamageType);
     
 };
 

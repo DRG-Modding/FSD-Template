@@ -2,7 +2,7 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-void URefineryObjective::SpawnWells(AProceduralSetup* setup, const FVector& rigLocation, float minDistanceBetween, const TArray<FVector2D>& minMaxDistancesToRig) {
+void URefineryObjective::SpawnWells(AProceduralSetup* Setup, const FVector& rigLocation, float minDistanceBetween, const TArray<FVector2D>& minMaxDistancesToRig) {
 }
 
 

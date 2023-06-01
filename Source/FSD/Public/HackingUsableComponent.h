@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "HackingUsableState.h"
 #include "InstantUsable.h"
+#include "ItemDelegateDelegate.h"
 #include "HackingUsableComponent.generated.h"
 
 class AHackingToolItem;
@@ -16,6 +17,9 @@ public:
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHackedDelegate OnHacked;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FItemDelegate BeingHackedUpdated;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

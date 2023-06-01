@@ -15,7 +15,7 @@ void APlagueControlActor::PushDebrisLights() {
 void APlagueControlActor::EquipPlaguePod(APlayerCharacter* Player) {
 }
 
-bool APlagueControlActor::CanDropWeaponPod(float& timeLeft) {
+bool APlagueControlActor::CanDropWeaponPod(float& TimeLeft) {
     return false;
 }
 

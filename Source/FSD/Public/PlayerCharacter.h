@@ -97,6 +97,7 @@ class UHeightenedSenseComponent;
 class UInstantUsable;
 class UInventoryComponent;
 class UInventoryList;
+class UJetBootsMovementComponent;
 class ULightComponent;
 class UMaterialInstanceDynamic;
 class UMaterialInterface;
@@ -131,6 +132,7 @@ class USoundCue;
 class USpringArmComponent;
 class UStatusEffect;
 class UStatusEffectsComponent;
+class UTemporaryBuff;
 class UTexture2D;
 class UUsableComponent;
 class UWidgetInteractionComponent;
@@ -304,6 +306,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagContainer GameplayTags;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UJetBootsMovementComponent> JetBootsComponentSpawnable;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UZipLineStateComponent* ZipLineStateComponent;
@@ -535,6 +540,9 @@ protected:
     float CarryingThrowMaxForce;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float PlayerVelocityToThrowFactor;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UStatusEffect> CarryingThrowingStatusEffect;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -632,6 +640,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool CanMine;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    bool CanSalute;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_IsStandingDown, meta=(AllowPrivateAccess=true))
     bool IsStandingDown;
@@ -872,6 +883,9 @@ public:
     void Server_CheatKillAll();
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_CheatJetBoots();
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_CheatGodMode();
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
@@ -896,6 +910,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_AddImpulse(const FVector_NetQuantizeNormal& Direction, float force);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_ActivateTemporaryBuff(UTemporaryBuff* buff);
     
     UFUNCTION(BlueprintCallable)
     void SendLevelUpStatistics(const int32 currentRank);
@@ -988,6 +1005,12 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsWalking() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsUsingPressed() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsUsingItemPressed() const;
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -1170,6 +1193,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_AddImpulse(const FVector_NetQuantizeNormal& Direction, float force);
+    
+    UFUNCTION(BlueprintCallable, Client, Reliable)
+    void Client_ActivateTemporaryBuff(UTemporaryBuff* buff);
     
 protected:
     UFUNCTION(BlueprintCallable, Client, Reliable)

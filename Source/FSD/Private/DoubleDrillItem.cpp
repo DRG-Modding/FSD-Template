@@ -81,7 +81,7 @@ ADoubleDrillItem::ADoubleDrillItem() {
     this->FriendlyDamageRadius = 20.00f;
     this->DamageRate = 3.00f;
     this->Damage = 5.00f;
-    this->ArmorDamageMultiplier = 1.00f;
+    this->armorDamageMultiplier = 1.00f;
     this->DamageClass = NULL;
     this->FriendlyFireModifier = 0.10f;
     this->MaxFuel = 0.00f;

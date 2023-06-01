@@ -433,7 +433,7 @@ public:
     TArray<FCreditsReward> GetMissionRewardCredits() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    bool GetMissionCompletedCreditReward(bool primary, int32& OutReward) const;
+    bool GetMissionCompletedCreditReward(bool Primary, int32& OutReward) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetGlobalMissionSeed() const;

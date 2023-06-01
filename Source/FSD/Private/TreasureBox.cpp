@@ -7,7 +7,7 @@
 #include "SingleUsableComponent.h"
 #include "TerrainPlacementComponent.h"
 
-void ATreasureBox::PlaceResources(AProceduralSetup* setup, float Radius, UDebrisPositioning* DebrisPositioning, const TArray<FVector>& locationsToAvoid, UCurveFloat* AvoidCostCurve) {
+void ATreasureBox::PlaceResources(AProceduralSetup* Setup, float Radius, UDebrisPositioning* DebrisPositioning, const TArray<FVector>& locationsToAvoid, UCurveFloat* AvoidCostCurve) {
 }
 
 void ATreasureBox::OnUsedEvent(APlayerCharacter* User, EInputKeys Key) {

@@ -3,6 +3,7 @@
 #include "Components/ActorComponent.h"
 #include "Curves/CurveFloat.h"
 #include "DamageData.h"
+#include "EWeakpointGlowMode.h"
 #include "WeakpointChannel.h"
 #include "WeakpointGlowComponent.generated.h"
 
@@ -28,6 +29,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CurveMultiplier;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EWeakpointGlowMode Mode;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFSDPhysicalMaterial* WeakPointMaterial;

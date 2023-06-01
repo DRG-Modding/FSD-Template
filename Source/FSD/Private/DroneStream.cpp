@@ -2,10 +2,15 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/SceneComponent.h"
 
+
 void ADroneStream::OnEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex) {
 }
 
 void ADroneStream::OnBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
+}
+
+ABosco* ADroneStream::GetBosco() const {
+    return NULL;
 }
 
 ADroneStream::ADroneStream() {

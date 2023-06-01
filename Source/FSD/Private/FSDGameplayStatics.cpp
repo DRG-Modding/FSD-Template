@@ -4,7 +4,7 @@ UFXSystemComponent* UFSDGameplayStatics::SpawnScaledEmitterAtLocation(UObject* W
     return NULL;
 }
 
-UDecalComponent* UFSDGameplayStatics::SpawnDecalData(const UObject* WorldContextObject, const FVector& Location, const FVector& upVector, const FDecalData& DecalData, bool randomRollRotation) {
+UDecalComponent* UFSDGameplayStatics::SpawnDecalData(const UObject* WorldContextObject, const FVector& Location, const FVector& UpVector, const FDecalData& DecalData, bool randomRollRotation) {
     return NULL;
 }
 
@@ -12,7 +12,7 @@ UDecalComponent* UFSDGameplayStatics::SpawnDecalAtActor(AActor* Actor, UMaterial
     return NULL;
 }
 
-UDecalComponent* UFSDGameplayStatics::SpawnDecal(const UObject* WorldContextObject, UMaterialInterface* DecalMaterial, const FVector& Location, const FVector& upVector, float Size, float Duration, float FadeDuration) {
+UDecalComponent* UFSDGameplayStatics::SpawnDecal(const UObject* WorldContextObject, UMaterialInterface* DecalMaterial, const FVector& Location, const FVector& UpVector, float Size, float Duration, float FadeDuration) {
     return NULL;
 }
 

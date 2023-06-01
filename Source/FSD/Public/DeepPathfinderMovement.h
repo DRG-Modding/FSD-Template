@@ -335,6 +335,9 @@ public:
     UFUNCTION(BlueprintCallable)
     UFakeMoverSettings* GetCurrentFakePhysicsMoveSet();
     
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    float GetApproximatePathLength(FVector Start, FVector End) const;
+    
     UFUNCTION(BlueprintCallable)
     bool FlyToConnectedPosition(const FVector& destPos);
     

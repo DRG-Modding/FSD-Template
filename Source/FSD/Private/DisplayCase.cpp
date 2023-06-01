@@ -12,6 +12,10 @@ void ADisplayCase::PlayReactionAnimation() {
 void ADisplayCase::OnRep_ContentIndex() {
 }
 
+bool ADisplayCase::IsSpecialContent() const {
+    return false;
+}
+
 void ADisplayCase::InitializeCase() {
 }
 

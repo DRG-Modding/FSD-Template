@@ -202,7 +202,7 @@ public:
     void SpawnObjectiveCriticalItems(const ECriticalItemPass& pass);
     
     UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
-    static void SpawnItems_Async(AProceduralSetup* setup, FLatentActionInfo LatentInfo);
+    static void SpawnItems_Async(AProceduralSetup* Setup, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
     void SpawnItems();
@@ -211,7 +211,7 @@ public:
     void SpawnEncounters();
     
     UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
-    static void SpawnDebrisItems_Async(AProceduralSetup* setup, FLatentActionInfo LatentInfo, EDebrisItemPass pass, int32 Depth);
+    static void SpawnDebrisItems_Async(AProceduralSetup* Setup, FLatentActionInfo LatentInfo, EDebrisItemPass pass, int32 Depth);
     
     UFUNCTION(BlueprintCallable)
     void SpawnDebrisItems(EDebrisItemPass pass);
@@ -262,7 +262,7 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
-    static void GenerateRoomsFromGraph_Async(AProceduralSetup* setup, FLatentActionInfo LatentInfo, int32 CarvePass);
+    static void GenerateRoomsFromGraph_Async(AProceduralSetup* Setup, FLatentActionInfo LatentInfo, int32 CarvePass);
     
     UFUNCTION(BlueprintCallable)
     void GenerateRoomsFromGraph(int32 CarvePass);
@@ -280,7 +280,7 @@ public:
     void FindEntrancesForAllConnections();
     
     UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
-    static void FillTunnels_Async(AProceduralSetup* setup, FLatentActionInfo LatentInfo);
+    static void FillTunnels_Async(AProceduralSetup* Setup, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
     void FillTunnels();

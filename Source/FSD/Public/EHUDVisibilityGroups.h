@@ -19,5 +19,6 @@ enum class EHUDVisibilityGroups : uint8 {
     Objectives,
     TeamDisplay,
     SentryGunDisplay,
+    VersionNumber,
 };
 

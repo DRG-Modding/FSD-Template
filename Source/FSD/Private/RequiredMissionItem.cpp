@@ -4,5 +4,6 @@ FRequiredMissionItem::FRequiredMissionItem() {
     this->MissionTemplate = NULL;
     this->Complexity = NULL;
     this->Duration = NULL;
+    this->CanHaveMutators = false;
 }
 

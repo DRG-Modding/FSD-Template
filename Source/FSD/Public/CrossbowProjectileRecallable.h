@@ -6,6 +6,7 @@
 
 class APlayerCharacter;
 class UInstantUsable;
+class UInterpolatedFirstPersonStaticMeshComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCrossbowProjectileRecallable : public UActorComponent {
@@ -26,6 +27,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FTransform StartTransform;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UInterpolatedFirstPersonStaticMeshComponent* FPMeshComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     bool IsRecallable;

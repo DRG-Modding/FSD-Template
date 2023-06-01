@@ -7,6 +7,7 @@
 #include "EHolidayType.h"
 #include "EncounterSpecialItem.h"
 #include "FSDEventActivateChangedDelegate.h"
+#include "JettyBootEventSettings.h"
 #include "PlatformSpecificEventPopup.h"
 #include "FSDEvent.generated.h"
 
@@ -91,6 +92,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UTexture2D> TitleScreenOverride;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FJettyBootEventSettings JettyBootSettings;
     
 public:
     UFSDEvent();

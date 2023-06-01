@@ -1,5 +1,8 @@
 #include "FSDEventManager.h"
 
+void UFSDEventManager::TryGetJettyBootSettings(bool& OutHasSettings, FJettyBootEventSettings& OutSettings) {
+}
+
 bool UFSDEventManager::IsEventTypeActive(const EHolidayType FSDEvent) const {
     return false;
 }

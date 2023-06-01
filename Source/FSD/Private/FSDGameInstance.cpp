@@ -93,13 +93,16 @@ void UFSDGameInstance::ResetSaveGame() {
 void UFSDGameInstance::ResetAlwaysLoadedWorldsAndGameData() {
 }
 
-void UFSDGameInstance::RemoveRemporaryBuff() {
-}
-
 void UFSDGameInstance::RemoveBosco() {
 }
 
+void UFSDGameInstance::RemoveAllTemporaryBuff(APlayerController* PlayerController) {
+}
+
 void UFSDGameInstance::RefreshIsGameModded() {
+}
+
+void UFSDGameInstance::PreClientTravelCleanup(APlayerController* PlayerController) {
 }
 
 void UFSDGameInstance::PostInit(bool reload) {
@@ -157,6 +160,10 @@ bool UFSDGameInstance::HasSignedIn() {
     return false;
 }
 
+bool UFSDGameInstance::HasRandomBeerBuff() const {
+    return false;
+}
+
 bool UFSDGameInstance::HasPendingInvite() const {
     return false;
 }
@@ -185,6 +192,10 @@ TSoftClassPtr<AProceduralSetup> UFSDGameInstance::GetSoftReferenceToPLS() {
 
 TArray<FBlueprintSessionResult> UFSDGameInstance::GetServersFriendsArePlaying(TArray<FBlueprintSessionResult> servers) {
     return TArray<FBlueprintSessionResult>();
+}
+
+FString UFSDGameInstance::GetSeedString(UObject* WorldContextObject) {
+    return TEXT("");
 }
 
 int32 UFSDGameInstance::GetOverrideMaxPlayerCount() const {
@@ -332,7 +343,6 @@ UFSDGameInstance::UFSDGameInstance() {
     this->InKBytesPerSecond = 0.00f;
     this->OutKBytesPerSecond = 0.00f;
     this->PreSpawnNigaraParticles = true;
-    this->TemporaryBuff = NULL;
     this->NextLoaderLevel = EAlwaysLoadedWorlds::CharacterViewer;
     this->ControllerVibrationSubmix = NULL;
     this->ControllerSpeakerSubmix = NULL;

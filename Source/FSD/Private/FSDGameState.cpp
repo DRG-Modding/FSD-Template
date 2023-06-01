@@ -153,7 +153,7 @@ TArray<FCreditsReward> AFSDGameState::GetMissionRewardCredits() const {
     return TArray<FCreditsReward>();
 }
 
-bool AFSDGameState::GetMissionCompletedCreditReward(bool primary, int32& OutReward) const {
+bool AFSDGameState::GetMissionCompletedCreditReward(bool Primary, int32& OutReward) const {
     return false;
 }
 

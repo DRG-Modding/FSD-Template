@@ -10,7 +10,13 @@ void UCharacterVanityComponent::UpdateEquippedVanity(bool applyItems) {
 void UCharacterVanityComponent::SetEquippedVanityInViewer(const TArray<UVanityItem*>& Vanity) {
 }
 
+void UCharacterVanityComponent::SetDesireSleevelessArmor(UObject* WorldContextObject, UPlayerCharacterID* Character, bool inDesireSleeveless) {
+}
+
 void UCharacterVanityComponent::Server_SetEquippedVanity_Implementation(const FEquippedVanity& equippedItems) {
+}
+
+void UCharacterVanityComponent::Server_SetDesireSleevelessArmor_Implementation(bool useSleeveless) {
 }
 
 void UCharacterVanityComponent::RemoveMedicalGown() {
@@ -20,7 +26,14 @@ UVanityItem* UCharacterVanityComponent::Receive_GetEquippedVanityItem(UObject* W
     return NULL;
 }
 
+bool UCharacterVanityComponent::Receive_GetDesireSleevelessArmor(UObject* WorldContextObject, UPlayerCharacterID* Character) {
+    return false;
+}
+
 void UCharacterVanityComponent::OnRep_EquippedVanity() {
+}
+
+void UCharacterVanityComponent::OnRep_DesireSleeveless() {
 }
 
 bool UCharacterVanityComponent::HasSpawnedInMedbay() const {
@@ -29,6 +42,10 @@ bool UCharacterVanityComponent::HasSpawnedInMedbay() const {
 
 UVanityItem* UCharacterVanityComponent::GetEquippedVanityItem(EVanitySlot Slot, bool ignorePreviewItems) const {
     return NULL;
+}
+
+bool UCharacterVanityComponent::GetDesireSleevelessArmor() const {
+    return false;
 }
 
 UCharacterVanityItems* UCharacterVanityComponent::GetAvailableVanityItems() const {
@@ -54,6 +71,7 @@ void UCharacterVanityComponent::GetLifetimeReplicatedProps(TArray<FLifetimePrope
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
     DOREPLIFETIME(UCharacterVanityComponent, EquippedVanity);
+    DOREPLIFETIME(UCharacterVanityComponent, DesireSleevelessArmor);
 }
 
 UCharacterVanityComponent::UCharacterVanityComponent() {
@@ -66,5 +84,6 @@ UCharacterVanityComponent::UCharacterVanityComponent() {
     this->PreviewedItem = NULL;
     this->PreviewedArmorMaterial = NULL;
     this->SkinMaterial = NULL;
+    this->DesireSleevelessArmor = false;
 }
 

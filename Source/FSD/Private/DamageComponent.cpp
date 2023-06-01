@@ -35,7 +35,7 @@ UDamageComponent::UDamageComponent() {
     this->DamageComponentType = EDamageComponentType::Primary;
     this->DamageImpulse = NULL;
     this->Damage = 5.00f;
-    this->ArmorDamageMultiplier = 1.00f;
+    this->armorDamageMultiplier = 1.00f;
     this->ArmorPenetration = 0.00f;
     this->ShattersArmor = false;
     this->DamageClass = NULL;

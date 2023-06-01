@@ -1,9 +1,6 @@
 #include "SimpleArmorDamageComponent.h"
 #include "Net/UnrealNetwork.h"
 
-void USimpleArmorDamageComponent::Server_SetArmorIndexDestroyed_Implementation(int32 Index, EArmorDamageType DamageType) {
-}
-
 void USimpleArmorDamageComponent::OnRep_ArmorDamageInfo(FArmorDamageInfo OldArmorDamageInfo) {
 }
 

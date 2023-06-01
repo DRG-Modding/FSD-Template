@@ -17,7 +17,7 @@ void AProceduralSetup::SpawnObjectiveEncounter() {
 void AProceduralSetup::SpawnObjectiveCriticalItems(const ECriticalItemPass& pass) {
 }
 
-void AProceduralSetup::SpawnItems_Async(AProceduralSetup* setup, FLatentActionInfo LatentInfo) {
+void AProceduralSetup::SpawnItems_Async(AProceduralSetup* Setup, FLatentActionInfo LatentInfo) {
 }
 
 void AProceduralSetup::SpawnItems() {
@@ -26,7 +26,7 @@ void AProceduralSetup::SpawnItems() {
 void AProceduralSetup::SpawnEncounters() {
 }
 
-void AProceduralSetup::SpawnDebrisItems_Async(AProceduralSetup* setup, FLatentActionInfo LatentInfo, EDebrisItemPass pass, int32 Depth) {
+void AProceduralSetup::SpawnDebrisItems_Async(AProceduralSetup* Setup, FLatentActionInfo LatentInfo, EDebrisItemPass pass, int32 Depth) {
 }
 
 void AProceduralSetup::SpawnDebrisItems(EDebrisItemPass pass) {
@@ -69,7 +69,7 @@ TMap<FString, float> AProceduralSetup::GetCollectablesResourceAmounts() const {
     return TMap<FString, float>();
 }
 
-void AProceduralSetup::GenerateRoomsFromGraph_Async(AProceduralSetup* setup, FLatentActionInfo LatentInfo, int32 CarvePass) {
+void AProceduralSetup::GenerateRoomsFromGraph_Async(AProceduralSetup* Setup, FLatentActionInfo LatentInfo, int32 CarvePass) {
 }
 
 void AProceduralSetup::GenerateRoomsFromGraph(int32 CarvePass) {
@@ -84,7 +84,7 @@ FVector AProceduralSetup::FindLocationInDirection(FVector Origin, FVector Direct
 void AProceduralSetup::FindEntrancesForAllConnections() {
 }
 
-void AProceduralSetup::FillTunnels_Async(AProceduralSetup* setup, FLatentActionInfo LatentInfo) {
+void AProceduralSetup::FillTunnels_Async(AProceduralSetup* Setup, FLatentActionInfo LatentInfo) {
 }
 
 void AProceduralSetup::FillTunnels() {

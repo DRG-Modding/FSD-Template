@@ -108,7 +108,7 @@ float AGameEvent::GetDelayUITime() const {
 void AGameEvent::EndShout() {
 }
 
-FTransform AGameEvent::DebreePositionPoint(AProceduralSetup* setup, const FVector& fromLocation, float MinDistance, float desiredDistance, UDebrisPositioning* DebrisPositioning, TSubclassOf<AActor> terrainPlacement, float maxPathLength) {
+FTransform AGameEvent::DebreePositionPoint(AProceduralSetup* Setup, const FVector& fromLocation, float MinDistance, float desiredDistance, UDebrisPositioning* DebrisPositioning, TSubclassOf<AActor> terrainPlacement, float maxPathLength) {
     return FTransform{};
 }
 

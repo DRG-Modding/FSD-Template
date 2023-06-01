@@ -39,5 +39,7 @@ FGDStats::FGDStats() {
     this->CarriableThrowing = NULL;
     this->HoverBootsDuration = NULL;
     this->ExplodeOnDeath = NULL;
+    this->CritChance = NULL;
+    this->CritDamageBonus = NULL;
 }
 

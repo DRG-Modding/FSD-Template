@@ -25,7 +25,13 @@ protected:
     void ReceiveHackingStarted();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void ReceiveClick();
+    void ReceivedActionReleased();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ReceivedActionPressed();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ReceiveActionClick();
     
     UFUNCTION(BlueprintCallable)
     void OnRep_HackingUsable();

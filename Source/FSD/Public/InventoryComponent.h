@@ -179,6 +179,9 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ARecallableSentryGunItem* GetRecallableSentryGunItem() const;
     
+    UFUNCTION(BlueprintCallable)
+    AItem* GetOrCreateUnlistedItem(TSubclassOf<AItem> ItemType);
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     AItem* GetItem(EItemCategory Category) const;
     

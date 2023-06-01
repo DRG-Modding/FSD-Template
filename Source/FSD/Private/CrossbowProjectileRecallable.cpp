@@ -17,6 +17,7 @@ UCrossbowProjectileRecallable::UCrossbowProjectileRecallable() {
     this->RecallTarget = NULL;
     this->RecallStartTime = 1.00f;
     this->RecallSpeed = 0.30f;
+    this->FPMeshComponent = NULL;
     this->IsRecallable = false;
 }
 

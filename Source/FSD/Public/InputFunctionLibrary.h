@@ -40,6 +40,9 @@ public:
     static bool IsAxisMappedToDirectional(FName InActionName, FKey Key, int32 Direction, bool IgnoreCustomBindings);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    static bool IsAnyInputActionDown(const APlayerController* InPlayerController, const TArray<FName>& InActionNames);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsActionMappedTo(FName InActionName, FKey Key, bool IgnoreCustomBindings);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

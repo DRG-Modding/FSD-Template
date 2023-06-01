@@ -3,7 +3,6 @@
 #include "Engine/DataAsset.h"
 #include "TemporaryBuff.generated.h"
 
-class AFSDPlayerController;
 class APlayerCharacter;
 class UTexture2D;
 
@@ -18,16 +17,22 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UTexture2D> Icon;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool ActivatesOnlyOnceWhenDrinking;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool IsTodaysSpecialBuff;
+    
 public:
     UTemporaryBuff();
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void DeActivateBuff(AFSDPlayerController* Player) const;
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool GetActivateOnlyWhenDrinking() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void ActivateBuffOnPlayer(APlayerCharacter* Player) const;
+    void DeActivateBuff(APlayerCharacter* Player) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void ActivateBuffOnController(AFSDPlayerController* Player) const;
+    void ActivateBuff(APlayerCharacter* Player) const;
     
 };
 

@@ -17,7 +17,7 @@ void USalvageObjective::OnRep_ActorsSalvaged(int32 prevAmount) {
 void USalvageObjective::OnActorRepaired(URepairableComponent* repairable) {
 }
 
-FTransform USalvageObjective::FindRepairPointLocation(AProceduralSetup* setup, const FVector& podLocation, float Radius, float maxVerticalDistance, UDebrisPositioning* DebrisPositioning, TSubclassOf<AActor> terrainPlacement, const TArray<FVector>& locationsToAvoid, UCurveFloat* AvoidCostCurve) {
+FTransform USalvageObjective::FindRepairPointLocation(AProceduralSetup* Setup, const FVector& podLocation, float Radius, float maxVerticalDistance, UDebrisPositioning* DebrisPositioning, TSubclassOf<AActor> terrainPlacement, const TArray<FVector>& locationsToAvoid, UCurveFloat* AvoidCostCurve) {
     return FTransform{};
 }
 

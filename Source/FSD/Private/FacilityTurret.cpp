@@ -3,6 +3,9 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Net/UnrealNetwork.h"
 
+void AFacilityTurret::TurnOffMesh() {
+}
+
 void AFacilityTurret::SetIsAttacking(bool IsAttacking) {
 }
 

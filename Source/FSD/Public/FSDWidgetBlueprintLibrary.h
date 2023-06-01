@@ -206,6 +206,9 @@ public:
     UFUNCTION(BlueprintCallable)
     static void Box(UPARAM(Ref) FPaintContext& Context, FVector2D Position, FVector2D Size, const FSlateBrush& Brush, FLinearColor Tint);
     
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    static bool AreWidgetsIntersecting(const UWidget* InWidget1, const UWidget* InWidget2);
+    
     UFUNCTION(BlueprintCallable)
     static UWidget* AddWidgetToRow(UVerticalBox* VerticalBox, UWidget* Widget, int32 MaxWidgetsPerRow, float WidgetSpacing, float RowSpacing, UHorizontalBoxSlot*& OutSlot, UHorizontalBox*& OutRow);
     

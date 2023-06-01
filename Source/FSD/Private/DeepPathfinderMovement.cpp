@@ -135,6 +135,10 @@ UFakeMoverSettings* UDeepPathfinderMovement::GetCurrentFakePhysicsMoveSet() {
     return NULL;
 }
 
+float UDeepPathfinderMovement::GetApproximatePathLength(FVector Start, FVector End) const {
+    return 0.0f;
+}
+
 bool UDeepPathfinderMovement::FlyToConnectedPosition(const FVector& destPos) {
     return false;
 }

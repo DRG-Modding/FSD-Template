@@ -20,7 +20,6 @@ UEnemyDescriptor::UEnemyDescriptor() {
     this->UsesSpawnEffects = true;
     this->CreatureSize = ECreatureSize::Tiny;
     this->Positioning = NULL;
-    this->PlacementCategories = 0;
     this->CaveInfluencer = NULL;
     this->InfluencerRange = 1000.00f;
     this->PlacementCarver = NULL;

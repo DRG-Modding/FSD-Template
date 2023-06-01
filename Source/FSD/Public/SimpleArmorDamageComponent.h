@@ -3,7 +3,6 @@
 #include "ArmorDamageInfo.h"
 #include "BaseArmorDamageComponent.h"
 #include "DestructableBodypartItem.h"
-#include "EArmorDamageType.h"
 #include "SimpleArmorRadialDamagedDelegateDelegate.h"
 #include "SimpleArmorDamageComponent.generated.h"
 
@@ -29,9 +28,6 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_SetArmorIndexDestroyed(int32 Index, EArmorDamageType DamageType);
-    
     UFUNCTION(BlueprintCallable)
     void OnRep_ArmorDamageInfo(FArmorDamageInfo OldArmorDamageInfo);
     

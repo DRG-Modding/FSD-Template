@@ -1,6 +1,6 @@
 #include "RoomBurner.h"
 
-void ARoomBurner::SpawnEncounter(AProceduralSetup* setup) {
+void ARoomBurner::SpawnEncounter(AProceduralSetup* Setup) {
 }
 
 URoomGenerator* ARoomBurner::GetRoomGenerator() const {

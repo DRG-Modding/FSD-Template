@@ -33,5 +33,6 @@ FGDMissionStats::FGDMissionStats() {
     this->DeepDiveCompletedBestTime = NULL;
     this->EliteDeepDiveCompletedBestTime = NULL;
     this->SpecialBeersUnlocked = NULL;
+    this->JettyBootCreditsSpent = NULL;
 }
 

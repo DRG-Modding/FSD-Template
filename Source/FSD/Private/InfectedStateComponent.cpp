@@ -12,5 +12,6 @@ UInfectedStateComponent::UInfectedStateComponent() {
     this->InfectedMontage = NULL;
     this->InfectedAndBreakingFreeMontage = NULL;
     this->BreakingFreeMontageDuration = 0.75f;
+    this->HoldToBreakTime = 0.25f;
 }
 

@@ -29,6 +29,7 @@ void UWeakpointGlowComponent::AddWeakpointGlow(bool loopIndefinitely, float Loop
 UWeakpointGlowComponent::UWeakpointGlowComponent() {
     this->EmissiveParam = TEXT("Dynamic Emissive Multiplier");
     this->CurveMultiplier = 1.00f;
+    this->Mode = EWeakpointGlowMode::Set;
     this->WeakPointMaterial = NULL;
     this->AddFirstChannelAutomatically = true;
     this->ReplaceMatIndex = 0;

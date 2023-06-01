@@ -6,7 +6,6 @@
 #include "SoapVacuumItem.generated.h"
 
 class AActor;
-class AFoamPuddle;
 class UCapsuleComponent;
 class UNiagaraComponent;
 class UPrimitiveComponent;
@@ -53,7 +52,7 @@ protected:
 public:
     ASoapVacuumItem();
     UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_StartVacuumingPuddle(AFoamPuddle* puddle);
+    void Server_StartVacuumingPuddle(AActor* Target);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnFoamPuddleCollected_Unreliable();

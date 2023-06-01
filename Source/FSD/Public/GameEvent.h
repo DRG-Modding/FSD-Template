@@ -246,7 +246,7 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable)
-    FTransform DebreePositionPoint(AProceduralSetup* setup, const FVector& fromLocation, float MinDistance, float desiredDistance, UDebrisPositioning* DebrisPositioning, TSubclassOf<AActor> terrainPlacement, float maxPathLength);
+    FTransform DebreePositionPoint(AProceduralSetup* Setup, const FVector& fromLocation, float MinDistance, float desiredDistance, UDebrisPositioning* DebrisPositioning, TSubclassOf<AActor> terrainPlacement, float maxPathLength);
     
     UFUNCTION(BlueprintCallable)
     void BootUpEvent();

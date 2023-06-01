@@ -15,13 +15,13 @@ public:
     void GenerateResources();
     
     UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
-    static void GenerateMissingCarvedResources_Async(AProceduralSetup*& setup, FLatentActionInfo LatentInfo);
+    static void GenerateMissingCarvedResources_Async(AProceduralSetup*& Setup, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
     void GenerateMissingCarvedResources();
     
     UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
-    static void GenerateCarvedResources_Async(AProceduralSetup*& setup, FLatentActionInfo LatentInfo);
+    static void GenerateCarvedResources_Async(AProceduralSetup*& Setup, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
     void GenerateCarvedResources();

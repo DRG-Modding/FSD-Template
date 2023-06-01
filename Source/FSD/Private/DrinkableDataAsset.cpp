@@ -45,6 +45,7 @@ bool UDrinkableDataAsset::AreSpecialDrinksUnlocked(UObject* WorldContext) {
 
 UDrinkableDataAsset::UDrinkableDataAsset() {
     this->DrinkablePrice = 50;
+    this->IsSpecialBeer = false;
     this->RequiredPlayerRank = 0;
     this->ParticipatesInFreeBeerEvent = false;
     this->AlcoholStrength = EDrinkableAlcoholStrength::Regular;

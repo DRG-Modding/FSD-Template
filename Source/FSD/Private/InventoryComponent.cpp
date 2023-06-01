@@ -50,6 +50,10 @@ ARecallableSentryGunItem* UInventoryComponent::GetRecallableSentryGunItem() cons
     return NULL;
 }
 
+AItem* UInventoryComponent::GetOrCreateUnlistedItem(TSubclassOf<AItem> ItemType) {
+    return NULL;
+}
+
 AItem* UInventoryComponent::GetItem(EItemCategory Category) const {
     return NULL;
 }

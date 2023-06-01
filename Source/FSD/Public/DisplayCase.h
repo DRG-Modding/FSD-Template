@@ -74,6 +74,9 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_ContentIndex();
     
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsSpecialContent() const;
+    
 public:
     UFUNCTION(BlueprintCallable)
     void InitializeCase();

@@ -163,6 +163,9 @@ void APlayerCharacter::Server_CheatKillAllFriendly_Implementation() {
 void APlayerCharacter::Server_CheatKillAll_Implementation() {
 }
 
+void APlayerCharacter::Server_CheatJetBoots_Implementation() {
+}
+
 void APlayerCharacter::Server_CheatGodMode_Implementation() {
 }
 
@@ -185,6 +188,9 @@ void APlayerCharacter::Server_AddImpulseToActor_Implementation(AFSDPhysicsActor*
 }
 
 void APlayerCharacter::Server_AddImpulse_Implementation(const FVector_NetQuantizeNormal& Direction, float force) {
+}
+
+void APlayerCharacter::Server_ActivateTemporaryBuff_Implementation(UTemporaryBuff* buff) {
 }
 
 void APlayerCharacter::SendLevelUpStatistics(const int32 currentRank) {
@@ -261,6 +267,14 @@ bool APlayerCharacter::IsWithinDistance(AActor* Source, float Distance) const {
 }
 
 bool APlayerCharacter::IsWalking() const {
+    return false;
+}
+
+bool APlayerCharacter::IsUsingPressed() const {
+    return false;
+}
+
+bool APlayerCharacter::IsUsingItemPressed() const {
     return false;
 }
 
@@ -472,6 +486,9 @@ void APlayerCharacter::Client_OpenMinersManual_Implementation() {
 void APlayerCharacter::Client_AddImpulse_Implementation(const FVector_NetQuantizeNormal& Direction, float force) {
 }
 
+void APlayerCharacter::Client_ActivateTemporaryBuff_Implementation(UTemporaryBuff* buff) {
+}
+
 void APlayerCharacter::CheckWithoutAPaddleAchievement_Implementation() {
 }
 
@@ -536,6 +553,7 @@ void APlayerCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
 
 APlayerCharacter::APlayerCharacter() {
     this->HeightenedSenseComponent = NULL;
+    this->JetBootsComponentSpawnable = NULL;
     this->ZipLineStateComponent = NULL;
     this->BoundPerkActivationW = NULL;
     this->PerkActivationTimer = -1.00f;
@@ -596,6 +614,7 @@ APlayerCharacter::APlayerCharacter() {
     this->MaxThrowHoldDuration = 2.00f;
     this->CarryingThrowMinForce = 100.00f;
     this->CarryingThrowMaxForce = 600.00f;
+    this->PlayerVelocityToThrowFactor = 0.00f;
     this->CarryingThrowingStatusEffect = NULL;
     this->ThrowCarriableProgress = 0.00f;
     this->ActiveCharacterState = NULL;
@@ -627,6 +646,7 @@ APlayerCharacter::APlayerCharacter() {
     this->CanUseItem = true;
     this->CanChangeItems = true;
     this->CanMine = true;
+    this->CanSalute = true;
     this->IsStandingDown = false;
     this->InDanceRange = false;
     this->IsDancing = false;

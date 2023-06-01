@@ -6,6 +6,8 @@ void AHackingToolItem::Server_HackingCompleted_Implementation(UHackingUsableComp
 
 
 
+
+
 void AHackingToolItem::OnRep_HackingUsable() {
 }
 

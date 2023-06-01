@@ -52,7 +52,13 @@ protected:
     void ReceiveHackingStarted();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void ReceiveClick();
+    void ReceiveActionReleased();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ReceiveActionPressed();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ReceiveActionClick();
     
     UFUNCTION(BlueprintCallable)
     void HackingStageComplete(int32 InNextStage, int32 InTotalStages);

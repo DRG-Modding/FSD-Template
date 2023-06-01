@@ -6,7 +6,7 @@ FSeasonSaveEntry::FSeasonSaveEntry() {
     this->HasClaimedAllRewards = false;
     this->RewardsClaimedAfterMaxLevel = 0;
     this->ClaimedScripChallenges = 0;
-    this->PlagueHeartsdUsed = 0;
+    this->PlagueHeartsUsed = 0;
     this->TimePlayedAtSeasonStart = 0.00f;
     this->ChallengesCompletedAtSeasonStart = 0.00f;
 }

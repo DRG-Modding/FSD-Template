@@ -19,7 +19,7 @@ UHitscanBaseComponent::UHitscanBaseComponent() {
     this->DamageComponent = NULL;
     this->UseDamageComponent = true;
     this->Damage = 0.00f;
-    this->ArmorDamageMultiplier = 1.00f;
+    this->armorDamageMultiplier = 1.00f;
     this->DamageClass = NULL;
     this->WeakpointDamageMultiplier = 1.00f;
     this->MaxPenetrations = 0;

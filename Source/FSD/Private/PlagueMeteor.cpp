@@ -52,7 +52,7 @@ int32 APlagueMeteor::GetNumActivePods() const {
 
 
 
-void APlagueMeteor::DropRockCrackerPods(int32 Amount, float MinRadius, float maRadius, AProceduralSetup* setup) {
+void APlagueMeteor::DropRockCrackerPods(int32 Amount, float MinRadius, float maRadius, AProceduralSetup* Setup) {
 }
 
 

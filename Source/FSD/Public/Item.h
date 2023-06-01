@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
 #include "AudioWithCooldown.h"
+#include "DelegateDelegate.h"
 #include "ItemIDInterface.h"
 #include "ItemLoadoutAnimations.h"
 #include "LoadoutItem.h"
@@ -44,6 +45,12 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAudioWithCooldown AudioFriendlyFire;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FDelegate OnEqipped;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FDelegate OnUnequipped;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -101,7 +108,7 @@ protected:
     UAudioComponent* TemperatureAudioComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
-    bool Overheated;
+    bool overHeated;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDialogDataAsset* ShoutOverheated;
@@ -193,7 +200,7 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnTemperatureChanged(float Temperature, bool NewOverheated);
+    void OnTemperatureChanged(float Temperature, bool NewOverHeated);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnSkinChanged(USkinEffect* Skin);

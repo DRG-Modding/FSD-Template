@@ -48,6 +48,9 @@ private:
     TArray<FItemLoadout> Loadouts;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FItemLoadout RandomWeaponLoadout;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVictoryPoseSave VictoryPose;
     
 public:

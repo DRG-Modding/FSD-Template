@@ -105,7 +105,7 @@ public:
     ARoomBurner();
 protected:
     UFUNCTION(BlueprintCallable)
-    void SpawnEncounter(AProceduralSetup* setup);
+    void SpawnEncounter(AProceduralSetup* Setup);
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintPure)

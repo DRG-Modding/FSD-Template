@@ -155,7 +155,7 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable)
-    void DropRockCrackerPods(int32 Amount, float MinRadius, float maRadius, AProceduralSetup* setup);
+    void DropRockCrackerPods(int32 Amount, float MinRadius, float maRadius, AProceduralSetup* Setup);
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

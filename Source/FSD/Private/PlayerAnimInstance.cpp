@@ -58,6 +58,7 @@ UPlayerAnimInstance::UPlayerAnimInstance() {
     this->BeingRevived = false;
     this->IsLookingAtMap = false;
     this->IsControllingEnemy = false;
+    this->IsUsingJetBoots = false;
     this->IsUsingTraversalTool = false;
     this->TraversalToolTargetHorizontalOffset = 0.00f;
     this->TraversalToolTargetVerticalOffset = 0.00f;

@@ -27,6 +27,10 @@ bool UInputFunctionLibrary::IsAxisMappedToDirectional(FName InActionName, FKey K
     return false;
 }
 
+bool UInputFunctionLibrary::IsAnyInputActionDown(const APlayerController* InPlayerController, const TArray<FName>& InActionNames) {
+    return false;
+}
+
 bool UInputFunctionLibrary::IsActionMappedTo(FName InActionName, FKey Key, bool IgnoreCustomBindings) {
     return false;
 }

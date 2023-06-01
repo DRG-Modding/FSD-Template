@@ -27,6 +27,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SlowAnimationSpeed;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float HoldToBreakTime;
+    
 public:
     UFrozenStateComponent();
 protected:

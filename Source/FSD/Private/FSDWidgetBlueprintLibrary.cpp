@@ -189,6 +189,10 @@ FText UFSDWidgetBlueprintLibrary::ClampTextLength(const FText& Text, int32 MaxLe
 void UFSDWidgetBlueprintLibrary::Box(FPaintContext& Context, FVector2D Position, FVector2D Size, const FSlateBrush& Brush, FLinearColor Tint) {
 }
 
+bool UFSDWidgetBlueprintLibrary::AreWidgetsIntersecting(const UWidget* InWidget1, const UWidget* InWidget2) {
+    return false;
+}
+
 UWidget* UFSDWidgetBlueprintLibrary::AddWidgetToRow(UVerticalBox* VerticalBox, UWidget* Widget, int32 MaxWidgetsPerRow, float WidgetSpacing, float RowSpacing, UHorizontalBoxSlot*& OutSlot, UHorizontalBox*& OutRow) {
     return NULL;
 }

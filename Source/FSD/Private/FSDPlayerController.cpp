@@ -29,6 +29,9 @@ void AFSDPlayerController::ServerSetUserHoldToRun_Implementation(bool Value) {
 void AFSDPlayerController::Server_TravelDone_Implementation() {
 }
 
+void AFSDPlayerController::Server_TakeDamageFrom_Implementation(UDamageComponent* Damage, FVector Location) {
+}
+
 void AFSDPlayerController::Server_SetLateJoinDone_Implementation() {
 }
 
@@ -50,13 +53,13 @@ void AFSDPlayerController::Server_SetControllerReady_Implementation() {
 void AFSDPlayerController::Server_ResetHUD_Implementation() {
 }
 
+void AFSDPlayerController::Server_Relay_SetArmorIndexDestroyed_Implementation(USimpleArmorDamageComponent* ArmorComponent, int32 Index, EArmorDamageType DamageType) {
+}
+
 void AFSDPlayerController::Server_NewMessage_Implementation(const FString& Sender, const FString& Text, EChatSenderType SenderType) {
 }
 
 void AFSDPlayerController::Server_DrawProjectileDebugPath_Implementation(bool bDraw) {
-}
-
-void AFSDPlayerController::Server_ActivateTemporaryBuff_Implementation(UTemporaryBuff* buff) {
 }
 
 void AFSDPlayerController::SendLevelUpStatistics(const int32 currentRank) {

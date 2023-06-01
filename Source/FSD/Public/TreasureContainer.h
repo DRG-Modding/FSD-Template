@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "ActorTrackingCheatInterface.h"
 #include "EInputKeys.h"
 #include "TreasureWeight.h"
 #include "TreasureContainer.generated.h"
@@ -12,7 +13,7 @@ class USceneComponent;
 class UTreasureRewarder;
 
 UCLASS(Blueprintable)
-class FSD_API ATreasureContainer : public AActor {
+class FSD_API ATreasureContainer : public AActor, public IActorTrackingCheatInterface {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -82,5 +83,7 @@ public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintPure)
     bool GetPreventFurtherLatejoiners() const;
     
+    
+    // Fix for true pure virtual functions not being implemented
 };
 

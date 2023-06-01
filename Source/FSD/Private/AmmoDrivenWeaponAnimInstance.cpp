@@ -12,7 +12,7 @@ UAmmoDrivenWeaponAnimInstance::UAmmoDrivenWeaponAnimInstance() {
     this->Weapon = NULL;
     this->IsFiring = false;
     this->ClipFullPercentage = 0.00f;
-    this->Overheated = false;
+    this->overHeated = false;
     this->Temperature = 0.00f;
 }
 

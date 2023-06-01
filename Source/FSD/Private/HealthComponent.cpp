@@ -4,6 +4,10 @@
 void UHealthComponent::ToggleCanTakeDamage_Implementation() {
 }
 
+float UHealthComponent::TakePercentDamage(float PercentOfMax, const FDamageData& DamageData) {
+    return 0.0f;
+}
+
 void UHealthComponent::Resupply(float percentage) {
 }
 

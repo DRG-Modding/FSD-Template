@@ -24,6 +24,7 @@
 #include "ItemNotificationInfo.h"
 #include "ItemUINotifications.h"
 #include "ItemUpgradeSelection.h"
+#include "JettyBootsSave.h"
 #include "MilestoneSave.h"
 #include "MissionStatSave.h"
 #include "OptionsInSaveGame.h"
@@ -149,10 +150,16 @@ public:
     TArray<FCharacterPerksSave> EquippedPerkLoadouts;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FCharacterPerksSave RandomEquippedPerkLoadout;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVanityMasterySave VanityMasterySave;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCraftingMasteryChanged OnVanityMasteryChanged;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FJettyBootsSave JettyBootsSave;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSchematicSave SchematicSave;
@@ -220,6 +227,12 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FUpgradeLoadout> ItemUpgradeLoadouts;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FUpgradeLoadout RandomItemUpgradeLoadouts;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    bool bIgnoreRandomLoadout;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGuid> PurchasedItemUpgrades;
@@ -411,6 +424,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void SetIndexAndName(int32 NewIndex, const FString& NewName);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetIgnoreRandomLoadout(bool inIgnoreRandomLoadout);
     
     UFUNCTION(BlueprintCallable)
     void SetHasSentSteamInfo();

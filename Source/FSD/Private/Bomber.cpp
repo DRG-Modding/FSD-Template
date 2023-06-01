@@ -69,5 +69,6 @@ ABomber::ABomber() {
     this->IsRightDestroyed = false;
     this->IsLeftDestroyed = false;
     this->dropAcid = false;
+    this->NoDeathSpiral = false;
 }
 

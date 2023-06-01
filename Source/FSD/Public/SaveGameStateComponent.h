@@ -35,9 +35,6 @@ public:
     FItemUpgradeCraftSignature OnItemUpgradeCrafted;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FItemUpgradeEquipSignature OnItemUpgradeEquipped;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FItemUpgradeEquipSignature OnItemUpgradeUnequipped;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -1,6 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "ChatOpenedDelegateDelegate.h"
+#include "EArmorDamageType.h"
 #include "EChatSenderType.h"
 #include "ESpacerigStartType.h"
 #include "FSDPlayerControllerBase.h"
@@ -12,6 +14,7 @@ class AActor;
 class AFSDPlayerState;
 class AHUD;
 class APlayerCharacter;
+class UDamageComponent;
 class UFSDAchievement;
 class UFSDWidgetEffectsComponent;
 class UItemID;
@@ -19,9 +22,9 @@ class UItemSkin;
 class UPerkUsageComponent;
 class UPickaxePart;
 class UPlayerCharacterID;
+class USimpleArmorDamageComponent;
 class USoundCue;
 class USoundMix;
-class UTemporaryBuff;
 class UTerrainLatejoinComponent;
 class UTexture2D;
 class UTreasureRewarder;
@@ -129,6 +132,9 @@ public:
     void Server_TravelDone();
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_TakeDamageFrom(UDamageComponent* Damage, FVector Location);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetLateJoinDone();
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
@@ -150,17 +156,15 @@ public:
     void Server_ResetHUD();
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_Relay_SetArmorIndexDestroyed(USimpleArmorDamageComponent* ArmorComponent, int32 Index, EArmorDamageType DamageType);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_NewMessage(const FString& Sender, const FString& Text, EChatSenderType SenderType);
     
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_DrawProjectileDebugPath(bool bDraw);
     
-public:
-    UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_ActivateTemporaryBuff(UTemporaryBuff* buff);
-    
-protected:
     UFUNCTION(BlueprintCallable)
     void SendLevelUpStatistics(const int32 currentRank);
     

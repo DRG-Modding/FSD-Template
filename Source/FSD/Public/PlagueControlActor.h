@@ -77,7 +77,7 @@ protected:
     void EquipPlaguePod(APlayerCharacter* Player);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    bool CanDropWeaponPod(float& timeLeft);
+    bool CanDropWeaponPod(float& TimeLeft);
     
 };
 

@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
+#include "EItemSkinType.h"
 #include "SkinEffect.generated.h"
 
 class AActor;
@@ -13,6 +14,9 @@ public:
     USkinEffect();
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void Receive_AddToItem(UMeshComponent* Mesh, AActor* Skinnable, bool IsFirstPerson) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    EItemSkinType GetSkinType() const;
     
 };
 

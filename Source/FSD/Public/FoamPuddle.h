@@ -4,6 +4,7 @@
 #include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
 #include "Curves/CurveFloat.h"
+#include "ChangeVacuumStateDelegateDelegate.h"
 #include "EVacuumState.h"
 #include "Templates/SubclassOf.h"
 #include "FoamPuddle.generated.h"
@@ -30,10 +31,12 @@ public:
     FRuntimeFloatCurve ScaleCurve;
     
 protected:
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FChangeVacuumStateDelegate OnChangeVacuumStateDelegate;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<AActor>> VacuumableActors;
     
-private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* PickupSound;
     
@@ -85,17 +88,25 @@ private:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint16 MaxSoapPiles;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool UsesLocalSpace;
+    
 public:
     AFoamPuddle();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
+protected:
+    UFUNCTION(BlueprintCallable)
+    void SetState(EVacuumState NewState);
+    
+public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void SetPuddleLifetime(float LifeTime);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ScaleOutAndDestroy();
     
-private:
+protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_State(EVacuumState prevState);
     

@@ -14,6 +14,7 @@
 #include "ControllerSettings.h"
 #include "CustomKeyBinding.h"
 #include "CustomKeyBindingsChangedDelegate.h"
+#include "DelegateDelegate.h"
 #include "EConsoleGraphicsMode.h"
 #include "EFSDInputSource.h"
 #include "ENVidiaReflexMode.h"
@@ -41,6 +42,9 @@ UCLASS(Blueprintable)
 class UFSDGameUserSettings : public UGameUserSettings {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FDelegate OnSettingsChanged;
+    
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBoolConfigChanged OnUseHoldToRunChanged;
     
@@ -545,6 +549,12 @@ public:
     void SetInputSource(EFSDInputSource NewSource);
     
     UFUNCTION(BlueprintCallable)
+    void SetHoldToFire(bool HoldToFire);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetHoldToBreakImmobilization(bool holdToBreak);
+    
+    UFUNCTION(BlueprintCallable)
     void SetHeadBobbingScale(float NewHeadbobbingScale);
     
     UFUNCTION(BlueprintCallable)
@@ -815,6 +825,12 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static EFSDInputSource GetInputSource();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool GetHoldToFire() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool GetHoldToBreakImmobilization() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetHeadBobbingScale() const;

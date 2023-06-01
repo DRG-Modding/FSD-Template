@@ -106,6 +106,9 @@ public:
     UMissionStat* SpecialBeersUnlocked;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UMissionStat* JettyBootCreditsSpent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UMissionStat*> AllMissionStats;
     
 protected:

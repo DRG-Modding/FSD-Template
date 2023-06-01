@@ -50,6 +50,7 @@ class ACharacterSelectionSwitcher;
 class AFSDPlayerController;
 class AMolly;
 class APlayerCharacter;
+class APlayerController;
 class APostProcessingManager;
 class AProceduralSetup;
 class ATutorialManager;
@@ -95,7 +96,7 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FDonkeyCharacterDelegate, AMolly*, InDonkey);
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FTemporaryBuffChanged OnTemporaryBuffChanged;
+    FTemporaryBuffChanged OnTemporaryBuffAdded;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGenericSignature OnGameSettingsChanged;
@@ -441,7 +442,7 @@ protected:
     bool PreSpawnNigaraParticles;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    UTemporaryBuff* TemporaryBuff;
+    TArray<UTemporaryBuff*> TemporaryBuffs;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<ULevelSequence> NextLoaderSequence;
@@ -554,13 +555,16 @@ public:
     void ResetAlwaysLoadedWorldsAndGameData();
     
     UFUNCTION(BlueprintCallable)
-    void RemoveRemporaryBuff();
-    
-    UFUNCTION(BlueprintCallable)
     void RemoveBosco();
     
     UFUNCTION(BlueprintCallable)
+    void RemoveAllTemporaryBuff(APlayerController* PlayerController);
+    
+    UFUNCTION(BlueprintCallable)
     void RefreshIsGameModded();
+    
+    UFUNCTION(BlueprintCallable)
+    void PreClientTravelCleanup(APlayerController* PlayerController);
     
 private:
     UFUNCTION(BlueprintCallable)
@@ -616,6 +620,9 @@ public:
     bool HasSignedIn();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool HasRandomBeerBuff() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasPendingInvite() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -638,6 +645,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     TArray<FBlueprintSessionResult> GetServersFriendsArePlaying(TArray<FBlueprintSessionResult> servers);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static FString GetSeedString(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetOverrideMaxPlayerCount() const;

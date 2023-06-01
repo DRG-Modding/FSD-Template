@@ -38,6 +38,14 @@ bool UStatusEffectsComponent::HasActiveEffect(TSubclassOf<UStatusEffect> StatusE
     return false;
 }
 
+int32 UStatusEffectsComponent::GetStackAmount(TSubclassOf<UStatusEffect> StatusEffect, AActor* Owner) const {
+    return 0;
+}
+
+int32 UStatusEffectsComponent::GetFullStackAmount(TSubclassOf<UStatusEffect> StatusEffect) const {
+    return 0;
+}
+
 UStatusEffect* UStatusEffectsComponent::CreateStatusEffectInstance(TSubclassOf<UStatusEffect> StatusEffect, UObject* Owner) {
     return NULL;
 }

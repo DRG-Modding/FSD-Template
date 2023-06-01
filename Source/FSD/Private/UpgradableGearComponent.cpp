@@ -23,11 +23,11 @@ bool UUpgradableGearComponent::IsUpgradeEquipped(TSubclassOf<AActor> itemClass, 
     return false;
 }
 
-bool UUpgradableGearComponent::IsTierUnLocked(TSubclassOf<AActor> itemClass, int32 tierIndex, AFSDPlayerState* Player, UPlayerCharacterID* characterID) {
+bool UUpgradableGearComponent::IsTierUnLocked(UObject* WorldContextObject, TSubclassOf<AActor> itemClass, int32 tierIndex, UPlayerCharacterID* characterID) {
     return false;
 }
 
-bool UUpgradableGearComponent::IsOverclockingEnabled(UObject* WorldContextObject, AFSDPlayerState* Player, UPlayerCharacterID* characterID, TSubclassOf<AActor> itemClass) {
+bool UUpgradableGearComponent::IsOverclockingEnabled(UObject* WorldContextObject, UPlayerCharacterID* characterID, TSubclassOf<AActor> itemClass) {
     return false;
 }
 

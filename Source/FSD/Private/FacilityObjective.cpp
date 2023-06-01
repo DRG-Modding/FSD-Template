@@ -2,10 +2,10 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-void UFacilityObjective::SpawnFacilityEncounters(AProceduralSetup* setup, UEncounterManager* Encounters, UDebrisPositioning* Positioning) {
+void UFacilityObjective::SpawnFacilityEncounters(AProceduralSetup* Setup, UEncounterManager* Encounters, UDebrisPositioning* Positioning) {
 }
 
-TArray<FTransform> UFacilityObjective::SpawnEndBattleTurrets(int32 amountOfTurrets, AProceduralSetup* setup, UDebrisPositioning* DebrisPositioning, TSubclassOf<AActor> terrainPlacement, const TArray<AActor*>& existingTurrets, bool& success) {
+TArray<FTransform> UFacilityObjective::SpawnEndBattleTurrets(int32 amountOfTurrets, AProceduralSetup* Setup, UDebrisPositioning* DebrisPositioning, TSubclassOf<AActor> terrainPlacement, const TArray<AActor*>& existingTurrets, bool& success) {
     return TArray<FTransform>();
 }
 
@@ -22,7 +22,7 @@ void UFacilityObjective::SecondGeneratorEncounterSpawn(APawn* spawned) {
 void UFacilityObjective::ProgressCurrentObjective() {
 }
 
-AActor* UFacilityObjective::PlaceObjectInRoom(AProceduralSetup* setup, const FRoomNode& RoomNode, UDebrisPositioning* Positioning, TSubclassOf<AActor> placementActor, FRandomStream RandomStream, const bool checkImportantLocations) {
+AActor* UFacilityObjective::PlaceObjectInRoom(AProceduralSetup* Setup, const FRoomNode& RoomNode, UDebrisPositioning* Positioning, TSubclassOf<AActor> placementActor, FRandomStream RandomStream, const bool checkImportantLocations) {
     return NULL;
 }
 
@@ -46,7 +46,7 @@ bool UFacilityObjective::IsSubObjectiveComplete(int32 objectiveIndex) const {
 void UFacilityObjective::InitGeneratorCount(int32 generators) {
 }
 
-FTransform UFacilityObjective::GetTurretGoal(AProceduralSetup* setup, const FVector& Origin, float idealRange, UDebrisPositioning* DebrisPositioning, TSubclassOf<AActor> terrainPlacement, bool& success) {
+FTransform UFacilityObjective::GetTurretGoal(AProceduralSetup* Setup, const FVector& Origin, float idealRange, UDebrisPositioning* DebrisPositioning, TSubclassOf<AActor> terrainPlacement, bool& success) {
     return FTransform{};
 }
 
@@ -58,7 +58,7 @@ int32 UFacilityObjective::GetShieldGeneratorCount() const {
     return 0;
 }
 
-void UFacilityObjective::GetObjectTransformInRoom(FTransform& Transform, AProceduralSetup* setup, const FRoomNode& RoomNode, UDebrisPositioning* Positioning, TSubclassOf<AActor> placementActor, FRandomStream RandomStream, const bool checkImportantLocations) {
+void UFacilityObjective::GetObjectTransformInRoom(FTransform& Transform, AProceduralSetup* Setup, const FRoomNode& RoomNode, UDebrisPositioning* Positioning, TSubclassOf<AActor> placementActor, FRandomStream RandomStream, const bool checkImportantLocations) {
 }
 
 int32 UFacilityObjective::GetFacilityRoomIndex() const {
@@ -79,7 +79,7 @@ void UFacilityObjective::GeneratorActivated() {
 void UFacilityObjective::FirstGeneratorEncounterSpawn(APawn* spawned) {
 }
 
-void UFacilityObjective::DropOverCharger(AProceduralSetup* setup, int32 roomIndex, const FVector& facilityLocation, float idealRange, float idealZDistance, UDebrisPositioning* DebrisPositioning, TSubclassOf<ARessuplyPod> NewGeneratorClass) {
+void UFacilityObjective::DropOverCharger(AProceduralSetup* Setup, int32 roomIndex, const FVector& facilityLocation, float idealRange, float idealZDistance, UDebrisPositioning* DebrisPositioning, TSubclassOf<ARessuplyPod> NewGeneratorClass) {
 }
 
 void UFacilityObjective::ChangeObjective() {

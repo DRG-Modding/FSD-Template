@@ -1,7 +1,7 @@
 #include "GuntowerActivationPlatform.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/SceneComponent.h"
-#include "Components/SkeletalMeshComponent.h"
+#include "Components/StaticMeshComponent.h"
 #include "Net/UnrealNetwork.h"
 
 void AGuntowerActivationPlatform::ShutDown() {
@@ -43,6 +43,10 @@ void AGuntowerActivationPlatform::OnOverlap(UPrimitiveComponent* OverlappedCompo
 void AGuntowerActivationPlatform::ModuleDestroyed(UHealthComponentBase* Health) {
 }
 
+int32 AGuntowerActivationPlatform::GetPlayerCount() const {
+    return 0;
+}
+
 AGuntowerModule* AGuntowerActivationPlatform::GetAssignedModule() const {
     return NULL;
 }
@@ -68,7 +72,7 @@ void AGuntowerActivationPlatform::GetLifetimeReplicatedProps(TArray<FLifetimePro
 
 AGuntowerActivationPlatform::AGuntowerActivationPlatform() {
     this->Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-    this->SKMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SKMesh"));
+    this->STMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("STMesh"));
     this->Trigger = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Trigger"));
     this->AssignedModule = NULL;
     this->DoneAt = 5.00f;

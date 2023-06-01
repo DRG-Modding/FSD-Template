@@ -38,6 +38,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BreakingFreeMontageDuration;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float HoldToBreakTime;
+    
 public:
     UInfectedStateComponent();
 protected:

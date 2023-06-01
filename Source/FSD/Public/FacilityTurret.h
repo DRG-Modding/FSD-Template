@@ -11,7 +11,7 @@ class USkeletalMeshComponent;
 class USoundCue;
 
 UCLASS(Blueprintable)
-class FSD_API AFacilityTurret : public AEnemyPawn {
+class AFacilityTurret : public AEnemyPawn {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -59,6 +59,9 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
+    UFUNCTION(BlueprintCallable)
+    void TurnOffMesh();
+    
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetIsAttacking(bool IsAttacking);
     

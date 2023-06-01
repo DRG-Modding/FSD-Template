@@ -1,14 +1,17 @@
 #include "TemporaryBuff.h"
 
-void UTemporaryBuff::DeActivateBuff(AFSDPlayerController* Player) const {
+bool UTemporaryBuff::GetActivateOnlyWhenDrinking() const {
+    return false;
 }
 
-void UTemporaryBuff::ActivateBuffOnPlayer(APlayerCharacter* Player) const {
+void UTemporaryBuff::DeActivateBuff(APlayerCharacter* Player) const {
 }
 
-void UTemporaryBuff::ActivateBuffOnController(AFSDPlayerController* Player) const {
+void UTemporaryBuff::ActivateBuff(APlayerCharacter* Player) const {
 }
 
 UTemporaryBuff::UTemporaryBuff() {
+    this->ActivatesOnlyOnceWhenDrinking = false;
+    this->IsTodaysSpecialBuff = true;
 }
 

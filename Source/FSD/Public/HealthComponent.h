@@ -78,6 +78,9 @@ public:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void ToggleCanTakeDamage();
     
+    UFUNCTION(BlueprintCallable)
+    float TakePercentDamage(float PercentOfMax, const FDamageData& DamageData);
+    
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void Resupply(float percentage);
     
@@ -92,10 +95,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasArmor() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+	UFUNCTION(BlueprintCallable)
     float GetMaxArmor() const;
     
-	//UFUNCTION(BlueprintCallable)
+    //UFUNCTION(BlueprintCallable, BlueprintPure)
     EHealthbarType GetHealthbarType() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

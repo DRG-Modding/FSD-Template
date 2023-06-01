@@ -2,7 +2,7 @@
 #include "Components/CapsuleComponent.h"
 #include "NiagaraComponent.h"
 
-void ASoapVacuumItem::Server_StartVacuumingPuddle_Implementation(AFoamPuddle* puddle) {
+void ASoapVacuumItem::Server_StartVacuumingPuddle_Implementation(AActor* Target) {
 }
 
 

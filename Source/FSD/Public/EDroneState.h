@@ -5,8 +5,8 @@
 UENUM(BlueprintType)
 enum class EDroneState : uint8 {
     EFollow,
-    ECombat,
     EMining,
-    EReviving,
+    ELight,
+    EMax,
 };
 

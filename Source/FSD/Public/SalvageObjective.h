@@ -104,7 +104,7 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable)
-    static FTransform FindRepairPointLocation(AProceduralSetup* setup, const FVector& podLocation, float Radius, float maxVerticalDistance, UDebrisPositioning* DebrisPositioning, TSubclassOf<AActor> terrainPlacement, const TArray<FVector>& locationsToAvoid, UCurveFloat* AvoidCostCurve);
+    static FTransform FindRepairPointLocation(AProceduralSetup* Setup, const FVector& podLocation, float Radius, float maxVerticalDistance, UDebrisPositioning* DebrisPositioning, TSubclassOf<AActor> terrainPlacement, const TArray<FVector>& locationsToAvoid, UCurveFloat* AvoidCostCurve);
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

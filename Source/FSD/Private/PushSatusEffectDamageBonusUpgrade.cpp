@@ -9,5 +9,6 @@ UPushSatusEffectDamageBonusUpgrade::UPushSatusEffectDamageBonusUpgrade() {
     this->StatusEffect = NULL;
     this->Chance = 0.00f;
     this->IgnoreArmorHit = false;
+    this->Condition = NULL;
 }
 

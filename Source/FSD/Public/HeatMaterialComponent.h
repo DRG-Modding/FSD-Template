@@ -23,7 +23,7 @@ public:
     UHeatMaterialComponent();
 protected:
     UFUNCTION(BlueprintCallable)
-    void OnTemperatureChanged(float Temperature, bool Overheated);
+    void OnTemperatureChanged(float Temperature, bool overHeated);
     
 public:
     UFUNCTION(BlueprintCallable)

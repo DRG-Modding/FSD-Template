@@ -15,7 +15,7 @@ class UHackableBuildingObjective : public UObjective {
 public:
     UHackableBuildingObjective();
     UFUNCTION(BlueprintCallable)
-    static void DropOverCharger(AProceduralSetup* setup, const FVector& buildingLocation, float idealRange, float idealZDistance, UDebrisPositioning* DebrisPositioning, TSubclassOf<ARessuplyPod> generatorClass);
+    static void DropOverCharger(AProceduralSetup* Setup, const FVector& buildingLocation, float idealRange, float idealZDistance, UDebrisPositioning* DebrisPositioning, TSubclassOf<ARessuplyPod> generatorClass);
     
 };
 
