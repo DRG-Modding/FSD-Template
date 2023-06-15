@@ -74,6 +74,10 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnDeath(UHealthComponentBase* enemy);
     
+private:
+    UFUNCTION(BlueprintCallable)
+    void InfectionPointDestroyed(FName Name);
+    
 public:
     UFUNCTION(BlueprintCallable)
     void DealWeakpointDamage(const FName& SocketName);

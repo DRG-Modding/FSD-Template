@@ -202,6 +202,14 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/FSDEditorTools/ContentBrowserVisualizer/ContentBrowserVisualizer.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/FSDEditorTools/EditorBase/EditorBase.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/FSDTests/FSDTests.uplugin",
 			"Type": "UFS"
 		},

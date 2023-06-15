@@ -5,6 +5,7 @@
 #include "PickaxeSet.h"
 #include "PickaxeFunctionLibrary.generated.h"
 
+class APlayerCharacter;
 class UItemID;
 class UObject;
 class UPickaxePart;
@@ -16,6 +17,9 @@ public:
     UPickaxeFunctionLibrary();
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool RemovePickaxePartFromOwned(UObject* WorldContextObject, const UPickaxePart* part);
+    
+    UFUNCTION(BlueprintCallable)
+    static void RandomizePickaxe(APlayerCharacter* Player);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsPickaxePartEquipped(UObject* WorldContextObject, EPickaxePartLocation Location, UPickaxePart* part, UItemID* pickaxeID);

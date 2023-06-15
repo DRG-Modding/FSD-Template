@@ -8,6 +8,9 @@ TArray<UPerkAsset*> UPerkFunctionLibrary::SortPerksByUsage(TArray<UPerkAsset*>& 
     return TArray<UPerkAsset*>();
 }
 
+void UPerkFunctionLibrary::RandomizePerkLoadout(APlayerCharacter* Player) {
+}
+
 bool UPerkFunctionLibrary::IsPerkTierUnLocked(UObject* WorldContext, int32 Tier) {
     return false;
 }

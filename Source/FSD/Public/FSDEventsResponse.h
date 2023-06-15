@@ -11,15 +11,6 @@ public:
     TArray<FString> ActiveEvents;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FString SeasonExpirationTimeSteam;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FString SeasonExpirationTimeSony;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FString SeasonExpirationTimeGDK;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FBackendNotification> Notifications;
     
     FSD_API FFSDEventsResponse();

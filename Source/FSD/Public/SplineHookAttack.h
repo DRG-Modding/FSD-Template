@@ -9,7 +9,9 @@ class AActor;
 class UAnimMontage;
 class UDamageComponent;
 class UHitReactionComponent;
+class UPointLightComponent;
 class USkeletalMeshComponent;
+class USoundCue;
 class USplineMeshComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -41,44 +43,26 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName HeadSocket;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UAnimMontage* HeadAnimation;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UPointLightComponent* GrabLight;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UAnimMontage* TailAnimation;
+    USoundCue* GrabbedIndicationSound;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UAnimMontage* HeadAnimation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* Damage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float KnockBackHorizontalForce;
+    float ForwardPlacement;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float HorizontalScaleMultiplier;
+    float DesiredLaunchAngle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float KnockBackVerticalForce;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float OptimalDistance;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float VerticalScaleMultiplier;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float MinHorizontalPower;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float MinVerticalPower;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float HeightDiffPower;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool AbsoluteKnockBack;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool ScaleByHeightDiff;
+    float AdjustmentStartDistance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AttackDuration;
@@ -112,8 +96,8 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
-    UFUNCTION(BlueprintCallable, Server, Unreliable)
-    void Server_DamageTarget(AActor* Target);
+    UFUNCTION(BlueprintCallable)
+    void SetTailLight(UPointLightComponent* Light);
     
     UFUNCTION(BlueprintCallable)
     void OnRep_Using();

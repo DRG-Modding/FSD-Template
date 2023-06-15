@@ -4,6 +4,9 @@ bool UPickaxeFunctionLibrary::RemovePickaxePartFromOwned(UObject* WorldContextOb
     return false;
 }
 
+void UPickaxeFunctionLibrary::RandomizePickaxe(APlayerCharacter* Player) {
+}
+
 bool UPickaxeFunctionLibrary::IsPickaxePartEquipped(UObject* WorldContextObject, EPickaxePartLocation Location, UPickaxePart* part, UItemID* pickaxeID) {
     return false;
 }

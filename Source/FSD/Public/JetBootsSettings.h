@@ -31,9 +31,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OutOfFuelRechargeDelay;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool DisableGravityWhenUsing;
-    
     UJetBootsSettings();
 };
 

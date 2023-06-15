@@ -17,6 +17,9 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable)
+    void GetPuddles(TArray<AActor*>& Locations);
+    
+    UFUNCTION(BlueprintCallable)
     void GetPuddleLocations(TArray<FVector>& Locations);
     
     UFUNCTION(BlueprintCallable)

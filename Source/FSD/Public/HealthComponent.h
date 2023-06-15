@@ -95,10 +95,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasArmor() const;
     
-	UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMaxArmor() const;
     
-    //UFUNCTION(BlueprintCallable, BlueprintPure)
+	//UFUNCTION(BlueprintCallable)
     EHealthbarType GetHealthbarType() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

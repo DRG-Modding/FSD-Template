@@ -6,6 +6,7 @@
 #include "EHolidayType.h"
 #include "FSDEventActivateChangedDelegate.h"
 #include "JettyBootEventSettings.h"
+#include "OnRequestSeasonEndTimeCompleteDelegate.h"
 #include "FSDEventManager.generated.h"
 
 class UFSDEvent;
@@ -55,6 +56,11 @@ public:
     UFUNCTION(BlueprintCallable)
     void TryGetJettyBootSettings(bool& OutHasSettings, FJettyBootEventSettings& OutSettings);
     
+protected:
+    UFUNCTION(BlueprintCallable)
+    void RequestSeasonEndTime(FOnRequestSeasonEndTimeComplete OnComplete);
+    
+public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEventTypeActive(const EHolidayType FSDEvent) const;
     

@@ -1,7 +1,7 @@
 #include "SplineHookAttack.h"
 #include "Net/UnrealNetwork.h"
 
-void USplineHookAttack::Server_DamageTarget_Implementation(AActor* Target) {
+void USplineHookAttack::SetTailLight(UPointLightComponent* Light) {
 }
 
 void USplineHookAttack::OnRep_Using() {
@@ -31,19 +31,13 @@ USplineHookAttack::USplineHookAttack() {
     this->HeadMesh = NULL;
     this->TailMesh = NULL;
     this->HitReacts = NULL;
+    this->GrabLight = NULL;
+    this->GrabbedIndicationSound = NULL;
     this->HeadAnimation = NULL;
-    this->TailAnimation = NULL;
     this->Damage = NULL;
-    this->KnockBackHorizontalForce = 0.00f;
-    this->HorizontalScaleMultiplier = 0.00f;
-    this->KnockBackVerticalForce = 0.00f;
-    this->OptimalDistance = 0.00f;
-    this->VerticalScaleMultiplier = 0.00f;
-    this->MinHorizontalPower = 0.00f;
-    this->MinVerticalPower = 0.00f;
-    this->HeightDiffPower = 1.00f;
-    this->AbsoluteKnockBack = false;
-    this->ScaleByHeightDiff = true;
+    this->ForwardPlacement = 100.00f;
+    this->DesiredLaunchAngle = 45.00f;
+    this->AdjustmentStartDistance = 50.00f;
     this->AttackDuration = 1.00f;
     this->MaxAngle = 60.00f;
     this->AttackOnProgress = 0.50f;

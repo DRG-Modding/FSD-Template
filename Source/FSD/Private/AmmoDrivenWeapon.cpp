@@ -119,6 +119,8 @@ AAmmoDrivenWeapon::AAmmoDrivenWeapon() {
     this->AutoReloadCompleteCue = NULL;
     this->SupplyStatusWeight = 1.00f;
     this->CycleTimeLeft = 0.00f;
+    this->UseCustomReloadDelay = false;
+    this->CustomReloadDelay = 0.00f;
     this->ReloadTimeLeft = 0.00f;
     this->AutomaticReload = false;
     this->CanReload = false;

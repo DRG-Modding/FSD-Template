@@ -32,6 +32,9 @@ void UFSDGameInstance::SetSteamServerJoinStatus(ESteamServerJoinStatus NewStatus
 void UFSDGameInstance::SetSteamSearchRegion(ESteamSearchRegion NewRegion) {
 }
 
+void UFSDGameInstance::SetShouldAdvertiseInServerlist(bool bShouldAdvertise) {
+}
+
 void UFSDGameInstance::SetServerSearchOptions(const FFSDServerSearchOptions& options) {
 }
 

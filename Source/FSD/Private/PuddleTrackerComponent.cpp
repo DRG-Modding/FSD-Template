@@ -3,6 +3,9 @@
 void UPuddleTrackerComponent::OnPuddleDestroyed(AActor* DestroyedActor) {
 }
 
+void UPuddleTrackerComponent::GetPuddles(TArray<AActor*>& Locations) {
+}
+
 void UPuddleTrackerComponent::GetPuddleLocations(TArray<FVector>& Locations) {
 }
 

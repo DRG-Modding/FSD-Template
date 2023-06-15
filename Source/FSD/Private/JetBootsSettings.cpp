@@ -9,6 +9,5 @@ UJetBootsSettings::UJetBootsSettings() {
     this->JetFuelRechargeRate = 30.00f;
     this->JetFuelRechargeDelay = 0.25f;
     this->OutOfFuelRechargeDelay = 1.00f;
-    this->DisableGravityWhenUsing = true;
 }
 

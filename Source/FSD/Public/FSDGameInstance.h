@@ -492,6 +492,9 @@ public:
     void SetSteamSearchRegion(ESteamSearchRegion NewRegion);
     
     UFUNCTION(BlueprintCallable)
+    void SetShouldAdvertiseInServerlist(bool bShouldAdvertise);
+    
+    UFUNCTION(BlueprintCallable)
     void SetServerSearchOptions(const FFSDServerSearchOptions& options);
     
     UFUNCTION(BlueprintCallable)

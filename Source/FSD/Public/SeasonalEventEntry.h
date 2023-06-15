@@ -19,6 +19,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UMutator*> BannedMutators;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 RequiredMainCampaignProgress;
+    
     FSD_API FSeasonalEventEntry();
 };
 

@@ -5,6 +5,7 @@
 #include "Templates/SubclassOf.h"
 #include "AdicPuddle.generated.h"
 
+class APlayerCharacter;
 class UPrimitiveComponent;
 class USoundBase;
 class USphereComponent;
@@ -31,6 +32,9 @@ private:
 public:
     AAdicPuddle();
 protected:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void Receive_OnPlayerBeginOverlap(APlayerCharacter* Player);
+    
     UFUNCTION(BlueprintCallable)
     void OnPuddleEndOverLap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     

@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Content Browser Visualizer",
+	"Description": "Extensions for blueprintable visualizers and filters for the content browser",
+	"Category": "FSDEditor",
+	"CreatedBy": "Axel",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EnabledByDefault": true,
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Plugins": [
+		{
+			"Name": "EditorBase",
+			"Enabled": true
+		}
+	]
+}

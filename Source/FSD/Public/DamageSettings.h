@@ -69,6 +69,12 @@ public:
     FRuntimeFloatCurve ArmorToArmorDamageBreakingCurve;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float RadialHealthArmorDamageFalloff;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 HealthArmorBonesAffectedByRadialDamage;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDamageTag* DetonateFrozen;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

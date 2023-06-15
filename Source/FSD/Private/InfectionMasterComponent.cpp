@@ -7,6 +7,9 @@ void UInfectionMasterComponent::OnRep_RandomSeed() {
 void UInfectionMasterComponent::OnDeath(UHealthComponentBase* enemy) {
 }
 
+void UInfectionMasterComponent::InfectionPointDestroyed(FName Name) {
+}
+
 void UInfectionMasterComponent::DealWeakpointDamage(const FName& SocketName) {
 }
 

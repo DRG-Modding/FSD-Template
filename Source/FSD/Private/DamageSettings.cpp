@@ -17,6 +17,8 @@ UDamageSettings::UDamageSettings() {
     this->ArmorShatterEmitter = NULL;
     this->ArmorShatterSound = NULL;
     this->ImpactDecals.AddDefaulted(3);
+    this->RadialHealthArmorDamageFalloff = 0.25f;
+    this->HealthArmorBonesAffectedByRadialDamage = 4;
     this->DetonateFrozen = NULL;
     this->DetonateOnFire = NULL;
     this->DirectHit = NULL;
