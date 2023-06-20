@@ -1,5 +1,8 @@
 #include "SpiderLobberAnimInstance.h"
 
+void USpiderLobberAnimInstance::SetAttackIndex(int32 Index) {
+}
+
 void USpiderLobberAnimInstance::ResetLiquidInBum() {
 }
 

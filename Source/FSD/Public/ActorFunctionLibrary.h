@@ -186,7 +186,7 @@ public:
     static FVector FindLatejoinDroppodLocation(AFSDGameMode* GameMode);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
-    static AActor* FindClosestEnemyFromLocation(const FVector& fromLocation, float range, bool LineOfSightCheck, UObject* WorldContextObject, const TArray<AActor*>& IgnoredActors, const FVector& Offset);
+    static AActor* FindClosestEnemyFromLocation(const FVector& fromLocation, float range, bool LineOfSightCheck, UObject* WorldContextObject, const TArray<AActor*>& IgnoredActors, const FVector& Offset, bool onlyTargetable);
     
     UFUNCTION(BlueprintCallable)
     static AActor* FindClosestEnemyFromActorWithSkipChance(AActor* FromActor, float range, float SkipChance, bool LineOfSightCheck, const FGameplayTagQuery& tagQuery, FVector Offset);

@@ -29,6 +29,9 @@ protected:
     
 public:
     USpiderLobberAnimInstance();
+    UFUNCTION(BlueprintCallable)
+    void SetAttackIndex(int32 Index);
+    
 protected:
     UFUNCTION(BlueprintCallable)
     void ResetLiquidInBum();

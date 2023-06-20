@@ -181,7 +181,7 @@ FVector UActorFunctionLibrary::FindLatejoinDroppodLocation(AFSDGameMode* GameMod
     return FVector{};
 }
 
-AActor* UActorFunctionLibrary::FindClosestEnemyFromLocation(const FVector& fromLocation, float range, bool LineOfSightCheck, UObject* WorldContextObject, const TArray<AActor*>& IgnoredActors, const FVector& Offset) {
+AActor* UActorFunctionLibrary::FindClosestEnemyFromLocation(const FVector& fromLocation, float range, bool LineOfSightCheck, UObject* WorldContextObject, const TArray<AActor*>& IgnoredActors, const FVector& Offset, bool onlyTargetable) {
     return NULL;
 }
 

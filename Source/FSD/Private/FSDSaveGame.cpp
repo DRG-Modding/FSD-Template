@@ -354,7 +354,7 @@ UFSDSaveGame::UFSDSaveGame() {
     this->bIgnoreRandomLoadout = false;
     this->LastCollectedCommunityRewardPeriodID = 0;
     this->FirstRejoinAttempt = false;
-    this->HaveSkinsBeenReset = false;
+    this->HaveItemUpgradesBeenFixed = false;
     this->bHasOpenedDeepDiveTerminal = false;
     this->FirstSession = true;
     this->HasCompletedTutorial = false;

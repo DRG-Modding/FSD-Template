@@ -23,7 +23,6 @@
 #include "GameDLCSave.h"
 #include "ItemNotificationInfo.h"
 #include "ItemUINotifications.h"
-#include "ItemUpgradeSelection.h"
 #include "JettyBootsSave.h"
 #include "MilestoneSave.h"
 #include "MissionStatSave.h"
@@ -223,13 +222,7 @@ protected:
     FDrinkSave Drinks;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<FGuid, FItemUpgradeSelection> ItemUpgradeSelections;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FUpgradeLoadout> ItemUpgradeLoadouts;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FUpgradeLoadout RandomItemUpgradeLoadouts;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool bIgnoreRandomLoadout;
@@ -283,7 +276,7 @@ protected:
     bool FirstRejoinAttempt;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool HaveSkinsBeenReset;
+    bool HaveItemUpgradesBeenFixed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bHasOpenedDeepDiveTerminal;

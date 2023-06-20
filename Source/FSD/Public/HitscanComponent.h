@@ -4,6 +4,7 @@
 #include "Engine/NetSerialization.h"
 #include "HitDelegateDelegate.h"
 #include "HitscanBaseComponent.h"
+#include "HitscanDelayedImpact.h"
 #include "IRandRange.h"
 #include "HitscanComponent.generated.h"
 
@@ -59,6 +60,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<AActor*> DamagedActorCache;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FHitscanDelayedImpact> DelayedImpacts;
     
 public:
     UHitscanComponent();
