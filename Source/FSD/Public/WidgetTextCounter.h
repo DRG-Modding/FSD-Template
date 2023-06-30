@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FWidgetTextCounter {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UTextBlock> Widget;
     
     FSD_API FWidgetTextCounter();

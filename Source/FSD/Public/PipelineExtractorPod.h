@@ -11,7 +11,7 @@ class FSD_API APipelineExtractorPod : public ARessuplyPod {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_ConnectedSegment, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_ConnectedSegment, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<APipelineSegment> ConnectedSegment;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))

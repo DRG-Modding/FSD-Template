@@ -11,7 +11,7 @@ USTRUCT(BlueprintType)
 struct FSaveGameSnapShot {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UFSDSaveGame> SaveGame;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

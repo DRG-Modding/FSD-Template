@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct FTerminatorTarget : public FTentacleTarget {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AActor> TargetActor;
     
     FSD_API FTerminatorTarget();

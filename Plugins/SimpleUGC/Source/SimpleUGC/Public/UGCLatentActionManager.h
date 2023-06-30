@@ -11,7 +11,7 @@ UCLASS(Blueprintable)
 class UUGCLatentActionManager : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UModioTermsWrapper> LatestModioTermsAndConditions;
     
     UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

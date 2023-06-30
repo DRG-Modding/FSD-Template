@@ -70,10 +70,6 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(ProjectDir)/Plugins/GoogleAnalytics/GoogleAnalytics.uplugin",
-			"Type": "UFS"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/Online/OnlineSubsystemTwitch/OnlineSubsystemTwitch.uplugin",
 			"Type": "UFS"
 		},
@@ -211,6 +207,10 @@
 		},
 		{
 			"Path": "$(ProjectDir)/Plugins/FSDTests/FSDTests.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/GoogleAnalytics/GoogleAnalytics.uplugin",
 			"Type": "UFS"
 		},
 		{

@@ -12,7 +12,7 @@ class URefineryHintComponent : public UTutorialHintComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AFSDRefinery> Refinery;
     
 public:

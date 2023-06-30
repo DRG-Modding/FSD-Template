@@ -10,7 +10,7 @@ class UBarMenuWidget : public UWindowWidget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<ASpaceRigBar> SpaceRigBar;
     
 public:

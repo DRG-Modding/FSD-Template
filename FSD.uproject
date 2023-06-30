@@ -138,11 +138,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "GoogleAnalytics",
-			"Enabled": true,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/1b3f6c0fc07648b18758f7b883358b3e"
-		},
-		{
 			"Name": "OnlineSubsystemTwitch",
 			"Enabled": true
 		},
@@ -361,6 +356,12 @@
 	],
 	"TargetPlatforms": [
 		"Windows",
+		"PS4",
+		"PS5",
+		"Sony",
+		"WinGDK",
+		"XboxOneGDK",
+		"XSX",
 		"WindowsNoEditor"
 	]
 }

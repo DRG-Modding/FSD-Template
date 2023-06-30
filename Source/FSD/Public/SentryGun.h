@@ -129,10 +129,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     float TargetPitch;
     
-    UPROPERTY(EditAnywhere, Export, Transient, ReplicatedUsing=OnRep_LastTarget, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, ReplicatedUsing=OnRep_LastTarget, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UHealthComponentBase> LastTarget;
     
-    UPROPERTY(EditAnywhere, Export, Replicated, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Replicated, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UHealthComponentBase> PrioritizedTarget;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))

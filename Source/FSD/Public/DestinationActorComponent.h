@@ -10,7 +10,7 @@ class FSD_API UDestinationActorComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AActor> DestinationActor;
     
 public:

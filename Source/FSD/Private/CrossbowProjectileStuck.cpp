@@ -2,6 +2,9 @@
 #include "Components/SphereComponent.h"
 #include "Net/UnrealNetwork.h"
 
+void ACrossbowProjectileStuck::UsableChanged(bool CanUse) {
+}
+
 void ACrossbowProjectileStuck::OnUsedBy(APlayerCharacter* Player, EInputKeys Key) {
 }
 

@@ -59,6 +59,11 @@ public:
     ACrossbowProjectileStuck();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
+private:
+    UFUNCTION(BlueprintCallable)
+    void UsableChanged(bool CanUse);
+    
+public:
     UFUNCTION(BlueprintCallable)
     void OnUsedBy(APlayerCharacter* Player, EInputKeys Key);
     

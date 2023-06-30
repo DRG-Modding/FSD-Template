@@ -100,14 +100,6 @@
 			"Type": "SymbolFile"
 		},
 		{
-			"Path": "$(ProjectDir)/Plugins/GoogleAnalytics/Binaries/Win64/UE4Editor-GoogleAnalytics.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(ProjectDir)/Plugins/GoogleAnalytics/Binaries/Win64/UE4Editor-GoogleAnalytics.pdb",
-			"Type": "SymbolFile"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/Online/OnlineSubsystemTwitch/Binaries/Win64/UE4Editor-OnlineSubsystemTwitch.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -465,6 +457,14 @@
 		},
 		{
 			"Path": "$(ProjectDir)/Plugins/DiscordSDK/Binaries/Win64/UE4Editor-DiscordSDK.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/GoogleAnalytics/Binaries/Win64/UE4Editor-GoogleAnalytics.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/GoogleAnalytics/Binaries/Win64/UE4Editor-GoogleAnalytics.pdb",
 			"Type": "SymbolFile"
 		},
 		{
@@ -4456,10 +4456,6 @@
 			"Type": "RequiredResource"
 		},
 		{
-			"Path": "$(ProjectDir)/Plugins/GoogleAnalytics/Binaries/Win64/UE4Editor.modules",
-			"Type": "RequiredResource"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/Online/OnlineSubsystemTwitch/Binaries/Win64/UE4Editor.modules",
 			"Type": "RequiredResource"
 		},
@@ -4565,6 +4561,10 @@
 		},
 		{
 			"Path": "$(ProjectDir)/Plugins/DiscordSDK/Binaries/Win64/UE4Editor.modules",
+			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/GoogleAnalytics/Binaries/Win64/UE4Editor.modules",
 			"Type": "RequiredResource"
 		},
 		{
@@ -4914,10 +4914,6 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(ProjectDir)/Plugins/GoogleAnalytics/GoogleAnalytics.uplugin",
-			"Type": "UFS"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/Online/OnlineSubsystemTwitch/OnlineSubsystemTwitch.uplugin",
 			"Type": "UFS"
 		},
@@ -5051,6 +5047,10 @@
 		},
 		{
 			"Path": "$(ProjectDir)/Plugins/FSDTests/FSDTests.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/GoogleAnalytics/GoogleAnalytics.uplugin",
 			"Type": "UFS"
 		},
 		{

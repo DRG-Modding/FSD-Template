@@ -24,7 +24,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UItemUpgrade*> upgrades;
     
-    UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_LastProjectile, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_LastProjectile, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<ALineCutterProjectile> LastProjectile;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

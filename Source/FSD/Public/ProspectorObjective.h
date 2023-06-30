@@ -18,7 +18,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDebrisPositioning* DebrisPositioning;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_ActiveProspector, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_ActiveProspector, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AProspectorRobot> ActiveProspector;
     
 public:

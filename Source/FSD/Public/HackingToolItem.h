@@ -10,7 +10,7 @@ class FSD_API AHackingToolItem : public AAnimatedItem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, Export, Transient, ReplicatedUsing=OnRep_HackingUsable, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, ReplicatedUsing=OnRep_HackingUsable, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UHackingUsableComponent> HackingUsable;
     
 public:

@@ -20,7 +20,7 @@ public:
     FFloatDelegate OnIsOnFireChanged;
     
 protected:
-    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UEnemyTemperatureComponent> EnemyTemperatureComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_TemperatureEffect, meta=(AllowPrivateAccess=true))

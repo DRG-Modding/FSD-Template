@@ -41,7 +41,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UOutlineComponent* outline;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_SentryGunOwner, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_SentryGunOwner, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<APlayerCharacter> SentryGunOwner;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

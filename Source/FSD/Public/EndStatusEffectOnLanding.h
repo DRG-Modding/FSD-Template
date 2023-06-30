@@ -12,7 +12,7 @@ class UEndStatusEffectOnLanding : public UActorComponent, public IStatusAddedCom
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UStatusEffect> EffectToCancel;
     
 public:

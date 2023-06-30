@@ -25,7 +25,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftClassPtr<AFSDRefinery> refineryClass;
     
-    UPROPERTY(EditAnywhere, Transient, ReplicatedUsing=OnRep_Refinery, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_Refinery, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AFSDRefinery> Refinery;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

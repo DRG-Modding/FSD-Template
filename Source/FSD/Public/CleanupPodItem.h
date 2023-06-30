@@ -18,7 +18,7 @@ public:
     FCleaningPodLaunched OnCleaningPodLaunched;
     
 protected:
-    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<APlagueControlActor> PlagueController;
     
 public:
