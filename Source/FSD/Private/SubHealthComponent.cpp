@@ -25,6 +25,7 @@ bool USubHealthComponent::GetCanTakeDamage() const {
 
 USubHealthComponent::USubHealthComponent() {
     this->HealthbarType = EHealthbarType::None;
+    this->PassthroughDamageWhenDisabled = true;
     this->EnemyHealthScaling = EEnemyHealthScaling::LargeEnemy;
 }
 

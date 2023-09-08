@@ -53,6 +53,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHUDElementData SentryGunDisplay;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FHUDElementData VersionNumber;
+    
 public:
     FSD_API FHUDElements();
 };

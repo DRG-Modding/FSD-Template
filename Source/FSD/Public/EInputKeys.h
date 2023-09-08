@@ -7,6 +7,6 @@ enum class EInputKeys : uint8 {
     Use,
     Fire,
     Mine,
-    EInputKeys_MAX = 0xFF,
+    EInputKeys_MAX = 0xFF UMETA(Hidden),
 };
 

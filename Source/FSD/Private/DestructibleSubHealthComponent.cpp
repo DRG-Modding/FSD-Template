@@ -17,7 +17,6 @@ UDestructibleSubHealthComponent::UDestructibleSubHealthComponent() {
     this->MaxHealth = 0.00f;
     this->RadialDamageResistance = 0.00f;
     this->AllowInderectDamage = false;
-    this->PassthroughDamageWhenDisabled = true;
     this->Damage = 0.00f;
     this->ArmorComponent = NULL;
 }

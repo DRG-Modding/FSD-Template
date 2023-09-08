@@ -8,6 +8,11 @@ UCLASS(Blueprintable)
 class APlaguePuddle : public AAdicPuddle, public IVacuumable {
     GENERATED_BODY()
 public:
+protected:
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint16 MaxPlaguePiles;
+    
+public:
     APlaguePuddle();
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

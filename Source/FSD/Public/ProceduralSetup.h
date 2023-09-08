@@ -190,6 +190,9 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void StartMusicAndAmbient(int32 Music);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void StartGenerationOnClient(AFSDPlayerController* client);
     
     UFUNCTION(BlueprintCallable)

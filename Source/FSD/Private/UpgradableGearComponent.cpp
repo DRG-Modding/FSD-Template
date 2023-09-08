@@ -91,7 +91,7 @@ EItemUpgradeStatus UUpgradableGearComponent::GetItemUpgradeStatus(UObject* World
     return EItemUpgradeStatus::Locked;
 }
 
-TArray<UItemUpgrade*> UUpgradableGearComponent::GetItemUpgrades(TSubclassOf<AActor> itemClass, TSubclassOf<UItemUpgrade> upgradeClass, AFSDPlayerState* Player, uint8 upgradeIndex) {
+TArray<UItemUpgrade*> UUpgradableGearComponent::GetItemUpgradesFromSave(TSubclassOf<AActor> itemClass, TSubclassOf<UItemUpgrade> upgradeClass, AFSDPlayerState* Player, uint8 upgradeIndex) {
     return TArray<UItemUpgrade*>();
 }
 

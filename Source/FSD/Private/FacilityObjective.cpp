@@ -79,7 +79,7 @@ void UFacilityObjective::GeneratorActivated() {
 void UFacilityObjective::FirstGeneratorEncounterSpawn(APawn* spawned) {
 }
 
-void UFacilityObjective::DropOverCharger(AProceduralSetup* Setup, int32 roomIndex, const FVector& facilityLocation, float idealRange, float idealZDistance, UDebrisPositioning* DebrisPositioning, TSubclassOf<ARessuplyPod> NewGeneratorClass) {
+void UFacilityObjective::DropOverCharger(AProceduralSetup* Setup, int32 roomIndex, const FVector& facilityLocation, float idealRange, float idealZDistance, UDebrisPositioning* DebrisPositioning, TSubclassOf<ARessuplyPod> NewGeneratorClass, bool AddImportantLocation) {
 }
 
 void UFacilityObjective::ChangeObjective() {

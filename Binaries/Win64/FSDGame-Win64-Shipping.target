@@ -190,6 +190,10 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/GoogleAnalytics/GoogleAnalytics.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/DiscordSDK/DiscordSDK.uplugin",
 			"Type": "UFS"
 		},
@@ -206,11 +210,11 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(ProjectDir)/Plugins/FSDTests/FSDTests.uplugin",
+			"Path": "$(ProjectDir)/Plugins/FSDEditorTools/SkinEditor/SkinEditor.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(ProjectDir)/Plugins/GoogleAnalytics/GoogleAnalytics.uplugin",
+			"Path": "$(ProjectDir)/Plugins/FSDTests/FSDTests.uplugin",
 			"Type": "UFS"
 		},
 		{

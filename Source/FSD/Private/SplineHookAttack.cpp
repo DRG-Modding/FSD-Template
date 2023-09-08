@@ -37,6 +37,7 @@ USplineHookAttack::USplineHookAttack() {
     this->Damage = NULL;
     this->ForwardPlacement = 100.00f;
     this->DesiredLaunchAngle = 45.00f;
+    this->MaxAngledForce = 2000.00f;
     this->AdjustmentStartDistance = 50.00f;
     this->AttackDuration = 1.00f;
     this->MaxAngle = 60.00f;

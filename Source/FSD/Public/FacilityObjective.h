@@ -191,7 +191,7 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable)
-    void DropOverCharger(AProceduralSetup* Setup, int32 roomIndex, const FVector& facilityLocation, float idealRange, float idealZDistance, UDebrisPositioning* DebrisPositioning, TSubclassOf<ARessuplyPod> NewGeneratorClass);
+    void DropOverCharger(AProceduralSetup* Setup, int32 roomIndex, const FVector& facilityLocation, float idealRange, float idealZDistance, UDebrisPositioning* DebrisPositioning, TSubclassOf<ARessuplyPod> NewGeneratorClass, bool AddImportantLocation);
     
     UFUNCTION(BlueprintCallable)
     void ChangeObjective();

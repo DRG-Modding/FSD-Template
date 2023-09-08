@@ -21,9 +21,6 @@ private:
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
-    static FTransform FindRandomEscapePodLocation(UObject* WorldContextObject);
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static FTransform FindEscapePodLocationAtDistance(UObject* WorldContextObject, float Distance, float aboveDistanceBias, AActor* optionalFrom);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))

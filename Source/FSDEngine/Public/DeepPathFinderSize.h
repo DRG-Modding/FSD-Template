@@ -8,6 +8,5 @@ enum class DeepPathFinderSize : uint8 {
     Small = 0x3,
     Medium = 0x2,
     Large = 0x1,
-    DeepPathFinderSize_MAX = 0x4,
 };
 

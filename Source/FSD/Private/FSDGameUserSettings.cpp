@@ -665,13 +665,13 @@ void UFSDGameUserSettings::ApplyConsoleGraphicsMode() {
 UFSDGameUserSettings::UFSDGameUserSettings() {
     this->bJukeboxStreamerMode = true;
     this->bGraphicSettingsChanged = false;
-    this->ServerSearchRegion = 3;
-    this->ServerSearchPasswordRequired = true;
+    this->ServerSearchRegion = 0;
+    this->ServerSearchPasswordRequired = false;
     this->volumeCharacterVoice = 56.99f;
     this->volumeMissionControl = 58.84f;
-    this->volumeMaster = 80.06f;
+    this->volumeMaster = 44.08f;
     this->volumeSFX = 38.54f;
-    this->volumeMusic = 22.86f;
+    this->volumeMusic = 43.62f;
     this->CurrentAudioOutputDeviceId = TEXT("{0.0.0.00000000}.{e5f88e95-6344-4763-bd61-70b04ceb23f9}");
     this->UseDefaultAudioOutputDevice = true;
     this->Sharpening = 0.00f;

@@ -23,5 +23,6 @@ UResourceObjective::UResourceObjective() {
     this->ResourcesCollected = 0.00f;
     this->ResourceBuffer = 0.50f;
     this->RoundToNearest = 25.00f;
+    this->CreditsRewardText = FText::FromString(TEXT("Morkite Collected"));
 }
 

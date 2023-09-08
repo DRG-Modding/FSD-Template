@@ -2,5 +2,6 @@
 
 
 APlaguePuddle::APlaguePuddle() {
+    this->MaxPlaguePiles = 30;
 }
 

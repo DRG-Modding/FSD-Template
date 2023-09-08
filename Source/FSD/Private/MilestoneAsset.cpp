@@ -51,6 +51,7 @@ int32 UMilestoneAsset::ClaimNextTier(UObject* WorldContext) {
 
 UMilestoneAsset::UMilestoneAsset() {
     this->LargeImage = NULL;
+    this->FormattedTitle = FText::FromString(TEXT("Parameters: {value} {float_value} {character}"));
     this->FormattedValueOffset = 0;
     this->CountValueAsTotal = false;
     this->TrackingStat = NULL;

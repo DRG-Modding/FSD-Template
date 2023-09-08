@@ -4,10 +4,6 @@ bool UGameModeFunctionLibrary::IsCloseToImportantLocation(AFSDGameState* GameSta
     return false;
 }
 
-FTransform UGameModeFunctionLibrary::FindRandomEscapePodLocation(UObject* WorldContextObject) {
-    return FTransform{};
-}
-
 FTransform UGameModeFunctionLibrary::FindEscapePodLocationAtDistance(UObject* WorldContextObject, float Distance, float aboveDistanceBias, AActor* optionalFrom) {
     return FTransform{};
 }
