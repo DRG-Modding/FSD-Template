@@ -6,3 +6,4 @@ UPushDynamicStatusEffectDamageBonus::UPushDynamicStatusEffectDamageBonus() {
     this->Chance = 0.00f;
 }
 
+

@@ -1,5 +1,6 @@
 #include "CSGBoxComponent.h"
 
-UCSGBoxComponent::UCSGBoxComponent() {
+UCSGBoxComponent::UCSGBoxComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

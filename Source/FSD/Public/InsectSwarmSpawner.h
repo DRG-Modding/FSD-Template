@@ -29,7 +29,8 @@ protected:
     TWeakObjectPtr<AInsectSwarmEnemy> SwarmInstance;
     
 public:
-    AInsectSwarmSpawner();
+    AInsectSwarmSpawner(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     UStaticMeshComponent* Receive_GetStaticMesh() const;

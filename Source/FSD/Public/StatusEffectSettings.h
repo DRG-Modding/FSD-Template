@@ -17,5 +17,6 @@ public:
     TSubclassOf<UStatusEffect> frozen;
     
     UStatusEffectSettings();
+
 };
 

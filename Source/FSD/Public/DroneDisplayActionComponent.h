@@ -15,7 +15,8 @@ protected:
     UTextRenderComponent* DisplayText;
     
 public:
-    UDroneDisplayActionComponent();
+    UDroneDisplayActionComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetMode(EDroneActions droneAction);
     

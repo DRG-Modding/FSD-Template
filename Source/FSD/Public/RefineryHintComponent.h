@@ -16,7 +16,8 @@ protected:
     TWeakObjectPtr<AFSDRefinery> Refinery;
     
 public:
-    URefineryHintComponent();
+    URefineryHintComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveRefinerySpawned(AFSDRefinery* InRefinery);

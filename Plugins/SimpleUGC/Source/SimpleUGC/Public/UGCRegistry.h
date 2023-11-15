@@ -40,6 +40,7 @@ private:
     
 public:
     UUGCRegistry();
+
     UFUNCTION(BlueprintCallable)
     void UnmountUGCPackages(TArray<FString> ExcludingModIds);
     

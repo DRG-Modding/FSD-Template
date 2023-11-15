@@ -1,5 +1,6 @@
 #include "SentryElectroBeam.h"
 
-ASentryElectroBeam::ASentryElectroBeam() {
+ASentryElectroBeam::ASentryElectroBeam(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

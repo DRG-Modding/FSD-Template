@@ -10,6 +10,7 @@ class UAfflictionEffect : public UObject {
     GENERATED_BODY()
 public:
     UAfflictionEffect();
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool ShouldInstantiate() const;
     

@@ -1,5 +1,6 @@
 #include "SDFModifierComponent.h"
 
-USDFModifierComponent::USDFModifierComponent() {
+USDFModifierComponent::USDFModifierComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

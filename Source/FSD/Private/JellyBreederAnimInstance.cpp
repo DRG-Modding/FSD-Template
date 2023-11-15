@@ -4,3 +4,4 @@ UJellyBreederAnimInstance::UJellyBreederAnimInstance() {
     this->ReadyToSpawnEggs = false;
 }
 
+

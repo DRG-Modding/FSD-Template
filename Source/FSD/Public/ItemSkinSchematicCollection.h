@@ -38,5 +38,6 @@ protected:
     
 public:
     UItemSkinSchematicCollection();
+
 };
 

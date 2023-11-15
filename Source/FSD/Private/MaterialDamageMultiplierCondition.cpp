@@ -4,3 +4,4 @@ UMaterialDamageMultiplierCondition::UMaterialDamageMultiplierCondition() {
     this->Invert = false;
 }
 
+

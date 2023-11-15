@@ -23,5 +23,6 @@ public:
     bool IsBroken;
     
     URockCrackedAnimInstance();
+
 };
 

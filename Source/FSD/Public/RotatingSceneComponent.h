@@ -29,6 +29,7 @@ protected:
     ETeleportType TeleportMode;
     
 public:
-    URotatingSceneComponent();
+    URotatingSceneComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

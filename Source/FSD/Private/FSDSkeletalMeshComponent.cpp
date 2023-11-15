@@ -1,5 +1,6 @@
 #include "FSDSkeletalMeshComponent.h"
 
-UFSDSkeletalMeshComponent::UFSDSkeletalMeshComponent() {
+UFSDSkeletalMeshComponent::UFSDSkeletalMeshComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

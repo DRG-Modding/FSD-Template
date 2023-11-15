@@ -49,7 +49,8 @@ protected:
     UItemCharacterAnimationSet* CharacterAnimationSet;
     
 public:
-    AAnimatedItem();
+    AAnimatedItem(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnReceiveEquippedFinished();

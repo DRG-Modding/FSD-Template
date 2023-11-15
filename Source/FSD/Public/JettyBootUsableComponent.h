@@ -15,7 +15,8 @@ protected:
     int32 CreditPrice;
     
 public:
-    UJettyBootUsableComponent();
+    UJettyBootUsableComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool DeductCredits(APlayerCharacter* User, UMissionStat* InCreditCounter);
     

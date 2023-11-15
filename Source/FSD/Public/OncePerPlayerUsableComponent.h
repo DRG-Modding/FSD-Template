@@ -17,9 +17,10 @@ protected:
     TArray<FUniqueNetIdRepl> Users;
     
 public:
-    UOncePerPlayerUsableComponent();
+    UOncePerPlayerUsableComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnUsersChanged(const TArray<FUniqueNetIdRepl>& userList);

@@ -81,6 +81,7 @@ protected:
     
 public:
     UEnemyMinersManualData();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UTexture2D* GetEnemyIcon() const;
     

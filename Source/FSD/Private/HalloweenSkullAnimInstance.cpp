@@ -9,3 +9,4 @@ UHalloweenSkullAnimInstance::UHalloweenSkullAnimInstance() {
     this->JawPosition = 0.00f;
 }
 
+

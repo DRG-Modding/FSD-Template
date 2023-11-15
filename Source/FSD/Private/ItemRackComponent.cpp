@@ -1,6 +1,14 @@
 #include "ItemRackComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UItemRackComponent::UItemRackComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->UsableComponent = NULL;
+    this->AttachToComponent = NULL;
+    this->AttachToSocket = false;
+    this->RackKey = -1;
+    this->Item = NULL;
+}
+
 void UItemRackComponent::RackItem(AActor* NewItem, APlayerCharacter* Character) {
 }
 
@@ -24,11 +32,4 @@ void UItemRackComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& O
     DOREPLIFETIME(UItemRackComponent, Item);
 }
 
-UItemRackComponent::UItemRackComponent() {
-    this->UsableComponent = NULL;
-    this->AttachToComponent = NULL;
-    this->AttachToSocket = false;
-    this->RackKey = -1;
-    this->Item = NULL;
-}
 

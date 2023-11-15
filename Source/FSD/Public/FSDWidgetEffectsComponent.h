@@ -38,7 +38,8 @@ protected:
     TArray<FWidgetMover> WidgetMovers;
     
 public:
-    UFSDWidgetEffectsComponent();
+    UFSDWidgetEffectsComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static void StartTextCounter(UObject* WorldContext, UPARAM(Ref) UTextBlock*& Widget, float Start, float End, float Duration, int32 MaxDigits, float StartDelay);
     

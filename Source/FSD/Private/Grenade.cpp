@@ -3,6 +3,31 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
+AGrenade::AGrenade(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->CrossHairType = NULL;
+    this->Movement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
+    this->CoolDown = -1.00f;
+    this->Duration = 0.00f;
+    this->CanCook = false;
+    this->cookTime = -1.00f;
+    this->CookingSound = NULL;
+    this->ExplosionDelay = 0.00f;
+    this->ExplodeOnImpact = false;
+    this->MaxGrenades = 0;
+    this->HasExploded = false;
+    this->ItemID = NULL;
+    this->WeaponPreviewClass = NULL;
+    this->LoadoutProxy = NULL;
+    this->HandAttachMesh = NULL;
+    this->ProjectionSettings = NULL;
+    this->ImpactGroundSound = NULL;
+    this->ImpactGroundParticles = NULL;
+    this->GrenadeAnimationSetOverride = NULL;
+}
+
 void AGrenade::OnRep_HasExploded() {
 }
 
@@ -33,25 +58,4 @@ void AGrenade::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetime
     DOREPLIFETIME(AGrenade, HasExploded);
 }
 
-AGrenade::AGrenade() {
-    this->CrossHairType = NULL;
-    this->Movement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
-    this->CoolDown = -1.00f;
-    this->Duration = 0.00f;
-    this->CanCook = false;
-    this->cookTime = -1.00f;
-    this->CookingSound = NULL;
-    this->ExplosionDelay = 0.00f;
-    this->ExplodeOnImpact = false;
-    this->MaxGrenades = 0;
-    this->HasExploded = false;
-    this->ItemID = NULL;
-    this->WeaponPreviewClass = NULL;
-    this->LoadoutProxy = NULL;
-    this->HandAttachMesh = NULL;
-    this->ProjectionSettings = NULL;
-    this->ImpactGroundSound = NULL;
-    this->ImpactGroundParticles = NULL;
-    this->GrenadeAnimationSetOverride = NULL;
-}
 

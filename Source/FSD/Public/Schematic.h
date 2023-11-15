@@ -55,6 +55,7 @@ protected:
     
 public:
     USchematic();
+
     UFUNCTION(BlueprintCallable)
     void SetCraftingMaterialCost();
     

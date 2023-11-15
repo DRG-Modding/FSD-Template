@@ -1,5 +1,6 @@
 #include "KillNearbyCreaturePerkComponent.h"
 
-UKillNearbyCreaturePerkComponent::UKillNearbyCreaturePerkComponent() {
+UKillNearbyCreaturePerkComponent::UKillNearbyCreaturePerkComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

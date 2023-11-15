@@ -1,5 +1,6 @@
 #include "TaggedActor.h"
 
-ATaggedActor::ATaggedActor() {
+ATaggedActor::ATaggedActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

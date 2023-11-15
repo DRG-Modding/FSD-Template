@@ -4,3 +4,4 @@ UVictoryPoseSchematicItem::UVictoryPoseSchematicItem() {
     this->VictoryPose = NULL;
 }
 
+

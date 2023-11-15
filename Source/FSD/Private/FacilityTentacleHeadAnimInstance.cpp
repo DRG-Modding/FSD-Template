@@ -6,3 +6,4 @@ UFacilityTentacleHeadAnimInstance::UFacilityTentacleHeadAnimInstance() {
     this->RangedAttack = false;
 }
 
+

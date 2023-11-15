@@ -41,6 +41,7 @@ class FSD_API UActorFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UActorFunctionLibrary();
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     static void UnlockSpecificCharacters(TArray<APlayerCharacter*> Characters, ECharacterState UnlockIf, ECharacterState UnlockTo);
     

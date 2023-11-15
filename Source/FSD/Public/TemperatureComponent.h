@@ -15,7 +15,8 @@ protected:
     float FrozenDamageBonusScale;
     
 public:
-    UTemperatureComponent();
+    UTemperatureComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     static bool TryPushHeatSource(AActor* Target, float Temperature, ETemperatureIntensity Intensity);
     

@@ -20,5 +20,6 @@ public:
     FRuntimeFloatCurve LinearFadeOutLight;
     
     UEffectSettings();
+
 };
 

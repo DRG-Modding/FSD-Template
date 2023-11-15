@@ -8,5 +8,6 @@ class UUnlockReward : public UReward {
     GENERATED_BODY()
 public:
     UUnlockReward();
+
 };
 

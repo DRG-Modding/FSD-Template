@@ -1,7 +1,7 @@
 #include "AIPlayerControlComponent.h"
 #include "ControlEnemyUsable.h"
 
-UAIPlayerControlComponent::UAIPlayerControlComponent() {
+UAIPlayerControlComponent::UAIPlayerControlComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SpeedTarget = 250.00f;
     this->SpeedMin = 50.00f;
     this->SpeedMax = 400.00f;
@@ -19,4 +19,5 @@ UAIPlayerControlComponent::UAIPlayerControlComponent() {
     this->LetGoShout = NULL;
     this->Usable = CreateDefaultSubobject<UControlEnemyUsable>(TEXT("Usable"));
 }
+
 

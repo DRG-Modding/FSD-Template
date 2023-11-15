@@ -56,6 +56,7 @@ protected:
     
 public:
     UMilestoneAsset();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static TArray<UMilestoneAsset*> SortMilestonesByProgress(UObject* WorldContext, UPARAM(Ref) TArray<UMilestoneAsset*>& Milestones);
     

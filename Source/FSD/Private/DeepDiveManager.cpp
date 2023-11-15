@@ -1,6 +1,19 @@
 #include "DeepDiveManager.h"
 #include "FSDEventsHandler.h"
 
+UDeepDiveManager::UDeepDiveManager() {
+    this->LockSeed = false;
+    this->EventsHandler = CreateDefaultSubobject<UFSDEventsHandler>(TEXT("EventsHandler"));
+    this->ActiveNormalDeepDive = NULL;
+    this->ActiveHardDeepDive = NULL;
+    this->ActiveDeepDive = NULL;
+    this->DebugDeepDive = NULL;
+    this->CurrentMission = NULL;
+    this->currentDepth = 0.00f;
+    this->BackendDataValid = 0;
+    this->BackendSeed = -1;
+}
+
 void UDeepDiveManager::SetDeepDive(UDeepDive* DeepDive) {
 }
 
@@ -42,16 +55,4 @@ bool UDeepDiveManager::CompleteCurrentSingleMission() {
     return false;
 }
 
-UDeepDiveManager::UDeepDiveManager() {
-    this->LockSeed = false;
-    this->EventsHandler = CreateDefaultSubobject<UFSDEventsHandler>(TEXT("EventsHandler"));
-    this->ActiveNormalDeepDive = NULL;
-    this->ActiveHardDeepDive = NULL;
-    this->ActiveDeepDive = NULL;
-    this->DebugDeepDive = NULL;
-    this->CurrentMission = NULL;
-    this->currentDepth = 0.00f;
-    this->BackendDataValid = 0;
-    this->BackendSeed = -1;
-}
 

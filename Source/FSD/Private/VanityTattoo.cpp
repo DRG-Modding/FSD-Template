@@ -6,3 +6,4 @@ UVanityTattoo::UVanityTattoo() {
     this->ScaleStretch = 1.00f;
 }
 
+

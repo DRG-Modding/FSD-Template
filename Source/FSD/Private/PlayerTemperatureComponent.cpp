@@ -1,6 +1,25 @@
 #include "PlayerTemperatureComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UPlayerTemperatureComponent::UPlayerTemperatureComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->MinimumTemperature = -100.00f;
+    this->MaximumTemperature = 100.00f;
+    this->DefrostTemperature = -50.00f;
+    this->BurnTemperature = 51.00f;
+    this->DouseFireTemperature = 50.00f;
+    this->TemperaturRegainSpeed = 5.00f;
+    this->DefrostingRequired = 50.00f;
+    this->OnDefrostedStatusEffect = NULL;
+    this->NormalTemperature = 0.00f;
+    this->CurrentTemperature = 0.00f;
+    this->TargetTemperature = 0.00f;
+    this->TemperatureChangeSpeed = 0;
+    this->DefrostProgress = 0.00f;
+    this->barVisible = false;
+    this->Character = NULL;
+    this->TemperatureState = EPlayerTemperatureState::Normal;
+}
+
 void UPlayerTemperatureComponent::SetNormalTemperature() {
 }
 
@@ -47,22 +66,4 @@ void UPlayerTemperatureComponent::GetLifetimeReplicatedProps(TArray<FLifetimePro
     DOREPLIFETIME(UPlayerTemperatureComponent, TemperatureState);
 }
 
-UPlayerTemperatureComponent::UPlayerTemperatureComponent() {
-    this->MinimumTemperature = -100.00f;
-    this->MaximumTemperature = 100.00f;
-    this->DefrostTemperature = -50.00f;
-    this->BurnTemperature = 51.00f;
-    this->DouseFireTemperature = 50.00f;
-    this->TemperaturRegainSpeed = 5.00f;
-    this->DefrostingRequired = 50.00f;
-    this->OnDefrostedStatusEffect = NULL;
-    this->NormalTemperature = 0.00f;
-    this->CurrentTemperature = 0.00f;
-    this->TargetTemperature = 0.00f;
-    this->TemperatureChangeSpeed = 0;
-    this->DefrostProgress = 0.00f;
-    this->barVisible = false;
-    this->Character = NULL;
-    this->TemperatureState = EPlayerTemperatureState::Normal;
-}
 

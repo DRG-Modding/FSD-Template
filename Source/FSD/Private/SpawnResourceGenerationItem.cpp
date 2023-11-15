@@ -1,9 +1,11 @@
 #include "SpawnResourceGenerationItem.h"
 #include "Components/SphereComponent.h"
 
-ASpawnResourceGenerationItem::ASpawnResourceGenerationItem() {
+ASpawnResourceGenerationItem::ASpawnResourceGenerationItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USphereComponent>(TEXT("Root"));
     this->Resource = NULL;
     this->BaseAmount = 0.00f;
-    this->Sphere = CreateDefaultSubobject<USphereComponent>(TEXT("Root"));
+    this->Sphere = (USphereComponent*)RootComponent;
 }
+
 

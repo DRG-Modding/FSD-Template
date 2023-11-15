@@ -34,6 +34,7 @@ protected:
     ECarveFilterType Filter;
     
 public:
-    ARandomizedInstantMeshCarver();
+    ARandomizedInstantMeshCarver(const FObjectInitializer& ObjectInitializer);
+
 };
 

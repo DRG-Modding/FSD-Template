@@ -5,3 +5,4 @@ UAnimNotifyState_SoundMix::UAnimNotifyState_SoundMix() {
     this->MaxDistance = 1000.00f;
 }
 
+

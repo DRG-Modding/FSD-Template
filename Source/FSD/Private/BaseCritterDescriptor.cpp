@@ -5,3 +5,4 @@ UBaseCritterDescriptor::UBaseCritterDescriptor() {
     this->PathfinderType = DeepPathFinderType::Walk;
 }
 
+

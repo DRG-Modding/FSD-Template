@@ -32,7 +32,8 @@ protected:
     TSubclassOf<UCustomAmmoCountWidget> CustomAmmoCounterType;
     
 public:
-    UCrosshairAggregator();
+    UCrosshairAggregator(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetCrosshair(UUserWidget* Widget);
     
@@ -42,7 +43,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     UCustomAmmoCountWidget* GetCustomAmmoCounterWidget(UObject* WorldContext, APlayerController* InOwner);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -186,9 +186,10 @@ protected:
     FString LastCompletedPLSPass;
     
 public:
-    AProceduralSetup();
+    AProceduralSetup(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void StartMusicAndAmbient(int32 Music);
     

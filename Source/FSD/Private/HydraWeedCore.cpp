@@ -1,8 +1,9 @@
 #include "HydraWeedCore.h"
 
-
-
-
-AHydraWeedCore::AHydraWeedCore() {
+AHydraWeedCore::AHydraWeedCore(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
+
+
+
 

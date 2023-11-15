@@ -21,6 +21,7 @@ protected:
     TSoftClassPtr<AActor> RockCrackerIndicationClass;
     
 public:
-    ADropRockCrackerPodsSpawner();
+    ADropRockCrackerPodsSpawner(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -11,5 +11,6 @@ public:
     float Rarity;
     
     USchematicRarity();
+
 };
 

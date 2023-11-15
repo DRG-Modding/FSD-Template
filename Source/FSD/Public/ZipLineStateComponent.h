@@ -111,9 +111,10 @@ protected:
     UAudioComponent* AudioComponent;
     
 public:
-    UZipLineStateComponent();
+    UZipLineStateComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerSetSpeedBoostActivated(bool InBoostActivated);

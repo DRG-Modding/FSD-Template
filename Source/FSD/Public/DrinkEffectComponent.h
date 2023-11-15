@@ -23,7 +23,8 @@ protected:
     bool ActivatesOnlyOnceWhenDrinking;
     
 public:
-    UDrinkEffectComponent();
+    UDrinkEffectComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void StopEffect();

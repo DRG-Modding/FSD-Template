@@ -23,7 +23,8 @@ protected:
     TSubclassOf<UStatusEffect> ThornsSTE;
     
 public:
-    UThornsPerkComponent();
+    UThornsPerkComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnHit(float Damage, const FDamageData& DamageData, bool anyHealthLost);

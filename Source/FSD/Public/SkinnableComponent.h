@@ -20,7 +20,8 @@ protected:
     UItemSkin* EquippedSkinMesh;
     
 public:
-    USkinnableComponent();
+    USkinnableComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UpdateSkin(AFSDPlayerState* Player);
     

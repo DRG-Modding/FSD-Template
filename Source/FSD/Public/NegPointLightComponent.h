@@ -7,6 +7,7 @@ UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnable
 class UNegPointLightComponent : public UPointLightComponent {
     GENERATED_BODY()
 public:
-    UNegPointLightComponent();
+    UNegPointLightComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -8,6 +8,7 @@ class UFSDPFPUtils : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFSDPFPUtils();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsPlayfabLoaded();
     

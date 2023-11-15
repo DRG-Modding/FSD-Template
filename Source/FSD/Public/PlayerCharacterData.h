@@ -19,6 +19,7 @@ public:
     FHeroInfo HeroInfo;
     
     UPlayerCharacterData();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FText GetSwitchToMessage() const;
     

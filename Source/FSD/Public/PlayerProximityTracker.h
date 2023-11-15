@@ -30,7 +30,8 @@ protected:
     TArray<FProximityTriggerItem> AnyPlayerProximityTriggers;
     
 public:
-    UPlayerProximityTracker();
+    UPlayerProximityTracker(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Receive_RegisterForLocalPlayerProximity(UObject* WorldContextObject, const FVector& Location, float Distance, const FPlayerProximityDelegate& proximityCallback, bool triggerOnlyOnce);
     

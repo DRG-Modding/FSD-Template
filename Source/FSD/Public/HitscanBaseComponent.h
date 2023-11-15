@@ -102,7 +102,8 @@ protected:
     float RicochetMaxRange;
     
 public:
-    UHitscanBaseComponent();
+    UHitscanBaseComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_StopFire();

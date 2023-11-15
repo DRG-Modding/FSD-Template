@@ -1,12 +1,13 @@
 #include "OxygenSourceComponent.h"
 
-void UOxygenSourceComponent::OnTimerTick() {
-}
-
-
-UOxygenSourceComponent::UOxygenSourceComponent() {
+UOxygenSourceComponent::UOxygenSourceComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SourceRadius = 0.00f;
     this->CenterOffset = 0.00f;
     this->Mutator = NULL;
 }
+
+void UOxygenSourceComponent::OnTimerTick() {
+}
+
+
 

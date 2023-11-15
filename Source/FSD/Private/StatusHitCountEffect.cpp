@@ -5,3 +5,4 @@ UStatusHitCountEffect::UStatusHitCountEffect() {
     this->ChancePerHit = 0.20f;
 }
 
+

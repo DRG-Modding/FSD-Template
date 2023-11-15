@@ -12,5 +12,6 @@ public:
     FWarpedProperties Properties;
     
     UCSGWarped();
+
 };
 

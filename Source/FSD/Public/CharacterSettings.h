@@ -101,6 +101,7 @@ protected:
     
 public:
     UCharacterSettings();
+
     UFUNCTION(BlueprintCallable)
     void PreloadAllInventories(UAsyncManager* AsyncManager);
     

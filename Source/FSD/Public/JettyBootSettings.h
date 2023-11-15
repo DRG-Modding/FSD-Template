@@ -12,6 +12,7 @@ public:
     TArray<FJettyBootSetting> LevelSettings;
     
     UJettyBootSettings();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FJettyBootSetting GetLevelSetting(int32 InLevel) const;
     

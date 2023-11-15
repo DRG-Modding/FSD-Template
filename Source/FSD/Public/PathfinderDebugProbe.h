@@ -10,6 +10,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* Dest;
     
-    APathfinderDebugProbe();
+    APathfinderDebugProbe(const FObjectInitializer& ObjectInitializer);
+
 };
 

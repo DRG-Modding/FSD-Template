@@ -64,6 +64,7 @@ protected:
     
 public:
     USeasonsSubsystem();
+
     UFUNCTION(BlueprintCallable)
     FTimespan TimeToNewChallenge();
     

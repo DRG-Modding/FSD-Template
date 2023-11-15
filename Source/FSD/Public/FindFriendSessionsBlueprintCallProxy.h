@@ -21,6 +21,7 @@ public:
     UObject* WorldContextObject;
     
     UFindFriendSessionsBlueprintCallProxy();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UFindFriendSessionsBlueprintCallProxy* FindFriendSessions(UObject* NewWorldContextObject, const FString& FriendId);
     

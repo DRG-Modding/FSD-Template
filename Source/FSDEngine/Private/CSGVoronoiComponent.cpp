@@ -1,5 +1,6 @@
 #include "CSGVoronoiComponent.h"
 
-UCSGVoronoiComponent::UCSGVoronoiComponent() {
+UCSGVoronoiComponent::UCSGVoronoiComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

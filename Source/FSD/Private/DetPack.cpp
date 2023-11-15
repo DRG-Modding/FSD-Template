@@ -5,6 +5,28 @@
 #include "SimpleHealthComponent.h"
 #include "SingleUsableComponent.h"
 
+ADetPack::ADetPack(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->UpgradedStaggerChance = 0.00f;
+    this->UpgradedStaggerDuration = 0.00f;
+    this->UpgradedFearFactor = 0.00f;
+    this->VisualDamageRadius = 0.00f;
+    this->IncreasedFearRadius = 0.00f;
+    this->IncreasedStaggerRadius = 0.00f;
+    this->Movement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
+    this->Explosion = CreateDefaultSubobject<UExplosionComponent>(TEXT("Explosion"));
+    this->UseComp = CreateDefaultSubobject<USingleUsableComponent>(TEXT("UseComp"));
+    this->SimpleHealth = CreateDefaultSubobject<USimpleHealthComponent>(TEXT("SimpleHealth"));
+    this->Detonator = NULL;
+    this->HasExploded = false;
+    this->IsMoving = true;
+    this->ExplodesOnDeath = false;
+    this->HasExtraStaggerRadius = false;
+    this->HasExtraFearRadius = false;
+}
+
 void ADetPack::UseFearStaggerUpgrades() {
 }
 
@@ -30,22 +52,4 @@ void ADetPack::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetime
     DOREPLIFETIME(ADetPack, IsMoving);
 }
 
-ADetPack::ADetPack() {
-    this->UpgradedStaggerChance = 0.00f;
-    this->UpgradedStaggerDuration = 0.00f;
-    this->UpgradedFearFactor = 0.00f;
-    this->VisualDamageRadius = 0.00f;
-    this->IncreasedFearRadius = 0.00f;
-    this->IncreasedStaggerRadius = 0.00f;
-    this->Movement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
-    this->Explosion = CreateDefaultSubobject<UExplosionComponent>(TEXT("Explosion"));
-    this->UseComp = CreateDefaultSubobject<USingleUsableComponent>(TEXT("UseComp"));
-    this->SimpleHealth = CreateDefaultSubobject<USimpleHealthComponent>(TEXT("SimpleHealth"));
-    this->Detonator = NULL;
-    this->HasExploded = false;
-    this->IsMoving = true;
-    this->ExplodesOnDeath = false;
-    this->HasExtraStaggerRadius = false;
-    this->HasExtraFearRadius = false;
-}
 

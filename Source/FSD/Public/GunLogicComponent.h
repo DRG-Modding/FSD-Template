@@ -39,7 +39,8 @@ protected:
     float TracerSpeed;
     
 public:
-    UGunLogicComponent();
+    UGunLogicComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetMesh(UMeshComponent* NewMesh);
     

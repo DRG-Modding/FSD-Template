@@ -42,6 +42,7 @@ public:
     FUGCSettingsUpdated OnSettingsUpdated;
     
     UUGCSettings();
+
     UFUNCTION(BlueprintCallable)
     bool WriteToPlainText(const FString& Filename, const FString& TextContent, FText& OutError, bool Append);
     

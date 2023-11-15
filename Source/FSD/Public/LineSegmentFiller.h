@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     ULineSegmentFillerComponent* LineComponent;
     
-    ALineSegmentFiller();
+    ALineSegmentFiller(const FObjectInitializer& ObjectInitializer);
+
 };
 

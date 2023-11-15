@@ -20,7 +20,8 @@ protected:
     UDamageComponent* BurstFireBonusDamage;
     
 public:
-    ABurstWeapon();
+    ABurstWeapon(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial);

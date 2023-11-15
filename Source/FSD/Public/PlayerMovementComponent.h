@@ -32,7 +32,8 @@ protected:
     TWeakObjectPtr<UCharacterStateComponent> CurrentPhysUpdateState;
     
 public:
-    UPlayerMovementComponent();
+    UPlayerMovementComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void RemoveGravityModifier(AActor* SourceActor);
     

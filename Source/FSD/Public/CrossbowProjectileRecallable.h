@@ -35,9 +35,10 @@ private:
     bool IsRecallable;
     
 public:
-    UCrossbowProjectileRecallable();
+    UCrossbowProjectileRecallable(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 private:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetRecallTarget(APlayerCharacter* Player, const FTransform& startTrans);

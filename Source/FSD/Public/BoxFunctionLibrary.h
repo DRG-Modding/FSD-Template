@@ -10,6 +10,7 @@ class UBoxFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UBoxFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FBox CreateBoxAt(FVector Location, FVector Size);
     

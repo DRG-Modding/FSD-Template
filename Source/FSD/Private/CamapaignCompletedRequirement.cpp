@@ -5,3 +5,4 @@ UCamapaignCompletedRequirement::UCamapaignCompletedRequirement() {
     this->InverseRequirement = false;
 }
 
+

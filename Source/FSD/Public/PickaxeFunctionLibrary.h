@@ -15,6 +15,7 @@ class UPickaxeFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UPickaxeFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool RemovePickaxePartFromOwned(UObject* WorldContextObject, const UPickaxePart* part);
     

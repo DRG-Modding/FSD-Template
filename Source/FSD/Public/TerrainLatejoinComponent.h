@@ -17,7 +17,8 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UTerrainLatejoinComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UTerrainLatejoinComponent();
+    UTerrainLatejoinComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_TerrainLateJoinPartReceived();
     

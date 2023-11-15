@@ -47,6 +47,7 @@ protected:
     
 public:
     UVanityItem();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     bool RemoveFromOwned(UObject* WorldContext);
     
@@ -118,7 +119,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void ApplyItem(APlayerCharacter* Player, bool isPermanent) const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

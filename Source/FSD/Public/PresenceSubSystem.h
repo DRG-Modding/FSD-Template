@@ -17,5 +17,6 @@ public:
     UCommunityGoalWrapper* CommunityWI;
     
     UPresenceSubSystem();
+
 };
 

@@ -15,6 +15,7 @@ protected:
     float SearchTime;
     
 public:
-    UCrossbowStuckProjectileEffectBanshee();
+    UCrossbowStuckProjectileEffectBanshee(const FObjectInitializer& ObjectInitializer);
+
 };
 

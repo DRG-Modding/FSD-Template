@@ -39,5 +39,6 @@ protected:
     
 public:
     UUseAnimationSetting();
+
 };
 

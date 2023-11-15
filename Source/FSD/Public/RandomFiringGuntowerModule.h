@@ -88,8 +88,9 @@ protected:
     bool IsAttacking;
     
 public:
-    ARandomFiringGuntowerModule();
+    ARandomFiringGuntowerModule(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 };
 

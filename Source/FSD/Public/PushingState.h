@@ -14,6 +14,7 @@ private:
     UUseAnimationSetting* PushingAnimation;
     
 public:
-    UPushingState();
+    UPushingState(const FObjectInitializer& ObjectInitializer);
+
 };
 

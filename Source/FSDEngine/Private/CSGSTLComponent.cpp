@@ -1,5 +1,6 @@
 #include "CSGSTLComponent.h"
 
-UCSGSTLComponent::UCSGSTLComponent() {
+UCSGSTLComponent::UCSGSTLComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

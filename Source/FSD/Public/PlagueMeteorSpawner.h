@@ -40,6 +40,7 @@ protected:
     UClass* MeteorActorClassLoaded;
     
 public:
-    APlagueMeteorSpawner();
+    APlagueMeteorSpawner(const FObjectInitializer& ObjectInitializer);
+
 };
 

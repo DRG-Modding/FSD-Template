@@ -8,5 +8,6 @@ class USetCooldownPerkActivation : public UFloatPerkActivation {
     GENERATED_BODY()
 public:
     USetCooldownPerkActivation();
+
 };
 

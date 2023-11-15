@@ -49,7 +49,8 @@ protected:
     UAudioComponent* ShoutInstance;
     
 public:
-    UTerminatorShoutComponent();
+    UTerminatorShoutComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetShoutState(ETerminatorShoutState State, float delayShout);
     

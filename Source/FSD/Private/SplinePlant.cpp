@@ -4,6 +4,28 @@
 #include "Components/SplineComponent.h"
 #include "Net/UnrealNetwork.h"
 
+ASplinePlant::ASplinePlant(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("DefaultRootComponent"));
+    this->PlantSpline = CreateDefaultSubobject<USplineComponent>(TEXT("PlantSpline"));
+    this->PlantEndPoint = CreateDefaultSubobject<USceneComponent>(TEXT("PlantEndPoint"));
+    this->AudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("AudioComponent"));
+    this->AudioExtending = NULL;
+    this->AudioRetracting = NULL;
+    this->bEnabledSegmentCollision = false;
+    this->CarveRadius = 60.00f;
+    this->SegmentForwardAxis = ESplineMeshAxis::X;
+    this->SegmentLength = 100.00f;
+    this->SegmentWidthScale = 1.00f;
+    this->SegmentHeightScale = 1.00f;
+    this->PreviewLengthPercent = 1.00f;
+    this->PreviewSeed = 0;
+    this->SplineInstance = NULL;
+    this->SegmentMesh = NULL;
+    this->Seed = -1;
+    this->PlantSpline->SetupAttachment(RootComponent);
+    this->AudioComponent->SetupAttachment(RootComponent);
+}
+
 void ASplinePlant::SetTargetPlantLengthPercent(float InTargetPercent, float InPercentPerSecond, float InEaseExp) {
 }
 
@@ -47,22 +69,4 @@ void ASplinePlant::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLife
     DOREPLIFETIME(ASplinePlant, Seed);
 }
 
-ASplinePlant::ASplinePlant() {
-    this->PlantSpline = CreateDefaultSubobject<USplineComponent>(TEXT("PlantSpline"));
-    this->PlantEndPoint = CreateDefaultSubobject<USceneComponent>(TEXT("PlantEndPoint"));
-    this->AudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("AudioComponent"));
-    this->AudioExtending = NULL;
-    this->AudioRetracting = NULL;
-    this->bEnabledSegmentCollision = false;
-    this->CarveRadius = 60.00f;
-    this->SegmentForwardAxis = ESplineMeshAxis::X;
-    this->SegmentLength = 100.00f;
-    this->SegmentWidthScale = 1.00f;
-    this->SegmentHeightScale = 1.00f;
-    this->PreviewLengthPercent = 1.00f;
-    this->PreviewSeed = 0;
-    this->SplineInstance = NULL;
-    this->SegmentMesh = NULL;
-    this->Seed = -1;
-}
 

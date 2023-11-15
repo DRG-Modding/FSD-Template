@@ -1,6 +1,6 @@
 #include "MotionAudioController.h"
 
-UMotionAudioController::UMotionAudioController() {
+UMotionAudioController::UMotionAudioController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MaxValue = 0.00f;
     this->IncreseSpeed = 0.00f;
     this->DecaySpeed = 0.00f;
@@ -13,4 +13,5 @@ UMotionAudioController::UMotionAudioController() {
     this->FadeOutTime = 0.00f;
     this->AutoPlayOnSpeedThreshold = true;
 }
+
 

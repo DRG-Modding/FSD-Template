@@ -3,6 +3,18 @@
 #include "InstantUsable.h"
 #include "Net/UnrealNetwork.h"
 
+AItemDispenser::AItemDispenser(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    this->Root = (USceneComponent*)RootComponent;
+    this->Usable = CreateDefaultSubobject<UInstantUsable>(TEXT("Usable"));
+    this->itemClass = NULL;
+    this->spawnedItem = NULL;
+    this->ItemSpawnTime = 0.00f;
+    this->InitialItemSpawnTime = 0.00f;
+    this->IsOpen = false;
+    this->KillItemsOnDestuction = true;
+}
+
 void AItemDispenser::SpawnItem() {
 }
 
@@ -39,14 +51,4 @@ void AItemDispenser::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
     DOREPLIFETIME(AItemDispenser, IsOpen);
 }
 
-AItemDispenser::AItemDispenser() {
-    this->Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-    this->Usable = CreateDefaultSubobject<UInstantUsable>(TEXT("Usable"));
-    this->itemClass = NULL;
-    this->spawnedItem = NULL;
-    this->ItemSpawnTime = 0.00f;
-    this->InitialItemSpawnTime = 0.00f;
-    this->IsOpen = false;
-    this->KillItemsOnDestuction = true;
-}
 

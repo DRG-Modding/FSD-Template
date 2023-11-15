@@ -16,9 +16,10 @@ protected:
     TArray<FPerkUsage> PerkUsageReplicated;
     
 public:
-    UPerkUsageComponent();
+    UPerkUsageComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_MarkPerkUsed(UPerkAsset* Perk);
@@ -29,7 +30,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_PerkUsageReplicated();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

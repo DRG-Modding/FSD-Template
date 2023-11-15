@@ -5,3 +5,4 @@ URangedFlatDamageBonus::URangedFlatDamageBonus() {
     this->DamageClass = NULL;
 }
 
+

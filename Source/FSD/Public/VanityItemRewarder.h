@@ -16,6 +16,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UPlayerCharacterID* GivenCharacterID;
     
-    UVanityItemRewarder();
+    UVanityItemRewarder(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -1,5 +1,6 @@
 #include "SDFBaseComponent.h"
 
-USDFBaseComponent::USDFBaseComponent() {
+USDFBaseComponent::USDFBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

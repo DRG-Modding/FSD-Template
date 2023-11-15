@@ -1,5 +1,8 @@
 #include "PromotionRewardsLibrary.h"
 
+UPromotionRewardsLibrary::UPromotionRewardsLibrary() {
+}
+
 bool UPromotionRewardsLibrary::HasPendingPromotionRewards(UObject* WorldContext) {
     return false;
 }
@@ -8,6 +11,4 @@ bool UPromotionRewardsLibrary::ClaimPromotionRewards(UObject* WorldContext, APla
     return false;
 }
 
-UPromotionRewardsLibrary::UPromotionRewardsLibrary() {
-}
 

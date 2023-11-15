@@ -46,6 +46,7 @@ protected:
     
 public:
     UActorTrackingWidget();
+
     UFUNCTION(BlueprintCallable)
     void SetTargetComponent(USceneComponent* Component);
     

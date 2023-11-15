@@ -10,6 +10,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Message;
     
-    ASpawnTrigger();
+    ASpawnTrigger(const FObjectInitializer& ObjectInitializer);
+
 };
 

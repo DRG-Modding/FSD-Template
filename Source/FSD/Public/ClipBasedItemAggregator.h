@@ -38,7 +38,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ShowClipAndTotalAsOne;
     
-    UClipBasedItemAggregator();
+    UClipBasedItemAggregator(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void ReloadStarted();
     

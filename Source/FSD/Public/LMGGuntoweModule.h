@@ -59,9 +59,10 @@ protected:
     bool IsFiresoundPlaying;
     
 public:
-    ALMGGuntoweModule();
+    ALMGGuntoweModule(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void ShowShot(const FVector& Location);

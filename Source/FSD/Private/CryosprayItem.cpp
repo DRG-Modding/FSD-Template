@@ -1,4 +1,5 @@
 #include "CryosprayItem.h"
+#include "BasicWeaponFireComponent.h"
 #include "DamageComponent.h"
 #include "FSDAudioComponent.h"
 #include "MotionAudioController.h"
@@ -6,40 +7,8 @@
 #include "ProjectileLauncherComponent.h"
 #include "StickyFlameSpawner.h"
 
-void ACryosprayItem::ServerDoDamage_Implementation(FVector_NetQuantize Start, FVector_NetQuantize End, uint8 Power) {
-}
-
-void ACryosprayItem::Server_TriggerAoECold_Implementation() {
-}
-
-void ACryosprayItem::Server_PreLaunchProjectile_Implementation() {
-}
-
-
-void ACryosprayItem::OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial) {
-}
-
-void ACryosprayItem::OnRep_IsCharging(bool OldValue) {
-}
-
-void ACryosprayItem::OnProjectileSpawned(AProjectileBase* Projectile) {
-}
-
-
-void ACryosprayItem::OnPressurizedPartileShoot() {
-}
-
-
-void ACryosprayItem::All_PreLaunchProjectile_Implementation() {
-}
-
-void ACryosprayItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(ACryosprayItem, isCharging);
-}
-
-ACryosprayItem::ACryosprayItem() {
+ACryosprayItem::ACryosprayItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->WeaponFire = CreateDefaultSubobject<UBasicWeaponFireComponent>(TEXT("WeaponFire"));
     this->projectileLauncher = CreateDefaultSubobject<UProjectileLauncherComponent>(TEXT("projectileLauncher"));
     this->DamageComponent = CreateDefaultSubobject<UDamageComponent>(TEXT("DamageComponent"));
     this->StickyFlames = CreateDefaultSubobject<UStickyFlameSpawner>(TEXT("StickyFlames"));
@@ -74,5 +43,41 @@ ACryosprayItem::ACryosprayItem() {
     this->RePressureProgress = 0.00f;
     this->LongReachEnabled = false;
     this->AoEColdEnabled = false;
+    this->ChargeUpAudioComponent->SetupAttachment(RootComponent);
+    this->VelocityAudio->SetupAttachment(FPMesh);
 }
+
+void ACryosprayItem::ServerDoDamage_Implementation(FVector_NetQuantize Start, FVector_NetQuantize End, uint8 Power) {
+}
+
+void ACryosprayItem::Server_TriggerAoECold_Implementation() {
+}
+
+void ACryosprayItem::Server_PreLaunchProjectile_Implementation() {
+}
+
+
+void ACryosprayItem::OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial) {
+}
+
+void ACryosprayItem::OnRep_IsCharging(bool OldValue) {
+}
+
+void ACryosprayItem::OnProjectileSpawned(AProjectileBase* Projectile) {
+}
+
+
+void ACryosprayItem::OnPressurizedPartileShoot() {
+}
+
+
+void ACryosprayItem::All_PreLaunchProjectile_Implementation() {
+}
+
+void ACryosprayItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    
+    DOREPLIFETIME(ACryosprayItem, isCharging);
+}
+
 

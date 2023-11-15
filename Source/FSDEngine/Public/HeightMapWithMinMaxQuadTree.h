@@ -39,6 +39,7 @@ public:
     bool Initialized;
     
     UHeightMapWithMinMaxQuadTree();
+
     UFUNCTION(BlueprintCallable)
     void Generate();
     

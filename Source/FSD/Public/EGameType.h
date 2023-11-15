@@ -7,6 +7,6 @@ enum class EGameType : uint8 {
     Fully,
     Progression,
     Sandbox,
-    Vanilla = 0x63,
+    Vanilla = 99,
 };
 

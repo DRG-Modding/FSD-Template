@@ -15,6 +15,7 @@ public:
     FOnTutorialFinished OnTutorialFinished;
     
     UTutorialContentWidget();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnShown();
     

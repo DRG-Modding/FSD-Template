@@ -10,6 +10,7 @@ class UFSDMath : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFSDMath();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FVector SphericalToCartesian(float Radius, float azimuth, float elecation);
     

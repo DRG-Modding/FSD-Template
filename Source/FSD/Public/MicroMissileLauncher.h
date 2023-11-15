@@ -72,7 +72,8 @@ protected:
     USoundCue* ChargedMissileFireSound;
     
 public:
-    AMicroMissileLauncher();
+    AMicroMissileLauncher(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetIsCharging(bool isCharging);

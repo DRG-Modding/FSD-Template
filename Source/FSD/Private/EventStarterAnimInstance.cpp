@@ -7,3 +7,4 @@ UEventStarterAnimInstance::UEventStarterAnimInstance() {
     this->IsEventActive = false;
 }
 
+

@@ -18,6 +18,7 @@ protected:
     float MaxPitch;
     
 public:
-    UAttachedStateComponent();
+    UAttachedStateComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

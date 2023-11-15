@@ -18,6 +18,7 @@ public:
     TMap<UVanityItem*, FSchematicBankItem> VanityItems;
     
     UVanitySchematicBank();
+
     UFUNCTION(BlueprintCallable)
     void AppendItems(TArray<UVanityItem*>& toArray) const;
     

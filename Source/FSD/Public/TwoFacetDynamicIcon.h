@@ -47,6 +47,7 @@ protected:
     
 public:
     UTwoFacetDynamicIcon();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdatePreview();

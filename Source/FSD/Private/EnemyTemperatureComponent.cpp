@@ -1,21 +1,6 @@
 #include "EnemyTemperatureComponent.h"
 
-void UEnemyTemperatureComponent::TimerCallback() {
-}
-
-void UEnemyTemperatureComponent::OnDeath(UHealthComponent* HealthComponent, float damageAmount, const FDamageData& DamageData, const TArray<UDamageTag*>& Tags) {
-}
-
-void UEnemyTemperatureComponent::DoTemperatureShock(UStatusEffectsComponent* Status) {
-}
-
-void UEnemyTemperatureComponent::All_IceDetonation_Implementation() {
-}
-
-void UEnemyTemperatureComponent::All_FireDetonation_Implementation() {
-}
-
-UEnemyTemperatureComponent::UEnemyTemperatureComponent() {
+UEnemyTemperatureComponent::UEnemyTemperatureComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->UpdateTime = 1.00f;
     this->DieIfFrozen = false;
     this->DieIfBurning = false;
@@ -35,4 +20,20 @@ UEnemyTemperatureComponent::UEnemyTemperatureComponent() {
     this->FireDetonationStack = 0;
     this->IceDetonationStack = 0;
 }
+
+void UEnemyTemperatureComponent::TimerCallback() {
+}
+
+void UEnemyTemperatureComponent::OnDeath(UHealthComponent* HealthComponent, float damageAmount, const FDamageData& DamageData, const TArray<UDamageTag*>& Tags) {
+}
+
+void UEnemyTemperatureComponent::DoTemperatureShock(UStatusEffectsComponent* Status) {
+}
+
+void UEnemyTemperatureComponent::All_IceDetonation_Implementation() {
+}
+
+void UEnemyTemperatureComponent::All_FireDetonation_Implementation() {
+}
+
 

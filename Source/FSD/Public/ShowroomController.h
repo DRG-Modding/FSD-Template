@@ -16,7 +16,8 @@ protected:
     AShowroomStage* Stage;
     
 public:
-    UShowroomController();
+    UShowroomController(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetLightChannels(AActor* Actor);

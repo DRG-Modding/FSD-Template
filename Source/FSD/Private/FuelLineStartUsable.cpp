@@ -1,5 +1,6 @@
 #include "FuelLineStartUsable.h"
 
-UFuelLineStartUsable::UFuelLineStartUsable() {
+UFuelLineStartUsable::UFuelLineStartUsable(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

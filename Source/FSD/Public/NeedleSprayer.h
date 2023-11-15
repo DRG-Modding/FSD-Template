@@ -98,7 +98,8 @@ protected:
     float DebugLinesDuration;
     
 public:
-    ANeedleSprayer();
+    ANeedleSprayer(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnSpinningChanged(bool isSpinning);
@@ -107,7 +108,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void OnHit(const FHitResult& Result, bool IsPenetrating);
     
-    
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable)
     APlayerCharacter* GetPlayerCharacter() const override PURE_VIRTUAL(GetPlayerCharacter, return NULL;);

@@ -1,5 +1,6 @@
 #include "AsyncPathRequests.h"
 
-UAsyncPathRequests::UAsyncPathRequests() {
+UAsyncPathRequests::UAsyncPathRequests(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

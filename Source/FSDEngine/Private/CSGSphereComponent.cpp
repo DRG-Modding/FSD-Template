@@ -1,5 +1,6 @@
 #include "CSGSphereComponent.h"
 
-UCSGSphereComponent::UCSGSphereComponent() {
+UCSGSphereComponent::UCSGSphereComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

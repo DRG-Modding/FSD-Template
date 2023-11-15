@@ -1,5 +1,6 @@
 #include "PostProcessingManager.h"
 
-APostProcessingManager::APostProcessingManager() {
+APostProcessingManager::APostProcessingManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

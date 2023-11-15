@@ -320,9 +320,10 @@ protected:
     EDroneAIState CurrentState;
     
 public:
-    ABosco();
+    ABosco(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void UsePlayerActivatedAbillity(EAbilityIndex Index, AActor* aTarget, const FVector& aLocation);
     
@@ -409,7 +410,7 @@ public:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_OnSelfDestruct();
     
-    
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable)
     APlayerCharacter* GetPlayerCharacter() const override PURE_VIRTUAL(GetPlayerCharacter, return NULL;);

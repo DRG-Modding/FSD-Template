@@ -1,5 +1,10 @@
 #include "RichTextInputWidget.h"
 
+URichTextInputWidget::URichTextInputWidget() : UUserWidget(FObjectInitializer::Get()) {
+    this->InputSource = EFSDInputSource::None;
+    this->RichTextBlock = NULL;
+}
+
 void URichTextInputWidget::ScaleTextBlockToHeight(UTextBlock* InTextBlock, float LineHeight) {
 }
 
@@ -22,8 +27,4 @@ float URichTextInputWidget::GetLineHeight() const {
 void URichTextInputWidget::ApplyTextStyle(UTextBlock* InTextBlock, const FTextBlockStyle& InTextStyle) {
 }
 
-URichTextInputWidget::URichTextInputWidget() : UUserWidget(FObjectInitializer::Get()) {
-    this->InputSource = EFSDInputSource::None;
-    this->RichTextBlock = NULL;
-}
 

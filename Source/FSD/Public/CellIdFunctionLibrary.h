@@ -8,5 +8,6 @@ class UCellIdFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UCellIdFunctionLibrary();
+
 };
 

@@ -8,5 +8,6 @@ class UWeakpointDamageCondition : public UDamageCondition {
     GENERATED_BODY()
 public:
     UWeakpointDamageCondition();
+
 };
 

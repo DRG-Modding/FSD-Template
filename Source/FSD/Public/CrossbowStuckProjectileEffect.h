@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCrossbowStuckProjectileEffect : public UActorComponent {
     GENERATED_BODY()
 public:
-    UCrossbowStuckProjectileEffect();
+    UCrossbowStuckProjectileEffect(const FObjectInitializer& ObjectInitializer);
+
 };
 

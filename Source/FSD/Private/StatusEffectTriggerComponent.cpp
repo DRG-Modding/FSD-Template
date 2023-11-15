@@ -1,5 +1,10 @@
 #include "StatusEffectTriggerComponent.h"
 
+UStatusEffectTriggerComponent::UStatusEffectTriggerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->collider = NULL;
+    this->RemoveStatusEffectOnEndOverlap = true;
+}
+
 void UStatusEffectTriggerComponent::OnOverlapEnd(AActor* MyActor, AActor* OtherActor) {
 }
 
@@ -15,8 +20,4 @@ void UStatusEffectTriggerComponent::OnComponentOverlapBegin(UPrimitiveComponent*
 void UStatusEffectTriggerComponent::AddActorToIgnoreList(AActor* Actor) {
 }
 
-UStatusEffectTriggerComponent::UStatusEffectTriggerComponent() {
-    this->collider = NULL;
-    this->RemoveStatusEffectOnEndOverlap = true;
-}
 

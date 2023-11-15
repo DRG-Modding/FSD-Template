@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRDGExplodeDelegate OnDetonated;
     
-    URDGComponent();
+    URDGComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

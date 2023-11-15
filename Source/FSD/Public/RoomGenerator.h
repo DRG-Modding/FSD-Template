@@ -13,6 +13,7 @@ public:
     TArray<URoomFeature*> RoomFeatures;
     
     URoomGenerator();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<URoomFeature*> GetAllRoomFeatures() const;
     

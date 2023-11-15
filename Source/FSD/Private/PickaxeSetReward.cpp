@@ -10,3 +10,4 @@ UPickaxeSetReward::UPickaxeSetReward() {
     this->Material = NULL;
 }
 
+

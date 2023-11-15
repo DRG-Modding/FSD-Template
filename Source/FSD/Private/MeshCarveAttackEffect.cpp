@@ -6,3 +6,4 @@ UMeshCarveAttackEffect::UMeshCarveAttackEffect() {
     this->CarverOffset = 0.00f;
 }
 
+

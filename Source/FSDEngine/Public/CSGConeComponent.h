@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCSGConeProperties Properties;
     
-    UCSGConeComponent();
+    UCSGConeComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

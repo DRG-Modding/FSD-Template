@@ -1,5 +1,6 @@
 #include "ShowroomItem.h"
 
-AShowroomItem::AShowroomItem() {
+AShowroomItem::AShowroomItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

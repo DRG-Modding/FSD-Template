@@ -50,9 +50,10 @@ protected:
     bool KillItemsOnDestuction;
     
 public:
-    AItemDispenser();
+    AItemDispenser(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SpawnItem();

@@ -15,6 +15,7 @@ public:
     TArray<FVanityNode> Nodes;
     
     UTreeOfVanity();
+
     UFUNCTION(BlueprintCallable)
     void ClearNodes();
     

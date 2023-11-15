@@ -21,7 +21,8 @@ protected:
     float ExplosionSize;
     
 public:
-    UHugeExplosionComponent();
+    UHugeExplosionComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void TriggerExplosion(FVector Location);
     

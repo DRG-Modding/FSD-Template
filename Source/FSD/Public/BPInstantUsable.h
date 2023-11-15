@@ -10,7 +10,8 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UBPInstantUsable : public UInstantUsable {
     GENERATED_BODY()
 public:
-    UBPInstantUsable();
+    UBPInstantUsable(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool BPCanUse(APlayerCharacter* User, USceneComponent* useCollider) const;

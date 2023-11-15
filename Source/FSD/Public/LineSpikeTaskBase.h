@@ -8,5 +8,6 @@ class ULineSpikeTaskBase : public UObject {
     GENERATED_BODY()
 public:
     ULineSpikeTaskBase();
+
 };
 

@@ -1,5 +1,6 @@
 #include "SDFSphereComponent.h"
 
-USDFSphereComponent::USDFSphereComponent() {
+USDFSphereComponent::USDFSphereComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

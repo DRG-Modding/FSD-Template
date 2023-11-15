@@ -1,6 +1,15 @@
 #include "EliminationObjective.h"
 #include "Net/UnrealNetwork.h"
 
+UEliminationObjective::UEliminationObjective(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ObjectCount = 0;
+    this->Positioning = NULL;
+    this->CaveInfluencer = NULL;
+    this->DebrisRadius = 1500.00f;
+    this->EnemiesKilled = 0;
+    this->EnemiesToKill = 0;
+}
+
 void UEliminationObjective::RegisterEliminationTargets(const TArray<AFSDPawn*>& Targets) {
 }
 
@@ -26,12 +35,4 @@ void UEliminationObjective::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>
     DOREPLIFETIME(UEliminationObjective, EnemiesToKill);
 }
 
-UEliminationObjective::UEliminationObjective() {
-    this->ObjectCount = 0;
-    this->Positioning = NULL;
-    this->CaveInfluencer = NULL;
-    this->DebrisRadius = 1500.00f;
-    this->EnemiesKilled = 0;
-    this->EnemiesToKill = 0;
-}
 

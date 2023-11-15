@@ -27,7 +27,8 @@ protected:
     bool CheckEndOverlaps;
     
 public:
-    ADroneStream();
+    ADroneStream(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Receive_OnAbilityDataSet();

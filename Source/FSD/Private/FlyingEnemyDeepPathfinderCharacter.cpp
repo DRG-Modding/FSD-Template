@@ -1,5 +1,12 @@
 #include "FlyingEnemyDeepPathfinderCharacter.h"
 
+AFlyingEnemyDeepPathfinderCharacter::AFlyingEnemyDeepPathfinderCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->FrozenMaterial = NULL;
+    this->FrozenAsset = NULL;
+    this->FrozenDeathSound = NULL;
+    this->FrozenDeathparticles = NULL;
+}
+
 void AFlyingEnemyDeepPathfinderCharacter::TriggerFrozenRagdoll() {
 }
 
@@ -7,10 +14,4 @@ void AFlyingEnemyDeepPathfinderCharacter::OnFreezeImpact(UPrimitiveComponent* Hi
 }
 
 
-AFlyingEnemyDeepPathfinderCharacter::AFlyingEnemyDeepPathfinderCharacter() {
-    this->FrozenMaterial = NULL;
-    this->FrozenAsset = NULL;
-    this->FrozenDeathSound = NULL;
-    this->FrozenDeathparticles = NULL;
-}
 

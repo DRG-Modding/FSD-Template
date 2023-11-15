@@ -31,6 +31,7 @@ protected:
     
 public:
     UYesNoPromptAction();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static UYesNoPromptAction* PromptYesNo(UObject* WorldContext, FYesNoPromptSettings Prompt);
     

@@ -32,5 +32,6 @@ public:
     float EndCullDistance;
     
     UDebrisMesh();
+
 };
 

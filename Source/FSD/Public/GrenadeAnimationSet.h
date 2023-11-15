@@ -22,5 +22,6 @@ public:
     UAnimMontage* TP_ThrowAnimation;
     
     UGrenadeAnimationSet();
+
 };
 

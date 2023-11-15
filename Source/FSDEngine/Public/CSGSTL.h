@@ -12,5 +12,6 @@ public:
     FCSGSTLProperties Properties;
     
     UCSGSTL();
+
 };
 

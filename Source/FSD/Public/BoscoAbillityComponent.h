@@ -54,7 +54,8 @@ protected:
     bool InitializeAtBeginPlay;
     
 public:
-    UBoscoAbillityComponent();
+    UBoscoAbillityComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetMaxCharges(bool Total) const;
     
@@ -64,7 +65,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetCharges() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

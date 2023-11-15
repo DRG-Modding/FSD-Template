@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftClassPtr<AShowroomStage> ShowroomStage;
     
-    AShowroomItem();
+    AShowroomItem(const FObjectInitializer& ObjectInitializer);
+
 };
 

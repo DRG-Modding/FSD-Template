@@ -60,7 +60,8 @@ protected:
     TArray<UObject*> ScriptedWavesBlockStack;
     
 public:
-    UEnemyWaveManager();
+    UEnemyWaveManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     UEnemyWaveController* TriggerWave(TSubclassOf<UEnemyWaveController> waveClass);
     

@@ -8,5 +8,6 @@ class UDualWieldAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:
     UDualWieldAnimInstance();
+
 };
 

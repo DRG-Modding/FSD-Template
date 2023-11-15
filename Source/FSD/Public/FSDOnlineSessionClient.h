@@ -8,5 +8,6 @@ class UFSDOnlineSessionClient : public UOnlineSessionClient {
     GENERATED_BODY()
 public:
     UFSDOnlineSessionClient();
+
 };
 

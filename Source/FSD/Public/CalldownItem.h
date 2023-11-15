@@ -43,7 +43,8 @@ protected:
     float CooldownRemaining;
     
 public:
-    ACalldownItem();
+    ACalldownItem(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_Call_Resupply(const FVector& Location);

@@ -17,5 +17,6 @@ private:
     
 public:
     UBTTask_SetCondition();
+
 };
 

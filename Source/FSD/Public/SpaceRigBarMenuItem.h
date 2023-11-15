@@ -18,6 +18,7 @@ protected:
     
 public:
     USpaceRigBarMenuItem();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Unselect();
     

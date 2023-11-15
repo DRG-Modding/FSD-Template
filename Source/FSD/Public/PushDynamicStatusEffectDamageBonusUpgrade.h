@@ -22,6 +22,7 @@ protected:
     
 public:
     UPushDynamicStatusEffectDamageBonusUpgrade();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FUpgradeValues GetUpgradedValue(TSubclassOf<AActor> Item, AFSDPlayerState* Player, FName NewKey);
     

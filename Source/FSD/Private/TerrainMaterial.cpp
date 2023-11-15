@@ -1,5 +1,23 @@
 #include "TerrainMaterial.h"
 
+UTerrainMaterial::UTerrainMaterial() {
+    this->PathfinderPreventSpawning = true;
+    this->Collide = false;
+    this->Diggable = false;
+    this->CanBeDrilled = true;
+    this->ExplosionProof = false;
+    this->MeltsInFire = false;
+    this->PlatformDissolvable = false;
+    this->ResourceData = NULL;
+    this->HitsNeededToMine = 2;
+    this->PickAxeDigSize = 105.00f;
+    this->RemoveDebrisOnFirstHit = true;
+    this->ShoutLookAt = NULL;
+    this->ShoutOnDig = NULL;
+    this->TerrainType = NULL;
+    this->Precious = false;
+}
+
 void UTerrainMaterial::TestMaterialEffects(UTerrainMaterial* Material, TArray<FTestTerrainMaterialItem>& Items) {
 }
 
@@ -26,20 +44,4 @@ UMaterialInstance* UTerrainMaterial::GetDigParticlesMaterialOverride() const {
     return NULL;
 }
 
-UTerrainMaterial::UTerrainMaterial() {
-    this->Collide = false;
-    this->Diggable = false;
-    this->CanBeDrilled = true;
-    this->ExplosionProof = false;
-    this->MeltsInFire = false;
-    this->PlatformDissolvable = false;
-    this->ResourceData = NULL;
-    this->HitsNeededToMine = 2;
-    this->PickAxeDigSize = 105.00f;
-    this->RemoveDebrisOnFirstHit = true;
-    this->ShoutLookAt = NULL;
-    this->ShoutOnDig = NULL;
-    this->TerrainType = NULL;
-    this->Precious = false;
-}
 

@@ -1,13 +1,6 @@
 #include "RoomBurner.h"
 
-void ARoomBurner::SpawnEncounter(AProceduralSetup* Setup) {
-}
-
-URoomGenerator* ARoomBurner::GetRoomGenerator() const {
-    return NULL;
-}
-
-ARoomBurner::ARoomBurner() {
+ARoomBurner::ARoomBurner(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->LiveUpdateEditor = false;
     this->MirrorTest = ERoomMirror::None;
     this->RoomGenerator = NULL;
@@ -33,4 +26,12 @@ ARoomBurner::ARoomBurner() {
     this->PLSLiveEditor = NULL;
     this->LiveEditRoomGenerator = NULL;
 }
+
+void ARoomBurner::SpawnEncounter(AProceduralSetup* Setup) {
+}
+
+URoomGenerator* ARoomBurner::GetRoomGenerator() const {
+    return NULL;
+}
+
 

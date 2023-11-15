@@ -18,6 +18,7 @@ protected:
     bool CurrentlyActive;
     
 public:
-    UCrossbowStuckProjectileEffectApplication();
+    UCrossbowStuckProjectileEffectApplication(const FObjectInitializer& ObjectInitializer);
+
 };
 

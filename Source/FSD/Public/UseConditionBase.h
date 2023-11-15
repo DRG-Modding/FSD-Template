@@ -8,5 +8,6 @@ class UUseConditionBase : public UObject {
     GENERATED_BODY()
 public:
     UUseConditionBase();
+
 };
 

@@ -12,6 +12,7 @@ protected:
     bool bEnabled;
     
 public:
-    UCharacterSightSensorBase();
+    UCharacterSightSensorBase(const FObjectInitializer& ObjectInitializer);
+
 };
 

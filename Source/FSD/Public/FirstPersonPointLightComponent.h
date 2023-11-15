@@ -7,6 +7,7 @@ UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnable
 class UFirstPersonPointLightComponent : public UPointLightComponent {
     GENERATED_BODY()
 public:
-    UFirstPersonPointLightComponent();
+    UFirstPersonPointLightComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

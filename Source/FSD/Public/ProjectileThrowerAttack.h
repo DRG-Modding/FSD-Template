@@ -37,7 +37,8 @@ private:
     FVector ThrowerOffset;
     
 public:
-    UProjectileThrowerAttack();
+    UProjectileThrowerAttack(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable)
     void OnThrowerMontageEnded(UAnimMontage* Montage, bool bInterrupted);

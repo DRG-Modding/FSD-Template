@@ -1,9 +1,6 @@
 #include "PlasmaCarbine.h"
 
-void APlasmaCarbine::ApplyShieldDamage_Implementation() {
-}
-
-APlasmaCarbine::APlasmaCarbine() {
+APlasmaCarbine::APlasmaCarbine(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RateOfFireBoostOnFullShield = 1.00f;
     this->RemoveShieldOnOverheat = false;
     this->RemoveShieldOnReload = false;
@@ -15,4 +12,8 @@ APlasmaCarbine::APlasmaCarbine() {
     this->TP_CharacterReloadEndMontage = NULL;
     this->WPN_ItemReloadEndMontage = NULL;
 }
+
+void APlasmaCarbine::ApplyShieldDamage_Implementation() {
+}
+
 

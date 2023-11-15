@@ -19,7 +19,8 @@ protected:
     UNiagaraComponent* NiagaraComponent;
     
 public:
-    UInstancedNiagaraComponent();
+    UInstancedNiagaraComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SpawnParticlesFromName(const FVector Location, const FName EmitterName);
     

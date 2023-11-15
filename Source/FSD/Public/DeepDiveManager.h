@@ -62,6 +62,7 @@ protected:
     
 public:
     UDeepDiveManager();
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetDeepDive(UDeepDive* DeepDive);
     
@@ -95,7 +96,7 @@ public:
     UFUNCTION(BlueprintCallable)
     bool CompleteCurrentSingleMission();
     
-    
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void StartDive() override PURE_VIRTUAL(StartDive,);

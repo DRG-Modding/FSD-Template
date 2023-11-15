@@ -37,5 +37,6 @@ public:
     TArray<FLayeredNoise> NoiseLayers;
     
     UFloodFillSettings();
+
 };
 

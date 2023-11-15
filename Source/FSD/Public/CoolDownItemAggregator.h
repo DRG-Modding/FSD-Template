@@ -27,7 +27,8 @@ protected:
     AItem* Item;
     
 public:
-    UCoolDownItemAggregator();
+    UCoolDownItemAggregator(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetPaused(bool IsPaused);
     

@@ -12,5 +12,6 @@ public:
     FVanityEventSource EventSource;
     
     UVanityEventSourceDataAsset();
+
 };
 

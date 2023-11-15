@@ -17,5 +17,6 @@ public:
     bool HideSourceBone;
     
     UAnimNotify_CopyBoneVisibility();
+
 };
 

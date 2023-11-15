@@ -5,3 +5,4 @@ UPermanentItemUpgradeReward::UPermanentItemUpgradeReward() {
     this->Upgrade = NULL;
 }
 
+

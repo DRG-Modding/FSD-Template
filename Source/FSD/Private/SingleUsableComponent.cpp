@@ -1,6 +1,25 @@
 #include "SingleUsableComponent.h"
 #include "Net/UnrealNetwork.h"
 
+USingleUsableComponent::USingleUsableComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->AudioBeginUse = NULL;
+    this->AudioFailedUse = NULL;
+    this->AudioCompletedUse = NULL;
+    this->BoscoLaserpointerShout = NULL;
+    this->CoopUse = true;
+    this->UseSpeedStat = NULL;
+    this->CoopUseMultiplier = 1.00f;
+    this->Usable = false;
+    this->TurnOffAfterUse = false;
+    this->MultipleUse = false;
+    this->bShowUsingUI = true;
+    this->useDuration = 0.00f;
+    this->Progress = 0.00f;
+    this->DesiredProgress = 0.00f;
+    this->userCount = 0;
+    this->AudioBeginUseInstance = NULL;
+}
+
 void USingleUsableComponent::Use(APlayerCharacter* User, EInputKeys Key, float DeltaTime) {
 }
 
@@ -33,22 +52,4 @@ void USingleUsableComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty
     DOREPLIFETIME(USingleUsableComponent, userCount);
 }
 
-USingleUsableComponent::USingleUsableComponent() {
-    this->AudioBeginUse = NULL;
-    this->AudioFailedUse = NULL;
-    this->AudioCompletedUse = NULL;
-    this->BoscoLaserpointerShout = NULL;
-    this->CoopUse = true;
-    this->UseSpeedStat = NULL;
-    this->CoopUseMultiplier = 1.00f;
-    this->Usable = false;
-    this->TurnOffAfterUse = false;
-    this->MultipleUse = false;
-    this->bShowUsingUI = true;
-    this->useDuration = 0.00f;
-    this->Progress = 0.00f;
-    this->DesiredProgress = 0.00f;
-    this->userCount = 0;
-    this->AudioBeginUseInstance = NULL;
-}
 

@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UDeepPathfinderSceneComponent : public USceneComponent {
     GENERATED_BODY()
 public:
-    UDeepPathfinderSceneComponent();
+    UDeepPathfinderSceneComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

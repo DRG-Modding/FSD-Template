@@ -21,7 +21,8 @@ protected:
     bool ProjectilesIgnoreEachOther;
     
 public:
-    UMultiprojectileSpawner();
+    UMultiprojectileSpawner(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetIsFiring() const;
     

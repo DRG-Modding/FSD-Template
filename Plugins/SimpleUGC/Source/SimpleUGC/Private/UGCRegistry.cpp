@@ -1,5 +1,9 @@
 #include "UGCRegistry.h"
 
+UUGCRegistry::UUGCRegistry() {
+    this->PackageChange = false;
+}
+
 void UUGCRegistry::UnmountUGCPackages(TArray<FString> ExcludingModIds) {
 }
 
@@ -75,7 +79,4 @@ bool UUGCRegistry::AreDeprecatedModsInstalled() {
     return false;
 }
 
-UUGCRegistry::UUGCRegistry() {
-    this->PackageChange = false;
-}
 

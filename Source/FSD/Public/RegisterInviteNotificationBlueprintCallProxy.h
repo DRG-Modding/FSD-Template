@@ -24,6 +24,7 @@ public:
     UObject* WorldContextObject;
     
     URegisterInviteNotificationBlueprintCallProxy();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static URegisterInviteNotificationBlueprintCallProxy* RegisterInvitiNotification(UObject* NewWorldContextObject);
     

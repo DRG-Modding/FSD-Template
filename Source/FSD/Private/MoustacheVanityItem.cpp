@@ -4,3 +4,4 @@ UMoustacheVanityItem::UMoustacheVanityItem() {
     this->RequiresSlimArmor = false;
 }
 
+

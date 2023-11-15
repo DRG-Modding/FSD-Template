@@ -19,7 +19,8 @@ public:
     UItemID* OwningItem;
     
     UOverclockBank();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

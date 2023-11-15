@@ -65,7 +65,8 @@ protected:
     TArray<FHitscanDelayedImpact> DelayedImpacts;
     
 public:
-    UHitscanComponent();
+    UHitscanComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_RegisterRicochetHit_Terrain(FVector_NetQuantize Origin, FVector_NetQuantize Location, FVector_NetQuantizeNormal Normal, UFSDPhysicalMaterial* PhysMaterial);

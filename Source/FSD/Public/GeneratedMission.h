@@ -79,6 +79,7 @@ protected:
     
 public:
     UGeneratedMission();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Recieve_SetupPLS(AProceduralSetup* pls);

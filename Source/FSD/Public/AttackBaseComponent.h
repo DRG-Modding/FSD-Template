@@ -29,7 +29,8 @@ protected:
     float MaxRange;
     
 public:
-    UAttackBaseComponent();
+    UAttackBaseComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     UAttackBaseComponent* ReplaceAttackComponent(UAttackBaseComponent* componentToReplace, TSubclassOf<UAttackBaseComponent> newComponentClass);
     

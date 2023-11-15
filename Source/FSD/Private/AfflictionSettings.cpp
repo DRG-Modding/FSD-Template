@@ -15,3 +15,4 @@ UAfflictionSettings::UAfflictionSettings() {
     this->ExplodingSounds.AddDefaulted(5);
 }
 
+

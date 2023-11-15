@@ -12,3 +12,4 @@ UConvertedRobotAnimInstance::UConvertedRobotAnimInstance() {
     this->NormalWalkSpeed = 200.00f;
 }
 
+

@@ -8,6 +8,7 @@ class URunningMissionBP : public UObject {
     GENERATED_BODY()
 public:
     URunningMissionBP();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void StartLogic();

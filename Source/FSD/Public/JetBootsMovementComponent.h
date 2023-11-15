@@ -120,9 +120,10 @@ protected:
     bool overHeated;
     
 public:
-    UJetBootsMovementComponent();
+    UJetBootsMovementComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetOverheated(bool Current);

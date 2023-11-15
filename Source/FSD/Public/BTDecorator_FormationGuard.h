@@ -8,5 +8,6 @@ class UBTDecorator_FormationGuard : public UBTDecorator {
     GENERATED_BODY()
 public:
     UBTDecorator_FormationGuard();
+
 };
 

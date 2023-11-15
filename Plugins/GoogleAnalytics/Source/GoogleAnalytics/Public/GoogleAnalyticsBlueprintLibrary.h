@@ -10,6 +10,7 @@ class GOOGLEANALYTICS_API UGoogleAnalyticsBlueprintLibrary : public UBlueprintFu
     GENERATED_BODY()
 public:
     UGoogleAnalyticsBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void SetTrackingId(const FString& TrackingId);
     

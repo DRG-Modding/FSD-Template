@@ -1,6 +1,12 @@
 #include "TrackBuilderUsable.h"
 #include "Net/UnrealNetwork.h"
 
+UTrackBuilderUsable::UTrackBuilderUsable(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->BuilderItemType = NULL;
+    this->TrackStartComponent = NULL;
+    this->NextSegment = NULL;
+}
+
 void UTrackBuilderUsable::OnRep_NextSegment() {
 }
 
@@ -21,9 +27,4 @@ void UTrackBuilderUsable::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(UTrackBuilderUsable, InUseBy);
 }
 
-UTrackBuilderUsable::UTrackBuilderUsable() {
-    this->BuilderItemType = NULL;
-    this->TrackStartComponent = NULL;
-    this->NextSegment = NULL;
-}
 

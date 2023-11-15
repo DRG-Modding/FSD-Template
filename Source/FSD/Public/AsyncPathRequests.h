@@ -12,6 +12,7 @@ public:
     UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<TWeakObjectPtr<UObject>> RequestListeners;
     
-    UAsyncPathRequests();
+    UAsyncPathRequests(const FObjectInitializer& ObjectInitializer);
+
 };
 

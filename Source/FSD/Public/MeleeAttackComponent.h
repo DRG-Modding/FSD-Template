@@ -35,7 +35,8 @@ protected:
     FMeleeAttackDelegate OnAttackEndedEvent;
     
 public:
-    UMeleeAttackComponent();
+    UMeleeAttackComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     UAnimMontage* SelectMontage() const;

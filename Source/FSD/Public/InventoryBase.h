@@ -24,9 +24,10 @@ private:
     AActor* LastEquippedActors[2];
     
 public:
-    UInventoryBase();
+    UInventoryBase(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 private:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetEquippedActor(const FEquippedActorData& Actor, bool CallClientDelayed);

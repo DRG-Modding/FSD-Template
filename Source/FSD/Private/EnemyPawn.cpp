@@ -5,6 +5,13 @@
 #include "Net/UnrealNetwork.h"
 #include "PawnStatsComponent.h"
 
+AEnemyPawn::AEnemyPawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Health = CreateDefaultSubobject<UEnemyHealthComponent>(TEXT("Health"));
+    this->Stats = CreateDefaultSubobject<UPawnStatsComponent>(TEXT("Stats"));
+    this->Affliction = CreateDefaultSubobject<UEnemyPawnAfflictionComponent>(TEXT("Affliction"));
+    this->enemy = CreateDefaultSubobject<UEnemyComponent>(TEXT("enemy"));
+}
+
 
 void AEnemyPawn::OnRep_QueuedMontage() {
 }
@@ -16,10 +23,4 @@ void AEnemyPawn::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifeti
     DOREPLIFETIME(AEnemyPawn, QueuedMontage);
 }
 
-AEnemyPawn::AEnemyPawn() {
-    this->Health = CreateDefaultSubobject<UEnemyHealthComponent>(TEXT("Health"));
-    this->Stats = CreateDefaultSubobject<UPawnStatsComponent>(TEXT("Stats"));
-    this->Affliction = CreateDefaultSubobject<UEnemyPawnAfflictionComponent>(TEXT("Affliction"));
-    this->enemy = CreateDefaultSubobject<UEnemyComponent>(TEXT("enemy"));
-}
 

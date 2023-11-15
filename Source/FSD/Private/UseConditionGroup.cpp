@@ -5,3 +5,4 @@ UUseConditionGroup::UUseConditionGroup() {
     this->Collection = NULL;
 }
 
+

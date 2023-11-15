@@ -1,5 +1,6 @@
 #include "UpgradableItemComponent.h"
 
-UUpgradableItemComponent::UUpgradableItemComponent() {
+UUpgradableItemComponent::UUpgradableItemComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

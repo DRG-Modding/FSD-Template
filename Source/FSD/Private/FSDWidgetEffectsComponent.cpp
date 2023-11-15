@@ -1,5 +1,8 @@
 #include "FSDWidgetEffectsComponent.h"
 
+UFSDWidgetEffectsComponent::UFSDWidgetEffectsComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UFSDWidgetEffectsComponent::StartTextCounter(UObject* WorldContext, UTextBlock*& Widget, float Start, float End, float Duration, int32 MaxDigits, float StartDelay) {
 }
 
@@ -27,6 +30,4 @@ void UFSDWidgetEffectsComponent::FadeOutWidget(UObject* WorldContext, UUserWidge
 void UFSDWidgetEffectsComponent::FadeInWidget(UObject* WorldContext, UUserWidget* Widget, float Duration, float StartDelay) {
 }
 
-UFSDWidgetEffectsComponent::UFSDWidgetEffectsComponent() {
-}
 

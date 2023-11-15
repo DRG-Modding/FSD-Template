@@ -7,6 +7,7 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class UCaveScriptComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UCaveScriptComponent();
+    UCaveScriptComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

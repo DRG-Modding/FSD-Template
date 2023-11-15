@@ -16,6 +16,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UHeightMapWithMinMaxQuadTree* Heightmap;
     
-    USDFHeightMapComponent();
+    USDFHeightMapComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -47,9 +47,10 @@ protected:
     TMap<EHolidayType, FHolidayMeshItems> HolidayComponentMap;
     
 public:
-    ASpaceRigBar();
+    ASpaceRigBar(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SpawnDrinkables(UDrinkableDataAsset* Drinkable, APlayerCharacter* User);

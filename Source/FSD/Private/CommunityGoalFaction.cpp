@@ -6,3 +6,4 @@ UCommunityGoalFaction::UCommunityGoalFaction() {
     this->FactionID = EFSDFaction::NoFaction;
 }
 
+

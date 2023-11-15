@@ -26,6 +26,7 @@ class USessionHandling : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     USessionHandling();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void StopVoice(UObject* WorldContextObject);
     

@@ -83,9 +83,10 @@ private:
     FInt32Interval BurstCount;
     
 public:
-    AAimingFacilityTurret();
+    AAimingFacilityTurret(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetupAimindicator(UParticleSystemComponent* NewAimIndicator, UParticleSystemComponent* NewAimIndicatorLock);

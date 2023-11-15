@@ -8,5 +8,6 @@ class UFSDSendToURL : public UObject {
     GENERATED_BODY()
 public:
     UFSDSendToURL();
+
 };
 

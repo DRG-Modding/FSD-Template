@@ -1,5 +1,6 @@
 #include "CSGGroupComponent.h"
 
-UCSGGroupComponent::UCSGGroupComponent() {
+UCSGGroupComponent::UCSGGroupComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

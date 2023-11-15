@@ -50,6 +50,7 @@ protected:
     
 public:
     UMissionStat();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     float SetStatValue(UObject* WorldContext, APlayerCharacter* Character, float Amount);
     

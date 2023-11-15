@@ -40,6 +40,7 @@ public:
     int32 BestTime;
     
     UDeepDive();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsCompleted() const;
     

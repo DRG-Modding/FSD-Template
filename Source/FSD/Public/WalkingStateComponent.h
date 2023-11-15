@@ -45,7 +45,8 @@ protected:
     UAudioComponent* AudioComponentIceSliding;
     
 public:
-    UWalkingStateComponent();
+    UWalkingStateComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void TrackGrindCallback(APlayerCharacter* User, EInputKeys Key);

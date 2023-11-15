@@ -29,6 +29,7 @@ protected:
     
 public:
     UMissionDNA();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetDurationHazardBonus() const;
     

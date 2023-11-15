@@ -8,6 +8,29 @@
 #include "PheromoneSpawnerComponent.h"
 #include "Templates/SubclassOf.h"
 
+AFSDGameMode::AFSDGameMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bStartPlayersAsSpectators = true;
+    this->bDelayedStart = true;
+    this->GenerationStarted = false;
+    this->PheromoneComponent = CreateDefaultSubobject<UPheromoneSpawnerComponent>(TEXT("PheromoneManager"));
+    this->EnemySpawnManager = CreateDefaultSubobject<UEnemySpawnManager>(TEXT("EnemySpawnManager"));
+    this->ObjectivesManager = CreateDefaultSubobject<UObjectivesManager>(TEXT("ObjectivesManager"));
+    this->KeepInsideWorld = CreateDefaultSubobject<UKeepInsideWorld>(TEXT("KeepInsideWorld"));
+    this->MissionManager = CreateDefaultSubobject<UMissionManager>(TEXT("MissionManager"));
+    this->EncounterManagerComponent = NULL;
+    this->CritterManager = CreateDefaultSubobject<UCritterManager>(TEXT("CritterManager"));
+    this->FormationsManager = CreateDefaultSubobject<UFormationsManagerComponent>(TEXT("FormationsManager"));
+    this->ContinueCountdown = 10.00f;
+    this->PreventAllLatejoin = false;
+    this->PreventLateJoinOnMissionStart = false;
+    this->PlayerSpawnHeightOffset = 75.00f;
+    this->FriendlyFireGracePeriod = 240.00f;
+    this->UseNormalEncounters = true;
+    this->UseStationaryEncounter = true;
+    this->AllowSpecialEncounters = true;
+    this->CachedWaveManager = NULL;
+}
+
 void AFSDGameMode::StartGame() {
 }
 
@@ -125,24 +148,4 @@ void AFSDGameMode::AddControllerForGracePeriod(APlayerCharacter* APlayerCharacte
 void AFSDGameMode::AboutMission() {
 }
 
-AFSDGameMode::AFSDGameMode() {
-    this->GenerationStarted = false;
-    this->PheromoneComponent = CreateDefaultSubobject<UPheromoneSpawnerComponent>(TEXT("PheromoneManager"));
-    this->EnemySpawnManager = CreateDefaultSubobject<UEnemySpawnManager>(TEXT("EnemySpawnManager"));
-    this->ObjectivesManager = CreateDefaultSubobject<UObjectivesManager>(TEXT("ObjectivesManager"));
-    this->KeepInsideWorld = CreateDefaultSubobject<UKeepInsideWorld>(TEXT("KeepInsideWorld"));
-    this->MissionManager = CreateDefaultSubobject<UMissionManager>(TEXT("MissionManager"));
-    this->EncounterManagerComponent = NULL;
-    this->CritterManager = CreateDefaultSubobject<UCritterManager>(TEXT("CritterManager"));
-    this->FormationsManager = CreateDefaultSubobject<UFormationsManagerComponent>(TEXT("FormationsManager"));
-    this->ContinueCountdown = 10.00f;
-    this->PreventAllLatejoin = false;
-    this->PreventLateJoinOnMissionStart = false;
-    this->PlayerSpawnHeightOffset = 75.00f;
-    this->FriendlyFireGracePeriod = 240.00f;
-    this->UseNormalEncounters = true;
-    this->UseStationaryEncounter = true;
-    this->AllowSpecialEncounters = true;
-    this->CachedWaveManager = NULL;
-}
 

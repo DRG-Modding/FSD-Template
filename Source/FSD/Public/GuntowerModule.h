@@ -105,9 +105,10 @@ protected:
     bool Exploded;
     
 public:
-    AGuntowerModule();
+    AGuntowerModule(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void ShootOutArmor();
     
@@ -164,7 +165,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void ActivateTowerModule();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

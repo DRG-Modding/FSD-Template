@@ -18,7 +18,8 @@ private:
     FRuntimeFloatCurve CurrentGrowthCurve;
     
 public:
-    UGrowthComponent();
+    UGrowthComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void StopGrow();
     

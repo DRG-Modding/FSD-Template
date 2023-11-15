@@ -248,9 +248,10 @@ protected:
     EAmmoWeaponState WeaponState;
     
 public:
-    AAmmoDrivenWeapon();
+    AAmmoDrivenWeapon(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Upgraded_Blueprint_Implementation(const TArray<UItemUpgrade*>& upgrades);
     
@@ -327,7 +328,7 @@ protected:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_Gunsling(uint8 Index);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 public:
     UFUNCTION(BlueprintCallable)

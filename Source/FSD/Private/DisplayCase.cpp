@@ -3,6 +3,22 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Net/UnrealNetwork.h"
 
+ADisplayCase::ADisplayCase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->NetDormancy = DORM_DormantAll;
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    this->Root = (USceneComponent*)RootComponent;
+    this->ContentAttachPoint = NULL;
+    this->ContentMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ContentMesh"));
+    this->RotationSpeed = 15.00f;
+    this->BeerMugSpawnChancePercent = 0.00f;
+    this->BarrelSpawnChancePercent = 0.10f;
+    this->TimeMultiplier = 0.50f;
+    this->SizeMultiplier = 1.00f;
+    this->ContentIndex = -1;
+    this->BeerMugShout = NULL;
+    this->ContentMesh->SetupAttachment(RootComponent);
+}
+
 void ADisplayCase::RefreshContent() {
 }
 
@@ -32,16 +48,4 @@ void ADisplayCase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLife
     DOREPLIFETIME(ADisplayCase, ContentIndex);
 }
 
-ADisplayCase::ADisplayCase() {
-    this->Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-    this->ContentAttachPoint = NULL;
-    this->ContentMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ContentMesh"));
-    this->RotationSpeed = 15.00f;
-    this->BeerMugSpawnChancePercent = 0.00f;
-    this->BarrelSpawnChancePercent = 0.10f;
-    this->TimeMultiplier = 0.50f;
-    this->SizeMultiplier = 1.00f;
-    this->ContentIndex = -1;
-    this->BeerMugShout = NULL;
-}
 

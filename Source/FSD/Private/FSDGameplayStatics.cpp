@@ -1,5 +1,8 @@
 #include "FSDGameplayStatics.h"
 
+UFSDGameplayStatics::UFSDGameplayStatics() {
+}
+
 UFXSystemComponent* UFSDGameplayStatics::SpawnScaledEmitterAtLocation(UObject* WorldContextObject, FScaledEffect ScaledEffect, FVector Location, FRotator Rotation, bool bAutoDestroy) {
     return NULL;
 }
@@ -22,6 +25,4 @@ void UFSDGameplayStatics::SetControllerVibrationSubmixSend(const UObject* WorldC
 void UFSDGameplayStatics::SetControllerSpeakerSubmixSend(const UObject* WorldContextObject, UAudioComponent* AudioComponent, float SendLevel) {
 }
 
-UFSDGameplayStatics::UFSDGameplayStatics() {
-}
 

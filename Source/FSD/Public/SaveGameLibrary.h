@@ -12,6 +12,7 @@ class USaveGameLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     USaveGameLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     static bool TryGetSaveGameSnapShot(UObject* WorldContext, const FString& Filename, int32 userIdx, FSaveGameSnapShot& OutSnapShot);
     

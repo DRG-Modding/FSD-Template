@@ -6,3 +6,4 @@ UPushStatusEffectDamageBonus::UPushStatusEffectDamageBonus() {
     this->IgnoreArmorHit = false;
 }
 
+

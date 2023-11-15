@@ -10,7 +10,8 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPuddleTrackerComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPuddleTrackerComponent();
+    UPuddleTrackerComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnPuddleDestroyed(AActor* DestroyedActor);

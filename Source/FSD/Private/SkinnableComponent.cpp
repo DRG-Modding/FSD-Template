@@ -1,5 +1,10 @@
 #include "SkinnableComponent.h"
 
+USkinnableComponent::USkinnableComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->EquippedSkinColor = NULL;
+    this->EquippedSkinMesh = NULL;
+}
+
 void USkinnableComponent::UpdateSkin(AFSDPlayerState* Player) {
 }
 
@@ -37,8 +42,4 @@ UItemSkin* USkinnableComponent::GetBaseColorSkinForMeshSkin(UItemID* ItemID, UIt
 void USkinnableComponent::EquipSkin(UItemSkin* Skin, UItemID* ItemID, AFSDPlayerState* Player) {
 }
 
-USkinnableComponent::USkinnableComponent() {
-    this->EquippedSkinColor = NULL;
-    this->EquippedSkinMesh = NULL;
-}
 

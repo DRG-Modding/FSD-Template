@@ -53,7 +53,8 @@ protected:
     float CurrentFireTime;
     
 public:
-    AAutoCannon();
+    AAutoCannon(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetStatusActive(bool IsActive);

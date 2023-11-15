@@ -1,5 +1,8 @@
 #include "NoiseFunctionLibrary.h"
 
+UNoiseFunctionLibrary::UNoiseFunctionLibrary() {
+}
+
 void UNoiseFunctionLibrary::SphericalNoiseMovementComponent(UObject* WorldContextObject, USceneComponent* Component, FVector Center, float Radius, float Speed, float TimeOffset) {
 }
 
@@ -26,6 +29,4 @@ float UNoiseFunctionLibrary::Noise(UObject* WorldContextObject, float X) {
     return 0.0f;
 }
 
-UNoiseFunctionLibrary::UNoiseFunctionLibrary() {
-}
 

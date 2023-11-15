@@ -34,9 +34,10 @@ protected:
     FArmorDamageInfo ArmorDamageInfo;
     
 public:
-    UCompositeArmorComponent();
+    UCompositeArmorComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_ArmorDamageInfo(FArmorDamageInfo OldValue);

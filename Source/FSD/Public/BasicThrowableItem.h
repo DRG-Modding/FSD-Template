@@ -53,7 +53,8 @@ protected:
     float SquaredMinThrowforce;
     
 public:
-    ABasicThrowableItem();
+    ABasicThrowableItem(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void ThrowItem(const FVector& throwForce);
     

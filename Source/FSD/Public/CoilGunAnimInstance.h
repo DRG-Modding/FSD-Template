@@ -30,6 +30,7 @@ private:
     
 public:
     UCoilGunAnimInstance();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetCoilSpeed(int32 Index) const;
     

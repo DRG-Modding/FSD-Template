@@ -6,7 +6,7 @@
 #include "InputTranslationTable.h"
 #include "ControllerIconSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class UControllerIconSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -28,6 +28,7 @@ protected:
     
 public:
     UControllerIconSettings();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool FindMouseKeyboardKeyIcon(FKey Key, FActionIconMapping& KeyIcon);
     

@@ -1,5 +1,11 @@
 #include "PawnAlertComponent.h"
 
+UPawnAlertComponent::UPawnAlertComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->AutoAlertAI = true;
+    this->ShouldAlertNearby = false;
+    this->AlertRadius = 1000.00f;
+}
+
 void UPawnAlertComponent::StopAutoAlerting() {
 }
 
@@ -15,9 +21,4 @@ void UPawnAlertComponent::OnAlerted() {
 void UPawnAlertComponent::AleartNearby() {
 }
 
-UPawnAlertComponent::UPawnAlertComponent() {
-    this->AutoAlertAI = true;
-    this->ShouldAlertNearby = false;
-    this->AlertRadius = 1000.00f;
-}
 

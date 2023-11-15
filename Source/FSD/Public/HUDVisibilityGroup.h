@@ -51,6 +51,7 @@ protected:
     
 public:
     UHUDVisibilityGroup();
+
     UFUNCTION(BlueprintCallable)
     void SetModeFromPreset(EHUDVisibilityPresets Preset);
     

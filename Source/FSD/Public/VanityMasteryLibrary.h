@@ -15,6 +15,7 @@ class UVanityMasteryLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UVanityMasteryLibrary();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static void ResetVanityMasteryXP(UObject* WorldContext);
     

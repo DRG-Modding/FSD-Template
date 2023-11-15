@@ -17,6 +17,7 @@ protected:
     ECaveEntrancePriority Priority;
     
 public:
-    UCaveEntranceComponent();
+    UCaveEntranceComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -50,7 +50,8 @@ protected:
     float LastPuddleSuckTime;
     
 public:
-    ASoapVacuumItem();
+    ASoapVacuumItem(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_StartVacuumingPuddle(AActor* Target);
     

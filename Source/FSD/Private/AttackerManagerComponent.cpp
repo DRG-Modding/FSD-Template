@@ -1,5 +1,6 @@
 #include "AttackerManagerComponent.h"
 
-UAttackerManagerComponent::UAttackerManagerComponent() {
+UAttackerManagerComponent::UAttackerManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

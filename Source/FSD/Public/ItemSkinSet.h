@@ -22,5 +22,6 @@ public:
     UDynamicIcon* FrameworkDynamicIcon;
     
     UItemSkinSet();
+
 };
 

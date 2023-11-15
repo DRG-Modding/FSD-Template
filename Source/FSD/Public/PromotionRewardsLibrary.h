@@ -12,6 +12,7 @@ class UPromotionRewardsLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UPromotionRewardsLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     static bool HasPendingPromotionRewards(UObject* WorldContext);
     

@@ -38,5 +38,6 @@ public:
     float SpeedModifier;
     
     UDifficultyMutator();
+
 };
 

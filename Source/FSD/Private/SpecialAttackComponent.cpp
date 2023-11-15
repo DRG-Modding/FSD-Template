@@ -1,5 +1,8 @@
 #include "SpecialAttackComponent.h"
 
+USpecialAttackComponent::USpecialAttackComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void USpecialAttackComponent::TriggerAttack(FName Name) {
 }
 
@@ -15,6 +18,4 @@ void USpecialAttackComponent::OnMontageEnded(UAnimMontage* Montage, bool interru
 void USpecialAttackComponent::OnFrozen_Implementation(bool IsFrozen) {
 }
 
-USpecialAttackComponent::USpecialAttackComponent() {
-}
 

@@ -49,6 +49,7 @@ protected:
     bool StopAtEnoughMatches;
     
 public:
-    ADebrisLocationFinder();
+    ADebrisLocationFinder(const FObjectInitializer& ObjectInitializer);
+
 };
 

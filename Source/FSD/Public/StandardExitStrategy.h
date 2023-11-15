@@ -8,5 +8,6 @@ class UStandardExitStrategy : public UAbilityExitStrategy {
     GENERATED_BODY()
 public:
     UStandardExitStrategy();
+
 };
 

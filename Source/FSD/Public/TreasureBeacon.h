@@ -59,9 +59,10 @@ protected:
     ATreasureContainer* TreasureInstance;
     
 public:
-    ATreasureBeacon();
+    ATreasureBeacon(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void SpawnDebreeParts() const;
@@ -70,7 +71,7 @@ public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void ActivateTreasure();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

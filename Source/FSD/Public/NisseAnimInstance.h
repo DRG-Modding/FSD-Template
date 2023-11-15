@@ -14,6 +14,7 @@ protected:
     
 public:
     UNisseAnimInstance();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsWalking() const;

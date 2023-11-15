@@ -1,6 +1,7 @@
 #include "EventRewarderUsableComponent.h"
 
-
-UEventRewarderUsableComponent::UEventRewarderUsableComponent() {
+UEventRewarderUsableComponent::UEventRewarderUsableComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
+
 

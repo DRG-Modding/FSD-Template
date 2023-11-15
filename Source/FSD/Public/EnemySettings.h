@@ -38,5 +38,6 @@ public:
     TArray<TSubclassOf<UDamageComponent>> ExplodingEnemiesDamageComponents;
     
     UEnemySettings();
+
 };
 

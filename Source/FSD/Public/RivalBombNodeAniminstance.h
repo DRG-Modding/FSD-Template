@@ -27,6 +27,7 @@ protected:
     
 public:
     URivalBombNodeAniminstance();
+
     UFUNCTION(BlueprintCallable)
     void SetRivalBombNodeState(ERivalBombNodeState NewState);
     

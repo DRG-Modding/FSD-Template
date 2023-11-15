@@ -8,5 +8,6 @@ class FSD_API UNotContainsNameStrategy : public USimpleNameStrategy {
     GENERATED_BODY()
 public:
     UNotContainsNameStrategy();
+
 };
 

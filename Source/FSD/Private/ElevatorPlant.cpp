@@ -1,6 +1,26 @@
 #include "ElevatorPlant.h"
 #include "Net/UnrealNetwork.h"
 
+AElevatorPlant::AElevatorPlant(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->MovingSoundComponent = NULL;
+    this->GrabSound = NULL;
+    this->BaseTangentLength = 0.00f;
+    this->CSplineMesh = NULL;
+    this->CVineBase = NULL;
+    this->CVineLeaf = NULL;
+    this->InitialBaseTangentLength = 0.00f;
+    this->LeafLocationNoiseSize = 0.00f;
+    this->VineMovementAlpha = 0.50f;
+    this->IsMoving = false;
+    this->IsOpen = false;
+    this->Extend = false;
+    this->DipOffsetCurve = NULL;
+    this->LocationLerpCurve = NULL;
+}
+
 void AElevatorPlant::SetLeafNoiseRotator(const FRotator& aRotator) {
 }
 
@@ -71,20 +91,4 @@ void AElevatorPlant::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
     DOREPLIFETIME(AElevatorPlant, Extend);
 }
 
-AElevatorPlant::AElevatorPlant() {
-    this->MovingSoundComponent = NULL;
-    this->GrabSound = NULL;
-    this->BaseTangentLength = 0.00f;
-    this->CSplineMesh = NULL;
-    this->CVineBase = NULL;
-    this->CVineLeaf = NULL;
-    this->InitialBaseTangentLength = 0.00f;
-    this->LeafLocationNoiseSize = 0.00f;
-    this->VineMovementAlpha = 0.50f;
-    this->IsMoving = false;
-    this->IsOpen = false;
-    this->Extend = false;
-    this->DipOffsetCurve = NULL;
-    this->LocationLerpCurve = NULL;
-}
 

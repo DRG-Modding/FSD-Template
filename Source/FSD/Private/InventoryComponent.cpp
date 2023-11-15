@@ -2,6 +2,28 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
+UInventoryComponent::UInventoryComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->InventoryList = NULL;
+    this->ThrownGrenadeClass = NULL;
+    this->flareClass = NULL;
+    this->OutOfFlaresSound = NULL;
+    this->OutOfFlaresShout = NULL;
+    this->FlareAngle = 0.00f;
+    this->FlareCooldown = 0.00f;
+    this->FlareProductionTime = 0.00f;
+    this->FlareProductionTimeLeft = 0.00f;
+    this->MaxFlares = 0;
+    this->Flares = 0;
+    this->FlareCooldownRemaining = 0.00f;
+    this->bItemsLoaded = false;
+    this->MiningItem = NULL;
+    this->GrenadeItem = NULL;
+    this->LaserPointerItem = NULL;
+    this->TerrainScannerItem = NULL;
+    this->ResupplyItem = NULL;
+    this->RecallableSentryGunItem = NULL;
+}
+
 void UInventoryComponent::UpdateFromSaveGameInSlot(EItemCategory Category) {
 }
 
@@ -100,25 +122,4 @@ void UInventoryComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(UInventoryComponent, flareClass);
 }
 
-UInventoryComponent::UInventoryComponent() {
-    this->InventoryList = NULL;
-    this->ThrownGrenadeClass = NULL;
-    this->flareClass = NULL;
-    this->OutOfFlaresSound = NULL;
-    this->OutOfFlaresShout = NULL;
-    this->FlareAngle = 0.00f;
-    this->FlareCooldown = 0.00f;
-    this->FlareProductionTime = 0.00f;
-    this->FlareProductionTimeLeft = 0.00f;
-    this->MaxFlares = 0;
-    this->Flares = 0;
-    this->FlareCooldownRemaining = 0.00f;
-    this->bItemsLoaded = false;
-    this->MiningItem = NULL;
-    this->GrenadeItem = NULL;
-    this->LaserPointerItem = NULL;
-    this->TerrainScannerItem = NULL;
-    this->ResupplyItem = NULL;
-    this->RecallableSentryGunItem = NULL;
-}
 

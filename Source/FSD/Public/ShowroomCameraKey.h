@@ -8,5 +8,6 @@ class UShowroomCameraKey : public UDataAsset {
     GENERATED_BODY()
 public:
     UShowroomCameraKey();
+
 };
 

@@ -16,5 +16,6 @@ protected:
     
 public:
     UBTDecorator_CheckPlayerCount();
+
 };
 

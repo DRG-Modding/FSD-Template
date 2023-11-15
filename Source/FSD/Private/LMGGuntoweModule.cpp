@@ -5,19 +5,7 @@
 #include "HitscanComponent.h"
 #include "Net/UnrealNetwork.h"
 
-void ALMGGuntoweModule::ShowShot(const FVector& Location) {
-}
-
-void ALMGGuntoweModule::OnRep_IsFiresoundPlaying() {
-}
-
-void ALMGGuntoweModule::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(ALMGGuntoweModule, IsFiresoundPlaying);
-}
-
-ALMGGuntoweModule::ALMGGuntoweModule() {
+ALMGGuntoweModule::ALMGGuntoweModule(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->HitScanComp = CreateDefaultSubobject<UHitscanComponent>(TEXT("HitComponent"));
     this->DamageComp = CreateDefaultSubobject<UDamageComponent>(TEXT("DMGComponent"));
     this->AimAtWhenNoTarget = CreateDefaultSubobject<USceneComponent>(TEXT("AimAtWhenNoTarget"));
@@ -32,5 +20,20 @@ ALMGGuntoweModule::ALMGGuntoweModule() {
     this->TimeBetweenBursts = 1.00f;
     this->AimSpeed = 3.00f;
     this->IsFiresoundPlaying = false;
+    this->AimAtWhenNoTarget->SetupAttachment(ModuleMesh);
+    this->FireAudio->SetupAttachment(ModuleMesh);
 }
+
+void ALMGGuntoweModule::ShowShot(const FVector& Location) {
+}
+
+void ALMGGuntoweModule::OnRep_IsFiresoundPlaying() {
+}
+
+void ALMGGuntoweModule::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    
+    DOREPLIFETIME(ALMGGuntoweModule, IsFiresoundPlaying);
+}
+
 

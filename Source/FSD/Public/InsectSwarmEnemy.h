@@ -14,6 +14,7 @@ protected:
     UParticleSystemComponent* SwarmParticles;
     
 public:
-    AInsectSwarmEnemy();
+    AInsectSwarmEnemy(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -1,5 +1,6 @@
 #include "TargetDummyPawn.h"
 
-ATargetDummyPawn::ATargetDummyPawn() {
+ATargetDummyPawn::ATargetDummyPawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

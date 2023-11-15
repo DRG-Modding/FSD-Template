@@ -1,6 +1,9 @@
 #include "ActorFunctionLibrary.h"
 #include "Templates/SubclassOf.h"
 
+UActorFunctionLibrary::UActorFunctionLibrary() {
+}
+
 void UActorFunctionLibrary::UnlockSpecificCharacters(TArray<APlayerCharacter*> Characters, ECharacterState UnlockIf, ECharacterState UnlockTo) {
 }
 
@@ -222,6 +225,4 @@ bool UActorFunctionLibrary::ActorMatchesTagQuery(const FGameplayTagQuery& Query,
     return false;
 }
 
-UActorFunctionLibrary::UActorFunctionLibrary() {
-}
 

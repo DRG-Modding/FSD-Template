@@ -19,6 +19,7 @@ protected:
     
 public:
     UTextureDynamicIcon();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdatePreview();

@@ -42,6 +42,7 @@ protected:
     bool ShowTerrainNoise;
     
 public:
-    ANoiseVisualizor();
+    ANoiseVisualizor(const FObjectInitializer& ObjectInitializer);
+
 };
 

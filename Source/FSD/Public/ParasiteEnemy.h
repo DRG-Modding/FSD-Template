@@ -38,7 +38,8 @@ protected:
     USoundBase* deathSound;
     
 public:
-    AParasiteEnemy();
+    AParasiteEnemy(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnSelfDeath(UHealthComponentBase* aHealthComponent);

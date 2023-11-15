@@ -1,5 +1,8 @@
 #include "FSDConversionLibrary.h"
 
+UFSDConversionLibrary::UFSDConversionLibrary() {
+}
+
 FVector_NetQuantizeNormal UFSDConversionLibrary::VectorToNetQuantizeNormal(FVector Vec) {
     return FVector_NetQuantizeNormal{};
 }
@@ -28,6 +31,4 @@ FVector UFSDConversionLibrary::ActorToWorldLocation(AActor* Actor) {
     return FVector{};
 }
 
-UFSDConversionLibrary::UFSDConversionLibrary() {
-}
 

@@ -42,7 +42,8 @@ protected:
     float HoldToBreakTime;
     
 public:
-    UInfectedStateComponent();
+    UInfectedStateComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_Breakout();

@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UNetworkedRadarPointComponent : public URadarPointComponent {
     GENERATED_BODY()
 public:
-    UNetworkedRadarPointComponent();
+    UNetworkedRadarPointComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

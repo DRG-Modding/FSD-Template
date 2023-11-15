@@ -17,7 +17,8 @@ protected:
     float AmountPerValue;
     
 public:
-    UBezerkPerkComponent();
+    UBezerkPerkComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnHealthChanged(float Health);

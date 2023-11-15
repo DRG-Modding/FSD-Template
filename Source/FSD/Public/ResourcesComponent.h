@@ -34,9 +34,10 @@ protected:
     float ResourceCap;
     
 public:
-    UResourcesComponent();
+    UResourcesComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void ResourceIncreased(UCappedResource* Resource, float Delta);

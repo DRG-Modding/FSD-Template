@@ -8,5 +8,6 @@ class UFSDLobbyHandler : public UObject {
     GENERATED_BODY()
 public:
     UFSDLobbyHandler();
+
 };
 

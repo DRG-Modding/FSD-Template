@@ -1,5 +1,6 @@
 #include "FlareGun.h"
 
-AFlareGun::AFlareGun() {
+AFlareGun::AFlareGun(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

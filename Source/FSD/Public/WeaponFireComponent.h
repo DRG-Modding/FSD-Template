@@ -30,7 +30,8 @@ protected:
     TScriptInterface<IWeaponFireOwner> Weapon;
     
 public:
-    UWeaponFireComponent();
+    UWeaponFireComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void StopFire();
     
@@ -42,7 +43,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void Fire(const FVector& Origin, const FVector_NetQuantizeNormal& Direction, bool playFireFX);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

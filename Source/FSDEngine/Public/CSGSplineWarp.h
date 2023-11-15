@@ -30,5 +30,6 @@ public:
     FBox TotalAABB;
     
     UCSGSplineWarp();
+
 };
 

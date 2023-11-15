@@ -59,9 +59,10 @@ protected:
     EGuntowerModuleState State;
     
 public:
-    ATowerModuleBase();
+    ATowerModuleBase(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetState(EGuntowerModuleState NewState);
     
@@ -77,7 +78,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void DoAttack();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

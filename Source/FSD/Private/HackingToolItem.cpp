@@ -1,6 +1,9 @@
 #include "HackingToolItem.h"
 #include "Net/UnrealNetwork.h"
 
+AHackingToolItem::AHackingToolItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void AHackingToolItem::Server_HackingCompleted_Implementation(UHackingUsableComponent* InUsable, bool InHackingSuccessful) {
 }
 
@@ -20,6 +23,4 @@ void AHackingToolItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(AHackingToolItem, HackingUsable);
 }
 
-AHackingToolItem::AHackingToolItem() {
-}
 

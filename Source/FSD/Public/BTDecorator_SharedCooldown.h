@@ -16,5 +16,6 @@ public:
     FBlackboardKeySelector CooldownKey;
     
     UBTDecorator_SharedCooldown();
+
 };
 

@@ -1,14 +1,9 @@
 #include "GlowPlant.h"
 #include "Components/StaticMeshComponent.h"
 
-void AGlowPlant::OnDeath_Implementation() {
-}
-
-void AGlowPlant::OnDamage_Implementation(UPrimitiveComponent* hitSphere) {
-}
-
-AGlowPlant::AGlowPlant() {
-    this->TrunkMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
+AGlowPlant::AGlowPlant(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
+    this->TrunkMesh = (UStaticMeshComponent*)RootComponent;
     this->mainLight = NULL;
     this->IntensityBase = 0.00f;
     this->RadiusBase = 0.00f;
@@ -26,4 +21,11 @@ AGlowPlant::AGlowPlant() {
     this->EmissiveFadeInTime = 0.00f;
     this->EmissiveFadeOutTime = 0.00f;
 }
+
+void AGlowPlant::OnDeath_Implementation() {
+}
+
+void AGlowPlant::OnDamage_Implementation(UPrimitiveComponent* hitSphere) {
+}
+
 

@@ -1,6 +1,21 @@
 #include "InfectionMasterComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UInfectionMasterComponent::UInfectionMasterComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->WeakpointPopSTE = NULL;
+    this->WeakpointPopSTERange = 300.00f;
+    this->InfectionPoints = 3;
+    this->ExtraInfectionPointsWithMorePlayers = false;
+    this->SpikeScale = 1.00f;
+    this->InfectionScale = 1.00f;
+    this->KillWhenAllPointsDestroyed = false;
+    this->ScaleDownOnDeathTime = 3.00f;
+    this->BaseMat = NULL;
+    this->GlowMat = NULL;
+    this->HealthComponent = NULL;
+    this->RandomSeed = 0;
+}
+
 void UInfectionMasterComponent::OnRep_RandomSeed() {
 }
 
@@ -20,18 +35,4 @@ void UInfectionMasterComponent::GetLifetimeReplicatedProps(TArray<FLifetimePrope
     DOREPLIFETIME(UInfectionMasterComponent, RandomSeed);
 }
 
-UInfectionMasterComponent::UInfectionMasterComponent() {
-    this->WeakpointPopSTE = NULL;
-    this->WeakpointPopSTERange = 300.00f;
-    this->InfectionPoints = 3;
-    this->ExtraInfectionPointsWithMorePlayers = false;
-    this->SpikeScale = 1.00f;
-    this->InfectionScale = 1.00f;
-    this->KillWhenAllPointsDestroyed = false;
-    this->ScaleDownOnDeathTime = 3.00f;
-    this->BaseMat = NULL;
-    this->GlowMat = NULL;
-    this->HealthComponent = NULL;
-    this->RandomSeed = 0;
-}
 

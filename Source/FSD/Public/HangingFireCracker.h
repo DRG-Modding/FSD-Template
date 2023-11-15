@@ -47,7 +47,8 @@ protected:
     float ExplodeImpulse;
     
 public:
-    AHangingFireCracker();
+    AHangingFireCracker(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void StartFire();

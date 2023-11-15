@@ -14,6 +14,7 @@ protected:
     USimpleHealthComponent* HealthComponent;
     
 public:
-    AMaggot();
+    AMaggot(const FObjectInitializer& ObjectInitializer);
+
 };
 

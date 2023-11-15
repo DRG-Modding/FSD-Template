@@ -1,10 +1,13 @@
 #include "PlayerAttackPositionComponent.h"
 
-void UPlayerAttackPositionComponent::SetGameplayModifier(float modifier) {
-}
-
-UPlayerAttackPositionComponent::UPlayerAttackPositionComponent() {
+UPlayerAttackPositionComponent::UPlayerAttackPositionComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->FreePositions.AddDefaulted(32);
+    this->FlyingFreePositions.AddDefaulted(32);
     this->OnZiplineFlyingModifier = 1.50f;
     this->OnZiplineWalkingModifier = 0.50f;
 }
+
+void UPlayerAttackPositionComponent::SetGameplayModifier(float modifier) {
+}
+
 

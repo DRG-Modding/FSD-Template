@@ -47,7 +47,8 @@ protected:
     FProjetileSpawnedDelegate OnProjectileSpawnedEvent;
     
 public:
-    UProjectileAttackBaseComponent();
+    UProjectileAttackBaseComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     bool TriggerMontage(AActor* Target);

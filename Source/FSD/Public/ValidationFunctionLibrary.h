@@ -8,6 +8,7 @@ class FSD_API UValidationFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UValidationFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void SetSelectedAssets(TArray<FString> Paths);
     

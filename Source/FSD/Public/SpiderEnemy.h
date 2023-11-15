@@ -40,9 +40,10 @@ protected:
     AActor* LookAtTarget;
     
 public:
-    ASpiderEnemy();
+    ASpiderEnemy(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetLookAtTarget(AActor* Target);
     
@@ -56,7 +57,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void AlertNearbyEnemies();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 public:
     UFUNCTION(BlueprintCallable)

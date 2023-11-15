@@ -1,5 +1,6 @@
 #include "SDFBoxComponent.h"
 
-USDFBoxComponent::USDFBoxComponent() {
+USDFBoxComponent::USDFBoxComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -1,5 +1,8 @@
 #include "DynamicIcon.h"
 
+UDynamicIcon::UDynamicIcon() {
+}
+
 UMaterialInterface* UDynamicIcon::GetIconMaterial() const {
     return NULL;
 }
@@ -8,6 +11,4 @@ UMaterialInstanceDynamic* UDynamicIcon::GenerateIconMaterial(UObject* materialOw
     return NULL;
 }
 
-UDynamicIcon::UDynamicIcon() {
-}
 

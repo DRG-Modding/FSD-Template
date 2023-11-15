@@ -6,3 +6,4 @@ UVanityReward::UVanityReward() {
     this->UseContextAsTargetCharacter = false;
 }
 
+

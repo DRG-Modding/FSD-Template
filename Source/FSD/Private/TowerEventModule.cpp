@@ -7,22 +7,9 @@
 #include "Net/UnrealNetwork.h"
 #include "WeakpointGlowComponent.h"
 
-
-void ATowerEventModule::HideArmorPlates() {
-}
-
-void ATowerEventModule::DestroyArmor() {
-}
-
-void ATowerEventModule::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(ATowerEventModule, PreviousModule);
-    DOREPLIFETIME(ATowerEventModule, NextModule);
-}
-
-ATowerEventModule::ATowerEventModule() {
-    this->Root = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+ATowerEventModule::ATowerEventModule(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+    this->Root = (USceneComponent*)RootComponent;
     this->Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("MeshComponent"));
     this->Health = CreateDefaultSubobject<UEnemyHealthComponent>(TEXT("HealthComponent"));
     this->ArmorDamage = CreateDefaultSubobject<UArmorHealthDamageComponent>(TEXT("ArmorDamageComponent"));
@@ -38,5 +25,22 @@ ATowerEventModule::ATowerEventModule() {
     this->ArmorLifetime = 3.00f;
     this->ArmorPopForce = 300.00f;
     this->ArmorShedDelay = 0.50f;
+    this->Mesh->SetupAttachment(RootComponent);
+    this->SmokeParticles->SetupAttachment(Mesh);
 }
+
+
+void ATowerEventModule::HideArmorPlates() {
+}
+
+void ATowerEventModule::DestroyArmor() {
+}
+
+void ATowerEventModule::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    
+    DOREPLIFETIME(ATowerEventModule, PreviousModule);
+    DOREPLIFETIME(ATowerEventModule, NextModule);
+}
+
 

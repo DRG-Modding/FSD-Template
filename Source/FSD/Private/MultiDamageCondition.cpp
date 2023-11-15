@@ -4,3 +4,4 @@ UMultiDamageCondition::UMultiDamageCondition() {
     this->RequireAllTrue = true;
 }
 
+

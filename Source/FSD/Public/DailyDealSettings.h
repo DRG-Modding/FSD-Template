@@ -15,6 +15,7 @@ public:
     TArray<FDailyDealSetup> DailyDeals;
     
     UDailyDealSettings();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool IsDailyDealBought(UObject* WorldContextObject);
     

@@ -1,5 +1,6 @@
 #include "FSDSteamUserStats.h"
 
-UFSDSteamUserStats::UFSDSteamUserStats() {
+UFSDSteamUserStats::UFSDSteamUserStats(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -7,6 +7,7 @@ UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnable
 class UBeastMasterUseSphere : public USphereComponent {
     GENERATED_BODY()
 public:
-    UBeastMasterUseSphere();
+    UBeastMasterUseSphere(const FObjectInitializer& ObjectInitializer);
+
 };
 

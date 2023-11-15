@@ -4,3 +4,4 @@ UFireWeaponSoundUpgradeElement::UFireWeaponSoundUpgradeElement() {
     this->FireSound = NULL;
 }
 
+

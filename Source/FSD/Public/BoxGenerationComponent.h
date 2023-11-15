@@ -25,6 +25,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFloodFillSettings* Noise;
     
-    UBoxGenerationComponent();
+    UBoxGenerationComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

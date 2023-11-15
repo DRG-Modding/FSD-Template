@@ -24,7 +24,8 @@ protected:
     UNoOxygenMutator* Mutator;
     
 public:
-    UOxygenSourceComponent();
+    UOxygenSourceComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnTimerTick();

@@ -7,6 +7,7 @@ UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableCom
 class UPhotographyStateComponent : public UCharacterStateComponent {
     GENERATED_BODY()
 public:
-    UPhotographyStateComponent();
+    UPhotographyStateComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

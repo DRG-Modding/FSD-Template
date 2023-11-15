@@ -1,5 +1,11 @@
 #include "VanityItem.h"
 
+UVanityItem::UVanityItem() {
+    this->Aquisition = NULL;
+    this->EventSourceAsset = NULL;
+    this->IconGenerationCameraKey = NULL;
+}
+
 bool UVanityItem::RemoveFromOwned(UObject* WorldContext) {
     return false;
 }
@@ -85,9 +91,4 @@ void UVanityItem::ApplyItemPermanently(UObject* WorldContextObject, UPlayerChara
 void UVanityItem::ApplyItem(APlayerCharacter* Player, bool isPermanent) const {
 }
 
-UVanityItem::UVanityItem() {
-    this->Aquisition = NULL;
-    this->EventSourceAsset = NULL;
-    this->IconGenerationCameraKey = NULL;
-}
 

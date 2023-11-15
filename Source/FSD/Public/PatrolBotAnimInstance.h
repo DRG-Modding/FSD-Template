@@ -52,5 +52,6 @@ protected:
     
 public:
     UPatrolBotAnimInstance();
+
 };
 

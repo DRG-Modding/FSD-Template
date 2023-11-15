@@ -32,7 +32,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float Phase;
     
-    UInstancedMeshOnSpline();
+    UInstancedMeshOnSpline(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetSpeed(float newSpeed);
     

@@ -1,8 +1,5 @@
 #include "PlayerTPAnimInstance.h"
 
-void UPlayerTPAnimInstance::SetOverrideFullBody(bool overrideEnabled) {
-}
-
 UPlayerTPAnimInstance::UPlayerTPAnimInstance() {
     this->RigidBodyBlend = 1.00f;
     this->RigidBodyOn = false;
@@ -82,4 +79,8 @@ UPlayerTPAnimInstance::UPlayerTPAnimInstance() {
     this->TP_Downed = NULL;
     this->TP_Downed_Loop = NULL;
 }
+
+void UPlayerTPAnimInstance::SetOverrideFullBody(bool overrideEnabled) {
+}
+
 

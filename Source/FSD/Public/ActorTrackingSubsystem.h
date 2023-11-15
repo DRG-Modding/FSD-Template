@@ -8,5 +8,6 @@ class UActorTrackingSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
     UActorTrackingSubsystem();
+
 };
 

@@ -1,6 +1,15 @@
 #include "FSDCheatManager.h"
 #include "Templates/SubclassOf.h"
 
+UFSDCheatManager::UFSDCheatManager() {
+    this->RoomJumpCount = 0;
+    this->PreviousMaxDistanceBeforeCleanup = 0.00f;
+    this->UnlimitedScoutFlareDuration = false;
+    this->SpawnPosMarker = NULL;
+    this->EscortShowSmartRockDebug = false;
+    this->IsUsingSavedCheats = false;
+}
+
 void UFSDCheatManager::SwitchCharacter(UPlayerCharacterID* characterID) {
 }
 
@@ -675,12 +684,4 @@ void UFSDCheatManager::C_AddForgingXP(int32 Number) {
 void UFSDCheatManager::AddResourceToTeamDeposit(UResourceData* Resource, float Amount) {
 }
 
-UFSDCheatManager::UFSDCheatManager() {
-    this->RoomJumpCount = 0;
-    this->PreviousMaxDistanceBeforeCleanup = 0.00f;
-    this->UnlimitedScoutFlareDuration = false;
-    this->SpawnPosMarker = NULL;
-    this->EscortShowSmartRockDebug = false;
-    this->IsUsingSavedCheats = false;
-}
 

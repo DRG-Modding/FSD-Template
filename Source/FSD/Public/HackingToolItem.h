@@ -14,9 +14,10 @@ protected:
     TWeakObjectPtr<UHackingUsableComponent> HackingUsable;
     
 public:
-    AHackingToolItem();
+    AHackingToolItem(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_HackingCompleted(UHackingUsableComponent* InUsable, bool InHackingSuccessful);

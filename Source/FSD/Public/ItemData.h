@@ -51,6 +51,7 @@ public:
     int32 RequiredCharacterLevel;
     
     UItemData();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UTexture2D* GetPreviewImage() const;
     

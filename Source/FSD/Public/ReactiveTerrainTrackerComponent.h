@@ -7,6 +7,7 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class UReactiveTerrainTrackerComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UReactiveTerrainTrackerComponent();
+    UReactiveTerrainTrackerComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

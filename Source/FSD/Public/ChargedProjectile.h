@@ -21,9 +21,10 @@ protected:
     float DirectDamageReduction;
     
 public:
-    AChargedProjectile();
+    AChargedProjectile(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnAoEDamageEnabled();

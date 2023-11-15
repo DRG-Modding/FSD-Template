@@ -1,5 +1,6 @@
 #include "CaveScriptComponent.h"
 
-UCaveScriptComponent::UCaveScriptComponent() {
+UCaveScriptComponent::UCaveScriptComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

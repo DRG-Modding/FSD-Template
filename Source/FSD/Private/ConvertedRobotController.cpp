@@ -1,9 +1,6 @@
 #include "ConvertedRobotController.h"
 
-void AConvertedRobotController::ResetCloseTimer() {
-}
-
-AConvertedRobotController::AConvertedRobotController() {
+AConvertedRobotController::AConvertedRobotController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->CheckRangeInterval = 0.50f;
     this->MaxTimeInRange = 5.00f;
     this->PersonalSpaceRange = 5.00f;
@@ -17,4 +14,8 @@ AConvertedRobotController::AConvertedRobotController() {
     this->UpdateTargetInterval = 0.00f;
     this->PowerDownAfterSeconds = -1.00f;
 }
+
+void AConvertedRobotController::ResetCloseTimer() {
+}
+
 

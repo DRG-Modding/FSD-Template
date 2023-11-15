@@ -60,6 +60,7 @@ public:
     FOnDiscordUserInServer OnDiscordUserInServer;
     
     UDiscordWrapper();
+
     UFUNCTION(BlueprintCallable)
     void RequestUserInServer();
     

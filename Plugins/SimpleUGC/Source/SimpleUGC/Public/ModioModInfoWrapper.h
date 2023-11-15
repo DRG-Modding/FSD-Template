@@ -30,6 +30,7 @@ public:
     EUGCApprovalStatus Status;
     
     UModioModInfoWrapper();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsModIdInvalid();
     

@@ -47,9 +47,10 @@ protected:
     FJettyBootsSave JettyBootsSave;
     
 public:
-    AJettyBootsArcadeActor();
+    AJettyBootsArcadeActor(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetActivePlayer(APlayerCharacter* InPlayer);
     

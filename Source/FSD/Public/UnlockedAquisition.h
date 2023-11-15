@@ -8,5 +8,6 @@ class FSD_API UUnlockedAquisition : public UItemAquisitionBase {
     GENERATED_BODY()
 public:
     UUnlockedAquisition();
+
 };
 

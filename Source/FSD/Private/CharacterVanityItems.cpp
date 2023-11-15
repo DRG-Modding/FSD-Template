@@ -1,5 +1,16 @@
 #include "CharacterVanityItems.h"
 
+UCharacterVanityItems::UCharacterVanityItems() {
+    this->HeadSchematicBank = NULL;
+    this->BeardSchematicBank = NULL;
+    this->EyebrowSchematicBank = NULL;
+    this->MoustacheSchematicBank = NULL;
+    this->SideburnSchematicBank = NULL;
+    this->BeardMaterialSchematicBank = NULL;
+    this->SkinMaterialSchematicBank = NULL;
+    this->OwningCharacter = NULL;
+}
+
 void UCharacterVanityItems::SortVanityItems(UObject* WorldContextObject, UPlayerCharacterID* characterID, TArray<UVanityItem*>& VanityItems) {
 }
 
@@ -27,14 +38,4 @@ UVanityItem* UCharacterVanityItems::GetDefaultVanityItem(UObject* WorldContext, 
     return NULL;
 }
 
-UCharacterVanityItems::UCharacterVanityItems() {
-    this->HeadSchematicBank = NULL;
-    this->BeardSchematicBank = NULL;
-    this->EyebrowSchematicBank = NULL;
-    this->MoustacheSchematicBank = NULL;
-    this->SideburnSchematicBank = NULL;
-    this->BeardMaterialSchematicBank = NULL;
-    this->SkinMaterialSchematicBank = NULL;
-    this->OwningCharacter = NULL;
-}
 

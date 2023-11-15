@@ -215,9 +215,10 @@ private:
     AActor* CurrentTarget;
     
 public:
-    APatrolBot();
+    APatrolBot(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetIsPatrolling(bool patroling);
     

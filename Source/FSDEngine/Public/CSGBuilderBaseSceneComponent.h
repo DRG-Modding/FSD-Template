@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCSGBuilderBaseSceneComponent : public USceneComponent {
     GENERATED_BODY()
 public:
-    UCSGBuilderBaseSceneComponent();
+    UCSGBuilderBaseSceneComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

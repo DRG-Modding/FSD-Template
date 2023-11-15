@@ -78,7 +78,8 @@ protected:
     UAnimMontage* TP_ChargeupMontage;
     
 public:
-    AGooGun();
+    AGooGun(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnPuddleSuckedIn();
     

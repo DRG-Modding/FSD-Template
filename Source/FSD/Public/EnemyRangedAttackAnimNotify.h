@@ -8,5 +8,6 @@ class UEnemyRangedAttackAnimNotify : public UAnimNotify {
     GENERATED_BODY()
 public:
     UEnemyRangedAttackAnimNotify();
+
 };
 

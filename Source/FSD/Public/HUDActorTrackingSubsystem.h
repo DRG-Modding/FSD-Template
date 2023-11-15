@@ -16,5 +16,6 @@ public:
     FDelegate OnShowAlwaysTrackedEvent;
     
     UHUDActorTrackingSubsystem();
+
 };
 

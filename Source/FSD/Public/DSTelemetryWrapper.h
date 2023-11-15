@@ -22,6 +22,7 @@ private:
     
 public:
     UDSTelemetryWrapper();
+
     UFUNCTION(BlueprintCallable)
     void RecordTreeOfVanityClaim(int32 NodeID);
     

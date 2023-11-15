@@ -1,6 +1,11 @@
 #include "CaretakerActionComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UCaretakerActionComponent::UCaretakerActionComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->StartTickOnUse = false;
+    this->IsUsing = false;
+}
+
 void UCaretakerActionComponent::UseAction() {
 }
 
@@ -30,8 +35,4 @@ void UCaretakerActionComponent::GetLifetimeReplicatedProps(TArray<FLifetimePrope
     DOREPLIFETIME(UCaretakerActionComponent, IsUsing);
 }
 
-UCaretakerActionComponent::UCaretakerActionComponent() {
-    this->StartTickOnUse = false;
-    this->IsUsing = false;
-}
 

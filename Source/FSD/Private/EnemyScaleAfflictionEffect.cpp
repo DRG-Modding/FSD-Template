@@ -5,3 +5,4 @@ UEnemyScaleAfflictionEffect::UEnemyScaleAfflictionEffect() {
     this->RevertOnEndEffect = false;
 }
 
+

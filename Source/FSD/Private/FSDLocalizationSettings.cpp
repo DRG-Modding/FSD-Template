@@ -4,3 +4,4 @@ UFSDLocalizationSettings::UFSDLocalizationSettings() {
     this->CommunityTranslationProgress.AddDefaulted(22);
 }
 
+

@@ -1,5 +1,6 @@
 #include "CSGBaseComponent.h"
 
-UCSGBaseComponent::UCSGBaseComponent() {
+UCSGBaseComponent::UCSGBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

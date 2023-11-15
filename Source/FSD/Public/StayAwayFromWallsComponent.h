@@ -35,7 +35,8 @@ protected:
     bool Active;
     
 public:
-    UStayAwayFromWallsComponent();
+    UStayAwayFromWallsComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetIsActive(const bool IsActive);
     

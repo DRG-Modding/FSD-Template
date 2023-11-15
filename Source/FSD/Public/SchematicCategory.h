@@ -38,5 +38,6 @@ public:
     int32 SortOrder;
     
     USchematicCategory();
+
 };
 

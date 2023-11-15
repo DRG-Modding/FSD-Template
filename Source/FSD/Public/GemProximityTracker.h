@@ -16,6 +16,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FTrackPositionList> TrackerLists;
     
-    UGemProximityTracker();
+    UGemProximityTracker(const FObjectInitializer& ObjectInitializer);
+
 };
 

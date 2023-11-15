@@ -4,3 +4,4 @@ UUseConditionIsOwner::UUseConditionIsOwner() {
     this->Invert = false;
 }
 
+

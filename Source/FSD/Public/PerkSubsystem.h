@@ -16,6 +16,7 @@ protected:
     
 public:
     UPerkSubsystem();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UPerkDelegateItem* GetPerkDelegates(UPerkAsset* Perk);
     

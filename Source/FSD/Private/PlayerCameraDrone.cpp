@@ -1,6 +1,32 @@
 #include "PlayerCameraDrone.h"
 #include "GameFramework/FloatingPawnMovement.h"
 
+APlayerCameraDrone::APlayerCameraDrone(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Movement = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("Movement"));
+    this->MenuTab = 0;
+    this->SplineMeshIsVisible = true;
+    this->SplineSpeed = 1000.00f;
+    this->MouseSensitivity = 1.00f;
+    this->CameraRoll = 0.00f;
+    this->CameraDoesShake = false;
+    this->IsFollowingPlayerRotation = false;
+    this->UseFreeRotation = false;
+    this->UseDOF = false;
+    this->VanitySpawnable = NULL;
+    this->VanityWeaponSpawnable = NULL;
+    this->SelectedVanityClassIndex = 0;
+    this->SelectedVanityAnimation = -1;
+    this->DroneMarker = NULL;
+    this->ActiveMarker = NULL;
+    this->Flare = NULL;
+    this->BounceFlare = NULL;
+    this->SplineInstance = NULL;
+    this->Spline = NULL;
+    this->SplineMesh = NULL;
+    this->PlayerFollowed = NULL;
+    this->WeaponTrackActor = NULL;
+}
+
 bool APlayerCameraDrone::ToggleSplineMeshVisibility() {
     return false;
 }
@@ -48,29 +74,4 @@ void APlayerCameraDrone::ClearFocusPoint() {
 void APlayerCameraDrone::All_BeginCountdown_Implementation() {
 }
 
-APlayerCameraDrone::APlayerCameraDrone() {
-    this->Movement = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("Movement"));
-    this->MenuTab = 0;
-    this->SplineMeshIsVisible = true;
-    this->SplineSpeed = 1000.00f;
-    this->MouseSensitivity = 1.00f;
-    this->CameraRoll = 0.00f;
-    this->CameraDoesShake = false;
-    this->IsFollowingPlayerRotation = false;
-    this->UseFreeRotation = false;
-    this->UseDOF = false;
-    this->VanitySpawnable = NULL;
-    this->VanityWeaponSpawnable = NULL;
-    this->SelectedVanityClassIndex = 0;
-    this->SelectedVanityAnimation = -1;
-    this->DroneMarker = NULL;
-    this->ActiveMarker = NULL;
-    this->Flare = NULL;
-    this->BounceFlare = NULL;
-    this->SplineInstance = NULL;
-    this->Spline = NULL;
-    this->SplineMesh = NULL;
-    this->PlayerFollowed = NULL;
-    this->WeaponTrackActor = NULL;
-}
 

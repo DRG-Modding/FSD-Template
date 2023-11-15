@@ -14,6 +14,7 @@ protected:
     UDamageComponent* Damage;
     
 public:
-    UDamageAttackComponent();
+    UDamageAttackComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -24,9 +24,10 @@ protected:
     TArray<FString> EventPlayerIDs;
     
 public:
-    AEventRewardFrame();
+    AEventRewardFrame(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void TurnOff();
     

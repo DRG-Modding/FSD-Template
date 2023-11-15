@@ -18,6 +18,7 @@ protected:
     
 public:
     UDamageBonusBase();
+
     UFUNCTION(BlueprintCallable)
     static UDamageBonusBase* AddDamageBonusToComponent(TSubclassOf<UDamageBonusBase> damageBonusClass, UDamageComponent* DamageComponent);
     

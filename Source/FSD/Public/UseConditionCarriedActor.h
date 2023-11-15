@@ -16,5 +16,6 @@ public:
     TArray<TSoftClassPtr<AActor>> Actors;
     
     UUseConditionCarriedActor();
+
 };
 

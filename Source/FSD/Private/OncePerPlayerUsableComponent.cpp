@@ -1,6 +1,9 @@
 #include "OncePerPlayerUsableComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UOncePerPlayerUsableComponent::UOncePerPlayerUsableComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 
 void UOncePerPlayerUsableComponent::OnRep_Users() {
 }
@@ -11,6 +14,4 @@ void UOncePerPlayerUsableComponent::GetLifetimeReplicatedProps(TArray<FLifetimeP
     DOREPLIFETIME(UOncePerPlayerUsableComponent, Users);
 }
 
-UOncePerPlayerUsableComponent::UOncePerPlayerUsableComponent() {
-}
 

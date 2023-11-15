@@ -68,6 +68,7 @@ protected:
     
 public:
     UItemUpgrade();
+
     UFUNCTION(BlueprintCallable)
     void UnequipUpgrade(TSubclassOf<AActor> itemClass, AFSDPlayerState* PlayerState);
     
@@ -92,7 +93,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void EquipUpgrade(TSubclassOf<AActor> itemClass, AFSDPlayerState* PlayerState);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -14,6 +14,7 @@ class USpecialEventBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     USpecialEventBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static USchematic* TryGivePendingReward(UObject* WorldContextObject);
     

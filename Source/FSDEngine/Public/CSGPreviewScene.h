@@ -25,5 +25,6 @@ public:
     UTerrainMaterialCore* TerrainMaterial;
     
     UCSGPreviewScene();
+
 };
 

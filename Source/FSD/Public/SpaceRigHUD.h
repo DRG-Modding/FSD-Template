@@ -19,7 +19,8 @@ protected:
     bool bNotificationQueueActive;
     
 public:
-    ASpaceRigHUD();
+    ASpaceRigHUD(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetNotificationQueueActive(bool Inactive);
     

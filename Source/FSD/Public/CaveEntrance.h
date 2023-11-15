@@ -21,6 +21,7 @@ protected:
     bool HasBeenConverted;
     
 public:
-    ACaveEntrance();
+    ACaveEntrance(const FObjectInitializer& ObjectInitializer);
+
 };
 

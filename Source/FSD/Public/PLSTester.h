@@ -71,6 +71,7 @@ protected:
     FText CustomMissionName;
     
 public:
-    APLSTester();
+    APLSTester(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -8,5 +8,6 @@ class UPluckFromZiplineBonus : public UDamageBonusBase {
     GENERATED_BODY()
 public:
     UPluckFromZiplineBonus();
+
 };
 

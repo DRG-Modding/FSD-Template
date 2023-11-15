@@ -1,6 +1,17 @@
 #include "ProspectorRobot.h"
 #include "Net/UnrealNetwork.h"
 
+AProspectorRobot::AProspectorRobot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->WorkingArmSpeed = 5.00f;
+    this->EnginePowerMultiplier = 1.00f;
+    this->Target = NULL;
+    this->HeadResponsiveness = 1.00f;
+    this->HeadSearchSpeed = 1.00f;
+    this->HeadSearchMaxAngle = 90.00f;
+    this->EngineMaterial = NULL;
+    this->ProspectorState = EProspectorRobotState::Searching;
+}
+
 void AProspectorRobot::SetTarget(AActor* NewTarget) {
 }
 
@@ -25,14 +36,4 @@ void AProspectorRobot::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(AProspectorRobot, ProspectorState);
 }
 
-AProspectorRobot::AProspectorRobot() {
-    this->WorkingArmSpeed = 5.00f;
-    this->EnginePowerMultiplier = 1.00f;
-    this->Target = NULL;
-    this->HeadResponsiveness = 1.00f;
-    this->HeadSearchSpeed = 1.00f;
-    this->HeadSearchMaxAngle = 90.00f;
-    this->EngineMaterial = NULL;
-    this->ProspectorState = EProspectorRobotState::Searching;
-}
 

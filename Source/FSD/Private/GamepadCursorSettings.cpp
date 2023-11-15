@@ -7,3 +7,4 @@ UGamepadCursorSettings::UGamepadCursorSettings() {
     this->DeadZone = 0.30f;
 }
 
+

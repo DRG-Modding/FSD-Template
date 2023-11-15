@@ -48,5 +48,6 @@ public:
     FVector2D FloorNoiseRange;
     
     UTunnelSegmentSetting();
+
 };
 

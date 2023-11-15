@@ -40,6 +40,7 @@ protected:
     
 public:
     UTreeOfVanityItemWidget();
+
     UFUNCTION(BlueprintCallable)
     void SetIsBought(bool inIsBought);
     

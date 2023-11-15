@@ -25,6 +25,7 @@ protected:
     TArray<FDeepDiveTesterItem> stages;
     
 public:
-    ADeepDiveTester();
+    ADeepDiveTester(const FObjectInitializer& ObjectInitializer);
+
 };
 

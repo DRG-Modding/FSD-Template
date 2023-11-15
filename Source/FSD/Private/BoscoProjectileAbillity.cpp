@@ -4,3 +4,4 @@ UBoscoProjectileAbillity::UBoscoProjectileAbillity() {
     this->ProjectileClass = NULL;
 }
 
+

@@ -5,3 +5,4 @@ UStatPerkActivation::UStatPerkActivation() {
     this->StatType = EPawnStatType::Multiplicative;
 }
 
+

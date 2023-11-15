@@ -15,6 +15,7 @@ protected:
     
 public:
     USchematicBank();
+
     UFUNCTION(BlueprintCallable)
     void AddSchematic(USchematic* Schematic);
     

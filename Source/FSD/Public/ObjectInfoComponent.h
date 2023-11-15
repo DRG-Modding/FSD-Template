@@ -14,7 +14,8 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class UObjectInfoComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UObjectInfoComponent();
+    UObjectInfoComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool HasMissionControlLookAtShout(const UPrimitiveComponent* TargetComponent) const;
     

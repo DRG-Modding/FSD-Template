@@ -40,9 +40,10 @@ protected:
     bool AffectedByAmorBreak;
     
 public:
-    UArmorHealthDamageComponent();
+    UArmorHealthDamageComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     bool SetHealthOnBodypartItem(FName BoneName, float newHealth);
     

@@ -9,6 +9,7 @@ class URawInputFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     URawInputFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<FRegisteredDeviceInfo> GetRegisteredDevices();
     

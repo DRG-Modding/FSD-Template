@@ -15,7 +15,8 @@ protected:
     TSubclassOf<UStatusEffect> EmptyClipStatusEffect;
     
 public:
-    ADualMachinePistols();
+    ADualMachinePistols(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_TriggerStatusEffect();

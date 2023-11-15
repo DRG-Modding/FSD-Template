@@ -13,7 +13,8 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UHackableBuildingObjective : public UObjective {
     GENERATED_BODY()
 public:
-    UHackableBuildingObjective();
+    UHackableBuildingObjective(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     static void DropOverCharger(AProceduralSetup* Setup, const FVector& buildingLocation, float idealRange, float idealZDistance, UDebrisPositioning* DebrisPositioning, TSubclassOf<ARessuplyPod> generatorClass, bool AddImportantLocation);
     

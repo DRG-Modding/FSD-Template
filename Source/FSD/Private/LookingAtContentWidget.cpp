@@ -1,5 +1,9 @@
 #include "LookingAtContentWidget.h"
 
+ULookingAtContentWidget::ULookingAtContentWidget() : UUserWidget(FObjectInitializer::Get()) {
+    this->bWeakPointHit = false;
+}
+
 void ULookingAtContentWidget::UpdateCurrentTarget(float DeltaSeconds, AActor* InTargetActor, const TScriptInterface<IHealth>& InTargetHealthComponent) {
 }
 
@@ -20,7 +24,4 @@ float ULookingAtContentWidget::GetTargetHealthPct() const {
     return 0.0f;
 }
 
-ULookingAtContentWidget::ULookingAtContentWidget() : UUserWidget(FObjectInitializer::Get()) {
-    this->bWeakPointHit = false;
-}
 

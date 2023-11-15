@@ -19,6 +19,7 @@ protected:
     
 public:
     UBoolUserSettingAsset();
+
     UFUNCTION(BlueprintCallable)
     void SetValue(bool InValue);
     

@@ -69,6 +69,7 @@ protected:
     
 public:
     UGameDLC();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     bool ShouldBeAnnounced(UObject* WorldContext) const;
     
@@ -90,7 +91,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UTexture2D* GetBanner() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

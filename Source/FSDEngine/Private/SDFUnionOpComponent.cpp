@@ -1,5 +1,6 @@
 #include "SDFUnionOpComponent.h"
 
-USDFUnionOpComponent::USDFUnionOpComponent() {
+USDFUnionOpComponent::USDFUnionOpComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

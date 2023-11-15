@@ -5,3 +5,4 @@ UBuildRestriction::UBuildRestriction() {
     this->Platform = 0;
 }
 
+

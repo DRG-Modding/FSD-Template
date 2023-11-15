@@ -15,6 +15,7 @@ protected:
     float ActivationRange;
     
 public:
-    UCritterManager();
+    UCritterManager(const FObjectInitializer& ObjectInitializer);
+
 };
 

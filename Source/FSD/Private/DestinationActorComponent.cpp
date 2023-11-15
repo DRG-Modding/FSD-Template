@@ -1,6 +1,9 @@
 #include "DestinationActorComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UDestinationActorComponent::UDestinationActorComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 float UDestinationActorComponent::GetDistToDestinationActor() const {
     return 0.0f;
 }
@@ -11,6 +14,4 @@ void UDestinationActorComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProp
     DOREPLIFETIME(UDestinationActorComponent, DestinationActor);
 }
 
-UDestinationActorComponent::UDestinationActorComponent() {
-}
 

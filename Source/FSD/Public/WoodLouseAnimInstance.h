@@ -63,5 +63,6 @@ protected:
     
 public:
     UWoodLouseAnimInstance();
+
 };
 

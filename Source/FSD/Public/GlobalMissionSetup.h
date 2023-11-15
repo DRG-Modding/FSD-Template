@@ -62,6 +62,7 @@ public:
     TArray<FRequiredMissionItem> GlobalRequiredMissions;
     
     UGlobalMissionSetup();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<FMissionTemplateItem> GetAllPossibleMissions() const;
     

@@ -53,9 +53,10 @@ private:
     float HealPerTick;
     
 public:
-    ARockCrackerPod();
+    ARockCrackerPod(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SwitchYellowLights(bool isGreen);

@@ -1,5 +1,22 @@
 #include "DrinkableDataAsset.h"
 
+UDrinkableDataAsset::UDrinkableDataAsset() {
+    this->DrinkablePrice = 50;
+    this->IsSpecialBeer = false;
+    this->RequiredPlayerRank = 0;
+    this->ParticipatesInFreeBeerEvent = false;
+    this->AlcoholStrength = EDrinkableAlcoholStrength::Regular;
+    this->SpecialEdition = NULL;
+    this->RequiredDLC = NULL;
+    this->bPlayFireworks = false;
+    this->StatConsumed = NULL;
+    this->StatRoundOrdered = NULL;
+    this->OrderShout = NULL;
+    this->OrderCheeringShout = NULL;
+    this->DrinkSaluteShout = NULL;
+    this->buff = NULL;
+}
+
 bool UDrinkableDataAsset::TryUnlockSpecialDrinks(UObject* WorldContext) {
     return false;
 }
@@ -43,20 +60,4 @@ bool UDrinkableDataAsset::AreSpecialDrinksUnlocked(UObject* WorldContext) {
     return false;
 }
 
-UDrinkableDataAsset::UDrinkableDataAsset() {
-    this->DrinkablePrice = 50;
-    this->IsSpecialBeer = false;
-    this->RequiredPlayerRank = 0;
-    this->ParticipatesInFreeBeerEvent = false;
-    this->AlcoholStrength = EDrinkableAlcoholStrength::Regular;
-    this->SpecialEdition = NULL;
-    this->RequiredDLC = NULL;
-    this->bPlayFireworks = false;
-    this->StatConsumed = NULL;
-    this->StatRoundOrdered = NULL;
-    this->OrderShout = NULL;
-    this->OrderCheeringShout = NULL;
-    this->DrinkSaluteShout = NULL;
-    this->buff = NULL;
-}
 

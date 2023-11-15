@@ -11,6 +11,7 @@ class FSD_API UCampaignRequirement : public UObject {
     GENERATED_BODY()
 public:
     UCampaignRequirement();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRequirementMet(AFSDPlayerController* Player, UCampaign* Campaign) const;
     

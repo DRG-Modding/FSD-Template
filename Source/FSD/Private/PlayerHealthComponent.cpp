@@ -2,6 +2,28 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
+UPlayerHealthComponent::UPlayerHealthComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->MaxHealth = 100.00f;
+    this->MaxArmor = 0.00f;
+    this->ArmorDamage = 0.00f;
+    this->ReviveHealthReturnRatio = 1.00f;
+    this->ReviveArmorReturnRatio = 1.00f;
+    this->HealthPerCrystalVolume = 0.25f;
+    this->ArmorRegenCurve = NULL;
+    this->ShieldRegenDelay = 5.00f;
+    this->Character = NULL;
+    this->GenericImpactParticles = NULL;
+    this->ShieldLinkEffect = NULL;
+    this->ShieldLinkInstance = NULL;
+    this->InvulnerabilityDuration = 0.25f;
+    this->ReviveInvulnerabilityTime = 3.00f;
+    this->DamageTakenMutator = NULL;
+    this->IronWillStatusEffectClass = NULL;
+    this->IronWillStatusEffect = NULL;
+    this->IronWillActive = false;
+    this->IronWillTimeToActivate = 0.00f;
+}
+
 UStatusEffect* UPlayerHealthComponent::SetIronWillStatusEffect(TSubclassOf<UStatusEffect> steClass) {
     return NULL;
 }
@@ -60,25 +82,4 @@ void UPlayerHealthComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty
     DOREPLIFETIME(UPlayerHealthComponent, IronWillActive);
 }
 
-UPlayerHealthComponent::UPlayerHealthComponent() {
-    this->MaxHealth = 100.00f;
-    this->MaxArmor = 0.00f;
-    this->ArmorDamage = 0.00f;
-    this->ReviveHealthReturnRatio = 1.00f;
-    this->ReviveArmorReturnRatio = 1.00f;
-    this->HealthPerCrystalVolume = 0.25f;
-    this->ArmorRegenCurve = NULL;
-    this->ShieldRegenDelay = 5.00f;
-    this->Character = NULL;
-    this->GenericImpactParticles = NULL;
-    this->ShieldLinkEffect = NULL;
-    this->ShieldLinkInstance = NULL;
-    this->InvulnerabilityDuration = 0.25f;
-    this->ReviveInvulnerabilityTime = 3.00f;
-    this->DamageTakenMutator = NULL;
-    this->IronWillStatusEffectClass = NULL;
-    this->IronWillStatusEffect = NULL;
-    this->IronWillActive = false;
-    this->IronWillTimeToActivate = 0.00f;
-}
 

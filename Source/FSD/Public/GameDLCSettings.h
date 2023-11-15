@@ -16,6 +16,7 @@ protected:
     
 public:
     UGameDLCSettings();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     TArray<UGameDLC*> GetStoreDLCs(UObject* WorldContext);
     

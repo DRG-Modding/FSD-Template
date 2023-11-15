@@ -28,7 +28,8 @@ protected:
     uint8 IsVisibleFlags;
     
 public:
-    AFSDHUD();
+    AFSDHUD(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool ToggleHUDVisibility(EHUDVisibilityReason reason);
     

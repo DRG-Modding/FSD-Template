@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDFSphereProperties Properties;
     
-    USDFSphereComponent();
+    USDFSphereComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

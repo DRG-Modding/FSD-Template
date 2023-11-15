@@ -31,9 +31,10 @@ protected:
     bool IsFullyRepaired;
     
 public:
-    URepairableComponent();
+    URepairableComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     bool TryRepair(APlayerCharacter* User);
     

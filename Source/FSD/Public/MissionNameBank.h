@@ -17,6 +17,7 @@ protected:
     
 public:
     UMissionNameBank();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<FText> GetRandomGeneratedNames(UPARAM(Ref) FRandomStream& Random, int32 Count) const;
     

@@ -53,5 +53,6 @@ protected:
     
 public:
     UUpgradeSettings();
+
 };
 

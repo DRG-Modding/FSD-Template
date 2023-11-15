@@ -21,5 +21,6 @@ public:
     FGuid SavegameID;
     
     UMissionComplexity();
+
 };
 

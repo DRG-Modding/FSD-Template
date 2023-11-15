@@ -125,7 +125,8 @@ protected:
     UEnemyWaveManager* CachedWaveManager;
     
 public:
-    AFSDGameMode();
+    AFSDGameMode(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void StartGame();
     

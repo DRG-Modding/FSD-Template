@@ -19,6 +19,7 @@ protected:
     
 public:
     UCoreInfuserAnimInstance();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnRewardSelected();

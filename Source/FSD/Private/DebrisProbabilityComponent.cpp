@@ -1,6 +1,7 @@
 #include "DebrisProbabilityComponent.h"
 
-UDebrisProbabilityComponent::UDebrisProbabilityComponent() {
+UDebrisProbabilityComponent::UDebrisProbabilityComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->IsProbabilityShared = true;
 }
+
 

@@ -62,9 +62,10 @@ protected:
     bool Connected;
     
 public:
-    AFacilityGeneratorLine();
+    AFacilityGeneratorLine(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetConnected(bool InConnected);
     

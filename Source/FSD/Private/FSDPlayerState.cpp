@@ -5,6 +5,27 @@
 #include "SaveGameStateComponent.h"
 #include "Templates/SubclassOf.h"
 
+AFSDPlayerState::AFSDPlayerState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->FractionLevelGenerated = 0.00f;
+    this->SelectedCharacter = NULL;
+    this->bIsServer = false;
+    this->ShouldCopyProperties = false;
+    this->gameOwnerStatus = 0;
+    this->IsOnSpaceRig = false;
+    this->PlayerStatsComponent = CreateDefaultSubobject<UPlayerStatsComponent>(TEXT("PlayerStatsComponent"));
+    this->RejoinState = CreateDefaultSubobject<UPlayerRejoinState>(TEXT("RejoinState"));
+    this->SaveGameStateComponent = CreateDefaultSubobject<USaveGameStateComponent>(TEXT("SaveGameStateComponent"));
+    this->PlayerCharacter = NULL;
+    this->IsInMission = false;
+    this->IsTalking = false;
+    this->HasGeneratedLevel = false;
+    this->HasSelectedCharacter = false;
+    this->PlayerSortId = 0;
+    this->PlayerResources = NULL;
+    this->SupplyAmmoStatus = 0;
+    this->SupplyHealthStatus = 0;
+}
+
 void AFSDPlayerState::SetSelectedCharacterID(UPlayerCharacterID* characterID) {
 }
 
@@ -142,24 +163,4 @@ void AFSDPlayerState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
     DOREPLIFETIME(AFSDPlayerState, SupplyHealthStatus);
 }
 
-AFSDPlayerState::AFSDPlayerState() {
-    this->FractionLevelGenerated = 0.00f;
-    this->SelectedCharacter = NULL;
-    this->bIsServer = false;
-    this->ShouldCopyProperties = false;
-    this->gameOwnerStatus = 0;
-    this->IsOnSpaceRig = false;
-    this->PlayerStatsComponent = CreateDefaultSubobject<UPlayerStatsComponent>(TEXT("PlayerStatsComponent"));
-    this->RejoinState = CreateDefaultSubobject<UPlayerRejoinState>(TEXT("RejoinState"));
-    this->SaveGameStateComponent = CreateDefaultSubobject<USaveGameStateComponent>(TEXT("SaveGameStateComponent"));
-    this->PlayerCharacter = NULL;
-    this->IsInMission = false;
-    this->IsTalking = false;
-    this->HasGeneratedLevel = false;
-    this->HasSelectedCharacter = false;
-    this->PlayerSortId = 0;
-    this->PlayerResources = NULL;
-    this->SupplyAmmoStatus = 0;
-    this->SupplyHealthStatus = 0;
-}
 

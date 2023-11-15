@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBoxGenerationComponent* BoxComponent;
     
-    ABoxGenerationItem();
+    ABoxGenerationItem(const FObjectInitializer& ObjectInitializer);
+
 };
 

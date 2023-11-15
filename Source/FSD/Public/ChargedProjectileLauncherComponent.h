@@ -21,7 +21,8 @@ protected:
     float ProjectileChangeChargeValue;
     
 public:
-    UChargedProjectileLauncherComponent();
+    UChargedProjectileLauncherComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetProjectileClassCharged(TSubclassOf<AProjectileBase> NewProjectileClass);
     

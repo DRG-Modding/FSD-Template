@@ -22,7 +22,8 @@ protected:
     float Radius;
     
 public:
-    UMolotovComponent();
+    UMolotovComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void Trigger();
     

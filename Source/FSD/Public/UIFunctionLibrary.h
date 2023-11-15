@@ -13,6 +13,7 @@ class UUIFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UUIFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void SetLoadoutIcon(UObject* WorldContextObject, UPlayerCharacterID* characterID, int32 loadoutIndex, int32 iconIndex);
     

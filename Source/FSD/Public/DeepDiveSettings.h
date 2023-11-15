@@ -50,5 +50,6 @@ public:
     TSoftClassPtr<UUserWidget> MissionEndScreen_Failure;
     
     UDeepDiveSettings();
+
 };
 

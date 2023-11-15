@@ -1,5 +1,8 @@
 #include "PickaxeFunctionLibrary.h"
 
+UPickaxeFunctionLibrary::UPickaxeFunctionLibrary() {
+}
+
 bool UPickaxeFunctionLibrary::RemovePickaxePartFromOwned(UObject* WorldContextObject, const UPickaxePart* part) {
     return false;
 }
@@ -40,6 +43,4 @@ void UPickaxeFunctionLibrary::EquipPickaxePart(UObject* WorldContextObject, UPic
 void UPickaxeFunctionLibrary::CopyPastePickaxeLoadout(UObject* WorldContextObject, UPlayerCharacterID* PlayerId, int32 fromIndex, int32 toIndex) {
 }
 
-UPickaxeFunctionLibrary::UPickaxeFunctionLibrary() {
-}
 

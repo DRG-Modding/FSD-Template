@@ -1,5 +1,6 @@
 #include "TentacleManagerComponent.h"
 
-UTentacleManagerComponent::UTentacleManagerComponent() {
+UTentacleManagerComponent::UTentacleManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

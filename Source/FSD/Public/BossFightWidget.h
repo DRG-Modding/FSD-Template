@@ -14,5 +14,6 @@ public:
     TScriptInterface<IBossFightInterface> BossFight;
     
     UBossFightWidget();
+
 };
 

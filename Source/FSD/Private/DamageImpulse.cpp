@@ -7,3 +7,4 @@ UDamageImpulse::UDamageImpulse() {
     this->ApplyImpulseToWholeBody = false;
 }
 
+

@@ -95,7 +95,8 @@ protected:
     AActor* TryingToPickItem;
     
 public:
-    ABoscoController();
+    ABoscoController(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void ReviveTarget();
     

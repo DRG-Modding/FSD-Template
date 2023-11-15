@@ -7,3 +7,4 @@ USpecialEventSettings::USpecialEventSettings() {
     this->XPReward = 1000.00f;
 }
 
+

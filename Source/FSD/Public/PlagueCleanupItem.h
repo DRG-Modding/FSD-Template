@@ -68,7 +68,8 @@ protected:
     float FireRate;
     
 public:
-    APlagueCleanupItem();
+    APlagueCleanupItem(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Server, Unreliable)
     void Server_Gunsling();
@@ -96,7 +97,7 @@ public:
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void All_EnablePhysics(const FVector_NetQuantize& Direction);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

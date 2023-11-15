@@ -11,5 +11,6 @@ public:
     FName AttackName;
     
     UBTDecorator_AttackInRange();
+
 };
 

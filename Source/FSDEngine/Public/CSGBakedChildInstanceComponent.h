@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCSGBakedChildInstanceProperties Properties;
     
-    UCSGBakedChildInstanceComponent();
+    UCSGBakedChildInstanceComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

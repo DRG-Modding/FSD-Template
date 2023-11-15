@@ -30,6 +30,7 @@ protected:
     
 public:
     UFSDAchievement();
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, meta=(WorldContext="WorldContext"))
     void SetAchievementProgressForEntireServer(float Progress, UObject* WorldContext);
     

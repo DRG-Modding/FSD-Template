@@ -111,6 +111,7 @@ protected:
     
 public:
     UFSDPhysicalMaterial();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UFXSystemComponent* SpawnImpactParticlesFromHit(UObject* WorldContextObject, const FHitResult& HitResult);
     

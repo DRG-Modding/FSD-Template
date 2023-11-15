@@ -14,6 +14,7 @@ protected:
     USkeletalMeshComponent* Mesh;
     
 public:
-    UAnimatedObjectAfflictionComponent();
+    UAnimatedObjectAfflictionComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

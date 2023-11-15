@@ -12,5 +12,6 @@ public:
     EFSDTargetPlatform Platform;
     
     UPlatformExclusiveDLC();
+
 };
 

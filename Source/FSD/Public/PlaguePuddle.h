@@ -13,12 +13,13 @@ protected:
     uint16 MaxPlaguePiles;
     
 public:
-    APlaguePuddle();
+    APlaguePuddle(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Receive_OnVacuumed();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

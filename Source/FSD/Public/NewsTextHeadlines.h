@@ -11,5 +11,6 @@ public:
     TArray<FText> MineralTradeTicker;
     
     UNewsTextHeadlines();
+
 };
 

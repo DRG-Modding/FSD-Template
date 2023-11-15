@@ -48,9 +48,10 @@ protected:
     TArray<UMeshComponent*> InnerLayerMeshes;
     
 public:
-    UInfectionPointCleaningComponent();
+    UInfectionPointCleaningComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void Reset();
     

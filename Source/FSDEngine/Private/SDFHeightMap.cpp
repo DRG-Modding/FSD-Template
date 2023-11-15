@@ -4,3 +4,4 @@ USDFHeightMap::USDFHeightMap() {
     this->Heightmap = NULL;
 }
 
+

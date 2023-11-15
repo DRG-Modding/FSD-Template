@@ -1,6 +1,11 @@
 #include "FlareGunProjectile.h"
 #include "Net/UnrealNetwork.h"
 
+AFlareGunProjectile::AFlareGunProjectile(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Duration = 0.00f;
+    this->IsFlareOn = true;
+}
+
 void AFlareGunProjectile::UpdateLightDuration(float lightDuration) {
 }
 
@@ -22,8 +27,4 @@ void AFlareGunProjectile::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(AFlareGunProjectile, IsFlareOn);
 }
 
-AFlareGunProjectile::AFlareGunProjectile() {
-    this->Duration = 0.00f;
-    this->IsFlareOn = true;
-}
 

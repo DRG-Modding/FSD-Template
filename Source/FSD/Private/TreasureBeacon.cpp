@@ -3,20 +3,9 @@
 #include "Net/UnrealNetwork.h"
 #include "TerrainPlacementComponent.h"
 
-void ATreasureBeacon::SpawnDebreeParts() const {
-}
-
-void ATreasureBeacon::ActivateTreasure() {
-}
-
-void ATreasureBeacon::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(ATreasureBeacon, TreasureInstance);
-}
-
-ATreasureBeacon::ATreasureBeacon() {
-    this->RootComp = CreateDefaultSubobject<USceneComponent>(TEXT("RootComp"));
+ATreasureBeacon::ATreasureBeacon(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComp"));
+    this->RootComp = (USceneComponent*)RootComponent;
     this->terrainPlacement = CreateDefaultSubobject<UTerrainPlacementComponent>(TEXT("terrainPlacement"));
     this->TreasurePositioning = NULL;
     this->DebrisPartsPositioning = NULL;
@@ -30,5 +19,19 @@ ATreasureBeacon::ATreasureBeacon() {
     this->MaxSpawnLocationTries = 10;
     this->TreasureClass = NULL;
     this->TreasureInstance = NULL;
+    this->terrainPlacement->SetupAttachment(RootComponent);
 }
+
+void ATreasureBeacon::SpawnDebreeParts() const {
+}
+
+void ATreasureBeacon::ActivateTreasure() {
+}
+
+void ATreasureBeacon::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    
+    DOREPLIFETIME(ATreasureBeacon, TreasureInstance);
+}
+
 

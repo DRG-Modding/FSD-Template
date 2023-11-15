@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UPickaxePart* PickaxePart;
     
-    UPickaxePartRewarder();
+    UPickaxePartRewarder(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCSGSTLProperties Properties;
     
-    UCSGSTLComponent();
+    UCSGSTLComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

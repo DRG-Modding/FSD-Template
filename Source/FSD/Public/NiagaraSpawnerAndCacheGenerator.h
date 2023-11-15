@@ -16,6 +16,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UFXSystemComponent*> Generating;
     
-    ANiagaraSpawnerAndCacheGenerator();
+    ANiagaraSpawnerAndCacheGenerator(const FObjectInitializer& ObjectInitializer);
+
 };
 

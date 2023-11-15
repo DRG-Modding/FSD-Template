@@ -35,7 +35,8 @@ protected:
     TArray<AActor*> ActorsHit;
     
 public:
-    UMultiHitscanComponent();
+    UMultiHitscanComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_RegisterHit(const FMultiHitScanHits& hitResults);

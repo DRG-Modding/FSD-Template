@@ -1,5 +1,6 @@
 #include "RoomGenerationItem.h"
 
-ARoomGenerationItem::ARoomGenerationItem() {
+ARoomGenerationItem::ARoomGenerationItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

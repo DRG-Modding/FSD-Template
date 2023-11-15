@@ -28,7 +28,8 @@ protected:
     int32 MineStrength;
     
 public:
-    UDroneMiningToolBase();
+    UDroneMiningToolBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void StopMining();
     

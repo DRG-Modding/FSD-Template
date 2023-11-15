@@ -96,9 +96,10 @@ protected:
     UObjectivesManager* ObjectivesManager;
     
 public:
-    ATeamTransport();
+    ATeamTransport(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static ATeamTransport* SpawnPodAtLocation(UObject* WorldContextObject, TSubclassOf<ATeamTransport> podClass, const FTransform& Transform);
     
@@ -198,7 +199,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObjet"))
     static FVector AdjustLandingLocationToGround(UObject* WorldContextObjet, const FVector& initialLocation, float maxDownAdjustment);
     
-    
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable)
     bool HasMatchingGameplayTag(FGameplayTag TagToCheck) const override PURE_VIRTUAL(HasMatchingGameplayTag, return false;);

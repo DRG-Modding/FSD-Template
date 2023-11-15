@@ -1,6 +1,20 @@
 #include "TetherComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UTetherComponent::UTetherComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->TetherMesh = NULL;
+    this->AutoSetup = false;
+    this->ForwardConnection = NULL;
+    this->backConnection = NULL;
+    this->ConnectionDistance = 800.00f;
+    this->ConnectionMode = ETetherConnectionMode::Both;
+    this->ConnectionPriority = 0;
+    this->ConnectionHistorySize = 3;
+    this->GeneratesPower = false;
+    this->PeriodicConnectionValidation = false;
+    this->hasPower = false;
+}
+
 void UTetherComponent::ToggleConnectionValidation(bool Enabled, bool reactivate) {
 }
 
@@ -93,17 +107,4 @@ void UTetherComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(UTetherComponent, hasPower);
 }
 
-UTetherComponent::UTetherComponent() {
-    this->TetherMesh = NULL;
-    this->AutoSetup = false;
-    this->ForwardConnection = NULL;
-    this->backConnection = NULL;
-    this->ConnectionDistance = 800.00f;
-    this->ConnectionMode = ETetherConnectionMode::Both;
-    this->ConnectionPriority = 0;
-    this->ConnectionHistorySize = 3;
-    this->GeneratesPower = false;
-    this->PeriodicConnectionValidation = false;
-    this->hasPower = false;
-}
 

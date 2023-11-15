@@ -19,6 +19,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UPillarSettings* PillarSettings;
     
-    UPillarGenerationComponent();
+    UPillarGenerationComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

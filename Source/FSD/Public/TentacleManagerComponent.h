@@ -27,6 +27,7 @@ protected:
     FName Param_Reach;
     
 public:
-    UTentacleManagerComponent();
+    UTentacleManagerComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

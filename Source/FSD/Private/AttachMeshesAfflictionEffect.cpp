@@ -4,3 +4,4 @@ UAttachMeshesAfflictionEffect::UAttachMeshesAfflictionEffect() {
     this->OnRemoveEffect = NULL;
 }
 
+

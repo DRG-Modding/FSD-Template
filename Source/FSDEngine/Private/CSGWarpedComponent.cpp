@@ -1,5 +1,6 @@
 #include "CSGWarpedComponent.h"
 
-UCSGWarpedComponent::UCSGWarpedComponent() {
+UCSGWarpedComponent::UCSGWarpedComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

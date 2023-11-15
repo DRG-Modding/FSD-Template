@@ -4,3 +4,4 @@ USkinColorVanityItem::USkinColorVanityItem() {
     this->Material = NULL;
 }
 
+

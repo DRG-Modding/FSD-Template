@@ -168,9 +168,10 @@ protected:
     UMaterialInterface* EquippedMaterial;
     
 public:
-    APickaxeItem();
+    APickaxeItem(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SpecialTargetDamageEffects(const FVector& ImpactPoint, const FVector& ImpactNormal);
@@ -232,7 +233,7 @@ protected:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_DoPowerAttack();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

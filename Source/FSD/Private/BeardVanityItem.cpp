@@ -11,3 +11,4 @@ UBeardVanityItem::UBeardVanityItem() {
     this->HideAll = false;
 }
 
+

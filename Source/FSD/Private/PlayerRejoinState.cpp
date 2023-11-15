@@ -1,5 +1,8 @@
 #include "PlayerRejoinState.h"
 
+UPlayerRejoinState::UPlayerRejoinState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UPlayerRejoinState::Server_Reset_Implementation() {
 }
 bool UPlayerRejoinState::Server_Reset_Validate() {
@@ -15,6 +18,4 @@ void UPlayerRejoinState::Server_AddFloatValue_Internal_Implementation(const FGui
 void UPlayerRejoinState::Client_SetValues_Implementation(const TArray<FRejoinFloat>& floatValues, const TArray<FRejoinInt>& intValues) {
 }
 
-UPlayerRejoinState::UPlayerRejoinState() {
-}
 

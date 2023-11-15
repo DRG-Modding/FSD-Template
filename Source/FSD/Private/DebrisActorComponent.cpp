@@ -1,6 +1,7 @@
 #include "DebrisActorComponent.h"
 
-UDebrisActorComponent::UDebrisActorComponent() {
+UDebrisActorComponent::UDebrisActorComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Enabled = true;
 }
+
 

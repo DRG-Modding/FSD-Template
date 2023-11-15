@@ -18,6 +18,7 @@ protected:
     
 public:
     USpriteRectWidget();
+
     UFUNCTION(BlueprintCallable)
     void SetSize(FVector2D InSize);
     

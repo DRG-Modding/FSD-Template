@@ -23,5 +23,6 @@ protected:
     
 public:
     USchematicAquisition();
+
 };
 

@@ -14,5 +14,6 @@ public:
     float StationaryEncounterScale;
     
     UEncounterOverrideMutator();
+
 };
 

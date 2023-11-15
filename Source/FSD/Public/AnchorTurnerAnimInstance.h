@@ -20,5 +20,6 @@ public:
     bool IsFinished;
     
     UAnchorTurnerAnimInstance();
+
 };
 

@@ -41,7 +41,8 @@ protected:
     UAnimMontage* WPN_ItemReloadEndMontage;
     
 public:
-    APlasmaCarbine();
+    APlasmaCarbine(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void ApplyShieldDamage();

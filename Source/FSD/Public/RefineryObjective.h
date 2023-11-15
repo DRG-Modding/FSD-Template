@@ -53,9 +53,10 @@ protected:
     int32 OptionalTunnelRoomID;
     
 public:
-    URefineryObjective();
+    URefineryObjective(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SpawnWells(AProceduralSetup* Setup, const FVector& rigLocation, float minDistanceBetween, const TArray<FVector2D>& minMaxDistancesToRig);
     

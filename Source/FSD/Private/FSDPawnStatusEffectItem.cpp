@@ -5,3 +5,4 @@ UFSDPawnStatusEffectItem::UFSDPawnStatusEffectItem() {
     this->AttackSpeedModifier = 1.00f;
 }
 
+

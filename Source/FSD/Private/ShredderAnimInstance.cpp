@@ -5,3 +5,4 @@ UShredderAnimInstance::UShredderAnimInstance() {
     this->InSpinRange = false;
 }
 
+

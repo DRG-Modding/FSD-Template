@@ -5,3 +5,4 @@ UClipStatusDamageCondition::UClipStatusDamageCondition() {
     this->CountBulletsLeft = true;
 }
 
+

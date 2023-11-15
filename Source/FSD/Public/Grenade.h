@@ -92,9 +92,10 @@ protected:
     UGrenadeAnimationSet* GrenadeAnimationSetOverride;
     
 public:
-    AGrenade();
+    AGrenade(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_HasExploded();
@@ -119,7 +120,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void ActorWasHit(AActor* SelfActor, AActor* OtherActor, FVector NormalImpulse, const FHitResult& Hit);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 public:
     UFUNCTION(BlueprintCallable)

@@ -24,6 +24,7 @@ protected:
     bool SelfActivate;
     
 public:
-    ULevelGenerationDebris();
+    ULevelGenerationDebris(const FObjectInitializer& ObjectInitializer);
+
 };
 

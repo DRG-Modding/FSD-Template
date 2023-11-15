@@ -17,5 +17,6 @@ public:
     TArray<UTerrainType*> TerrainTypes;
     
     UTerrainMaterialsCollection();
+
 };
 

@@ -8,3 +8,4 @@ UAnimNotify_FSDPlayParticleEffect::UAnimNotify_FSDPlayParticleEffect() {
     this->UseTerainMaterial = false;
 }
 
+

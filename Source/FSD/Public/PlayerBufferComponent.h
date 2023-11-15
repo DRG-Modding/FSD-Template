@@ -51,9 +51,10 @@ protected:
     TArray<UParticleSystemComponent*> ParticleInstances;
     
 public:
-    UPlayerBufferComponent();
+    UPlayerBufferComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetBuffingEnabled(bool Enabled);
     

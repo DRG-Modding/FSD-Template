@@ -47,9 +47,10 @@ protected:
     uint8 SoberingPercent;
     
 public:
-    UCharacterIntoxicationComponent();
+    UCharacterIntoxicationComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveStateChange(EIntoxicationState NewState);

@@ -4,3 +4,4 @@ UItemUpgradeCategory::UItemUpgradeCategory() {
     this->CategoryIcon = NULL;
 }
 
+

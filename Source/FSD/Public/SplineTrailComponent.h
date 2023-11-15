@@ -74,8 +74,9 @@ protected:
     int32 Seed;
     
 public:
-    USplineTrailComponent();
+    USplineTrailComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 };
 

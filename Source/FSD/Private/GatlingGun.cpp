@@ -2,6 +2,22 @@
 #include "DamageComponent.h"
 #include "Net/UnrealNetwork.h"
 
+AGatlingGun::AGatlingGun(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->BarrelProximityDamageEnabled = false;
+    this->BarrelProximityDamageDistance = 250.00f;
+    this->BarrelProximityDamageRadius = 100.00f;
+    this->BarrelProximityDamageLength = 200.00f;
+    this->TimeBetweenProximityDamageTicks = 0.50f;
+    this->DamageMultiplierAtMaxStabilization = 1.00f;
+    this->HotShellsTracerParticles = NULL;
+    this->HeatRemovedOnKill = 0.00f;
+    this->CriticalOverheatEnabled = false;
+    this->HotShellsOn = false;
+    this->HotShellsTemperatureRequired = 200.00f;
+    this->DamageComponent = CreateDefaultSubobject<UDamageComponent>(TEXT("DamageComponent"));
+    this->BarrelProximityDamageComponent = CreateDefaultSubobject<UDamageComponent>(TEXT("BarrelProximityDamage"));
+}
+
 void AGatlingGun::Server_SetHotShellsOn_Implementation(bool hotShellsIsOn) {
 }
 
@@ -23,19 +39,4 @@ void AGatlingGun::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifet
     DOREPLIFETIME(AGatlingGun, HotShellsOn);
 }
 
-AGatlingGun::AGatlingGun() {
-    this->BarrelProximityDamageEnabled = false;
-    this->BarrelProximityDamageDistance = 250.00f;
-    this->BarrelProximityDamageRadius = 100.00f;
-    this->BarrelProximityDamageLength = 200.00f;
-    this->TimeBetweenProximityDamageTicks = 0.50f;
-    this->DamageMultiplierAtMaxStabilization = 1.00f;
-    this->HotShellsTracerParticles = NULL;
-    this->HeatRemovedOnKill = 0.00f;
-    this->CriticalOverheatEnabled = false;
-    this->HotShellsOn = false;
-    this->HotShellsTemperatureRequired = 200.00f;
-    this->DamageComponent = CreateDefaultSubobject<UDamageComponent>(TEXT("DamageComponent"));
-    this->BarrelProximityDamageComponent = CreateDefaultSubobject<UDamageComponent>(TEXT("BarrelProximityDamage"));
-}
 

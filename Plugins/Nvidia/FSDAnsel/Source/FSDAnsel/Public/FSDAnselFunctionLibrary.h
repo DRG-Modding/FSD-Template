@@ -12,6 +12,7 @@ class UFSDAnselFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFSDAnselFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void StopPhotographySession(UObject* WorldContextObject);
     

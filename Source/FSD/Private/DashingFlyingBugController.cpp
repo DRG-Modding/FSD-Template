@@ -1,5 +1,6 @@
 #include "DashingFlyingBugController.h"
 
-ADashingFlyingBugController::ADashingFlyingBugController() {
+ADashingFlyingBugController::ADashingFlyingBugController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

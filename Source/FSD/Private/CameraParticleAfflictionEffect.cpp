@@ -4,3 +4,4 @@ UCameraParticleAfflictionEffect::UCameraParticleAfflictionEffect() {
     this->ParticleEffect = NULL;
 }
 
+

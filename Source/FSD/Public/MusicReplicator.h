@@ -13,9 +13,10 @@ protected:
     TArray<FActiveMusicItem> ActiveMusic;
     
 public:
-    AMusicReplicator();
+    AMusicReplicator(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_ActiveMusic();

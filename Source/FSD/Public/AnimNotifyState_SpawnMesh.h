@@ -40,5 +40,6 @@ public:
     FRotator RotationOffset;
     
     UAnimNotifyState_SpawnMesh();
+
 };
 

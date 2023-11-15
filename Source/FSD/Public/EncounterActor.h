@@ -9,7 +9,8 @@ UCLASS(Blueprintable)
 class AEncounterActor : public AActor {
     GENERATED_BODY()
 public:
-    AEncounterActor();
+    AEncounterActor(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Receive_EncounterHasSpawned(APawn* spawnedPawn);

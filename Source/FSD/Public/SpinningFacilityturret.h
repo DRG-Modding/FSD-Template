@@ -29,8 +29,9 @@ protected:
     float TurnSpeed;
     
 public:
-    ASpinningFacilityturret();
+    ASpinningFacilityturret(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 };
 

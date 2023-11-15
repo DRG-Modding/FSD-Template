@@ -44,6 +44,7 @@ public:
     ACSGBuilder* CDO;
     
     UCSGBake();
+
     UFUNCTION(BlueprintCallable)
     void BakeCSG();
     

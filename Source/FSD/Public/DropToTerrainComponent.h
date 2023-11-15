@@ -38,9 +38,10 @@ protected:
     bool IsDetecting;
     
 public:
-    UDropToTerrainComponent();
+    UDropToTerrainComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void StopDropDetection(bool stopFalling);
     

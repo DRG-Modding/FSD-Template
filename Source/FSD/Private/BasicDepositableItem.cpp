@@ -1,6 +1,7 @@
 #include "BasicDepositableItem.h"
 
-ABasicDepositableItem::ABasicDepositableItem() {
+ABasicDepositableItem::ABasicDepositableItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DepositableResource = NULL;
 }
+
 

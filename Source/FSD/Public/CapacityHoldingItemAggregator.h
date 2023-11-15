@@ -20,9 +20,10 @@ protected:
     bool UseRejoin;
     
 public:
-    UCapacityHoldingItemAggregator();
+    UCapacityHoldingItemAggregator(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void UseAmmo(int32 Count);
     
@@ -43,7 +44,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void AddAmmo(int32 Amount);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

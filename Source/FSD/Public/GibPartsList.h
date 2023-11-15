@@ -15,6 +15,7 @@ public:
     TArray<UStaticMesh*> GibMeshes;
     
     UGibPartsList();
+
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void SetGibMeshesAndMaterialsOnFX(UNiagaraComponent* ns, UMaterialInstance* Material, float Scale) const;
     

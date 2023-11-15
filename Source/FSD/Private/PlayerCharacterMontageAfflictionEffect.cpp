@@ -6,3 +6,4 @@ UPlayerCharacterMontageAfflictionEffect::UPlayerCharacterMontageAfflictionEffect
     this->BlendOut = 0.20f;
 }
 
+

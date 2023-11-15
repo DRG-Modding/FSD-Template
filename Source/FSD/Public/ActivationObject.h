@@ -19,7 +19,8 @@ protected:
     bool HasBeenUsed;
     
 public:
-    AActivationObject();
+    AActivationObject(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnUsedBy(APlayerCharacter* User, EInputKeys Key);

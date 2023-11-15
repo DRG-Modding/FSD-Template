@@ -86,9 +86,10 @@ protected:
     bool UseDefaultRagdoll;
     
 public:
-    AAFlyingBug();
+    AAFlyingBug(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void StartFizzle();
     

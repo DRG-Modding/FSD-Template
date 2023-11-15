@@ -11,5 +11,6 @@ public:
     bool Invert;
     
     UUseConditionItemBlockAction();
+
 };
 

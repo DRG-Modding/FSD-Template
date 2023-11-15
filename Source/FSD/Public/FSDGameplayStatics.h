@@ -19,6 +19,7 @@ class UFSDGameplayStatics : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFSDGameplayStatics();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UFXSystemComponent* SpawnScaledEmitterAtLocation(UObject* WorldContextObject, FScaledEffect ScaledEffect, FVector Location, FRotator Rotation, bool bAutoDestroy);
     

@@ -23,5 +23,6 @@ public:
     TSubclassOf<UCameraShakeBase> CameraShake;
     
     UAnimNotify_CameraShake();
+
 };
 

@@ -12,5 +12,6 @@ public:
     FSDFCylinderProperties Properties;
     
     USDFCylinder();
+
 };
 

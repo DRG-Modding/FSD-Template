@@ -1,5 +1,13 @@
 #include "FSDEventManager.h"
 
+UFSDEventManager::UFSDEventManager() {
+    this->NumFailedRequests = 0;
+    this->BackendDataValid = false;
+    this->NextCheckTime = 0.00f;
+    this->SeasonExpirationTimeValid = false;
+    this->BackendNotificationEventValid = false;
+}
+
 void UFSDEventManager::TryGetJettyBootSettings(bool& OutHasSettings, FJettyBootEventSettings& OutSettings) {
 }
 
@@ -38,11 +46,4 @@ bool UFSDEventManager::FSDEventsReady() const {
     return false;
 }
 
-UFSDEventManager::UFSDEventManager() {
-    this->NumFailedRequests = 0;
-    this->BackendDataValid = false;
-    this->NextCheckTime = 0.00f;
-    this->SeasonExpirationTimeValid = false;
-    this->BackendNotificationEventValid = false;
-}
 

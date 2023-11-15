@@ -16,6 +16,7 @@ public:
     TArray<URoomGenerator*> Rooms;
     
     URoomGeneratorGroup();
+
     UFUNCTION(BlueprintCallable)
     static URoomGenerator* GetRandomRoomWithTags(UPARAM(Ref) FRoomGeneratorGroupInstance& groupInstance, const FGameplayTagQuery& queury, UPARAM(Ref) FRandomStream& RandomStream);
     

@@ -29,6 +29,7 @@ protected:
     
 public:
     UAmmoCountWidget();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnVisibleChanged(bool Visible, bool showClipCount);

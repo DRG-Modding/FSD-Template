@@ -22,6 +22,7 @@ protected:
     USimpleObjectInfoComponent* ObjectInfo;
     
 public:
-    ADroneCharacter();
+    ADroneCharacter(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -5,3 +5,4 @@ UHitScanImpactUpgradeElement::UHitScanImpactUpgradeElement() {
     this->ImpactSound = NULL;
 }
 
+

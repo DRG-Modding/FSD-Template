@@ -98,6 +98,7 @@ protected:
     
 public:
     UFSDEvent();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void MarkClaimableRewardsSeen(UObject* WorldContext);
     

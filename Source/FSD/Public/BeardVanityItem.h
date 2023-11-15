@@ -47,5 +47,6 @@ protected:
     
 public:
     UBeardVanityItem();
+
 };
 

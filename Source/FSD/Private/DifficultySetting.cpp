@@ -1,17 +1,5 @@
 #include "DifficultySetting.h"
 
-bool UDifficultySetting::IsUnlocked(UObject* WorldContext) const {
-    return false;
-}
-
-int32 UDifficultySetting::GetDifficultyIndex() const {
-    return 0;
-}
-
-float UDifficultySetting::AddHazardBonus(float BaseValue) const {
-    return 0.0f;
-}
-
 UDifficultySetting::UDifficultySetting() {
     this->CampaignRequirement = NULL;
     this->SelectedByDefaultCampaignRequirement = NULL;
@@ -43,4 +31,17 @@ UDifficultySetting::UDifficultySetting() {
     this->EliteCooldown = 60.00f;
     this->MaxActiveElites = 1;
 }
+
+bool UDifficultySetting::IsUnlocked(UObject* WorldContext) const {
+    return false;
+}
+
+int32 UDifficultySetting::GetDifficultyIndex() const {
+    return 0;
+}
+
+float UDifficultySetting::AddHazardBonus(float BaseValue) const {
+    return 0.0f;
+}
+
 

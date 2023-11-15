@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCSGRandomizeTransformProperties Properties;
     
-    UCSGRandomizeTransformComponent();
+    UCSGRandomizeTransformComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

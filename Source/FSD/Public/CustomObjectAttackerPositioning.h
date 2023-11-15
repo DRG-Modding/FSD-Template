@@ -18,6 +18,7 @@ protected:
     TArray<FVector> AttackerPositions;
     
 public:
-    UCustomObjectAttackerPositioning();
+    UCustomObjectAttackerPositioning(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -11,6 +11,7 @@ class FSD_API UHUDWarningWidget : public UFSDUserWidget {
     GENERATED_BODY()
 public:
     UHUDWarningWidget();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetData(UTexture2D* Texture, USoundBase* PingSound);
     

@@ -6,3 +6,4 @@ ULockCountSTEBonus::ULockCountSTEBonus() {
     this->StatusEffect = NULL;
 }
 
+

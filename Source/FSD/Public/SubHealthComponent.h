@@ -35,7 +35,8 @@ protected:
     EEnemyHealthScaling EnemyHealthScaling;
     
 public:
-    USubHealthComponent();
+    USubHealthComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetCanTakeDamage(bool canTakeDamage);
     
@@ -54,7 +55,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetCanTakeDamage() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 	//UFUNCTION(BlueprintCallable)
     AActor* GetOwner() const override PURE_VIRTUAL(GetOwner, return NULL;);

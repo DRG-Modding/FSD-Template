@@ -14,6 +14,7 @@ private:
     UMaterialInterface* CustomMaterial;
     
 public:
-    UWidgetComponentCustomMaterial();
+    UWidgetComponentCustomMaterial(const FObjectInitializer& ObjectInitializer);
+
 };
 

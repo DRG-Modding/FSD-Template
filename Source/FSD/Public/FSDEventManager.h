@@ -53,6 +53,7 @@ protected:
     
 public:
     UFSDEventManager();
+
     UFUNCTION(BlueprintCallable)
     void TryGetJettyBootSettings(bool& OutHasSettings, FJettyBootEventSettings& OutSettings);
     

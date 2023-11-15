@@ -1,5 +1,6 @@
 #include "PlagueWorm.h"
 
-APlagueWorm::APlagueWorm() {
+APlagueWorm::APlagueWorm(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

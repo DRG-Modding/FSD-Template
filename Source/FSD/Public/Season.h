@@ -71,6 +71,7 @@ public:
     UMissionWarning* SeasonWarning;
     
     USeason();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void AddUnassignedReward(int32 Index, UReward* Reward);

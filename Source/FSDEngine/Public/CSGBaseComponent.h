@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMeshBaseProperties BaseProperties;
     
-    UCSGBaseComponent();
+    UCSGBaseComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

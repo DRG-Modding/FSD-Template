@@ -27,6 +27,7 @@ protected:
     
 public:
     UAmmoDrivenWeaponAnimInstance();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsFull() const;
     

@@ -25,6 +25,7 @@ protected:
     
 public:
     UTimedSpecialEventSpawner();
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     static void UnblockEventSpawn(UObject* blocker);
     

@@ -1,5 +1,6 @@
 #include "UpgradableBoscoComponent.h"
 
-UUpgradableBoscoComponent::UUpgradableBoscoComponent() {
+UUpgradableBoscoComponent::UUpgradableBoscoComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

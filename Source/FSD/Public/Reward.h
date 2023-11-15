@@ -8,5 +8,6 @@ class UReward : public UDataAsset {
     GENERATED_BODY()
 public:
     UReward();
+
 };
 

@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDeepProceduralMeshComponent* DeepMesh;
     
-    ADeepCSGSection();
+    ADeepCSGSection(const FObjectInitializer& ObjectInitializer);
+
 };
 

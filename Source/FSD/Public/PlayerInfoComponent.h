@@ -18,6 +18,7 @@ protected:
     APlayerCharacter* Character;
     
 public:
-    UPlayerInfoComponent();
+    UPlayerInfoComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

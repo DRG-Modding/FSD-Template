@@ -162,9 +162,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsGunslinging, meta=(AllowPrivateAccess=true))
     bool IsGunslinging;
     
-    ADoubleDrillItem();
+    ADoubleDrillItem(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_StopMining();
     
@@ -210,7 +211,7 @@ public:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_SimulateDamage(const TArray<FDoubleDrillDamageItem>& Targets);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

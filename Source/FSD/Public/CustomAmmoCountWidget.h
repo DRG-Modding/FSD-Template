@@ -15,6 +15,7 @@ protected:
     
 public:
     UCustomAmmoCountWidget();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveItemSet();

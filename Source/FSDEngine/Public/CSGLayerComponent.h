@@ -15,6 +15,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGeneralTerrainMaterialCombiner Materials;
     
-    UCSGLayerComponent();
+    UCSGLayerComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

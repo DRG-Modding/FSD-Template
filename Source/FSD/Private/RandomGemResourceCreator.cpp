@@ -4,3 +4,4 @@ URandomGemResourceCreator::URandomGemResourceCreator() {
     this->PlacementDistanceProbabilityCurve = NULL;
 }
 
+

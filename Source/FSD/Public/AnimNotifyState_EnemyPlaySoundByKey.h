@@ -27,5 +27,6 @@ public:
     FRotator RotationOffset;
     
     UAnimNotifyState_EnemyPlaySoundByKey();
+
 };
 

@@ -8,5 +8,6 @@ class USDFBaseWithTransform : public USDFBase {
     GENERATED_BODY()
 public:
     USDFBaseWithTransform();
+
 };
 

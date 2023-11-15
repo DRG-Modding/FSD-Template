@@ -8,5 +8,6 @@ class UDamageCondition : public UObject {
     GENERATED_BODY()
 public:
     UDamageCondition();
+
 };
 

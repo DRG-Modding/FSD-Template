@@ -31,7 +31,8 @@ protected:
     UIconGenerationCameraKey* CameraKey_CloseUp;
     
 public:
-    AItemPreviewActor();
+    AItemPreviewActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SkinItem(USkinEffect* Skin);
     
@@ -51,7 +52,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void ChangeSkin(UItemSkin* skinMesh, UItemSkin* skinColor, bool isPreview);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

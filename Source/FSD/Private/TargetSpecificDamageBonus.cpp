@@ -4,3 +4,4 @@ UTargetSpecificDamageBonus::UTargetSpecificDamageBonus() {
     this->Bonus = 0.50f;
 }
 
+

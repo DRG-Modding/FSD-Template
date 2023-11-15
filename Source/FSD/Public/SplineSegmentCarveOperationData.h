@@ -5,6 +5,7 @@
 #include "EPreciousMaterialOptions.h"
 #include "SplineSegmentCarveOperationData.generated.h"
 
+class ULevelGenerationCarverComponent;
 class UTerrainMaterial;
 
 USTRUCT(BlueprintType)
@@ -25,6 +26,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EPreciousMaterialOptions Precious;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    ULevelGenerationCarverComponent* LevelGenerationComponent;
     
     FSD_API FSplineSegmentCarveOperationData();
 };

@@ -11,5 +11,6 @@ public:
     TArray<UCSGBase*> Children;
     
     UCSGGroup();
+
 };
 

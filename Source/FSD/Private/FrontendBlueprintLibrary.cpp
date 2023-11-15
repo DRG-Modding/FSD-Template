@@ -1,5 +1,8 @@
 #include "FrontendBlueprintLibrary.h"
 
+UFrontendBlueprintLibrary::UFrontendBlueprintLibrary() {
+}
+
 void UFrontendBlueprintLibrary::OpenURLInExternalBrowser(const FString& URL) {
 }
 
@@ -21,6 +24,4 @@ EFSDTargetPlatform UFrontendBlueprintLibrary::FSDTargetPlatform() {
 void UFrontendBlueprintLibrary::CopyStringToClipboard(const FString& toClipboard) {
 }
 
-UFrontendBlueprintLibrary::UFrontendBlueprintLibrary() {
-}
 

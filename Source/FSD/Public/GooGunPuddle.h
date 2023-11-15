@@ -44,9 +44,10 @@ private:
     bool CollisionOnClients;
     
 public:
-    AGooGunPuddle();
+    AGooGunPuddle(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetStatusEffect(TSubclassOf<UStatusEffect> NewStatusEffect);
     

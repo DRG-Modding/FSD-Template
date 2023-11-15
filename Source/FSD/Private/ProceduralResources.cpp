@@ -1,5 +1,8 @@
 #include "ProceduralResources.h"
 
+UProceduralResources::UProceduralResources(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UProceduralResources::GenerateResources() {
 }
 
@@ -24,6 +27,4 @@ void UProceduralResources::CountGeneratedCarvedResources() {
 void UProceduralResources::CountFinalGeneratedCarvedResources() {
 }
 
-UProceduralResources::UProceduralResources() {
-}
 

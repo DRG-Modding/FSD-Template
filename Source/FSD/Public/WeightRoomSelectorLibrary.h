@@ -12,6 +12,7 @@ class UWeightRoomSelectorLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UWeightRoomSelectorLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void SetupWeightedRoomSelector(UPARAM(Ref) FWeightedRoomSelector& Target, UPARAM(Ref) TArray<URoomGenerator*>& Rooms);
     

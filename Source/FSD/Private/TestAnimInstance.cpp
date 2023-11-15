@@ -8,3 +8,4 @@ UTestAnimInstance::UTestAnimInstance() {
     this->MeshScale = 1.00f;
 }
 
+

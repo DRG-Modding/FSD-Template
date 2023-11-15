@@ -5,3 +5,4 @@ USimpleSpecialEventSpawner::USimpleSpecialEventSpawner() {
     this->EventAvoidanceRadius = 700.00f;
 }
 
+

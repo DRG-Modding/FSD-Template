@@ -8,5 +8,6 @@ class UAutoCannonAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:
     UAutoCannonAnimInstance();
+
 };
 

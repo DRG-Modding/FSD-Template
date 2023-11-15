@@ -16,6 +16,7 @@ protected:
     FGuid SavegameID;
     
 public:
-    ASavableActor();
+    ASavableActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

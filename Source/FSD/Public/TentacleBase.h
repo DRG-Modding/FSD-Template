@@ -58,7 +58,8 @@ protected:
     USceneComponent* HeadRotator;
     
 public:
-    ATentacleBase();
+    ATentacleBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetRestingTransform(const FTransform& restingTransform, bool startAtRest);
     

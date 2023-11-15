@@ -21,6 +21,7 @@ protected:
     
 public:
     UShoutWidget();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnShout();

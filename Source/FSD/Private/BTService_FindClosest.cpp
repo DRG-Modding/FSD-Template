@@ -8,3 +8,4 @@ UBTService_FindClosest::UBTService_FindClosest() {
     this->TargetingRange = 3500.00f;
 }
 
+

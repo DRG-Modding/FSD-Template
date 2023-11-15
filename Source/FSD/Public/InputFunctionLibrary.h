@@ -18,6 +18,7 @@ class UInputFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UInputFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void SetMouseSmoothingOn(bool smoothingOn);
     

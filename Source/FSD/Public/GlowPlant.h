@@ -64,7 +64,8 @@ protected:
     float EmissiveFadeOutTime;
     
 public:
-    AGlowPlant();
+    AGlowPlant(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void OnDeath();
     

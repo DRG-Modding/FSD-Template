@@ -49,5 +49,6 @@ public:
     UMaterialInstance* TriFacetDynamicIconTex3;
     
     UDynamicIconSettings();
+
 };
 

@@ -31,5 +31,6 @@ public:
     bool PickBestMatchingEntrance;
     
     UTunnelParameters();
+
 };
 

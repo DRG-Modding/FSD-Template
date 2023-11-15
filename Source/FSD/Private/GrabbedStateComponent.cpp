@@ -1,5 +1,7 @@
 #include "GrabbedStateComponent.h"
 
-UGrabbedStateComponent::UGrabbedStateComponent() {
+UGrabbedStateComponent::UGrabbedStateComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->StateId = 8;
 }
+
 

@@ -1,12 +1,6 @@
 #include "DynamicReverbComponent.h"
 
-void UDynamicReverbComponent::TunnelTimerTriggered() {
-}
-
-void UDynamicReverbComponent::TimerTriggered() {
-}
-
-UDynamicReverbComponent::UDynamicReverbComponent() {
+UDynamicReverbComponent::UDynamicReverbComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->LargeCaveValue = 2000.00f;
     this->MediumCaveValue = 1000.00f;
     this->SmallCaveValue = 500.00f;
@@ -16,4 +10,11 @@ UDynamicReverbComponent::UDynamicReverbComponent() {
     this->TunnelAmbienceFadeOut = 1.00f;
     this->TunnelSoundInstance = NULL;
 }
+
+void UDynamicReverbComponent::TunnelTimerTriggered() {
+}
+
+void UDynamicReverbComponent::TimerTriggered() {
+}
+
 

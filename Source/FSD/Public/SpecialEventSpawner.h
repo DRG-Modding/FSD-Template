@@ -8,5 +8,6 @@ class USpecialEventSpawner : public UObject {
     GENERATED_BODY()
 public:
     USpecialEventSpawner();
+
 };
 

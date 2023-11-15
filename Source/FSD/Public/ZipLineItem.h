@@ -27,7 +27,8 @@ protected:
     FGameplayTagQuery ExcludeSurfaceTags;
     
 public:
-    AZipLineItem();
+    AZipLineItem(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool CanFireWeapon(FText& FailMsg, UDialogDataAsset*& FailShout);

@@ -15,6 +15,7 @@ class UTerrainFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UTerrainFunctionLibrary();
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool GetDebrisTransformsInSphere(UObject* WorldContextObject, TArray<FMatrix>& outPositions, const FVector& Location, const float& Radius, const ESpecialDebrisType& debrisType, float minDistToOther, bool calcPriority);
     

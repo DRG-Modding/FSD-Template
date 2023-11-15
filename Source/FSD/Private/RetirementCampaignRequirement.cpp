@@ -5,3 +5,4 @@ URetirementCampaignRequirement::URetirementCampaignRequirement() {
     this->LevelRequirement = 0;
 }
 
+

@@ -17,3 +17,4 @@ UCSGTriangleMapper::UCSGTriangleMapper() {
     this->PosOffsetSurface = 0.00f;
 }
 
+

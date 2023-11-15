@@ -1,5 +1,8 @@
 #include "SpriteRectLibrary.h"
 
+USpriteRectLibrary::USpriteRectLibrary() {
+}
+
 FSpriteRect USpriteRectLibrary::TranslateSpriteRect(FSpriteRect Rect, FVector2D Offset) {
     return FSpriteRect{};
 }
@@ -34,6 +37,4 @@ FVector2D USpriteRectLibrary::GetSpriteRectCenter(FSpriteRect Rect) {
     return FVector2D{};
 }
 
-USpriteRectLibrary::USpriteRectLibrary() {
-}
 

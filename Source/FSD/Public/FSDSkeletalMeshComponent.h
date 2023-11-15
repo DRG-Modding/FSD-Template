@@ -7,6 +7,7 @@ UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnable
 class UFSDSkeletalMeshComponent : public USkeletalMeshComponent {
     GENERATED_BODY()
 public:
-    UFSDSkeletalMeshComponent();
+    UFSDSkeletalMeshComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

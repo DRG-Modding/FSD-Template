@@ -17,9 +17,10 @@ protected:
     EHackingPodState PodState;
     
 public:
-    AFacilityHackingPod();
+    AFacilityHackingPod(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetState(EHackingPodState aState);

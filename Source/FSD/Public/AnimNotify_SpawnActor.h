@@ -25,5 +25,6 @@ public:
     FRotator RotationOffset;
     
     UAnimNotify_SpawnActor();
+
 };
 

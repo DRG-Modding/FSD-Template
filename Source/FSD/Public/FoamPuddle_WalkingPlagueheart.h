@@ -10,6 +10,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FoamCleanRadius;
     
-    AFoamPuddle_WalkingPlagueheart();
+    AFoamPuddle_WalkingPlagueheart(const FObjectInitializer& ObjectInitializer);
+
 };
 

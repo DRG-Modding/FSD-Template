@@ -25,6 +25,7 @@ public:
     TArray<FBlueprintFriend> FriendInvites;
     
     UFSDFriendsAndInvites();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Init();
     

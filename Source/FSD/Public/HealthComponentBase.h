@@ -63,7 +63,8 @@ protected:
     bool PassthroughTemperatureDamage;
     
 public:
-    UHealthComponentBase();
+    UHealthComponentBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     float TakeRadialDamage(float damageAmount, FVector BlastCenter, float BlastRadius, float MaxDamageRadius, float MinDamagePct, FDamageData& DamageData);
     
@@ -112,7 +113,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanTakeDamageFrom(UDamageClass* DamageClass) const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 	//UFUNCTION(BlueprintCallable)
     AActor* GetOwner() const override PURE_VIRTUAL(GetOwner, return NULL;);

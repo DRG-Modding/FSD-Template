@@ -71,9 +71,10 @@ protected:
     bool hasPower;
     
 public:
-    UTetherComponent();
+    UTetherComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void ToggleConnectionValidation(bool Enabled, bool reactivate);
     

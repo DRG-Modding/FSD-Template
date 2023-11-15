@@ -16,6 +16,7 @@ protected:
     
 public:
     UInfestedEnemiesMutator();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UParticleSystem* GetParticleSystem(AFSDPawn* enemy) const;
     

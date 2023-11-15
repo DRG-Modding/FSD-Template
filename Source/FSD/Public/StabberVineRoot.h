@@ -9,7 +9,8 @@ UCLASS(Abstract, Blueprintable)
 class AStabberVineRoot : public AEnemyPawn {
     GENERATED_BODY()
 public:
-    AStabberVineRoot();
+    AStabberVineRoot(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void RemoveVine(AStabberVine* vine);
     

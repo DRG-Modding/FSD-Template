@@ -1,5 +1,6 @@
 #include "GenerationComponent.h"
 
-UGenerationComponent::UGenerationComponent() {
+UGenerationComponent::UGenerationComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

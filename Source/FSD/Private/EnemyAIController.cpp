@@ -1,5 +1,6 @@
 #include "EnemyAIController.h"
 
-AEnemyAIController::AEnemyAIController() {
+AEnemyAIController::AEnemyAIController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

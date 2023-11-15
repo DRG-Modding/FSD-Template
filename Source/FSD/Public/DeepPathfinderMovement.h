@@ -213,9 +213,10 @@ private:
     float FakeSyncTime;
     
 public:
-    UDeepPathfinderMovement();
+    UDeepPathfinderMovement(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void UpdateTargetActor(AActor* NewTarget);
     
@@ -374,7 +375,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void AddFakeMoverImpulse(const FVector& Impulse);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -21,7 +21,8 @@ protected:
     FVector TerrainCheckBox;
     
 public:
-    UTentacleGrabAttack();
+    UTentacleGrabAttack(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsHeadNearTerrain() const;

@@ -8,5 +8,6 @@ class UAnimNotifyState_WeaponReload : public UAnimNotifyState {
     GENERATED_BODY()
 public:
     UAnimNotifyState_WeaponReload();
+
 };
 

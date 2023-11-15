@@ -34,7 +34,8 @@ protected:
     bool RemoveStatusEffectOnEndOverlap;
     
 public:
-    UStatusEffectTriggerComponent();
+    UStatusEffectTriggerComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnOverlapEnd(AActor* MyActor, AActor* OtherActor);

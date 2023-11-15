@@ -44,5 +44,6 @@ public:
     TSoftClassPtr<UUserWidget> MissionEndScreen;
     
     UBEESettings();
+
 };
 

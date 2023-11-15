@@ -8,5 +8,6 @@ class USetMaxUsesPerkActivation : public UFloatPerkActivation {
     GENERATED_BODY()
 public:
     USetMaxUsesPerkActivation();
+
 };
 

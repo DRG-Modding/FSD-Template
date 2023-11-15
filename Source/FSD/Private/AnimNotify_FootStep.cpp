@@ -4,3 +4,4 @@ UAnimNotify_FootStep::UAnimNotify_FootStep() {
     this->IsLeft = false;
 }
 
+

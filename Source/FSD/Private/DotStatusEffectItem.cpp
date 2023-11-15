@@ -5,3 +5,4 @@ UDotStatusEffectItem::UDotStatusEffectItem() {
     this->DamageImpulseOverride = NULL;
 }
 
+

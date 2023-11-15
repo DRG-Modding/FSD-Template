@@ -10,6 +10,7 @@ class UMissionPlayerAndCharacterWidget : public UUserWidget {
     GENERATED_BODY()
 public:
     UMissionPlayerAndCharacterWidget();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdateValues(int32 PlayerRank, int32 PlayerStars, int32 CharacterLevel, float CharacterProgress);

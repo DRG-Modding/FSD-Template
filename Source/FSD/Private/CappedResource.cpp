@@ -1,6 +1,14 @@
 #include "CappedResource.h"
 #include "Net/UnrealNetwork.h"
 
+UCappedResource::UCappedResource() {
+    this->Data = NULL;
+    this->currentAmount = 0.00f;
+    this->MaxAmount = 50.00f;
+    this->TotalCollected = 0.00f;
+    this->FullFlag = 0;
+}
+
 float UCappedResource::TransferAll(UCappedResource* Receiver) {
     return 0.0f;
 }
@@ -61,11 +69,4 @@ void UCappedResource::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
     DOREPLIFETIME(UCappedResource, FullFlag);
 }
 
-UCappedResource::UCappedResource() {
-    this->Data = NULL;
-    this->currentAmount = 0.00f;
-    this->MaxAmount = 50.00f;
-    this->TotalCollected = 0.00f;
-    this->FullFlag = 0;
-}
 

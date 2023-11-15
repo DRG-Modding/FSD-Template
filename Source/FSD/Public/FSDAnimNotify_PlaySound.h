@@ -8,5 +8,6 @@ class UFSDAnimNotify_PlaySound : public UAnimNotify_PlaySound {
     GENERATED_BODY()
 public:
     UFSDAnimNotify_PlaySound();
+
 };
 

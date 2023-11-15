@@ -12,6 +12,7 @@ class FSD_API UVanityFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UVanityFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void RandomizeVanityLoadout(UObject* WorldContextObject, APlayerCharacter* Character);
     

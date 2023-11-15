@@ -79,9 +79,10 @@ private:
     TArray<UStaticMeshComponent*> ArmorMeshes;
     
 public:
-    ATowerEventModule();
+    ATowerEventModule(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnAttack();
@@ -92,7 +93,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void DestroyArmor();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

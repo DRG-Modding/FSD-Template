@@ -19,5 +19,6 @@ public:
     FAIDistanceType GeometricDistanceType;
     
     UBTDecorator_InRangeBB();
+
 };
 

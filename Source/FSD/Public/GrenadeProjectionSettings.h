@@ -21,5 +21,6 @@ public:
     bool ProjectionVisible;
     
     UGrenadeProjectionSettings();
+
 };
 

@@ -12,3 +12,4 @@ USeasonSettings::USeasonSettings() {
     this->NumberOfScriptsFromPlague = 10;
 }
 
+

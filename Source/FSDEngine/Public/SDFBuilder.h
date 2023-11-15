@@ -24,6 +24,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USDFUnionOpComponent* SDFRoot;
     
-    ASDFBuilder();
+    ASDFBuilder(const FObjectInitializer& ObjectInitializer);
+
 };
 

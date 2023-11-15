@@ -33,9 +33,10 @@ protected:
     FText CreditsRewardText;
     
 public:
-    UResourceObjective();
+    UResourceObjective(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnResourceChanged(UCappedResource* CappedResource, float Amount);

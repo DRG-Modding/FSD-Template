@@ -46,6 +46,7 @@ public:
     FRandInterval WarningCount;
     
     UDeepDiveTemplate();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsDurationAllowed(UMissionTemplate* mission, UMissionDuration* Duration) const;
     

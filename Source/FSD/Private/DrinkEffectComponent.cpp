@@ -1,5 +1,12 @@
 #include "DrinkEffectComponent.h"
 
+UDrinkEffectComponent::UDrinkEffectComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->BeerEffectDurationSeconds = 15.00f;
+    this->AutoDestroy = true;
+    this->EffectIsActive = false;
+    this->ActivatesOnlyOnceWhenDrinking = false;
+}
+
 void UDrinkEffectComponent::StopEffect() {
 }
 
@@ -12,10 +19,4 @@ bool UDrinkEffectComponent::GetActivateOnlyWhenDrinking() const {
     return false;
 }
 
-UDrinkEffectComponent::UDrinkEffectComponent() {
-    this->BeerEffectDurationSeconds = 15.00f;
-    this->AutoDestroy = true;
-    this->EffectIsActive = false;
-    this->ActivatesOnlyOnceWhenDrinking = false;
-}
 

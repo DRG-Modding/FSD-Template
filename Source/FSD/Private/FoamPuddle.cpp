@@ -3,26 +3,9 @@
 #include "NiagaraComponent.h"
 #include "Net/UnrealNetwork.h"
 
-void AFoamPuddle::SetState(EVacuumState NewState) {
-}
-
-
-
-void AFoamPuddle::OnRep_State(EVacuumState prevState) {
-}
-
-void AFoamPuddle::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit) {
-}
-
-void AFoamPuddle::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(AFoamPuddle, State);
-    DOREPLIFETIME(AFoamPuddle, VacuumSource);
-}
-
-AFoamPuddle::AFoamPuddle() {
-    this->Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+AFoamPuddle::AFoamPuddle(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    this->Root = (USceneComponent*)RootComponent;
     this->PuddleRoot = CreateDefaultSubobject<USceneComponent>(TEXT("PuddleRoot"));
     this->NS_Foam = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NS_Vacuum_FP"));
     this->PickupSound = NULL;
@@ -43,5 +26,26 @@ AFoamPuddle::AFoamPuddle() {
     this->VacuumSource = NULL;
     this->MaxSoapPiles = 100;
     this->UsesLocalSpace = false;
+    this->PuddleRoot->SetupAttachment(RootComponent);
+    this->NS_Foam->SetupAttachment(PuddleRoot);
 }
+
+void AFoamPuddle::SetState(EVacuumState NewState) {
+}
+
+
+
+void AFoamPuddle::OnRep_State(EVacuumState prevState) {
+}
+
+void AFoamPuddle::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit) {
+}
+
+void AFoamPuddle::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    
+    DOREPLIFETIME(AFoamPuddle, State);
+    DOREPLIFETIME(AFoamPuddle, VacuumSource);
+}
+
 

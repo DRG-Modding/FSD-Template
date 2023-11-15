@@ -16,6 +16,7 @@ protected:
     
 public:
     UEnemyWaveController();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void StartWave();
     

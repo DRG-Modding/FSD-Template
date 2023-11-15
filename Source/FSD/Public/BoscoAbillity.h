@@ -52,5 +52,6 @@ public:
     bool RotateTowardsTarget;
     
     UBoscoAbillity();
+
 };
 

@@ -19,7 +19,8 @@ protected:
     UItemUpgrade* PreviewUpgrade;
     
 public:
-    UItemUpgradePreviewComponent();
+    UItemUpgradePreviewComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetPreviewUpgrade(UItemUpgrade* InUpgrade);
     

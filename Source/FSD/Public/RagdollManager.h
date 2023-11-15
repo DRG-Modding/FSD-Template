@@ -16,7 +16,8 @@ protected:
     TArray<FRagdollItem> Items;
     
 public:
-    URagdollManager();
+    URagdollManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void StartRagdoll(AActor* Actor, const TArray<UMaterialInstanceDynamic*>& Materials, float desiredDuration);
     

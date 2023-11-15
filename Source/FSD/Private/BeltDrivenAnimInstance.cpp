@@ -6,3 +6,4 @@ UBeltDrivenAnimInstance::UBeltDrivenAnimInstance() {
     this->ExternalForceScale = 1.00f;
 }
 
+

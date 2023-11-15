@@ -6,3 +6,4 @@ UGroundFormationData::UGroundFormationData() {
     this->RandomSpread = 25.00f;
 }
 
+

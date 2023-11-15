@@ -30,7 +30,8 @@ protected:
     float OrentationChecksPerSecond;
     
 public:
-    UBobbingComponent();
+    UBobbingComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetOwner(AActor* AActor);
     

@@ -1,29 +1,5 @@
 #include "PlayerAnimInstance.h"
 
-bool UPlayerAnimInstance::StopUseMontage(bool stopImmediately) {
-    return false;
-}
-
-
-
-void UPlayerAnimInstance::SetAiming() {
-}
-
-void UPlayerAnimInstance::PlayUseMontages(UUseAnimationSetting* useSetting) {
-}
-
-bool UPlayerAnimInstance::IsPlayingMontageInGroup(FName GroupName) const {
-    return false;
-}
-
-UItemCharacterAnimationSet* UPlayerAnimInstance::GetAnimationSet() const {
-    return NULL;
-}
-
-float UPlayerAnimInstance::CalculateDirectionVertical(const FVector& TargetDirection, const FRotator& BaseRotation) const {
-    return 0.0f;
-}
-
 UPlayerAnimInstance::UPlayerAnimInstance() {
     this->IsFirstPerson = false;
     this->WalkTreshhold = 200.00f;
@@ -79,4 +55,29 @@ UPlayerAnimInstance::UPlayerAnimInstance() {
     this->CarryAnimationSet = NULL;
     this->DefaultAnimationSet = NULL;
 }
+
+bool UPlayerAnimInstance::StopUseMontage(bool stopImmediately) {
+    return false;
+}
+
+
+
+void UPlayerAnimInstance::SetAiming() {
+}
+
+void UPlayerAnimInstance::PlayUseMontages(UUseAnimationSetting* useSetting) {
+}
+
+bool UPlayerAnimInstance::IsPlayingMontageInGroup(FName GroupName) const {
+    return false;
+}
+
+UItemCharacterAnimationSet* UPlayerAnimInstance::GetAnimationSet() const {
+    return NULL;
+}
+
+float UPlayerAnimInstance::CalculateDirectionVertical(const FVector& TargetDirection, const FRotator& BaseRotation) const {
+    return 0.0f;
+}
+
 

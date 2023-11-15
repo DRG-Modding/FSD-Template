@@ -1,7 +1,30 @@
 #include "RessuplyPod.h"
+#include "Components/SceneComponent.h"
 #include "DamageComponent.h"
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
+
+ARessuplyPod::ARessuplyPod(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    this->Damage = CreateDefaultSubobject<UDamageComponent>(TEXT("Damage"));
+    this->KillRadius = 150.00f;
+    this->DropHeight = 3500.00f;
+    this->DropDelay = 0.00f;
+    this->MissionShoutDelay = 2.00f;
+    this->ShoutDialogOrderAccepted = NULL;
+    this->DialogOrderAccepted = NULL;
+    this->DialogPodArrived = NULL;
+    this->CurrentMissionShout = NULL;
+    this->State = ERessuplyPodState::ReadyToDrop;
+    this->TargetDropTime = 0.00f;
+    this->ServerDropProgress = 0.00f;
+    this->DropCurve = NULL;
+    this->PlayerSpawnPoint = NULL;
+    this->CloseToImpactDistance = 150.00f;
+}
 
 void ARessuplyPod::SetIdling() {
 }
@@ -28,21 +51,4 @@ void ARessuplyPod::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLife
     DOREPLIFETIME(ARessuplyPod, ServerDropProgress);
 }
 
-ARessuplyPod::ARessuplyPod() {
-    this->Damage = CreateDefaultSubobject<UDamageComponent>(TEXT("Damage"));
-    this->KillRadius = 150.00f;
-    this->DropHeight = 3500.00f;
-    this->DropDelay = 0.00f;
-    this->MissionShoutDelay = 2.00f;
-    this->ShoutDialogOrderAccepted = NULL;
-    this->DialogOrderAccepted = NULL;
-    this->DialogPodArrived = NULL;
-    this->CurrentMissionShout = NULL;
-    this->State = ERessuplyPodState::ReadyToDrop;
-    this->TargetDropTime = 0.00f;
-    this->ServerDropProgress = 0.00f;
-    this->DropCurve = NULL;
-    this->PlayerSpawnPoint = NULL;
-    this->CloseToImpactDistance = 150.00f;
-}
 

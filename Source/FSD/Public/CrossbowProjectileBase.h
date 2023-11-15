@@ -99,9 +99,10 @@ private:
     bool OnlyTrailShown;
     
 public:
-    ACrossbowProjectileBase();
+    ACrossbowProjectileBase(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetSimpleDamageComponentFromBP();

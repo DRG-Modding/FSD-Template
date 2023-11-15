@@ -6,3 +6,4 @@ UStatChangeStatusEffectItem::UStatChangeStatusEffectItem() {
     this->AffectedByResistances = false;
 }
 
+

@@ -16,5 +16,6 @@ public:
     FName BoneName;
     
     UAnimNotify_TerrainFootStep();
+
 };
 

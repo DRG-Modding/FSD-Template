@@ -57,5 +57,6 @@ protected:
     
 public:
     UMissionWarning();
+
 };
 

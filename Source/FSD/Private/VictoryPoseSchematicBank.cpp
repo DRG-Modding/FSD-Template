@@ -4,3 +4,4 @@ UVictoryPoseSchematicBank::UVictoryPoseSchematicBank() {
     this->SchematicCategory = NULL;
 }
 
+

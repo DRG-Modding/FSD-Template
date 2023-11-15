@@ -38,7 +38,8 @@ protected:
     FVector Offset;
     
 public:
-    UCarriableComponent();
+    UCarriableComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool PickupItem(APlayerCharacter* byCharacter);
     
@@ -48,7 +49,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void AttachChanged(bool Attached, const FVector PrevScale);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

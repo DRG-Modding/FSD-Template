@@ -24,6 +24,7 @@ protected:
     
 public:
     UClaimableRewardEntryWidget();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SignalRewardClaimed();

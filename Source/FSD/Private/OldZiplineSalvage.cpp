@@ -1,9 +1,10 @@
 #include "OldZiplineSalvage.h"
 
+AOldZiplineSalvage::AOldZiplineSalvage(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ZiplineProjectileClass = NULL;
+}
+
 void AOldZiplineSalvage::OnMatchStarted() {
 }
 
-AOldZiplineSalvage::AOldZiplineSalvage() {
-    this->ZiplineProjectileClass = NULL;
-}
 

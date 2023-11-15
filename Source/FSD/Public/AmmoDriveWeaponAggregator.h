@@ -14,6 +14,7 @@ protected:
     AAmmoDrivenWeapon* Weapon;
     
 public:
-    UAmmoDriveWeaponAggregator();
+    UAmmoDriveWeaponAggregator(const FObjectInitializer& ObjectInitializer);
+
 };
 

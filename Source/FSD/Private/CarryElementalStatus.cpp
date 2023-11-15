@@ -5,3 +5,4 @@ UCarryElementalStatus::UCarryElementalStatus() {
     this->CarriedClass = NULL;
 }
 
+

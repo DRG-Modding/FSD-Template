@@ -110,7 +110,8 @@ private:
     AActor* WeaponTrackActor;
     
 public:
-    APlayerCameraDrone();
+    APlayerCameraDrone(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     bool ToggleSplineMeshVisibility();

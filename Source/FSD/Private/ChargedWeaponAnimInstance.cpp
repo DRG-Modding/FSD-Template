@@ -9,3 +9,4 @@ UChargedWeaponAnimInstance::UChargedWeaponAnimInstance() {
     this->Weapon = NULL;
 }
 
+

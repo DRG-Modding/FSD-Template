@@ -26,6 +26,7 @@ protected:
     
 public:
     UAnimNotifyState_TimedParticleEffectWithImpactDecals();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnParticleCollision(FName EventName, float EmitterTime, int32 ParticleTime, FVector Location, FVector Velocity, FVector Direction, FVector Normal, FName BoneName, UPhysicalMaterial* PhysMat) const;

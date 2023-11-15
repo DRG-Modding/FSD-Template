@@ -40,7 +40,8 @@ protected:
     float TriggerAtVelocityDifference;
     
 public:
-    UWeaponImpactComponent();
+    UWeaponImpactComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void EnableImpactCheckhing(USkeletalMeshComponent* cmp);
     

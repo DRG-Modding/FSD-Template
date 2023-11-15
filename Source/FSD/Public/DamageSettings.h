@@ -108,5 +108,6 @@ public:
     float RagdollGlobalForceMultiplier;
     
     UDamageSettings();
+
 };
 

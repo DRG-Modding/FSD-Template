@@ -47,9 +47,10 @@ protected:
     ASentryGun* SentryGun;
     
 public:
-    UReloadSentryUsableComponent();
+    UReloadSentryUsableComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetOwningPlayerCharacter(APlayerCharacter* Player);
     

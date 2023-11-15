@@ -10,6 +10,7 @@ class UFSDLevelLoadingPersistentWidget : public UUserWidget {
     GENERATED_BODY()
 public:
     UFSDLevelLoadingPersistentWidget();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetFadeProgress(float fade, bool ToSpaceRig, UTexture* LoadingImage);
     

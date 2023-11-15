@@ -26,3 +26,4 @@ UFSR2Settings::UFSR2Settings() {
     this->PreDOFTranslucencyMax = false;
 }
 
+

@@ -14,6 +14,7 @@ protected:
     TSoftClassPtr<AActor> EnemyClass;
     
 public:
-    UKillNearbyCreaturePerkComponent();
+    UKillNearbyCreaturePerkComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

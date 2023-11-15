@@ -1,6 +1,15 @@
 #include "TrackBuilderSegment.h"
+#include "Components/SceneComponent.h"
 #include "Net/UnrealNetwork.h"
 #include "TrackBuilderUsable.h"
+
+ATrackBuilderSegment::ATrackBuilderSegment(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("DefaultSceneRoot"));
+    this->NextSegmentUsable = CreateDefaultSubobject<UTrackBuilderUsable>(TEXT("NextSegmentUsable"));
+}
 
 bool ATrackBuilderSegment::UpdatePlacement(const FTransform& InTransform, UTrackBuilderConnectPoint* InConnectPoint, bool InPlacementValid, AItem* PlaceableItem) {
     return false;
@@ -61,7 +70,4 @@ void ATrackBuilderSegment::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>&
     DOREPLIFETIME(ATrackBuilderSegment, ServerSegmentEndTransform);
 }
 
-ATrackBuilderSegment::ATrackBuilderSegment() {
-    this->NextSegmentUsable = CreateDefaultSubobject<UTrackBuilderUsable>(TEXT("NextSegmentUsable"));
-}
 

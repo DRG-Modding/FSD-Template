@@ -31,5 +31,6 @@ public:
     TArray<FDeepCSGNode> CellLeaves;
     
     UCSGCellNoise();
+
 };
 

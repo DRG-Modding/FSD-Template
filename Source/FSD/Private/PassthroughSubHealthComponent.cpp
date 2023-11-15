@@ -1,6 +1,7 @@
 #include "PassthroughSubHealthComponent.h"
 
-UPassthroughSubHealthComponent::UPassthroughSubHealthComponent() {
+UPassthroughSubHealthComponent::UPassthroughSubHealthComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ArmorComponent = NULL;
 }
+
 

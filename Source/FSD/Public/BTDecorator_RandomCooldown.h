@@ -16,5 +16,6 @@ public:
     FBlackboardKeySelector CooldownTimeModifier;
     
     UBTDecorator_RandomCooldown();
+
 };
 

@@ -10,6 +10,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool Enabled;
     
-    UDebrisActorComponent();
+    UDebrisActorComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

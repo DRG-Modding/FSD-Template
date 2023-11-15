@@ -1,5 +1,6 @@
 #include "EnemyPawnAfflictionComponent.h"
 
-UEnemyPawnAfflictionComponent::UEnemyPawnAfflictionComponent() {
+UEnemyPawnAfflictionComponent::UEnemyPawnAfflictionComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

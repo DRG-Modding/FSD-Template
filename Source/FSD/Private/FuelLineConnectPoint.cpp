@@ -1,5 +1,6 @@
 #include "FuelLineConnectPoint.h"
 
-UFuelLineConnectPoint::UFuelLineConnectPoint() {
+UFuelLineConnectPoint::UFuelLineConnectPoint(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

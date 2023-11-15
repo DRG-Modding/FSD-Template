@@ -19,6 +19,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float Priority;
     
-    AFSDReverbVolume();
+    AFSDReverbVolume(const FObjectInitializer& ObjectInitializer);
+
 };
 

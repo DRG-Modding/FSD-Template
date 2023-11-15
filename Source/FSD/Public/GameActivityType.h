@@ -19,5 +19,6 @@ public:
     TArray<FGameActivitySubTask> SubTasks;
     
     UGameActivityType();
+
 };
 

@@ -1,5 +1,6 @@
 #include "CSGSplineWarpComponent.h"
 
-UCSGSplineWarpComponent::UCSGSplineWarpComponent() {
+UCSGSplineWarpComponent::UCSGSplineWarpComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

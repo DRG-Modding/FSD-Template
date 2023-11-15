@@ -1,6 +1,16 @@
 #include "UpgradableGearComponent.h"
 #include "Templates/SubclassOf.h"
 
+UUpgradableGearComponent::UUpgradableGearComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ItemData = NULL;
+    this->OverclockBank = NULL;
+    this->IconLine = NULL;
+    this->IconBG = NULL;
+    this->IconDetailed = NULL;
+    this->CreditCost = 0;
+    this->RequiredCharacterLevel = 0;
+}
+
 void UUpgradableGearComponent::SetGearStatText(FGearStatEntry& Entry, FText Text) {
 }
 
@@ -193,13 +203,4 @@ bool UUpgradableGearComponent::CanAffordItem(UObject* WorldContextObject, UItemI
     return false;
 }
 
-UUpgradableGearComponent::UUpgradableGearComponent() {
-    this->ItemData = NULL;
-    this->OverclockBank = NULL;
-    this->IconLine = NULL;
-    this->IconBG = NULL;
-    this->IconDetailed = NULL;
-    this->CreditCost = 0;
-    this->RequiredCharacterLevel = 0;
-}
 

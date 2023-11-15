@@ -50,6 +50,7 @@ protected:
     
 public:
     UCommunityGoal();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float TotalTierProgress(float Value, int32 Members);

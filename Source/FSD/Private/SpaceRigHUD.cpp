@@ -1,5 +1,10 @@
 #include "SpaceRigHUD.h"
 
+ASpaceRigHUD::ASpaceRigHUD(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->DebugDisplay.AddDefaulted(1);
+    this->bNotificationQueueActive = false;
+}
+
 void ASpaceRigHUD::SetNotificationQueueActive(bool Inactive) {
 }
 
@@ -19,7 +24,4 @@ UObject* ASpaceRigHUD::DequeueNotificationObject() {
     return NULL;
 }
 
-ASpaceRigHUD::ASpaceRigHUD() {
-    this->bNotificationQueueActive = false;
-}
 

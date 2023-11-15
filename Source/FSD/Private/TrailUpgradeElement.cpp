@@ -4,3 +4,4 @@ UTrailUpgradeElement::UTrailUpgradeElement() {
     this->Trail = NULL;
 }
 
+

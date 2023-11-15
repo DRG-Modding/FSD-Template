@@ -8,5 +8,6 @@ class UNoHeadlightMutator : public UMutator {
     GENERATED_BODY()
 public:
     UNoHeadlightMutator();
+
 };
 

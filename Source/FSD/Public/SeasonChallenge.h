@@ -52,6 +52,7 @@ public:
     TArray<TSubclassOf<UCampaign>> RequiredCampaigns;
     
     USeasonChallenge();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UTexture2D* GetIconOutlined();
     

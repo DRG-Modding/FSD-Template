@@ -6,6 +6,5 @@ UENUM(BlueprintType)
 enum class EChatMessageType : uint8 {
     ES_Chat,
     ES_Game,
-    ES_MAX UMETA(Hidden),
 };
 

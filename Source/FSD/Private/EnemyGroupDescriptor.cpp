@@ -4,3 +4,4 @@ UEnemyGroupDescriptor::UEnemyGroupDescriptor() {
     this->UseCustomDiversity = false;
 }
 
+

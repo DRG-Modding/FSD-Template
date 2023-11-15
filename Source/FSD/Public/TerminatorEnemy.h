@@ -29,12 +29,13 @@ protected:
     TSet<AActor*> CurrentTargets;
     
 public:
-    ATerminatorEnemy();
+    ATerminatorEnemy(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_PlayFlairAnimation();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

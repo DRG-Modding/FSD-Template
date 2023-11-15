@@ -59,6 +59,7 @@ protected:
     
 public:
     UIconGenerationManager();
+
     UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     static void GenerateWeaponIcon_Async(UIconGenerationManager* manager, UItemSkin* Item, bool inShowCloseUp, UPlayerCharacterID* Character, UTextureRenderTarget2D*& Icon, FLatentActionInfo LatentInfo);
     

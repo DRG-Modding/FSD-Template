@@ -1,6 +1,14 @@
 #include "DestructibleSubHealthComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UDestructibleSubHealthComponent::UDestructibleSubHealthComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->MaxHealth = 0.00f;
+    this->RadialDamageResistance = 0.00f;
+    this->AllowInderectDamage = false;
+    this->Damage = 0.00f;
+    this->ArmorComponent = NULL;
+}
+
 void UDestructibleSubHealthComponent::ResetHealth() {
 }
 
@@ -13,11 +21,4 @@ void UDestructibleSubHealthComponent::GetLifetimeReplicatedProps(TArray<FLifetim
     DOREPLIFETIME(UDestructibleSubHealthComponent, Damage);
 }
 
-UDestructibleSubHealthComponent::UDestructibleSubHealthComponent() {
-    this->MaxHealth = 0.00f;
-    this->RadialDamageResistance = 0.00f;
-    this->AllowInderectDamage = false;
-    this->Damage = 0.00f;
-    this->ArmorComponent = NULL;
-}
 

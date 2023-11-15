@@ -193,9 +193,10 @@ private:
     bool CanStandOnAnySurface;
     
 public:
-    AWoodLouse();
+    AWoodLouse(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SwitchedState(EWoodLouseState NewCurrentState);

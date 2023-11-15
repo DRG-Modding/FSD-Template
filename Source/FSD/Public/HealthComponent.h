@@ -72,9 +72,10 @@ protected:
     UPawnStatsComponent* PawnStats;
     
 public:
-    UHealthComponent();
+    UHealthComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void ToggleCanTakeDamage();
     

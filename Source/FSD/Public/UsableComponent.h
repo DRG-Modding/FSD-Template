@@ -23,7 +23,8 @@ protected:
     bool SwitchToUsingState;
     
 public:
-    UUsableComponent();
+    UUsableComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetUseText(const FText& NewText);
     

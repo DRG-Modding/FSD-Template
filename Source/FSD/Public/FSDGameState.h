@@ -291,9 +291,10 @@ protected:
     APlayerState* CurrentPlayerSessionLeader;
     
 public:
-    AFSDGameState();
+    AFSDGameState(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     static void WaitForInitialGenerationDone(AFSDGameState* GameState, FLatentActionInfo LatentInfo);
     

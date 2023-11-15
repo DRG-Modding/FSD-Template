@@ -19,6 +19,7 @@ protected:
     
 public:
     UCarvedResourceData();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UCarvedResourceCreator* LoadResourceCreator() const;
     

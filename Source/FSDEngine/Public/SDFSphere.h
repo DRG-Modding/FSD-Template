@@ -12,5 +12,6 @@ public:
     FSDFSphereProperties Properties;
     
     USDFSphere();
+
 };
 

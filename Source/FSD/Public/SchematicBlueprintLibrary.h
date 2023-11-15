@@ -15,6 +15,7 @@ class USchematicBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     USchematicBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void PriceSchematics(const TSet<USchematic*>& Schematics);
     

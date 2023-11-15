@@ -5,3 +5,4 @@ UEntranceFeature::UEntranceFeature() {
     this->Priority = ECaveEntrancePriority::Primary;
 }
 
+

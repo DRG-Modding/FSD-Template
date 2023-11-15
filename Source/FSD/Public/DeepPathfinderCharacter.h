@@ -68,7 +68,8 @@ protected:
     float AllowedInFormationChance;
     
 public:
-    ADeepPathfinderCharacter();
+    ADeepPathfinderCharacter(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool TryJoinFormation();
     
@@ -86,7 +87,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void LeaveFormation();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

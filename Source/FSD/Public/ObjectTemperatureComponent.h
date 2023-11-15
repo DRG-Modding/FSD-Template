@@ -33,7 +33,8 @@ protected:
     float OnFireHeatRange;
     
 public:
-    UObjectTemperatureComponent();
+    UObjectTemperatureComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void TimerCallback();

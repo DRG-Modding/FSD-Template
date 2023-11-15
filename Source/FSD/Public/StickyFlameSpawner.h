@@ -42,7 +42,8 @@ protected:
     FVector StickyFlameLastLocation;
     
 public:
-    UStickyFlameSpawner();
+    UStickyFlameSpawner(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool TrySpawnStickyFlameHit(const FHitResult& Hit);
     

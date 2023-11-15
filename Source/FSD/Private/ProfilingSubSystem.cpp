@@ -1,5 +1,8 @@
 #include "ProfilingSubSystem.h"
 
+UProfilingSubSystem::UProfilingSubSystem() {
+}
+
 float UProfilingSubSystem::GetTotalTime() const {
     return 0.0f;
 }
@@ -12,6 +15,4 @@ TArray<FProfileCategoryTiming> UProfilingSubSystem::GetCategoryTimings() const {
     return TArray<FProfileCategoryTiming>();
 }
 
-UProfilingSubSystem::UProfilingSubSystem() {
-}
 

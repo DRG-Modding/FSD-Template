@@ -22,9 +22,10 @@ protected:
     TArray<TWeakObjectPtr<ARecallableActor>> ActiveItems;
     
 public:
-    ARecallableItem();
+    ARecallableItem(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerSpawnItem(const FVector& Location, const FRotator& Rotation);
@@ -41,7 +42,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool CanSpawnItem(const FVector& Location, const FRotator& Rotation);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

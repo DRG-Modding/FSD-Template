@@ -260,6 +260,7 @@ protected:
     
 public:
     UPlayerTPAnimInstance();
+
     UFUNCTION(BlueprintCallable)
     void SetOverrideFullBody(bool overrideEnabled);
     

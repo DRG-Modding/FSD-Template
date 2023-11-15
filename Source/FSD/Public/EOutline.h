@@ -5,7 +5,7 @@
 UENUM(BlueprintType)
 enum class EOutline : uint8 {
     OL_NONE,
-    OL_FRIENDLY = 0xFB,
+    OL_FRIENDLY = 251,
     OL_NEUTRAL,
     OL_ENEMY,
     OL_ITEM,

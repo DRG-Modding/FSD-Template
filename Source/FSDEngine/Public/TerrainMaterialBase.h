@@ -8,5 +8,6 @@ class FSDENGINE_API UTerrainMaterialBase : public UPrimaryDataAsset {
     GENERATED_BODY()
 public:
     UTerrainMaterialBase();
+
 };
 

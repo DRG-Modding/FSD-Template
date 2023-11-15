@@ -6,3 +6,4 @@ UAnimNotify_PlaySound2D::UAnimNotify_PlaySound2D() {
     this->PitchMultiplier = 1.00f;
 }
 
+

@@ -1,5 +1,18 @@
 #include "GoogleAnalyticsWrapper.h"
 
+UGoogleAnalyticsWrapper::UGoogleAnalyticsWrapper() {
+    this->LastUnlockedWeapons = TEXT("None");
+    this->LastKnownClass = TEXT("None");
+    this->BoscoLoadOut = TEXT("Bosco=;");
+    this->WasCampaign = false;
+    this->LastCampaignProgress = 0;
+    this->WasLastCampaignMission = false;
+    this->LastCampaignSize = 0;
+    this->DiscordCommunityTrackingID = TEXT("UA-85959451-10");
+    this->CommunityGoalsTrackingID = TEXT("UA-85959451-12");
+    this->ShouldUpdateSchematicTrackingInformation = true;
+}
+
 void UGoogleAnalyticsWrapper::StartMissionPartyInfo(AFSDGameState* GameState) {
 }
 
@@ -83,16 +96,4 @@ FString UGoogleAnalyticsWrapper::GetAnalyticsFText(FText Text) {
 void UGoogleAnalyticsWrapper::EndMissionPartyInfo() {
 }
 
-UGoogleAnalyticsWrapper::UGoogleAnalyticsWrapper() {
-    this->LastUnlockedWeapons = TEXT("None");
-    this->LastKnownClass = TEXT("None");
-    this->BoscoLoadOut = TEXT("Bosco=;");
-    this->WasCampaign = false;
-    this->LastCampaignProgress = 0;
-    this->WasLastCampaignMission = false;
-    this->LastCampaignSize = 0;
-    this->DiscordCommunityTrackingID = TEXT("UA-85959451-10");
-    this->CommunityGoalsTrackingID = TEXT("UA-85959451-12");
-    this->ShouldUpdateSchematicTrackingInformation = true;
-}
 

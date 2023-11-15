@@ -6,6 +6,31 @@
 #include "Net/UnrealNetwork.h"
 #include "PawnStatsComponent.h"
 
+ACaretaker::ACaretaker(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    this->Root = (USceneComponent*)RootComponent;
+    this->Body = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("BodyMesh"));
+    this->Eyes.AddDefaulted(4);
+    this->subHealth.AddDefaulted(4);
+    this->DamageTracker = CreateDefaultSubobject<UHealthDamageTracker>(TEXT("DamageTracker"));
+    this->Health = CreateDefaultSubobject<UEnemyHealthComponent>(TEXT("Health"));
+    this->PawnStats = CreateDefaultSubobject<UPawnStatsComponent>(TEXT("PawnStats"));
+    this->CurrentAction = NULL;
+    this->CurrentStage = -1;
+    this->TargetRotationRate = 0;
+    this->RotationRates.AddDefaulted(5);
+    this->Server_Rotation = 0.00f;
+    this->IsInStageCooldown = false;
+    this->IsWeakpointAVisible = false;
+    this->IsWeakpointBVisible = false;
+    this->IsWeakpointCVisible = false;
+    this->IsWeakpointDVisible = false;
+    this->ActiveSpawnType = ECaretakerSpawnType::None;
+    this->AoEStage = 0;
+    this->OpenEye = -1;
+    this->Body->SetupAttachment(RootComponent);
+}
+
 void ACaretaker::WakeUp() {
 }
 
@@ -57,26 +82,4 @@ void ACaretaker::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifeti
     DOREPLIFETIME(ACaretaker, OpenEye);
 }
 
-ACaretaker::ACaretaker() {
-    this->Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-    this->Body = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("BodyMesh"));
-    this->Eyes.AddDefaulted(4);
-    this->subHealth.AddDefaulted(4);
-    this->DamageTracker = CreateDefaultSubobject<UHealthDamageTracker>(TEXT("DamageTracker"));
-    this->Health = CreateDefaultSubobject<UEnemyHealthComponent>(TEXT("Health"));
-    this->PawnStats = CreateDefaultSubobject<UPawnStatsComponent>(TEXT("PawnStats"));
-    this->CurrentAction = NULL;
-    this->CurrentStage = -1;
-    this->TargetRotationRate = 0;
-    this->RotationRates.AddDefaulted(5);
-    this->Server_Rotation = 0.00f;
-    this->IsInStageCooldown = false;
-    this->IsWeakpointAVisible = false;
-    this->IsWeakpointBVisible = false;
-    this->IsWeakpointCVisible = false;
-    this->IsWeakpointDVisible = false;
-    this->ActiveSpawnType = ECaretakerSpawnType::None;
-    this->AoEStage = 0;
-    this->OpenEye = -1;
-}
 

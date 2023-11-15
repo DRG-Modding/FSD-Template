@@ -51,9 +51,10 @@ protected:
     USoundBase* AudioEndDepositing;
     
 public:
-    UResourceBank();
+    UResourceBank(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_Depositing(APlayerCharacter* Character);

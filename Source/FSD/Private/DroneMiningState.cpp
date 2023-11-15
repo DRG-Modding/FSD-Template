@@ -1,6 +1,6 @@
 #include "DroneMiningState.h"
 
-UDroneMiningState::UDroneMiningState() {
+UDroneMiningState::UDroneMiningState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DroneMiningTool = NULL;
     this->HeartStoneMateiral = NULL;
     this->StartMiningRange = 0.00f;
@@ -10,4 +10,5 @@ UDroneMiningState::UDroneMiningState() {
     this->MiningStrength = 1;
     this->EmbeddedSearchRadius = 0.00f;
 }
+
 

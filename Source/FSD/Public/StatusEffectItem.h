@@ -8,5 +8,6 @@ class UStatusEffectItem : public UObject {
     GENERATED_BODY()
 public:
     UStatusEffectItem();
+
 };
 

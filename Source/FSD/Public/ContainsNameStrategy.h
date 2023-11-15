@@ -8,5 +8,6 @@ class FSD_API UContainsNameStrategy : public USimpleNameStrategy {
     GENERATED_BODY()
 public:
     UContainsNameStrategy();
+
 };
 

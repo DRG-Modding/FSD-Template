@@ -54,7 +54,8 @@ protected:
     TWeakObjectPtr<UHealthComponent> Target;
     
 public:
-    ACaveVine();
+    ACaveVine(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BP_OnTargetChanged(UHealthComponent* NewTarget);

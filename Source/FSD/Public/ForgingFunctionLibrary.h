@@ -14,6 +14,7 @@ class UForgingFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UForgingFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static USchematic* PickForgingMasteryDefaultReward(UObject* WorldContextObject, ESchematicType InType);
     

@@ -14,6 +14,7 @@ protected:
     TArray<USceneComponent*> TargetLocations;
     
 public:
-    UMoveDownedPlayerCapsule();
+    UMoveDownedPlayerCapsule(const FObjectInitializer& ObjectInitializer);
+
 };
 

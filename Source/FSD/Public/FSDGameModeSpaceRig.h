@@ -19,7 +19,8 @@ protected:
     bool StartedSession;
     
 public:
-    AFSDGameModeSpaceRig();
+    AFSDGameModeSpaceRig(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     AActor* GetFreeSpawnOfType(ESpacerigStartType aType, AFSDPlayerController* AController);
     

@@ -1,6 +1,7 @@
 #include "StabberVineRoot.h"
 
-
-AStabberVineRoot::AStabberVineRoot() {
+AStabberVineRoot::AStabberVineRoot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
+
 

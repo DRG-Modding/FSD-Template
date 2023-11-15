@@ -20,6 +20,7 @@ protected:
     float CameraArmSpeed;
     
 public:
-    UParalyzedStateComponent();
+    UParalyzedStateComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -1,6 +1,16 @@
 #include "EnemyWaveManager.h"
 #include "Templates/SubclassOf.h"
 
+UEnemyWaveManager::UEnemyWaveManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->StartDelay = 50.00f;
+    this->spawnRadiusFromSpawnPoint = 300.00f;
+    this->ScriptedWavesEnabled = true;
+    this->NormalWavesEnabled = false;
+    this->OverrideDifficultyScriptedWaveInternal = false;
+    this->GameMode = NULL;
+    this->SpawnManager = NULL;
+}
+
 UEnemyWaveController* UEnemyWaveManager::TriggerWave(TSubclassOf<UEnemyWaveController> waveClass) {
     return NULL;
 }
@@ -37,13 +47,4 @@ bool UEnemyWaveManager::AreNormalWavesBlocked() const {
     return false;
 }
 
-UEnemyWaveManager::UEnemyWaveManager() {
-    this->StartDelay = 50.00f;
-    this->spawnRadiusFromSpawnPoint = 300.00f;
-    this->ScriptedWavesEnabled = true;
-    this->NormalWavesEnabled = false;
-    this->OverrideDifficultyScriptedWaveInternal = false;
-    this->GameMode = NULL;
-    this->SpawnManager = NULL;
-}
 

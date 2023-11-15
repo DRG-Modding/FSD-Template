@@ -107,9 +107,10 @@ protected:
     int32 GeneratorsActivated;
     
 public:
-    UFacilityObjective();
+    UFacilityObjective(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SpawnFacilityEncounters(AProceduralSetup* Setup, UEncounterManager* Encounters, UDebrisPositioning* Positioning);
     

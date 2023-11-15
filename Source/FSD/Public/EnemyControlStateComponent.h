@@ -30,9 +30,10 @@ protected:
     FQuat ControlRotation;
     
 public:
-    UEnemyControlStateComponent();
+    UEnemyControlStateComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerExit();

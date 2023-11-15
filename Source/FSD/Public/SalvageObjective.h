@@ -83,9 +83,10 @@ protected:
     TArray<AMiniMule*> SalvagedActors;
     
 public:
-    USalvageObjective();
+    USalvageObjective(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void PointRepaired();
     

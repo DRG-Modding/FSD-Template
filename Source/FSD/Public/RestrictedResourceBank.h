@@ -14,6 +14,7 @@ protected:
     UResourceData* RequiredResource;
     
 public:
-    URestrictedResourceBank();
+    URestrictedResourceBank(const FObjectInitializer& ObjectInitializer);
+
 };
 

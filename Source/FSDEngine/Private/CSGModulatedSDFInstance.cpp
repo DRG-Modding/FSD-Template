@@ -7,3 +7,4 @@ UCSGModulatedSDFInstance::UCSGModulatedSDFInstance() {
     this->CurrentModulatedBakeConfig = NULL;
 }
 
+

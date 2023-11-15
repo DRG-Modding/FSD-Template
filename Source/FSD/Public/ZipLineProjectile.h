@@ -45,7 +45,8 @@ protected:
     TSubclassOf<UStatusEffect> OnReleaseStatusEffect;
     
 public:
-    AZipLineProjectile();
+    AZipLineProjectile(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnTimelineTick(float NewValue);

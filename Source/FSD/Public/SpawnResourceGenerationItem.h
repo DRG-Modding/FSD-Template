@@ -21,6 +21,7 @@ protected:
     USphereComponent* Sphere;
     
 public:
-    ASpawnResourceGenerationItem();
+    ASpawnResourceGenerationItem(const FObjectInitializer& ObjectInitializer);
+
 };
 

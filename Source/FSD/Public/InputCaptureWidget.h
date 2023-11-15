@@ -25,6 +25,7 @@ protected:
     
 public:
     UInputCaptureWidget();
+
     UFUNCTION(BlueprintCallable)
     void SetData(const FCustomKeySetting InSettings, EKeyBindingSlot InInputSlot, bool InIsGamepadKey);
     

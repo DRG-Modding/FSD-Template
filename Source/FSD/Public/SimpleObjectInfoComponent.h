@@ -52,7 +52,8 @@ protected:
     UActorContextWidget* ContextWidget;
     
 public:
-    USimpleObjectInfoComponent();
+    USimpleObjectInfoComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void SetInGameName(const FString& GameName);
     

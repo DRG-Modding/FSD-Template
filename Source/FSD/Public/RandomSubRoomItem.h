@@ -21,6 +21,7 @@ protected:
     int32 Layer;
     
 public:
-    ARandomSubRoomItem();
+    ARandomSubRoomItem(const FObjectInitializer& ObjectInitializer);
+
 };
 

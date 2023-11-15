@@ -14,9 +14,10 @@ protected:
     AActor* Vehicle;
     
 public:
-    UPilotingStateComponent();
+    UPilotingStateComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Server, Unreliable)
     void Server_MoveRight(float Value);

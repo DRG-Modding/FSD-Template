@@ -1,6 +1,19 @@
 #include "PlayerStatsComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UPlayerStatsComponent::UPlayerStatsComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->TotalKills = 0;
+    this->TotalRevived = 0;
+    this->TotalDeaths = 0;
+    this->TotalSupplypodsRequested = 0;
+    this->TotalGoldMined = 0.00f;
+    this->TotalMOMsMined = 0.00f;
+    this->TotalMineralsMined = 0.00f;
+    this->TotalXPGained = 0.00f;
+    this->EscapedInPod = false;
+    this->LastPlayedClass = NULL;
+}
+
 void UPlayerStatsComponent::SendMissionAnalytics(bool trackMorkite) {
 }
 
@@ -37,16 +50,4 @@ void UPlayerStatsComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>
     DOREPLIFETIME(UPlayerStatsComponent, EndMissionResult);
 }
 
-UPlayerStatsComponent::UPlayerStatsComponent() {
-    this->TotalKills = 0;
-    this->TotalRevived = 0;
-    this->TotalDeaths = 0;
-    this->TotalSupplypodsRequested = 0;
-    this->TotalGoldMined = 0.00f;
-    this->TotalMOMsMined = 0.00f;
-    this->TotalMineralsMined = 0.00f;
-    this->TotalXPGained = 0.00f;
-    this->EscapedInPod = false;
-    this->LastPlayedClass = NULL;
-}
 

@@ -34,6 +34,7 @@ protected:
     
 public:
     UArmorMaterialVanityItem();
+
     UFUNCTION(BlueprintCallable)
     static UMaterialInstanceConstant* SetArmorMaterialToTwoSided(UMaterialInstance* Parent);
     

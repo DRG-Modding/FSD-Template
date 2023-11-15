@@ -35,6 +35,7 @@ protected:
     UClass* JetBootsBoxClassLoaded;
     
 public:
-    AJetBootsBoxSpawner();
+    AJetBootsBoxSpawner(const FObjectInitializer& ObjectInitializer);
+
 };
 

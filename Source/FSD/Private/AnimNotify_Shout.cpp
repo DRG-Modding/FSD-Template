@@ -6,3 +6,4 @@ UAnimNotify_Shout::UAnimNotify_Shout() {
     this->LocalShoutVolumeMultiplier = 1.00f;
 }
 
+

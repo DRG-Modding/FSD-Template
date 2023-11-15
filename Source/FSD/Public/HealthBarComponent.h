@@ -7,6 +7,7 @@ UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnable
 class UHealthBarComponent : public UWidgetComponentCustomMaterial {
     GENERATED_BODY()
 public:
-    UHealthBarComponent();
+    UHealthBarComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

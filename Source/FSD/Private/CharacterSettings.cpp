@@ -1,16 +1,5 @@
 #include "CharacterSettings.h"
 
-void UCharacterSettings::PreloadAllInventories(UAsyncManager* AsyncManager) {
-}
-
-UPlayerCharacterID* UCharacterSettings::GetPlayerCharacterID(const FGuid& ID) const {
-    return NULL;
-}
-
-UInventoryList* UCharacterSettings::GetInventoryList(UPlayerCharacterID* characterID) const {
-    return NULL;
-}
-
 UCharacterSettings::UCharacterSettings() {
     this->BoscoID = NULL;
     this->DefaultCharacterID = NULL;
@@ -28,4 +17,16 @@ UCharacterSettings::UCharacterSettings() {
     this->TeleportPositioning = NULL;
     this->TeleportPlacement = NULL;
 }
+
+void UCharacterSettings::PreloadAllInventories(UAsyncManager* AsyncManager) {
+}
+
+UPlayerCharacterID* UCharacterSettings::GetPlayerCharacterID(const FGuid& ID) const {
+    return NULL;
+}
+
+UInventoryList* UCharacterSettings::GetInventoryList(UPlayerCharacterID* characterID) const {
+    return NULL;
+}
+
 

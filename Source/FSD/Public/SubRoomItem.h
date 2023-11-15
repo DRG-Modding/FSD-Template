@@ -17,6 +17,7 @@ protected:
     int32 Layer;
     
 public:
-    ASubRoomItem();
+    ASubRoomItem(const FObjectInitializer& ObjectInitializer);
+
 };
 

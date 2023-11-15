@@ -1,5 +1,6 @@
 #include "CSGConeComponent.h"
 
-UCSGConeComponent::UCSGConeComponent() {
+UCSGConeComponent::UCSGConeComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

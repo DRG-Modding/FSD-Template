@@ -1,6 +1,11 @@
 #include "AlignEnemyComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UAlignEnemyComponent::UAlignEnemyComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RotateWhileStationary = false;
+    this->IncludePitch = false;
+}
+
 void UAlignEnemyComponent::SetRotateWhileStationary(bool Value) {
 }
 
@@ -13,8 +18,4 @@ void UAlignEnemyComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>&
     DOREPLIFETIME(UAlignEnemyComponent, RotateWhileStationary);
 }
 
-UAlignEnemyComponent::UAlignEnemyComponent() {
-    this->RotateWhileStationary = false;
-    this->IncludePitch = false;
-}
 

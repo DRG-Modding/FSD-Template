@@ -13,6 +13,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool EnableHeadLightOnExit;
     
-    UNoMovementStateComponent();
+    UNoMovementStateComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

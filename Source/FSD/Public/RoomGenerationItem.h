@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ARoomGenerationItem : public AGenerationItem {
     GENERATED_BODY()
 public:
-    ARoomGenerationItem();
+    ARoomGenerationItem(const FObjectInitializer& ObjectInitializer);
+
 };
 

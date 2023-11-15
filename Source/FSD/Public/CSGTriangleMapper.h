@@ -77,5 +77,6 @@ public:
     FDebrisCellNoiseParameters CellNoiseParameters;
     
     UCSGTriangleMapper();
+
 };
 

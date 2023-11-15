@@ -22,7 +22,8 @@ protected:
     TSubclassOf<UStatusEffect> LoadedSTE;
     
 public:
-    UEyeForEyePerkComponent();
+    UEyeForEyePerkComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnHit(float Damage, const FDamageData& DamageData, bool anyHealthLost);

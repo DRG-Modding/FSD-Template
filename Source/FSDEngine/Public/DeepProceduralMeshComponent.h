@@ -14,7 +14,8 @@ public:
     UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UBodySetup* ProcMeshBodySetup;
     
-    UDeepProceduralMeshComponent();
+    UDeepProceduralMeshComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UTerrainMaterialCore* FindTerrainMaterialFromPhysicalMaterial(UPhysicalMaterial* Material) const;
     

@@ -12,7 +12,8 @@ protected:
     FText RewardUseText;
     
 public:
-    UEventRewarderUsableComponent();
+    UEventRewarderUsableComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     FText CreateUseText(int32 blankSchematicCount) const;

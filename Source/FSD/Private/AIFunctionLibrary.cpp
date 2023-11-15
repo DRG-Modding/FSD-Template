@@ -1,5 +1,8 @@
 #include "AIFunctionLibrary.h"
 
+UAIFunctionLibrary::UAIFunctionLibrary() {
+}
+
 void UAIFunctionLibrary::SetAICanSense(bool canSense) {
 }
 
@@ -36,6 +39,4 @@ void UAIFunctionLibrary::AlertEnemy(APawn* enemy) {
 void UAIFunctionLibrary::AlertEnemiesInRange(UObject* WorldContextObject, FVector Origin, float range, APawn* alerter) {
 }
 
-UAIFunctionLibrary::UAIFunctionLibrary() {
-}
 

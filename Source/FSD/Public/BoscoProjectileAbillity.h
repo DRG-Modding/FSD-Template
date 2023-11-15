@@ -14,5 +14,6 @@ public:
     TSubclassOf<AProjectile> ProjectileClass;
     
     UBoscoProjectileAbillity();
+
 };
 

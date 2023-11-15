@@ -16,5 +16,6 @@ public:
     TArray<TSoftClassPtr<AItem>> Items;
     
     UUseConditionEquippedItem();
+
 };
 

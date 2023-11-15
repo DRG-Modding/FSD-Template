@@ -27,6 +27,7 @@ protected:
     bool NeedsLineOfSight;
     
 public:
-    UDroneTargetSensingComponent();
+    UDroneTargetSensingComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

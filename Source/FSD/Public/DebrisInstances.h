@@ -18,6 +18,7 @@ private:
     int32 DebrisIndex;
     
 public:
-    UDebrisInstances();
+    UDebrisInstances(const FObjectInitializer& ObjectInitializer);
+
 };
 

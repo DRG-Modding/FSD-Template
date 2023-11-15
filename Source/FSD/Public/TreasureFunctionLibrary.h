@@ -8,5 +8,6 @@ class UTreasureFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UTreasureFunctionLibrary();
+
 };
 

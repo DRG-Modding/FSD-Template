@@ -43,7 +43,8 @@ protected:
     int32 ReplaceMatIndex;
     
 public:
-    UWeakpointGlowComponent();
+    UWeakpointGlowComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool StopLoopingGlow(int32 aGlowID, bool aFade);
     

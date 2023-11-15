@@ -36,5 +36,6 @@ protected:
     
 public:
     UBTService_FindAttackable();
+
 };
 

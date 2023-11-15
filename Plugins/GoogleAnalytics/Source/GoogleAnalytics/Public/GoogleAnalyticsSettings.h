@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "GoogleAnalyticsSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class GOOGLEANALYTICS_API UGoogleAnalyticsSettings : public UObject {
     GENERATED_BODY()
 public:
@@ -11,5 +11,6 @@ public:
     bool bEnableIDFACollection;
     
     UGoogleAnalyticsSettings();
+
 };
 

@@ -122,6 +122,7 @@ protected:
     
 public:
     UEnemyDescriptor();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TSubclassOf<APawn> GetEnemyClass(UBiome* Biome, bool IsElite) const;
     

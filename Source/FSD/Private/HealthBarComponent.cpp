@@ -1,5 +1,6 @@
 #include "HealthBarComponent.h"
 
-UHealthBarComponent::UHealthBarComponent() {
+UHealthBarComponent::UHealthBarComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -93,7 +93,8 @@ protected:
     AFSDGameState* GameState;
     
 public:
-    ALaserPointerItem();
+    ALaserPointerItem(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     void UnlockToMinersManual(UObject* WorldContextObject, FGuid ObjectID);

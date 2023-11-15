@@ -38,6 +38,7 @@ protected:
     
 public:
     UVanityAnimInstance();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateMeshes();

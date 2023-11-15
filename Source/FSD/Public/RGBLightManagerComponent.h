@@ -22,7 +22,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float NewColorsVariance;
     
-    URGBLightManagerComponent();
+    URGBLightManagerComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void StopRgb();
     

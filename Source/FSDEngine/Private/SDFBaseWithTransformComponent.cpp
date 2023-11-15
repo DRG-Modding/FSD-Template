@@ -1,5 +1,6 @@
 #include "SDFBaseWithTransformComponent.h"
 
-USDFBaseWithTransformComponent::USDFBaseWithTransformComponent() {
+USDFBaseWithTransformComponent::USDFBaseWithTransformComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

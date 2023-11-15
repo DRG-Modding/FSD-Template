@@ -21,6 +21,7 @@ protected:
     
 public:
     UPickaxeMaterialPart();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UMaterialInstanceDynamic* CreateIcon(UObject* Owner) const;
     

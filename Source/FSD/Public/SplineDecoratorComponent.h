@@ -44,7 +44,8 @@ protected:
     float Phase;
     
 public:
-    USplineDecoratorComponent();
+    USplineDecoratorComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void Update(float DeltaTime);
     

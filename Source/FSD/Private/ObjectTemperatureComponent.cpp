@@ -1,12 +1,6 @@
 #include "ObjectTemperatureComponent.h"
 
-void UObjectTemperatureComponent::TimerCallback() {
-}
-
-void UObjectTemperatureComponent::OnDeath(UHealthComponentBase* HealthComponent) {
-}
-
-UObjectTemperatureComponent::UObjectTemperatureComponent() {
+UObjectTemperatureComponent::UObjectTemperatureComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->TemperatureChangeScale = 1.00f;
     this->BurnTemperature = 30.00f;
     this->DouseFireTemperature = 0.00f;
@@ -14,4 +8,11 @@ UObjectTemperatureComponent::UObjectTemperatureComponent() {
     this->IsHeatsourceWhenOnFire = true;
     this->OnFireHeatRange = 150.00f;
 }
+
+void UObjectTemperatureComponent::TimerCallback() {
+}
+
+void UObjectTemperatureComponent::OnDeath(UHealthComponentBase* HealthComponent) {
+}
+
 

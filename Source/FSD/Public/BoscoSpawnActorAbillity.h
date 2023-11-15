@@ -14,5 +14,6 @@ public:
     TSubclassOf<AActor> SpawnedActorClass;
     
     UBoscoSpawnActorAbillity();
+
 };
 

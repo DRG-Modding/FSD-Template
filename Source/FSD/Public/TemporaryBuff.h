@@ -25,6 +25,7 @@ protected:
     
 public:
     UTemporaryBuff();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetActivateOnlyWhenDrinking() const;
     

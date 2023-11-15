@@ -26,7 +26,8 @@ protected:
     TSubclassOf<AActor> PlacableClass;
     
 public:
-    APlaceableItem();
+    APlaceableItem(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SpawnItem(FVector Location);
@@ -37,7 +38,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnCarriedAmountChanged(int32 newAmount);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

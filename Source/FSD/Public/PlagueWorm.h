@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class FSD_API APlagueWorm : public AEnemyDeepPathfinderCharacter {
     GENERATED_BODY()
 public:
-    APlagueWorm();
+    APlagueWorm(const FObjectInitializer& ObjectInitializer);
+
 };
 

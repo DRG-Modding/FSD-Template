@@ -1,19 +1,7 @@
 #include "LineSpikeAttack.h"
 #include "Net/UnrealNetwork.h"
 
-void ULineSpikeAttack::OnRep_TentaclesBurried() {
-}
-
-void ULineSpikeAttack::All_PlayEffects_Implementation() {
-}
-
-void ULineSpikeAttack::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(ULineSpikeAttack, TentaclesBurried);
-}
-
-ULineSpikeAttack::ULineSpikeAttack() {
+ULineSpikeAttack::ULineSpikeAttack(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->TentacleMaterial = NULL;
     this->ActiveMaterial = NULL;
     this->TentacleImpactParticles = NULL;
@@ -36,4 +24,17 @@ ULineSpikeAttack::ULineSpikeAttack() {
     this->MinSpikeCount = 10;
     this->MaxFails = 3;
 }
+
+void ULineSpikeAttack::OnRep_TentaclesBurried() {
+}
+
+void ULineSpikeAttack::All_PlayEffects_Implementation() {
+}
+
+void ULineSpikeAttack::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    
+    DOREPLIFETIME(ULineSpikeAttack, TentaclesBurried);
+}
+
 

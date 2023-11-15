@@ -120,9 +120,10 @@ protected:
     AEscortDestination* EscortDestination;
     
 public:
-    UEscortObjective();
+    UEscortObjective(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SyncProgressTimer();
     

@@ -21,7 +21,8 @@ protected:
     UHealthComponentBase* Health;
     
 public:
-    UHealthDamageTracker();
+    UHealthDamageTracker(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void ResetTrackedDamage();
     

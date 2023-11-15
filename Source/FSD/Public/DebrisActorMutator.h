@@ -13,5 +13,6 @@ public:
     TSoftClassPtr<ADebrisDataActor> DebrisActor;
     
     UDebrisActorMutator();
+
 };
 

@@ -21,9 +21,10 @@ protected:
     bool IsDown;
     
 public:
-    AMULE();
+    AMULE(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetIsDown(bool NewIsDown);
     

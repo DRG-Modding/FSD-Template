@@ -1,5 +1,6 @@
 #include "SDFRandomDisableComponent.h"
 
-USDFRandomDisableComponent::USDFRandomDisableComponent() {
+USDFRandomDisableComponent::USDFRandomDisableComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

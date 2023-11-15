@@ -1,6 +1,7 @@
 #include "HydraWeedShooter.h"
 
-AHydraWeedShooter::AHydraWeedShooter() {
+AHydraWeedShooter::AHydraWeedShooter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Core = NULL;
 }
+
 

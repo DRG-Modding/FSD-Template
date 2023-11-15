@@ -13,6 +13,7 @@ class FSD_API ULoadoutFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     ULoadoutFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void SetCurrLoadout(UObject* WorldContextObject, UPlayerCharacterID* PlayerId, FLoadoutCopy newLoadout);
     

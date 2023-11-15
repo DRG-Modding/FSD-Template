@@ -14,9 +14,10 @@ protected:
     UDrinkableDataAsset* DrinkableData;
     
 public:
-    ADrinkableItem();
+    ADrinkableItem(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_DrinkableData();

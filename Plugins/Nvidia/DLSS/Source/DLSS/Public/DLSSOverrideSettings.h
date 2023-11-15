@@ -4,7 +4,7 @@
 #include "EDLSSSettingOverride.h"
 #include "DLSSOverrideSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, ProjectUserConfig)
+UCLASS(Blueprintable, ProjectUserConfig, Config=Engine)
 class DLSS_API UDLSSOverrideSettings : public UObject {
     GENERATED_BODY()
 public:
@@ -24,5 +24,6 @@ public:
     EDLSSSettingOverride ShowDLSSSDebugOnScreenMessages;
     
     UDLSSOverrideSettings();
+
 };
 

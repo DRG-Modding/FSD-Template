@@ -4,7 +4,7 @@
 #include "RawInputDeviceConfiguration.h"
 #include "RawInputSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Input)
+UCLASS(Blueprintable, DefaultConfig, Config=Input)
 class URawInputSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -15,5 +15,6 @@ public:
     bool bRegisterDefaultDevice;
     
     URawInputSettings();
+
 };
 

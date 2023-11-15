@@ -15,6 +15,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBinaryTerrainMaterialCombiner Materials;
     
-    UCSGModulatedSDFInstanceComponent();
+    UCSGModulatedSDFInstanceComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

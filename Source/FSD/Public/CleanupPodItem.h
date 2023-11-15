@@ -22,7 +22,8 @@ protected:
     TWeakObjectPtr<APlagueControlActor> PlagueController;
     
 public:
-    ACleanupPodItem();
+    ACleanupPodItem(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdateWidget(EPlaceableObstructionType reason, float TimeLeft);
@@ -33,7 +34,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void CallUpdateWidget();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

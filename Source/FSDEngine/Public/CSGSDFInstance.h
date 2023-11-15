@@ -40,5 +40,6 @@ public:
     FMatrix TransformMatInv;
     
     UCSGSDFInstance();
+
 };
 

@@ -4,3 +4,4 @@ UAnimNotify_CopyBoneVisibility::UAnimNotify_CopyBoneVisibility() {
     this->HideSourceBone = false;
 }
 
+

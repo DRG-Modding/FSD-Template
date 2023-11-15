@@ -1,5 +1,8 @@
 #include "FlareController.h"
 
+UFlareController::UFlareController() {
+}
+
 void UFlareController::UnregisterFlareGunProjectile(AFlareGunProjectile* flareprj) {
 }
 
@@ -16,6 +19,4 @@ AActor* UFlareController::FindFlareNear(UObject* WorldContextObject, FVector Pos
     return NULL;
 }
 
-UFlareController::UFlareController() {
-}
 

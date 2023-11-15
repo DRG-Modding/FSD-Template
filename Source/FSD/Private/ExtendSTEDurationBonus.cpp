@@ -5,3 +5,4 @@ UExtendSTEDurationBonus::UExtendSTEDurationBonus() {
     this->AddedDuration = 0.00f;
 }
 
+

@@ -1,5 +1,8 @@
 #include "AttackCooldownComponent.h"
 
+UAttackCooldownComponent::UAttackCooldownComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UAttackCooldownComponent::SetCooldown(const FName& AttackName, float cooldownSeconds) {
 }
 
@@ -14,6 +17,4 @@ bool UAttackCooldownComponent::IsAnyAttackOffCooldown() const {
 void UAttackCooldownComponent::AttackUsed(const FName& Name) {
 }
 
-UAttackCooldownComponent::UAttackCooldownComponent() {
-}
 

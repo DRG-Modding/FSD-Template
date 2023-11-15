@@ -1,6 +1,21 @@
 #include "PlagueObjective.h"
 #include "Net/UnrealNetwork.h"
 
+UPlagueObjective::UPlagueObjective(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->StartPlagueAmount = -1;
+    this->CurrentPlagueAmount = -1;
+    this->TargetPlagueAmount = -1;
+    this->PercentageRequiredForCompletion = 0.50f;
+    this->SpawningTowersCount = 2;
+    this->NodeKilledShout = NULL;
+    this->LastNodeKilledShout = NULL;
+    this->OverridePrimaryObjCompletedShout_SelfCompleted = NULL;
+    this->OverridePrimaryObjCompletedShout_SelfNotCompleted = NULL;
+    this->AllPlagueCleaned = false;
+    this->PlagueController = NULL;
+    this->ScriptedPlagueWaveWeight = 0.00f;
+}
+
 void UPlagueObjective::OnRep_CurrentPlagueAmount(int32 OldAmount) {
 }
 
@@ -16,18 +31,4 @@ void UPlagueObjective::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(UPlagueObjective, PlagueController);
 }
 
-UPlagueObjective::UPlagueObjective() {
-    this->StartPlagueAmount = -1;
-    this->CurrentPlagueAmount = -1;
-    this->TargetPlagueAmount = -1;
-    this->PercentageRequiredForCompletion = 0.50f;
-    this->SpawningTowersCount = 2;
-    this->NodeKilledShout = NULL;
-    this->LastNodeKilledShout = NULL;
-    this->OverridePrimaryObjCompletedShout_SelfCompleted = NULL;
-    this->OverridePrimaryObjCompletedShout_SelfNotCompleted = NULL;
-    this->AllPlagueCleaned = false;
-    this->PlagueController = NULL;
-    this->ScriptedPlagueWaveWeight = 0.00f;
-}
 

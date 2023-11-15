@@ -138,7 +138,7 @@ class UUsableComponent;
 class UWidgetInteractionComponent;
 class UZipLineStateComponent;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract, Blueprintable, Config=Engine)
 class FSD_API APlayerCharacter : public ACharacter, public IGameplayTagAssetInterface, public ITargetable, public IRejoinListener, public IPlaySoundInterface {
     GENERATED_BODY()
 public:
@@ -729,9 +729,10 @@ protected:
     FCameraSpringSettings CameraSpringSettings;
     
 public:
-    APlayerCharacter();
+    APlayerCharacter(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void UseZipLine(AZipLineProjectile* ZipLine, const FVector& Start, const FVector& End);
     
@@ -1255,7 +1256,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void AcceptInvite();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 public:
     UFUNCTION(BlueprintCallable)

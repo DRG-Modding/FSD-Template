@@ -8,5 +8,6 @@ class UResourceCreator : public UDataAsset {
     GENERATED_BODY()
 public:
     UResourceCreator();
+
 };
 

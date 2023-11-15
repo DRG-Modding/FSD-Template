@@ -12,5 +12,6 @@ public:
     FindSteamSessionsResult OnFindResult;
     
     UFSDFindSteamSessions();
+
 };
 

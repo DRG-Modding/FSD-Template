@@ -25,7 +25,8 @@ protected:
     int32 Index;
     
 public:
-    ALaserPointerWaypoint();
+    ALaserPointerWaypoint(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnShow();

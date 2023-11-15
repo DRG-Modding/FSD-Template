@@ -13,9 +13,10 @@ protected:
     FTentacleTarget DesiredTarget;
     
 public:
-    AStabberVine();
+    AStabberVine(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_DesiredTarget();

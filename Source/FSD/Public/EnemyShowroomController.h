@@ -17,7 +17,8 @@ protected:
     AEnemyShowroomItem* EnemyInstance;
     
 public:
-    UEnemyShowroomController();
+    UEnemyShowroomController(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Receive_PlayAttack(UAnimSequenceBase* attackAnimation);

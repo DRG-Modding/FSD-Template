@@ -1,17 +1,5 @@
 #include "FSDPhysicalMaterial.h"
 
-UFXSystemComponent* UFSDPhysicalMaterial::SpawnImpactParticlesFromHit(UObject* WorldContextObject, const FHitResult& HitResult) {
-    return NULL;
-}
-
-UFXSystemComponent* UFSDPhysicalMaterial::SpawnImpactParticles(UObject* WorldContextObject, FVector Location, FVector Normal) const {
-    return NULL;
-}
-
-UFSDPhysicalMaterial* UFSDPhysicalMaterial::GetPhysicalMaterialFromPrimitive(UPrimitiveComponent* Component) {
-    return NULL;
-}
-
 UFSDPhysicalMaterial::UFSDPhysicalMaterial() {
     this->BreakingDecelerationScale = 1.00f;
     this->BreakingFrictionScale = 1.00f;
@@ -40,4 +28,17 @@ UFSDPhysicalMaterial::UFSDPhysicalMaterial() {
     this->alwaysPenetrate = false;
     this->ReactiveTerrain = NULL;
 }
+
+UFXSystemComponent* UFSDPhysicalMaterial::SpawnImpactParticlesFromHit(UObject* WorldContextObject, const FHitResult& HitResult) {
+    return NULL;
+}
+
+UFXSystemComponent* UFSDPhysicalMaterial::SpawnImpactParticles(UObject* WorldContextObject, FVector Location, FVector Normal) const {
+    return NULL;
+}
+
+UFSDPhysicalMaterial* UFSDPhysicalMaterial::GetPhysicalMaterialFromPrimitive(UPrimitiveComponent* Component) {
+    return NULL;
+}
+
 

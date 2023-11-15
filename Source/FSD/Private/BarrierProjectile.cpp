@@ -1,5 +1,6 @@
 #include "BarrierProjectile.h"
 
-ABarrierProjectile::ABarrierProjectile() {
+ABarrierProjectile::ABarrierProjectile(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

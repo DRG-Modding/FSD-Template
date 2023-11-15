@@ -1,5 +1,8 @@
 #include "SchematicBlueprintLibrary.h"
 
+USchematicBlueprintLibrary::USchematicBlueprintLibrary() {
+}
+
 void USchematicBlueprintLibrary::PriceSchematics(const TSet<USchematic*>& Schematics) {
 }
 
@@ -20,6 +23,4 @@ USchematicCategory* USchematicBlueprintLibrary::FindItemUpgradeSchematicCategory
 void USchematicBlueprintLibrary::AddSkinSchematicCollectionToSettings(UItemSkinSchematicCollection* Collection) {
 }
 
-USchematicBlueprintLibrary::USchematicBlueprintLibrary() {
-}
 

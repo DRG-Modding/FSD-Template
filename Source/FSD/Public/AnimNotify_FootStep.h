@@ -11,5 +11,6 @@ public:
     bool IsLeft;
     
     UAnimNotify_FootStep();
+
 };
 

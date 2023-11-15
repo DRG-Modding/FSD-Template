@@ -3,48 +3,7 @@
 #include "Components/SceneComponent.h"
 #include "Net/UnrealNetwork.h"
 
-
-void AWoodLouse::StopSpecial() {
-}
-
-void AWoodLouse::StartSpecial() {
-}
-
-void AWoodLouse::SetWantsToStandUp(bool aWantsToStandUp) {
-}
-
-void AWoodLouse::SetState(EWoodLouseState aState) {
-}
-
-void AWoodLouse::SetRotateToTarget(bool aRotateToTarget) {
-}
-
-void AWoodLouse::SeePawn(APawn* aSenPawn) {
-}
-
-void AWoodLouse::OnRep_State() {
-}
-
-void AWoodLouse::OnRep_LastHit() {
-}
-
-EWoodLouseState AWoodLouse::GetRollerState() const {
-    return EWoodLouseState::Unfolded;
-}
-
-
-void AWoodLouse::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(AWoodLouse, LastHit);
-    DOREPLIFETIME(AWoodLouse, CurrentState);
-    DOREPLIFETIME(AWoodLouse, CurrentTarget);
-    DOREPLIFETIME(AWoodLouse, RotateTowardsTarget);
-    DOREPLIFETIME(AWoodLouse, WantsToStandUp);
-    DOREPLIFETIME(AWoodLouse, IsShooting);
-}
-
-AWoodLouse::AWoodLouse() {
+AWoodLouse::AWoodLouse(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RollingCenter = CreateDefaultSubobject<USceneComponent>(TEXT("RollingCenter"));
     this->PawnSensing = CreateDefaultSubobject<UPawnSensingComponent>(TEXT("Sensing"));
     this->forceState = EWoodLouseState::Size;
@@ -96,5 +55,48 @@ AWoodLouse::AWoodLouse() {
     this->WantsToStandUp = false;
     this->IsShooting = false;
     this->CanStandOnAnySurface = false;
+    this->RollingCenter->SetupAttachment(RootComponent);
 }
+
+
+void AWoodLouse::StopSpecial() {
+}
+
+void AWoodLouse::StartSpecial() {
+}
+
+void AWoodLouse::SetWantsToStandUp(bool aWantsToStandUp) {
+}
+
+void AWoodLouse::SetState(EWoodLouseState aState) {
+}
+
+void AWoodLouse::SetRotateToTarget(bool aRotateToTarget) {
+}
+
+void AWoodLouse::SeePawn(APawn* aSenPawn) {
+}
+
+void AWoodLouse::OnRep_State() {
+}
+
+void AWoodLouse::OnRep_LastHit() {
+}
+
+EWoodLouseState AWoodLouse::GetRollerState() const {
+    return EWoodLouseState::Unfolded;
+}
+
+
+void AWoodLouse::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    
+    DOREPLIFETIME(AWoodLouse, LastHit);
+    DOREPLIFETIME(AWoodLouse, CurrentState);
+    DOREPLIFETIME(AWoodLouse, CurrentTarget);
+    DOREPLIFETIME(AWoodLouse, RotateTowardsTarget);
+    DOREPLIFETIME(AWoodLouse, WantsToStandUp);
+    DOREPLIFETIME(AWoodLouse, IsShooting);
+}
+
 

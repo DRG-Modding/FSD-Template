@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFSDBehaviorTreeComponent : public UBehaviorTreeComponent {
     GENERATED_BODY()
 public:
-    UFSDBehaviorTreeComponent();
+    UFSDBehaviorTreeComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

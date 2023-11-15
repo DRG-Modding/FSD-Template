@@ -14,6 +14,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool InvertCSG;
     
-    USimpleMeshWithCachedTreeComponent();
+    USimpleMeshWithCachedTreeComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

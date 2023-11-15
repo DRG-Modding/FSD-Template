@@ -55,6 +55,7 @@ public:
     bool wasSuccess;
     
     UMissionResultInfo();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetWarningBonusSum();
     

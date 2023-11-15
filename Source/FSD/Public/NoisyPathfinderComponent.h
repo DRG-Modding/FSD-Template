@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UNoisyPathfinderComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UNoisyPathfinderComponent();
+    UNoisyPathfinderComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

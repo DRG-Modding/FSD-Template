@@ -4,3 +4,4 @@ UBonusDamageUpgrade::UBonusDamageUpgrade() {
     this->DamageBonus = NULL;
 }
 
+

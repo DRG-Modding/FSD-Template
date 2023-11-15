@@ -40,6 +40,7 @@ protected:
     float LastSeenTime;
     
 public:
-    UCharacterSightSensor();
+    UCharacterSightSensor(const FObjectInitializer& ObjectInitializer);
+
 };
 

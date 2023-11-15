@@ -13,6 +13,7 @@ protected:
     EDroneState SubsequentState;
     
 public:
-    UDroneStateComponentBase();
+    UDroneStateComponentBase(const FObjectInitializer& ObjectInitializer);
+
 };
 

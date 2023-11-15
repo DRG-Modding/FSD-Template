@@ -8,5 +8,6 @@ class UPickaxePommelPart : public UPickaxeMeshPart {
     GENERATED_BODY()
 public:
     UPickaxePommelPart();
+
 };
 

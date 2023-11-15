@@ -4,3 +4,4 @@ USpawnTriggerFeature::USpawnTriggerFeature() {
     this->TriggerClass = NULL;
 }
 
+

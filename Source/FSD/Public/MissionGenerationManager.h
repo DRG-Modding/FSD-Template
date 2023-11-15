@@ -19,6 +19,7 @@ protected:
     
 public:
     UMissionGenerationManager();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UGeneratedMission*> GetMissions(int32 Seed);
     

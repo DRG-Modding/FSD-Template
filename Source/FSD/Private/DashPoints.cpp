@@ -1,6 +1,22 @@
 #include "DashPoints.h"
 #include "Net/UnrealNetwork.h"
 
+UDashPoints::UDashPoints(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->PointOffset = 150.00f;
+    this->MaxRangeFromPlayer = 400.00f;
+    this->MinRangeFromPlayer = 200.00f;
+    this->MinHeightAboveTarget = 50.00f;
+    this->MaxHeightAboveTarget = 500.00f;
+    this->safeReduction = 60.00f;
+    this->AcceptedDashradius = 25.00f;
+    this->DashSpeed = 100.00f;
+    this->SlowdownRadius = 40.00f;
+    this->IgnoreTheClosestPoints = 0;
+    this->GenerationMode = EDashPointsGenerationMode::Surround;
+    this->IsDashing = false;
+    this->IgnoreRules = false;
+}
+
 void UDashPoints::UpdateDashPointData() {
 }
 
@@ -27,19 +43,4 @@ void UDashPoints::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifet
     DOREPLIFETIME(UDashPoints, IsDashing);
 }
 
-UDashPoints::UDashPoints() {
-    this->PointOffset = 150.00f;
-    this->MaxRangeFromPlayer = 400.00f;
-    this->MinRangeFromPlayer = 200.00f;
-    this->MinHeightAboveTarget = 50.00f;
-    this->MaxHeightAboveTarget = 500.00f;
-    this->safeReduction = 60.00f;
-    this->AcceptedDashradius = 25.00f;
-    this->DashSpeed = 100.00f;
-    this->SlowdownRadius = 40.00f;
-    this->IgnoreTheClosestPoints = 0;
-    this->GenerationMode = EDashPointsGenerationMode::Surround;
-    this->IsDashing = false;
-    this->IgnoreRules = false;
-}
 

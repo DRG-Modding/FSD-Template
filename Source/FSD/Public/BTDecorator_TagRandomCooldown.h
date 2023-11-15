@@ -22,5 +22,6 @@ public:
     bool bActivatesCooldown;
     
     UBTDecorator_TagRandomCooldown();
+
 };
 

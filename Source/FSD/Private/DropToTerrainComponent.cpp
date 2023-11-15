@@ -1,6 +1,13 @@
 #include "DropToTerrainComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UDropToTerrainComponent::UDropToTerrainComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->StartActive = false;
+    this->FallVelocity = 0.00f;
+    this->TerrainTraceMaxDistance = -10000.00f;
+    this->IsDetecting = false;
+}
+
 void UDropToTerrainComponent::StopDropDetection(bool stopFalling) {
 }
 
@@ -19,10 +26,4 @@ void UDropToTerrainComponent::GetLifetimeReplicatedProps(TArray<FLifetimePropert
     DOREPLIFETIME(UDropToTerrainComponent, DropTarget);
 }
 
-UDropToTerrainComponent::UDropToTerrainComponent() {
-    this->StartActive = false;
-    this->FallVelocity = 0.00f;
-    this->TerrainTraceMaxDistance = -10000.00f;
-    this->IsDetecting = false;
-}
 

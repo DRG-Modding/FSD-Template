@@ -1,6 +1,7 @@
 #include "StaticObjectAfflictionComponent.h"
 
-UStaticObjectAfflictionComponent::UStaticObjectAfflictionComponent() {
+UStaticObjectAfflictionComponent::UStaticObjectAfflictionComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Mesh = NULL;
 }
+
 

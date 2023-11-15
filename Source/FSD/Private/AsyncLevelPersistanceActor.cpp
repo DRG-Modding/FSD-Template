@@ -1,5 +1,6 @@
 #include "AsyncLevelPersistanceActor.h"
 
-AAsyncLevelPersistanceActor::AAsyncLevelPersistanceActor() {
+AAsyncLevelPersistanceActor::AAsyncLevelPersistanceActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

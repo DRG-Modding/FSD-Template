@@ -12,5 +12,6 @@ public:
     FCSGRandomDisableProperties Properties;
     
     UCSGRandomDisable();
+
 };
 

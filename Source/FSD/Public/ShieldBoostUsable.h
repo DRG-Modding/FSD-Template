@@ -10,7 +10,8 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UShieldBoostUsable : public UInstantUsable {
     GENERATED_BODY()
 public:
-    UShieldBoostUsable();
+    UShieldBoostUsable(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnCharacterBoosted(APlayerCharacter* User, EInputKeys Key);

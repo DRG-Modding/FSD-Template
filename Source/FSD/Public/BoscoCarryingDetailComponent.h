@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator CustomRotaion;
     
-    UBoscoCarryingDetailComponent();
+    UBoscoCarryingDetailComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

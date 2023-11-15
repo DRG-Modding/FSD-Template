@@ -1,5 +1,8 @@
 #include "FSDRateLimiter.h"
 
+UFSDRateLimiter::UFSDRateLimiter() {
+}
+
 bool UFSDRateLimiter::RateLimted() {
     return false;
 }
@@ -21,6 +24,4 @@ void UFSDRateLimiter::Init(int32 rateLimit, float rateTimeLimit, bool useBurstLi
 void UFSDRateLimiter::IncreaseLimitCounter() {
 }
 
-UFSDRateLimiter::UFSDRateLimiter() {
-}
 

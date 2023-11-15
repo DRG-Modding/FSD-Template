@@ -1,5 +1,6 @@
 #include "ZipLineUsable.h"
 
-UZipLineUsable::UZipLineUsable() {
+UZipLineUsable::UZipLineUsable(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

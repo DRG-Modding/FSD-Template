@@ -12,5 +12,6 @@ public:
     FSDFRandomizeTransformProperties Properties;
     
     USDFRandomizeTransform();
+
 };
 

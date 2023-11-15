@@ -1,5 +1,6 @@
 #include "FSDAudioComponent.h"
 
-UFSDAudioComponent::UFSDAudioComponent() {
+UFSDAudioComponent::UFSDAudioComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

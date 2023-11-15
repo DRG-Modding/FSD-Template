@@ -12,6 +12,7 @@ class DSTELEMETRY_API UDSTelemetry : public UObject {
     GENERATED_BODY()
 public:
     UDSTelemetry();
+
     UFUNCTION(BlueprintCallable)
     void Terminate();
     

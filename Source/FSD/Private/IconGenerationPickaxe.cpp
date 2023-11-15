@@ -1,5 +1,6 @@
 #include "IconGenerationPickaxe.h"
 
-AIconGenerationPickaxe::AIconGenerationPickaxe() {
+AIconGenerationPickaxe::AIconGenerationPickaxe(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

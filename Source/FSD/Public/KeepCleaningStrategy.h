@@ -8,5 +8,6 @@ class UKeepCleaningStrategy : public UStandardExitStrategy {
     GENERATED_BODY()
 public:
     UKeepCleaningStrategy();
+
 };
 

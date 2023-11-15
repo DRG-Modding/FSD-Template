@@ -28,7 +28,8 @@ protected:
     UForceFeedbackAttenuation* ForceFeedbackAttanuation;
     
 public:
-    UProjectileExplosion();
+    UProjectileExplosion(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SpawnEffectsFromHit(const FHitResult& Hit);
     

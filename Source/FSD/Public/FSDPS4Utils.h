@@ -8,6 +8,7 @@ class UFSDPS4Utils : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFSDPS4Utils();
+
     UFUNCTION(BlueprintCallable)
     static void SetUGCAllowed(bool bAllowed);
     

@@ -14,6 +14,7 @@ class UPlayerCharacterFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UPlayerCharacterFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool SetPlayerVoiceMuted(UObject* WorldContextObject, AFSDPlayerState* PlayerState, bool Mute, bool TrySystemWide, int32 localUserNum);
     

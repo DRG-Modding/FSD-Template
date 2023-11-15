@@ -36,6 +36,7 @@ protected:
     float EmbeddedSearchRadius;
     
 public:
-    UDroneMiningState();
+    UDroneMiningState(const FObjectInitializer& ObjectInitializer);
+
 };
 

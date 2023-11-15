@@ -4,3 +4,4 @@ URichTextInputDecorator::URichTextInputDecorator() {
     this->DecoratorWidgetClass = NULL;
 }
 
+

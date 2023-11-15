@@ -18,9 +18,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     ACrossbowProjectileStuck* Arrow1;
     
-    ACrossbowElectroBeam();
+    ACrossbowElectroBeam(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void RecalculateMovingBeam();
     

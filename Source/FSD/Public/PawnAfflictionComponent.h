@@ -46,9 +46,10 @@ protected:
     bool UseDormancy;
     
 public:
-    UPawnAfflictionComponent();
+    UPawnAfflictionComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void PushAffliction(UPawnAffliction* Affliction, bool onlyIfNotActive);
     

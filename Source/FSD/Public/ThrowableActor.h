@@ -24,9 +24,10 @@ protected:
     bool IgnoreOwnersCollision;
     
 public:
-    AThrowableActor();
+    AThrowableActor(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveIgnoreCharacter(APlayerCharacter* Character);
     

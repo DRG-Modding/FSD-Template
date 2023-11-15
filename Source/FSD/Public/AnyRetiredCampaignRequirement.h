@@ -8,5 +8,6 @@ class FSD_API UAnyRetiredCampaignRequirement : public UCampaignRequirement {
     GENERATED_BODY()
 public:
     UAnyRetiredCampaignRequirement();
+
 };
 

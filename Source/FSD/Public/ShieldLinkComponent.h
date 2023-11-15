@@ -28,7 +28,8 @@ protected:
     TSubclassOf<UStatusEffect> LinkStatusEffect;
     
 public:
-    UShieldLinkComponent();
+    UShieldLinkComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void TimerFunction();

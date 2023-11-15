@@ -59,7 +59,8 @@ protected:
     bool bIsUpgraded;
     
 public:
-    ARecallableSentryGunItem();
+    ARecallableSentryGunItem(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveItemUpgraded();

@@ -46,9 +46,10 @@ protected:
     int32 BombIndex;
     
 public:
-    ARivalBombNode();
+    ARivalBombNode(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveStateUpdated();

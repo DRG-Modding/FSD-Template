@@ -5,5 +5,6 @@ FSplineSegmentCarveOperationData::FSplineSegmentCarveOperationData() {
     this->Material = NULL;
     this->CarveFilter = ECarveFilterType::ReplaceAll;
     this->Precious = EPreciousMaterialOptions::TurnIntoGems;
+    this->LevelGenerationComponent = NULL;
 }
 

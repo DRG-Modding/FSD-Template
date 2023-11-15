@@ -13,5 +13,6 @@ private:
     
 public:
     UAnimNotifyState_HideBone();
+
 };
 

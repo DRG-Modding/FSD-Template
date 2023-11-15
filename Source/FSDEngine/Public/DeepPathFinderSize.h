@@ -5,8 +5,8 @@
 UENUM(BlueprintType)
 enum class DeepPathFinderSize : uint8 {
     Invalid,
-    Small = 0x3,
-    Medium = 0x2,
-    Large = 0x1,
+    Small = 3,
+    Medium = 2,
+    Large = 1,
 };
 

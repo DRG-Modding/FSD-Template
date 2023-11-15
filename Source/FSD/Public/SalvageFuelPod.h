@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ASalvageFuelPod : public ARessuplyPod {
     GENERATED_BODY()
 public:
-    ASalvageFuelPod();
+    ASalvageFuelPod(const FObjectInitializer& ObjectInitializer);
+
 };
 

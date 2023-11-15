@@ -1,6 +1,6 @@
 #include "LineSegmentCarverComponent.h"
 
-ULineSegmentCarverComponent::ULineSegmentCarverComponent() {
+ULineSegmentCarverComponent::ULineSegmentCarverComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->LinePoints.AddDefaulted(2);
     this->Visible = true;
     this->Layer = 0;
@@ -11,4 +11,5 @@ ULineSegmentCarverComponent::ULineSegmentCarverComponent() {
     this->FloorNoiseOverride = NULL;
     this->UseDetailNoise = true;
 }
+
 

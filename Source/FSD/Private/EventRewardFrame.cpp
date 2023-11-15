@@ -2,6 +2,14 @@
 #include "Net/UnrealNetwork.h"
 #include "SpecialEventUsableComponent.h"
 
+AEventRewardFrame::AEventRewardFrame(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->EventUsable = CreateDefaultSubobject<USpecialEventUsableComponent>(TEXT("EventUsable"));
+    this->keyInserted = false;
+}
+
 void AEventRewardFrame::TurnOff() {
 }
 
@@ -25,8 +33,4 @@ void AEventRewardFrame::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
     DOREPLIFETIME(AEventRewardFrame, EventPlayerIDs);
 }
 
-AEventRewardFrame::AEventRewardFrame() {
-    this->EventUsable = CreateDefaultSubobject<USpecialEventUsableComponent>(TEXT("EventUsable"));
-    this->keyInserted = false;
-}
 

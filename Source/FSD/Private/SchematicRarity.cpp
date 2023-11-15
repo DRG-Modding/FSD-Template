@@ -4,3 +4,4 @@ USchematicRarity::USchematicRarity() {
     this->Rarity = 1.00f;
 }
 
+

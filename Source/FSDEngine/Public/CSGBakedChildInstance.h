@@ -27,5 +27,6 @@ public:
     FDeepCSGFloatTree TempTree;
     
     UCSGBakedChildInstance();
+
 };
 

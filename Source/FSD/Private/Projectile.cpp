@@ -3,6 +3,11 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
+AProjectile::AProjectile(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->UseArmorDamageBoneCheck = false;
+    this->MovementComponent = CreateDefaultSubobject<UFSDProjectileMovementComponent>(TEXT("ProjectileComponent"));
+}
+
 AProjectileBase* AProjectile::SpawnProjectileFromSelf(UObject* WorldContextObject, TSubclassOf<AProjectileBase> ProjectileClass, FVector Origin, FRotator velocityDirection) {
     return NULL;
 }
@@ -43,8 +48,4 @@ void AProjectile::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifet
     DOREPLIFETIME(AProjectile, State);
 }
 
-AProjectile::AProjectile() {
-    this->UseArmorDamageBoneCheck = false;
-    this->MovementComponent = CreateDefaultSubobject<UFSDProjectileMovementComponent>(TEXT("ProjectileComponent"));
-}
 

@@ -22,6 +22,7 @@ protected:
     UStatusEffectsComponent* StatusEffectsComponent;
     
 public:
-    UPathfinderReactiveTerrainTrackerComponent();
+    UPathfinderReactiveTerrainTrackerComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

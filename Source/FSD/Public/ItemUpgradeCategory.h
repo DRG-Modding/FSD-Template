@@ -25,5 +25,6 @@ protected:
     
 public:
     UItemUpgradeCategory();
+
 };
 

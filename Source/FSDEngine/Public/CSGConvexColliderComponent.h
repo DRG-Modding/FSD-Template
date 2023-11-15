@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCSGConvexColliderProperties Properties;
     
-    UCSGConvexColliderComponent();
+    UCSGConvexColliderComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

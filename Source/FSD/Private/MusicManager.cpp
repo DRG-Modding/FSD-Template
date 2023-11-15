@@ -1,5 +1,8 @@
 #include "MusicManager.h"
 
+UMusicManager::UMusicManager() {
+}
+
 void UMusicManager::StopHandle(FMusicHandle Handle) {
 }
 
@@ -17,6 +20,4 @@ FMusicHandle UMusicManager::Play(USoundBase* Music, UMusicCategory* Category) {
     return FMusicHandle{};
 }
 
-UMusicManager::UMusicManager() {
-}
 

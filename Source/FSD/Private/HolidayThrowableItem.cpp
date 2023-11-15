@@ -1,5 +1,6 @@
 #include "HolidayThrowableItem.h"
 
-AHolidayThrowableItem::AHolidayThrowableItem() {
+AHolidayThrowableItem::AHolidayThrowableItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

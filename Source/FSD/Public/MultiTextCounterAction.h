@@ -46,6 +46,7 @@ protected:
     
 public:
     UMultiTextCounterAction();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="InWorldContext"))
     static UMultiTextCounterAction* StartMultiTextCounter(UObject* InWorldContext, UTextBlock* InTotalBlock, const FText InTotalFormat, float InCountSpeed, USoundCue* InCountingSound, const TArray<FTextCounterEntry> InEntries);
     

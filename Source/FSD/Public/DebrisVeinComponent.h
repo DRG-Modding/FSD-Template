@@ -20,6 +20,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UVeinResourceCreator* VeinCreator;
     
-    UDebrisVeinComponent();
+    UDebrisVeinComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

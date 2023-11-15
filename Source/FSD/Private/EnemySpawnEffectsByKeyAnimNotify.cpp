@@ -5,3 +5,4 @@ UEnemySpawnEffectsByKeyAnimNotify::UEnemySpawnEffectsByKeyAnimNotify() {
     this->Attached = false;
 }
 
+

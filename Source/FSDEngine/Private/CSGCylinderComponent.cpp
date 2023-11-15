@@ -1,5 +1,6 @@
 #include "CSGCylinderComponent.h"
 
-UCSGCylinderComponent::UCSGCylinderComponent() {
+UCSGCylinderComponent::UCSGCylinderComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

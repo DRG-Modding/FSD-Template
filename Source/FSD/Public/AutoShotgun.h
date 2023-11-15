@@ -19,7 +19,8 @@ protected:
     TSubclassOf<UStatusEffect> CQCKillBuff;
     
 public:
-    AAutoShotgun();
+    AAutoShotgun(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnTargetKilled(AActor* Target, UFSDPhysicalMaterial* PhysicalMaterial, bool wasDirectHit);

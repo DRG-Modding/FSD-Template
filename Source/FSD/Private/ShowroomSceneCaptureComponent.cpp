@@ -1,6 +1,7 @@
 #include "ShowroomSceneCaptureComponent.h"
 
-UShowroomSceneCaptureComponent::UShowroomSceneCaptureComponent() {
+UShowroomSceneCaptureComponent::UShowroomSceneCaptureComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->CameraKey = NULL;
 }
+
 

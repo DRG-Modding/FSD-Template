@@ -48,6 +48,7 @@ protected:
     
 public:
     UGemResourceData();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetCollectedGemsCreditValue(AFSDGameState* GameState);
     

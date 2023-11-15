@@ -31,7 +31,8 @@ protected:
     float HoldToBreakTime;
     
 public:
-    UFrozenStateComponent();
+    UFrozenStateComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_ThawPlayer();

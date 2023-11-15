@@ -13,6 +13,7 @@ class UPathfinderFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UPathfinderFunctionLibrary();
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static FVector SnapToGrid(UObject* WorldContextObject, const FVector& Origin, DeepPathFinderType PathType, DeepPathFinderSize PathSize, float maxSnapDistance);
     

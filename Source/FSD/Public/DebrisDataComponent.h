@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDebrisBase* Debris;
     
-    UDebrisDataComponent();
+    UDebrisDataComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

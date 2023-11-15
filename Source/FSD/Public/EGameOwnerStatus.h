@@ -8,6 +8,6 @@ enum class EGameOwnerStatus : uint8 {
     ContentCreator,
     Developer,
     Modder,
-    EGameOwnerStatus_Max = 0xFF,
+    EGameOwnerStatus_Max = 255 UMETA(Hidden),
 };
 

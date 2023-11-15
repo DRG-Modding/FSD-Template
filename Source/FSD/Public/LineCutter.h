@@ -31,9 +31,10 @@ protected:
     float MinExplosiveGoodbyeActivationTimme;
     
 public:
-    ALineCutter();
+    ALineCutter(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_StopRotatingProjectile();

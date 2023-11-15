@@ -5,3 +5,4 @@ UFriendlyParasiteAnimInstance::UFriendlyParasiteAnimInstance() {
     this->InSpinRange = false;
 }
 
+

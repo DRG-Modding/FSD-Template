@@ -18,6 +18,7 @@ protected:
     FName Message;
     
 public:
-    ASpawnTriggerItem();
+    ASpawnTriggerItem(const FObjectInitializer& ObjectInitializer);
+
 };
 

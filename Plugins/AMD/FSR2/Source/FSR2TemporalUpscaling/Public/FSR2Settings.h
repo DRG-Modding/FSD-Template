@@ -5,7 +5,7 @@
 #include "EFSR2QualityMode.h"
 #include "FSR2Settings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class FSR2TEMPORALUPSCALING_API UFSR2Settings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -79,5 +79,6 @@ public:
     bool PreDOFTranslucencyMax;
     
     UFSR2Settings();
+
 };
 

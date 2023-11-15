@@ -8,5 +8,6 @@ class FSD_API UItemAquisitionBase : public UDataAsset {
     GENERATED_BODY()
 public:
     UItemAquisitionBase();
+
 };
 

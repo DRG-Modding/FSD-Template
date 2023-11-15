@@ -157,9 +157,10 @@ protected:
     bool bIsBeamActive;
     
 public:
-    AHeavyParticleCannon();
+    AHeavyParticleCannon(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void UpdateBeamsVisibility(bool isBeamVisible);

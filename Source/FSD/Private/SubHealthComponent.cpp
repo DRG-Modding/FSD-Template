@@ -1,5 +1,11 @@
 #include "SubHealthComponent.h"
 
+USubHealthComponent::USubHealthComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->HealthbarType = EHealthbarType::None;
+    this->PassthroughDamageWhenDisabled = true;
+    this->EnemyHealthScaling = EEnemyHealthScaling::LargeEnemy;
+}
+
 void USubHealthComponent::SetCanTakeDamage(bool canTakeDamage) {
 }
 
@@ -23,9 +29,4 @@ bool USubHealthComponent::GetCanTakeDamage() const {
     return false;
 }
 
-USubHealthComponent::USubHealthComponent() {
-    this->HealthbarType = EHealthbarType::None;
-    this->PassthroughDamageWhenDisabled = true;
-    this->EnemyHealthScaling = EEnemyHealthScaling::LargeEnemy;
-}
 

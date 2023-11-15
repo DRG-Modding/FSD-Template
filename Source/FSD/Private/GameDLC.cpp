@@ -1,5 +1,13 @@
 #include "GameDLC.h"
 
+UGameDLC::UGameDLC() {
+    this->bFakeUnlockedStateInEditor = false;
+    this->bEditorUnlockedState = true;
+    this->SteamID = 0;
+    this->ShowOnDLCScreen = true;
+    this->PerformancePoints = 0;
+}
+
 bool UGameDLC::ShouldBeAnnounced(UObject* WorldContext) const {
     return false;
 }
@@ -27,11 +35,4 @@ UTexture2D* UGameDLC::GetBanner() const {
     return NULL;
 }
 
-UGameDLC::UGameDLC() {
-    this->bFakeUnlockedStateInEditor = false;
-    this->bEditorUnlockedState = true;
-    this->SteamID = 0;
-    this->ShowOnDLCScreen = true;
-    this->PerformancePoints = 0;
-}
 

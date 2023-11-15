@@ -27,7 +27,8 @@ protected:
     USkeletalMeshComponent* SkeletalMesh;
     
 public:
-    UHitReactionComponent();
+    UHitReactionComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void PlayHitReaction();
     

@@ -1,6 +1,7 @@
 #include "CharacterSightSensorBase.h"
 
-UCharacterSightSensorBase::UCharacterSightSensorBase() {
+UCharacterSightSensorBase::UCharacterSightSensorBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bEnabled = true;
 }
+
 

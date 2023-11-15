@@ -19,6 +19,7 @@ protected:
     UBoxComponent* Box;
     
 public:
-    ASpawnActorGenerationItem();
+    ASpawnActorGenerationItem(const FObjectInitializer& ObjectInitializer);
+
 };
 

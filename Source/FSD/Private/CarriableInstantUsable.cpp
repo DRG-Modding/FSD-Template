@@ -1,5 +1,6 @@
 #include "CarriableInstantUsable.h"
 
-UCarriableInstantUsable::UCarriableInstantUsable() {
+UCarriableInstantUsable::UCarriableInstantUsable(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

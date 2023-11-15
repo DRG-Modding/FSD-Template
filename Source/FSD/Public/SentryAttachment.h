@@ -7,6 +7,7 @@ UCLASS(Abstract, Blueprintable)
 class ASentryAttachment : public AActor {
     GENERATED_BODY()
 public:
-    ASentryAttachment();
+    ASentryAttachment(const FObjectInitializer& ObjectInitializer);
+
 };
 

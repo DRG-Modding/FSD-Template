@@ -1,5 +1,6 @@
 #include "CSGSDFInstanceComponent.h"
 
-UCSGSDFInstanceComponent::UCSGSDFInstanceComponent() {
+UCSGSDFInstanceComponent::UCSGSDFInstanceComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

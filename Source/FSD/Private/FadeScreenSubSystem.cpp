@@ -1,5 +1,8 @@
 #include "FadeScreenSubSystem.h"
 
+UFadeScreenSubSystem::UFadeScreenSubSystem() {
+}
+
 bool UFadeScreenSubSystem::IsScreenFadingToBlack(UObject* WorldContext) {
     return false;
 }
@@ -25,6 +28,4 @@ void UFadeScreenSubSystem::FadeScreenFromBlack(UObject* WorldContext, float Fade
 void UFadeScreenSubSystem::BlackoutScreen(UObject* WorldContext, bool FadeWorldOnly) {
 }
 
-UFadeScreenSubSystem::UFadeScreenSubSystem() {
-}
 

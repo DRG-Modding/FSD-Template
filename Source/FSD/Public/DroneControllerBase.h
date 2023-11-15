@@ -16,7 +16,8 @@ protected:
     TArray<TWeakObjectPtr<APlayerCharacter>> ControllingPlayers;
     
 public:
-    ADroneControllerBase();
+    ADroneControllerBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void OnShout(APlayerCharacter* Player);
     

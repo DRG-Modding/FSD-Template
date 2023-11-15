@@ -23,7 +23,8 @@ protected:
     TSubclassOf<AZipLineProjectile> ProjectileClass;
     
 public:
-    UZiplineLauncherComponent();
+    UZiplineLauncherComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_Fire(FVector_NetQuantize Origin, FVector_NetQuantize Destination);

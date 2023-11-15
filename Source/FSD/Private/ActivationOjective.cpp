@@ -1,6 +1,11 @@
 #include "ActivationOjective.h"
 #include "Net/UnrealNetwork.h"
 
+UActivationOjective::UActivationOjective(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ObjectivesFound = 0;
+    this->ObjectivesToFind = 0;
+}
+
 void UActivationOjective::OnRep_ObjectivesToFind(int32 prevAmount) {
 }
 
@@ -14,8 +19,4 @@ void UActivationOjective::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(UActivationOjective, ObjectivesToFind);
 }
 
-UActivationOjective::UActivationOjective() {
-    this->ObjectivesFound = 0;
-    this->ObjectivesToFind = 0;
-}
 

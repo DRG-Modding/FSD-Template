@@ -8,5 +8,6 @@ class UTickableActionBase : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
     UTickableActionBase();
+
 };
 

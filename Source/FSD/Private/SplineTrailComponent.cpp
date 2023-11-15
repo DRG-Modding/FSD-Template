@@ -1,13 +1,7 @@
 #include "SplineTrailComponent.h"
 #include "Net/UnrealNetwork.h"
 
-void USplineTrailComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(USplineTrailComponent, Seed);
-}
-
-USplineTrailComponent::USplineTrailComponent() {
+USplineTrailComponent::USplineTrailComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ForwardAxis = ESplineMeshAxis::Z;
     this->CollisionCapsuleRadius = 10.00f;
     this->TrailLength = 500.00f;
@@ -19,4 +13,11 @@ USplineTrailComponent::USplineTrailComponent() {
     this->Spline = NULL;
     this->Seed = 0;
 }
+
+void USplineTrailComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    
+    DOREPLIFETIME(USplineTrailComponent, Seed);
+}
+
 

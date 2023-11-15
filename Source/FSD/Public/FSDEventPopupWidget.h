@@ -13,5 +13,6 @@ public:
     UFSDEvent* FSDEvent;
     
     UFSDEventPopupWidget();
+
 };
 

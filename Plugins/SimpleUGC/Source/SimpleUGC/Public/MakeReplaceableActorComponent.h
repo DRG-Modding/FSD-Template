@@ -13,6 +13,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> CompatibleReplacement;
     
-    UMakeReplaceableActorComponent();
+    UMakeReplaceableActorComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

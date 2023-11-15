@@ -5,3 +5,4 @@ UResourceReward::UResourceReward() {
     this->Amount = 0;
 }
 
+

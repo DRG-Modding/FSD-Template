@@ -1,6 +1,16 @@
 #include "EventRewardDispenser.h"
 #include "Net/UnrealNetwork.h"
 
+AEventRewardDispenser::AEventRewardDispenser(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->DispenserFrame = NULL;
+    this->PoweredUp = false;
+    this->IsActivated = false;
+    this->SelectedReward = NULL;
+}
+
 void AEventRewardDispenser::SetSelectedReward(USchematic* InReward) {
 }
 
@@ -45,10 +55,4 @@ void AEventRewardDispenser::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>
     DOREPLIFETIME(AEventRewardDispenser, SelectedReward);
 }
 
-AEventRewardDispenser::AEventRewardDispenser() {
-    this->DispenserFrame = NULL;
-    this->PoweredUp = false;
-    this->IsActivated = false;
-    this->SelectedReward = NULL;
-}
 

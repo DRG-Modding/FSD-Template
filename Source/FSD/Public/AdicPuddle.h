@@ -30,7 +30,8 @@ private:
     float LifeTime;
     
 public:
-    AAdicPuddle();
+    AAdicPuddle(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Receive_OnPlayerBeginOverlap(APlayerCharacter* Player);

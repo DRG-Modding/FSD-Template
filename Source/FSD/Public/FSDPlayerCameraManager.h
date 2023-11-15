@@ -7,6 +7,7 @@ UCLASS(Blueprintable, MinimalAPI, NonTransient)
 class AFSDPlayerCameraManager : public APlayerCameraManager {
     GENERATED_BODY()
 public:
-    AFSDPlayerCameraManager();
+    AFSDPlayerCameraManager(const FObjectInitializer& ObjectInitializer);
+
 };
 

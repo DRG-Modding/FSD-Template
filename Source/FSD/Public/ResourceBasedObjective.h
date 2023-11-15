@@ -7,6 +7,7 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class UResourceBasedObjective : public UObjective {
     GENERATED_BODY()
 public:
-    UResourceBasedObjective();
+    UResourceBasedObjective(const FObjectInitializer& ObjectInitializer);
+
 };
 

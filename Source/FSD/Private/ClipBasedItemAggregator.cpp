@@ -1,5 +1,10 @@
 #include "ClipBasedItemAggregator.h"
 
+UClipBasedItemAggregator::UClipBasedItemAggregator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ShowTotalAmount = true;
+    this->ShowClipAndTotalAsOne = false;
+}
+
 void UClipBasedItemAggregator::ReloadStarted() {
 }
 
@@ -14,8 +19,4 @@ int32 UClipBasedItemAggregator::GetClipAmount() const {
     return 0;
 }
 
-UClipBasedItemAggregator::UClipBasedItemAggregator() {
-    this->ShowTotalAmount = true;
-    this->ShowClipAndTotalAsOne = false;
-}
 

@@ -4,3 +4,4 @@ USimpleMeshWithCachedTree::USimpleMeshWithCachedTree() {
     this->InvertCSG = false;
 }
 
+

@@ -114,6 +114,7 @@ protected:
     
 public:
     USchematicSettings();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool ValidateVanitySchematics() const;
     

@@ -20,6 +20,7 @@ protected:
     
 public:
     UFlyingBugAnimInstance();
+
     UFUNCTION(BlueprintCallable)
     void SetDeathAnimation(EFlyingBugDeathAnimationCategory deathAnim);
     

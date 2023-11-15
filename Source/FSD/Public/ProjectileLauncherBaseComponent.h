@@ -46,7 +46,8 @@ protected:
     bool CameraToMuzzleFireCheck;
     
 public:
-    UProjectileLauncherBaseComponent();
+    UProjectileLauncherBaseComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_StopFire();

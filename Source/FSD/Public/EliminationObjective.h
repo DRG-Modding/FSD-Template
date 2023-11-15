@@ -55,9 +55,10 @@ protected:
     TArray<FEliminationTarget> ActiveEliminationTargets;
     
 public:
-    UEliminationObjective();
+    UEliminationObjective(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void RegisterEliminationTargets(const TArray<AFSDPawn*>& Targets);
     

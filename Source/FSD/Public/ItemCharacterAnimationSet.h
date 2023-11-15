@@ -146,5 +146,6 @@ public:
     UItemCharacterAnimationSet* ParentSet;
     
     UItemCharacterAnimationSet();
+
 };
 

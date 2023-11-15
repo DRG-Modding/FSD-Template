@@ -1,5 +1,6 @@
 #include "CSGCellNoiseComponent.h"
 
-UCSGCellNoiseComponent::UCSGCellNoiseComponent() {
+UCSGCellNoiseComponent::UCSGCellNoiseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

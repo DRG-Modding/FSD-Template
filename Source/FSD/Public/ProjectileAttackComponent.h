@@ -14,7 +14,8 @@ protected:
     bool ManualyComplete;
     
 public:
-    UProjectileAttackComponent();
+    UProjectileAttackComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void AddAttackMontage(UAnimMontage* attackMontage);

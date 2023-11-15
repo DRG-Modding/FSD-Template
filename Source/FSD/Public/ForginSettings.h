@@ -15,5 +15,6 @@ public:
     TArray<ESchematicType> MasteryRewardCycle;
     
     UForginSettings();
+
 };
 

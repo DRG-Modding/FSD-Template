@@ -36,6 +36,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 AmountSearchMultiplier;
     
-    UDebrisItemComponent();
+    UDebrisItemComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

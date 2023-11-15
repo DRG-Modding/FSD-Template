@@ -4,7 +4,7 @@
 #include "FSDTranslationProgress.h"
 #include "FSDLocalizationSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class UFSDLocalizationSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -14,5 +14,6 @@ private:
     
 public:
     UFSDLocalizationSettings();
+
 };
 

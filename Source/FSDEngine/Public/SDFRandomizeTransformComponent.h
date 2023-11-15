@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDFRandomizeTransformProperties Properties;
     
-    USDFRandomizeTransformComponent();
+    USDFRandomizeTransformComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

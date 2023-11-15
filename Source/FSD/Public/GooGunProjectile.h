@@ -21,7 +21,8 @@ protected:
     int32 FragmentCount;
     
 public:
-    AGooGunProjectile();
+    AGooGunProjectile(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     AGooGunPuddle* SpawnPuddle(FTransform Transform, TSubclassOf<AGooGunPuddle> PuddleClass);

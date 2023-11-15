@@ -13,6 +13,7 @@ protected:
     
 public:
     UFuelCannisterAttachedAnimInstance();
+
     UFUNCTION(BlueprintCallable)
     void SetCanBeTaken(bool canBeTakenValue);
     

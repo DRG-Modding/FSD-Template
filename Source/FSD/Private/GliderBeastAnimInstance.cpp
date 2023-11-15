@@ -5,3 +5,4 @@ UGliderBeastAnimInstance::UGliderBeastAnimInstance() {
     this->IsFrozen = false;
 }
 
+

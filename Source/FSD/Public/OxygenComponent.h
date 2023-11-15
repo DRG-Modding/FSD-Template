@@ -47,9 +47,10 @@ protected:
     TSubclassOf<UStatusEffect> NoOxygenStatusEffect;
     
 public:
-    UOxygenComponent();
+    UOxygenComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void RegisterOxygenEvent(FOxygenTriggerDelegate OxygenCallback, float oxygenLevel, bool triggerOnOxygenLoss);
     

@@ -23,6 +23,7 @@ protected:
     
 public:
     UPickaxePart();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetUnlockedFromStart() const;
     

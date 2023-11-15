@@ -4,3 +4,4 @@ UProjectileUpgradeElement::UProjectileUpgradeElement() {
     this->NewTrailParticle = NULL;
 }
 
+

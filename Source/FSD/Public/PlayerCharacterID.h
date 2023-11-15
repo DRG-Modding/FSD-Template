@@ -26,6 +26,7 @@ protected:
     
 public:
     UPlayerCharacterID();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UPlayerCharacterData* GetCharacterData() const;
     

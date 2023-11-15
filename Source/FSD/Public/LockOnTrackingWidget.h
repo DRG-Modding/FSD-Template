@@ -8,6 +8,7 @@ class ULockOnTrackingWidget : public UActorTrackingWidget {
     GENERATED_BODY()
 public:
     ULockOnTrackingWidget();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnLockOn(int32 numberOfLockOnsOnThisTarget, int32 totalNumberOfLockOns);
     

@@ -30,9 +30,10 @@ protected:
     USchematic* SelectedReward;
     
 public:
-    AEventRewardDispenser();
+    AEventRewardDispenser(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetSelectedReward(USchematic* InReward);
     

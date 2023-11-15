@@ -26,6 +26,7 @@ private:
     float UpdateLocationVariance;
     
 public:
-    UDroneFollowState();
+    UDroneFollowState(const FObjectInitializer& ObjectInitializer);
+
 };
 

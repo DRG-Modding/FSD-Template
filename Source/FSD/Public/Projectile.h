@@ -34,9 +34,10 @@ protected:
     UFSDProjectileMovementComponent* MovementComponent;
     
 public:
-    AProjectile();
+    AProjectile(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     AProjectileBase* SpawnProjectileFromSelf(UObject* WorldContextObject, TSubclassOf<AProjectileBase> ProjectileClass, FVector Origin, FRotator velocityDirection);
     

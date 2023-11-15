@@ -4,3 +4,4 @@ USetImpulseDamageBonus::USetImpulseDamageBonus() {
     this->DamageImpulse = NULL;
 }
 
+

@@ -22,7 +22,8 @@ protected:
     float LerpSpeed;
     
 public:
-    UBodyRotationManagerComponent();
+    UBodyRotationManagerComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void ApplyKnockBack(float force, float Duration, const FVector& Direction);
     

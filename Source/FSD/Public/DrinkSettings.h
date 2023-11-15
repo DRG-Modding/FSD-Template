@@ -26,6 +26,7 @@ public:
     TArray<UDrinkableDataAsset*> Drinkables;
     
     UDrinkSettings();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     static TArray<UDrinkableDataAsset*> GetBarDrinkables(UObject* WorldContext, bool IncludeDailySpecial, bool includeNotUnlocked, bool includePlayerRankTooLow);
     

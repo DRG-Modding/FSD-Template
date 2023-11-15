@@ -7,6 +7,7 @@ UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnable
 class UInterpolatedFirstPersonStaticMeshComponent : public UFirstPersonStaticMeshComponent {
     GENERATED_BODY()
 public:
-    UInterpolatedFirstPersonStaticMeshComponent();
+    UInterpolatedFirstPersonStaticMeshComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

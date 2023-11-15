@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* ArmorComponent;
     
-    UPassthroughSubHealthComponent();
+    UPassthroughSubHealthComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

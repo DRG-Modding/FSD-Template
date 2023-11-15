@@ -8,5 +8,6 @@ class USoundClassWidget : public UUserWidget {
     GENERATED_BODY()
 public:
     USoundClassWidget();
+
 };
 

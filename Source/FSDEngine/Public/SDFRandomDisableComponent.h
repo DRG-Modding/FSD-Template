@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDFRandomDisableProperties Properties;
     
-    USDFRandomDisableComponent();
+    USDFRandomDisableComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

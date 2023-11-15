@@ -1,5 +1,6 @@
 #include "FSDBehaviorTreeComponent.h"
 
-UFSDBehaviorTreeComponent::UFSDBehaviorTreeComponent() {
+UFSDBehaviorTreeComponent::UFSDBehaviorTreeComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -1,6 +1,11 @@
 #include "SaveGameStateComponent.h"
 #include "Net/UnrealNetwork.h"
 
+USaveGameStateComponent::USaveGameStateComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Credits = 0;
+    this->VictoryPose = NULL;
+}
+
 void USaveGameStateComponent::SetCampaign() {
 }
 
@@ -62,8 +67,4 @@ void USaveGameStateComponent::GetLifetimeReplicatedProps(TArray<FLifetimePropert
     DOREPLIFETIME(USaveGameStateComponent, CharacterStats);
 }
 
-USaveGameStateComponent::USaveGameStateComponent() {
-    this->Credits = 0;
-    this->VictoryPose = NULL;
-}
 

@@ -88,6 +88,7 @@ public:
     TMap<UResourceData*, int32> PurchaseCost;
     
     UDrinkableDataAsset();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static bool TryUnlockSpecialDrinks(UObject* WorldContext);
     

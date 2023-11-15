@@ -1,5 +1,6 @@
 #include "CSGConvexColliderComponent.h"
 
-UCSGConvexColliderComponent::UCSGConvexColliderComponent() {
+UCSGConvexColliderComponent::UCSGConvexColliderComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -27,7 +27,8 @@ protected:
     TWeakObjectPtr<UActorTrackingWidget> Widget;
     
 public:
-    UActorTrackingComponent();
+    UActorTrackingComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void ToggleIcon(bool Visible);
     

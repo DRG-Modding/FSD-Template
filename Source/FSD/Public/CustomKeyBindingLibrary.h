@@ -8,5 +8,6 @@ class UCustomKeyBindingLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UCustomKeyBindingLibrary();
+
 };
 

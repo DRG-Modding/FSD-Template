@@ -4,3 +4,4 @@ UBoltActionWeaponDamageCondition::UBoltActionWeaponDamageCondition() {
     this->WeaponCondition = EBoltActionWeaponConditions::WasAimedShot;
 }
 
+

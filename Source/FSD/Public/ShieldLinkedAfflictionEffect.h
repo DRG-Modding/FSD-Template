@@ -8,5 +8,6 @@ class UShieldLinkedAfflictionEffect : public UAfflictionEffect {
     GENERATED_BODY()
 public:
     UShieldLinkedAfflictionEffect();
+
 };
 

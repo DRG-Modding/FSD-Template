@@ -81,13 +81,14 @@ protected:
     
 public:
     UResourceData();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     float GetOwnedAmount(UObject* WorldContextObject) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetIsTradableCraftingMaterial() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

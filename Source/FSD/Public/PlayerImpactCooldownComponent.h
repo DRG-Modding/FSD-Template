@@ -14,7 +14,8 @@ protected:
     float CoolDownTime;
     
 public:
-    UPlayerImpactCooldownComponent();
+    UPlayerImpactCooldownComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool CheckCanImpact(AActor* Actor);
     

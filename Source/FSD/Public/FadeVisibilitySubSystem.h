@@ -14,6 +14,7 @@ class UFadeVisibilitySubSystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
     UFadeVisibilitySubSystem();
+
     UFUNCTION(BlueprintCallable)
     static void ScalePrimitive(UPrimitiveComponent*& Component, FVector StartScale, FVector EndScale, float Duration);
     

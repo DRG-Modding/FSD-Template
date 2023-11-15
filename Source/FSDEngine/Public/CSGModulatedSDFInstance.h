@@ -46,5 +46,6 @@ public:
     FMatrix TransformMatInv;
     
     UCSGModulatedSDFInstance();
+
 };
 

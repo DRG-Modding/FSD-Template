@@ -11,6 +11,7 @@ class DSTELEMETRY_API UDJSONArray : public UObject {
     GENERATED_BODY()
 public:
     UDJSONArray();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static UDJSONArray* CreateJSONArray(UObject* WorldContextObject);
     

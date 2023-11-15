@@ -26,5 +26,6 @@ public:
     TArray<FText> MineralFactions;
     
     UNewsTextLists();
+
 };
 

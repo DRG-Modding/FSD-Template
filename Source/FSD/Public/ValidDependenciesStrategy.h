@@ -8,5 +8,6 @@ class FSD_API UValidDependenciesStrategy : public UValidatorStrategy {
     GENERATED_BODY()
 public:
     UValidDependenciesStrategy();
+
 };
 

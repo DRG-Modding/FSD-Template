@@ -1,5 +1,6 @@
 #include "NoisyPathfinderComponent.h"
 
-UNoisyPathfinderComponent::UNoisyPathfinderComponent() {
+UNoisyPathfinderComponent::UNoisyPathfinderComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

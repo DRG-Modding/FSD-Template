@@ -18,6 +18,7 @@ protected:
     UCarriableComponent* CarriableComponent;
     
 public:
-    ADorrettaHead();
+    ADorrettaHead(const FObjectInitializer& ObjectInitializer);
+
 };
 

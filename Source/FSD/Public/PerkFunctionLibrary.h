@@ -16,6 +16,7 @@ class UPerkFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UPerkFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void SplitPerksByUsage(const TArray<UPerkAsset*>& perks, TArray<UPerkAsset*>& OutPassivePerks, TArray<UPerkAsset*>& OutActivePerks);
     

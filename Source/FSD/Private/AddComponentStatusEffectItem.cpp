@@ -4,3 +4,4 @@ UAddComponentStatusEffectItem::UAddComponentStatusEffectItem() {
     this->ComponentClass = NULL;
 }
 
+

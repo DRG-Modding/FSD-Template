@@ -23,10 +23,11 @@ protected:
     
 public:
     USavableDataAsset();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FGuid GetSavegameID() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

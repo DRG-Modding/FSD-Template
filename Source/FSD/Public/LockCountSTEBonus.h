@@ -20,5 +20,6 @@ public:
     TSubclassOf<UStatusEffect> StatusEffect;
     
     ULockCountSTEBonus();
+
 };
 

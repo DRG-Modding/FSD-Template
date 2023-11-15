@@ -23,6 +23,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ESpacerigStartType StartType;
     
-    ASpacerigStart();
+    ASpacerigStart(const FObjectInitializer& ObjectInitializer);
+
 };
 

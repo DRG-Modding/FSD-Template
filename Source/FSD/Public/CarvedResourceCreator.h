@@ -58,5 +58,6 @@ public:
     TArray<FResourceDebris> Debris;
     
     UCarvedResourceCreator();
+
 };
 

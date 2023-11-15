@@ -1,7 +1,18 @@
 #include "FuelLineEndPoint.h"
+#include "Components/SceneComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "FuelLineConnectPoint.h"
 #include "Net/UnrealNetwork.h"
+
+AFuelLineEndPoint::AFuelLineEndPoint(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+    this->ConnectPoint = CreateDefaultSubobject<UFuelLineConnectPoint>(TEXT("ConnectPoint"));
+    this->StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMesh"));
+    this->AllowedSegment = NULL;
+    this->OpenForConnection = true;
+    this->ConnectPoint->SetupAttachment(RootComponent);
+    this->StaticMesh->SetupAttachment(RootComponent);
+}
 
 void AFuelLineEndPoint::SetOpenForConnection(bool Open) {
 }
@@ -20,10 +31,4 @@ void AFuelLineEndPoint::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
     DOREPLIFETIME(AFuelLineEndPoint, OpenForConnection);
 }
 
-AFuelLineEndPoint::AFuelLineEndPoint() {
-    this->ConnectPoint = CreateDefaultSubobject<UFuelLineConnectPoint>(TEXT("ConnectPoint"));
-    this->StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMesh"));
-    this->AllowedSegment = NULL;
-    this->OpenForConnection = true;
-}
 

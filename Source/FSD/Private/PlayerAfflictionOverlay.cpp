@@ -6,3 +6,4 @@ UPlayerAfflictionOverlay::UPlayerAfflictionOverlay() {
     this->ZOrder = 0;
 }
 
+

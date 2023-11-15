@@ -1,6 +1,19 @@
 #include "BeltDrivenWeapon.h"
 #include "Net/UnrealNetwork.h"
 
+ABeltDrivenWeapon::ABeltDrivenWeapon(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->HasAutomaticFire = true;
+    this->BarrelAudio = NULL;
+    this->BarrelSound = NULL;
+    this->BarrelFadeIn = 0.10f;
+    this->BarrelFadeOut = 0.10f;
+    this->BarrelPitchCurve = NULL;
+    this->BarrelSpinUpTime = 1.00f;
+    this->BarrelSpinDownTime = 1.00f;
+    this->CurrentSpinRate = 0.00f;
+    this->Simulate_SpinBarrel = false;
+}
+
 void ABeltDrivenWeapon::Server_StopBarrel_Implementation() {
 }
 
@@ -13,15 +26,4 @@ void ABeltDrivenWeapon::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
     DOREPLIFETIME(ABeltDrivenWeapon, Simulate_SpinBarrel);
 }
 
-ABeltDrivenWeapon::ABeltDrivenWeapon() {
-    this->BarrelAudio = NULL;
-    this->BarrelSound = NULL;
-    this->BarrelFadeIn = 0.10f;
-    this->BarrelFadeOut = 0.10f;
-    this->BarrelPitchCurve = NULL;
-    this->BarrelSpinUpTime = 1.00f;
-    this->BarrelSpinDownTime = 1.00f;
-    this->CurrentSpinRate = 0.00f;
-    this->Simulate_SpinBarrel = false;
-}
 

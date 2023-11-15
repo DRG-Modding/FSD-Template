@@ -1,5 +1,13 @@
 #include "ArmorVanityItem.h"
 
+UArmorVanityItem::UArmorVanityItem() {
+    this->AllowSleevelessUse = true;
+    this->CropBeard = false;
+    this->ArmorThickness = 0.00f;
+    this->CanOnlyUseDefaultArmorMaterial = false;
+    this->DefaultArmorMaterial = NULL;
+}
+
 void UArmorVanityItem::SetNewArmorType(UCharacterVanityComponent* Gear) {
 }
 
@@ -14,11 +22,4 @@ EArmorMeshType UArmorVanityItem::GetFPMeshType() const {
     return EArmorMeshType::None;
 }
 
-UArmorVanityItem::UArmorVanityItem() {
-    this->AllowSleevelessUse = true;
-    this->CropBeard = false;
-    this->ArmorThickness = 0.00f;
-    this->CanOnlyUseDefaultArmorMaterial = false;
-    this->DefaultArmorMaterial = NULL;
-}
 

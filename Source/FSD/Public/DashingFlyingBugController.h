@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ADashingFlyingBugController : public AFSDFlyingBugController {
     GENERATED_BODY()
 public:
-    ADashingFlyingBugController();
+    ADashingFlyingBugController(const FObjectInitializer& ObjectInitializer);
+
 };
 

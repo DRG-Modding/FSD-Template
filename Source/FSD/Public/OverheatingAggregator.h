@@ -30,9 +30,10 @@ protected:
     float Temperature;
     
 public:
-    UOverheatingAggregator();
+    UOverheatingAggregator(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Server, Unreliable)
     void Server_SetTemperature(float NewTemperature);

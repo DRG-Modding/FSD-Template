@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class FSD_API ABarrierProjectile : public AActor {
     GENERATED_BODY()
 public:
-    ABarrierProjectile();
+    ABarrierProjectile(const FObjectInitializer& ObjectInitializer);
+
 };
 

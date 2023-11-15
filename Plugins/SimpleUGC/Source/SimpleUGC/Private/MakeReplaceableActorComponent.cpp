@@ -1,6 +1,8 @@
 #include "MakeReplaceableActorComponent.h"
 
-UMakeReplaceableActorComponent::UMakeReplaceableActorComponent() {
+UMakeReplaceableActorComponent::UMakeReplaceableActorComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
     this->CompatibleReplacement = NULL;
 }
+
 

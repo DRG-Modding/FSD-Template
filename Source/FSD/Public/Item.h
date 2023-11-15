@@ -141,9 +141,10 @@ protected:
     bool IsUsing;
     
 public:
-    AItem();
+    AItem(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void UpdateSkin();
     
@@ -258,7 +259,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void AddedToInventory(APlayerCharacter* ItemOwner);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 public:
     UFUNCTION(BlueprintCallable)

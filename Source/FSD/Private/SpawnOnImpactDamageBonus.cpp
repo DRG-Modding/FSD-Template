@@ -4,3 +4,4 @@ USpawnOnImpactDamageBonus::USpawnOnImpactDamageBonus() {
     this->ActorToSpawn = NULL;
 }
 
+

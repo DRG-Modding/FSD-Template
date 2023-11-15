@@ -4,3 +4,4 @@ UPlayerDamageTakenMutator::UPlayerDamageTakenMutator() {
     this->DamageMultiplier = 1.00f;
 }
 
+

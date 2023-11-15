@@ -85,5 +85,6 @@ public:
     UMutator* TestMutator;
     
     UEncounterSettings();
+
 };
 

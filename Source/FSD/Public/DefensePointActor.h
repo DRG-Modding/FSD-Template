@@ -28,9 +28,10 @@ protected:
     USingleUsableComponent* DefendPointUsable;
     
 public:
-    ADefensePointActor();
+    ADefensePointActor(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetState(EDefendPointState State);
     

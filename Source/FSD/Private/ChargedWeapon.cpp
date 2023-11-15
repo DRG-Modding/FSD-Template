@@ -1,30 +1,7 @@
 #include "ChargedWeapon.h"
 #include "Net/UnrealNetwork.h"
 
-void AChargedWeapon::SetOverheated(bool isOverheated) {
-}
-
-void AChargedWeapon::Server_SetIsCharging_Implementation(bool isCharging) {
-}
-
-
-
-
-
-void AChargedWeapon::OnRep_Charging() {
-}
-
-bool AChargedWeapon::GetIsCharging() const {
-    return false;
-}
-
-void AChargedWeapon::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(AChargedWeapon, Charging);
-}
-
-AChargedWeapon::AChargedWeapon() {
+AChargedWeapon::AChargedWeapon(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->FP_OverheatAnim = NULL;
     this->WeaponOverheatAnim = NULL;
     this->FP_ChargeupMontage = NULL;
@@ -48,4 +25,28 @@ AChargedWeapon::AChargedWeapon() {
     this->HeatPerNormalShot = 0.20f;
     this->HeatPerChargedShot = 0.40f;
 }
+
+void AChargedWeapon::SetOverheated(bool isOverheated) {
+}
+
+void AChargedWeapon::Server_SetIsCharging_Implementation(bool isCharging) {
+}
+
+
+
+
+
+void AChargedWeapon::OnRep_Charging() {
+}
+
+bool AChargedWeapon::GetIsCharging() const {
+    return false;
+}
+
+void AChargedWeapon::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    
+    DOREPLIFETIME(AChargedWeapon, Charging);
+}
+
 

@@ -8,5 +8,6 @@ class UStatusEffectExclusiveKey : public UDataAsset {
     GENERATED_BODY()
 public:
     UStatusEffectExclusiveKey();
+
 };
 

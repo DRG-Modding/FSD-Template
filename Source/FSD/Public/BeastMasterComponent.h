@@ -16,7 +16,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ShowCanCharmIcon;
     
-    UBeastMasterComponent();
+    UBeastMasterComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetDamage(UDamageComponent* cmp, float dmg);
     

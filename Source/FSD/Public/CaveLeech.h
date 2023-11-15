@@ -99,9 +99,10 @@ protected:
     USceneComponent* TentacleHead;
     
 public:
-    ACaveLeech();
+    ACaveLeech(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_State();
@@ -129,7 +130,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BP_OnBite(UHealthComponent* TargetHealth);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

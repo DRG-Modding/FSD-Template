@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCarriableInstantUsable : public UInstantUsable {
     GENERATED_BODY()
 public:
-    UCarriableInstantUsable();
+    UCarriableInstantUsable(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -1,6 +1,8 @@
 #include "NoiseVisualizor.h"
+#include "Components/SphereComponent.h"
 
-ANoiseVisualizor::ANoiseVisualizor() {
+ANoiseVisualizor::ANoiseVisualizor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USphereComponent>(TEXT("Sphere"));
     this->FloodFillSettings = NULL;
     this->FreqMultiplier = 0.00f;
     this->AmplitudeMultiplier = 0.00f;
@@ -10,4 +12,5 @@ ANoiseVisualizor::ANoiseVisualizor() {
     this->ShowNoise = false;
     this->ShowTerrainNoise = false;
 }
+
 

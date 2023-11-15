@@ -37,9 +37,10 @@ protected:
     EProspectorRobotState ProspectorState;
     
 public:
-    AProspectorRobot();
+    AProspectorRobot(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetTarget(AActor* NewTarget);
     

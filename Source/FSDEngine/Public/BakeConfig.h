@@ -22,6 +22,7 @@ public:
     TArray<FString> Warnings;
     
     UBakeConfig();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetVectorSetting(FName Name, FVector defaultVal);
     

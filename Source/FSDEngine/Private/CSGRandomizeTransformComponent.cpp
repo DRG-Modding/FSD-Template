@@ -1,5 +1,6 @@
 #include "CSGRandomizeTransformComponent.h"
 
-UCSGRandomizeTransformComponent::UCSGRandomizeTransformComponent() {
+UCSGRandomizeTransformComponent::UCSGRandomizeTransformComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

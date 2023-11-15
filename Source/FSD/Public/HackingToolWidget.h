@@ -38,6 +38,7 @@ protected:
     
 public:
     UHackingToolWidget();
+
     UFUNCTION(BlueprintCallable)
     void StartHacking(UHackingUsableComponent* InHackingUsable, AHackingToolItem* InHackingTool);
     

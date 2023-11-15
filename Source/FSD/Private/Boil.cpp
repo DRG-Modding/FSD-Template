@@ -1,6 +1,10 @@
 #include "Boil.h"
 #include "Net/UnrealNetwork.h"
 
+ABoil::ABoil(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->MaterialIndex = -1;
+}
+
 void ABoil::OnRep_MaterialIndex() {
 }
 
@@ -10,7 +14,4 @@ void ABoil::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimePro
     DOREPLIFETIME(ABoil, MaterialIndex);
 }
 
-ABoil::ABoil() {
-    this->MaterialIndex = -1;
-}
 

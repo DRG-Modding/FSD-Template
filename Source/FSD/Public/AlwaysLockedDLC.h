@@ -8,5 +8,6 @@ class UAlwaysLockedDLC : public UDLCBase {
     GENERATED_BODY()
 public:
     UAlwaysLockedDLC();
+
 };
 

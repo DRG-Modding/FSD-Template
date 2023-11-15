@@ -46,9 +46,10 @@ protected:
     bool bFuelLineConnected;
     
 public:
-    AFuelLineStart();
+    AFuelLineStart(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveFuelLineConnected();

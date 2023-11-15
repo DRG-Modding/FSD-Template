@@ -48,6 +48,7 @@ protected:
     
 public:
     ULookingAtWidget();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetCurrentTarget(AActor* NewActor, const TScriptInterface<IHealth>& HealthComponent, float OverrideTargetLostTime);

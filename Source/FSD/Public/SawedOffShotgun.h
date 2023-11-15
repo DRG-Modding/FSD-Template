@@ -41,7 +41,8 @@ protected:
     float ShockWaveLength;
     
 public:
-    ASawedOffShotgun();
+    ASawedOffShotgun(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetShockWaveDamageComponent(UDamageComponent* Component);

@@ -36,6 +36,7 @@ protected:
     
 public:
     USeasonLevelWidget();
+
     UFUNCTION(BlueprintCallable)
     bool TryClaimReward(bool isNormalReward);
     

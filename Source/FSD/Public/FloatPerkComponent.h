@@ -17,7 +17,8 @@ protected:
     APlayerCharacter* PlayerCharacter;
     
 public:
-    UFloatPerkComponent();
+    UFloatPerkComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Receive_OnInitialized();

@@ -22,6 +22,7 @@ protected:
     
 public:
     UFSDUserWidget();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetOpacity(float alpha);

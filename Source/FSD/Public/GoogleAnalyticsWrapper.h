@@ -67,6 +67,7 @@ protected:
     
 public:
     UGoogleAnalyticsWrapper();
+
     UFUNCTION(BlueprintCallable)
     void StartMissionPartyInfo(AFSDGameState* GameState);
     

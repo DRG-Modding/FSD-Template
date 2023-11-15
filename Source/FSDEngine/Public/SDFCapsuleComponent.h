@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDFCapsuleProperties Properties;
     
-    USDFCapsuleComponent();
+    USDFCapsuleComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

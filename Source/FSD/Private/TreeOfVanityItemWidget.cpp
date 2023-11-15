@@ -1,5 +1,15 @@
 #include "TreeOfVanityItemWidget.h"
 
+UTreeOfVanityItemWidget::UTreeOfVanityItemWidget() : UUserWidget(FObjectInitializer::Get()) {
+    this->Reward = NULL;
+    this->bIsPrimaryReward = false;
+    this->bIsStartingNode = false;
+    this->NodeID = -1;
+    this->bIsClickable = false;
+    this->DefaultReward = NULL;
+    this->bIsBought = false;
+}
+
 void UTreeOfVanityItemWidget::SetIsBought(bool inIsBought) {
 }
 
@@ -11,13 +21,4 @@ bool UTreeOfVanityItemWidget::GetIsBought() {
     return false;
 }
 
-UTreeOfVanityItemWidget::UTreeOfVanityItemWidget() : UUserWidget(FObjectInitializer::Get()) {
-    this->Reward = NULL;
-    this->bIsPrimaryReward = false;
-    this->bIsStartingNode = false;
-    this->NodeID = -1;
-    this->bIsClickable = false;
-    this->DefaultReward = NULL;
-    this->bIsBought = false;
-}
 

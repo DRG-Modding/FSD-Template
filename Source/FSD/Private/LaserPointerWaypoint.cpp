@@ -1,8 +1,9 @@
 #include "LaserPointerWaypoint.h"
 
-
-
-ALaserPointerWaypoint::ALaserPointerWaypoint() {
+ALaserPointerWaypoint::ALaserPointerWaypoint(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Index = 0;
 }
+
+
+
 

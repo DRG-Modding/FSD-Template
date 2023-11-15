@@ -2,6 +2,15 @@
 #include "JettyBootUsableComponent.h"
 #include "Net/UnrealNetwork.h"
 
+AJettyBootsArcadeActor::AJettyBootsArcadeActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->StartGameUsable = CreateDefaultSubobject<UJettyBootUsableComponent>(TEXT("StartGameUsable"));
+    this->MaxDistanceToPlay = 200;
+    this->MaxDistanceComponent = NULL;
+}
+
 void AJettyBootsArcadeActor::SetActivePlayer(APlayerCharacter* InPlayer) {
 }
 
@@ -61,9 +70,4 @@ void AJettyBootsArcadeActor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty
     DOREPLIFETIME(AJettyBootsArcadeActor, JettyBootsSave);
 }
 
-AJettyBootsArcadeActor::AJettyBootsArcadeActor() {
-    this->StartGameUsable = CreateDefaultSubobject<UJettyBootUsableComponent>(TEXT("StartGameUsable"));
-    this->MaxDistanceToPlay = 200;
-    this->MaxDistanceComponent = NULL;
-}
 

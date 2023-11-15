@@ -14,7 +14,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USphereComponent* RemovePlagueCollision;
     
-    ACleanupPod();
+    ACleanupPod(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnObjectiveChanged(UObjective* Objective);

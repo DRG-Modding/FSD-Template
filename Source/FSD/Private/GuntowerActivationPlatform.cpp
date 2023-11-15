@@ -4,6 +4,21 @@
 #include "Components/StaticMeshComponent.h"
 #include "Net/UnrealNetwork.h"
 
+AGuntowerActivationPlatform::AGuntowerActivationPlatform(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    this->Root = (USceneComponent*)RootComponent;
+    this->STMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("STMesh"));
+    this->Trigger = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Trigger"));
+    this->AssignedModule = NULL;
+    this->DoneAt = 5.00f;
+    this->DisabledTime = 12.00f;
+    this->playersInside = 0;
+    this->Disabled = true;
+    this->IsShutDown = false;
+    this->STMesh->SetupAttachment(RootComponent);
+    this->Trigger->SetupAttachment(STMesh);
+}
+
 void AGuntowerActivationPlatform::ShutDown() {
 }
 
@@ -70,15 +85,4 @@ void AGuntowerActivationPlatform::GetLifetimeReplicatedProps(TArray<FLifetimePro
     DOREPLIFETIME(AGuntowerActivationPlatform, IsShutDown);
 }
 
-AGuntowerActivationPlatform::AGuntowerActivationPlatform() {
-    this->Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-    this->STMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("STMesh"));
-    this->Trigger = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Trigger"));
-    this->AssignedModule = NULL;
-    this->DoneAt = 5.00f;
-    this->DisabledTime = 12.00f;
-    this->playersInside = 0;
-    this->Disabled = true;
-    this->IsShutDown = false;
-}
 

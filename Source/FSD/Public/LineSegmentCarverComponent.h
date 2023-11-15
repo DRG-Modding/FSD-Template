@@ -37,6 +37,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UseDetailNoise;
     
-    ULineSegmentCarverComponent();
+    ULineSegmentCarverComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

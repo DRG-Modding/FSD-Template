@@ -1,6 +1,46 @@
 #include "LockOnWeapon.h"
 #include "Net/UnrealNetwork.h"
 
+ALockOnWeapon::ALockOnWeapon(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->AimTarget = NULL;
+    this->LockOnDamageMultiplier = 1.00f;
+    this->ShotsPerTarget = 2;
+    this->MaxTargets = 4;
+    this->TimeBetweenLockedShots = 0.20f;
+    this->LockOnTime = 0.50f;
+    this->MaxLockOnDegree = 15.00f;
+    this->LoseLockOnDegree = 90.00f;
+    this->DegreeTolerance = 2.00f;
+    this->MaxLockOnRange = 10000.00f;
+    this->bPrioritizeLowHitPoint = false;
+    this->bAlwaysHitTarget = false;
+    this->MaxLockOnDuration = -1.00f;
+    this->bLockOnControlsSentryGun = false;
+    this->bSentryGunShootsOnLockedShot = false;
+    this->TrackingWidgetClass = NULL;
+    this->LockOnBeamClass = NULL;
+    this->AoeActorClass = NULL;
+    this->AoeHitCountThreshhold = 0;
+    this->UseLockOnTargetStatusEffect = false;
+    this->LockOnTargetStatusEffect = NULL;
+    this->PushStatusEffectEveryXLock = 1;
+    this->LockOnCount = 0;
+    this->DamageComponent = NULL;
+    this->HitscanComponent = NULL;
+    this->ChargeSpeed = 0.50f;
+    this->SlowMovementAtCharge = 0.50f;
+    this->FearEnabled = false;
+    this->FearFactorBase = 0.00f;
+    this->FearFactorPerShotBonus = 0.00f;
+    this->FearRange = 500.00f;
+    this->FearRangePerShotBonus = 0.00f;
+    this->IsMovementSlowed = false;
+    this->Charging = false;
+    this->ChargeProgress = 0.00f;
+    this->LastShotWasLockedOn = false;
+    this->LockOnRecoilMult = 0.00f;
+}
+
 void ALockOnWeapon::UpdateRifleEye() {
 }
 
@@ -54,43 +94,4 @@ void ALockOnWeapon::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
     DOREPLIFETIME(ALockOnWeapon, LastShotWasLockedOn);
 }
 
-ALockOnWeapon::ALockOnWeapon() {
-    this->AimTarget = NULL;
-    this->LockOnDamageMultiplier = 1.00f;
-    this->ShotsPerTarget = 2;
-    this->MaxTargets = 4;
-    this->TimeBetweenLockedShots = 0.20f;
-    this->LockOnTime = 0.50f;
-    this->MaxLockOnDegree = 15.00f;
-    this->LoseLockOnDegree = 90.00f;
-    this->DegreeTolerance = 2.00f;
-    this->MaxLockOnRange = 10000.00f;
-    this->bPrioritizeLowHitPoint = false;
-    this->bAlwaysHitTarget = false;
-    this->MaxLockOnDuration = -1.00f;
-    this->bLockOnControlsSentryGun = false;
-    this->bSentryGunShootsOnLockedShot = false;
-    this->TrackingWidgetClass = NULL;
-    this->LockOnBeamClass = NULL;
-    this->AoeActorClass = NULL;
-    this->AoeHitCountThreshhold = 0;
-    this->UseLockOnTargetStatusEffect = false;
-    this->LockOnTargetStatusEffect = NULL;
-    this->PushStatusEffectEveryXLock = 1;
-    this->LockOnCount = 0;
-    this->DamageComponent = NULL;
-    this->HitscanComponent = NULL;
-    this->ChargeSpeed = 0.50f;
-    this->SlowMovementAtCharge = 0.50f;
-    this->FearEnabled = false;
-    this->FearFactorBase = 0.00f;
-    this->FearFactorPerShotBonus = 0.00f;
-    this->FearRange = 500.00f;
-    this->FearRangePerShotBonus = 0.00f;
-    this->IsMovementSlowed = false;
-    this->Charging = false;
-    this->ChargeProgress = 0.00f;
-    this->LastShotWasLockedOn = false;
-    this->LockOnRecoilMult = 0.00f;
-}
 

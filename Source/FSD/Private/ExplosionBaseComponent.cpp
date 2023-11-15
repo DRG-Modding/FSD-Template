@@ -1,5 +1,13 @@
 #include "ExplosionBaseComponent.h"
 
+UExplosionBaseComponent::UExplosionBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->CarveDiameterCM = 150.00f;
+    this->CarveNoiseCM = 30.00f;
+    this->CarveBurnThicknessCM = 10.00f;
+    this->CarveNormalOffsetCM = 0.00f;
+    this->CarveNormalSqueeze = 1.00f;
+}
+
 void UExplosionBaseComponent::DamageOnlyFromHit(const FHitResult& HitResult, UDamageComponent*& DamageComponent) {
 }
 
@@ -18,11 +26,4 @@ void UExplosionBaseComponent::DamageAndCarve(FVector Location, FVector ImpactNor
 void UExplosionBaseComponent::CarveOnly(FVector Location, FVector ImpactNormal) {
 }
 
-UExplosionBaseComponent::UExplosionBaseComponent() {
-    this->CarveDiameterCM = 150.00f;
-    this->CarveNoiseCM = 30.00f;
-    this->CarveBurnThicknessCM = 10.00f;
-    this->CarveNormalOffsetCM = 0.00f;
-    this->CarveNormalSqueeze = 1.00f;
-}
 

@@ -18,6 +18,7 @@ protected:
     TArray<UFormationData*> FormationData;
     
 public:
-    UFormationsManagerComponent();
+    UFormationsManagerComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

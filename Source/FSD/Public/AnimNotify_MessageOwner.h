@@ -11,5 +11,6 @@ public:
     FName Message;
     
     UAnimNotify_MessageOwner();
+
 };
 

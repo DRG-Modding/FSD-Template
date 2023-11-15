@@ -3,6 +3,20 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
+AGrapplingHookGun::AGrapplingHookGun(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->CoolDownAggregator = CreateDefaultSubobject<UCoolDownItemAggregator>(TEXT("CoolDownAggregator"));
+    this->MaxDistance = 2000.00f;
+    this->FPReloadAnim = NULL;
+    this->TPReloadAnim = NULL;
+    this->FPGunslingAnim = NULL;
+    this->TPGunslingAnim = NULL;
+    this->MaxSpeed = 1500.00f;
+    this->MaxSpeedReleaseModifier = 0.50f;
+    this->WindUpTime = 0.40f;
+    this->AutoFire = false;
+    this->GrapleStartTime = 0.00f;
+}
+
 void AGrapplingHookGun::StopGrapple() {
 }
 
@@ -38,17 +52,4 @@ void AGrapplingHookGun::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
     DOREPLIFETIME(AGrapplingHookGun, State);
 }
 
-AGrapplingHookGun::AGrapplingHookGun() {
-    this->CoolDownAggregator = CreateDefaultSubobject<UCoolDownItemAggregator>(TEXT("CoolDownAggregator"));
-    this->MaxDistance = 2000.00f;
-    this->FPReloadAnim = NULL;
-    this->TPReloadAnim = NULL;
-    this->FPGunslingAnim = NULL;
-    this->TPGunslingAnim = NULL;
-    this->MaxSpeed = 1500.00f;
-    this->MaxSpeedReleaseModifier = 0.50f;
-    this->WindUpTime = 0.40f;
-    this->AutoFire = false;
-    this->GrapleStartTime = 0.00f;
-}
 

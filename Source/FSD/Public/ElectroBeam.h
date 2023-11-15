@@ -67,9 +67,10 @@ private:
     bool IsLit;
     
 public:
-    AElectroBeam();
+    AElectroBeam(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetTarget(USceneComponent* TargetPoint);
     

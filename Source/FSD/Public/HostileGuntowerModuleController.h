@@ -14,7 +14,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAIPerceptionComponent* Perception;
     
-    AHostileGuntowerModuleController();
+    AHostileGuntowerModuleController(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void OnPerceptionUpdated(AActor* sensedActor, FAIStimulus Stimulus);
     

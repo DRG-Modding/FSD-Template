@@ -11,5 +11,6 @@ public:
     USDFBase* Child;
     
     USDFSingleChildBase();
+
 };
 

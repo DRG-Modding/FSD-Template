@@ -43,9 +43,10 @@ protected:
     bool Used;
     
 public:
-    ARessuplyPodItem();
+    ARessuplyPodItem(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_Call_Resupply(const FVector& Location);

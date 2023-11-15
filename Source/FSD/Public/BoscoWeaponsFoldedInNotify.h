@@ -8,5 +8,6 @@ class UBoscoWeaponsFoldedInNotify : public UAnimNotify {
     GENERATED_BODY()
 public:
     UBoscoWeaponsFoldedInNotify();
+
 };
 

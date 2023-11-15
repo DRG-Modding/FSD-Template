@@ -1,5 +1,6 @@
 #include "CSGLayerComponent.h"
 
-UCSGLayerComponent::UCSGLayerComponent() {
+UCSGLayerComponent::UCSGLayerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

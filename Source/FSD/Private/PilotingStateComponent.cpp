@@ -1,6 +1,11 @@
 #include "PilotingStateComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UPilotingStateComponent::UPilotingStateComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->StateId = 13;
+    this->Vehicle = NULL;
+}
+
 void UPilotingStateComponent::Server_MoveRight_Implementation(float Value) {
 }
 
@@ -16,7 +21,4 @@ void UPilotingStateComponent::GetLifetimeReplicatedProps(TArray<FLifetimePropert
     DOREPLIFETIME(UPilotingStateComponent, Vehicle);
 }
 
-UPilotingStateComponent::UPilotingStateComponent() {
-    this->Vehicle = NULL;
-}
 

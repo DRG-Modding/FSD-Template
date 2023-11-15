@@ -28,9 +28,10 @@ protected:
     bool OpenForConnection;
     
 public:
-    AFuelLineEndPoint();
+    AFuelLineEndPoint(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetOpenForConnection(bool Open);
     

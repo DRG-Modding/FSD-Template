@@ -1,5 +1,6 @@
 #include "CSGPlaneComponent.h"
 
-UCSGPlaneComponent::UCSGPlaneComponent() {
+UCSGPlaneComponent::UCSGPlaneComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

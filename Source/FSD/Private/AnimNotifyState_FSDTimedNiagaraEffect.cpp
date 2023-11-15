@@ -6,3 +6,4 @@ UAnimNotifyState_FSDTimedNiagaraEffect::UAnimNotifyState_FSDTimedNiagaraEffect()
     this->bDestroyAtEnd = false;
 }
 
+

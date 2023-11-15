@@ -26,6 +26,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRandRange NoiseRangeScale;
     
-    ULineSegmentFillerComponent();
+    ULineSegmentFillerComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

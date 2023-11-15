@@ -1,7 +1,8 @@
 #include "VictoryPoseRewarder.h"
 
-UVictoryPoseRewarder::UVictoryPoseRewarder() {
+UVictoryPoseRewarder::UVictoryPoseRewarder(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GivenPose = NULL;
     this->GivenCharacterID = NULL;
 }
+
 

@@ -34,5 +34,6 @@ public:
     FRotator RotationOffset;
     
     UAnimNotifyState_SpawnSkeletalMesh();
+
 };
 

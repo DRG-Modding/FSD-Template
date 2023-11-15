@@ -12,6 +12,7 @@ class UAudioFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UAudioFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static float SetSoundClassVolume(USoundClass* SoundClass, float Volume);
     

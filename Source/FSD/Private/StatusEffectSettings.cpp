@@ -5,3 +5,4 @@ UStatusEffectSettings::UStatusEffectSettings() {
     this->frozen = NULL;
 }
 
+

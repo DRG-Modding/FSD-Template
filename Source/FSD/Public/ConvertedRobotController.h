@@ -52,7 +52,8 @@ private:
     float PowerDownAfterSeconds;
     
 public:
-    AConvertedRobotController();
+    AConvertedRobotController(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void ResetCloseTimer();
     

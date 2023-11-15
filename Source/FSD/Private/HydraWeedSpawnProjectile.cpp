@@ -1,5 +1,6 @@
 #include "HydraWeedSpawnProjectile.h"
 
-AHydraWeedSpawnProjectile::AHydraWeedSpawnProjectile() {
+AHydraWeedSpawnProjectile::AHydraWeedSpawnProjectile(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

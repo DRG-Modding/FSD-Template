@@ -21,6 +21,7 @@ protected:
     
 public:
     UHeroEnemies();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnEnemySpawned(APawn* enemy, UEnemyDescriptor* descriptor);

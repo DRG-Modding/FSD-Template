@@ -4,3 +4,4 @@ UGoogleAnalyticsSettings::UGoogleAnalyticsSettings() {
     this->bEnableIDFACollection = true;
 }
 
+

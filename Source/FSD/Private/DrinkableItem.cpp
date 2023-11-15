@@ -1,6 +1,10 @@
 #include "DrinkableItem.h"
 #include "Net/UnrealNetwork.h"
 
+ADrinkableItem::ADrinkableItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->DrinkableData = NULL;
+}
+
 void ADrinkableItem::OnRep_DrinkableData() {
 }
 
@@ -17,7 +21,4 @@ void ADrinkableItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
     DOREPLIFETIME(ADrinkableItem, DrinkableData);
 }
 
-ADrinkableItem::ADrinkableItem() {
-    this->DrinkableData = NULL;
-}
 

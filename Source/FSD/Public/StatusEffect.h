@@ -72,6 +72,7 @@ protected:
     
 public:
     UStatusEffect();
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool ShouldInstantiate() const;
     

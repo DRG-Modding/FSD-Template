@@ -1,5 +1,6 @@
 #include "InfluencerComponent.h"
 
-UInfluencerComponent::UInfluencerComponent() {
+UInfluencerComponent::UInfluencerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

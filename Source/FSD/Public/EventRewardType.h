@@ -29,5 +29,6 @@ public:
     FLinearColor BackgroundTint;
     
     UEventRewardType();
+
 };
 

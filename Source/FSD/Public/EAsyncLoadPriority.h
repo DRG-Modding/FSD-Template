@@ -5,7 +5,7 @@
 UENUM(BlueprintType)
 enum class EAsyncLoadPriority : uint8 {
     Normal,
-    High = 0x64,
-    Low = 0xFF,
+    High = 100,
+    Low = 255,
 };
 

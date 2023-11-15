@@ -1,5 +1,14 @@
 #include "ItemSkin.h"
 
+UItemSkin::UItemSkin() {
+    this->Aquisition = NULL;
+    this->SkinSet = NULL;
+    this->DynamicIcon = NULL;
+    this->SkinEffect = NULL;
+    this->OwningItem = NULL;
+    this->OwningCharacter = NULL;
+}
+
 bool UItemSkin::Unlock(UObject* WorldContext, UItemID* ItemID, bool broadcast) {
     return false;
 }
@@ -42,12 +51,4 @@ UMaterialInstanceDynamic* UItemSkin::CreateIcon(UObject* Owner) const {
     return NULL;
 }
 
-UItemSkin::UItemSkin() {
-    this->Aquisition = NULL;
-    this->SkinSet = NULL;
-    this->DynamicIcon = NULL;
-    this->SkinEffect = NULL;
-    this->OwningItem = NULL;
-    this->OwningCharacter = NULL;
-}
 

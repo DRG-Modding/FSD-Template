@@ -55,7 +55,8 @@ protected:
     FBeamCollision Collision;
     
 public:
-    ALockOnBeam();
+    ALockOnBeam(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveItemSet();

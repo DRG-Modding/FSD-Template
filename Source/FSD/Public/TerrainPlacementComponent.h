@@ -25,7 +25,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 BlockerIDHack;
     
-    UTerrainPlacementComponent();
+    UTerrainPlacementComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void RemoveBlockers();
     

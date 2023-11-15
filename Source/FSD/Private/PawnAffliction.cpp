@@ -8,3 +8,4 @@ UPawnAffliction::UPawnAffliction() {
     this->PlayerShoutOnBegin = NULL;
 }
 
+

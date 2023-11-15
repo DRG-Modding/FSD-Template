@@ -25,7 +25,8 @@ protected:
     bool bAfflictionActivated;
     
 public:
-    UHeightenedSenseComponent();
+    UHeightenedSenseComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void RemoveTracker(AActor* TrackerActor);
     

@@ -1,5 +1,6 @@
 #include "NegPointLightComponent.h"
 
-UNegPointLightComponent::UNegPointLightComponent() {
+UNegPointLightComponent::UNegPointLightComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

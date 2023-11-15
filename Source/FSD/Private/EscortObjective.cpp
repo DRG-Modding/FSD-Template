@@ -1,6 +1,28 @@
 #include "EscortObjective.h"
 #include "Net/UnrealNetwork.h"
 
+UEscortObjective::UEscortObjective(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->DidRescueDorettaHead = false;
+    this->AreasToScan = 0;
+    this->ScanCount = 0;
+    this->Positioning = NULL;
+    this->EscortMulePositioning = NULL;
+    this->CostDistanceCurve = NULL;
+    this->DebrisRadius = 1500.00f;
+    this->AreasScanned = 0;
+    this->State = EEscortMissionState::InGarage;
+    this->FinalBattle = false;
+    this->FuelResource = NULL;
+    this->GemResource = NULL;
+    this->ServerShellProgress = 0.00f;
+    this->SecondsToDestroyHeartstone = 120;
+    this->FullCanistersRequired = 2;
+    this->FullCanisters = 0;
+    this->FuelResourceAmount = 100;
+    this->EscortMule = NULL;
+    this->EscortDestination = NULL;
+}
+
 void UEscortObjective::SyncProgressTimer() {
 }
 
@@ -69,25 +91,4 @@ void UEscortObjective::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(UEscortObjective, EscortDestination);
 }
 
-UEscortObjective::UEscortObjective() {
-    this->DidRescueDorettaHead = false;
-    this->AreasToScan = 0;
-    this->ScanCount = 0;
-    this->Positioning = NULL;
-    this->EscortMulePositioning = NULL;
-    this->CostDistanceCurve = NULL;
-    this->DebrisRadius = 1500.00f;
-    this->AreasScanned = 0;
-    this->State = EEscortMissionState::InGarage;
-    this->FinalBattle = false;
-    this->FuelResource = NULL;
-    this->GemResource = NULL;
-    this->ServerShellProgress = 0.00f;
-    this->SecondsToDestroyHeartstone = 120;
-    this->FullCanistersRequired = 2;
-    this->FullCanisters = 0;
-    this->FuelResourceAmount = 100;
-    this->EscortMule = NULL;
-    this->EscortDestination = NULL;
-}
 

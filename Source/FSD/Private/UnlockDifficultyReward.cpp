@@ -4,3 +4,4 @@ UUnlockDifficultyReward::UUnlockDifficultyReward() {
     this->Difficulty = NULL;
 }
 
+

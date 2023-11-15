@@ -16,7 +16,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<AFoamPuddle*> PuddlesInside;
     
-    ADroneVacuumStream();
+    ADroneVacuumStream(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_StartVacuumingPuddle(AFoamPuddle* puddle);
     

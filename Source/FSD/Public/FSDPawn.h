@@ -56,9 +56,10 @@ protected:
     UPawnStatsComponent* PawnStatsInstance;
     
 public:
-    AFSDPawn();
+    AFSDPawn(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void UnFreeze();
     
@@ -133,7 +134,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void BackOffFromLocation(const FVector& fromLocation);
     
-    
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable)
     bool HasMatchingGameplayTag(FGameplayTag TagToCheck) const override PURE_VIRTUAL(HasMatchingGameplayTag, return false;);

@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     ULineSegmentCarverComponent* LineComponent;
     
-    ALineSegmentCarver();
+    ALineSegmentCarver(const FObjectInitializer& ObjectInitializer);
+
 };
 

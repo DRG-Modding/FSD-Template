@@ -23,6 +23,7 @@ protected:
     
 public:
     UCommunityGoalSettings();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UCommunityGoal* GetGoal(ECommunityGoalIndex Goal) const;
     

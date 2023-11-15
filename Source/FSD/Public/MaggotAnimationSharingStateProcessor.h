@@ -8,5 +8,6 @@ class UMaggotAnimationSharingStateProcessor : public UAnimationSharingStateProce
     GENERATED_BODY()
 public:
     UMaggotAnimationSharingStateProcessor();
+
 };
 

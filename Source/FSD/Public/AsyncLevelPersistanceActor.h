@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UObject*> References;
     
-    AAsyncLevelPersistanceActor();
+    AAsyncLevelPersistanceActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

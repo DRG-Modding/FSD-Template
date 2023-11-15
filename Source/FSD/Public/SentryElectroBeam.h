@@ -14,6 +14,7 @@ protected:
     TArray<ARedeployableSentryGun*> Sentries;
     
 public:
-    ASentryElectroBeam();
+    ASentryElectroBeam(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -60,9 +60,10 @@ protected:
     bool bInitialized;
     
 public:
-    ARecallableActor();
+    ARecallableActor(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void SetRecallTarget(AActor* NewTarget);
     
@@ -125,7 +126,7 @@ protected:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void BeginMove();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

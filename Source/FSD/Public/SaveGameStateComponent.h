@@ -75,9 +75,10 @@ protected:
     TArray<FCharacterProgress> CharacterStats;
     
 public:
-    USaveGameStateComponent();
+    USaveGameStateComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetCampaign();
     

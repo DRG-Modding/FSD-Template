@@ -76,7 +76,8 @@ protected:
     TArray<FMasteryItem> masteryLevels;
     
 public:
-    UUpgradableGearComponent();
+    UUpgradableGearComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     static void SetGearStatText(UPARAM(Ref) FGearStatEntry& Entry, FText Text);
     

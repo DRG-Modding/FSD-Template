@@ -26,5 +26,6 @@ public:
     FRotator RotationOffset;
     
     UAnimNotifyState_SpawnSkinnedMesh();
+
 };
 

@@ -10,6 +10,7 @@ class UTargetValidator : public UObject {
     GENERATED_BODY()
 public:
     UTargetValidator();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool ReceiveIsTargetValid(AActor* Owner, AActor* Target) const;

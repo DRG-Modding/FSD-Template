@@ -29,6 +29,7 @@ protected:
     bool IsDuckingEnabled;
     
 public:
-    UAvoidCeilingComponent();
+    UAvoidCeilingComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

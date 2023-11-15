@@ -7,3 +7,4 @@ UResourceVeinMutator::UResourceVeinMutator() {
     this->NoiseRangeMultiplier = 1.00f;
 }
 
+

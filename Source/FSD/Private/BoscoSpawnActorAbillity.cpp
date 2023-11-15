@@ -4,3 +4,4 @@ UBoscoSpawnActorAbillity::UBoscoSpawnActorAbillity() {
     this->SpawnedActorClass = NULL;
 }
 
+

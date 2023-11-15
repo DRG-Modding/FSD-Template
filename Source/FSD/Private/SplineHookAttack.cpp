@@ -1,6 +1,30 @@
 #include "SplineHookAttack.h"
 #include "Net/UnrealNetwork.h"
 
+USplineHookAttack::USplineHookAttack(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Spline = NULL;
+    this->HeadMesh = NULL;
+    this->TailMesh = NULL;
+    this->HitReacts = NULL;
+    this->GrabLight = NULL;
+    this->GrabbedIndicationSound = NULL;
+    this->HeadAnimation = NULL;
+    this->Damage = NULL;
+    this->ForwardPlacement = 100.00f;
+    this->DesiredLaunchAngle = 45.00f;
+    this->MaxAngledForce = 2000.00f;
+    this->AdjustmentStartDistance = 50.00f;
+    this->AttackDuration = 1.00f;
+    this->MaxAngle = 60.00f;
+    this->AttackOnProgress = 0.50f;
+    this->AttackDelay = 0.30f;
+    this->LeadMultiplier = 1.00f;
+    this->AquireLocationTime = 0.00f;
+    this->ShowGrabArea = false;
+    this->Lead = false;
+    this->Using = false;
+}
+
 void USplineHookAttack::SetTailLight(UPointLightComponent* Light) {
 }
 
@@ -26,27 +50,4 @@ void USplineHookAttack::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
     DOREPLIFETIME(USplineHookAttack, Using);
 }
 
-USplineHookAttack::USplineHookAttack() {
-    this->Spline = NULL;
-    this->HeadMesh = NULL;
-    this->TailMesh = NULL;
-    this->HitReacts = NULL;
-    this->GrabLight = NULL;
-    this->GrabbedIndicationSound = NULL;
-    this->HeadAnimation = NULL;
-    this->Damage = NULL;
-    this->ForwardPlacement = 100.00f;
-    this->DesiredLaunchAngle = 45.00f;
-    this->MaxAngledForce = 2000.00f;
-    this->AdjustmentStartDistance = 50.00f;
-    this->AttackDuration = 1.00f;
-    this->MaxAngle = 60.00f;
-    this->AttackOnProgress = 0.50f;
-    this->AttackDelay = 0.30f;
-    this->LeadMultiplier = 1.00f;
-    this->AquireLocationTime = 0.00f;
-    this->ShowGrabArea = false;
-    this->Lead = false;
-    this->Using = false;
-}
 

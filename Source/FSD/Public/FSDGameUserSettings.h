@@ -38,7 +38,7 @@ class UFSDGameUserSettings;
 class UObject;
 class USoundClass;
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, Config=Engine)
 class UFSDGameUserSettings : public UGameUserSettings {
     GENERATED_BODY()
 public:
@@ -398,6 +398,7 @@ protected:
     
 public:
     UFSDGameUserSettings();
+
     UFUNCTION(BlueprintCallable)
     void UpdateVolumeSettings(USoundClass* CharacterVoices, USoundClass* MissionControl, USoundClass* Master, USoundClass* Music, USoundClass* SFX, USoundClass* UI, USoundClass* Voice);
     

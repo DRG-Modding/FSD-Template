@@ -1,5 +1,6 @@
 #include "GunTowerHealthComponent.h"
 
-UGunTowerHealthComponent::UGunTowerHealthComponent() {
+UGunTowerHealthComponent::UGunTowerHealthComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

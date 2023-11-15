@@ -15,7 +15,8 @@ protected:
     bool bMarkerVisible;
     
 public:
-    AItemMarker();
+    AItemMarker(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnMarkerVisibilityChanged(bool Visible);

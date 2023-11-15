@@ -7,6 +7,40 @@
 #include "ProceduralTunnelComponent.h"
 #include "ProceduralVeinsComponent.h"
 
+AProceduralSetup::AProceduralSetup(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAlwaysRelevant = true;
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->ShowItemNoisePattern = false;
+    this->Seed = -1;
+    this->UseRandomSeed = true;
+    this->ForcedMachineEvent = NULL;
+    this->ForcedTreasure = NULL;
+    this->ForcedOtherEvent = NULL;
+    this->NoisyPathfinder = CreateDefaultSubobject<UNoisyPathfinderComponent>(TEXT("NoisyPathfinder"));
+    this->ProceduralTunnel = CreateDefaultSubobject<UProceduralTunnelComponent>(TEXT("ProceduralTunnel"));
+    this->Encounters = CreateDefaultSubobject<UPLSEncounterComponent>(TEXT("Encounters"));
+    this->Veins = CreateDefaultSubobject<UProceduralVeinsComponent>(TEXT("ProceduralVeins"));
+    this->Resources = CreateDefaultSubobject<UProceduralResources>(TEXT("ProceduralResources"));
+    this->ObjectColliders = CreateDefaultSubobject<UProceduralObjectColliders>(TEXT("ObjectColliders"));
+    this->CSGWorld = NULL;
+    this->PathfinderNoise = NULL;
+    this->MissionDNA = NULL;
+    this->SpawnSettings = ESpawnSettings::Normal;
+    this->CanSpawnSpecialEvents = true;
+    this->ShouldCarveTunnels = true;
+    this->Biome = NULL;
+    this->missionLength = 0.00f;
+    this->CaveDepth = 0.00f;
+    this->PostProcessActor = NULL;
+    this->SpecialEvent = NULL;
+    this->IsInitialized = false;
+    this->CurrentRoomPass = 0;
+    this->Pass1Completed = false;
+    this->UsePerLevelCritterSpawning = false;
+}
+
 
 
 void AProceduralSetup::SpawnSpecialEvents() {
@@ -158,33 +192,4 @@ void AProceduralSetup::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(AProceduralSetup, CaveDepth);
 }
 
-AProceduralSetup::AProceduralSetup() {
-    this->ShowItemNoisePattern = false;
-    this->Seed = -1;
-    this->UseRandomSeed = true;
-    this->ForcedMachineEvent = NULL;
-    this->ForcedTreasure = NULL;
-    this->ForcedOtherEvent = NULL;
-    this->NoisyPathfinder = CreateDefaultSubobject<UNoisyPathfinderComponent>(TEXT("NoisyPathfinder"));
-    this->ProceduralTunnel = CreateDefaultSubobject<UProceduralTunnelComponent>(TEXT("ProceduralTunnel"));
-    this->Encounters = CreateDefaultSubobject<UPLSEncounterComponent>(TEXT("Encounters"));
-    this->Veins = CreateDefaultSubobject<UProceduralVeinsComponent>(TEXT("ProceduralVeins"));
-    this->Resources = CreateDefaultSubobject<UProceduralResources>(TEXT("ProceduralResources"));
-    this->ObjectColliders = CreateDefaultSubobject<UProceduralObjectColliders>(TEXT("ObjectColliders"));
-    this->CSGWorld = NULL;
-    this->PathfinderNoise = NULL;
-    this->MissionDNA = NULL;
-    this->SpawnSettings = ESpawnSettings::Normal;
-    this->CanSpawnSpecialEvents = true;
-    this->ShouldCarveTunnels = true;
-    this->Biome = NULL;
-    this->missionLength = 0.00f;
-    this->CaveDepth = 0.00f;
-    this->PostProcessActor = NULL;
-    this->SpecialEvent = NULL;
-    this->IsInitialized = false;
-    this->CurrentRoomPass = 0;
-    this->Pass1Completed = false;
-    this->UsePerLevelCritterSpawning = false;
-}
 

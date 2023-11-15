@@ -1,5 +1,8 @@
 #include "DailyDealSettings.h"
 
+UDailyDealSettings::UDailyDealSettings() {
+}
+
 bool UDailyDealSettings::IsDailyDealBought(UObject* WorldContextObject) {
     return false;
 }
@@ -19,6 +22,4 @@ bool UDailyDealSettings::BuyDailyDeal(UObject* WorldContextObject) {
     return false;
 }
 
-UDailyDealSettings::UDailyDealSettings() {
-}
 

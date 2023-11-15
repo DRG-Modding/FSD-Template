@@ -16,6 +16,7 @@ protected:
     bool IsProbabilityShared;
     
 public:
-    UDebrisProbabilityComponent();
+    UDebrisProbabilityComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

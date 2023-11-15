@@ -18,6 +18,7 @@ private:
     TArray<FAvoidActorEntry> ActorsToAvoid;
     
 public:
-    UFakePhysGrabberComponent();
+    UFakePhysGrabberComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

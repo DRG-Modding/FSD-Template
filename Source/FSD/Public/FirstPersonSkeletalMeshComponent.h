@@ -10,7 +10,8 @@ UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnable
 class UFirstPersonSkeletalMeshComponent : public USkeletalMeshComponent {
     GENERATED_BODY()
 public:
-    UFirstPersonSkeletalMeshComponent();
+    UFirstPersonSkeletalMeshComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     static void SetFirstPersonFOVEnabled(bool bEnabled);
     

@@ -14,6 +14,7 @@ protected:
     TArray<UPickaxeIconSceneCaptureComponent*> CaptureComponents;
     
 public:
-    AIconGenerationPickaxe();
+    AIconGenerationPickaxe(const FObjectInitializer& ObjectInitializer);
+
 };
 

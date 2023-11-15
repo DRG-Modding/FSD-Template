@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDFTorusProperties Properties;
     
-    USDFTorusComponent();
+    USDFTorusComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

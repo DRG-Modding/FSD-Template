@@ -14,6 +14,7 @@ protected:
     UResourceBank* ResourceBank;
     
 public:
-    AFSDMiningHead();
+    AFSDMiningHead(const FObjectInitializer& ObjectInitializer);
+
 };
 

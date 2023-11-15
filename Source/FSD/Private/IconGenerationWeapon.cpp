@@ -1,5 +1,6 @@
 #include "IconGenerationWeapon.h"
 
-AIconGenerationWeapon::AIconGenerationWeapon() {
+AIconGenerationWeapon::AIconGenerationWeapon(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

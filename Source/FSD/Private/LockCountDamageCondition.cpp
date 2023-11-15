@@ -5,3 +5,4 @@ ULockCountDamageCondition::ULockCountDamageCondition() {
     this->UseTotalLockCount = false;
 }
 
+

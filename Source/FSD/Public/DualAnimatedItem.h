@@ -45,7 +45,8 @@ protected:
     UItemCharacterAnimationSet* CharacterAnimationSet;
     
 public:
-    ADualAnimatedItem();
+    ADualAnimatedItem(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     USkeletalMeshComponent* GetRItemMesh() const;

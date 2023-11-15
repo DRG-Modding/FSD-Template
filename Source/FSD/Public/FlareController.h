@@ -24,6 +24,7 @@ protected:
     
 public:
     UFlareController();
+
     UFUNCTION(BlueprintCallable)
     static void UnregisterFlareGunProjectile(AFlareGunProjectile* flareprj);
     

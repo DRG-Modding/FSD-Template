@@ -15,7 +15,8 @@ protected:
     float respawnDelay;
     
 public:
-    UDeadStateComponent();
+    UDeadStateComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetDeathParameters(float NewRespawnDelay, float effectDelay, UAnimMontage* deathMontage, UParticleSystem* deathEffect, bool useAnimationTimeAsRespawnTime);
     

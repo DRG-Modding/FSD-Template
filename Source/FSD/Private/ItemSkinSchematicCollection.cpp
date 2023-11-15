@@ -9,3 +9,4 @@ UItemSkinSchematicCollection::UItemSkinSchematicCollection() {
     this->LastGeneratedCollectionType = EItemSkinCollectionType::PerCharacter;
 }
 
+

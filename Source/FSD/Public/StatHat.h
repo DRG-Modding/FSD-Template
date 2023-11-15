@@ -8,6 +8,7 @@ class UStatHat : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
     UStatHat();
+
     UFUNCTION(BlueprintCallable)
     void AddStatValue(const FString& Key, float Value);
     

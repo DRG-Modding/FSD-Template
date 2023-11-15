@@ -1,8 +1,5 @@
 #include "ItemsBarIcon.h"
 
-
-
-
 UItemsBarIcon::UItemsBarIcon() : UUserWidget(FObjectInitializer::Get()) {
     this->Selected = false;
     this->ItemBar = NULL;
@@ -10,4 +7,8 @@ UItemsBarIcon::UItemsBarIcon() : UUserWidget(FObjectInitializer::Get()) {
     this->Item = NULL;
     this->Index = 0;
 }
+
+
+
+
 

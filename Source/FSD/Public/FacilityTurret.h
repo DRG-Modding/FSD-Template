@@ -55,9 +55,10 @@ protected:
     bool AlwaysActive;
     
 public:
-    AFacilityTurret();
+    AFacilityTurret(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void TurnOffMesh();

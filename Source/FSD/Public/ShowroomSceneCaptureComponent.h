@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UShowroomCameraKey* CameraKey;
     
-    UShowroomSceneCaptureComponent();
+    UShowroomSceneCaptureComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

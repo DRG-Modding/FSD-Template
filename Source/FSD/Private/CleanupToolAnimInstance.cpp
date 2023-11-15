@@ -5,3 +5,4 @@ UCleanupToolAnimInstance::UCleanupToolAnimInstance() {
     this->CleaningTool = NULL;
 }
 
+

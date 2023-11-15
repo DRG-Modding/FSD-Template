@@ -27,6 +27,7 @@ protected:
     
 public:
     UNotificationSubSystem();
+
     UFUNCTION(BlueprintCallable)
     bool GetNextSpaceRigNotification(FSpaceRigNotification& NextNotification);
     

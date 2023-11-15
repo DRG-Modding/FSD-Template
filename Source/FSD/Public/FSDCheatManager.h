@@ -44,6 +44,7 @@ protected:
     
 public:
     UFSDCheatManager();
+
     UFUNCTION(BlueprintCallable)
     void SwitchCharacter(UPlayerCharacterID* characterID);
     

@@ -21,5 +21,6 @@ public:
     FGuid SavegameID;
     
     UMissionDuration();
+
 };
 

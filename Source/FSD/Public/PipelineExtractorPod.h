@@ -18,9 +18,10 @@ protected:
     float TargetRotation;
     
 public:
-    APipelineExtractorPod();
+    APipelineExtractorPod(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void SetTargetRotation(APipelineSegment* InPipelineSegment);
     

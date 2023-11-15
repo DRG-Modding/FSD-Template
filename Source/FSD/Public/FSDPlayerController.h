@@ -103,7 +103,8 @@ protected:
     bool bDetectGravityChanges;
     
 public:
-    AFSDPlayerController();
+    AFSDPlayerController(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void ToggleVoiceOn(bool Enabled);
     

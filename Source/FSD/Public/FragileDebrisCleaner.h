@@ -10,6 +10,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CleanRadius;
     
-    UFragileDebrisCleaner();
+    UFragileDebrisCleaner(const FObjectInitializer& ObjectInitializer);
+
 };
 

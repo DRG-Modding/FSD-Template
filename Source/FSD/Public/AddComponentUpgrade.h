@@ -21,6 +21,7 @@ protected:
     
 public:
     UAddComponentUpgrade();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool GetUpgradedValue(TSubclassOf<AItem> Item, AFSDPlayerState* Player, TSubclassOf<UActorComponent> NewComponentClass, bool includePreview);
     

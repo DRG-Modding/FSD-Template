@@ -1,5 +1,6 @@
 #include "InterpolatedFirstPersonStaticMeshComponent.h"
 
-UInterpolatedFirstPersonStaticMeshComponent::UInterpolatedFirstPersonStaticMeshComponent() {
+UInterpolatedFirstPersonStaticMeshComponent::UInterpolatedFirstPersonStaticMeshComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

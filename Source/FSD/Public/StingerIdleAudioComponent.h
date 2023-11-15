@@ -22,6 +22,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FadeOutTime;
     
-    UStingerIdleAudioComponent();
+    UStingerIdleAudioComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

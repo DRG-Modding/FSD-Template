@@ -44,6 +44,7 @@ protected:
     
 public:
     UVictoryPose();
+
     UFUNCTION(BlueprintCallable, BlueprintPure=false, meta=(WorldContext="WorldContextObject"))
     void Unlock(UObject* WorldContextObject, UPlayerCharacterID* characterID) const;
     
@@ -59,7 +60,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure=false, meta=(WorldContext="WorldContextObject"))
     void Equip(UObject* WorldContextObject, UPlayerCharacterID* characterID) const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

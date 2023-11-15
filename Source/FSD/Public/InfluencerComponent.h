@@ -16,6 +16,7 @@ protected:
     FRuntimeFloatCurve ScaleCurve;
     
 public:
-    UInfluencerComponent();
+    UInfluencerComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

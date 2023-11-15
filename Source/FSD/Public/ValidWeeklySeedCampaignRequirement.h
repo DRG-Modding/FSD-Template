@@ -8,5 +8,6 @@ class FSD_API UValidWeeklySeedCampaignRequirement : public UCampaignRequirement 
     GENERATED_BODY()
 public:
     UValidWeeklySeedCampaignRequirement();
+
 };
 

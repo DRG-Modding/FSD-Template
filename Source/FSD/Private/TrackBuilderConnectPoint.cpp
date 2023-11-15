@@ -1,6 +1,12 @@
 #include "TrackBuilderConnectPoint.h"
 #include "Net/UnrealNetwork.h"
 
+UTrackBuilderConnectPoint::UTrackBuilderConnectPoint(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ConnectType = NULL;
+    this->MaxConnectRadius = 150.00f;
+    this->ConnectDistance = 0.00f;
+}
+
 void UTrackBuilderConnectPoint::OnRep_ConnectedSegment() {
 }
 
@@ -26,9 +32,4 @@ void UTrackBuilderConnectPoint::GetLifetimeReplicatedProps(TArray<FLifetimePrope
     DOREPLIFETIME(UTrackBuilderConnectPoint, ConnectedSegment);
 }
 
-UTrackBuilderConnectPoint::UTrackBuilderConnectPoint() {
-    this->ConnectType = NULL;
-    this->MaxConnectRadius = 150.00f;
-    this->ConnectDistance = 0.00f;
-}
 

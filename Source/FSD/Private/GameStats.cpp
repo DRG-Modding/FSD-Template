@@ -1,6 +1,18 @@
 #include "GameStats.h"
 #include "Net/UnrealNetwork.h"
 
+AGameStats::AGameStats(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAlwaysRelevant = true;
+    this->bNetLoadOnClient = false;
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->NumberOfPlayersEscapedInPod = 0;
+    this->TotalGoldMined = 0.00f;
+    this->TotalEnemiesKilled = 0;
+    this->MissionHaz = 0;
+}
+
 void AGameStats::OnPlayerMinedGold(UCappedResource* Resource, float Amount) {
 }
 
@@ -14,10 +26,4 @@ void AGameStats::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifeti
     DOREPLIFETIME(AGameStats, EventKeys);
 }
 
-AGameStats::AGameStats() {
-    this->NumberOfPlayersEscapedInPod = 0;
-    this->TotalGoldMined = 0.00f;
-    this->TotalEnemiesKilled = 0;
-    this->MissionHaz = 0;
-}
 

@@ -12,5 +12,6 @@ public:
     FCSGCylinderProperties Properties;
     
     UCSGCylinder();
+
 };
 

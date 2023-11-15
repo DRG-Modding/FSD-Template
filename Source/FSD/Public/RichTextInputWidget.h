@@ -35,6 +35,7 @@ protected:
     
 public:
     URichTextInputWidget();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void ScaleTextBlockToHeight(UTextBlock* InTextBlock, float LineHeight);

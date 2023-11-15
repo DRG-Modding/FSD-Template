@@ -288,9 +288,10 @@ private:
     AActor* CurrentTarget;
     
 public:
-    AConvertedRobot();
+    AConvertedRobot(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateGunsInsideTerrain();
@@ -365,7 +366,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BP_OnInstroduce();
     
-    
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable)
     APlayerCharacter* GetPlayerCharacter() const override PURE_VIRTUAL(GetPlayerCharacter, return NULL;);

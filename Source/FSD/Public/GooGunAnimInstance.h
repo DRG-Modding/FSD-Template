@@ -25,6 +25,7 @@ protected:
     
 public:
     UGooGunAnimInstance();
+
     UFUNCTION(BlueprintCallable)
     void SetTargetBarrelRotationRate(float RotationRate);
     

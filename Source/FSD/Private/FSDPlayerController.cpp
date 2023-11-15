@@ -1,8 +1,22 @@
 #include "FSDPlayerController.h"
+#include "FSDCheatManager.h"
 #include "FSDWidgetEffectsComponent.h"
 #include "PerkUsageComponent.h"
 #include "Templates/SubclassOf.h"
 #include "TerrainLatejoinComponent.h"
+
+AFSDPlayerController::AFSDPlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->CheatClass = UFSDCheatManager::StaticClass();
+    this->ClickEventKeys.AddDefaulted(1);
+    this->PerkUsageComponent = CreateDefaultSubobject<UPerkUsageComponent>(TEXT("PerkUsageCompent"));
+    this->LateJoinComponent = CreateDefaultSubobject<UTerrainLatejoinComponent>(TEXT("TerrainLateJoin"));
+    this->IsOnSpaceRig = false;
+    this->bReceivedEndLevel = false;
+    this->ServerTravelDone = true;
+    this->WidgetEffects = CreateDefaultSubobject<UFSDWidgetEffectsComponent>(TEXT("WidgetEffects"));
+    this->SpacerigSpawnType = ESpacerigStartType::PlayerHub;
+    this->bDetectGravityChanges = false;
+}
 
 void AFSDPlayerController::ToggleVoiceOn(bool Enabled) {
 }
@@ -137,14 +151,4 @@ void AFSDPlayerController::Client_CollectTreasureSkin_Implementation(UTreasureRe
 void AFSDPlayerController::Client_CollectPickaxePart_Implementation(const UTreasureRewarder* rewarder, UPickaxePart* targetPart) {
 }
 
-AFSDPlayerController::AFSDPlayerController() {
-    this->PerkUsageComponent = CreateDefaultSubobject<UPerkUsageComponent>(TEXT("PerkUsageCompent"));
-    this->LateJoinComponent = CreateDefaultSubobject<UTerrainLatejoinComponent>(TEXT("TerrainLateJoin"));
-    this->IsOnSpaceRig = false;
-    this->bReceivedEndLevel = false;
-    this->ServerTravelDone = true;
-    this->WidgetEffects = CreateDefaultSubobject<UFSDWidgetEffectsComponent>(TEXT("WidgetEffects"));
-    this->SpacerigSpawnType = ESpacerigStartType::PlayerHub;
-    this->bDetectGravityChanges = false;
-}
 

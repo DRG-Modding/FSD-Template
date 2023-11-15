@@ -1,6 +1,19 @@
 #include "CharacterVanityComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UCharacterVanityComponent::UCharacterVanityComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->AvailableVanityItems = NULL;
+    this->ShownBeardColor = NULL;
+    this->ArmorMaterial = NULL;
+    this->ArmorClothMaterial = NULL;
+    this->DynamicSkinMaterial = NULL;
+    this->HeadVanityType = EHeadVanityType::HairOnly;
+    this->PreviewedItem = NULL;
+    this->PreviewedArmorMaterial = NULL;
+    this->SkinMaterial = NULL;
+    this->DesireSleevelessArmor = false;
+}
+
 void UCharacterVanityComponent::UpdateMeshes() {
 }
 
@@ -74,16 +87,4 @@ void UCharacterVanityComponent::GetLifetimeReplicatedProps(TArray<FLifetimePrope
     DOREPLIFETIME(UCharacterVanityComponent, DesireSleevelessArmor);
 }
 
-UCharacterVanityComponent::UCharacterVanityComponent() {
-    this->AvailableVanityItems = NULL;
-    this->ShownBeardColor = NULL;
-    this->ArmorMaterial = NULL;
-    this->ArmorClothMaterial = NULL;
-    this->DynamicSkinMaterial = NULL;
-    this->HeadVanityType = EHeadVanityType::HairOnly;
-    this->PreviewedItem = NULL;
-    this->PreviewedArmorMaterial = NULL;
-    this->SkinMaterial = NULL;
-    this->DesireSleevelessArmor = false;
-}
 

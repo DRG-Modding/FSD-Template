@@ -17,5 +17,6 @@ public:
     UHeightMapWithMinMaxQuadTree* Heightmap;
     
     USDFHeightMap();
+
 };
 

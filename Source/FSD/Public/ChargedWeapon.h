@@ -87,9 +87,10 @@ protected:
     float HeatPerChargedShot;
     
 public:
-    AChargedWeapon();
+    AChargedWeapon(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetOverheated(bool isOverheated);

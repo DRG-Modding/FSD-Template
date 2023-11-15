@@ -19,6 +19,7 @@ class UFSDOnlineSystemUtils : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFSDOnlineSystemUtils();
+
     UFUNCTION(BlueprintCallable)
     static void TryToResolvePrivilege(const APlayerState* PlayerState, EBlueprintableUserPrivileges Privilege, EBlueprintablePrivilegeResults reason);
     

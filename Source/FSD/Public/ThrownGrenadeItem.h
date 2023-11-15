@@ -71,9 +71,10 @@ protected:
     bool HasRejoinedInitialized;
     
 public:
-    AThrownGrenadeItem();
+    AThrownGrenadeItem(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdateCookTime(float Time);
@@ -132,7 +133,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetGrenadeDuration() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

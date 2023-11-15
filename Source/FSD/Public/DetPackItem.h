@@ -102,9 +102,10 @@ protected:
     bool HasThrownPack;
     
 public:
-    ADetPackItem();
+    ADetPackItem(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void Simulate_ThrowGrenade();
@@ -131,7 +132,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetCurrentGrenades() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

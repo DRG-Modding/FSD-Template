@@ -1,6 +1,7 @@
 #include "WeaponIconSceneCaptureComponent.h"
 
-UWeaponIconSceneCaptureComponent::UWeaponIconSceneCaptureComponent() {
+UWeaponIconSceneCaptureComponent::UWeaponIconSceneCaptureComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->CameraKey = NULL;
 }
+
 

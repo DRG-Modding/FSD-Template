@@ -4,3 +4,4 @@ UStaggeredAfflictionEffect::UStaggeredAfflictionEffect() {
     this->StaggerStrength = 1.00f;
 }
 
+

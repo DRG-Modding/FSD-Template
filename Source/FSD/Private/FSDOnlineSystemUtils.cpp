@@ -1,5 +1,8 @@
 #include "FSDOnlineSystemUtils.h"
 
+UFSDOnlineSystemUtils::UFSDOnlineSystemUtils() {
+}
+
 void UFSDOnlineSystemUtils::TryToResolvePrivilege(const APlayerState* PlayerState, EBlueprintableUserPrivileges Privilege, EBlueprintablePrivilegeResults reason) {
 }
 
@@ -42,6 +45,4 @@ EInviteBlockReason UFSDOnlineSystemUtils::CanPlayerInvite(UObject* WorldContextO
     return EInviteBlockReason::SoloSession;
 }
 
-UFSDOnlineSystemUtils::UFSDOnlineSystemUtils() {
-}
 

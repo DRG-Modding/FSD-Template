@@ -5,3 +5,4 @@ UPresenceSubSystem::UPresenceSubSystem() {
     this->CommunityWI = NULL;
 }
 
+

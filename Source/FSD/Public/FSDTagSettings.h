@@ -22,5 +22,6 @@ public:
     FFSDTagsRoot Root;
     
     UFSDTagSettings();
+
 };
 

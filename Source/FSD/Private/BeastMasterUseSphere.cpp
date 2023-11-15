@@ -1,5 +1,6 @@
 #include "BeastMasterUseSphere.h"
 
-UBeastMasterUseSphere::UBeastMasterUseSphere() {
+UBeastMasterUseSphere::UBeastMasterUseSphere(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -15,8 +15,9 @@ protected:
     FGameplayTagContainer GameplayTags;
     
 public:
-    AEscortMuleTrack();
-    
+    AEscortMuleTrack(const FObjectInitializer& ObjectInitializer);
+
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable)
     bool HasMatchingGameplayTag(FGameplayTag TagToCheck) const override PURE_VIRTUAL(HasMatchingGameplayTag, return false;);

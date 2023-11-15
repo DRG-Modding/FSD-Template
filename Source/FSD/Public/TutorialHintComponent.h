@@ -15,7 +15,8 @@ protected:
     FTutorialHint Hint;
     
 public:
-    UTutorialHintComponent();
+    UTutorialHintComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetRemainingVisibleTime(float remainingTime);

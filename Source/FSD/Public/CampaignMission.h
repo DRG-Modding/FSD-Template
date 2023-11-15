@@ -39,6 +39,7 @@ protected:
     
 public:
     UCampaignMission();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UMissionTemplate* GetMissionTemplate() const;
     

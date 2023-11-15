@@ -6,3 +6,4 @@ URoomGeneratorBase::URoomGeneratorBase() {
     this->MirrorSupport = ERoomMirroringSupport::MirrorAroundX;
 }
 
+

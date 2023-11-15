@@ -27,8 +27,9 @@ protected:
     int32 BurstSize;
     
 public:
-    AAimingTowerModule();
+    AAimingTowerModule(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 };
 

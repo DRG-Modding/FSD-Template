@@ -8,5 +8,6 @@ class UAttackEffect : public UObject {
     GENERATED_BODY()
 public:
     UAttackEffect();
+
 };
 

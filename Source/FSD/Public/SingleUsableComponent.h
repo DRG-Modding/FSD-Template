@@ -95,9 +95,10 @@ protected:
     UAudioComponent* AudioBeginUseInstance;
     
 public:
-    USingleUsableComponent();
+    USingleUsableComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void Use(APlayerCharacter* User, EInputKeys Key, float DeltaTime);
     

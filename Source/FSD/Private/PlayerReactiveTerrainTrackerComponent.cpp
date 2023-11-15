@@ -1,6 +1,7 @@
 #include "PlayerReactiveTerrainTrackerComponent.h"
 
-UPlayerReactiveTerrainTrackerComponent::UPlayerReactiveTerrainTrackerComponent() {
+UPlayerReactiveTerrainTrackerComponent::UPlayerReactiveTerrainTrackerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->CurrentPhysicalMaterial = NULL;
 }
+
 

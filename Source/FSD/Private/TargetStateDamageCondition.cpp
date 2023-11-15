@@ -4,3 +4,4 @@ UTargetStateDamageCondition::UTargetStateDamageCondition() {
     this->TargetState = ETargetStateDamageBonusType::Frozen;
 }
 
+

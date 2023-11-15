@@ -8,5 +8,6 @@ class FSD_API UPostfixNameStrategy : public USimpleNameStrategy {
     GENERATED_BODY()
 public:
     UPostfixNameStrategy();
+
 };
 

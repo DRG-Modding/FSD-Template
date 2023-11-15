@@ -20,6 +20,7 @@ public:
     TArray<FClaimableRewardEntry> PendingPromotionRewards;
     
     URewardsSubSystem();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool ShouldPendingRewardsBeShown() const;
     

@@ -20,6 +20,7 @@ protected:
     
 public:
     UPlayerAfflictionOverlayWidget();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveEndOverlay();

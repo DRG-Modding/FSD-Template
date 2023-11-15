@@ -1,6 +1,32 @@
 #include "FallingStateComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UFallingStateComponent::UFallingStateComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->StateId = 3;
+    this->FallDamageStartVelocity = 1000.00f;
+    this->FallDamageModifier = 0.10f;
+    this->AutoClimbMinDelay = 1.00f;
+    this->AutoClimbLookForwardDistance = 0.00f;
+    this->MaxClimbHeight = 0.00f;
+    this->MinClimbHeight = 0.00f;
+    this->CapsuleCheckZOffset = 0.00f;
+    this->MinInputDotProduct = 0.00f;
+    this->JumpZVelocity = 0.00f;
+    this->DebugAutoClimb = false;
+    this->FallingShout = NULL;
+    this->ShoutAfterDistance = 500.00f;
+    this->ClimbUseSettings = NULL;
+    this->HoverBootAirFriction = 5.00f;
+    this->HoverBootAirControl = 0.00f;
+    this->HoverBootGravityScale = 0.05f;
+    this->ShoutHoverBootsBegin = NULL;
+    this->HoverBootActivateDuration = 0.25f;
+    this->bHoverBootsActive = false;
+    this->HoverBootMaxDuration = 0.50f;
+    this->JumpBootsZVelocity = 800.00f;
+    this->JumpBootsActive = false;
+}
+
 
 void UFallingStateComponent::Server_TakeFallDamage_Implementation(float Amount) {
 }
@@ -52,28 +78,4 @@ void UFallingStateComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty
     DOREPLIFETIME(UFallingStateComponent, bHoverBootsActive);
 }
 
-UFallingStateComponent::UFallingStateComponent() {
-    this->FallDamageStartVelocity = 1000.00f;
-    this->FallDamageModifier = 0.10f;
-    this->AutoClimbMinDelay = 1.00f;
-    this->AutoClimbLookForwardDistance = 0.00f;
-    this->MaxClimbHeight = 0.00f;
-    this->MinClimbHeight = 0.00f;
-    this->CapsuleCheckZOffset = 0.00f;
-    this->MinInputDotProduct = 0.00f;
-    this->JumpZVelocity = 0.00f;
-    this->DebugAutoClimb = false;
-    this->FallingShout = NULL;
-    this->ShoutAfterDistance = 500.00f;
-    this->ClimbUseSettings = NULL;
-    this->HoverBootAirFriction = 5.00f;
-    this->HoverBootAirControl = 0.00f;
-    this->HoverBootGravityScale = 0.05f;
-    this->ShoutHoverBootsBegin = NULL;
-    this->HoverBootActivateDuration = 0.25f;
-    this->bHoverBootsActive = false;
-    this->HoverBootMaxDuration = 0.50f;
-    this->JumpBootsZVelocity = 800.00f;
-    this->JumpBootsActive = false;
-}
 

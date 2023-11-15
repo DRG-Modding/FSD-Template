@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class AFlareGun : public AAmmoDrivenWeapon {
     GENERATED_BODY()
 public:
-    AFlareGun();
+    AFlareGun(const FObjectInitializer& ObjectInitializer);
+
 };
 

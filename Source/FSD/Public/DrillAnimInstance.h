@@ -19,5 +19,6 @@ public:
     bool Drilling;
     
     UDrillAnimInstance();
+
 };
 

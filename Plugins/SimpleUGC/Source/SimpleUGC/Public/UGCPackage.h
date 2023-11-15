@@ -74,6 +74,7 @@ public:
     FDateTime LastUpdated;
     
     UUGCPackage();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetIdAsString();
     

@@ -1,6 +1,12 @@
 #include "EnemyTemperatureReplicatorComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UEnemyTemperatureReplicatorComponent::UEnemyTemperatureReplicatorComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->TemperatureEffect = 0;
+    this->bIsFrozen = false;
+    this->bIsOnFire = false;
+}
+
 void UEnemyTemperatureReplicatorComponent::OnRep_TemperatureEffect() {
 }
 
@@ -30,9 +36,4 @@ void UEnemyTemperatureReplicatorComponent::GetLifetimeReplicatedProps(TArray<FLi
     DOREPLIFETIME(UEnemyTemperatureReplicatorComponent, bIsOnFire);
 }
 
-UEnemyTemperatureReplicatorComponent::UEnemyTemperatureReplicatorComponent() {
-    this->TemperatureEffect = 0;
-    this->bIsFrozen = false;
-    this->bIsOnFire = false;
-}
 

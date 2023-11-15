@@ -68,9 +68,10 @@ protected:
     bool IgnoreRules;
     
 public:
-    UDashPoints();
+    UDashPoints(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void UpdateDashPointData();
     

@@ -8,3 +8,4 @@ UTerrainMaterialSettings::UTerrainMaterialSettings() {
     this->InfectionIncreasePerPlagueHit = 0.00f;
 }
 
+

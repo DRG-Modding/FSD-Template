@@ -8,5 +8,6 @@ class UCaveInfluencer : public UDataAsset {
     GENERATED_BODY()
 public:
     UCaveInfluencer();
+
 };
 

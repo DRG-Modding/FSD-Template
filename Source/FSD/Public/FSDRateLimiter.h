@@ -9,6 +9,7 @@ class FSD_API UFSDRateLimiter : public UObject {
     GENERATED_BODY()
 public:
     UFSDRateLimiter();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool RateLimted();
     

@@ -30,5 +30,6 @@ public:
     UFloodFillSettings* Noise;
     
     UPillarSettings();
+
 };
 

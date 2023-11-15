@@ -42,6 +42,7 @@ private:
     bool AutoPlayOnSpeedThreshold;
     
 public:
-    UMotionAudioController();
+    UMotionAudioController(const FObjectInitializer& ObjectInitializer);
+
 };
 

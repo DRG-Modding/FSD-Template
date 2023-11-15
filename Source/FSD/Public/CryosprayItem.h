@@ -136,9 +136,10 @@ protected:
     bool AoEColdEnabled;
     
 public:
-    ACryosprayItem();
+    ACryosprayItem(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerDoDamage(FVector_NetQuantize Start, FVector_NetQuantize End, uint8 Power);

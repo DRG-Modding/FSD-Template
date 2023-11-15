@@ -15,9 +15,10 @@ protected:
     float DeactivationTime;
     
 public:
-    ACoilGunTrailSegment();
+    ACoilGunTrailSegment(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnStartEffects();
     

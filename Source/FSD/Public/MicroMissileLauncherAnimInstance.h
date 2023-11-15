@@ -17,11 +17,12 @@ protected:
     
 public:
     UMicroMissileLauncherAnimInstance();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnMontageEndedInternal(UAnimMontage* Montage, bool interrupted);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 public:
     UFUNCTION()

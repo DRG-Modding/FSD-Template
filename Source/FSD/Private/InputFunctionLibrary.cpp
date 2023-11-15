@@ -1,5 +1,8 @@
 #include "InputFunctionLibrary.h"
 
+UInputFunctionLibrary::UInputFunctionLibrary() {
+}
+
 void UInputFunctionLibrary::SetMouseSmoothingOn(bool smoothingOn) {
 }
 
@@ -51,6 +54,4 @@ UTexture2D* UInputFunctionLibrary::FindActionIcon(FName InActionName, bool InGam
     return NULL;
 }
 
-UInputFunctionLibrary::UInputFunctionLibrary() {
-}
 

@@ -23,8 +23,9 @@ private:
     float OverlapCheckSize;
     
 public:
-    UCrossbowProjectileMagnetic();
+    UCrossbowProjectileMagnetic(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 };
 

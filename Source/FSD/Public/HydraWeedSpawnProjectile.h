@@ -13,6 +13,7 @@ protected:
     FVector TargetLocation;
     
 public:
-    AHydraWeedSpawnProjectile();
+    AHydraWeedSpawnProjectile(const FObjectInitializer& ObjectInitializer);
+
 };
 

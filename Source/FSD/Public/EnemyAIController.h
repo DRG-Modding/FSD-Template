@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class AEnemyAIController : public AFSDAIController {
     GENERATED_BODY()
 public:
-    AEnemyAIController();
+    AEnemyAIController(const FObjectInitializer& ObjectInitializer);
+
 };
 

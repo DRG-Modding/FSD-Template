@@ -28,7 +28,8 @@ protected:
     FWeightedBlendables InitialBlendables;
     
 public:
-    AFSDPostProcessingActor();
+    AFSDPostProcessingActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static void UnapplyPostProcessingBlendablesByType(UObject* WorldContext, EPostProcessingType Type);
     

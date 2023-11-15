@@ -3,20 +3,8 @@
 #include "DamageComponent.h"
 #include "Net/UnrealNetwork.h"
 
-void AFriendlyParasite::SelectNewTarget(UHealthComponentBase* Health) {
-}
-
-void AFriendlyParasite::OnEnemyCollisionEnter(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
-}
-
-void AFriendlyParasite::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(AFriendlyParasite, TargetEnemy);
-}
-
-AFriendlyParasite::AFriendlyParasite() {
-    this->Collision = CreateDefaultSubobject<USphereComponent>(TEXT("Collision"));
+AFriendlyParasite::AFriendlyParasite(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<USphereComponent>(TEXT("Collision"))) {
+    this->Collision = (USphereComponent*)RootComponent;
     this->FindEnemyCollision = CreateDefaultSubobject<USphereComponent>(TEXT("FindEnemyCollision"));
     this->DamageComponent = CreateDefaultSubobject<UDamageComponent>(TEXT("DamageComponent"));
     this->MoveSpeed = 350.00f;
@@ -29,5 +17,19 @@ AFriendlyParasite::AFriendlyParasite() {
     this->FoldoutRange = 0.00f;
     this->SpinRange = 0.00f;
     this->TargetEnemy = NULL;
+    this->FindEnemyCollision->SetupAttachment(RootComponent);
 }
+
+void AFriendlyParasite::SelectNewTarget(UHealthComponentBase* Health) {
+}
+
+void AFriendlyParasite::OnEnemyCollisionEnter(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
+}
+
+void AFriendlyParasite::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    
+    DOREPLIFETIME(AFriendlyParasite, TargetEnemy);
+}
+
 

@@ -1,6 +1,39 @@
 #include "ZipLineStateComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UZipLineStateComponent::UZipLineStateComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->StateId = 6;
+    this->VerticalOffset = -80.00f;
+    this->HorizontalOffset = -15.00f;
+    this->TravelSpeed = 250.00f;
+    this->AccelAndDecelAlpha = 1.00f;
+    this->JumpForce = 300.00f;
+    this->SpeedBoostActivationDuration = 1.00f;
+    this->SpeedBoostActivionMinAngle = 10.00f;
+    this->BaseSpeedBoost = 100.00f;
+    this->AdditionalSpeedBoostPerAngle = 50.00f;
+    this->SpeedBoostCoolDownDuration = 1.00f;
+    this->AccelerationAlpha = 1.00f;
+    this->DecelerationAlpha = 5.00f;
+    this->MinStartDistanceToEnd = 500.00f;
+    this->ReleaseDistance = 100.00f;
+    this->bCanActivateSpeedBoost = false;
+    this->bShowSpeedBoostActivator = false;
+    this->SpeedBoostActivationProgress = 0.00f;
+    this->AudioOnStart = NULL;
+    this->AudioOnDuring = NULL;
+    this->AudioOnChangingDirection = NULL;
+    this->AudioOnStop = NULL;
+    this->AudioOnSpeedBoostActivated = NULL;
+    this->ShoutStartUsing = NULL;
+    this->ShoutSpeedBoostActivated = NULL;
+    this->ZipLineProjectile = NULL;
+    this->DamageBeforeFalling = 25.00f;
+    this->FriendlyFireModifier = 0.50f;
+    this->DamageResetTime = 2.00f;
+    this->AudioComponent = NULL;
+}
+
 void UZipLineStateComponent::ServerSetSpeedBoostActivated_Implementation(bool InBoostActivated) {
 }
 
@@ -39,35 +72,4 @@ void UZipLineStateComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty
     DOREPLIFETIME(UZipLineStateComponent, ZipLine);
 }
 
-UZipLineStateComponent::UZipLineStateComponent() {
-    this->VerticalOffset = -80.00f;
-    this->HorizontalOffset = -15.00f;
-    this->TravelSpeed = 250.00f;
-    this->AccelAndDecelAlpha = 1.00f;
-    this->JumpForce = 300.00f;
-    this->SpeedBoostActivationDuration = 1.00f;
-    this->SpeedBoostActivionMinAngle = 10.00f;
-    this->BaseSpeedBoost = 100.00f;
-    this->AdditionalSpeedBoostPerAngle = 50.00f;
-    this->SpeedBoostCoolDownDuration = 1.00f;
-    this->AccelerationAlpha = 1.00f;
-    this->DecelerationAlpha = 5.00f;
-    this->MinStartDistanceToEnd = 500.00f;
-    this->ReleaseDistance = 100.00f;
-    this->bCanActivateSpeedBoost = false;
-    this->bShowSpeedBoostActivator = false;
-    this->SpeedBoostActivationProgress = 0.00f;
-    this->AudioOnStart = NULL;
-    this->AudioOnDuring = NULL;
-    this->AudioOnChangingDirection = NULL;
-    this->AudioOnStop = NULL;
-    this->AudioOnSpeedBoostActivated = NULL;
-    this->ShoutStartUsing = NULL;
-    this->ShoutSpeedBoostActivated = NULL;
-    this->ZipLineProjectile = NULL;
-    this->DamageBeforeFalling = 25.00f;
-    this->FriendlyFireModifier = 0.50f;
-    this->DamageResetTime = 2.00f;
-    this->AudioComponent = NULL;
-}
 

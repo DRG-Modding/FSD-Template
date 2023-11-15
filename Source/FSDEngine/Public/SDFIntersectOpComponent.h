@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDFSmoothingProperties Properties;
     
-    USDFIntersectOpComponent();
+    USDFIntersectOpComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

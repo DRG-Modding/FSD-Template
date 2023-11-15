@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSDENGINE_API USDFPlaneComponent : public USDFBaseWithTransformComponent {
     GENERATED_BODY()
 public:
-    USDFPlaneComponent();
+    USDFPlaneComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -8,5 +8,6 @@ class UStopLeadingNotify : public UAnimNotify {
     GENERATED_BODY()
 public:
     UStopLeadingNotify();
+
 };
 

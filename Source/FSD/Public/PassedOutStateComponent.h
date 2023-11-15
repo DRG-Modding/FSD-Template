@@ -17,7 +17,8 @@ protected:
     bool bAllPlayersPassedOut;
     
 public:
-    UPassedOutStateComponent();
+    UPassedOutStateComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveTeamPassedOut();

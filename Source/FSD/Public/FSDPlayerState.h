@@ -120,9 +120,10 @@ protected:
     FRewardTexts RewardTexts;
     
 public:
-    AFSDPlayerState();
+    AFSDPlayerState(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetSelectedCharacterID(UPlayerCharacterID* characterID);
     

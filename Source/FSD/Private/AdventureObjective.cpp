@@ -1,5 +1,6 @@
 #include "AdventureObjective.h"
 
-UAdventureObjective::UAdventureObjective() {
+UAdventureObjective::UAdventureObjective(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

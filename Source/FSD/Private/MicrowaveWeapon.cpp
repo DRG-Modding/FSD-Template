@@ -2,44 +2,7 @@
 #include "CapsuleHitscanComponent.h"
 #include "DamageComponent.h"
 
-void AMicrowaveWeapon::UpdateMuzzleAnim(bool InIsFiring) {
-}
-
-void AMicrowaveWeapon::SpawnExplosiveBoil(UPrimitiveComponent* Target, const FMultiHitscanHit& Hit) {
-}
-
-void AMicrowaveWeapon::ShowBoilerRayExplosion_Server_Implementation(FVector_NetQuantize Location, FRotator Rotation) {
-}
-
-void AMicrowaveWeapon::ShowBoilerRayExplosion_Implementation(FVector_NetQuantize Location, FRotator Rotation) {
-}
-
-void AMicrowaveWeapon::Server_SetLensePower_Implementation(float lensepower) {
-}
-
-void AMicrowaveWeapon::OnTargetKilled(AActor* Target, UFSDPhysicalMaterial* PhysMat, bool wasDirectHit) {
-}
-
-void AMicrowaveWeapon::OnShowHitEffect(const FVector& ImpactPoint, const FVector& ImpactNormal, bool hitEnemy) {
-}
-
-void AMicrowaveWeapon::OnServerHitscanHit(const FMultiHitScanHits& Hits) {
-}
-
-void AMicrowaveWeapon::OnRadiantSuperHeaterAoe() {
-}
-
-void AMicrowaveWeapon::OnPushedDamageEffect(UHealthComponentBase* healthComp) {
-}
-
-
-void AMicrowaveWeapon::EndCharacterOverheatAnim() {
-}
-
-void AMicrowaveWeapon::All_ShowNeuroSpread_Implementation(const FVector& Location) {
-}
-
-AMicrowaveWeapon::AMicrowaveWeapon() {
+AMicrowaveWeapon::AMicrowaveWeapon(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DamageComp = CreateDefaultSubobject<UDamageComponent>(TEXT("MicrowaveDamage"));
     this->CapsuleHitscanComp = CreateDefaultSubobject<UCapsuleHitscanComponent>(TEXT("CapsuleHitscanComponent"));
     this->FP_MuzzleParticle = NULL;
@@ -82,4 +45,42 @@ AMicrowaveWeapon::AMicrowaveWeapon() {
     this->SlowOnHit = false;
     this->HeatSink = NULL;
 }
+
+void AMicrowaveWeapon::UpdateMuzzleAnim(bool InIsFiring) {
+}
+
+void AMicrowaveWeapon::SpawnExplosiveBoil(UPrimitiveComponent* Target, const FMultiHitscanHit& Hit) {
+}
+
+void AMicrowaveWeapon::ShowBoilerRayExplosion_Server_Implementation(FVector_NetQuantize Location, FRotator Rotation) {
+}
+
+void AMicrowaveWeapon::ShowBoilerRayExplosion_Implementation(FVector_NetQuantize Location, FRotator Rotation) {
+}
+
+void AMicrowaveWeapon::Server_SetLensePower_Implementation(float lensepower) {
+}
+
+void AMicrowaveWeapon::OnTargetKilled(AActor* Target, UFSDPhysicalMaterial* PhysMat, bool wasDirectHit) {
+}
+
+void AMicrowaveWeapon::OnShowHitEffect(const FVector& ImpactPoint, const FVector& ImpactNormal, bool hitEnemy) {
+}
+
+void AMicrowaveWeapon::OnServerHitscanHit(const FMultiHitScanHits& Hits) {
+}
+
+void AMicrowaveWeapon::OnRadiantSuperHeaterAoe() {
+}
+
+void AMicrowaveWeapon::OnPushedDamageEffect(UHealthComponentBase* healthComp) {
+}
+
+
+void AMicrowaveWeapon::EndCharacterOverheatAnim() {
+}
+
+void AMicrowaveWeapon::All_ShowNeuroSpread_Implementation(const FVector& Location) {
+}
+
 

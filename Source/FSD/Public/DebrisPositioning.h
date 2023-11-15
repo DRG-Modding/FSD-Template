@@ -8,5 +8,6 @@ class UDebrisPositioning : public UDebrisBase {
     GENERATED_BODY()
 public:
     UDebrisPositioning();
+
 };
 

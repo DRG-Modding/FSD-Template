@@ -8,5 +8,6 @@ class UGrabTargetValidator : public UTargetValidator {
     GENERATED_BODY()
 public:
     UGrabTargetValidator();
+
 };
 

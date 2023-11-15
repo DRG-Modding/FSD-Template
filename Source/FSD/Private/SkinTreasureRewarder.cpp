@@ -1,7 +1,8 @@
 #include "SkinTreasureRewarder.h"
 
-USkinTreasureRewarder::USkinTreasureRewarder() {
+USkinTreasureRewarder::USkinTreasureRewarder(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GivenSkin = NULL;
     this->GivenSkinID = NULL;
 }
+
 

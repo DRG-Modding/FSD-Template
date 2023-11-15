@@ -63,9 +63,10 @@ protected:
     TArray<TWeakObjectPtr<AThrowableActor>> ThrownActors;
     
 public:
-    AThrowableItem();
+    AThrowableItem(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void Simulate_Throw(TSubclassOf<AThrowableActor> ActorClass);
@@ -82,7 +83,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnThrownActorDestroyed(AActor* Actor);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

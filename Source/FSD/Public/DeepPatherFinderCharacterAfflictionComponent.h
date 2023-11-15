@@ -14,6 +14,7 @@ protected:
     ADeepPathfinderCharacter* Character;
     
 public:
-    UDeepPatherFinderCharacterAfflictionComponent();
+    UDeepPatherFinderCharacterAfflictionComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

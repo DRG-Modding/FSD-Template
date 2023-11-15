@@ -5,3 +5,4 @@ UCaracterLevelCampaignRequirement::UCaracterLevelCampaignRequirement() {
     this->LevelRequirement = 0;
 }
 
+

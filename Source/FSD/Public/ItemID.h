@@ -27,6 +27,7 @@ protected:
     
 public:
     UItemID();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsItemClassChildOf(TSubclassOf<AActor> InParentClass) const;
     

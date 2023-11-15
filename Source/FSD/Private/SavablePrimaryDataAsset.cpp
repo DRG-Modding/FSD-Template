@@ -7,3 +7,4 @@ USavablePrimaryDataAsset::USavablePrimaryDataAsset() {
     this->BuildRestriction = NULL;
 }
 
+

@@ -8,5 +8,6 @@ class FSD_API UPreOrPostfixNameStrategy : public USimpleNameStrategy {
     GENERATED_BODY()
 public:
     UPreOrPostfixNameStrategy();
+
 };
 

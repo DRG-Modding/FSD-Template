@@ -8,5 +8,6 @@ class UPickaxePartItem : public UObject {
     GENERATED_BODY()
 public:
     UPickaxePartItem();
+
 };
 

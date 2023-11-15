@@ -1,6 +1,7 @@
 #include "PathfinderDebugProbe.h"
 
-APathfinderDebugProbe::APathfinderDebugProbe() {
+APathfinderDebugProbe::APathfinderDebugProbe(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Dest = NULL;
 }
+
 

@@ -42,5 +42,6 @@ protected:
     
 public:
     USpecialEventSettings();
+
 };
 

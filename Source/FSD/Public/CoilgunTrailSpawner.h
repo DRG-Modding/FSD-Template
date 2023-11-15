@@ -27,7 +27,8 @@ protected:
     float TrailSpawnRange;
     
 public:
-    UCoilgunTrailSpawner();
+    UCoilgunTrailSpawner(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SpawnSegment();

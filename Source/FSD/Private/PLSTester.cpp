@@ -1,6 +1,6 @@
 #include "PLSTester.h"
 
-APLSTester::APLSTester() {
+APLSTester::APLSTester(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->PLSSeed = -1;
     this->MissionSeed = -1;
     this->GlobalSeed = -1;
@@ -15,4 +15,5 @@ APLSTester::APLSTester() {
     this->OverrideDifficulty = NULL;
     this->SimulatePlayerCount = -1;
 }
+
 

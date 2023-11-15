@@ -1,6 +1,6 @@
 #include "PlagueMeteorSpawner.h"
 
-APlagueMeteorSpawner::APlagueMeteorSpawner() {
+APlagueMeteorSpawner::APlagueMeteorSpawner(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->EscortSpawnFromImportantRange = 500.00f;
     this->EscortMinimum2DSpawnDistFromPath = 1000.00f;
     this->EscortMinimumZSpawnDistFromPath = 600.00f;
@@ -8,4 +8,5 @@ APlagueMeteorSpawner::APlagueMeteorSpawner() {
     this->ImportantLocationRange = -1.00f;
     this->MeteorActorClassLoaded = NULL;
 }
+
 

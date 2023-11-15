@@ -15,6 +15,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBinaryTerrainMaterialCombiner Materials;
     
-    UCSGCellNoiseComponent();
+    UCSGCellNoiseComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

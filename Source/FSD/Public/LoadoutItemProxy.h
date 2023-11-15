@@ -20,7 +20,8 @@ protected:
     FItemLoadoutAnimations LoadoutAnimations;
     
 public:
-    ALoadoutItemProxy();
+    ALoadoutItemProxy(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     static TSubclassOf<AItem> GetLoadoutItemFromClass(TSubclassOf<AActor> ActorClass);
     

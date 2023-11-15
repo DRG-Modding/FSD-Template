@@ -18,7 +18,8 @@ protected:
     FNameDelegate OnAttackActionNotify;
     
 public:
-    USpecialAttackComponent();
+    USpecialAttackComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void TriggerAttack(FName Name);

@@ -12,5 +12,6 @@ public:
     FVoronoiProperties Properties;
     
     UCSGVoronoi();
+
 };
 

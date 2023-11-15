@@ -29,6 +29,7 @@ protected:
     
 public:
     UItemsBar();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnSupplyItemUnequipped(UItemsBarIcon* ItemIcon);

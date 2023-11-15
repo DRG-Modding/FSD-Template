@@ -5,3 +5,4 @@ UTriFacetDynamicIcon::UTriFacetDynamicIcon() {
     this->Primary3Texture_Contrast = 0.00f;
 }
 
+

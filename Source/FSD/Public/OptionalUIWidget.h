@@ -22,6 +22,7 @@ protected:
     
 public:
     UOptionalUIWidget();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnVisibilityChanged(UOptionalUICategory* UICategory, bool IsVisible);

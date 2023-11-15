@@ -22,6 +22,7 @@ protected:
     
 public:
     UStatusEffectMissionBP();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnEnemySpawned(APawn* Pawn, UEnemyDescriptor* descriptor);

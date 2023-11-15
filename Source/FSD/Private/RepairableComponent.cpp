@@ -1,6 +1,12 @@
 #include "RepairableComponent.h"
 #include "Net/UnrealNetwork.h"
 
+URepairableComponent::URepairableComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RequiresCarriedResource = NULL;
+    this->ResourcesRequired = 1;
+    this->IsFullyRepaired = false;
+}
+
 bool URepairableComponent::TryRepair(APlayerCharacter* User) {
     return false;
 }
@@ -22,9 +28,4 @@ void URepairableComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>&
     DOREPLIFETIME(URepairableComponent, IsFullyRepaired);
 }
 
-URepairableComponent::URepairableComponent() {
-    this->RequiresCarriedResource = NULL;
-    this->ResourcesRequired = 1;
-    this->IsFullyRepaired = false;
-}
 

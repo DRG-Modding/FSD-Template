@@ -12,6 +12,7 @@ protected:
     bool EnabledFPFOV;
     
 public:
-    UFirstPersonStaticMeshComponent();
+    UFirstPersonStaticMeshComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

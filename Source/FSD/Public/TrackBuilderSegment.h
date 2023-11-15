@@ -33,9 +33,10 @@ protected:
     FTrackBuilderPoint ServerSegmentEndTransform;
     
 public:
-    ATrackBuilderSegment();
+    ATrackBuilderSegment(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     bool UpdatePlacement(const FTransform& InTransform, UTrackBuilderConnectPoint* InConnectPoint, bool InPlacementValid, AItem* PlaceableItem);
     

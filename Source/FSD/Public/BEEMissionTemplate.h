@@ -45,6 +45,7 @@ public:
     FRandInterval WarningCount;
     
     UBEEMissionTemplate();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsDurationAllowed(UMissionTemplate* mission, UMissionDuration* Duration) const;
     

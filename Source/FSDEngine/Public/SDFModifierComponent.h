@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDFModifierProperties Properties;
     
-    USDFModifierComponent();
+    USDFModifierComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

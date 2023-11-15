@@ -1,5 +1,8 @@
 #include "GameModeFunctionLibrary.h"
 
+UGameModeFunctionLibrary::UGameModeFunctionLibrary() {
+}
+
 bool UGameModeFunctionLibrary::IsCloseToImportantLocation(AFSDGameState* GameState, const FVector& Location) {
     return false;
 }
@@ -11,6 +14,4 @@ FTransform UGameModeFunctionLibrary::FindEscapePodLocationAtDistance(UObject* Wo
 void UGameModeFunctionLibrary::AddSeamlessTravelEventKey(UObject* WorldContextObject, USeamlessTravelEventKey* Key) {
 }
 
-UGameModeFunctionLibrary::UGameModeFunctionLibrary() {
-}
 

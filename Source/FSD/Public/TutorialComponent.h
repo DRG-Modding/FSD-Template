@@ -66,7 +66,8 @@ protected:
     bool bTutorialActive;
     
 public:
-    UTutorialComponent();
+    UTutorialComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void RegisterTutorial();
     

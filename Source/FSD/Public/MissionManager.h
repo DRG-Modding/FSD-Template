@@ -14,7 +14,8 @@ protected:
     TArray<URunningMissionBP*> RunningBlueprints;
     
 public:
-    UMissionManager();
+    UMissionManager(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnMatchStarted();

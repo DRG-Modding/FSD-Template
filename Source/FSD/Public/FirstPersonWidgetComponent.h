@@ -7,6 +7,7 @@ UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnable
 class UFirstPersonWidgetComponent : public UWidgetComponent {
     GENERATED_BODY()
 public:
-    UFirstPersonWidgetComponent();
+    UFirstPersonWidgetComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

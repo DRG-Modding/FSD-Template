@@ -1,6 +1,6 @@
 #include "LevelGenerationCarverComponent.h"
 
-ULevelGenerationCarverComponent::ULevelGenerationCarverComponent() {
+ULevelGenerationCarverComponent::ULevelGenerationCarverComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MeshCarver = NULL;
     this->ConvexCarver = NULL;
     this->StaticMeshCarver = NULL;
@@ -10,6 +10,12 @@ ULevelGenerationCarverComponent::ULevelGenerationCarverComponent() {
     this->CarveCellSize = CarveOptionsCellSize::CARVE_CELL_SIZE_50;
     this->PreviewEnabled = true;
     this->CarvingDisabled = false;
+    this->DestroyOwnerOnCarve = false;
+    this->DestroySelfAndChilded = false;
     this->SelfActivate = false;
 }
+
+void ULevelGenerationCarverComponent::OnCarvedCallback() {
+}
+
 

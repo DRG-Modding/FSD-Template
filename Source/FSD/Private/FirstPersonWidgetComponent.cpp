@@ -1,5 +1,7 @@
 #include "FirstPersonWidgetComponent.h"
 
-UFirstPersonWidgetComponent::UFirstPersonWidgetComponent() {
+UFirstPersonWidgetComponent::UFirstPersonWidgetComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->DepthPriorityGroup = SDPG_Foreground;
 }
+
 

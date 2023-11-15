@@ -5,3 +5,4 @@ UEncounterOverrideMutator::UEncounterOverrideMutator() {
     this->StationaryEncounterScale = 1.00f;
 }
 
+

@@ -35,7 +35,8 @@ protected:
     UAudioComponent* TunnelSoundInstance;
     
 public:
-    UDynamicReverbComponent();
+    UDynamicReverbComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void TunnelTimerTriggered();

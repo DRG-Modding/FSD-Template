@@ -30,5 +30,6 @@ protected:
     
 public:
     UChargedWeaponAnimInstance();
+
 };
 

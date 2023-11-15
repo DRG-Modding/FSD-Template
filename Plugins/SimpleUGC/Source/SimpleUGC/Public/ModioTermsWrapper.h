@@ -29,6 +29,7 @@ public:
     FString TermsOfUseText;
     
     UModioTermsWrapper();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool isEmpty();
     

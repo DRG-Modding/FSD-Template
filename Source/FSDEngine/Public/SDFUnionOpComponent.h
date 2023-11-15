@@ -13,6 +13,7 @@ private:
     FSDFSmoothingProperties Properties;
     
 public:
-    USDFUnionOpComponent();
+    USDFUnionOpComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

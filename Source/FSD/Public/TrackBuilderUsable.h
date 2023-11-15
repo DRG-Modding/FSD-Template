@@ -38,9 +38,10 @@ protected:
     TWeakObjectPtr<APlayerCharacter> InUseBy;
     
 public:
-    UTrackBuilderUsable();
+    UTrackBuilderUsable(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_NextSegment();

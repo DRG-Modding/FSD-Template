@@ -32,6 +32,7 @@ protected:
     
 public:
     UFacilityHackingPodAnimInstance();
+
     UFUNCTION(BlueprintCallable)
     void SetSaluter(AActor* salutingTarget);
     

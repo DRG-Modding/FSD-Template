@@ -15,5 +15,6 @@ public:
     TArray<FClaimableRewardEntry> SubsequentPromotionRewards;
     
     UPromotionRewardsSettings();
+
 };
 

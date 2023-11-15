@@ -5,3 +5,4 @@ UVanityCollectionReward::UVanityCollectionReward() {
     this->UseContextAsTargetCharacter = false;
 }
 
+

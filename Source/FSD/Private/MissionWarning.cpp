@@ -10,3 +10,4 @@ UMissionWarning::UMissionWarning() {
     this->CampaignWeight = 1.00f;
 }
 
+

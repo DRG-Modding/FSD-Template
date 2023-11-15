@@ -21,5 +21,6 @@ public:
     TArray<FNewPlayerMutator> FirstMissionsMutators;
     
     UFSDTutorialSettings();
+
 };
 

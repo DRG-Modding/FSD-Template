@@ -83,7 +83,8 @@ protected:
     UItemSkin* Paintjob;
     
 public:
-    AVanityCharacter();
+    AVanityCharacter(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void DisplayVanity();
     

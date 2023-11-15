@@ -19,7 +19,8 @@ private:
     ACrossbowProjectileBase* CastedOwner;
     
 public:
-    UCrossbowProjectileControlled();
+    UCrossbowProjectileControlled(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable)
     void UpdateHomingTarget();

@@ -17,6 +17,7 @@ protected:
     float range;
     
 public:
-    UInfluencerSpawnComponent();
+    UInfluencerSpawnComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

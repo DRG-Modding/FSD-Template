@@ -194,6 +194,7 @@ protected:
     
 public:
     UPlayerAnimInstance();
+
     UFUNCTION(BlueprintCallable)
     bool StopUseMontage(bool stopImmediately);
     
@@ -221,7 +222,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float CalculateDirectionVertical(const FVector& TargetDirection, const FRotator& BaseRotation) const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

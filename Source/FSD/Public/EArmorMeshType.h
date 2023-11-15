@@ -7,7 +7,7 @@ enum class EArmorMeshType : uint8 {
     None,
     Default,
     DefaultBeardCompatible,
-    Sleeveless = 0x4,
-    SleevelessBeardCompatible = 0x8,
+    Sleeveless = 4,
+    SleevelessBeardCompatible = 8,
 };
 

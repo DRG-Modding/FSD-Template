@@ -4,3 +4,4 @@ UGameActivityType::UGameActivityType() {
     this->ActivityType = EActivityType::None;
 }
 
+

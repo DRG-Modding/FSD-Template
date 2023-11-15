@@ -22,5 +22,6 @@ public:
     float NoiseRangeMultiplier;
     
     UResourceVeinMutator();
+
 };
 

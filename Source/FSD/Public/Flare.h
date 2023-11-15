@@ -64,9 +64,10 @@ protected:
     USoundCue* ImpactGroundSound;
     
 public:
-    AFlare();
+    AFlare(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void StartLightFunction(ULightComponent* mainLight, TArray<ULightComponent*> spotLights, UCurveFloat* flutterCurve, UCurveFloat* fadeInCurve);
     
@@ -109,7 +110,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ActivateFlare();
     
-    
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable)
     TSubclassOf<AItem> GetLoadoutItemClass() const override PURE_VIRTUAL(GetLoadoutItemClass, return NULL;);

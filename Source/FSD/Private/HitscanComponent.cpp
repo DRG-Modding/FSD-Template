@@ -1,5 +1,19 @@
 #include "HitscanComponent.h"
 
+UHitscanComponent::UHitscanComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->CanHitInstigator = false;
+    this->BulletsCanCarve = false;
+    this->CarveDiameter = 50.00f;
+    this->CarveNoise = 25.00f;
+    this->CarveDebrisSize = 0.25f;
+    this->GeneralImpactAudioVolume = 1.00f;
+    this->ImpactDelay = 0.02f;
+    this->OnlyUseImpactEffects = false;
+    this->ImpactParticles = NULL;
+    this->ImpactSound = NULL;
+    this->IgnoreAlwaysPenetrate = false;
+}
+
 void UHitscanComponent::Server_RegisterRicochetHit_Terrain_Implementation(FVector_NetQuantize Origin, FVector_NetQuantize Location, FVector_NetQuantizeNormal Normal, UFSDPhysicalMaterial* PhysMaterial) {
 }
 
@@ -36,17 +50,4 @@ void UHitscanComponent::All_ShowHit_Destructable_Implementation(FVector_NetQuant
 void UHitscanComponent::All_ShowHit_Implementation(FVector_NetQuantize Location, FVector_NetQuantizeNormal Normal, bool SpawnDecal, UFSDPhysicalMaterial* PhysMaterial) {
 }
 
-UHitscanComponent::UHitscanComponent() {
-    this->CanHitInstigator = false;
-    this->BulletsCanCarve = false;
-    this->CarveDiameter = 50.00f;
-    this->CarveNoise = 25.00f;
-    this->CarveDebrisSize = 0.25f;
-    this->GeneralImpactAudioVolume = 1.00f;
-    this->ImpactDelay = 0.02f;
-    this->OnlyUseImpactEffects = false;
-    this->ImpactParticles = NULL;
-    this->ImpactSound = NULL;
-    this->IgnoreAlwaysPenetrate = false;
-}
 

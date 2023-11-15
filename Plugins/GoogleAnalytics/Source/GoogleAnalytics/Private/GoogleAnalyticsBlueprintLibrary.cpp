@@ -1,5 +1,8 @@
 #include "GoogleAnalyticsBlueprintLibrary.h"
 
+UGoogleAnalyticsBlueprintLibrary::UGoogleAnalyticsBlueprintLibrary() {
+}
+
 void UGoogleAnalyticsBlueprintLibrary::SetTrackingId(const FString& TrackingId) {
 }
 
@@ -22,6 +25,4 @@ FString UGoogleAnalyticsBlueprintLibrary::GetTrackingId() {
     return TEXT("");
 }
 
-UGoogleAnalyticsBlueprintLibrary::UGoogleAnalyticsBlueprintLibrary() {
-}
 

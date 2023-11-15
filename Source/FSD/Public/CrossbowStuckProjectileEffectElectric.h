@@ -25,7 +25,8 @@ private:
     TWeakObjectPtr<AActor> ElectrocutionActor;
     
 public:
-    UCrossbowStuckProjectileEffectElectric();
+    UCrossbowStuckProjectileEffectElectric(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void OnElectrocutionActorDestroyed(AActor* Actor);
     

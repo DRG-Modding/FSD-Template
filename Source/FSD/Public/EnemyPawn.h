@@ -42,9 +42,10 @@ protected:
     TArray<UMaterialInterface*> CachedMaterials;
     
 public:
-    AEnemyPawn();
+    AEnemyPawn(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     UMeshComponent* Receive_GetMeshComponent() const;
@@ -55,7 +56,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     USkeletalMeshComponent* GetMesh() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 public:
     UFUNCTION(BlueprintCallable)

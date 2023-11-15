@@ -4,3 +4,4 @@ UCharacterShoutAfflictionEffect::UCharacterShoutAfflictionEffect() {
     this->Shout = NULL;
 }
 
+

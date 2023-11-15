@@ -27,7 +27,8 @@ protected:
     bool RunsOnClients;
     
 public:
-    UInDangerComponent();
+    UInDangerComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetIsActive(bool aFlag);
     

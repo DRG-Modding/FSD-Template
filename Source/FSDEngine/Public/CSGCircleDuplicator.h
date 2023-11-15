@@ -12,5 +12,6 @@ public:
     FCSGCircleDuplicatorProperties Properties;
     
     UCSGCircleDuplicator();
+
 };
 

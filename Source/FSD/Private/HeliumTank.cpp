@@ -1,6 +1,11 @@
 #include "HeliumTank.h"
 #include "Net/UnrealNetwork.h"
 
+AHeliumTank::AHeliumTank(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->PitchCurve = NULL;
+    this->Leader = NULL;
+}
+
 void AHeliumTank::OnUsedBy(APlayerCharacter* User, EInputKeys Key) {
 }
 
@@ -17,8 +22,4 @@ void AHeliumTank::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifet
     DOREPLIFETIME(AHeliumTank, Leader);
 }
 
-AHeliumTank::AHeliumTank() {
-    this->PitchCurve = NULL;
-    this->Leader = NULL;
-}
 

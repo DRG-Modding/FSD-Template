@@ -17,5 +17,6 @@ public:
     float EliteCooldown;
     
     UEliteEnemiesMutator();
+
 };
 

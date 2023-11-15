@@ -24,5 +24,6 @@ protected:
     
 public:
     UDoubleDrillAnimInstance();
+
 };
 

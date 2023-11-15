@@ -1,6 +1,11 @@
 #include "ShootingPlant.h"
 #include "Net/UnrealNetwork.h"
 
+AShootingPlant::AShootingPlant(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->IsVisible = false;
+    this->Target = NULL;
+}
+
 void AShootingPlant::SetTarget(AActor* NewTarget) {
 }
 
@@ -14,8 +19,4 @@ void AShootingPlant::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
     DOREPLIFETIME(AShootingPlant, Target);
 }
 
-AShootingPlant::AShootingPlant() {
-    this->IsVisible = false;
-    this->Target = NULL;
-}
 

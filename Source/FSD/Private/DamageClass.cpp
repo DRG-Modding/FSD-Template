@@ -10,3 +10,4 @@ UDamageClass::UDamageClass() {
     this->DefaultDamageImpulse = NULL;
 }
 
+

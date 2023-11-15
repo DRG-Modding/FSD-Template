@@ -36,9 +36,10 @@ protected:
     float HomingAccelerationMagnitude;
     
 public:
-    AHomingDroneBomb();
+    AHomingDroneBomb(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void UpdateHomingSpeed();
     
@@ -49,7 +50,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_HomingAccelerationMagnitude();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 public:
     UFUNCTION(BlueprintCallable)

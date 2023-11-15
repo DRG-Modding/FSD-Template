@@ -91,9 +91,10 @@ protected:
     float ScreamDistance;
     
 public:
-    AFlyingLifter();
+    AFlyingLifter(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     bool SelectAnotherTarget();

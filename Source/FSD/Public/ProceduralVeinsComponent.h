@@ -17,7 +17,8 @@ protected:
     TArray<FVeinResource> VeinResources;
     
 public:
-    UProceduralVeinsComponent();
+    UProceduralVeinsComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     static void GenerateResourceVeins_Async(AProceduralSetup*& Setup, FLatentActionInfo LatentInfo);
     

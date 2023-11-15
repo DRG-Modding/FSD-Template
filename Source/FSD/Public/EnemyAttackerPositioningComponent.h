@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UEnemyAttackerPositioningComponent : public UAttackerPositioningComponent {
     GENERATED_BODY()
 public:
-    UEnemyAttackerPositioningComponent();
+    UEnemyAttackerPositioningComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

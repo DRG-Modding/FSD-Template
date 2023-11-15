@@ -32,6 +32,7 @@ protected:
     FName MuzzleLeft;
     
 public:
-    ADualWieldWeapon();
+    ADualWieldWeapon(const FObjectInitializer& ObjectInitializer);
+
 };
 

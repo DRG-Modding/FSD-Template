@@ -11,6 +11,7 @@ class UFSDMainHUDWidget : public UUserWidget {
     GENERATED_BODY()
 public:
     UFSDMainHUDWidget();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void PushEvent(UWidget* eventWidget, bool Left);
     

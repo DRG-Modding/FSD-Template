@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTerrainType* TerrainType;
     
-    ARaycastDebugProbe();
+    ARaycastDebugProbe(const FObjectInitializer& ObjectInitializer);
+
 };
 

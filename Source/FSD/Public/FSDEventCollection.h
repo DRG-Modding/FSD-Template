@@ -17,6 +17,7 @@ public:
     FFSDEventActivateChanged OnEventActiveChanged;
     
     UFSDEventCollection();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UFSDEvent* FindEventHandler(const FName& EventName) const;
     

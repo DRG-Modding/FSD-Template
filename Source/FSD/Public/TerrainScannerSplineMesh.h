@@ -23,7 +23,8 @@ protected:
     bool bVisibleOnScanner;
     
 public:
-    UTerrainScannerSplineMesh();
+    UTerrainScannerSplineMesh(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetVisibleOnScanner(bool InShowOnScanner);
     

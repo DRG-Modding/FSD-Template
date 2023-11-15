@@ -40,5 +40,6 @@ public:
     float AttachSpawnOffsetDistance;
     
     UDebrisStaticCarved();
+
 };
 

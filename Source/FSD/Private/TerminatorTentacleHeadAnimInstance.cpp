@@ -6,3 +6,4 @@ UTerminatorTentacleHeadAnimInstance::UTerminatorTentacleHeadAnimInstance() {
     this->Grabbed = false;
 }
 
+

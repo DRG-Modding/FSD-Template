@@ -1,5 +1,8 @@
 #include "DiscordSDKInterface.h"
 
+UDiscordSDKInterface::UDiscordSDKInterface() {
+}
+
 void UDiscordSDKInterface::RejectInvite(const FString& UserId) {
 }
 
@@ -13,6 +16,4 @@ UDiscordSDKInterface* UDiscordSDKInterface::Get() {
 void UDiscordSDKInterface::AcceptInvite(const FString& UserId) {
 }
 
-UDiscordSDKInterface::UDiscordSDKInterface() {
-}
 

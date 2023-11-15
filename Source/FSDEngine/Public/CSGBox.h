@@ -12,5 +12,6 @@ public:
     FMeshBoxProperties Properties;
     
     UCSGBox();
+
 };
 

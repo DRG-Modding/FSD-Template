@@ -1,6 +1,17 @@
 #include "RivalBomb.h"
 #include "Net/UnrealNetwork.h"
 
+ARivalBomb::ARivalBomb(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ShowProgressBar = true;
+    this->NodeHackTime = 14.00f;
+    this->NumNodesToHack = 3;
+    this->bDataCellPickedUp = false;
+    this->DataCell = NULL;
+    this->RivalBomb = NULL;
+    this->NodePositioning = NULL;
+    this->NodeCostCurve = NULL;
+}
+
 void ARivalBomb::UpdateNodesOnStart() {
 }
 
@@ -29,13 +40,4 @@ void ARivalBomb::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifeti
     DOREPLIFETIME(ARivalBomb, bDataCellPickedUp);
 }
 
-ARivalBomb::ARivalBomb() {
-    this->NodeHackTime = 14.00f;
-    this->NumNodesToHack = 3;
-    this->bDataCellPickedUp = false;
-    this->DataCell = NULL;
-    this->RivalBomb = NULL;
-    this->NodePositioning = NULL;
-    this->NodeCostCurve = NULL;
-}
 

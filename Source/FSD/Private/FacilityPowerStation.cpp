@@ -1,6 +1,14 @@
 #include "FacilityPowerStation.h"
 #include "Net/UnrealNetwork.h"
 
+AFacilityPowerStation::AFacilityPowerStation(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ProgressPoint = 0.33f;
+    this->ProgresPointCount = 2;
+    this->TimeToDefend = 120.00f;
+    this->Progress = 0.00f;
+    this->IsHacking = false;
+}
+
 void AFacilityPowerStation::StopHacking() {
 }
 
@@ -26,11 +34,4 @@ void AFacilityPowerStation::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>
     DOREPLIFETIME(AFacilityPowerStation, IsHacking);
 }
 
-AFacilityPowerStation::AFacilityPowerStation() {
-    this->ProgressPoint = 0.33f;
-    this->ProgresPointCount = 2;
-    this->TimeToDefend = 120.00f;
-    this->Progress = 0.00f;
-    this->IsHacking = false;
-}
 

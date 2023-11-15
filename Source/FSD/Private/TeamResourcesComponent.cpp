@@ -1,5 +1,6 @@
 #include "TeamResourcesComponent.h"
 
-UTeamResourcesComponent::UTeamResourcesComponent() {
+UTeamResourcesComponent::UTeamResourcesComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

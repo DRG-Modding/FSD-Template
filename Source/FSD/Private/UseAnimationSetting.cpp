@@ -10,3 +10,4 @@ UUseAnimationSetting::UUseAnimationSetting() {
     this->BlockUseWhileActiveDuration = 0.00f;
 }
 
+

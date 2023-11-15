@@ -40,9 +40,10 @@ protected:
     bool TurnOffAfterUse;
     
 public:
-    UInstantUsable();
+    UInstantUsable(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetCanUse(bool CanUse);
     

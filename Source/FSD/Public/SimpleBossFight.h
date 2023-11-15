@@ -13,7 +13,8 @@ public:
     FBossFight BossFight;
     
     USimpleBossFight();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

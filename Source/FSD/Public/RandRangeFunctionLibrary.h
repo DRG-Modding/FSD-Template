@@ -11,6 +11,7 @@ class URandRangeFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     URandRangeFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool TryPickRandomText(const TArray<FText>& TextArray, UPARAM(Ref) FRandomStream& RandomStream, FText& OutResult);
     

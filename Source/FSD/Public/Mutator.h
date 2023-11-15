@@ -8,5 +8,6 @@ class FSD_API UMutator : public UDataAsset {
     GENERATED_BODY()
 public:
     UMutator();
+
 };
 

@@ -1,7 +1,8 @@
 #include "FSDPlayerStart.h"
 
-AFSDPlayerStart::AFSDPlayerStart() {
+AFSDPlayerStart::AFSDPlayerStart(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->PrefferedClassID = NULL;
     this->usedBy = NULL;
 }
+
 

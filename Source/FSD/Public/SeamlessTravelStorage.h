@@ -34,6 +34,7 @@ public:
     TSet<USeamlessTravelEventKey*> EventKeys;
     
     USeamlessTravelStorage();
+
     UFUNCTION(BlueprintCallable)
     void ClearGameStateSeamlessTravelStorage();
     

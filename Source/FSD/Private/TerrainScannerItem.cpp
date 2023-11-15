@@ -3,6 +3,21 @@
 #include "Components/SceneComponent.h"
 #include "Net/UnrealNetwork.h"
 
+ATerrainScannerItem::ATerrainScannerItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->TerrainScannerZoomDirection = 0;
+    this->TerrainScannerStartAngle = 70.00f;
+    this->TerrainScannerScale = 0.00f;
+    this->DelayedTerrainScannerScale = 0.00f;
+    this->DelayedTerrainScannerZoom = 0.00f;
+    this->IsLookingAtMap = false;
+    this->UpdateMapToolActors = false;
+    this->EndFP = NULL;
+    this->EndTP = NULL;
+    this->TerrainScannerRoot = CreateDefaultSubobject<USceneComponent>(TEXT("TerrainScannerRoot"));
+    this->TerrainScannerCapture = CreateDefaultSubobject<USceneCaptureComponent2D>(TEXT("TerrainScannerCapture"));
+    this->TerrainScannerCapture->SetupAttachment(TerrainScannerRoot);
+}
+
 void ATerrainScannerItem::Server_SetIslookingAtMap_Implementation(bool lookingAtMap) {
 }
 
@@ -15,17 +30,4 @@ void ATerrainScannerItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(ATerrainScannerItem, IsLookingAtMap);
 }
 
-ATerrainScannerItem::ATerrainScannerItem() {
-    this->TerrainScannerZoomDirection = 0;
-    this->TerrainScannerStartAngle = 70.00f;
-    this->TerrainScannerScale = 0.00f;
-    this->DelayedTerrainScannerScale = 0.00f;
-    this->DelayedTerrainScannerZoom = 0.00f;
-    this->IsLookingAtMap = false;
-    this->UpdateMapToolActors = false;
-    this->EndFP = NULL;
-    this->EndTP = NULL;
-    this->TerrainScannerRoot = CreateDefaultSubobject<USceneComponent>(TEXT("TerrainScannerRoot"));
-    this->TerrainScannerCapture = CreateDefaultSubobject<USceneCaptureComponent2D>(TEXT("TerrainScannerCapture"));
-}
 

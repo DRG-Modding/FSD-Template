@@ -6,3 +6,4 @@ UFlyingFormationData::UFlyingFormationData() {
     this->RandomSpread = 25.00f;
 }
 
+

@@ -40,6 +40,7 @@ protected:
     
 public:
     UEnemyAnimInstance();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsSlotPlayingAnyAnimation(FName SlotNodeName) const;
     

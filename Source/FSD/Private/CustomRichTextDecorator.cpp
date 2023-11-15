@@ -4,3 +4,4 @@ UCustomRichTextDecorator::UCustomRichTextDecorator() : URichTextBlockDecorator(F
     this->RichTextBlock = NULL;
 }
 
+

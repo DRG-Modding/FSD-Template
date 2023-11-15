@@ -15,7 +15,7 @@ class UMaterialParameterCollection;
 class UPlayerCharacterID;
 class UWindowManager;
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, Config=Engine)
 class AFSDPlayerControllerBase : public APlayerController {
     GENERATED_BODY()
 public:
@@ -36,7 +36,8 @@ protected:
     TArray<FPlatformComponent> PlatformComponentClasses;
     
 public:
-    AFSDPlayerControllerBase();
+    AFSDPlayerControllerBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void ToggleAnalogCursor(bool Visible);

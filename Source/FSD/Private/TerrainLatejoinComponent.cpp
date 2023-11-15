@@ -1,5 +1,8 @@
 #include "TerrainLatejoinComponent.h"
 
+UTerrainLatejoinComponent::UTerrainLatejoinComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UTerrainLatejoinComponent::Server_TerrainLateJoinPartReceived_Implementation() {
 }
 
@@ -15,6 +18,4 @@ void UTerrainLatejoinComponent::Client_TerrainLateJoinDone_Implementation() {
 void UTerrainLatejoinComponent::Client_TerrainLateJoinDebris_Implementation(const TArray<int32>& instanceComponentPairs) {
 }
 
-UTerrainLatejoinComponent::UTerrainLatejoinComponent() {
-}
 

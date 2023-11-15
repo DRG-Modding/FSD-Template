@@ -24,5 +24,6 @@ public:
     FRotator RotationOffset;
     
     UAnimNotifyState_PlaySound();
+
 };
 

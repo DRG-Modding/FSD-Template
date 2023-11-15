@@ -38,7 +38,8 @@ protected:
     TArray<UCritterDescriptor*> CritterPool;
     
 public:
-    UEncounterManager();
+    UEncounterManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, Exec)
     void ShowSpawnLocations();
     

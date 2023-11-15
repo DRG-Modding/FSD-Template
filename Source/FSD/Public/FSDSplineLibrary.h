@@ -26,6 +26,7 @@ class UFSDSplineLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFSDSplineLibrary();
+
     UFUNCTION(BlueprintCallable)
     static bool SplineComponentSphereTrace(USplineComponent*& SplineComponent, float Radius, TEnumAsByte<ETraceTypeQuery> TraceType, float StepSize, TArray<AActor*> IgnoreActors, FHitResult& OutHitResult, FVector Offset);
     

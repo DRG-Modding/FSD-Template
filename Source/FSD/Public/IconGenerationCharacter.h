@@ -32,6 +32,7 @@ protected:
     TArray<UIconSceneCaptureComponent*> CaptureComponents;
     
 public:
-    AIconGenerationCharacter();
+    AIconGenerationCharacter(const FObjectInitializer& ObjectInitializer);
+
 };
 

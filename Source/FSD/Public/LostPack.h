@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class FSD_API ALostPack : public AActor {
     GENERATED_BODY()
 public:
-    ALostPack();
+    ALostPack(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -14,7 +14,8 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UProceduralController : public UActorComponent {
     GENERATED_BODY()
 public:
-    UProceduralController();
+    UProceduralController(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_RequestTunnelData();
     

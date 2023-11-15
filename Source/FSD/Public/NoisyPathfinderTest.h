@@ -73,6 +73,7 @@ protected:
     ADeepCSGWorld* CSGWorld;
     
 public:
-    ANoisyPathfinderTest();
+    ANoisyPathfinderTest(const FObjectInitializer& ObjectInitializer);
+
 };
 

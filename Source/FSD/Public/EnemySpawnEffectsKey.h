@@ -8,5 +8,6 @@ class UEnemySpawnEffectsKey : public UDataAsset {
     GENERATED_BODY()
 public:
     UEnemySpawnEffectsKey();
+
 };
 

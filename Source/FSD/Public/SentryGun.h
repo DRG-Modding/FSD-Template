@@ -143,9 +143,10 @@ private:
     UAudioComponent* ShootingAudioComponent;
     
 public:
-    ASentryGun();
+    ASentryGun(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void UseAmmo(int32 Amount);
     
@@ -194,7 +195,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void AmmoSpent();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 public:
     UFUNCTION(BlueprintCallable)

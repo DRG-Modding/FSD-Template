@@ -61,9 +61,10 @@ private:
     AFSDPawn* TargetEnemy;
     
 public:
-    AFriendlyParasite();
+    AFriendlyParasite(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 private:
     UFUNCTION(BlueprintCallable)
     void SelectNewTarget(UHealthComponentBase* Health);

@@ -1,5 +1,6 @@
 #include "RDGComponent.h"
 
-URDGComponent::URDGComponent() {
+URDGComponent::URDGComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

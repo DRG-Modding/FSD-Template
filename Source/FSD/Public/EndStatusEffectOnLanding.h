@@ -16,11 +16,12 @@ protected:
     TWeakObjectPtr<UStatusEffect> EffectToCancel;
     
 public:
-    UEndStatusEffectOnLanding();
+    UEndStatusEffectOnLanding(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void OnOwnerStateChanged(ECharacterState State);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

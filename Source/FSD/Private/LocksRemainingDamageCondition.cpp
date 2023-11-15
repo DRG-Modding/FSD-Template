@@ -4,3 +4,4 @@ ULocksRemainingDamageCondition::ULocksRemainingDamageCondition() {
     this->MaxLocksRemaining = 3;
 }
 
+

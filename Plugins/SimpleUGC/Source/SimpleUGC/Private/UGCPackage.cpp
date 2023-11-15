@@ -1,13 +1,5 @@
 #include "UGCPackage.h"
 
-FString UUGCPackage::GetIdAsString() {
-    return TEXT("");
-}
-
-int64 UUGCPackage::GetIdAsInt() {
-    return 0;
-}
-
 UUGCPackage::UUGCPackage() {
     this->Status = EUGCApprovalStatus::Sandbox;
     this->DownloadVersion = EUGCDownloadVersion::Optional;
@@ -19,4 +11,13 @@ UUGCPackage::UUGCPackage() {
     this->PackagedForLatestVersion = false;
     this->OverridePackedForLatestVersion = false;
 }
+
+FString UUGCPackage::GetIdAsString() {
+    return TEXT("");
+}
+
+int64 UUGCPackage::GetIdAsInt() {
+    return 0;
+}
+
 

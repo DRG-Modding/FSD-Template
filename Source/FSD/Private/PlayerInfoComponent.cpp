@@ -1,6 +1,7 @@
 #include "PlayerInfoComponent.h"
 
-UPlayerInfoComponent::UPlayerInfoComponent() {
+UPlayerInfoComponent::UPlayerInfoComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Character = NULL;
 }
+
 

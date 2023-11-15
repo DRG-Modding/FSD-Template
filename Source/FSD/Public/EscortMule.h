@@ -107,9 +107,10 @@ protected:
     TArray<FEscortMuleExtractorSlot> ExtractorSlots;
     
 public:
-    AEscortMule();
+    AEscortMule(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     bool TryHeal(APlayerCharacter* User, float Amount);
@@ -171,7 +172,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void ActivateMule();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

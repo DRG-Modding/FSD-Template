@@ -47,9 +47,10 @@ protected:
     bool CanUse;
     
 public:
-    UDroneUseComponent();
+    UDroneUseComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SyncedUsableUserCountChangedResponse(int32 userCount);

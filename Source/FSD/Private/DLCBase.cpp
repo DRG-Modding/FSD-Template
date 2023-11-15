@@ -1,5 +1,8 @@
 #include "DLCBase.h"
 
+UDLCBase::UDLCBase() {
+}
+
 void UDLCBase::QueryAllDLC() {
 }
 
@@ -11,6 +14,4 @@ bool UDLCBase::IsDLCUnLocked(UDLCBase* dlc) {
     return false;
 }
 
-UDLCBase::UDLCBase() {
-}
 

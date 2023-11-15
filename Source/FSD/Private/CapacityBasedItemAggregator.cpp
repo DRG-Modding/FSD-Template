@@ -1,5 +1,9 @@
 #include "CapacityBasedItemAggregator.h"
 
+UCapacityBasedItemAggregator::UCapacityBasedItemAggregator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->showClipCount = true;
+}
+
 void UCapacityBasedItemAggregator::ReloadStarted() {
 }
 
@@ -14,7 +18,4 @@ int32 UCapacityBasedItemAggregator::GetCurrentAmount() const {
     return 0;
 }
 
-UCapacityBasedItemAggregator::UCapacityBasedItemAggregator() {
-    this->showClipCount = true;
-}
 

@@ -1,7 +1,37 @@
 #include "GameEvent.h"
 #include "Components/ChildActorComponent.h"
+#include "Components/SceneComponent.h"
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
+
+AGameEvent::AGameEvent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    this->bGameEventSetup = false;
+    this->StartEventObject = CreateDefaultSubobject<UChildActorComponent>(TEXT("StartEventObject"));
+    this->EventTriggeredShout = NULL;
+    this->EventFinishedShout = NULL;
+    this->EventFailedShout = NULL;
+    this->EventTriggeredShoutDelay = 0.00f;
+    this->EventFinishedShoutDelay = 0.00f;
+    this->StageProgress = 0.00f;
+    this->TimeLimit = -1.00f;
+    this->DelayUITime = 0.00f;
+    this->objectivesPerStage = 10;
+    this->EventStartersActive = false;
+    this->StopScriptedWavesWhileActive = false;
+    this->StopNormalWavesWhileActive = false;
+    this->EventStarted = false;
+    this->FailedEvent = false;
+    this->ShowRemainingTimeOnHUD = false;
+    this->ShowScoreStatusOnHUD = false;
+    this->ShowProgressBar = false;
+    this->ProgressBarPct = 0.00f;
+    this->SkipEventStarters = false;
+    this->StartEventObject->SetupAttachment(RootComponent);
+}
 
 void AGameEvent::TrySetupGameEvent() {
 }
@@ -129,27 +159,4 @@ void AGameEvent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifeti
     DOREPLIFETIME(AGameEvent, EventParticipants);
 }
 
-AGameEvent::AGameEvent() {
-    this->bGameEventSetup = false;
-    this->StartEventObject = CreateDefaultSubobject<UChildActorComponent>(TEXT("StartEventObject"));
-    this->EventTriggeredShout = NULL;
-    this->EventFinishedShout = NULL;
-    this->EventFailedShout = NULL;
-    this->EventTriggeredShoutDelay = 0.00f;
-    this->EventFinishedShoutDelay = 0.00f;
-    this->StageProgress = 0.00f;
-    this->TimeLimit = -1.00f;
-    this->DelayUITime = 0.00f;
-    this->objectivesPerStage = 10;
-    this->EventStartersActive = false;
-    this->StopScriptedWavesWhileActive = false;
-    this->StopNormalWavesWhileActive = false;
-    this->EventStarted = false;
-    this->FailedEvent = false;
-    this->ShowRemainingTimeOnHUD = false;
-    this->ShowScoreStatusOnHUD = false;
-    this->ShowProgressBar = false;
-    this->ProgressBarPct = 0.00f;
-    this->SkipEventStarters = false;
-}
 

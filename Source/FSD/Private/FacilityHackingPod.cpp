@@ -1,6 +1,10 @@
 #include "FacilityHackingPod.h"
 #include "Net/UnrealNetwork.h"
 
+AFacilityHackingPod::AFacilityHackingPod(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->PodState = EHackingPodState::EClosed;
+}
+
 void AFacilityHackingPod::SetState(EHackingPodState aState) {
 }
 
@@ -19,7 +23,4 @@ void AFacilityHackingPod::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(AFacilityHackingPod, PodState);
 }
 
-AFacilityHackingPod::AFacilityHackingPod() {
-    this->PodState = EHackingPodState::EClosed;
-}
 

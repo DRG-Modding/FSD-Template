@@ -5,3 +5,4 @@ UShootingSpiderAnimInstance::UShootingSpiderAnimInstance() {
     this->CheckCurve = true;
 }
 
+

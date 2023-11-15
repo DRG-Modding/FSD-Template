@@ -14,6 +14,7 @@ protected:
     TArray<UAttackerPositioningComponent*> Components;
     
 public:
-    UAttackerManagerComponent();
+    UAttackerManagerComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

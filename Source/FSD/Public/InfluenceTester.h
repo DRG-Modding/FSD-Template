@@ -16,6 +16,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USphereComponent* Sphere;
     
-    AInfluenceTester();
+    AInfluenceTester(const FObjectInitializer& ObjectInitializer);
+
 };
 

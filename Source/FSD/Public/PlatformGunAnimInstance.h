@@ -22,6 +22,7 @@ protected:
     
 public:
     UPlatformGunAnimInstance();
+
     UFUNCTION(BlueprintCallable)
     void WeaponFired();
     

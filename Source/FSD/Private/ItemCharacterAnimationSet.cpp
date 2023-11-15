@@ -46,3 +46,4 @@ UItemCharacterAnimationSet::UItemCharacterAnimationSet() {
     this->ParentSet = NULL;
 }
 
+

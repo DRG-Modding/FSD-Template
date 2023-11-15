@@ -42,9 +42,10 @@ protected:
     float Duration;
     
 public:
-    UTremorAttackComponent();
+    UTremorAttackComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void StopParticles();

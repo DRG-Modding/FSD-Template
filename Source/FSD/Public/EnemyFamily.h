@@ -16,5 +16,6 @@ public:
     FText Name;
     
     UEnemyFamily();
+
 };
 

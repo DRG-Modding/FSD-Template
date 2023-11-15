@@ -3,6 +3,19 @@
 #include "Net/UnrealNetwork.h"
 #include "OncePerPlayerUsableComponent.h"
 
+ATreasureContainer::ATreasureContainer(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    this->Root = (USceneComponent*)RootComponent;
+    this->CollectUsable = CreateDefaultSubobject<UOncePerPlayerUsableComponent>(TEXT("CollectUsable"));
+    this->AquisitionSource = NULL;
+    this->LastJoiner = NULL;
+    this->TreasureRewarder = NULL;
+    this->PreventLatejoiners = false;
+}
+
 void ATreasureContainer::TestAwardTreasure() {
 }
 
@@ -38,12 +51,4 @@ void ATreasureContainer::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& O
     DOREPLIFETIME(ATreasureContainer, LastJoiner);
 }
 
-ATreasureContainer::ATreasureContainer() {
-    this->Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-    this->CollectUsable = CreateDefaultSubobject<UOncePerPlayerUsableComponent>(TEXT("CollectUsable"));
-    this->AquisitionSource = NULL;
-    this->LastJoiner = NULL;
-    this->TreasureRewarder = NULL;
-    this->PreventLatejoiners = false;
-}
 

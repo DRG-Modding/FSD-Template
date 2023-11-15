@@ -21,9 +21,10 @@ protected:
     float Progress;
     
 public:
-    ADefenseEvent();
+    ADefenseEvent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_Progress(float OldValue);

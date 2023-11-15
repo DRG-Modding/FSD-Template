@@ -1,5 +1,6 @@
 #include "CharacterRecoilComponent.h"
 
-UCharacterRecoilComponent::UCharacterRecoilComponent() {
+UCharacterRecoilComponent::UCharacterRecoilComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

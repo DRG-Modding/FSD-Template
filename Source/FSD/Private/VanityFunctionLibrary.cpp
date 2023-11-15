@@ -1,5 +1,8 @@
 #include "VanityFunctionLibrary.h"
 
+UVanityFunctionLibrary::UVanityFunctionLibrary() {
+}
+
 void UVanityFunctionLibrary::RandomizeVanityLoadout(UObject* WorldContextObject, APlayerCharacter* Character) {
 }
 
@@ -9,6 +12,4 @@ void UVanityFunctionLibrary::RandomizeAllRandomVanityLoadout(APlayerCharacter* c
 void UVanityFunctionLibrary::CopyPasteVanityLoadout(UObject* WorldContextObject, UPlayerCharacterID* PlayerId, int32 fromIndex, int32 toIndex) {
 }
 
-UVanityFunctionLibrary::UVanityFunctionLibrary() {
-}
 

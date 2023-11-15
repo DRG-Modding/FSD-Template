@@ -1,6 +1,9 @@
 #include "SessionHandling.h"
 #include "Templates/SubclassOf.h"
 
+USessionHandling::USessionHandling() {
+}
+
 void USessionHandling::StopVoice(UObject* WorldContextObject) {
 }
 
@@ -229,6 +232,4 @@ bool USessionHandling::AllowLinkToExternalFeedback(UObject* WorldContextObject) 
     return false;
 }
 
-USessionHandling::USessionHandling() {
-}
 

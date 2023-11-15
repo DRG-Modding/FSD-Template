@@ -8,5 +8,6 @@ class UPipelineAnimationSharingProcessor : public UAnimationSharingStateProcesso
     GENERATED_BODY()
 public:
     UPipelineAnimationSharingProcessor();
+
 };
 

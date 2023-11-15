@@ -10,6 +10,6 @@ enum class EUpgradeClass : uint8 {
     Gear_B,
     Armor,
     Pickaxe,
-    Class_Bosco = 0xA,
+    Class_Bosco = 10,
 };
 

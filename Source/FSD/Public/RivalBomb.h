@@ -41,9 +41,10 @@ private:
     UCurveFloat* NodeCostCurve;
     
 public:
-    ARivalBomb();
+    ARivalBomb(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void UpdateNodesOnStart();

@@ -5,3 +5,4 @@ UEnemyDetonationStatusEffectItem::UEnemyDetonationStatusEffectItem() {
     this->IceDetonation = false;
 }
 
+

@@ -1,6 +1,7 @@
 #include "DroneStateComponentBase.h"
 
-UDroneStateComponentBase::UDroneStateComponentBase() {
+UDroneStateComponentBase::UDroneStateComponentBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SubsequentState = EDroneState::EFollow;
 }
+
 

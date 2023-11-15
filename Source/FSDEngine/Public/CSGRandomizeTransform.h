@@ -12,5 +12,6 @@ public:
     FCSGRandomizeTransformProperties Properties;
     
     UCSGRandomizeTransform();
+
 };
 

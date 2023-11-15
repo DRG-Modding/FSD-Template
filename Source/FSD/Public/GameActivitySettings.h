@@ -15,5 +15,6 @@ private:
     
 public:
     UGameActivitySettings();
+
 };
 

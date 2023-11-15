@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDFBaseProperties BaseProperties;
     
-    USDFBaseComponent();
+    USDFBaseComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

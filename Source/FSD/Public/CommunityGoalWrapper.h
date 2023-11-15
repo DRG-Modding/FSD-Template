@@ -59,6 +59,7 @@ protected:
     
 public:
     UCommunityGoalWrapper();
+
     UFUNCTION(BlueprintCallable)
     void UpdateAllGoalsInitialized();
     

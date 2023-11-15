@@ -1,11 +1,5 @@
 #include "Season.h"
 
-void USeason::AddUnassignedReward(int32 Index, UReward* Reward) {
-}
-
-void USeason::AddLevel(int32 Index, UReward* Reward, UReward* specialReward) {
-}
-
 USeason::USeason() {
     this->SeasonNumber = 0;
     this->TreeOfVanity = NULL;
@@ -14,4 +8,11 @@ USeason::USeason() {
     this->SeasonWaveInMissionChance = 0.00f;
     this->SeasonWarning = NULL;
 }
+
+void USeason::AddUnassignedReward(int32 Index, UReward* Reward) {
+}
+
+void USeason::AddLevel(int32 Index, UReward* Reward, UReward* specialReward) {
+}
+
 

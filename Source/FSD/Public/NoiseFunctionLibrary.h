@@ -14,6 +14,7 @@ class UNoiseFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UNoiseFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void SphericalNoiseMovementComponent(UObject* WorldContextObject, USceneComponent* Component, FVector Center, float Radius, float Speed, float TimeOffset);
     

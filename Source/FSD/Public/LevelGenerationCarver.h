@@ -5,6 +5,7 @@
 #include "MatrixWithExactSync.h"
 #include "LevelGenerationCarver.generated.h"
 
+class ULevelGenerationCarverComponent;
 class USTLMeshCarver;
 class UStaticMesh;
 class UStaticMeshCarver;
@@ -28,6 +29,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ConvexExpensiveNoise;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    ULevelGenerationCarverComponent* Componenet;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     CarveOptionsCellSize CarveCellSize;

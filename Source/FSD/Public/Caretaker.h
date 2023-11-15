@@ -86,9 +86,10 @@ private:
     int8 OpenEye;
     
 public:
-    ACaretaker();
+    ACaretaker(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void WakeUp();
     

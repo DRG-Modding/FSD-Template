@@ -47,5 +47,6 @@ public:
     int32 NumberOfScriptsFromPlague;
     
     USeasonSettings();
+
 };
 

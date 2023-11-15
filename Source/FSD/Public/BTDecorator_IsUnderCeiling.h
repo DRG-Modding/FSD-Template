@@ -24,5 +24,6 @@ public:
     FBlackboardKeySelector TargetKey;
     
     UBTDecorator_IsUnderCeiling();
+
 };
 

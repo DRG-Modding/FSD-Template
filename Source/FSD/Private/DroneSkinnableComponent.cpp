@@ -1,5 +1,6 @@
 #include "DroneSkinnableComponent.h"
 
-UDroneSkinnableComponent::UDroneSkinnableComponent() {
+UDroneSkinnableComponent::UDroneSkinnableComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

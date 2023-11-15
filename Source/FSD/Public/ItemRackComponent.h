@@ -37,9 +37,10 @@ protected:
     URackableItemComponent* Item;
     
 public:
-    UItemRackComponent();
+    UItemRackComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void RackItem(AActor* NewItem, APlayerCharacter* Character);
     

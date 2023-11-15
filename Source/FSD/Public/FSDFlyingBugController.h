@@ -23,7 +23,8 @@ protected:
     bool SyncTargetWithBB;
     
 public:
-    AFSDFlyingBugController();
+    AFSDFlyingBugController(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnFlyingBugAlerted();

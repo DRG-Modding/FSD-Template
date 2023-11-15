@@ -7,6 +7,6 @@ enum class EUGCApprovalStatus : uint8 {
     Fully,
     Progression,
     Sandbox,
-    All = 0xFF,
+    All = 255,
 };
 

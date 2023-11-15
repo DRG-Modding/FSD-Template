@@ -1,5 +1,6 @@
 #include "SDFCylinderComponent.h"
 
-USDFCylinderComponent::USDFCylinderComponent() {
+USDFCylinderComponent::USDFCylinderComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

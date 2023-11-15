@@ -6,3 +6,4 @@ UBallisticProjectileAttack::UBallisticProjectileAttack() {
     this->Gravity = 1.00f;
 }
 
+

@@ -1,5 +1,12 @@
 #include "CommunityGoalWrapper.h"
 
+UCommunityGoalWrapper::UCommunityGoalWrapper() {
+    this->HasCGS = false;
+    this->LastCollectedRewardID = 0;
+    this->FreeBeerRewardActive = false;
+    this->AreAllGoalsInitialized = false;
+}
+
 void UCommunityGoalWrapper::UpdateAllGoalsInitialized() {
 }
 
@@ -32,10 +39,4 @@ void UCommunityGoalWrapper::ClaimReward() {
 void UCommunityGoalWrapper::CheckUI() {
 }
 
-UCommunityGoalWrapper::UCommunityGoalWrapper() {
-    this->HasCGS = false;
-    this->LastCollectedRewardID = 0;
-    this->FreeBeerRewardActive = false;
-    this->AreAllGoalsInitialized = false;
-}
 

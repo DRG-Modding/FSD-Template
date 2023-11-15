@@ -2,6 +2,17 @@
 #include "GrabberComponent.h"
 #include "Net/UnrealNetwork.h"
 
+ATerminatorTentacle::ATerminatorTentacle(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->FlairAnimation = NULL;
+    this->MinFlairAnimCooldown = 1.00f;
+    this->MaxFlairAnimationCooldown = 2.00f;
+    this->SwaySpeed = 50.00f;
+    this->Extended = false;
+    this->TentacleState = ETerminatorTentacleState::Idle;
+    this->HeadMesh = NULL;
+    this->GrabberComponent = CreateDefaultSubobject<UGrabberComponent>(TEXT("Grabber"));
+}
+
 void ATerminatorTentacle::PlayHitReaction(float Amount) {
 }
 
@@ -36,14 +47,4 @@ void ATerminatorTentacle::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(ATerminatorTentacle, DesiredTarget);
 }
 
-ATerminatorTentacle::ATerminatorTentacle() {
-    this->FlairAnimation = NULL;
-    this->MinFlairAnimCooldown = 1.00f;
-    this->MaxFlairAnimationCooldown = 2.00f;
-    this->SwaySpeed = 50.00f;
-    this->Extended = false;
-    this->TentacleState = ETerminatorTentacleState::Idle;
-    this->HeadMesh = NULL;
-    this->GrabberComponent = CreateDefaultSubobject<UGrabberComponent>(TEXT("Grabber"));
-}
 

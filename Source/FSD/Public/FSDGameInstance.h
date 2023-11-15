@@ -464,6 +464,7 @@ protected:
     
 public:
     UFSDGameInstance();
+
     UFUNCTION(BlueprintCallable)
     void UpdateGlobelMissionSeed();
     

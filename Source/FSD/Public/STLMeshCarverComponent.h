@@ -23,6 +23,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool PreviewEnabled;
     
-    USTLMeshCarverComponent();
+    USTLMeshCarverComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

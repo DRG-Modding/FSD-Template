@@ -1,5 +1,6 @@
 #include "CrossbowStuckProjectileEffect.h"
 
-UCrossbowStuckProjectileEffect::UCrossbowStuckProjectileEffect() {
+UCrossbowStuckProjectileEffect::UCrossbowStuckProjectileEffect(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

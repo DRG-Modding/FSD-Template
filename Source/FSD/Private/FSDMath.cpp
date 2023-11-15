@@ -1,5 +1,8 @@
 #include "FSDMath.h"
 
+UFSDMath::UFSDMath() {
+}
+
 FVector UFSDMath::SphericalToCartesian(float Radius, float azimuth, float elecation) {
     return FVector{};
 }
@@ -22,6 +25,4 @@ FVector UFSDMath::CubicInterpBlueprint(FVector p0, FVector tangent1, FVector p1,
 void UFSDMath::CartesianToSpherical(FVector Location, float& outAzimuth, float& outElevation, float& OutRadius) {
 }
 
-UFSDMath::UFSDMath() {
-}
 

@@ -8,5 +8,6 @@ class UItemSkinFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UItemSkinFunctionLibrary();
+
 };
 

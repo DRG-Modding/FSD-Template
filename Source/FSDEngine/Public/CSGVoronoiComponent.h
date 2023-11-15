@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVoronoiProperties Properties;
     
-    UCSGVoronoiComponent();
+    UCSGVoronoiComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

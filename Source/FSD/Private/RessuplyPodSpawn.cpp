@@ -1,7 +1,8 @@
 #include "RessuplyPodSpawn.h"
 
-
-
-ARessuplyPodSpawn::ARessuplyPodSpawn() {
+ARessuplyPodSpawn::ARessuplyPodSpawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
+
+
 

@@ -42,9 +42,10 @@ protected:
     TWeakObjectPtr<APlayerCharacter> CollectedBy;
     
 public:
-    AResourceChunk();
+    AResourceChunk(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetCollectOpen();

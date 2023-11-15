@@ -21,6 +21,7 @@ public:
     TMap<int64, UTexture2DDynamic*> ModioModThumbnails;
     
     UUGCLatentActionManager();
+
     UFUNCTION(BlueprintPure)
     UModioModInfoWrapper* GetCachedModioModMetaData(int64 ModId);
     

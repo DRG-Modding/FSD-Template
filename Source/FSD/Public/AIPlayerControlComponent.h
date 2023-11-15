@@ -74,6 +74,7 @@ protected:
     UControlEnemyUsable* Usable;
     
 public:
-    UAIPlayerControlComponent();
+    UAIPlayerControlComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

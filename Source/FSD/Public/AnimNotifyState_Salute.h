@@ -16,5 +16,6 @@ private:
     
 public:
     UAnimNotifyState_Salute();
+
 };
 

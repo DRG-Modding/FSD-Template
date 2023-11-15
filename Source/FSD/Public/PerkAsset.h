@@ -59,6 +59,7 @@ protected:
     
 public:
     UPerkAsset();
+
     UFUNCTION(BlueprintCallable)
     bool UseCharge(APlayerController* PlayerController);
     

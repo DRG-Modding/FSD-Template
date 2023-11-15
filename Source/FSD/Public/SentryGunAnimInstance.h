@@ -29,5 +29,6 @@ protected:
     
 public:
     USentryGunAnimInstance();
+
 };
 

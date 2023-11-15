@@ -4,3 +4,4 @@ UMultiHitscanHitCountDamageCondition::UMultiHitscanHitCountDamageCondition() {
     this->RequiredHitCount = 0;
 }
 
+

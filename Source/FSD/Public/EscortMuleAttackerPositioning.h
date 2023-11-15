@@ -18,7 +18,8 @@ protected:
     TArray<FVector> AttackerPositions;
     
 public:
-    UEscortMuleAttackerPositioning();
+    UEscortMuleAttackerPositioning(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetNewMaxAttackers(int32 newMaxAttackers);
     

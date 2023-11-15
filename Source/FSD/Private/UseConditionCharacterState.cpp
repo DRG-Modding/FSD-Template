@@ -4,3 +4,4 @@ UUseConditionCharacterState::UUseConditionCharacterState() {
     this->Invert = false;
 }
 
+

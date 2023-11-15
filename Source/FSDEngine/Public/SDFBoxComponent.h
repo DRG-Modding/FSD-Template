@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDFBoxProperties Properties;
     
-    USDFBoxComponent();
+    USDFBoxComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

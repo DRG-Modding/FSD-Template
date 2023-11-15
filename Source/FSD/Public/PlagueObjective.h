@@ -59,9 +59,10 @@ protected:
     float ScriptedPlagueWaveWeight;
     
 public:
-    UPlagueObjective();
+    UPlagueObjective(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_CurrentPlagueAmount(int32 OldAmount);

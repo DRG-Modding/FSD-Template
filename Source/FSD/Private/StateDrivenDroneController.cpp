@@ -1,5 +1,6 @@
 #include "StateDrivenDroneController.h"
 
-AStateDrivenDroneController::AStateDrivenDroneController() {
+AStateDrivenDroneController::AStateDrivenDroneController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

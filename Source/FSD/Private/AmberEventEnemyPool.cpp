@@ -8,3 +8,4 @@ UAmberEventEnemyPool::UAmberEventEnemyPool() {
     this->AmbersNeededOnePlayer = 0;
 }
 
+

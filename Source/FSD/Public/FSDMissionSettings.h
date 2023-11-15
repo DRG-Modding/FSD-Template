@@ -9,7 +9,7 @@ class UDifficultySetting;
 class UGeneratedMission;
 class UObject;
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class UFSDMissionSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -25,6 +25,7 @@ protected:
     
 public:
     UFSDMissionSettings();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static float GetTotalHazardBonus(UObject* WorldContextObject, UGeneratedMission* mission, UDifficultySetting* DifficultySetting);
     

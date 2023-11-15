@@ -1,5 +1,14 @@
 #include "DiscordWrapper.h"
 
+UDiscordWrapper::UDiscordWrapper() {
+    this->LastResponseSuccessful = false;
+    this->UserIn = false;
+    this->UserInStatus = 0;
+    this->HasEoM = false;
+    this->IsConnected = true;
+    this->ServerInfoLoaded = false;
+}
+
 void UDiscordWrapper::RequestUserInServer() {
 }
 
@@ -28,12 +37,4 @@ void UDiscordWrapper::AdjustFaction() {
 void UDiscordWrapper::AcceptInviteSignature() {
 }
 
-UDiscordWrapper::UDiscordWrapper() {
-    this->LastResponseSuccessful = false;
-    this->UserIn = false;
-    this->UserInStatus = 0;
-    this->HasEoM = false;
-    this->IsConnected = true;
-    this->ServerInfoLoaded = false;
-}
 

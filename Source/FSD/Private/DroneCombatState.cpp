@@ -1,5 +1,6 @@
 #include "DroneCombatState.h"
 
-UDroneCombatState::UDroneCombatState() {
+UDroneCombatState::UDroneCombatState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

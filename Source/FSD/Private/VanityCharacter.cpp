@@ -1,14 +1,10 @@
 #include "VanityCharacter.h"
 #include "Components/ChildActorComponent.h"
+#include "Components/SceneComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 
-void AVanityCharacter::DisplayVanity() {
-}
-
-void AVanityCharacter::Clean() {
-}
-
-AVanityCharacter::AVanityCharacter() {
+AVanityCharacter::AVanityCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
     this->ChildActorComponent = CreateDefaultSubobject<UChildActorComponent>(TEXT("ItemInstance"));
     this->Animation = NULL;
     this->skinColor = NULL;
@@ -28,5 +24,14 @@ AVanityCharacter::AVanityCharacter() {
     this->itemClass = NULL;
     this->Framework = NULL;
     this->Paintjob = NULL;
+    this->Mesh->SetupAttachment(RootComponent);
+    this->BodyMesh->SetupAttachment(RootComponent);
 }
+
+void AVanityCharacter::DisplayVanity() {
+}
+
+void AVanityCharacter::Clean() {
+}
+
 

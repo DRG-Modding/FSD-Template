@@ -15,6 +15,7 @@ protected:
     
 public:
     UVanitySchematicItem();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UVanityItem* GetVanityItem();
     

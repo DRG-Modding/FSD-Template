@@ -1,5 +1,10 @@
 #include "TimedSpecialEventSpawner.h"
 
+UTimedSpecialEventSpawner::UTimedSpecialEventSpawner() {
+    this->MinTime = 0.00f;
+    this->MaxTime = 1.00f;
+}
+
 void UTimedSpecialEventSpawner::UnblockEventSpawn(UObject* blocker) {
 }
 
@@ -13,8 +18,4 @@ bool UTimedSpecialEventSpawner::AreEventSpawnsBlocked() const {
     return false;
 }
 
-UTimedSpecialEventSpawner::UTimedSpecialEventSpawner() {
-    this->MinTime = 0.00f;
-    this->MaxTime = 1.00f;
-}
 

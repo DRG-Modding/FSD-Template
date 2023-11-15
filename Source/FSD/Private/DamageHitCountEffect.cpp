@@ -10,3 +10,4 @@ UDamageHitCountEffect::UDamageHitCountEffect() {
     this->DeadBugWalkingSTE = NULL;
 }
 
+

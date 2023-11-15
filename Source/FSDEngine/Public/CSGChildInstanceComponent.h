@@ -15,6 +15,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGeneralTerrainMaterialCombiner Materials;
     
-    UCSGChildInstanceComponent();
+    UCSGChildInstanceComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

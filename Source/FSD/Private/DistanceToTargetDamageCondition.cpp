@@ -6,3 +6,4 @@ UDistanceToTargetDamageCondition::UDistanceToTargetDamageCondition() {
     this->MinimumDistance = 100.00f;
 }
 
+

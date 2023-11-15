@@ -1,6 +1,15 @@
 #include "PlayerInfectionComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UPlayerInfectionComponent::UPlayerInfectionComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->InfectionState = EInfectionState::Normal;
+    this->ReductionCooldown = 0.00f;
+    this->InfectionImmunityAfterFullInfection = 0.00f;
+    this->InfectionLevel = 0.00f;
+    this->BreakoutPercentage = 0.00f;
+    this->InfectionDecreaseOverTimer = 0.00f;
+}
+
 void UPlayerInfectionComponent::Server_ClearInfection_Implementation() {
 }
 
@@ -16,12 +25,4 @@ void UPlayerInfectionComponent::GetLifetimeReplicatedProps(TArray<FLifetimePrope
     DOREPLIFETIME(UPlayerInfectionComponent, InfectionLevel);
 }
 
-UPlayerInfectionComponent::UPlayerInfectionComponent() {
-    this->InfectionState = EInfectionState::Normal;
-    this->ReductionCooldown = 0.00f;
-    this->InfectionImmunityAfterFullInfection = 0.00f;
-    this->InfectionLevel = 0.00f;
-    this->BreakoutPercentage = 0.00f;
-    this->InfectionDecreaseOverTimer = 0.00f;
-}
 

@@ -82,9 +82,10 @@ protected:
     EOnProjectileImpactBehaviourEnum EOnImpactBehaviour;
     
 public:
-    AProjectileBase();
+    AProjectileBase(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UTerrainMaterial* TryGetTerrainMaterial() const;
     

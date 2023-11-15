@@ -4,3 +4,4 @@ URetirementReward::URetirementReward() {
     this->characterID = NULL;
 }
 
+

@@ -1,6 +1,15 @@
 #include "PerkAsset.h"
 #include "Templates/SubclassOf.h"
 
+UPerkAsset::UPerkAsset() {
+    this->Icon = NULL;
+    this->bIsEquippable = true;
+    this->ShoutOnUseCharge = NULL;
+    this->MaxUseCharges = 0;
+    this->CoolDownBetweenUse = 0.00f;
+    this->bIsHighlighted = false;
+}
+
 bool UPerkAsset::UseCharge(APlayerController* PlayerController) {
     return false;
 }
@@ -114,12 +123,4 @@ bool UPerkAsset::BuyPerkAtTier(UObject* WorldContext, int32 Tier) {
     return false;
 }
 
-UPerkAsset::UPerkAsset() {
-    this->Icon = NULL;
-    this->bIsEquippable = true;
-    this->ShoutOnUseCharge = NULL;
-    this->MaxUseCharges = 0;
-    this->CoolDownBetweenUse = 0.00f;
-    this->bIsHighlighted = false;
-}
 

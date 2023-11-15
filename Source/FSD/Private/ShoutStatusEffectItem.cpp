@@ -4,3 +4,4 @@ UShoutStatusEffectItem::UShoutStatusEffectItem() {
     this->BeginShout = NULL;
 }
 
+

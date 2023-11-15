@@ -21,6 +21,7 @@ protected:
     
 public:
     UFadeScreenSubSystem();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     static bool IsScreenFadingToBlack(UObject* WorldContext);
     

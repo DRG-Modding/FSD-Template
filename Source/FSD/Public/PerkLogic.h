@@ -9,7 +9,8 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class FSD_API UPerkLogic : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPerkLogic();
+    UPerkLogic(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void StartLogic(int32 Rank);

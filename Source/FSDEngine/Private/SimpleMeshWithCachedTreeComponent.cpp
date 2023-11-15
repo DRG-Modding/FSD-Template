@@ -1,6 +1,7 @@
 #include "SimpleMeshWithCachedTreeComponent.h"
 
-USimpleMeshWithCachedTreeComponent::USimpleMeshWithCachedTreeComponent() {
+USimpleMeshWithCachedTreeComponent::USimpleMeshWithCachedTreeComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->InvertCSG = false;
 }
+
 

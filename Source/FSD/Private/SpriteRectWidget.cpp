@@ -1,5 +1,8 @@
 #include "SpriteRectWidget.h"
 
+USpriteRectWidget::USpriteRectWidget() : UUserWidget(FObjectInitializer::Get()) {
+}
+
 void USpriteRectWidget::SetSize(FVector2D InSize) {
 }
 
@@ -16,6 +19,4 @@ FSpriteRect USpriteRectWidget::GetSpriteRect() const {
     return FSpriteRect{};
 }
 
-USpriteRectWidget::USpriteRectWidget() : UUserWidget(FObjectInitializer::Get()) {
-}
 

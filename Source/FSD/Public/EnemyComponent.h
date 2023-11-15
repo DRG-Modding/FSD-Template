@@ -30,7 +30,8 @@ protected:
     FMixerEnemyNameChange OnMixerNameChange;
     
 public:
-    UEnemyComponent();
+    UEnemyComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     UEnemyID* GetID();
     

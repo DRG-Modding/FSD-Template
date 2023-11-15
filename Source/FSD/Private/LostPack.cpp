@@ -1,5 +1,6 @@
 #include "LostPack.h"
 
-ALostPack::ALostPack() {
+ALostPack::ALostPack(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

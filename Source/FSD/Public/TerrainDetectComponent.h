@@ -28,7 +28,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 DetectorId;
     
-    UTerrainDetectComponent();
+    UTerrainDetectComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UpdateDetectLocation();
     
@@ -38,7 +39,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void StartDetect();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -16,6 +16,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UItemID* GivenSkinID;
     
-    USkinTreasureRewarder();
+    USkinTreasureRewarder(const FObjectInitializer& ObjectInitializer);
+
 };
 

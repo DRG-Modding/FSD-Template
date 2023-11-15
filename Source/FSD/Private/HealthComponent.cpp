@@ -1,6 +1,18 @@
 #include "HealthComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UHealthComponent::UHealthComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Damage = 0.00f;
+    this->CanDamageThroughSegments = true;
+    this->LastDamageCauser = NULL;
+    this->ShouldUseLargestSubhealthDamageTaken = false;
+    this->InvulnerableToNonDefinedResistances = false;
+    this->EnvironmentalDamageResistance = 1.00f;
+    this->AffectedByGlobalWeakpointDamageMultiplier = true;
+    this->UseDormancy = false;
+    this->PawnStats = NULL;
+}
+
 void UHealthComponent::ToggleCanTakeDamage_Implementation() {
 }
 
@@ -49,15 +61,4 @@ void UHealthComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(UHealthComponent, Damage);
 }
 
-UHealthComponent::UHealthComponent() {
-    this->Damage = 0.00f;
-    this->CanDamageThroughSegments = true;
-    this->LastDamageCauser = NULL;
-    this->ShouldUseLargestSubhealthDamageTaken = false;
-    this->InvulnerableToNonDefinedResistances = false;
-    this->EnvironmentalDamageResistance = 1.00f;
-    this->AffectedByGlobalWeakpointDamageMultiplier = true;
-    this->UseDormancy = false;
-    this->PawnStats = NULL;
-}
 

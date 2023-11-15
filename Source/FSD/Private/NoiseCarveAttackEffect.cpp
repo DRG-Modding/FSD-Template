@@ -8,3 +8,4 @@ UNoiseCarveAttackEffect::UNoiseCarveAttackEffect() {
     this->CarverOffset = 0.00f;
 }
 
+

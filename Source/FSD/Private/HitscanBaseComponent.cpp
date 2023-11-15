@@ -1,20 +1,6 @@
 #include "HitscanBaseComponent.h"
 
-void UHitscanBaseComponent::Server_StopFire_Implementation() {
-}
-
-void UHitscanBaseComponent::Server_RemoveDebris_Implementation(int32 instance, int32 Component) {
-}
-
-float UHitscanBaseComponent::GetCurrentVerticalSpread() const {
-    return 0.0f;
-}
-
-float UHitscanBaseComponent::GetCurrentHorizontalSpread() const {
-    return 0.0f;
-}
-
-UHitscanBaseComponent::UHitscanBaseComponent() {
+UHitscanBaseComponent::UHitscanBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SpreadPerShot = 2.00f;
     this->DamageComponent = NULL;
     this->UseDamageComponent = true;
@@ -40,4 +26,19 @@ UHitscanBaseComponent::UHitscanBaseComponent() {
     this->RicochetOnWeakspotOnly = false;
     this->RicochetMaxRange = 1500.00f;
 }
+
+void UHitscanBaseComponent::Server_StopFire_Implementation() {
+}
+
+void UHitscanBaseComponent::Server_RemoveDebris_Implementation(int32 instance, int32 Component) {
+}
+
+float UHitscanBaseComponent::GetCurrentVerticalSpread() const {
+    return 0.0f;
+}
+
+float UHitscanBaseComponent::GetCurrentHorizontalSpread() const {
+    return 0.0f;
+}
+
 

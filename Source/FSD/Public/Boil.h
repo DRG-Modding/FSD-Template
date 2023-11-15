@@ -17,9 +17,10 @@ protected:
     int32 MaterialIndex;
     
 public:
-    ABoil();
+    ABoil(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_MaterialIndex();

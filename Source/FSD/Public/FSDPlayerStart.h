@@ -16,6 +16,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AFSDPlayerController* usedBy;
     
-    AFSDPlayerStart();
+    AFSDPlayerStart(const FObjectInitializer& ObjectInitializer);
+
 };
 

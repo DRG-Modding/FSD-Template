@@ -31,5 +31,6 @@ protected:
     
 public:
     UAttachedParticlesAfflictionEffect();
+
 };
 

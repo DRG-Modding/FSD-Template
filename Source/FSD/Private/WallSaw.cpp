@@ -1,6 +1,15 @@
 #include "WallSaw.h"
 #include "Net/UnrealNetwork.h"
 
+AWallSaw::AWallSaw(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->HitCapsule = NULL;
+    this->SpeedCof = 500.00f;
+    this->VelOverTime = NULL;
+    this->GroundParticles = NULL;
+    this->PopWeakpointRadius = 100.00f;
+    this->PlayerHitRangeFromCenter = 100.00f;
+}
+
 void AWallSaw::UpdateCheckForWeakpoints() {
 }
 
@@ -33,12 +42,4 @@ void AWallSaw::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetime
     DOREPLIFETIME(AWallSaw, PosVel);
 }
 
-AWallSaw::AWallSaw() {
-    this->HitCapsule = NULL;
-    this->SpeedCof = 500.00f;
-    this->VelOverTime = NULL;
-    this->GroundParticles = NULL;
-    this->PopWeakpointRadius = 100.00f;
-    this->PlayerHitRangeFromCenter = 100.00f;
-}
 

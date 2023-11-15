@@ -29,6 +29,7 @@ protected:
     
 public:
     UTriggeredStatusEffectUpgrade();
+
     UFUNCTION(BlueprintCallable)
     void OnEffectShouldTrigger(AActor* PlayerCharacter);
     

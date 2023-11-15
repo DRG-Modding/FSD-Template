@@ -26,7 +26,8 @@ protected:
     TWeakObjectPtr<APlayerCharacter> TargetedPlayer;
     
 public:
-    AFSDAIController();
+    AFSDAIController(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetAlerted(bool isAlerted);
     

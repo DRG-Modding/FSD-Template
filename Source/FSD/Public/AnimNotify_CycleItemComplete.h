@@ -8,5 +8,6 @@ class UAnimNotify_CycleItemComplete : public UAnimNotify {
     GENERATED_BODY()
 public:
     UAnimNotify_CycleItemComplete();
+
 };
 

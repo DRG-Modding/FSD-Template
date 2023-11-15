@@ -15,6 +15,7 @@ protected:
     
 public:
     URewardWidget();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void PlayReceiveAnim();

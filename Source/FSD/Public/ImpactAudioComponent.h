@@ -24,7 +24,8 @@ protected:
     bool ListenForDeath;
     
 public:
-    UImpactAudioComponent();
+    UImpactAudioComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void OnOwnerDeath(UHealthComponentBase* HealthComponent);
     

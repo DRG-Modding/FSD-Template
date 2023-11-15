@@ -95,7 +95,8 @@ private:
     TArray<FMissionShoutQueueItem> MissionShoutQueue;
     
 public:
-    UCommunicationComponent();
+    UCommunicationComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void ShoutCustomOrDefault(UDialogDataAsset* CustomShout, EShoutType DefaultShout);
     

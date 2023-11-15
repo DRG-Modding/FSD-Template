@@ -14,6 +14,7 @@ protected:
     USphereComponent* CollisionComponent;
     
 public:
-    AFlameWallSegment();
+    AFlameWallSegment(const FObjectInitializer& ObjectInitializer);
+
 };
 

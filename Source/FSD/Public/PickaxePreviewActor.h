@@ -35,14 +35,15 @@ protected:
     UMaterialInterface* EquippedMaterial;
     
 public:
-    APickaxePreviewActor();
+    APickaxePreviewActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void PreviewParts(EPickaxePartLocation PreviewLocation, UPickaxePart* PreviewPart);
     
     UFUNCTION(BlueprintCallable)
     void EquipParts();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

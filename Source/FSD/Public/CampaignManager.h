@@ -61,6 +61,7 @@ protected:
     
 public:
     UCampaignManager();
+
     UFUNCTION(BlueprintCallable)
     void StartNewCampaign(TSubclassOf<UCampaign> campaignClass, UFSDSaveGame* SaveGame);
     

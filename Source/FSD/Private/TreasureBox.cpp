@@ -7,6 +7,25 @@
 #include "SingleUsableComponent.h"
 #include "TerrainPlacementComponent.h"
 
+ATreasureBox::ATreasureBox(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->repairable = CreateDefaultSubobject<URepairableComponent>(TEXT("repairable"));
+    this->RepairUsable = CreateDefaultSubobject<URepairableUsable>(TEXT("RepairUsable"));
+    this->HammeringUsable = CreateDefaultSubobject<USingleUsableComponent>(TEXT("HammeringUsable"));
+    this->terrainPlacement = CreateDefaultSubobject<UTerrainPlacementComponent>(TEXT("terrainPlacement"));
+    this->MiddlePlane = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MiddlePlane"));
+    this->BoxMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("BoxMesh"));
+    this->CollectActivationDelay = 5.00f;
+    this->OpenBoxAnim = NULL;
+    this->DelayToOpenAfterRepair = 2.00f;
+    this->ResourceClass = NULL;
+    this->boxRewarder = NULL;
+    this->HologramRotationSpeed = 10.00f;
+    this->ItemsInserted = 0;
+    this->IsTreasureAvailable = false;
+    this->MiddlePlane->SetupAttachment(RootComponent);
+    this->BoxMesh->SetupAttachment(RootComponent);
+}
+
 void ATreasureBox::PlaceResources(AProceduralSetup* Setup, float Radius, UDebrisPositioning* DebrisPositioning, const TArray<FVector>& locationsToAvoid, UCurveFloat* AvoidCostCurve) {
 }
 
@@ -42,20 +61,4 @@ void ATreasureBox::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLife
     DOREPLIFETIME(ATreasureBox, IsTreasureAvailable);
 }
 
-ATreasureBox::ATreasureBox() {
-    this->repairable = CreateDefaultSubobject<URepairableComponent>(TEXT("repairable"));
-    this->RepairUsable = CreateDefaultSubobject<URepairableUsable>(TEXT("RepairUsable"));
-    this->HammeringUsable = CreateDefaultSubobject<USingleUsableComponent>(TEXT("HammeringUsable"));
-    this->terrainPlacement = CreateDefaultSubobject<UTerrainPlacementComponent>(TEXT("terrainPlacement"));
-    this->MiddlePlane = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MiddlePlane"));
-    this->BoxMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("BoxMesh"));
-    this->CollectActivationDelay = 5.00f;
-    this->OpenBoxAnim = NULL;
-    this->DelayToOpenAfterRepair = 2.00f;
-    this->ResourceClass = NULL;
-    this->boxRewarder = NULL;
-    this->HologramRotationSpeed = 10.00f;
-    this->ItemsInserted = 0;
-    this->IsTreasureAvailable = false;
-}
 

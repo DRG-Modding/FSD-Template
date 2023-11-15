@@ -4,3 +4,4 @@ UPerkHUDActivationWidget::UPerkHUDActivationWidget() {
     this->Location = EPerkHUDActivationLocation::Main;
 }
 
+

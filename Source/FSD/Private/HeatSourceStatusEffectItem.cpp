@@ -5,3 +5,4 @@ UHeatSourceStatusEffectItem::UHeatSourceStatusEffectItem() {
     this->Intensity = ETemperatureIntensity::Cold3;
 }
 
+

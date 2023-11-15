@@ -10,6 +10,7 @@ class UFSDLabelWidget : public UTextBlock {
     GENERATED_BODY()
 public:
     UFSDLabelWidget();
+
     UFUNCTION(BlueprintCallable)
     void SetWrapTextAt(float WrapAt);
     

@@ -4,3 +4,4 @@ UEnemySettings::UEnemySettings() {
     this->EliteRequiredCampaignProgress = 8;
 }
 
+

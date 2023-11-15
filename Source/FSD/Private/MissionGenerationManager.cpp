@@ -1,5 +1,9 @@
 #include "MissionGenerationManager.h"
 
+UMissionGenerationManager::UMissionGenerationManager() {
+    this->ResetSelectedMission = false;
+}
+
 TArray<UGeneratedMission*> UMissionGenerationManager::GetMissions(int32 Seed) {
     return TArray<UGeneratedMission*>();
 }
@@ -12,7 +16,4 @@ TArray<UGeneratedMission*> UMissionGenerationManager::GetAvailableMissions() {
     return TArray<UGeneratedMission*>();
 }
 
-UMissionGenerationManager::UMissionGenerationManager() {
-    this->ResetSelectedMission = false;
-}
 

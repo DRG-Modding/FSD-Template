@@ -1,5 +1,8 @@
 #include "SchematicItem.h"
 
+USchematicItem::USchematicItem() {
+}
+
 FText USchematicItem::GetTitle() const {
     return FText::GetEmpty();
 }
@@ -16,6 +19,4 @@ FText USchematicItem::GetDescription() const {
     return FText::GetEmpty();
 }
 
-USchematicItem::USchematicItem() {
-}
 

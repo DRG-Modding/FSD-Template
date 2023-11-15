@@ -27,7 +27,8 @@ protected:
     float ConsecutiveHitsMaxBonus;
     
 public:
-    ABasicPistol();
+    ABasicPistol(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial);

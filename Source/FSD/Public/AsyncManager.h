@@ -19,6 +19,7 @@ protected:
     
 public:
     UAsyncManager();
+
     UFUNCTION(BlueprintCallable)
     UObject* SyncLoadAsset(const TSoftObjectPtr<UObject>& Asset);
     

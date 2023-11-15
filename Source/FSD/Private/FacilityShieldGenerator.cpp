@@ -1,5 +1,6 @@
 #include "FacilityShieldGenerator.h"
 
-AFacilityShieldGenerator::AFacilityShieldGenerator() {
+AFacilityShieldGenerator::AFacilityShieldGenerator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

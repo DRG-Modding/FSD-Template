@@ -1,5 +1,6 @@
 #include "ExplosionComponent.h"
 
-UExplosionComponent::UExplosionComponent() {
+UExplosionComponent::UExplosionComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

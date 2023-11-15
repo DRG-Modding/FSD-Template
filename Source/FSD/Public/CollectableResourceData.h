@@ -40,5 +40,6 @@ protected:
     
 public:
     UCollectableResourceData();
+
 };
 

@@ -144,6 +144,7 @@ protected:
     
 public:
     UDifficultySetting();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     bool IsUnlocked(UObject* WorldContext) const;
     

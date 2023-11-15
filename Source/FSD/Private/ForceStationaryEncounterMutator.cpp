@@ -4,3 +4,4 @@ UForceStationaryEncounterMutator::UForceStationaryEncounterMutator() {
     this->EnemyGroup = NULL;
 }
 
+

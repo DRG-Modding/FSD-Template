@@ -21,6 +21,7 @@ private:
     
 public:
     UFSDLookupSessionId();
+
 private:
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UFSDLookupSessionId* FSDLookupSessionId(UObject* WorldContextObject, const FString& SessionKey);

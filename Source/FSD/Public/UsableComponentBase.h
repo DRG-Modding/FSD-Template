@@ -53,7 +53,8 @@ protected:
     bool ThirdPersonWhileUsing;
     
 public:
-    UUsableComponentBase();
+    UUsableComponentBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetUseRestrictions(UUseConditionSet* set);
     

@@ -13,6 +13,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CustomValue;
     
-    UGemTracker();
+    UGemTracker(const FObjectInitializer& ObjectInitializer);
+
 };
 

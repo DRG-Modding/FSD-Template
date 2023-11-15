@@ -2,6 +2,16 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Net/UnrealNetwork.h"
 
+AThrowableActor::AThrowableActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->Movement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
+    this->IsMoving = true;
+    this->IgnoreFellOutOfWorld = false;
+    this->IgnoreOwnersCollision = true;
+}
+
 
 
 void AThrowableActor::OnRep_IsMoving() {
@@ -13,10 +23,4 @@ void AThrowableActor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
     DOREPLIFETIME(AThrowableActor, IsMoving);
 }
 
-AThrowableActor::AThrowableActor() {
-    this->Movement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
-    this->IsMoving = true;
-    this->IgnoreFellOutOfWorld = false;
-    this->IgnoreOwnersCollision = true;
-}
 

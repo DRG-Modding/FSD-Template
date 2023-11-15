@@ -190,7 +190,8 @@ private:
     TArray<FEncodedChunkId> VisibleChunks;
     
 public:
-    ADeepCSGWorld();
+    ADeepCSGWorld(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UnRegisterScannerComponent(UPrimitiveComponent* Component);
     
@@ -352,7 +353,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void ApplyBaseDebrisCarvers(const TArray<UDebrisBase*>& Carvers);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

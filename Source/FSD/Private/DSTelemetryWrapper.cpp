@@ -1,6 +1,10 @@
 #include "DSTelemetryWrapper.h"
 #include "Templates/SubclassOf.h"
 
+UDSTelemetryWrapper::UDSTelemetryWrapper() {
+    this->Telemetry = NULL;
+}
+
 void UDSTelemetryWrapper::RecordTreeOfVanityClaim(int32 NodeID) {
 }
 
@@ -61,7 +65,4 @@ void UDSTelemetryWrapper::OnCharacterSaveChanged(TSubclassOf<APlayerCharacter> C
 void UDSTelemetryWrapper::OnCharacterPromoted(TSubclassOf<APlayerCharacter> CharacterClass, int32 RetirementCount) {
 }
 
-UDSTelemetryWrapper::UDSTelemetryWrapper() {
-    this->Telemetry = NULL;
-}
 

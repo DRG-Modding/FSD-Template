@@ -8,5 +8,6 @@ class UPS5MockExternalEndpointSettings : public UAudioEndpointSettingsBase {
     GENERATED_BODY()
 public:
     UPS5MockExternalEndpointSettings();
+
 };
 

@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USpecialEventUsableComponent : public USingleUsableComponent {
     GENERATED_BODY()
 public:
-    USpecialEventUsableComponent();
+    USpecialEventUsableComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -37,7 +37,8 @@ protected:
     UParticleSystem* FrozenDeathparticles;
     
 public:
-    UFrozenPawnImpactComponent();
+    UFrozenPawnImpactComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void TriggerFrozenRagdoll();

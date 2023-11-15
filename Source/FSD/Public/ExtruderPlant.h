@@ -25,6 +25,7 @@ protected:
     UAudioComponent* audio;
     
 public:
-    AExtruderPlant();
+    AExtruderPlant(const FObjectInitializer& ObjectInitializer);
+
 };
 

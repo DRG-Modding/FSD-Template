@@ -25,6 +25,7 @@ protected:
     
 public:
     UTracerManager();
+
     UFUNCTION(BlueprintCallable)
     void AddTracer(FVector Origin, const FVector& Destination, float Speed, UParticleSystem* particle, float MinDistance, float Offset, UParticleSystem* Trail);
     

@@ -8,5 +8,6 @@ class FSD_API UHttpUtilityLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UHttpUtilityLibrary();
+
 };
 

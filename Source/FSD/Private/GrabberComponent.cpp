@@ -1,6 +1,27 @@
 #include "GrabberComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UGrabberComponent::UGrabberComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->GrabLoopSoundInstance = NULL;
+    this->BeginGrabedSound = NULL;
+    this->GrabedLoopSound = NULL;
+    this->EndGrabedSound = NULL;
+    this->BeginGrabbedShout = NULL;
+    this->EndGrabbedShout = NULL;
+    this->AttentionGrabbedShout = NULL;
+    this->CurrentlyGrabbed = NULL;
+    this->GrabTime = 0.00f;
+    this->CarryCooldown = 12.00f;
+    this->RevivedGravePeriod = 5.00f;
+    this->PlayerOutlineOnGrab = EOutline::OL_NONE;
+    this->CameraMode = EGrabbedStateCameraMode::FirstPerson;
+    this->TrackPlayerCollision = false;
+    this->ManualGrabTime = false;
+    this->CanPlayerShoot = false;
+    this->HeightenSensesImmune = false;
+    this->NeedsPathToTarget = true;
+}
+
 void UGrabberComponent::Timer_ReleaseTarget() {
 }
 
@@ -39,24 +60,4 @@ void UGrabberComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
     DOREPLIFETIME(UGrabberComponent, CurrentlyGrabbed);
 }
 
-UGrabberComponent::UGrabberComponent() {
-    this->GrabLoopSoundInstance = NULL;
-    this->BeginGrabedSound = NULL;
-    this->GrabedLoopSound = NULL;
-    this->EndGrabedSound = NULL;
-    this->BeginGrabbedShout = NULL;
-    this->EndGrabbedShout = NULL;
-    this->AttentionGrabbedShout = NULL;
-    this->CurrentlyGrabbed = NULL;
-    this->GrabTime = 0.00f;
-    this->CarryCooldown = 12.00f;
-    this->RevivedGravePeriod = 5.00f;
-    this->PlayerOutlineOnGrab = EOutline::OL_NONE;
-    this->CameraMode = EGrabbedStateCameraMode::FirstPerson;
-    this->TrackPlayerCollision = false;
-    this->ManualGrabTime = false;
-    this->CanPlayerShoot = false;
-    this->HeightenSensesImmune = false;
-    this->NeedsPathToTarget = true;
-}
 

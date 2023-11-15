@@ -1,5 +1,6 @@
 #include "RepairableUsable.h"
 
-URepairableUsable::URepairableUsable() {
+URepairableUsable::URepairableUsable(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

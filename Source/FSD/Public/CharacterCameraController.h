@@ -28,7 +28,8 @@ private:
     UCameraComponent* Camera;
     
 public:
-    UCharacterCameraController();
+    UCharacterCameraController(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void ResetFOV(float FadeSpeed);
     

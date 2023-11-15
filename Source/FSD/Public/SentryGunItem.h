@@ -14,6 +14,7 @@ protected:
     TArray<UItemUpgrade*> upgrades;
     
 public:
-    ASentryGunItem();
+    ASentryGunItem(const FObjectInitializer& ObjectInitializer);
+
 };
 

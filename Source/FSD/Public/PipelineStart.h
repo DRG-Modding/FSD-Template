@@ -40,9 +40,10 @@ protected:
     TArray<TWeakObjectPtr<APipelineSegment>> BrokenSegments;
     
 public:
-    APipelineStart();
+    APipelineStart(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveBuildStateChanged(EPipelineBuildState InBuildState);

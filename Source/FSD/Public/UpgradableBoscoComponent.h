@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UUpgradableBoscoComponent : public UUpgradableGearComponent {
     GENERATED_BODY()
 public:
-    UUpgradableBoscoComponent();
+    UUpgradableBoscoComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -6,3 +6,4 @@ UDamageConversionBonus::UDamageConversionBonus() {
     this->DamageIsAdded = false;
 }
 
+

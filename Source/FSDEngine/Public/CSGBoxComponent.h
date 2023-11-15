@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMeshBoxProperties Properties;
     
-    UCSGBoxComponent();
+    UCSGBoxComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

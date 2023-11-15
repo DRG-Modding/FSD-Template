@@ -1,5 +1,6 @@
 #include "CSGChildInstanceComponent.h"
 
-UCSGChildInstanceComponent::UCSGChildInstanceComponent() {
+UCSGChildInstanceComponent::UCSGChildInstanceComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

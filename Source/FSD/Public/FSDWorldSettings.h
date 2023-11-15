@@ -14,6 +14,7 @@ protected:
     UPlayerCharacterID* CharacterClass;
     
 public:
-    AFSDWorldSettings();
+    AFSDWorldSettings(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -4,3 +4,4 @@ UAnimNotify_TerrainFootStep::UAnimNotify_TerrainFootStep() {
     this->ParticleTemplate = NULL;
 }
 
+

@@ -1,5 +1,14 @@
 #include "HUDVisibilityGroup.h"
 
+UHUDVisibilityGroup::UHUDVisibilityGroup() {
+    this->GroupID = EHUDVisibilityGroups::OnScreenHelp;
+    this->AllowDynamicMode = false;
+    this->AllowHiddenMode = true;
+    this->bDynamicallyVisible = false;
+    this->RecommendedMode = EHUDVisibilityMode::Visible;
+    this->MinimalMode = EHUDVisibilityMode::Visible;
+}
+
 void UHUDVisibilityGroup::SetModeFromPreset(EHUDVisibilityPresets Preset) {
 }
 
@@ -42,12 +51,4 @@ TArray<EHUDVisibilityMode> UHUDVisibilityGroup::GetAllowedModes() const {
     return TArray<EHUDVisibilityMode>();
 }
 
-UHUDVisibilityGroup::UHUDVisibilityGroup() {
-    this->GroupID = EHUDVisibilityGroups::OnScreenHelp;
-    this->AllowDynamicMode = false;
-    this->AllowHiddenMode = true;
-    this->bDynamicallyVisible = false;
-    this->RecommendedMode = EHUDVisibilityMode::Visible;
-    this->MinimalMode = EHUDVisibilityMode::Visible;
-}
 

@@ -92,9 +92,10 @@ protected:
     bool UsesLocalSpace;
     
 public:
-    AFoamPuddle();
+    AFoamPuddle(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetState(EVacuumState NewState);

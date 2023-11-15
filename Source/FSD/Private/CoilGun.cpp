@@ -3,6 +3,41 @@
 #include "CoilgunTrailSpawner.h"
 #include "DamageComponent.h"
 
+ACoilGun::ACoilGun(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->DamageComponent = CreateDefaultSubobject<UDamageComponent>(TEXT("NormalDamage"));
+    this->OverchargeDamageComponent = CreateDefaultSubobject<UDamageComponent>(TEXT("OverchargeDamage"));
+    this->WeaponBlastDamage = CreateDefaultSubobject<UDamageComponent>(TEXT("BlastDamage"));
+    this->ShotwaveBonusDamage = CreateDefaultSubobject<UDamageComponent>(TEXT("ShotwaveDamage"));
+    this->MoleBonusDamage = CreateDefaultSubobject<UDamageComponent>(TEXT("MoleDamage"));
+    this->FullyChargedParticles = CreateDefaultSubobject<UNiagaraComponent>(TEXT("FullyChargedParticles"));
+    this->FP_OverchargeIndicatorParticles = CreateDefaultSubobject<UNiagaraComponent>(TEXT("FP_OverchargeIndicatorParticles"));
+    this->TP_FullyChargedParticles = CreateDefaultSubobject<UNiagaraComponent>(TEXT("TP_FullchargeParticles"));
+    this->TrailSpawner = CreateDefaultSubobject<UCoilgunTrailSpawner>(TEXT("TrailSpawner"));
+    this->ImpactMeshCarver = NULL;
+    this->N_ImpactParticles = NULL;
+    this->ChargeResistanceStatusEffect = NULL;
+    this->ChargeWeaknessStatusEffect = NULL;
+    this->CustomMuzzleFlash = NULL;
+    this->MaxAfflictionTime = 20.00f;
+    this->ShotWidth = 15.00f;
+    this->BonusShotWidth = 0.00f;
+    this->ImpactFearFactor = 0.00f;
+    this->OverChargedShotMaxPower = 1.00f;
+    this->MaxOverchargeTime = 4.00f;
+    this->OverchargeTimeStep = 0.25f;
+    this->BrokenShieldboostDuration = 30.00f;
+    this->MinUndercharge = 1.00f;
+    this->TriBustCancelTime = 1.00f;
+    this->TriBurstShotPowerMultiplier = 0.75f;
+    this->TriBurstAmmoMultiplier = 0.50f;
+    this->TriBurstShotCarvingMultiplier = 0.00f;
+    this->FirstDynamicIndex = 1;
+    this->LastDynamicIndex = 5;
+    this->FullyChargedParticles->SetupAttachment(FPMesh);
+    this->FP_OverchargeIndicatorParticles->SetupAttachment(FPMesh);
+    this->TP_FullyChargedParticles->SetupAttachment(TPMesh);
+}
+
 void ACoilGun::UpdateAfflictions() {
 }
 
@@ -69,35 +104,4 @@ void ACoilGun::All_ShieldBroken_Implementation() {
 void ACoilGun::All_AdjustTrail_Implementation(ACoilgunWeaponTrail* Trail, float Length) {
 }
 
-ACoilGun::ACoilGun() {
-    this->DamageComponent = CreateDefaultSubobject<UDamageComponent>(TEXT("NormalDamage"));
-    this->OverchargeDamageComponent = CreateDefaultSubobject<UDamageComponent>(TEXT("OverchargeDamage"));
-    this->WeaponBlastDamage = CreateDefaultSubobject<UDamageComponent>(TEXT("BlastDamage"));
-    this->ShotwaveBonusDamage = CreateDefaultSubobject<UDamageComponent>(TEXT("ShotwaveDamage"));
-    this->MoleBonusDamage = CreateDefaultSubobject<UDamageComponent>(TEXT("MoleDamage"));
-    this->FullyChargedParticles = CreateDefaultSubobject<UNiagaraComponent>(TEXT("FullyChargedParticles"));
-    this->FP_OverchargeIndicatorParticles = CreateDefaultSubobject<UNiagaraComponent>(TEXT("FP_OverchargeIndicatorParticles"));
-    this->TP_FullyChargedParticles = CreateDefaultSubobject<UNiagaraComponent>(TEXT("TP_FullchargeParticles"));
-    this->TrailSpawner = CreateDefaultSubobject<UCoilgunTrailSpawner>(TEXT("TrailSpawner"));
-    this->ImpactMeshCarver = NULL;
-    this->N_ImpactParticles = NULL;
-    this->ChargeResistanceStatusEffect = NULL;
-    this->ChargeWeaknessStatusEffect = NULL;
-    this->CustomMuzzleFlash = NULL;
-    this->MaxAfflictionTime = 20.00f;
-    this->ShotWidth = 15.00f;
-    this->BonusShotWidth = 0.00f;
-    this->ImpactFearFactor = 0.00f;
-    this->OverChargedShotMaxPower = 1.00f;
-    this->MaxOverchargeTime = 4.00f;
-    this->OverchargeTimeStep = 0.25f;
-    this->BrokenShieldboostDuration = 30.00f;
-    this->MinUndercharge = 1.00f;
-    this->TriBustCancelTime = 1.00f;
-    this->TriBurstShotPowerMultiplier = 0.75f;
-    this->TriBurstAmmoMultiplier = 0.50f;
-    this->TriBurstShotCarvingMultiplier = 0.00f;
-    this->FirstDynamicIndex = 1;
-    this->LastDynamicIndex = 5;
-}
 

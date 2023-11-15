@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCSGSphereProperties Properties;
     
-    UCSGSphereComponent();
+    UCSGSphereComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

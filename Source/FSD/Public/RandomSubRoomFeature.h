@@ -33,5 +33,6 @@ protected:
     
 public:
     URandomSubRoomFeature();
+
 };
 

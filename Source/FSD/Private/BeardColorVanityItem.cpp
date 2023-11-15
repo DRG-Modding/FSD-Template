@@ -8,3 +8,4 @@ UBeardColorVanityItem::UBeardColorVanityItem() {
     this->BeardColor = NULL;
 }
 
+

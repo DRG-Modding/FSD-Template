@@ -14,7 +14,8 @@ protected:
     TArray<AGem*> LostLegs;
     
 public:
-    AMiniMule();
+    AMiniMule(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetLegsVisibleOnScanner();

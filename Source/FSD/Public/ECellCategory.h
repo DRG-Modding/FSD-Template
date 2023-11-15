@@ -6,6 +6,6 @@ UENUM(BlueprintType)
 enum class ECellCategory : uint8 {
     Cave,
     Tunnel,
-    ECellCategory_MAX = 0xFF UMETA(Hidden),
+    ECellCategory_MAX = 255 UMETA(Hidden),
 };
 

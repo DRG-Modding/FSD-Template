@@ -1,5 +1,8 @@
 #include "ActivitySubSystem.h"
 
+UActivitySubSystem::UActivitySubSystem() {
+}
+
 void UActivitySubSystem::StartActivity(const APlayerState* PlayerState, const UGameActivityType* Activity) {
 }
 
@@ -13,6 +16,4 @@ bool UActivitySubSystem::PlayerReviewUIAvailable(bool ReviewActiveMatch) {
 void UActivitySubSystem::EndActivity(const APlayerState* PlayerState, const UGameActivityType* Activity) {
 }
 
-UActivitySubSystem::UActivitySubSystem() {
-}
 

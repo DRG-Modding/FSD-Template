@@ -1,5 +1,6 @@
 #include "NiagaraSpawnerAndCacheGenerator.h"
 
-ANiagaraSpawnerAndCacheGenerator::ANiagaraSpawnerAndCacheGenerator() {
+ANiagaraSpawnerAndCacheGenerator::ANiagaraSpawnerAndCacheGenerator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

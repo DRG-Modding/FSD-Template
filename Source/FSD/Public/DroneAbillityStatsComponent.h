@@ -12,6 +12,7 @@ protected:
     bool UseOwnArmorDamageMultiplier;
     
 public:
-    UDroneAbillityStatsComponent();
+    UDroneAbillityStatsComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

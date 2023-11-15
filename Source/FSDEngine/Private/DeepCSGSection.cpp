@@ -1,7 +1,9 @@
 #include "DeepCSGSection.h"
 #include "DeepProceduralMeshComponent.h"
 
-ADeepCSGSection::ADeepCSGSection() {
-    this->DeepMesh = CreateDefaultSubobject<UDeepProceduralMeshComponent>(TEXT("DeepMesh"));
+ADeepCSGSection::ADeepCSGSection(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<UDeepProceduralMeshComponent>(TEXT("DeepMesh"));
+    this->DeepMesh = (UDeepProceduralMeshComponent*)RootComponent;
 }
+
 

@@ -9,6 +9,5 @@ enum class EPreviewCellSize : uint8 {
     PRV_CELL_SIZE_50,
     PRV_CELL_SIZE_100,
     PRV_CELL_SIZE_200,
-    PRV_CELL_SIZE_MAX UMETA(Hidden),
 };
 

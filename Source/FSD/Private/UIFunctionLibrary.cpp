@@ -1,5 +1,8 @@
 #include "UIFunctionLibrary.h"
 
+UUIFunctionLibrary::UUIFunctionLibrary() {
+}
+
 void UUIFunctionLibrary::SetLoadoutIcon(UObject* WorldContextObject, UPlayerCharacterID* characterID, int32 loadoutIndex, int32 iconIndex) {
 }
 
@@ -31,6 +34,4 @@ void UUIFunctionLibrary::CheckItemUINotification(UObject* WorldContextObject, TA
 void UUIFunctionLibrary::AddItemUINotification(UObject* WorldContextObject, TArray<UObject*> Item) {
 }
 
-UUIFunctionLibrary::UUIFunctionLibrary() {
-}
 

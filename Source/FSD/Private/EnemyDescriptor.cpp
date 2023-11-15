@@ -1,18 +1,6 @@
 #include "EnemyDescriptor.h"
 #include "Templates/SubclassOf.h"
 
-TSubclassOf<APawn> UEnemyDescriptor::GetEnemyClass(UBiome* Biome, bool IsElite) const {
-    return NULL;
-}
-
-TArray<UEnemyDescriptor*> UEnemyDescriptor::FindDescriptorsForCheatMenu(EEnemyDescriptorCheatClass NewCheatClass) {
-    return TArray<UEnemyDescriptor*>();
-}
-
-TArray<UEnemyDescriptor*> UEnemyDescriptor::FindAllDescriptorsForCheatMenu() {
-    return TArray<UEnemyDescriptor*>();
-}
-
 UEnemyDescriptor::UEnemyDescriptor() {
     this->EnemyID = NULL;
     this->VeteranScaling = EVeteranScaling::NormalEnemy;
@@ -38,4 +26,17 @@ UEnemyDescriptor::UEnemyDescriptor() {
     this->SpawnRarityModifiers.AddDefaulted(4);
     this->CheatClass = EEnemyDescriptorCheatClass::Basic;
 }
+
+TSubclassOf<APawn> UEnemyDescriptor::GetEnemyClass(UBiome* Biome, bool IsElite) const {
+    return NULL;
+}
+
+TArray<UEnemyDescriptor*> UEnemyDescriptor::FindDescriptorsForCheatMenu(EEnemyDescriptorCheatClass NewCheatClass) {
+    return TArray<UEnemyDescriptor*>();
+}
+
+TArray<UEnemyDescriptor*> UEnemyDescriptor::FindAllDescriptorsForCheatMenu() {
+    return TArray<UEnemyDescriptor*>();
+}
+
 

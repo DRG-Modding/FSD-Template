@@ -8,5 +8,6 @@ class UEnemyPlaySoundKey : public UDataAsset {
     GENERATED_BODY()
 public:
     UEnemyPlaySoundKey();
+
 };
 

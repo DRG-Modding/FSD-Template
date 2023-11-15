@@ -13,6 +13,7 @@ class UDeepDiveFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UDeepDiveFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsEliteDeepDiveMission(UObject* WorldContextObject, UGeneratedMission* mission);
     

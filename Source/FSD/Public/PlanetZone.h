@@ -28,6 +28,7 @@ protected:
     
 public:
     UPlanetZone();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsUnlocked(UFSDSaveGame* SaveGame) const;
     
@@ -37,7 +38,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UBiome*> GetBiomes() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

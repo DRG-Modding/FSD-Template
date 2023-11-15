@@ -7,6 +7,7 @@ UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnable
 class FSD_API UFuelLineConnectPoint : public UTrackBuilderConnectPoint {
     GENERATED_BODY()
 public:
-    UFuelLineConnectPoint();
+    UFuelLineConnectPoint(const FObjectInitializer& ObjectInitializer);
+
 };
 

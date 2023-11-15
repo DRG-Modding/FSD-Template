@@ -14,5 +14,6 @@ private:
     
 public:
     UAnimNotifyState_OverrideItemOffset();
+
 };
 

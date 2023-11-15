@@ -159,9 +159,10 @@ protected:
     float MinTimeBetweenImpactDecals;
     
 public:
-    ALineCutterProjectile();
+    ALineCutterProjectile(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateBeamLocations();

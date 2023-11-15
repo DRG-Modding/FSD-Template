@@ -1,5 +1,6 @@
 #include "CSGModulatedSDFInstanceComponent.h"
 
-UCSGModulatedSDFInstanceComponent::UCSGModulatedSDFInstanceComponent() {
+UCSGModulatedSDFInstanceComponent::UCSGModulatedSDFInstanceComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

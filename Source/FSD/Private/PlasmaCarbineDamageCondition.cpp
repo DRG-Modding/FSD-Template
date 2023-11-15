@@ -5,3 +5,4 @@ UPlasmaCarbineDamageCondition::UPlasmaCarbineDamageCondition() {
     this->Condition = 0;
 }
 
+

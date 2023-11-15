@@ -20,5 +20,6 @@ public:
     TArray<FVector> Vertices;
     
     USTLMeshCarver();
+
 };
 

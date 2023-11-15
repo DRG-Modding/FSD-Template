@@ -12,7 +12,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMiningPodDialogs Dialogs;
     
-    ADropPod();
+    ADropPod(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     FVector GetDonkeyReturnPickupLocation();
     

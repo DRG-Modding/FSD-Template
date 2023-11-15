@@ -2,6 +2,20 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
+UFacilityObjective::UFacilityObjective(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->GeneratorCount = 3;
+    this->ObjectivesStage = 0;
+    this->EncounterDifficulty = 10.00f;
+    this->MinimumTurretEncounters = 0;
+    this->mainFacility = NULL;
+    this->MainFacilityRoom = -1;
+    this->HasRemovedMainShield = false;
+    this->GoalResource = NULL;
+    this->AmountRequired = 1.00f;
+    this->AmountCollected = 0.00f;
+    this->GeneratorsActivated = 0;
+}
+
 void UFacilityObjective::SpawnFacilityEncounters(AProceduralSetup* Setup, UEncounterManager* Encounters, UDebrisPositioning* Positioning) {
 }
 
@@ -96,17 +110,4 @@ void UFacilityObjective::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& O
     DOREPLIFETIME(UFacilityObjective, GeneratorsActivated);
 }
 
-UFacilityObjective::UFacilityObjective() {
-    this->GeneratorCount = 3;
-    this->ObjectivesStage = 0;
-    this->EncounterDifficulty = 10.00f;
-    this->MinimumTurretEncounters = 0;
-    this->mainFacility = NULL;
-    this->MainFacilityRoom = -1;
-    this->HasRemovedMainShield = false;
-    this->GoalResource = NULL;
-    this->AmountRequired = 1.00f;
-    this->AmountCollected = 0.00f;
-    this->GeneratorsActivated = 0;
-}
 

@@ -45,7 +45,8 @@ protected:
     float MaxTurnAngle;
     
 public:
-    AFuelLineSegment();
+    AFuelLineSegment(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Client, Unreliable)
     void ClientUpdateStartTransform(const FVector& NewStartLocation);

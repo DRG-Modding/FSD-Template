@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class AMiningPodCalldownLocation : public AActor {
     GENERATED_BODY()
 public:
-    AMiningPodCalldownLocation();
+    AMiningPodCalldownLocation(const FObjectInitializer& ObjectInitializer);
+
 };
 

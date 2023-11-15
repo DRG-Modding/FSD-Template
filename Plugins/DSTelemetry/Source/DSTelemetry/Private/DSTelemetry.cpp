@@ -1,5 +1,8 @@
 #include "DSTelemetry.h"
 
+UDSTelemetry::UDSTelemetry() {
+}
+
 void UDSTelemetry::Terminate() {
 }
 
@@ -101,6 +104,4 @@ UDSTelemetry* UDSTelemetry::CreateTelemetry(UObject* WorldContextObject) {
     return NULL;
 }
 
-UDSTelemetry::UDSTelemetry() {
-}
 

@@ -14,6 +14,7 @@ protected:
     
 public:
     UClaimableRewardViewWidget();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveEndFlow();

@@ -4,3 +4,4 @@ UWeaponChargeProgressDamageBonus::UWeaponChargeProgressDamageBonus() {
     this->DamageClass = NULL;
 }
 
+

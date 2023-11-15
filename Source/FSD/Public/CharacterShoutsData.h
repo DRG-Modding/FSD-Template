@@ -12,5 +12,6 @@ public:
     FCharacterShouts Shouts;
     
     UCharacterShoutsData();
+
 };
 

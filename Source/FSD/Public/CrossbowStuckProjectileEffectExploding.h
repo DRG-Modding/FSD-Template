@@ -22,7 +22,8 @@ private:
     float ChemicalReactionDelay;
     
 public:
-    UCrossbowStuckProjectileEffectExploding();
+    UCrossbowStuckProjectileEffectExploding(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable)
     void StartTimeoutTimer(UHealthComponentBase* destroyed);

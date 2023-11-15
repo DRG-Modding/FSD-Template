@@ -22,5 +22,6 @@ public:
     TSoftObjectPtr<UTexture2D> Icon;
     
     USeasonEventData();
+
 };
 

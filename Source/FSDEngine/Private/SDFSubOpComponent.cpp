@@ -1,5 +1,6 @@
 #include "SDFSubOpComponent.h"
 
-USDFSubOpComponent::USDFSubOpComponent() {
+USDFSubOpComponent::USDFSubOpComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

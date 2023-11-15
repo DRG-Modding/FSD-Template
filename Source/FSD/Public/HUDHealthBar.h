@@ -59,6 +59,7 @@ protected:
     
 public:
     UHUDHealthBar();
+
     UFUNCTION(BlueprintCallable)
     void SetHealthComponent(const TScriptInterface<IHealth>& Health, float Damage);
     

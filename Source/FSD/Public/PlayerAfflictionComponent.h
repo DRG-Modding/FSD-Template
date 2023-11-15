@@ -26,7 +26,8 @@ protected:
     TWeakObjectPtr<APlayerCharacter> Character;
     
 public:
-    UPlayerAfflictionComponent();
+    UPlayerAfflictionComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void ShowPlayerOverlay(UPlayerAfflictionOverlay* Overlay);
     

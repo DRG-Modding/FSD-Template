@@ -7,3 +7,4 @@ USoundAfflictionEffect::USoundAfflictionEffect() {
     this->FadeOnLoopEndDuration = 0.25f;
 }
 
+

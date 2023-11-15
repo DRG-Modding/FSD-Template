@@ -8,5 +8,6 @@ class UAbilityExitStrategy : public UObject {
     GENERATED_BODY()
 public:
     UAbilityExitStrategy();
+
 };
 

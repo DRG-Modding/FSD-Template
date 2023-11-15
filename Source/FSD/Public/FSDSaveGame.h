@@ -382,6 +382,7 @@ protected:
     
 public:
     UFSDSaveGame();
+
     UFUNCTION(BlueprintCallable)
     bool TrySellResource(UResourceData* Resource, int32 Amount, int32& Price);
     

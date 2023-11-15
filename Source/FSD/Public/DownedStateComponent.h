@@ -32,7 +32,8 @@ protected:
     FEnableDownedBombUIDelegate OnEnableDownedBombUIEvent;
     
 public:
-    UDownedStateComponent();
+    UDownedStateComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void TriggerDownedBombDamage();

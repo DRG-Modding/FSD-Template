@@ -12,5 +12,6 @@ public:
     FSDFCapsuleProperties Properties;
     
     USDFCapsule();
+
 };
 

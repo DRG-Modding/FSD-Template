@@ -27,5 +27,6 @@ private:
     
 public:
     UBTTask_FindPointNearTarget();
+
 };
 

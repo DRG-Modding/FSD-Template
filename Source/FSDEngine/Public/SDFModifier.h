@@ -12,5 +12,6 @@ public:
     FSDFModifierProperties Properties;
     
     USDFModifier();
+
 };
 

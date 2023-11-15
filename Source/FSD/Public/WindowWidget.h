@@ -24,6 +24,7 @@ protected:
     
 public:
     UWindowWidget();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveSelectPreviousCommand();

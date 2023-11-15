@@ -16,5 +16,6 @@ public:
     float MaxDistance;
     
     UAnimNotify_PushSoundMix();
+
 };
 

@@ -14,7 +14,8 @@ protected:
     UItemPlacerAggregator* SegmentPlacer;
     
 public:
-    AFuelLineBuilderItem();
+    AFuelLineBuilderItem(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceivePlacementUpdated(bool InCanPlace, bool InConnecting, float InDistanceProgress);

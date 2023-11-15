@@ -62,9 +62,10 @@ protected:
     float DecaySpeed;
     
 public:
-    AAnchorTurner();
+    AAnchorTurner(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_Finished();

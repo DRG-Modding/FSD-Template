@@ -1,6 +1,11 @@
 #include "ContinuousUsableComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UContinuousUsableComponent::UContinuousUsableComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->TimeBetweenTicks = 1.00f;
+    this->Usable = true;
+}
+
 void UContinuousUsableComponent::SetCanUse(bool CanUse) {
 }
 
@@ -10,8 +15,4 @@ void UContinuousUsableComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProp
     DOREPLIFETIME(UContinuousUsableComponent, Usable);
 }
 
-UContinuousUsableComponent::UContinuousUsableComponent() {
-    this->TimeBetweenTicks = 1.00f;
-    this->Usable = true;
-}
 

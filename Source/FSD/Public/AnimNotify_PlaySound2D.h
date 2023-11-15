@@ -19,5 +19,6 @@ public:
     float PitchMultiplier;
     
     UAnimNotify_PlaySound2D();
+
 };
 

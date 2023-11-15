@@ -17,6 +17,7 @@ protected:
     
 public:
     UMouseCursorWidget();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnUnhover();

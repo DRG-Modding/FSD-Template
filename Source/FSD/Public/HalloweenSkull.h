@@ -29,7 +29,8 @@ protected:
     float JawMovementSpeed;
     
 public:
-    AHalloweenSkull();
+    AHalloweenSkull(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnJawClosed();

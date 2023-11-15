@@ -25,9 +25,10 @@ protected:
     AHeliumTank* Leader;
     
 public:
-    AHeliumTank();
+    AHeliumTank(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnUsedBy(APlayerCharacter* User, EInputKeys Key);

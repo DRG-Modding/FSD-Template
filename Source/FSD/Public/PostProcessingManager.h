@@ -22,6 +22,7 @@ protected:
     TArray<UMaterialInstanceDynamic*> Materials;
     
 public:
-    APostProcessingManager();
+    APostProcessingManager(const FObjectInitializer& ObjectInitializer);
+
 };
 

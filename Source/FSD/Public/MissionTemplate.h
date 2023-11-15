@@ -106,6 +106,7 @@ protected:
     
 public:
     UMissionTemplate();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Receive_SetMissionParameters(UGeneratedMission* mission, FRandomStream& Random);

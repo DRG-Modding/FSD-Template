@@ -1,5 +1,8 @@
 #include "LoadoutFunctionLibrary.h"
 
+ULoadoutFunctionLibrary::ULoadoutFunctionLibrary() {
+}
+
 void ULoadoutFunctionLibrary::SetCurrLoadout(UObject* WorldContextObject, UPlayerCharacterID* PlayerId, FLoadoutCopy newLoadout) {
 }
 
@@ -16,6 +19,4 @@ FLoadoutCopy ULoadoutFunctionLibrary::GetCurrentLoadout(UObject* WorldContextObj
 void ULoadoutFunctionLibrary::CopyPasteWeaponLoadout(UObject* WorldContextObject, UPlayerCharacterID* PlayerId, int32 fromIndex, int32 toIndex) {
 }
 
-ULoadoutFunctionLibrary::ULoadoutFunctionLibrary() {
-}
 

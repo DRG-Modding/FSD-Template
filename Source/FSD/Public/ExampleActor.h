@@ -16,7 +16,8 @@ protected:
     float Field;
     
 public:
-    AExampleActor();
+    AExampleActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_ExampleFunction();
     

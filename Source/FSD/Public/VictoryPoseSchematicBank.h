@@ -18,5 +18,6 @@ public:
     TMap<UVictoryPose*, FSchematicBankItem> VictoryPoses;
     
     UVictoryPoseSchematicBank();
+
 };
 

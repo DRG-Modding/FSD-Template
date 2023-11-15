@@ -8,5 +8,6 @@ class UDynamicMeshScaler : public UWorldSubsystem {
     GENERATED_BODY()
 public:
     UDynamicMeshScaler();
+
 };
 

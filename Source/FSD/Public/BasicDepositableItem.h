@@ -14,6 +14,7 @@ protected:
     UResourceData* DepositableResource;
     
 public:
-    ABasicDepositableItem();
+    ABasicDepositableItem(const FObjectInitializer& ObjectInitializer);
+
 };
 

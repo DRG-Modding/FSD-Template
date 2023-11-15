@@ -14,3 +14,4 @@ USharkAnimInstance::USharkAnimInstance() {
     this->IdleSpeed = 0.00f;
 }
 
+

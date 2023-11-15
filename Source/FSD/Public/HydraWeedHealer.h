@@ -14,6 +14,7 @@ protected:
     AHydraWeedCore* Core;
     
 public:
-    AHydraWeedHealer();
+    AHydraWeedHealer(const FObjectInitializer& ObjectInitializer);
+
 };
 

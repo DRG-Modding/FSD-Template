@@ -1,12 +1,5 @@
 #include "HUDHealthBar.h"
 
-void UHUDHealthBar::SetHealthComponent(const TScriptInterface<IHealth>& Health, float Damage) {
-}
-
-float UHUDHealthBar::GetCurrentHealth() const {
-    return 0.0f;
-}
-
 UHUDHealthBar::UHUDHealthBar() {
     this->OutlineThickness = 2;
     this->HealthAnimationFactor = 0.50f;
@@ -16,4 +9,12 @@ UHUDHealthBar::UHUDHealthBar() {
     this->AnimatedHealth = 0.00f;
     this->MaxHealth = 0.00f;
 }
+
+void UHUDHealthBar::SetHealthComponent(const TScriptInterface<IHealth>& Health, float Damage) {
+}
+
+float UHUDHealthBar::GetCurrentHealth() const {
+    return 0.0f;
+}
+
 

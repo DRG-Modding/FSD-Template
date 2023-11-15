@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCSGRandomDisableProperties Properties;
     
-    UCSGRandomDisableComponent();
+    UCSGRandomDisableComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

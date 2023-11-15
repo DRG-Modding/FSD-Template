@@ -17,5 +17,6 @@ protected:
     
 public:
     UBTService_SetStance();
+
 };
 

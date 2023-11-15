@@ -8,5 +8,6 @@ class UCSGPlane : public UConvexMeshWithCachedTree {
     GENERATED_BODY()
 public:
     UCSGPlane();
+
 };
 

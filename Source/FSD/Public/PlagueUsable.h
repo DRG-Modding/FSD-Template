@@ -13,6 +13,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText CannotDropText;
     
-    UPlagueUsable();
+    UPlagueUsable(const FObjectInitializer& ObjectInitializer);
+
 };
 

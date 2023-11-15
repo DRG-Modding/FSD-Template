@@ -5,3 +5,4 @@ UAnimNotifyState_SpawnAndReleaseActor::UAnimNotifyState_SpawnAndReleaseActor() {
     this->ManualDetach = false;
 }
 
+

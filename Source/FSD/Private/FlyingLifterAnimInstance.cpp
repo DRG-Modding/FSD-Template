@@ -8,3 +8,4 @@ UFlyingLifterAnimInstance::UFlyingLifterAnimInstance() {
     this->GrabberState = EGrabberState::StandBy;
 }
 
+

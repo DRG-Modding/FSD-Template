@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FConvexNoiseProperties Noise;
     
-    UConvexMeshWithCachedTreeComponent();
+    UConvexMeshWithCachedTreeComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -15,6 +15,7 @@ class UGameModeFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UGameModeFunctionLibrary();
+
 private:
     UFUNCTION(BlueprintCallable)
     static bool IsCloseToImportantLocation(AFSDGameState* GameState, const FVector& Location);

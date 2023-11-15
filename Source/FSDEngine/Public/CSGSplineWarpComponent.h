@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSplineWarpProperties SplineProperties;
     
-    UCSGSplineWarpComponent();
+    UCSGSplineWarpComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

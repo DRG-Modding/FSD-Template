@@ -4,3 +4,4 @@ UDirectDamageCondition::UDirectDamageCondition() {
     this->Type = EDirectDamageConditionEnum::Direct;
 }
 
+

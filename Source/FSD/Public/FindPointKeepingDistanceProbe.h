@@ -19,6 +19,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float IdealTargetDist;
     
-    AFindPointKeepingDistanceProbe();
+    AFindPointKeepingDistanceProbe(const FObjectInitializer& ObjectInitializer);
+
 };
 

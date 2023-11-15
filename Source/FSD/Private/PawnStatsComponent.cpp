@@ -1,6 +1,10 @@
 #include "PawnStatsComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UPawnStatsComponent::UPawnStatsComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->UseDormancy = false;
+}
+
 void UPawnStatsComponent::RemoveModifier(UPawnStat* Stat, float Value) {
 }
 
@@ -21,7 +25,4 @@ void UPawnStatsComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(UPawnStatsComponent, Stats);
 }
 
-UPawnStatsComponent::UPawnStatsComponent() {
-    this->UseDormancy = false;
-}
 

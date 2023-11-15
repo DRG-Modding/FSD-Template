@@ -29,7 +29,8 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCarveDoneDelegate OnCarveDoneEvent;
     
-    UAutoCarverComponent();
+    UAutoCarverComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void ForceCarve();
     

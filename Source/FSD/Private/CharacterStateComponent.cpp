@@ -1,5 +1,14 @@
 #include "CharacterStateComponent.h"
 
+UCharacterStateComponent::UCharacterStateComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->StateId = 0;
+    this->Character = NULL;
+    this->EnterStateShout = NULL;
+    this->ExitStateShout = NULL;
+    this->AttentionShout = NULL;
+    this->PlayerMovement = NULL;
+}
+
 
 
 
@@ -27,12 +36,4 @@ UPlayerMovementComponent* UCharacterStateComponent::GetCharacterMovement() const
     return NULL;
 }
 
-UCharacterStateComponent::UCharacterStateComponent() {
-    this->StateId = 0;
-    this->Character = NULL;
-    this->EnterStateShout = NULL;
-    this->ExitStateShout = NULL;
-    this->AttentionShout = NULL;
-    this->PlayerMovement = NULL;
-}
 

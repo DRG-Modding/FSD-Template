@@ -18,6 +18,7 @@ protected:
     UMaterialInterface* DownScaleMaterial;
     
 public:
-    AIconGenerationBase();
+    AIconGenerationBase(const FObjectInitializer& ObjectInitializer);
+
 };
 

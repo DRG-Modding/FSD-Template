@@ -14,6 +14,7 @@ protected:
     UFSDPhysicalMaterial* CurrentPhysicalMaterial;
     
 public:
-    UPlayerReactiveTerrainTrackerComponent();
+    UPlayerReactiveTerrainTrackerComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -5,3 +5,4 @@ UBTService_UpdateMoveToTarget::UBTService_UpdateMoveToTarget() {
     this->VerticalOffset = 0.00f;
 }
 
+

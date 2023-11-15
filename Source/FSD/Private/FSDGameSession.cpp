@@ -1,5 +1,6 @@
 #include "FSDGameSession.h"
 
-AFSDGameSession::AFSDGameSession() {
+AFSDGameSession::AFSDGameSession(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

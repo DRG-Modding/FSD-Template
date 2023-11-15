@@ -19,6 +19,7 @@ class UProceduralFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UProceduralFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void SpawnTerrainImpact(UObject* WorldContextObject, UFXSystemAsset* particle, const FVector& Location, FRotator Rotation);
     

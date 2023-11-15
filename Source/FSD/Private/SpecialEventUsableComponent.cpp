@@ -1,5 +1,6 @@
 #include "SpecialEventUsableComponent.h"
 
-USpecialEventUsableComponent::USpecialEventUsableComponent() {
+USpecialEventUsableComponent::USpecialEventUsableComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -11,3 +11,4 @@ UJetBootsSettings::UJetBootsSettings() {
     this->OutOfFuelRechargeDelay = 1.00f;
 }
 
+

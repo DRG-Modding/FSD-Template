@@ -11,7 +11,8 @@ UCLASS(Blueprintable)
 class ACharacterSelectionSwitcher : public AActor {
     GENERATED_BODY()
 public:
-    ACharacterSelectionSwitcher();
+    ACharacterSelectionSwitcher(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnVictoryPoseChanged(UVictoryPose* VictoryPose);
     

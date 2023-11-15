@@ -13,5 +13,6 @@ public:
     TSoftObjectPtr<UMissionTemplate> ActivityMission;
     
     UGameActivityMissionType();
+
 };
 

@@ -5,3 +5,4 @@ USentryGunTypeUpgrade::USentryGunTypeUpgrade() {
     this->MarkerType = NULL;
 }
 
+

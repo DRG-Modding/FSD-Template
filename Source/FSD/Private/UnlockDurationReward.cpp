@@ -5,3 +5,4 @@ UUnlockDurationReward::UUnlockDurationReward() {
     this->Duration = NULL;
 }
 
+

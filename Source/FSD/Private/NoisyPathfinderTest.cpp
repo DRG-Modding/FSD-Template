@@ -1,6 +1,6 @@
 #include "NoisyPathfinderTest.h"
 
-ANoisyPathfinderTest::ANoisyPathfinderTest() {
+ANoisyPathfinderTest::ANoisyPathfinderTest(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DirectionDistance = 0.00f;
     this->DirectionPenalty = 35000.00f;
     this->ZPenaltyPower = 1.10f;
@@ -16,4 +16,5 @@ ANoisyPathfinderTest::ANoisyPathfinderTest() {
     this->FloodFillSettings = NULL;
     this->CSGWorld = NULL;
 }
+
 

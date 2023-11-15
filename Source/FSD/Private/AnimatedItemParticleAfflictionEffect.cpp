@@ -5,3 +5,4 @@ UAnimatedItemParticleAfflictionEffect::UAnimatedItemParticleAfflictionEffect() {
     this->ParticleEffect = NULL;
 }
 
+

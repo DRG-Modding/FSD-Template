@@ -32,6 +32,7 @@ private:
     
 public:
     UFSDFindSessionsCallbackProxy();
+
 private:
     UFUNCTION(BlueprintCallable)
     void OnFSDCompleted(bool bSuccess, const TArray<FBlueprintSessionResult>& Results);

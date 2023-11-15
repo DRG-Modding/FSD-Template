@@ -12,5 +12,6 @@ public:
     FSDFBoxProperties Properties;
     
     USDFBox();
+
 };
 

@@ -15,7 +15,8 @@ protected:
     APlayerCharacter* Character;
     
 public:
-    UMissionStatsCollector();
+    UMissionStatsCollector(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnResourceIncremented(UCappedResource* Resource, float Amount);

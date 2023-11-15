@@ -13,6 +13,7 @@ public:
     FNewMessageSig OnNewMessage;
     
     UMessagingSubSystem();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString MessageSenderIdAsString(const FFSDChatMessage& Msg);
     

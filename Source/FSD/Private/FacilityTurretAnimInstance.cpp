@@ -4,3 +4,4 @@ UFacilityTurretAnimInstance::UFacilityTurretAnimInstance() {
     this->IsEngaged = false;
 }
 
+

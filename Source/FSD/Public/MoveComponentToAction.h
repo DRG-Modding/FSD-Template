@@ -24,6 +24,7 @@ protected:
     
 public:
     UMoveComponentToAction();
+
 protected:
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static UMoveComponentToAction* EaseComponentTo(UObject* WorldContext, USceneComponent* InComponent, FTransform InEndTransform, TEnumAsByte<EEasingFunc::Type> InEasingMode, bool InWorldSpace, float InDuration);

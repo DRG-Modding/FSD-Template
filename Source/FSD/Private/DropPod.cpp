@@ -1,6 +1,7 @@
 #include "DropPod.h"
 
-
-ADropPod::ADropPod() {
+ADropPod::ADropPod(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
+
 

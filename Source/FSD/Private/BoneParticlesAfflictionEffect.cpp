@@ -5,3 +5,4 @@ UBoneParticlesAfflictionEffect::UBoneParticlesAfflictionEffect() {
     this->Sound = NULL;
 }
 
+

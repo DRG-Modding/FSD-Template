@@ -38,7 +38,8 @@ protected:
     FRandomStream RandomStream;
     
 public:
-    AEscortMuleAIController();
+    AEscortMuleAIController(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetDozerNextPathSegment();
     
@@ -62,7 +63,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void FindDozerPath(FVector StartPosition);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

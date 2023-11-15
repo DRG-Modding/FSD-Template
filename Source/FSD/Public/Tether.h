@@ -51,9 +51,10 @@ protected:
     float KnockBackForce;
     
 public:
-    ATether();
+    ATether(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetIsOnGround(bool NewIsOnGround);
     

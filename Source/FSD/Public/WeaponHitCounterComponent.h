@@ -21,7 +21,8 @@ protected:
     bool RequiresWeakpointHit;
     
 public:
-    UWeaponHitCounterComponent();
+    UWeaponHitCounterComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_OnReloading();

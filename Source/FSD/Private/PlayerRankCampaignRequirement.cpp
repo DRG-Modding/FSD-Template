@@ -4,3 +4,4 @@ UPlayerRankCampaignRequirement::UPlayerRankCampaignRequirement() {
     this->RankRequirement = 0;
 }
 
+

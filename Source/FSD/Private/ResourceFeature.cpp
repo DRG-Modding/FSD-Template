@@ -5,3 +5,4 @@ UResourceFeature::UResourceFeature() {
     this->BaseAmount = 0.00f;
 }
 
+

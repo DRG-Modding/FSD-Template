@@ -1,5 +1,6 @@
 #include "GemProximityTracker.h"
 
-UGemProximityTracker::UGemProximityTracker() {
+UGemProximityTracker::UGemProximityTracker(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

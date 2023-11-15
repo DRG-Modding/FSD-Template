@@ -4,3 +4,4 @@ UUseConditionEquippedItem::UUseConditionEquippedItem() {
     this->Invert = false;
 }
 
+

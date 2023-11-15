@@ -25,6 +25,7 @@ protected:
     TSubclassOf<AActor> ImpactClass;
     
 public:
-    AFlameWallProjectile();
+    AFlameWallProjectile(const FObjectInitializer& ObjectInitializer);
+
 };
 

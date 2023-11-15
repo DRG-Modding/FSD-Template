@@ -1,5 +1,10 @@
 #include "WindowWidget.h"
 
+UWindowWidget::UWindowWidget() : UUserWidget(FObjectInitializer::Get()) {
+    this->bHandleCloseCommand = true;
+    this->bResolutionDownscaleWhenOpen = false;
+}
+
 
 
 
@@ -18,8 +23,4 @@ void UWindowWidget::ConsumeCommand() {
 void UWindowWidget::CloseThisWindow() {
 }
 
-UWindowWidget::UWindowWidget() : UUserWidget(FObjectInitializer::Get()) {
-    this->bHandleCloseCommand = true;
-    this->bResolutionDownscaleWhenOpen = false;
-}
 

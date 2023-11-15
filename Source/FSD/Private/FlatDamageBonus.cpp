@@ -5,3 +5,4 @@ UFlatDamageBonus::UFlatDamageBonus() {
     this->DamageClass = NULL;
 }
 
+

@@ -33,6 +33,7 @@ protected:
     
 public:
     UBossFightSubSystem();
+
     UFUNCTION(BlueprintCallable)
     void RemoveCustomBossFightWidget(UUserWidget* InWidget);
     

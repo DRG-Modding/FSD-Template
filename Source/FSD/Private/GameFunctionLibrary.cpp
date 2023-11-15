@@ -1,5 +1,8 @@
 #include "GameFunctionLibrary.h"
 
+UGameFunctionLibrary::UGameFunctionLibrary() {
+}
+
 void UGameFunctionLibrary::SpawnOrUpdateAudio2D(UObject* WorldContext, UAudioComponent*& AudioComponent, USoundBase* Sound, float VolumeMultiplier, float PitchMultiplier, FName FloatParamName, float FloatParam) {
 }
 
@@ -20,11 +23,11 @@ void UGameFunctionLibrary::IsTearingDown(UObject* caller, bool& NewIsTearingDown
 }
 
 bool UGameFunctionLibrary::IsPlayingOffline(UObject* WorldContextObject) {
-    return false;
+	return true;
 }
 
 bool UGameFunctionLibrary::IsPlayInEditor(UObject* WorldContextObject) {
-	return true;
+    return false;
 }
 
 UWindowManager* UGameFunctionLibrary::GetWindowManager(UObject* WorldContextObject) {
@@ -111,6 +114,4 @@ UAsyncManager* UGameFunctionLibrary::GetAsyncManager(UObject* WorldContextObject
     return NULL;
 }
 
-UGameFunctionLibrary::UGameFunctionLibrary() {
-}
 

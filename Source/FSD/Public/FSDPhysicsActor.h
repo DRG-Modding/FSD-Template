@@ -13,7 +13,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MovementUpdateEventTriggeredFrequency;
     
-    AFSDPhysicsActor();
+    AFSDPhysicsActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void ForceMovementUpdate();
     

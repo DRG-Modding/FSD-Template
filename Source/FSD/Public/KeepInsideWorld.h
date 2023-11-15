@@ -18,7 +18,8 @@ protected:
     int32 IteratorIndex;
     
 public:
-    UKeepInsideWorld();
+    UKeepInsideWorld(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void UnregisterForKeepInsideWorld(UObject* WorldContextObject, AActor* Actor);
     

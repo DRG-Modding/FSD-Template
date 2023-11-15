@@ -39,7 +39,8 @@ protected:
     USceneComponent* CameraFocusPoint;
     
 public:
-    AShowroomStage();
+    AShowroomStage(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveInitialize(UTextureRenderTarget2D* RenderTarget);

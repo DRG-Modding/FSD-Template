@@ -26,7 +26,8 @@ private:
     ACrossbowProjectileBase* CastedOwner;
     
 public:
-    UCrossbowProjectileRicochet();
+    UCrossbowProjectileRicochet(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void Ricochet(const FHitResult& HitResult, const FVector& RelativeLocation);

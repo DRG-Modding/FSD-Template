@@ -7,3 +7,4 @@ UCampaignNotification::UCampaignNotification() {
     this->bIsCampaignCompleted = false;
 }
 
+

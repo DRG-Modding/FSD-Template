@@ -43,9 +43,10 @@ private:
     bool PreventLatejoiners;
     
 public:
-    ATreasureContainer();
+    ATreasureContainer(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void TestAwardTreasure();
     
@@ -83,7 +84,7 @@ public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintPure)
     bool GetPreventFurtherLatejoiners() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -1,7 +1,8 @@
 #include "PickaxeIconSceneCaptureComponent.h"
 
-UPickaxeIconSceneCaptureComponent::UPickaxeIconSceneCaptureComponent() {
+UPickaxeIconSceneCaptureComponent::UPickaxeIconSceneCaptureComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bIsFullView = false;
     this->CameraKey = EPickaxePartLocation::Head;
 }
+
 

@@ -23,6 +23,7 @@ private:
     
 public:
     UFSDCloudLoadSave();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     void StartCloudLoadAll(UObject* WorldContextObject, int32 Index, int32 Offset);
     

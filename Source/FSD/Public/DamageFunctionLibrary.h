@@ -21,6 +21,7 @@ class UDamageFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UDamageFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void SetPhysicalMaterialOnHit(UFSDPhysicalMaterial* PhysMat, UPARAM(Ref) FHitResult& Hit);
     

@@ -13,5 +13,6 @@ protected:
     
 public:
     UBTDecorator_ModifySpeed();
+
 };
 

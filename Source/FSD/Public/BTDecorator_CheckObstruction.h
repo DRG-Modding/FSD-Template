@@ -25,5 +25,6 @@ public:
     FBlackboardKeySelector TargetKey;
     
     UBTDecorator_CheckObstruction();
+
 };
 

@@ -43,5 +43,6 @@ public:
     FDeepCSGTree TempTree;
     
     UCSGChildInstance();
+
 };
 

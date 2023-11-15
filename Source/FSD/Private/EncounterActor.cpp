@@ -1,6 +1,7 @@
 #include "EncounterActor.h"
 
-
-AEncounterActor::AEncounterActor() {
+AEncounterActor::AEncounterActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
+
 

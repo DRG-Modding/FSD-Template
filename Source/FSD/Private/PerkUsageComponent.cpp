@@ -1,6 +1,9 @@
 #include "PerkUsageComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UPerkUsageComponent::UPerkUsageComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UPerkUsageComponent::Server_MarkPerkUsed_Implementation(UPerkAsset* Perk) {
 }
 
@@ -16,6 +19,4 @@ void UPerkUsageComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(UPerkUsageComponent, PerkUsageReplicated);
 }
 
-UPerkUsageComponent::UPerkUsageComponent() {
-}
 

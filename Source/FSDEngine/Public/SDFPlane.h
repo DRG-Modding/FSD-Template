@@ -8,5 +8,6 @@ class FSDENGINE_API USDFPlane : public USDFBaseWithTransform {
     GENERATED_BODY()
 public:
     USDFPlane();
+
 };
 

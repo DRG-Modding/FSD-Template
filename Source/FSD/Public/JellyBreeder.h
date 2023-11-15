@@ -60,9 +60,10 @@ protected:
     bool IsInBreedMode;
     
 public:
-    AJellyBreeder();
+    AJellyBreeder(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SpawnEnemies(AProjectile* Egg, int32 AmountToSpawn);
     

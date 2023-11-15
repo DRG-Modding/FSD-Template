@@ -8,3 +8,4 @@ UTreasureBoxAnimInstance::UTreasureBoxAnimInstance() {
     this->IsRightInserted = false;
 }
 
+

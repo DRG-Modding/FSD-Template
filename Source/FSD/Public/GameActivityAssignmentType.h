@@ -8,5 +8,6 @@ class UGameActivityAssignmentType : public UGameActivityType {
     GENERATED_BODY()
 public:
     UGameActivityAssignmentType();
+
 };
 

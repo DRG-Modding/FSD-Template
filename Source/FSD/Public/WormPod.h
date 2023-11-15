@@ -77,9 +77,10 @@ protected:
     int32 WormCount;
     
 public:
-    AWormPod();
+    AWormPod(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SpawnWorms();
     
@@ -105,7 +106,7 @@ public:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_ShowDeath(bool success);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -19,6 +19,7 @@ protected:
     FVector PrevError;
     
 public:
-    UCharacterRecoilComponent();
+    UCharacterRecoilComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

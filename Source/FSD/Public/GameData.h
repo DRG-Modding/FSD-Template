@@ -263,6 +263,7 @@ protected:
     
 public:
     UGameData();
+
     UFUNCTION(BlueprintCallable)
     void UnloadPreloadedAssets();
     

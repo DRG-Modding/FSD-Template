@@ -22,5 +22,6 @@ public:
     UEnemyDescriptor* EnemyDescriptor;
     
     UEnemyRarityMutator();
+
 };
 

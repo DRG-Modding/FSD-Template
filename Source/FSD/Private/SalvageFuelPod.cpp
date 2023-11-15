@@ -1,5 +1,6 @@
 #include "SalvageFuelPod.h"
 
-ASalvageFuelPod::ASalvageFuelPod() {
+ASalvageFuelPod::ASalvageFuelPod(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

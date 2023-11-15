@@ -5,3 +5,4 @@ UMakeAttackableStatusEffectItem::UMakeAttackableStatusEffectItem() {
     this->ComponentClass = NULL;
 }
 
+

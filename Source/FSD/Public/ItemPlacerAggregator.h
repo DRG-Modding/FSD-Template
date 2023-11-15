@@ -80,7 +80,8 @@ protected:
     FTransform LastPlacement;
     
 public:
-    UItemPlacerAggregator();
+    UItemPlacerAggregator(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void ToggleValid(bool Valid);
     

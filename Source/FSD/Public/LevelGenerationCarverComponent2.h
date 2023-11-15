@@ -32,6 +32,7 @@ protected:
     UCSGPreviewComponent* PreviewComponent;
     
 public:
-    ULevelGenerationCarverComponent2();
+    ULevelGenerationCarverComponent2(const FObjectInitializer& ObjectInitializer);
+
 };
 

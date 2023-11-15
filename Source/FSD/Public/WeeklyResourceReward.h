@@ -20,6 +20,7 @@ protected:
     
 public:
     UWeeklyResourceReward();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TMap<UResourceData*, float> GetRewards(AFSDPlayerController* Player) const;

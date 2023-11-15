@@ -43,5 +43,6 @@ protected:
     
 public:
     UKnockbackDamageBonus();
+
 };
 

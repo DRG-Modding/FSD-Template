@@ -1,23 +1,6 @@
 #include "MicroMissileLauncher.h"
 
-void AMicroMissileLauncher::Server_SetIsCharging_Implementation(bool isCharging) {
-}
-
-void AMicroMissileLauncher::Server_SetChargedMissile_Implementation(bool isCharged) {
-}
-
-bool AMicroMissileLauncher::IsNextShotBuckShot() {
-    return false;
-}
-
-int32 AMicroMissileLauncher::GetChargeCurrentFireCount() {
-    return 0;
-}
-
-void AMicroMissileLauncher::All_SetChargedMissile_Implementation(bool isCharged) {
-}
-
-AMicroMissileLauncher::AMicroMissileLauncher() {
+AMicroMissileLauncher::AMicroMissileLauncher(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ChargeTime = 2.00f;
     this->ChargeMaxFireCount = 9;
     this->BuckShotDelay = 2.00f;
@@ -35,4 +18,22 @@ AMicroMissileLauncher::AMicroMissileLauncher() {
     this->WPN_Mag_And_Barrel_Feed = NULL;
     this->ChargedMissileFireSound = NULL;
 }
+
+void AMicroMissileLauncher::Server_SetIsCharging_Implementation(bool isCharging) {
+}
+
+void AMicroMissileLauncher::Server_SetChargedMissile_Implementation(bool isCharged) {
+}
+
+bool AMicroMissileLauncher::IsNextShotBuckShot() {
+    return false;
+}
+
+int32 AMicroMissileLauncher::GetChargeCurrentFireCount() {
+    return 0;
+}
+
+void AMicroMissileLauncher::All_SetChargedMissile_Implementation(bool isCharged) {
+}
+
 

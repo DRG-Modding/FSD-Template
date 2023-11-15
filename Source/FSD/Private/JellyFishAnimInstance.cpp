@@ -5,3 +5,4 @@ UJellyFishAnimInstance::UJellyFishAnimInstance() {
     this->VerticalSpeed = 0.00f;
 }
 
+

@@ -10,6 +10,7 @@ class UReactiveTerrain : public UObject {
     GENERATED_BODY()
 public:
     UReactiveTerrain();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Receive_OnActorLeft(UStatusEffectsComponent* StatusEffects);

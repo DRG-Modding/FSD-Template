@@ -59,9 +59,10 @@ protected:
     TArray<USplineMeshComponent*> MeshComponents;
     
 public:
-    ASplineCableActor();
+    ASplineCableActor(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SpawnBetweenTransforms(FTransform InStart, FTransform InEnd);
     

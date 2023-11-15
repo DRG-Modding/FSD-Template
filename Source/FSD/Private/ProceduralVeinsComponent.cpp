@@ -1,5 +1,8 @@
 #include "ProceduralVeinsComponent.h"
 
+UProceduralVeinsComponent::UProceduralVeinsComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UProceduralVeinsComponent::GenerateResourceVeins_Async(AProceduralSetup*& Setup, FLatentActionInfo LatentInfo) {
 }
 
@@ -27,6 +30,4 @@ void UProceduralVeinsComponent::CountFinalGeneratedResourcesInVeins() {
 void UProceduralVeinsComponent::CalculateResourceDistribution() {
 }
 
-UProceduralVeinsComponent::UProceduralVeinsComponent() {
-}
 

@@ -50,5 +50,6 @@ protected:
     
 public:
     UVeinResourceCreator();
+
 };
 

@@ -33,9 +33,10 @@ protected:
     float MaxSpawnRange;
     
 public:
-    AAmberEvent();
+    AAmberEvent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnSpawnedDeath(UHealthComponentBase* spawnedHealthComponent);

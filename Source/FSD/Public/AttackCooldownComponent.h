@@ -13,7 +13,8 @@ private:
     TArray<FAttackCooldown> AttackCooldowns;
     
 public:
-    UAttackCooldownComponent();
+    UAttackCooldownComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetCooldown(const FName& AttackName, float cooldownSeconds);
     

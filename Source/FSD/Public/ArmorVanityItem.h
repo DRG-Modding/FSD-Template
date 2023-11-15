@@ -49,6 +49,7 @@ protected:
     
 public:
     UArmorVanityItem();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetNewArmorType(UCharacterVanityComponent* Gear);

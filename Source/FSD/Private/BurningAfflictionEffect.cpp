@@ -4,3 +4,4 @@ UBurningAfflictionEffect::UBurningAfflictionEffect() {
     this->FireParticleSize = EFrozenBitsSize::Tiny;
 }
 
+

@@ -1,5 +1,9 @@
 #include "FirstPersonSkeletalMeshComponent.h"
 
+UFirstPersonSkeletalMeshComponent::UFirstPersonSkeletalMeshComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->DepthPriorityGroup = SDPG_Foreground;
+}
+
 void UFirstPersonSkeletalMeshComponent::SetFirstPersonFOVEnabled(bool bEnabled) {
 }
 
@@ -11,6 +15,4 @@ FVector UFirstPersonSkeletalMeshComponent::CalcFirstPersonFOVPositionCorrection(
     return FVector{};
 }
 
-UFirstPersonSkeletalMeshComponent::UFirstPersonSkeletalMeshComponent() {
-}
 

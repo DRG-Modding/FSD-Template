@@ -11,6 +11,7 @@ class USchematicItem : public UObject {
     GENERATED_BODY()
 public:
     USchematicItem();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FText GetTitle() const;
     

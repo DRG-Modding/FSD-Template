@@ -7,3 +7,4 @@ USentryGunAnimInstance::USentryGunAnimInstance() {
     this->BuildProgress = 1.00f;
 }
 
+

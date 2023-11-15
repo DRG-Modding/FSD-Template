@@ -8,5 +8,6 @@ class UDamageTag : public UDataAsset {
     GENERATED_BODY()
 public:
     UDamageTag();
+
 };
 

@@ -27,11 +27,12 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool KillActorOnPointRemoved;
     
-    UTerrainDetectBoxComponent();
+    UTerrainDetectBoxComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void StartDetect();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

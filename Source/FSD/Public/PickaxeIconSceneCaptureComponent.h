@@ -14,6 +14,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EPickaxePartLocation CameraKey;
     
-    UPickaxeIconSceneCaptureComponent();
+    UPickaxeIconSceneCaptureComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

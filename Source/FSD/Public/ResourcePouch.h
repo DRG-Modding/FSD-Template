@@ -21,7 +21,8 @@ protected:
     USoundCue* ImpactGroundSound;
     
 public:
-    AResourcePouch();
+    AResourcePouch(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void ActorWasHit(AActor* SelfActor, AActor* OtherActor, FVector NormalImpulse, const FHitResult& Hit);

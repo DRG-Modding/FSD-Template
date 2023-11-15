@@ -1,5 +1,12 @@
 #include "ObjectivesManager.h"
 
+UObjectivesManager::UObjectivesManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Objective = NULL;
+    this->ObjectivesInitialized = false;
+    this->ObjectivesStarted = false;
+    this->bCheatObjectivesCompleted = false;
+}
+
 void UObjectivesManager::OnObjectiveChanged(UObjective* obj) {
 }
 
@@ -28,10 +35,4 @@ bool UObjectivesManager::AreRequiredSecondariesComplete() const {
     return false;
 }
 
-UObjectivesManager::UObjectivesManager() {
-    this->Objective = NULL;
-    this->ObjectivesInitialized = false;
-    this->ObjectivesStarted = false;
-    this->bCheatObjectivesCompleted = false;
-}
 

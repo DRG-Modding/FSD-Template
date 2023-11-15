@@ -38,5 +38,6 @@ public:
     bool UseTargetable;
     
     UBTDecorator_CanSeeTarget();
+
 };
 

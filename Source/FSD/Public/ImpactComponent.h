@@ -34,7 +34,8 @@ protected:
     float TriggerAtVelocityDifference;
     
 public:
-    UImpactComponent();
+    UImpactComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetCheckVelocity(bool aCheckVelocity);
     

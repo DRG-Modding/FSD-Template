@@ -7,3 +7,4 @@ UPipelineSegmentEndPostAnimInstance::UPipelineSegmentEndPostAnimInstance() {
     this->bAssembling = false;
 }
 
+

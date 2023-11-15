@@ -1,6 +1,30 @@
 #include "CrossbowProjectileBase.h"
 #include "Net/UnrealNetwork.h"
 
+ACrossbowProjectileBase::ACrossbowProjectileBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->StatusEffectTime = 0.00f;
+    this->BansheePulseActive = false;
+    this->MagneticComponent = NULL;
+    this->RicochetComponent = NULL;
+    this->BansheeComponent = NULL;
+    this->BansheePulseComponent = NULL;
+    this->BansheeComponentClass = NULL;
+    this->RecallComponentClass = NULL;
+    this->SpawnableStuckProjectile = NULL;
+    this->OnDamageEffect = NULL;
+    this->EffectApplication = ECrossbowEffectApplication::ToDefault;
+    this->SelectionPriority = 0;
+    this->CanEverBePickedUp = true;
+    this->Penetrates = false;
+    this->ImpactSound = NULL;
+    this->IsASpecialProjectile = false;
+    this->MainDamageComponent = NULL;
+    this->SimpleDamageComponent = NULL;
+    this->ProjectileMesh = NULL;
+    this->KillTrailAfterTime = 3.00f;
+    this->OnlyTrailShown = false;
+}
+
 
 void ACrossbowProjectileBase::SetSimpleDamageComponent(UDamageComponent* Component) {
 }
@@ -40,27 +64,4 @@ void ACrossbowProjectileBase::GetLifetimeReplicatedProps(TArray<FLifetimePropert
     DOREPLIFETIME(ACrossbowProjectileBase, OnlyTrailShown);
 }
 
-ACrossbowProjectileBase::ACrossbowProjectileBase() {
-    this->StatusEffectTime = 0.00f;
-    this->BansheePulseActive = false;
-    this->MagneticComponent = NULL;
-    this->RicochetComponent = NULL;
-    this->BansheeComponent = NULL;
-    this->BansheePulseComponent = NULL;
-    this->BansheeComponentClass = NULL;
-    this->RecallComponentClass = NULL;
-    this->SpawnableStuckProjectile = NULL;
-    this->OnDamageEffect = NULL;
-    this->EffectApplication = ECrossbowEffectApplication::ToDefault;
-    this->SelectionPriority = 0;
-    this->CanEverBePickedUp = true;
-    this->Penetrates = false;
-    this->ImpactSound = NULL;
-    this->IsASpecialProjectile = false;
-    this->MainDamageComponent = NULL;
-    this->SimpleDamageComponent = NULL;
-    this->ProjectileMesh = NULL;
-    this->KillTrailAfterTime = 3.00f;
-    this->OnlyTrailShown = false;
-}
 

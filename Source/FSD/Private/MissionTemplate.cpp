@@ -1,6 +1,16 @@
 #include "MissionTemplate.h"
 #include "Templates/SubclassOf.h"
 
+UMissionTemplate::UMissionTemplate() {
+    this->PrimaryObjective = NULL;
+    this->MissionIcon = NULL;
+    this->MissionIconSmall = NULL;
+    this->MissionTypeIndex = 0;
+    this->MustBeUnlocked = true;
+    this->RoomEncounerScale = 1.00f;
+    this->StationaryEnemyScale = 1.00f;
+}
+
 
 bool UMissionTemplate::IsLocked(UFSDSaveGame* SaveGame) const {
     return false;
@@ -50,13 +60,4 @@ UGeneratedMission* UMissionTemplate::GenerateMission(const UObject* WorldContext
     return NULL;
 }
 
-UMissionTemplate::UMissionTemplate() {
-    this->PrimaryObjective = NULL;
-    this->MissionIcon = NULL;
-    this->MissionIconSmall = NULL;
-    this->MissionTypeIndex = 0;
-    this->MustBeUnlocked = true;
-    this->RoomEncounerScale = 1.00f;
-    this->StationaryEnemyScale = 1.00f;
-}
 

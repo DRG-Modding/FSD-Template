@@ -1,5 +1,9 @@
 #include "NisseAnimInstance.h"
 
+UNisseAnimInstance::UNisseAnimInstance() {
+    this->State = ENisseState::Idle;
+}
+
 bool UNisseAnimInstance::IsWalking() const {
     return false;
 }
@@ -32,7 +36,4 @@ bool UNisseAnimInstance::IsFrozen() const {
     return false;
 }
 
-UNisseAnimInstance::UNisseAnimInstance() {
-    this->State = ENisseState::Idle;
-}
 

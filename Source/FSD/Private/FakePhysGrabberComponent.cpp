@@ -1,5 +1,6 @@
 #include "FakePhysGrabberComponent.h"
 
-UFakePhysGrabberComponent::UFakePhysGrabberComponent() {
+UFakePhysGrabberComponent::UFakePhysGrabberComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

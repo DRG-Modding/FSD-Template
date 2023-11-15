@@ -23,6 +23,7 @@ protected:
     
 public:
     UYesNoPromptWidget();
+
     UFUNCTION(BlueprintCallable)
     void Show(FText Title, FText Message, const UYesNoPromptWidget::FOnYesNoClickedDelegate& OnYesNoClicked);
     

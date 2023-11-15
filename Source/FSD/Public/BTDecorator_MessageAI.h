@@ -14,5 +14,6 @@ public:
     FName DeactivationMessage;
     
     UBTDecorator_MessageAI();
+
 };
 

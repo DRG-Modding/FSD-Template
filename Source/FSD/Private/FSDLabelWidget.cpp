@@ -1,5 +1,8 @@
 #include "FSDLabelWidget.h"
 
+UFSDLabelWidget::UFSDLabelWidget() {
+}
+
 void UFSDLabelWidget::SetWrapTextAt(float WrapAt) {
 }
 
@@ -19,6 +22,4 @@ int32 UFSDLabelWidget::GetFontSize() const {
     return 0;
 }
 
-UFSDLabelWidget::UFSDLabelWidget() {
-}
 

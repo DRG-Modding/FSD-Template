@@ -4,3 +4,4 @@ UWeaponHitCountEffect::UWeaponHitCountEffect() {
     this->UsesDamageEffects = false;
 }
 
+

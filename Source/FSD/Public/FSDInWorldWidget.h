@@ -13,6 +13,7 @@ protected:
     
 public:
     UFSDInWorldWidget();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveHUDVisibilityChanged(bool InHudVisible);

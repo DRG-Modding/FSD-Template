@@ -16,6 +16,7 @@ protected:
     
 public:
     UMinersManualData();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetText(FText& Headline, FText& richText);
     

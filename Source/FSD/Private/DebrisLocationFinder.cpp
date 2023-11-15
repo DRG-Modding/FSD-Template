@@ -1,6 +1,6 @@
 #include "DebrisLocationFinder.h"
 
-ADebrisLocationFinder::ADebrisLocationFinder() {
+ADebrisLocationFinder::ADebrisLocationFinder(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Positioning = NULL;
     this->terrainPlacement = NULL;
     this->MinRadius = 0.00f;
@@ -12,4 +12,5 @@ ADebrisLocationFinder::ADebrisLocationFinder() {
     this->DestroyOnFinish = true;
     this->StopAtEnoughMatches = true;
 }
+
 

@@ -7,6 +7,7 @@ UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableCom
 class UUsingStateComponent : public UCharacterStateComponent {
     GENERATED_BODY()
 public:
-    UUsingStateComponent();
+    UUsingStateComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

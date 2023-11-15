@@ -8,5 +8,6 @@ class USeamlessTravelEventKey : public UDataAsset {
     GENERATED_BODY()
 public:
     USeamlessTravelEventKey();
+
 };
 

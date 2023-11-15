@@ -5,3 +5,4 @@ UFearAoEBonus::UFearAoEBonus() {
     this->range = 500.00f;
 }
 
+

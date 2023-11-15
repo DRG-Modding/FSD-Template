@@ -30,7 +30,8 @@ protected:
     UParticleSystem* FrozenDeathparticles;
     
 public:
-    AFlyingEnemyDeepPathfinderCharacter();
+    AFlyingEnemyDeepPathfinderCharacter(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void TriggerFrozenRagdoll();

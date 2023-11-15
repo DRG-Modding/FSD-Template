@@ -87,6 +87,7 @@ protected:
     
 public:
     UTerrainMaterial();
+
     UFUNCTION(BlueprintCallable)
     static void TestMaterialEffects(UTerrainMaterial* Material, UPARAM(Ref) TArray<FTestTerrainMaterialItem>& Items);
     

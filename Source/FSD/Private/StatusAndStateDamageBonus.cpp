@@ -5,3 +5,4 @@ UStatusAndStateDamageBonus::UStatusAndStateDamageBonus() {
     this->DamageClass = NULL;
 }
 
+

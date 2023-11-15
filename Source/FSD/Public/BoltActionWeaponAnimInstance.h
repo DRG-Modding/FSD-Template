@@ -8,5 +8,6 @@ class UBoltActionWeaponAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:
     UBoltActionWeaponAnimInstance();
+
 };
 

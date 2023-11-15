@@ -4,3 +4,4 @@ UItemBlueprintReward::UItemBlueprintReward() {
     this->ItemID = NULL;
 }
 
+

@@ -95,9 +95,10 @@ protected:
     bool Using;
     
 public:
-    USplineHookAttack();
+    USplineHookAttack(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetTailLight(UPointLightComponent* Light);

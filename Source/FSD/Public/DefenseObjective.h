@@ -27,9 +27,10 @@ protected:
     UDebrisPositioning* DebrisPositioning;
     
 public:
-    UDefenseObjective();
+    UDefenseObjective(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void PointDefended();
     

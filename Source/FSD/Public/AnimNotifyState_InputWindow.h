@@ -8,5 +8,6 @@ class UAnimNotifyState_InputWindow : public UAnimNotifyState {
     GENERATED_BODY()
 public:
     UAnimNotifyState_InputWindow();
+
 };
 

@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCSGCylinderProperties Properties;
     
-    UCSGCylinderComponent();
+    UCSGCylinderComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

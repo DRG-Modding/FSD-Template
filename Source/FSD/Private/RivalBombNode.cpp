@@ -1,6 +1,19 @@
 #include "RivalBombNode.h"
+#include "Components/SceneComponent.h"
 #include "HackingUsableComponent.h"
 #include "Net/UnrealNetwork.h"
+
+ARivalBombNode::ARivalBombNode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("DefaultRootComponent"));
+    this->RivalBombCable = NULL;
+    this->HackingUsable = CreateDefaultSubobject<UHackingUsableComponent>(TEXT("HackingUsable"));
+    this->State = ERivalBombNodeState::Inactive;
+    this->BombCable = NULL;
+    this->RivalBomb = NULL;
+    this->RemainingHackTime = -1.00f;
+    this->HackStartTime = 0.00f;
+    this->BombIndex = -1;
+}
 
 
 void ARivalBombNode::OnRep_State() {
@@ -29,14 +42,4 @@ void ARivalBombNode::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
     DOREPLIFETIME(ARivalBombNode, BombIndex);
 }
 
-ARivalBombNode::ARivalBombNode() {
-    this->RivalBombCable = NULL;
-    this->HackingUsable = CreateDefaultSubobject<UHackingUsableComponent>(TEXT("HackingUsable"));
-    this->State = ERivalBombNodeState::Inactive;
-    this->BombCable = NULL;
-    this->RivalBomb = NULL;
-    this->RemainingHackTime = -1.00f;
-    this->HackStartTime = 0.00f;
-    this->BombIndex = -1;
-}
 

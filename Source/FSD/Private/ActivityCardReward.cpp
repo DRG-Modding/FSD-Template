@@ -4,3 +4,4 @@ UActivityCardReward::UActivityCardReward() {
     this->Activity = NULL;
 }
 
+

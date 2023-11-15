@@ -7,3 +7,4 @@ UAngleIndicatorWidget::UAngleIndicatorWidget() {
     this->MaxAngle = 35.00f;
 }
 
+

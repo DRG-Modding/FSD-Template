@@ -31,7 +31,8 @@ protected:
     AFSDGameState* GameState;
     
 public:
-    UDifficultyManager();
+    UDifficultyManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     UDifficultySetting* SelectDifficulty(int32 Index);
     

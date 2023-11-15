@@ -55,9 +55,10 @@ protected:
     USceneCaptureComponent2D* TerrainScannerCapture;
     
 public:
-    ATerrainScannerItem();
+    ATerrainScannerItem(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetIslookingAtMap(bool lookingAtMap);

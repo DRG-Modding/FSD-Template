@@ -10,7 +10,8 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UProceduralResources : public UActorComponent {
     GENERATED_BODY()
 public:
-    UProceduralResources();
+    UProceduralResources(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void GenerateResources();
     

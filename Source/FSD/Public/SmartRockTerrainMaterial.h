@@ -8,5 +8,6 @@ class USmartRockTerrainMaterial : public UTerrainMaterialBase {
     GENERATED_BODY()
 public:
     USmartRockTerrainMaterial();
+
 };
 

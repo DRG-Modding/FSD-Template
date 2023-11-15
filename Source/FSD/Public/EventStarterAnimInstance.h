@@ -22,5 +22,6 @@ protected:
     
 public:
     UEventStarterAnimInstance();
+
 };
 

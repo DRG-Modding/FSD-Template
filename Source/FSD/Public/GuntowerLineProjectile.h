@@ -44,7 +44,8 @@ protected:
     float TimeBetweenLineChecks;
     
 public:
-    AGuntowerLineProjectile();
+    AGuntowerLineProjectile(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void TurnOffParticles();

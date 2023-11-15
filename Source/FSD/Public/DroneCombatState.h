@@ -16,6 +16,7 @@ protected:
     FGameplayTagQuery AttackOnSightQuery;
     
 public:
-    UDroneCombatState();
+    UDroneCombatState(const FObjectInitializer& ObjectInitializer);
+
 };
 

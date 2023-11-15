@@ -5,3 +5,4 @@ UStoreBoughtAquisition::UStoreBoughtAquisition() {
     this->RequiredPlayerRank = 0;
 }
 
+

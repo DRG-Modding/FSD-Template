@@ -18,8 +18,9 @@ protected:
     UMaterialInstance* BiomeMaterialOverride;
     
 public:
-    USpawnEffectsComponent();
+    USpawnEffectsComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 };
 

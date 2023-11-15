@@ -30,7 +30,8 @@ protected:
     int32 ReflectionCount;
     
 public:
-    UReflectionHitscanComponent();
+    UReflectionHitscanComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_RegisterHit_Reflection(const FReflectiveHitscanHit& Hit);

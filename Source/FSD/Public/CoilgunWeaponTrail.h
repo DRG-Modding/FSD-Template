@@ -44,9 +44,10 @@ protected:
     TArray<TSubclassOf<UStatusEffect>> EffectsToApply;
     
 public:
-    ACoilgunWeaponTrail();
+    ACoilgunWeaponTrail(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void OnRep_TrailHalfLength();
     

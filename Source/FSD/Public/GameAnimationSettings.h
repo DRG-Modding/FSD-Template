@@ -8,5 +8,6 @@ class UGameAnimationSettings : public UDataAsset {
     GENERATED_BODY()
 public:
     UGameAnimationSettings();
+
 };
 

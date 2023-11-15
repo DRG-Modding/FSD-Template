@@ -1,5 +1,6 @@
 #include "TreasureRewarder.h"
 
-UTreasureRewarder::UTreasureRewarder() {
+UTreasureRewarder::UTreasureRewarder(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

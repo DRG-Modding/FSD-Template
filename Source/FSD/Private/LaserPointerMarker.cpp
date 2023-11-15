@@ -1,6 +1,15 @@
 #include "LaserPointerMarker.h"
 #include "Net/UnrealNetwork.h"
 
+ALaserPointerMarker::ALaserPointerMarker(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->LookAtActor = NULL;
+    this->LookAtComponent = NULL;
+    this->LookAtTerrainMaterial = NULL;
+}
+
 APlayerCharacter* ALaserPointerMarker::GetCharacter() const {
     return NULL;
 }
@@ -13,9 +22,4 @@ void ALaserPointerMarker::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(ALaserPointerMarker, LookAtTerrainMaterial);
 }
 
-ALaserPointerMarker::ALaserPointerMarker() {
-    this->LookAtActor = NULL;
-    this->LookAtComponent = NULL;
-    this->LookAtTerrainMaterial = NULL;
-}
 

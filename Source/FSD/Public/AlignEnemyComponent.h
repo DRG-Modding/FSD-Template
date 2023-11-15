@@ -15,9 +15,10 @@ protected:
     bool IncludePitch;
     
 public:
-    UAlignEnemyComponent();
+    UAlignEnemyComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetRotateWhileStationary(bool Value);
     

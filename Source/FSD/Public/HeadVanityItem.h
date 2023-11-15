@@ -60,5 +60,6 @@ protected:
     
 public:
     UHeadVanityItem();
+
 };
 

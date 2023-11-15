@@ -12,6 +12,74 @@
 #include "PlayerImpactCooldownComponent.h"
 #include "ProjectileAttackComponent.h"
 
+APatrolBot::APatrolBot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->HackingUsable = CreateDefaultSubobject<UHackingUsableComponent>(TEXT("HackingUsable"));
+    this->PawnSensing = CreateDefaultSubobject<UPawnSensingComponent>(TEXT("PawnSensing"));
+    this->CollisionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionSphere"));
+    this->NearTargetSphere = NULL;
+    this->LaserBeam = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("LaserBeamIndicator"));
+    this->TearingGroundParticles = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("TearingGroundParticles"));
+    this->EnemyComponent = CreateDefaultSubobject<UEnemyComponent>(TEXT("EnemyComponent"));
+    this->Damage = CreateDefaultSubobject<UDamageComponent>(TEXT("Damage"));
+    this->BumpDamage = CreateDefaultSubobject<UDamageComponent>(TEXT("BumpDamage"));
+    this->Alert = CreateDefaultSubobject<UPawnAlertComponent>(TEXT("Alert"));
+    this->ImpactCooldown = CreateDefaultSubobject<UPlayerImpactCooldownComponent>(TEXT("ImpactCooldown"));
+    this->CeilingAvoidance = CreateDefaultSubobject<UAvoidCeilingComponent>(TEXT("CeilingAvoidance"));
+    this->RollingAudio = CreateDefaultSubobject<UAudioComponent>(TEXT("RollingAudioComponent"));
+    this->FlyingAudio = CreateDefaultSubobject<UAudioComponent>(TEXT("FlyingAudioComponent"));
+    this->RollingRangedAttack = CreateDefaultSubobject<UProjectileAttackComponent>(TEXT("RangedAttack"));
+    this->FlyingRangedAttack = CreateDefaultSubobject<UProjectileAttackComponent>(TEXT("FlyingRangedAttack"));
+    this->MissileAttack = CreateDefaultSubobject<UProjectileAttackComponent>(TEXT("MissileAttack"));
+    this->MaxMotionSoundVelThresholdFlying = 400.00f;
+    this->MaxMotionSoundVelThreshold = 400.00f;
+    this->MaxTurningMotionSoundVelThreshold = 400.00f;
+    this->DebugAudio = false;
+    this->HackedAttackMultiplier = 0.50f;
+    this->IsLockedOn = false;
+    this->DelayAfterLockOn = 0.50f;
+    this->ImpactCue = NULL;
+    this->JumpSound = NULL;
+    this->StartupAccelerationSound = NULL;
+    this->LaunchPower = 0.00f;
+    this->SpawnRocketsTime = 5.00f;
+    this->State = EPatrolBotState::Rolling;
+    this->ControlState = EPatrolBotControlState::Hostile;
+    this->HackedAttackSpeedMultiplier = 0.80f;
+    this->LaserPenetrationDistance = 10.00f;
+    this->MinTurretAngle = -30.00f;
+    this->MaxTurretAngle = 50.00f;
+    this->SpawnRocketsChance = 0.50f;
+    this->GunRange = 0.00f;
+    this->RollingAttackCooldown = 0.00f;
+    this->FlyingAttackCooldown = 0.00f;
+    this->TurretLerpSpeed = 3.00f;
+    this->AimDownwardsOffset = 40.00f;
+    this->AccelerationThreshold = 0.00f;
+    this->LowSpeedThreshold = 50.00f;
+    this->RollSettings = NULL;
+    this->JumpSettings = NULL;
+    this->SpawnRocketsSettings = NULL;
+    this->CanJump = false;
+    this->JumpForce = 0.00f;
+    this->StartFlyingTimer = 0.50f;
+    this->MinRollingTime = 0.00f;
+    this->MaxRollingTime = 0.00f;
+    this->MinFlyingTime = 0.00f;
+    this->MaxFlyingTime = 0.00f;
+    this->SinSpeed = 0.50f;
+    this->SinSize = 50.00f;
+    this->FlyingDampOmega = 4.00f;
+    this->RollingDampOmega = 20.00f;
+    this->FiringRockets = false;
+    this->Alerted = false;
+    this->CurrentTarget = NULL;
+    this->CollisionSphere->SetupAttachment(Mesh);
+    this->LaserBeam->SetupAttachment(Mesh);
+    this->TearingGroundParticles->SetupAttachment(RootComponent);
+    this->RollingAudio->SetupAttachment(Mesh);
+    this->FlyingAudio->SetupAttachment(Mesh);
+}
+
 void APatrolBot::SetIsPatrolling(bool patroling) {
 }
 
@@ -90,66 +158,4 @@ void APatrolBot::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifeti
     DOREPLIFETIME(APatrolBot, CurrentTarget);
 }
 
-APatrolBot::APatrolBot() {
-    this->HackingUsable = CreateDefaultSubobject<UHackingUsableComponent>(TEXT("HackingUsable"));
-    this->PawnSensing = CreateDefaultSubobject<UPawnSensingComponent>(TEXT("PawnSensing"));
-    this->CollisionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionSphere"));
-    this->NearTargetSphere = NULL;
-    this->LaserBeam = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("LaserBeamIndicator"));
-    this->TearingGroundParticles = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("TearingGroundParticles"));
-    this->EnemyComponent = CreateDefaultSubobject<UEnemyComponent>(TEXT("EnemyComponent"));
-    this->Damage = CreateDefaultSubobject<UDamageComponent>(TEXT("Damage"));
-    this->BumpDamage = CreateDefaultSubobject<UDamageComponent>(TEXT("BumpDamage"));
-    this->Alert = CreateDefaultSubobject<UPawnAlertComponent>(TEXT("Alert"));
-    this->ImpactCooldown = CreateDefaultSubobject<UPlayerImpactCooldownComponent>(TEXT("ImpactCooldown"));
-    this->CeilingAvoidance = CreateDefaultSubobject<UAvoidCeilingComponent>(TEXT("CeilingAvoidance"));
-    this->RollingAudio = CreateDefaultSubobject<UAudioComponent>(TEXT("RollingAudioComponent"));
-    this->FlyingAudio = CreateDefaultSubobject<UAudioComponent>(TEXT("FlyingAudioComponent"));
-    this->RollingRangedAttack = CreateDefaultSubobject<UProjectileAttackComponent>(TEXT("RangedAttack"));
-    this->FlyingRangedAttack = CreateDefaultSubobject<UProjectileAttackComponent>(TEXT("FlyingRangedAttack"));
-    this->MissileAttack = CreateDefaultSubobject<UProjectileAttackComponent>(TEXT("MissileAttack"));
-    this->MaxMotionSoundVelThresholdFlying = 400.00f;
-    this->MaxMotionSoundVelThreshold = 400.00f;
-    this->MaxTurningMotionSoundVelThreshold = 400.00f;
-    this->DebugAudio = false;
-    this->HackedAttackMultiplier = 0.50f;
-    this->IsLockedOn = false;
-    this->DelayAfterLockOn = 0.50f;
-    this->ImpactCue = NULL;
-    this->JumpSound = NULL;
-    this->StartupAccelerationSound = NULL;
-    this->LaunchPower = 0.00f;
-    this->SpawnRocketsTime = 5.00f;
-    this->State = EPatrolBotState::Rolling;
-    this->ControlState = EPatrolBotControlState::Hostile;
-    this->HackedAttackSpeedMultiplier = 0.80f;
-    this->LaserPenetrationDistance = 10.00f;
-    this->MinTurretAngle = -30.00f;
-    this->MaxTurretAngle = 50.00f;
-    this->SpawnRocketsChance = 0.50f;
-    this->GunRange = 0.00f;
-    this->RollingAttackCooldown = 0.00f;
-    this->FlyingAttackCooldown = 0.00f;
-    this->TurretLerpSpeed = 3.00f;
-    this->AimDownwardsOffset = 40.00f;
-    this->AccelerationThreshold = 0.00f;
-    this->LowSpeedThreshold = 50.00f;
-    this->RollSettings = NULL;
-    this->JumpSettings = NULL;
-    this->SpawnRocketsSettings = NULL;
-    this->CanJump = false;
-    this->JumpForce = 0.00f;
-    this->StartFlyingTimer = 0.50f;
-    this->MinRollingTime = 0.00f;
-    this->MaxRollingTime = 0.00f;
-    this->MinFlyingTime = 0.00f;
-    this->MaxFlyingTime = 0.00f;
-    this->SinSpeed = 0.50f;
-    this->SinSize = 50.00f;
-    this->FlyingDampOmega = 4.00f;
-    this->RollingDampOmega = 20.00f;
-    this->FiringRockets = false;
-    this->Alerted = false;
-    this->CurrentTarget = NULL;
-}
 

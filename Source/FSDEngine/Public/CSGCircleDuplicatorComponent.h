@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCSGCircleDuplicatorProperties Properties;
     
-    UCSGCircleDuplicatorComponent();
+    UCSGCircleDuplicatorComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

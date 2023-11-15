@@ -2,6 +2,13 @@
 #include "Components/SceneComponent.h"
 #include "Net/UnrealNetwork.h"
 
+AFakePhysicsMover::AFakePhysicsMover(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    this->Root = (USceneComponent*)RootComponent;
+    this->MoveSettings = NULL;
+    this->SyncTime = 0.00f;
+}
+
 void AFakePhysicsMover::Teleport(const FVector& Pos, const FVector& Vel) {
 }
 
@@ -21,9 +28,4 @@ void AFakePhysicsMover::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
     DOREPLIFETIME(AFakePhysicsMover, MoveSettings);
 }
 
-AFakePhysicsMover::AFakePhysicsMover() {
-    this->Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-    this->MoveSettings = NULL;
-    this->SyncTime = 0.00f;
-}
 

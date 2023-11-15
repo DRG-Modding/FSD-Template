@@ -54,9 +54,10 @@ protected:
     FTerminatorTarget DesiredTarget;
     
 public:
-    ATerminatorTentacle();
+    ATerminatorTentacle(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void PlayHitReaction(float Amount);
@@ -95,7 +96,7 @@ protected:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_PlayFlairAnimation();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

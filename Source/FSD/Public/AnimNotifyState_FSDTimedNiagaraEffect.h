@@ -30,5 +30,6 @@ public:
     bool bDestroyAtEnd;
     
     UAnimNotifyState_FSDTimedNiagaraEffect();
+
 };
 

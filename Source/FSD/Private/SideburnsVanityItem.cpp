@@ -4,3 +4,4 @@ USideburnsVanityItem::USideburnsVanityItem() {
     this->RequiresSlimArmor = false;
 }
 
+

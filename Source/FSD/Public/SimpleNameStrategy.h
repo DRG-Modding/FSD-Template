@@ -8,5 +8,6 @@ class FSD_API USimpleNameStrategy : public UValidatorStrategy {
     GENERATED_BODY()
 public:
     USimpleNameStrategy();
+
 };
 

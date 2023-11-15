@@ -6,6 +6,34 @@
 #include "InDangerComponent.h"
 #include "Net/UnrealNetwork.h"
 
+AFlyingLifter::AFlyingLifter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->GrabLight = CreateDefaultSubobject<UPointLightComponent>(TEXT("GrabberLight"));
+    this->GrabberComp = CreateDefaultSubobject<UGrabberComponent>(TEXT("GrabberComponent"));
+    this->GrabCapsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("GrabCapsuleComponent"));
+    this->GrabbedIdleLoop = CreateDefaultSubobject<UAudioComponent>(TEXT("GrabLoopSound"));
+    this->InDanger = CreateDefaultSubobject<UInDangerComponent>(TEXT("InDangerComponent"));
+    this->ScreamComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("ScreamAudio"));
+    this->PreventGrabAfterSpawn = 3.00f;
+    this->GrabberState = EGrabberState::StandBy;
+    this->WanderingSpeed = 0.00f;
+    this->WanderingAcceleration = 0.00f;
+    this->ChaseSpeed = 0.00f;
+    this->ChaseAcceleration = 0.00f;
+    this->CarrySpeed = 0.00f;
+    this->CarryAcceleration = 0.00f;
+    this->FleeSpeed = 0.00f;
+    this->FleeAcceleration = 0.00f;
+    this->CarryCooldown = 12.00f;
+    this->FleeSound = NULL;
+    this->FleeAnimation = NULL;
+    this->ParalyzeOnGrab = true;
+    this->ExtraUpForce = 10.00f;
+    this->ScreamDistance = 1000.00f;
+    this->GrabCapsule->SetupAttachment(Mesh);
+    this->GrabbedIdleLoop->SetupAttachment(Mesh);
+    this->ScreamComponent->SetupAttachment(Mesh);
+}
+
 bool AFlyingLifter::SelectAnotherTarget() {
     return false;
 }
@@ -41,28 +69,4 @@ void AFlyingLifter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
     DOREPLIFETIME(AFlyingLifter, GrabberState);
 }
 
-AFlyingLifter::AFlyingLifter() {
-    this->GrabLight = CreateDefaultSubobject<UPointLightComponent>(TEXT("GrabberLight"));
-    this->GrabberComp = CreateDefaultSubobject<UGrabberComponent>(TEXT("GrabberComponent"));
-    this->GrabCapsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("GrabCapsuleComponent"));
-    this->GrabbedIdleLoop = CreateDefaultSubobject<UAudioComponent>(TEXT("GrabLoopSound"));
-    this->InDanger = CreateDefaultSubobject<UInDangerComponent>(TEXT("InDangerComponent"));
-    this->ScreamComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("ScreamAudio"));
-    this->PreventGrabAfterSpawn = 3.00f;
-    this->GrabberState = EGrabberState::StandBy;
-    this->WanderingSpeed = 0.00f;
-    this->WanderingAcceleration = 0.00f;
-    this->ChaseSpeed = 0.00f;
-    this->ChaseAcceleration = 0.00f;
-    this->CarrySpeed = 0.00f;
-    this->CarryAcceleration = 0.00f;
-    this->FleeSpeed = 0.00f;
-    this->FleeAcceleration = 0.00f;
-    this->CarryCooldown = 12.00f;
-    this->FleeSound = NULL;
-    this->FleeAnimation = NULL;
-    this->ParalyzeOnGrab = true;
-    this->ExtraUpForce = 10.00f;
-    this->ScreamDistance = 1000.00f;
-}
 

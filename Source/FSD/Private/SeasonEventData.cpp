@@ -5,3 +5,4 @@ USeasonEventData::USeasonEventData() {
     this->PerformancePointsOnFail = 0;
 }
 
+

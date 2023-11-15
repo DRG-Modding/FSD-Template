@@ -18,6 +18,7 @@ protected:
     AActor* CurrentTarget;
     
 public:
-    AAimingTowerEventModule();
+    AAimingTowerEventModule(const FObjectInitializer& ObjectInitializer);
+
 };
 

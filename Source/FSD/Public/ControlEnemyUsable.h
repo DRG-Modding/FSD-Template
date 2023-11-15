@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UControlEnemyUsable : public UInstantUsable {
     GENERATED_BODY()
 public:
-    UControlEnemyUsable();
+    UControlEnemyUsable(const FObjectInitializer& ObjectInitializer);
+
 };
 

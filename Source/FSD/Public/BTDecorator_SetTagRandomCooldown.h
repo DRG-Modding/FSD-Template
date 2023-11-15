@@ -22,5 +22,6 @@ public:
     bool TriggerOnActivation;
     
     UBTDecorator_SetTagRandomCooldown();
+
 };
 

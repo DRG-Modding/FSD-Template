@@ -26,7 +26,8 @@ private:
     bool RespectAttack;
     
 public:
-    AFacilityTurretController();
+    AFacilityTurretController(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable)
     void OnTurretsAttackingChanged(bool IsAttacking);

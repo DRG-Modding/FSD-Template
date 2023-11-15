@@ -23,6 +23,7 @@ protected:
     
 public:
     UExterminationReward();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnEnemyKilled(const FGameplayTagContainer& GameplayTags, AActor* killedEnemy);

@@ -29,5 +29,6 @@ public:
     TSoftObjectPtr<USoundCue> Audio2D_OnBegin;
     
     UPlayerAfflictionOverlay();
+
 };
 

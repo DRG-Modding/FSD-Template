@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UCSGPlaneComponent : public UConvexMeshWithCachedTreeComponent {
     GENERATED_BODY()
 public:
-    UCSGPlaneComponent();
+    UCSGPlaneComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -19,7 +19,8 @@ protected:
     FVector RelativeDestinationLocation;
     
 public:
-    AOldZiplineSalvage();
+    AOldZiplineSalvage(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnMatchStarted();

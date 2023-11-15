@@ -19,5 +19,6 @@ protected:
     
 public:
     UTerminatorTentacleHeadAnimInstance();
+
 };
 

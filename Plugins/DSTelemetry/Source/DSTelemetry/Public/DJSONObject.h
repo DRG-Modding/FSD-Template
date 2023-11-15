@@ -11,6 +11,7 @@ class DSTELEMETRY_API UDJSONObject : public UObject {
     GENERATED_BODY()
 public:
     UDJSONObject();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static UDJSONObject* CreateJSONObject(UObject* WorldContextObject);
     

@@ -11,6 +11,7 @@ class UActivitySubSystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
     UActivitySubSystem();
+
     UFUNCTION(BlueprintCallable)
     void StartActivity(const APlayerState* PlayerState, const UGameActivityType* Activity);
     

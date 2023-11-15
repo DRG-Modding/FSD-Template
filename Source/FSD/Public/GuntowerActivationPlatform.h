@@ -57,9 +57,10 @@ protected:
     bool IsShutDown;
     
 public:
-    AGuntowerActivationPlatform();
+    AGuntowerActivationPlatform(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void ShutDown();
     

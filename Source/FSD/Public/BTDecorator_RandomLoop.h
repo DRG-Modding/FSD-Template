@@ -11,5 +11,6 @@ public:
     float Chance;
     
     UBTDecorator_RandomLoop();
+
 };
 

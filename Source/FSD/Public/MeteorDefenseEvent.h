@@ -24,9 +24,10 @@ protected:
     APlagueMeteor* meteor;
     
 public:
-    AMeteorDefenseEvent();
+    AMeteorDefenseEvent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 private:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetMeteor(APlagueMeteor* NewMeteor);

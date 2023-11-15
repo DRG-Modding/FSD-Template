@@ -29,6 +29,7 @@ protected:
     
 public:
     UItemsBarIcon();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnUnselect();

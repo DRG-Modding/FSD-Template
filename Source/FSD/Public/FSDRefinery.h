@@ -86,9 +86,10 @@ protected:
     TArray<APipelineStart*> PipelineStarts;
     
 public:
-    AFSDRefinery();
+    AFSDRefinery(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetRefineryState(ERefineryState InState);

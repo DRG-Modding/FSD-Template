@@ -5,3 +5,4 @@ UItemTemperatureDamageCondition::UItemTemperatureDamageCondition() {
     this->MustBeUnderThreshold = false;
 }
 
+

@@ -11,6 +11,7 @@ class UFSDSteamUtils : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFSDSteamUtils();
+
     UFUNCTION(BlueprintCallable)
     static bool PlayerIsFollowingUsOnSteam();
     

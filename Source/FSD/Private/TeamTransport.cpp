@@ -1,7 +1,34 @@
 #include "TeamTransport.h"
+#include "Components/SceneComponent.h"
 #include "AutoCarverComponent.h"
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
+
+ATeamTransport::ATeamTransport(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+    this->DropHeight = 3500.00f;
+    this->AutoCarver = CreateDefaultSubobject<UAutoCarverComponent>(TEXT("AutoCarver"));
+    this->DropCurve = NULL;
+    this->DepartCurve = NULL;
+    this->CarverDropCurve = NULL;
+    this->CarverRotationSpeed = 100.00f;
+    this->DwarfCheckerBox = NULL;
+    this->DepartureTime = -1.00f;
+    this->MissionType = EMiningPodMission::DropAndReturn;
+    this->WaitForPlayerSpawns = true;
+    this->HasLanded = false;
+    this->PodOutline = NULL;
+    this->TransportState = EMiningPodState::WaitingForGameStart;
+    this->rampState = EMiningPodRampState::Closed;
+    this->TargetDropTime = 0.00f;
+    this->TargetDepartureTime = 0.00f;
+    this->TimeToDrop = 0.00f;
+    this->ObjectivesManager = NULL;
+    this->AutoCarver->SetupAttachment(RootComponent);
+}
 
 ATeamTransport* ATeamTransport::SpawnPodAtLocation(UObject* WorldContextObject, TSubclassOf<ATeamTransport> podClass, const FTransform& Transform) {
     return NULL;
@@ -82,24 +109,4 @@ void ATeamTransport::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
     DOREPLIFETIME(ATeamTransport, rampState);
 }
 
-ATeamTransport::ATeamTransport() {
-    this->DropHeight = 3500.00f;
-    this->AutoCarver = CreateDefaultSubobject<UAutoCarverComponent>(TEXT("AutoCarver"));
-    this->DropCurve = NULL;
-    this->DepartCurve = NULL;
-    this->CarverDropCurve = NULL;
-    this->CarverRotationSpeed = 100.00f;
-    this->DwarfCheckerBox = NULL;
-    this->DepartureTime = -1.00f;
-    this->MissionType = EMiningPodMission::DropAndReturn;
-    this->WaitForPlayerSpawns = true;
-    this->HasLanded = false;
-    this->PodOutline = NULL;
-    this->TransportState = EMiningPodState::WaitingForGameStart;
-    this->rampState = EMiningPodRampState::Closed;
-    this->TargetDropTime = 0.00f;
-    this->TargetDepartureTime = 0.00f;
-    this->TimeToDrop = 0.00f;
-    this->ObjectivesManager = NULL;
-}
 

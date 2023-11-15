@@ -4,3 +4,4 @@ UAnimNotifyState_Salute::UAnimNotifyState_Salute() {
     this->FirstPerson = false;
 }
 
+

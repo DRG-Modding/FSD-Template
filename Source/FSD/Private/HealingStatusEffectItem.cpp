@@ -7,3 +7,4 @@ UHealingStatusEffectItem::UHealingStatusEffectItem() {
     this->IgnoreCanTakeDamage = false;
 }
 
+

@@ -1,5 +1,8 @@
 #include "PlayerCharacterFunctionLibrary.h"
 
+UPlayerCharacterFunctionLibrary::UPlayerCharacterFunctionLibrary() {
+}
+
 bool UPlayerCharacterFunctionLibrary::SetPlayerVoiceMuted(UObject* WorldContextObject, AFSDPlayerState* PlayerState, bool Mute, bool TrySystemWide, int32 localUserNum) {
     return false;
 }
@@ -28,6 +31,4 @@ APlayerCharacter* UPlayerCharacterFunctionLibrary::GetNearestPlayer(AActor* From
     return NULL;
 }
 
-UPlayerCharacterFunctionLibrary::UPlayerCharacterFunctionLibrary() {
-}
 

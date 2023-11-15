@@ -19,6 +19,7 @@ protected:
     
 public:
     UMusicManager();
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void StopHandle(FMusicHandle Handle);
     

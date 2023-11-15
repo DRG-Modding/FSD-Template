@@ -17,7 +17,8 @@ protected:
     TArray<UPrimitiveComponent*> PrimitiveComponents;
     
 public:
-    UGravityChangedComponent();
+    UGravityChangedComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnGravityChanged(float Gravity, float Change);

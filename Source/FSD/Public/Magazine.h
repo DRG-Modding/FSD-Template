@@ -18,7 +18,8 @@ protected:
     USoundCue* ImpactGroundSound;
     
 public:
-    AMagazine();
+    AMagazine(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnItemSkinned(USkinEffect* Skin);
@@ -26,7 +27,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void ActorWasHit(AActor* SelfActor, AActor* OtherActor, FVector NormalImpulse, const FHitResult& Hit);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

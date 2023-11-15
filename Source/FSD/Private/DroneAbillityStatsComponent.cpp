@@ -1,6 +1,7 @@
 #include "DroneAbillityStatsComponent.h"
 
-UDroneAbillityStatsComponent::UDroneAbillityStatsComponent() {
+UDroneAbillityStatsComponent::UDroneAbillityStatsComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->UseOwnArmorDamageMultiplier = false;
 }
+
 

@@ -42,9 +42,10 @@ protected:
     float InfectionDecreaseOverTimer;
     
 public:
-    UPlayerInfectionComponent();
+    UPlayerInfectionComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_ClearInfection();
     

@@ -1,5 +1,6 @@
 #include "SDFIntersectOpComponent.h"
 
-USDFIntersectOpComponent::USDFIntersectOpComponent() {
+USDFIntersectOpComponent::USDFIntersectOpComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

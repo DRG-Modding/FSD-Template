@@ -1,6 +1,13 @@
 #include "GatherGemsObjective.h"
 #include "Net/UnrealNetwork.h"
 
+UGatherGemsObjective::UGatherGemsObjective(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->GemsRequired = 0;
+    this->GemsSpawnedModifier = 1.50f;
+    this->GemsCollected = 0;
+    this->GemResource = NULL;
+}
+
 void UGatherGemsObjective::OnResourceChanged(UCappedResource* CappedResource, float Amount) {
 }
 
@@ -13,10 +20,4 @@ void UGatherGemsObjective::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>&
     DOREPLIFETIME(UGatherGemsObjective, GemsCollected);
 }
 
-UGatherGemsObjective::UGatherGemsObjective() {
-    this->GemsRequired = 0;
-    this->GemsSpawnedModifier = 1.50f;
-    this->GemsCollected = 0;
-    this->GemResource = NULL;
-}
 

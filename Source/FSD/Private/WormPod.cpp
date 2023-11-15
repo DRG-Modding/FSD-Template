@@ -4,6 +4,28 @@
 #include "Net/UnrealNetwork.h"
 #include "SimpleHealthComponent.h"
 
+AWormPod::AWormPod(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    this->Root = (USceneComponent*)RootComponent;
+    this->ScalePoint = CreateDefaultSubobject<USceneComponent>(TEXT("ScalePoint"));
+    this->PodMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("PodMesh"));
+    this->Health = CreateDefaultSubobject<USimpleHealthComponent>(TEXT("Health"));
+    this->Grown = false;
+    this->GrowthAnimation = NULL;
+    this->PopAnimation = NULL;
+    this->CarcasActor = NULL;
+    this->WormDescriptor = NULL;
+    this->PopParticles = NULL;
+    this->deathParticles = NULL;
+    this->PopSound = NULL;
+    this->deathSound = NULL;
+    this->ParentDeathDelay = 1.00f;
+    this->DeathDelayVariance = 0.50f;
+    this->WormCount = 1;
+    this->ScalePoint->SetupAttachment(RootComponent);
+    this->PodMesh->SetupAttachment(ScalePoint);
+}
+
 void AWormPod::SpawnWorms() {
 }
 
@@ -31,22 +53,4 @@ void AWormPod::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetime
     DOREPLIFETIME(AWormPod, Grown);
 }
 
-AWormPod::AWormPod() {
-    this->Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-    this->ScalePoint = CreateDefaultSubobject<USceneComponent>(TEXT("ScalePoint"));
-    this->PodMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("PodMesh"));
-    this->Health = CreateDefaultSubobject<USimpleHealthComponent>(TEXT("Health"));
-    this->Grown = false;
-    this->GrowthAnimation = NULL;
-    this->PopAnimation = NULL;
-    this->CarcasActor = NULL;
-    this->WormDescriptor = NULL;
-    this->PopParticles = NULL;
-    this->deathParticles = NULL;
-    this->PopSound = NULL;
-    this->deathSound = NULL;
-    this->ParentDeathDelay = 1.00f;
-    this->DeathDelayVariance = 0.50f;
-    this->WormCount = 1;
-}
 

@@ -6,9 +6,9 @@
 
 class AActor;
 class UCurveFloat;
-
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnProjectilePenetrateDelegate);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnProjectileOutOfPropulsion);
+
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UFSDProjectileMovementComponent : public UProjectileMovementComponent {
@@ -43,6 +43,7 @@ protected:
     uint8 bCancelPenetration: 1;
     
 public:
-    UFSDProjectileMovementComponent();
+    UFSDProjectileMovementComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

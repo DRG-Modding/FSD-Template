@@ -19,6 +19,7 @@ protected:
     
 public:
     UActorContextWidget();
+
     UFUNCTION(BlueprintCallable)
     void Update(UPrimitiveComponent* InContextPrimitive);
     

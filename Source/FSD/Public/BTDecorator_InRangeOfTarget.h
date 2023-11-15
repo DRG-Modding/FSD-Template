@@ -14,5 +14,6 @@ public:
     float MaxRange;
     
     UBTDecorator_InRangeOfTarget();
+
 };
 

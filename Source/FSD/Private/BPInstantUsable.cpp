@@ -1,6 +1,7 @@
 #include "BPInstantUsable.h"
 
-
-UBPInstantUsable::UBPInstantUsable() {
+UBPInstantUsable::UBPInstantUsable(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
+
 

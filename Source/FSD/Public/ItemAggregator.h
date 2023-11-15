@@ -12,7 +12,8 @@ protected:
     FText CounterText;
     
 public:
-    UItemAggregator();
+    UItemAggregator(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UnbindAllEvents();
     

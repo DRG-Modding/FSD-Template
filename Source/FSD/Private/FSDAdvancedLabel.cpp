@@ -1,5 +1,10 @@
 #include "FSDAdvancedLabel.h"
 
+UFSDAdvancedLabel::UFSDAdvancedLabel() : UUserWidget(FObjectInitializer::Get()) {
+    this->UpperCase = false;
+    this->PreviewAs = EFSDInputSource::None;
+}
+
 void UFSDAdvancedLabel::SetText(FText NewText, FText OverrideControllerText) {
 }
 
@@ -48,8 +53,4 @@ UHorizontalBox* UFSDAdvancedLabel::CreateHorizontalBox() {
     return NULL;
 }
 
-UFSDAdvancedLabel::UFSDAdvancedLabel() : UUserWidget(FObjectInitializer::Get()) {
-    this->UpperCase = false;
-    this->PreviewAs = EFSDInputSource::None;
-}
 

@@ -1,6 +1,11 @@
 #include "StatusEffectsComponent.h"
 #include "Templates/SubclassOf.h"
 
+UStatusEffectsComponent::UStatusEffectsComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->OwnerHealth = NULL;
+    this->IgnoreAll = false;
+}
+
 bool UStatusEffectsComponent::TryPushActiveStatusEffect(TSubclassOf<UStatusEffect> StatusEffect, AActor* Target, AActor* Owner) {
     return false;
 }
@@ -50,8 +55,4 @@ UStatusEffect* UStatusEffectsComponent::CreateStatusEffectInstance(TSubclassOf<U
     return NULL;
 }
 
-UStatusEffectsComponent::UStatusEffectsComponent() {
-    this->OwnerHealth = NULL;
-    this->IgnoreAll = false;
-}
 

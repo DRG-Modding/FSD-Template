@@ -1,6 +1,10 @@
 #include "RecallableItem.h"
 #include "Net/UnrealNetwork.h"
 
+ARecallableItem::ARecallableItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ItemType = NULL;
+}
+
 void ARecallableItem::ServerSpawnItem_Implementation(const FVector& Location, const FRotator& Rotation) {
 }
 
@@ -21,7 +25,4 @@ void ARecallableItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
     DOREPLIFETIME(ARecallableItem, ActiveItems);
 }
 
-ARecallableItem::ARecallableItem() {
-    this->ItemType = NULL;
-}
 

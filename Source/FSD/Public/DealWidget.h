@@ -8,6 +8,7 @@ class UDealWidget : public UUserWidget {
     GENERATED_BODY()
 public:
     UDealWidget();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdateDealText();
     

@@ -11,6 +11,7 @@ class USpriteRectLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     USpriteRectLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FSpriteRect TranslateSpriteRect(FSpriteRect Rect, FVector2D Offset);
     

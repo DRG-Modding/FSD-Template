@@ -17,6 +17,7 @@ protected:
     
 public:
     UPerkHUDWidget();
+
     UFUNCTION(BlueprintCallable)
     void SetPerkAsset(UPerkAsset* InPerk);
     

@@ -119,9 +119,10 @@ private:
     TArray<USoundCue*> ReloadSoundCues;
     
 public:
-    ACrossbow();
+    ACrossbow(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdateRecallProgress();

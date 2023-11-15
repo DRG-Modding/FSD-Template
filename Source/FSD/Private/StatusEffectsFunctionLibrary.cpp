@@ -1,6 +1,9 @@
 #include "StatusEffectsFunctionLibrary.h"
 #include "Templates/SubclassOf.h"
 
+UStatusEffectsFunctionLibrary::UStatusEffectsFunctionLibrary() {
+}
+
 float UStatusEffectsFunctionLibrary::GetMaxResistance(TSubclassOf<UStatusEffect> StatusEffect) {
     return 0.0f;
 }
@@ -13,6 +16,4 @@ bool UStatusEffectsFunctionLibrary::CanTrigger(TSubclassOf<UStatusEffect> Status
     return false;
 }
 
-UStatusEffectsFunctionLibrary::UStatusEffectsFunctionLibrary() {
-}
 

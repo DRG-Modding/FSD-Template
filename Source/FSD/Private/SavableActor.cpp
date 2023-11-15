@@ -1,6 +1,7 @@
 #include "SavableActor.h"
 
-ASavableActor::ASavableActor() {
+ASavableActor::ASavableActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->EnableDangerousSaveGameIDEditing = false;
 }
+
 

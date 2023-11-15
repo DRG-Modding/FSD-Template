@@ -28,6 +28,7 @@ protected:
     int32 RackKey;
     
 public:
-    URackableItemComponent();
+    URackableItemComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

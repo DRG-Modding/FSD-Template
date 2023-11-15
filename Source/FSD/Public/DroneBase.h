@@ -25,9 +25,10 @@ protected:
     EDroneState CurrentState;
     
 public:
-    ADroneBase();
+    ADroneBase(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_CurrentState(EDroneState Previous);

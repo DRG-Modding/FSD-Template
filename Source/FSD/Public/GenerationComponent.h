@@ -7,6 +7,7 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class UGenerationComponent : public UPrimitiveComponent {
     GENERATED_BODY()
 public:
-    UGenerationComponent();
+    UGenerationComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

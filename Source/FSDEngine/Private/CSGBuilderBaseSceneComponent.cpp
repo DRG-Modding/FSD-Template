@@ -1,5 +1,6 @@
 #include "CSGBuilderBaseSceneComponent.h"
 
-UCSGBuilderBaseSceneComponent::UCSGBuilderBaseSceneComponent() {
+UCSGBuilderBaseSceneComponent::UCSGBuilderBaseSceneComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

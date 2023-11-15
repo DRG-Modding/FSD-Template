@@ -83,9 +83,10 @@ protected:
     EPlayerTemperatureState TemperatureState;
     
 public:
-    UPlayerTemperatureComponent();
+    UPlayerTemperatureComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetNormalTemperature();
     

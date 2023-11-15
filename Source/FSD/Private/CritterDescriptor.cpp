@@ -4,3 +4,4 @@ UCritterDescriptor::UCritterDescriptor() {
     this->SpawnChancePerRoom = 0.50f;
 }
 
+

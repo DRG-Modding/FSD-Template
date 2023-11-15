@@ -72,9 +72,10 @@ protected:
     float EMPDiscargeCooldown;
     
 public:
-    ARedeployableSentryGun();
+    ARedeployableSentryGun(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void ToggleOutlineAndIcon(bool Visible);
     

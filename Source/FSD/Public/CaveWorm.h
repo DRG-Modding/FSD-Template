@@ -26,7 +26,8 @@ protected:
     float SearchChunksInterval;
     
 public:
-    ACaveWorm();
+    ACaveWorm(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static AResourceChunk* SpawnResource(UObject* WorldContext, UResourceData* Data, float Size, FTransform Transform, FVector Impulse, FVector DropOffset);
     

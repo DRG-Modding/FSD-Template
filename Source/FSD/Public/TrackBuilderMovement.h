@@ -12,6 +12,7 @@ protected:
     float MovementSpeed;
     
 public:
-    UTrackBuilderMovement();
+    UTrackBuilderMovement(const FObjectInitializer& ObjectInitializer);
+
 };
 

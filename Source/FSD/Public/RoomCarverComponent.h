@@ -14,6 +14,7 @@ protected:
     URoomGenerator* RoomGenerator;
     
 public:
-    URoomCarverComponent();
+    URoomCarverComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

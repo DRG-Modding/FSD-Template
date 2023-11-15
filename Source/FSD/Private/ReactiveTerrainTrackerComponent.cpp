@@ -1,5 +1,6 @@
 #include "ReactiveTerrainTrackerComponent.h"
 
-UReactiveTerrainTrackerComponent::UReactiveTerrainTrackerComponent() {
+UReactiveTerrainTrackerComponent::UReactiveTerrainTrackerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

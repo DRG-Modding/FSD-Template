@@ -1,6 +1,13 @@
 #include "TriggeredStatusEffectUpgrade.h"
 #include "Templates/SubclassOf.h"
 
+UTriggeredStatusEffectUpgrade::UTriggeredStatusEffectUpgrade() {
+    this->StatusEffect = NULL;
+    this->upgradeType = ETriggeredStatusEffectType::ShieldDestroyed;
+    this->AoERange = 0.00f;
+    this->OwnerEffect = NULL;
+}
+
 void UTriggeredStatusEffectUpgrade::OnEffectShouldTrigger(AActor* PlayerCharacter) {
 }
 
@@ -8,10 +15,4 @@ FUpgradeValues UTriggeredStatusEffectUpgrade::GetUpgradedValue(AFSDPlayerState* 
     return FUpgradeValues{};
 }
 
-UTriggeredStatusEffectUpgrade::UTriggeredStatusEffectUpgrade() {
-    this->StatusEffect = NULL;
-    this->upgradeType = ETriggeredStatusEffectType::ShieldDestroyed;
-    this->AoERange = 0.00f;
-    this->OwnerEffect = NULL;
-}
 

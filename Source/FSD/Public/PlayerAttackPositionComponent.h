@@ -15,7 +15,8 @@ protected:
     float OnZiplineWalkingModifier;
     
 public:
-    UPlayerAttackPositionComponent();
+    UPlayerAttackPositionComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetGameplayModifier(float modifier);
     

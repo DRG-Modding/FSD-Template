@@ -31,6 +31,7 @@ protected:
     
 public:
     UVictoryPoseSettings();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UVictoryPose*> GetVictoryPoses() const;
     

@@ -16,6 +16,7 @@ public:
     FOptionalObjectiveWidgetDelegate OnWidgetUpdated;
     
     UOptionalObjectiveWidget();
+
     UFUNCTION(BlueprintCallable)
     void SignalWidgetUpdated();
     

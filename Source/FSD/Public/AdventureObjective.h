@@ -7,6 +7,7 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class FSD_API UAdventureObjective : public UObjective {
     GENERATED_BODY()
 public:
-    UAdventureObjective();
+    UAdventureObjective(const FObjectInitializer& ObjectInitializer);
+
 };
 

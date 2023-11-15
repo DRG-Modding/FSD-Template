@@ -177,7 +177,8 @@ protected:
     TSubclassOf<AActor> HeatSink;
     
 public:
-    AMicrowaveWeapon();
+    AMicrowaveWeapon(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UpdateMuzzleAnim(bool InIsFiring);
     

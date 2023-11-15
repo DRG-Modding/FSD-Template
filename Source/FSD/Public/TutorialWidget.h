@@ -15,6 +15,7 @@ protected:
     
 public:
     UTutorialWidget();
+
     UFUNCTION(BlueprintCallable)
     void Show(const FText& Text, const FText& Title, const FText& TaskText, UTexture2D* Image, float Duration);
     

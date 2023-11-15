@@ -24,6 +24,7 @@ protected:
     
 public:
     URichTextSizable();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetDefaultFontSize(int32 inFontSize);

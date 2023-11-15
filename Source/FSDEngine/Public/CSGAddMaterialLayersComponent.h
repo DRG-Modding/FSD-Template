@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCSGAddMaterialLayersProperties Properties;
     
-    UCSGAddMaterialLayersComponent();
+    UCSGAddMaterialLayersComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -1,6 +1,11 @@
 #include "ItemID.h"
 #include "Templates/SubclassOf.h"
 
+UItemID::UItemID() {
+    this->ItemOwner = NULL;
+    this->ItemCategory = EItemCategory::PrimaryWeapon;
+}
+
 bool UItemID::IsItemClassChildOf(TSubclassOf<AActor> InParentClass) const {
     return false;
 }
@@ -33,8 +38,4 @@ AActor* UItemID::GetActor() const {
     return NULL;
 }
 
-UItemID::UItemID() {
-    this->ItemOwner = NULL;
-    this->ItemCategory = EItemCategory::PrimaryWeapon;
-}
 

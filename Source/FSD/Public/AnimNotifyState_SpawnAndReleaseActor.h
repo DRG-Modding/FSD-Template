@@ -30,5 +30,6 @@ private:
     
 public:
     UAnimNotifyState_SpawnAndReleaseActor();
+
 };
 

@@ -1,6 +1,14 @@
 #include "InfectionPointCleaningComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UInfectionPointCleaningComponent::UInfectionPointCleaningComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bIsInitialized = false;
+    this->bHasBeenReplicated = false;
+    this->CleanedParticles = NULL;
+    this->particleScale = 1.00f;
+    this->outerLayerCleaned = false;
+}
+
 void UInfectionPointCleaningComponent::Reset() {
 }
 
@@ -28,11 +36,4 @@ void UInfectionPointCleaningComponent::GetLifetimeReplicatedProps(TArray<FLifeti
     DOREPLIFETIME(UInfectionPointCleaningComponent, InfectionPoints);
 }
 
-UInfectionPointCleaningComponent::UInfectionPointCleaningComponent() {
-    this->bIsInitialized = false;
-    this->bHasBeenReplicated = false;
-    this->CleanedParticles = NULL;
-    this->particleScale = 1.00f;
-    this->outerLayerCleaned = false;
-}
 

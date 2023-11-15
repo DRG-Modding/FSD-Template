@@ -25,9 +25,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     TArray<USeamlessTravelEventKey*> EventKeys;
     
-    AGameStats();
+    AGameStats(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void OnPlayerMinedGold(UCappedResource* Resource, float Amount);
     

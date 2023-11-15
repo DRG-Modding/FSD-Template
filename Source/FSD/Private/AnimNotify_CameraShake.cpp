@@ -7,3 +7,4 @@ UAnimNotify_CameraShake::UAnimNotify_CameraShake() {
     this->CameraShake = NULL;
 }
 
+

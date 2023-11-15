@@ -9,7 +9,8 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USeasonReplicatorComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    USeasonReplicatorComponent();
+    USeasonReplicatorComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void CompleteSeasonEvent(USeasonEventData* inEvent);
     

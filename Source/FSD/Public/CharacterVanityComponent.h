@@ -65,9 +65,10 @@ protected:
     TMap<EVanitySlot, USkeletalMeshComponent*> VanityMeshes;
     
 public:
-    UCharacterVanityComponent();
+    UCharacterVanityComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateMeshes();

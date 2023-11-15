@@ -21,5 +21,6 @@ protected:
     
 public:
     UGemResourceCreator();
+
 };
 

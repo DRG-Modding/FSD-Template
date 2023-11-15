@@ -2,6 +2,19 @@
 #include "Net/UnrealNetwork.h"
 #include "SimpleObjectInfoComponent.h"
 
+AResourceChunk::AResourceChunk(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->CollectDuration = 0.30f;
+    this->CanBeCollectedNormally = true;
+    this->CanBeCollected = false;
+    this->InfoComponent = CreateDefaultSubobject<USimpleObjectInfoComponent>(TEXT("Info"));
+    this->ResourceAmount = 0.00f;
+    this->PickupSound = NULL;
+    this->ResourceData = NULL;
+}
+
 void AResourceChunk::SetCollectOpen() {
 }
 
@@ -23,13 +36,4 @@ void AResourceChunk::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
     DOREPLIFETIME(AResourceChunk, CollectedBy);
 }
 
-AResourceChunk::AResourceChunk() {
-    this->CollectDuration = 0.30f;
-    this->CanBeCollectedNormally = true;
-    this->CanBeCollected = false;
-    this->InfoComponent = CreateDefaultSubobject<USimpleObjectInfoComponent>(TEXT("Info"));
-    this->ResourceAmount = 0.00f;
-    this->PickupSound = NULL;
-    this->ResourceData = NULL;
-}
 

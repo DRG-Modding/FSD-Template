@@ -3,6 +3,11 @@
 #include "OutlineComponent.h"
 #include "ResourceBank.h"
 
+AMolly::AMolly(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ResourceBank = CreateDefaultSubobject<UResourceBank>(TEXT("ResourceBank"));
+    this->OutlineComponent = CreateDefaultSubobject<UOutlineComponent>(TEXT("OutlineComponent"));
+}
+
 void AMolly::SetOpenForDeposit(bool Open) {
 }
 
@@ -25,8 +30,4 @@ void AMolly::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimePr
     DOREPLIFETIME(AMolly, CalledBy);
 }
 
-AMolly::AMolly() {
-    this->ResourceBank = CreateDefaultSubobject<UResourceBank>(TEXT("ResourceBank"));
-    this->OutlineComponent = CreateDefaultSubobject<UOutlineComponent>(TEXT("OutlineComponent"));
-}
 

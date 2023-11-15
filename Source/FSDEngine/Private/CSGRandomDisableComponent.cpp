@@ -1,5 +1,6 @@
 #include "CSGRandomDisableComponent.h"
 
-UCSGRandomDisableComponent::UCSGRandomDisableComponent() {
+UCSGRandomDisableComponent::UCSGRandomDisableComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

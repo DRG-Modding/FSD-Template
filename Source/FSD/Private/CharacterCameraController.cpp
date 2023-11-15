@@ -1,5 +1,14 @@
 #include "CharacterCameraController.h"
 
+UCharacterCameraController::UCharacterCameraController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
+    this->StartFOV = 0.00f;
+    this->targetFov = 0.00f;
+    this->TargetFOVSpeed = 0.00f;
+    this->Character = NULL;
+    this->Camera = NULL;
+}
+
 void UCharacterCameraController::ResetFOV(float FadeSpeed) {
 }
 
@@ -12,11 +21,4 @@ void UCharacterCameraController::FadeToFOVRelative(float NewTargetFov, float Fad
 void UCharacterCameraController::FadeToFOV(float NewTargetFov, float FadeSpeed) {
 }
 
-UCharacterCameraController::UCharacterCameraController() {
-    this->StartFOV = 0.00f;
-    this->targetFov = 0.00f;
-    this->TargetFOVSpeed = 0.00f;
-    this->Character = NULL;
-    this->Camera = NULL;
-}
 

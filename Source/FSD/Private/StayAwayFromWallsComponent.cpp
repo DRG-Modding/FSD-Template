@@ -1,9 +1,6 @@
 #include "StayAwayFromWallsComponent.h"
 
-void UStayAwayFromWallsComponent::SetIsActive(const bool IsActive) {
-}
-
-UStayAwayFromWallsComponent::UStayAwayFromWallsComponent() {
+UStayAwayFromWallsComponent::UStayAwayFromWallsComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GameState = NULL;
     this->MaxSpeed = 100.00f;
     this->Acceleration = 10.00f;
@@ -13,4 +10,8 @@ UStayAwayFromWallsComponent::UStayAwayFromWallsComponent() {
     this->GoBackSpeed = 0.00f;
     this->Active = true;
 }
+
+void UStayAwayFromWallsComponent::SetIsActive(const bool IsActive) {
+}
+
 

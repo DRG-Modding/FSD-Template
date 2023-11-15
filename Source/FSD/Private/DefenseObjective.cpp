@@ -1,6 +1,12 @@
 #include "DefenseObjective.h"
 #include "Net/UnrealNetwork.h"
 
+UDefenseObjective::UDefenseObjective(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->DefensePoints = 3;
+    this->PointsDefended = 0;
+    this->DebrisPositioning = NULL;
+}
+
 void UDefenseObjective::PointDefended() {
 }
 
@@ -15,9 +21,4 @@ void UDefenseObjective::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
     DOREPLIFETIME(UDefenseObjective, PointsDefended);
 }
 
-UDefenseObjective::UDefenseObjective() {
-    this->DefensePoints = 3;
-    this->PointsDefended = 0;
-    this->DebrisPositioning = NULL;
-}
 

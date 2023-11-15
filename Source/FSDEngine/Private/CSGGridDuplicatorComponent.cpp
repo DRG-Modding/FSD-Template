@@ -1,5 +1,6 @@
 #include "CSGGridDuplicatorComponent.h"
 
-UCSGGridDuplicatorComponent::UCSGGridDuplicatorComponent() {
+UCSGGridDuplicatorComponent::UCSGGridDuplicatorComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class AHolidayThrowableItem : public AThrowableItem {
     GENERATED_BODY()
 public:
-    AHolidayThrowableItem();
+    AHolidayThrowableItem(const FObjectInitializer& ObjectInitializer);
+
 };
 

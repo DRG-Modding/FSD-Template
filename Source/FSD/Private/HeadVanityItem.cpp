@@ -12,3 +12,4 @@ UHeadVanityItem::UHeadVanityItem() {
     this->HeadMesh = ECharacterHeadMesh::Full;
 }
 
+

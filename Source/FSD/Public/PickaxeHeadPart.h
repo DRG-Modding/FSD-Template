@@ -8,5 +8,6 @@ class UPickaxeHeadPart : public UPickaxeMeshPart {
     GENERATED_BODY()
 public:
     UPickaxeHeadPart();
+
 };
 

@@ -1,5 +1,8 @@
 #include "VanityMasteryLibrary.h"
 
+UVanityMasteryLibrary::UVanityMasteryLibrary() {
+}
+
 void UVanityMasteryLibrary::ResetVanityMasteryXP(UObject* WorldContext) {
 }
 
@@ -34,6 +37,4 @@ FVanityMasteryResult UVanityMasteryLibrary::AddVanityMasteryXP(UObject* WorldCon
     return FVanityMasteryResult{};
 }
 
-UVanityMasteryLibrary::UVanityMasteryLibrary() {
-}
 

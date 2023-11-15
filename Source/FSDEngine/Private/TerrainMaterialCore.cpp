@@ -8,3 +8,4 @@ UTerrainMaterialCore::UTerrainMaterialCore() {
     this->ScannerMaterial = NULL;
 }
 
+

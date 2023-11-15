@@ -111,6 +111,7 @@ private:
     
 public:
     UUGCSubsystem();
+
     UFUNCTION(BlueprintCallable)
     void SetPackagesAsRecentlyInstalled(TArray<UUGCPackage*> RecentMods);
     

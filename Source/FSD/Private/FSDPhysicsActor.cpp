@@ -1,10 +1,11 @@
 #include "FSDPhysicsActor.h"
 
-void AFSDPhysicsActor::ForceMovementUpdate() {
-}
-
-AFSDPhysicsActor::AFSDPhysicsActor() {
+AFSDPhysicsActor::AFSDPhysicsActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MovementUpdateFrequency = 10;
     this->MovementUpdateEventTriggeredFrequency = 30;
 }
+
+void AFSDPhysicsActor::ForceMovementUpdate() {
+}
+
 

@@ -11,5 +11,6 @@ public:
     FName BoneName;
     
     UAnimNotify_HideBone();
+
 };
 

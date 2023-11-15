@@ -1,5 +1,7 @@
 #include "UsingStateComponent.h"
 
-UUsingStateComponent::UUsingStateComponent() {
+UUsingStateComponent::UUsingStateComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->StateId = 5;
 }
+
 

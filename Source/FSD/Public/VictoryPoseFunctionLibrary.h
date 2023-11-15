@@ -12,6 +12,7 @@ class UVictoryPoseFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UVictoryPoseFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsRandomVictoryPose(UVictoryPose* VictoryPose);
     

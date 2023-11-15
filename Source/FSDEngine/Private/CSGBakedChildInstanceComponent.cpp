@@ -1,5 +1,6 @@
 #include "CSGBakedChildInstanceComponent.h"
 
-UCSGBakedChildInstanceComponent::UCSGBakedChildInstanceComponent() {
+UCSGBakedChildInstanceComponent::UCSGBakedChildInstanceComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

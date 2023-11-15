@@ -14,6 +14,7 @@ protected:
     TArray<UWeaponIconSceneCaptureComponent*> CaptureComponents;
     
 public:
-    AIconGenerationWeapon();
+    AIconGenerationWeapon(const FObjectInitializer& ObjectInitializer);
+
 };
 

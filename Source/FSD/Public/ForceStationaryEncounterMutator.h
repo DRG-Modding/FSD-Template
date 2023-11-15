@@ -17,5 +17,6 @@ public:
     FIRandRange GroupSize;
     
     UForceStationaryEncounterMutator();
+
 };
 

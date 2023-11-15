@@ -16,7 +16,8 @@ protected:
     FText UsingText;
     
 public:
-    UUsableAggregator();
+    UUsableAggregator(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     float GetProgress();
     

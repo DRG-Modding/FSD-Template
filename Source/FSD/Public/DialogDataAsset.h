@@ -41,6 +41,7 @@ protected:
     
 public:
     UDialogDataAsset();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     int32 SelectIndex(UObject* WorldContext);
     

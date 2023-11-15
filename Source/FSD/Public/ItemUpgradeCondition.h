@@ -8,5 +8,6 @@ class UItemUpgradeCondition : public UObject {
     GENERATED_BODY()
 public:
     UItemUpgradeCondition();
+
 };
 

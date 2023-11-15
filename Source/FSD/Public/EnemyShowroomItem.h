@@ -13,6 +13,7 @@ protected:
     EShowroomScaling Scaling;
     
 public:
-    AEnemyShowroomItem();
+    AEnemyShowroomItem(const FObjectInitializer& ObjectInitializer);
+
 };
 

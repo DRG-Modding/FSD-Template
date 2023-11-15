@@ -1,9 +1,10 @@
 #include "OptionalObjectiveWidget.h"
 
+UOptionalObjectiveWidget::UOptionalObjectiveWidget() : UUserWidget(FObjectInitializer::Get()) {
+}
+
 void UOptionalObjectiveWidget::SignalWidgetUpdated() {
 }
 
 
-UOptionalObjectiveWidget::UOptionalObjectiveWidget() : UUserWidget(FObjectInitializer::Get()) {
-}
 

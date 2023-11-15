@@ -8,6 +8,7 @@ class UDropSpikeTrackingSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
     UDropSpikeTrackingSubsystem();
+
     UFUNCTION(BlueprintCallable)
     void IncrementSpikeCount();
     

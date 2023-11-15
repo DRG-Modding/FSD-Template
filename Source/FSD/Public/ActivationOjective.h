@@ -15,9 +15,10 @@ protected:
     int32 ObjectivesToFind;
     
 public:
-    UActivationOjective();
+    UActivationOjective(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_ObjectivesToFind(int32 prevAmount);

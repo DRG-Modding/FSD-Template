@@ -25,6 +25,7 @@ protected:
     TMap<AActor*, float> InfectedActors;
     
 public:
-    UPheromoneSpawnerComponent();
+    UPheromoneSpawnerComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

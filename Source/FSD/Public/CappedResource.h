@@ -41,8 +41,9 @@ protected:
     
 public:
     UCappedResource();
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     float TransferAll(UCappedResource* Receiver);
     

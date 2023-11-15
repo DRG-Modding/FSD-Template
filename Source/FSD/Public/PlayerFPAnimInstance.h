@@ -79,5 +79,6 @@ protected:
     
 public:
     UPlayerFPAnimInstance();
+
 };
 

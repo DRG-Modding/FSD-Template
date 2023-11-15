@@ -4,3 +4,4 @@ UConditionalDamageTagBonusUpgrade::UConditionalDamageTagBonusUpgrade() {
     this->Condition = NULL;
 }
 
+

@@ -12,7 +12,8 @@ protected:
     bool CanCharacterStandOn;
     
 public:
-    ACaveObject();
+    ACaveObject(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void TriggerNetworkUpdate();

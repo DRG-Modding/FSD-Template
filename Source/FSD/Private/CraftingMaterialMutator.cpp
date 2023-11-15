@@ -4,3 +4,4 @@ UCraftingMaterialMutator::UCraftingMaterialMutator() {
     this->modifier = 1.00f;
 }
 
+

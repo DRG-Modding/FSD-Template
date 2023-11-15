@@ -4,3 +4,4 @@ UForginSettings::UForginSettings() {
     this->XPRequiredPerLevel = 0;
 }
 
+

@@ -41,7 +41,8 @@ protected:
     float CostModifier;
     
 public:
-    UAttackerPositioningComponent();
+    UAttackerPositioningComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UnregisterAttacker(AActor* Attacker, bool IsFlying);
     

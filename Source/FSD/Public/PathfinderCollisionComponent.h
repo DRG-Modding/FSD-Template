@@ -14,7 +14,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     PFCollisionType PFColiType;
     
-    UPathfinderCollisionComponent();
+    UPathfinderCollisionComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void DisablePFCollision();
     

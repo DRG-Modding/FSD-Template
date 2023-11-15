@@ -90,9 +90,10 @@ protected:
     int32 MaxFails;
     
 public:
-    ULineSpikeAttack();
+    ULineSpikeAttack(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_TentaclesBurried();

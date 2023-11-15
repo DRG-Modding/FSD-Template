@@ -100,9 +100,10 @@ protected:
     float IronWillTimeToActivate;
     
 public:
-    UPlayerHealthComponent();
+    UPlayerHealthComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     UStatusEffect* SetIronWillStatusEffect(TSubclassOf<UStatusEffect> steClass);
     
@@ -149,7 +150,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanActivateIronWill() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

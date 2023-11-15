@@ -64,7 +64,8 @@ protected:
     float TraceStepTime;
     
 public:
-    ADamageEnhancer();
+    ADamageEnhancer(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void HitByHitScan(UHitscanBaseComponent* Component, const FVector& HitPoint, const FVector& Origin);
@@ -84,7 +85,7 @@ private:
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void All_PasteDamageComponent(UDamageComponent* Damage);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

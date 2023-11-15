@@ -19,5 +19,6 @@ public:
     float LocalShoutVolumeMultiplier;
     
     UAnimNotify_Shout();
+
 };
 

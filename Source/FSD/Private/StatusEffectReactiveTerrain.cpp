@@ -4,3 +4,4 @@ UStatusEffectReactiveTerrain::UStatusEffectReactiveTerrain() {
     this->StatusEffect = NULL;
 }
 
+

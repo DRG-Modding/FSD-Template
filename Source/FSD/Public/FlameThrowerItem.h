@@ -142,7 +142,8 @@ protected:
     UProjectileLauncherBaseComponent* ProjectileLancher;
     
 public:
-    AFlameThrowerItem();
+    AFlameThrowerItem(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void TriggerAoEHeat();

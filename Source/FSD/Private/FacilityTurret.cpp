@@ -3,6 +3,23 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Net/UnrealNetwork.h"
 
+AFacilityTurret::AFacilityTurret(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    this->Root = (USceneComponent*)RootComponent;
+    this->Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("TurretMesh"));
+    this->IndicatorActivationDelay = 2.00f;
+    this->FinishAttackIgnoreLoS = false;
+    this->InvulnerableOnInactive = true;
+    this->FoldOutTime = 1.67f;
+    this->EngagedAudio = NULL;
+    this->Offset = 0.00f;
+    this->AimAcceleration = 0.00f;
+    this->CurrentTarget = NULL;
+    this->TurretEngaged = false;
+    this->AlwaysActive = false;
+    this->Mesh->SetupAttachment(RootComponent);
+}
+
 void AFacilityTurret::TurnOffMesh() {
 }
 
@@ -26,18 +43,4 @@ void AFacilityTurret::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
     DOREPLIFETIME(AFacilityTurret, TurretEngaged);
 }
 
-AFacilityTurret::AFacilityTurret() {
-    this->Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-    this->Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("TurretMesh"));
-    this->IndicatorActivationDelay = 2.00f;
-    this->FinishAttackIgnoreLoS = false;
-    this->InvulnerableOnInactive = true;
-    this->FoldOutTime = 1.67f;
-    this->EngagedAudio = NULL;
-    this->Offset = 0.00f;
-    this->AimAcceleration = 0.00f;
-    this->CurrentTarget = NULL;
-    this->TurretEngaged = false;
-    this->AlwaysActive = false;
-}
 

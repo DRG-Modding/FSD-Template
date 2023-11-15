@@ -29,6 +29,7 @@ protected:
     USkeletalMeshComponent* Mesh;
     
 public:
-    UBaseArmorDamageComponent();
+    UBaseArmorDamageComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

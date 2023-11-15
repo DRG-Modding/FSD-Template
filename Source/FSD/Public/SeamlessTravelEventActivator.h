@@ -14,6 +14,7 @@ protected:
     USeamlessTravelEventKey* EventKey;
     
 public:
-    USeamlessTravelEventActivator();
+    USeamlessTravelEventActivator(const FObjectInitializer& ObjectInitializer);
+
 };
 

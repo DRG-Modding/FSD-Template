@@ -1,5 +1,8 @@
 #include "FSDRichTextFunctionlibrary.h"
 
+UFSDRichTextFunctionlibrary::UFSDRichTextFunctionlibrary() {
+}
+
 void UFSDRichTextFunctionlibrary::SplitRichText(const FRichTextParseResult& Parser, int32 SplitIndex, bool bKeepLeftFormatting, bool bKeepRightFormatting, FText& OutLeftText, FText& OutRightText) {
 }
 
@@ -11,6 +14,4 @@ FText UFSDRichTextFunctionlibrary::MidRichText(const FRichTextParseResult& Parse
     return FText::GetEmpty();
 }
 
-UFSDRichTextFunctionlibrary::UFSDRichTextFunctionlibrary() {
-}
 

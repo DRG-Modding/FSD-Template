@@ -31,6 +31,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCSGPreviewScene* PreviewScene;
     
-    ACSGBuilder();
+    ACSGBuilder(const FObjectInitializer& ObjectInitializer);
+
 };
 

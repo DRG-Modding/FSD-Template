@@ -1,5 +1,8 @@
 #include "RandRangeFunctionLibrary.h"
 
+URandRangeFunctionLibrary::URandRangeFunctionLibrary() {
+}
+
 bool URandRangeFunctionLibrary::TryPickRandomText(const TArray<FText>& TextArray, FRandomStream& RandomStream, FText& OutResult) {
     return false;
 }
@@ -20,6 +23,4 @@ float URandRangeFunctionLibrary::GetFloatFromStream(FRandRange RandRange, FRando
     return 0.0f;
 }
 
-URandRangeFunctionLibrary::URandRangeFunctionLibrary() {
-}
 

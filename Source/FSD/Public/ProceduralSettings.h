@@ -35,5 +35,6 @@ public:
     TSubclassOf<AProceduralSetup> CaveGeneratorPLSClass;
     
     UProceduralSettings();
+
 };
 

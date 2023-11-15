@@ -14,6 +14,7 @@ protected:
     UItemPlacerAggregator* SegmentPlacer;
     
 public:
-    APipelineBuilderItem();
+    APipelineBuilderItem(const FObjectInitializer& ObjectInitializer);
+
 };
 

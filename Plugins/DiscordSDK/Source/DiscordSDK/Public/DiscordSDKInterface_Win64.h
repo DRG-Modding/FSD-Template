@@ -8,5 +8,6 @@ class DISCORDSDK_API UDiscordSDKInterface_Win64 : public UDiscordSDKInterface {
     GENERATED_BODY()
 public:
     UDiscordSDKInterface_Win64();
+
 };
 

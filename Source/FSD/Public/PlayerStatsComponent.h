@@ -56,9 +56,10 @@ protected:
     FEndMissionResultDelegate OnEndMissionResultReady;
     
 public:
-    UPlayerStatsComponent();
+    UPlayerStatsComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SendMissionAnalytics(bool trackMorkite);
     

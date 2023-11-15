@@ -3,3 +3,4 @@
 UPawnBurningUniqueAfflictionEffect::UPawnBurningUniqueAfflictionEffect() {
 }
 
+

@@ -128,9 +128,10 @@ private:
     TArray<AActor*> EventParticipants;
     
 public:
-    AGameEvent();
+    AGameEvent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void TrySetupGameEvent();
@@ -254,7 +255,7 @@ public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void AddStageProgress(float progressToAdd);
     
-    
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable)
     bool HasMatchingGameplayTag(FGameplayTag TagToCheck) const override PURE_VIRTUAL(HasMatchingGameplayTag, return false;);

@@ -22,5 +22,6 @@ public:
     FGameplayTagContainer RoomTags;
     
     URoomGeneratorBase();
+
 };
 

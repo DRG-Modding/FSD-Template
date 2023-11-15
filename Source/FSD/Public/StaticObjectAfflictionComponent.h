@@ -14,6 +14,7 @@ protected:
     UStaticMeshComponent* Mesh;
     
 public:
-    UStaticObjectAfflictionComponent();
+    UStaticObjectAfflictionComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

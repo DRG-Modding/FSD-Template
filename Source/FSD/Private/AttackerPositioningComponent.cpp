@@ -1,5 +1,16 @@
 #include "AttackerPositioningComponent.h"
 
+UAttackerPositioningComponent::UAttackerPositioningComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
+    this->DebugPositions = false;
+    this->MaxAttackers = 32;
+    this->FreePositions.AddDefaulted(32);
+    this->FlyingFreePositions.AddDefaulted(32);
+    this->CharacterPersonalSphere = 60.00f;
+    this->CharacterHalfHeight = 60.00f;
+    this->CostModifier = 1.00f;
+}
+
 void UAttackerPositioningComponent::UnregisterAttacker(AActor* Attacker, bool IsFlying) {
 }
 
@@ -20,13 +31,4 @@ FVector UAttackerPositioningComponent::GetAttackerPosition(AActor* Attacker, flo
     return FVector{};
 }
 
-UAttackerPositioningComponent::UAttackerPositioningComponent() {
-    this->DebugPositions = false;
-    this->MaxAttackers = 32;
-    this->FreePositions.AddDefaulted(32);
-    this->FlyingFreePositions.AddDefaulted(32);
-    this->CharacterPersonalSphere = 60.00f;
-    this->CharacterHalfHeight = 60.00f;
-    this->CostModifier = 1.00f;
-}
 

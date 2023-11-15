@@ -1,5 +1,6 @@
 #include "CSGAddMaterialLayersComponent.h"
 
-UCSGAddMaterialLayersComponent::UCSGAddMaterialLayersComponent() {
+UCSGAddMaterialLayersComponent::UCSGAddMaterialLayersComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

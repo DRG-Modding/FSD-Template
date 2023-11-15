@@ -13,6 +13,7 @@ protected:
     TArray<FSoundMixManagerItem> SoundMixes;
     
 public:
-    USoundMixManagerComponent();
+    USoundMixManagerComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

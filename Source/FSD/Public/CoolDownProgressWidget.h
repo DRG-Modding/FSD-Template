@@ -22,6 +22,7 @@ protected:
     
 public:
     UCoolDownProgressWidget();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateProgress(float Progress);

@@ -12,3 +12,4 @@ UShootingPlantAnimInstance::UShootingPlantAnimInstance() {
     this->LookingRight = false;
 }
 
+

@@ -56,6 +56,7 @@ protected:
     
 public:
     UMinersManual();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     bool IsObjectInMinersManual(UObject* WorldContext, UObject* Object);
     

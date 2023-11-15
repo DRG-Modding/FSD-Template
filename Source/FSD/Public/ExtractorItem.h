@@ -186,9 +186,10 @@ protected:
     float CurrentLoad;
     
 public:
-    AExtractorItem();
+    AExtractorItem(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void SetCanPickup(bool canPickup);
     
@@ -258,7 +259,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void AddResource(float Amount);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

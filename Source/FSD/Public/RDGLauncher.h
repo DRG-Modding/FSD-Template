@@ -14,7 +14,8 @@ protected:
     TArray<URDGComponent*> ActiveGrenades;
     
 public:
-    ARDGLauncher();
+    ARDGLauncher(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_DetonateAll();

@@ -20,8 +20,9 @@ private:
     AActor* CurrentTarget;
     
 public:
-    AShredder();
+    AShredder(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 };
 

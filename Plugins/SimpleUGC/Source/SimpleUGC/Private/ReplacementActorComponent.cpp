@@ -1,5 +1,7 @@
 #include "ReplacementActorComponent.h"
 
-UReplacementActorComponent::UReplacementActorComponent() {
+UReplacementActorComponent::UReplacementActorComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
 }
+
 

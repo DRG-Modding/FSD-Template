@@ -4,3 +4,4 @@ USeasonTokenReward::USeasonTokenReward() {
     this->Amount = 0;
 }
 
+

@@ -16,6 +16,7 @@ protected:
     
 public:
     UCommnuityRewardBundle();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void AwardRewards(UObject* WorldContext);
     

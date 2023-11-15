@@ -29,7 +29,8 @@ protected:
     bool IgnoreAll;
     
 public:
-    UStatusEffectsComponent();
+    UStatusEffectsComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     static bool TryPushActiveStatusEffect(TSubclassOf<UStatusEffect> StatusEffect, AActor* Target, AActor* Owner);
     

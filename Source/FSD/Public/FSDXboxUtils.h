@@ -10,6 +10,7 @@ class UFSDXboxUtils : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFSDXboxUtils();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void ShowStoreUIForStoreItem(UObject* WorldContextObject, const FString& storeItemName);
     

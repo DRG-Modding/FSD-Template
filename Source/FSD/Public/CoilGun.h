@@ -138,7 +138,8 @@ protected:
     int32 LastDynamicIndex;
     
 public:
-    ACoilGun();
+    ACoilGun(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateAfflictions();

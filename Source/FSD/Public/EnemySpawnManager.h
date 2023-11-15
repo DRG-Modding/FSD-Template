@@ -85,7 +85,8 @@ protected:
     bool bDestroyingAllEnemies;
     
 public:
-    UEnemySpawnManager();
+    UEnemySpawnManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SpawnerDestroyed(APawn* Actor);
     

@@ -42,9 +42,10 @@ protected:
     bool IsActive;
     
 public:
-    AStickyFlame();
+    AStickyFlame(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_IsActive();

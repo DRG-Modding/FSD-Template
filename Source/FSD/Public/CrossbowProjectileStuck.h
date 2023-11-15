@@ -56,9 +56,10 @@ private:
     ACrossbowProjectileBase* BaseProjectile;
     
 public:
-    ACrossbowProjectileStuck();
+    ACrossbowProjectileStuck(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 private:
     UFUNCTION(BlueprintCallable)
     void UsableChanged(bool CanUse);

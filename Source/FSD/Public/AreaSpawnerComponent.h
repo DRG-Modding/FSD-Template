@@ -24,7 +24,8 @@ protected:
     float ChanceToSpawn;
     
 public:
-    UAreaSpawnerComponent();
+    UAreaSpawnerComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SpawnInArea(const FVector& Origin, float Radius, float maxVerticalDistance, APawn* Instigator);
     

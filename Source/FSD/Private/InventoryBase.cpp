@@ -1,6 +1,11 @@
 #include "InventoryBase.h"
 #include "Net/UnrealNetwork.h"
 
+UInventoryBase::UInventoryBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->LastEquippedActors[0] = NULL;
+    this->LastEquippedActors[1] = NULL;
+}
+
 void UInventoryBase::Server_SetEquippedActor_Implementation(const FEquippedActorData& Actor, bool CallClientDelayed) {
 }
 
@@ -47,8 +52,4 @@ void UInventoryBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
     DOREPLIFETIME(UInventoryBase, EquippedActor);
 }
 
-UInventoryBase::UInventoryBase() {
-    this->LastEquippedActors[0] = NULL;
-    this->LastEquippedActors[1] = NULL;
-}
 

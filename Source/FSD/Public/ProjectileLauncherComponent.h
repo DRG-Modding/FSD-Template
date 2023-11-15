@@ -15,7 +15,8 @@ protected:
     TSubclassOf<AProjectileBase> ProjectileClass;
     
 public:
-    UProjectileLauncherComponent();
+    UProjectileLauncherComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetProjectileClass(TSubclassOf<AProjectileBase> NewProjectileClass);
     

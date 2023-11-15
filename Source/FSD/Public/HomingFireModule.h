@@ -21,6 +21,7 @@ protected:
     float TimeBetweenShots;
     
 public:
-    AHomingFireModule();
+    AHomingFireModule(const FObjectInitializer& ObjectInitializer);
+
 };
 

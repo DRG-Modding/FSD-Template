@@ -1,6 +1,19 @@
 #include "GroundToAirComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UGroundToAirComponent::UGroundToAirComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->CurrentMove = NULL;
+    this->WalkTime = 0.00f;
+    this->WalkTimeMaxRandomOffset = 0.00f;
+    this->WalkTimeMinRandomOffset = 0.00f;
+    this->WalkUseTimer = true;
+    this->FlyTime = 0.00f;
+    this->FlyTimeMaxRandomOffset = 0.00f;
+    this->FlyTimeMinRandomOffset = 0.00f;
+    this->FlyUseTimer = true;
+    this->IsFlying = false;
+}
+
 void UGroundToAirComponent::SetIsFlying(bool aIsFlying) {
 }
 
@@ -27,16 +40,4 @@ void UGroundToAirComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>
     DOREPLIFETIME(UGroundToAirComponent, IsFlying);
 }
 
-UGroundToAirComponent::UGroundToAirComponent() {
-    this->CurrentMove = NULL;
-    this->WalkTime = 0.00f;
-    this->WalkTimeMaxRandomOffset = 0.00f;
-    this->WalkTimeMinRandomOffset = 0.00f;
-    this->WalkUseTimer = true;
-    this->FlyTime = 0.00f;
-    this->FlyTimeMaxRandomOffset = 0.00f;
-    this->FlyTimeMinRandomOffset = 0.00f;
-    this->FlyUseTimer = true;
-    this->IsFlying = false;
-}
 

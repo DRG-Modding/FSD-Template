@@ -8,5 +8,6 @@ class UFSDCustomDPIScalingRule : public UDPICustomScalingRule {
     GENERATED_BODY()
 public:
     UFSDCustomDPIScalingRule();
+
 };
 

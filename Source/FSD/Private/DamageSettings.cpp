@@ -32,3 +32,4 @@ UDamageSettings::UDamageSettings() {
     this->RagdollGlobalForceMultiplier = 8000.00f;
 }
 
+

@@ -1,7 +1,8 @@
 #include "GenerationItem.h"
 
-AGenerationItem::AGenerationItem() {
+AGenerationItem::AGenerationItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Visible = true;
     this->AddToLevel = true;
 }
+
 

@@ -37,7 +37,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UCSGPreviewComponent* PreviewComponent;
     
-    ACSGBuilderBase();
+    ACSGBuilderBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void PreGenerate(UBakeConfig* builder);
     

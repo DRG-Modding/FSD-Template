@@ -21,6 +21,7 @@ protected:
     
 public:
     UFloatPerkAsset();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     float GetPerkValue(UObject* WorldContext) const;
     

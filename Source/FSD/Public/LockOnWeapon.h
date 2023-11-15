@@ -156,9 +156,10 @@ protected:
     float LockOnRecoilMult;
     
 public:
-    ALockOnWeapon();
+    ALockOnWeapon(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateRifleEye();

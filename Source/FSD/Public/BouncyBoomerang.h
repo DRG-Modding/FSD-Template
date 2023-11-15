@@ -130,9 +130,10 @@ protected:
     FBoomerangMover Mover;
     
 public:
-    ABouncyBoomerang();
+    ABouncyBoomerang(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_TargetEnemy(AFSDPawn* lastEnemy);

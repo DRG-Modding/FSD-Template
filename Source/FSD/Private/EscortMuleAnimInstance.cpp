@@ -1,6 +1,5 @@
 #include "EscortMuleAnimInstance.h"
 
-
 UEscortMuleAnimInstance::UEscortMuleAnimInstance() {
     this->LeftCannistersVisible = false;
     this->RightCannistersVisible = false;
@@ -8,4 +7,6 @@ UEscortMuleAnimInstance::UEscortMuleAnimInstance() {
     this->IsBeingRefueled = false;
     this->PlatformOut = false;
 }
+
+
 

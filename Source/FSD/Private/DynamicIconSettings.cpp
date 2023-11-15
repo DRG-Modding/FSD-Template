@@ -16,3 +16,4 @@ UDynamicIconSettings::UDynamicIconSettings() {
     this->TriFacetDynamicIconTex3 = NULL;
 }
 
+

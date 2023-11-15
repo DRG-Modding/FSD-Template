@@ -16,6 +16,7 @@ class UFSDConversionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFSDConversionLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FVector_NetQuantizeNormal VectorToNetQuantizeNormal(FVector Vec);
     

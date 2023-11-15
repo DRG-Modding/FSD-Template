@@ -11,5 +11,6 @@ public:
     TArray<FName> Bones;
     
     ULimbDismembermentList();
+
 };
 

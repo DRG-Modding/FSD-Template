@@ -105,6 +105,7 @@ protected:
     
 public:
     UCampaign();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsComplete() const;
     

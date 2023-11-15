@@ -1,5 +1,23 @@
 #include "BoscoController.h"
 
+ABoscoController::ABoscoController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->BehaviourTree = NULL;
+    this->CheckOutOfTheWayInterval = 0.00f;
+    this->DistCountAsSameHit = 10.00f;
+    this->HearthstoneCrystalMaterial = NULL;
+    this->SearchForEnemiesInterval = 0.00f;
+    this->SaluteDelay = 0.00f;
+    this->SaluteCooldown = 0.00f;
+    this->CheckGraberInterval = 0.00f;
+    this->MaxThrowStrength = 800.00f;
+    this->MaxThrowRange = 1600.00f;
+    this->RepairRange = 100.00f;
+    this->DistanceCountedAsClose = 2000.00f;
+    this->ReviveHealthPercentage = 0.40f;
+    this->CurrentUse = NULL;
+    this->TryingToPickItem = NULL;
+}
+
 void ABoscoController::ReviveTarget() {
 }
 
@@ -56,21 +74,4 @@ void ABoscoController::ConfirmPickup() {
 void ABoscoController::CarriableDrop() {
 }
 
-ABoscoController::ABoscoController() {
-    this->BehaviourTree = NULL;
-    this->CheckOutOfTheWayInterval = 0.00f;
-    this->DistCountAsSameHit = 10.00f;
-    this->HearthstoneCrystalMaterial = NULL;
-    this->SearchForEnemiesInterval = 0.00f;
-    this->SaluteDelay = 0.00f;
-    this->SaluteCooldown = 0.00f;
-    this->CheckGraberInterval = 0.00f;
-    this->MaxThrowStrength = 800.00f;
-    this->MaxThrowRange = 1600.00f;
-    this->RepairRange = 100.00f;
-    this->DistanceCountedAsClose = 2000.00f;
-    this->ReviveHealthPercentage = 0.40f;
-    this->CurrentUse = NULL;
-    this->TryingToPickItem = NULL;
-}
 

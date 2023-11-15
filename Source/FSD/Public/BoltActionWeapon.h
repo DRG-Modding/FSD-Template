@@ -127,9 +127,10 @@ protected:
     float ChargeProgress;
     
 public:
-    ABoltActionWeapon();
+    ABoltActionWeapon(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetOverheated(bool isOverheated);

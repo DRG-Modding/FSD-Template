@@ -7,6 +7,7 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class USDFBaseWithTransformComponent : public USDFBaseComponent {
     GENERATED_BODY()
 public:
-    USDFBaseWithTransformComponent();
+    USDFBaseWithTransformComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

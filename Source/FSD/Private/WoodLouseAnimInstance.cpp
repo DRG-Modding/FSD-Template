@@ -19,3 +19,4 @@ UWoodLouseAnimInstance::UWoodLouseAnimInstance() {
     this->IdleToDownTurnRightLock = false;
 }
 
+

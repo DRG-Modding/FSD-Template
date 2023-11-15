@@ -32,9 +32,10 @@ protected:
     int32 EnemiesToKill;
     
 public:
-    UKillEnemiesObjective();
+    UKillEnemiesObjective(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintPure=false)
     void RegisterTargetSpawned(APawn* Target) const;
     

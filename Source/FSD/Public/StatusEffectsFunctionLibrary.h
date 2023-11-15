@@ -13,6 +13,7 @@ class UStatusEffectsFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UStatusEffectsFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetMaxResistance(TSubclassOf<UStatusEffect> StatusEffect);
     

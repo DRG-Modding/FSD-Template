@@ -39,6 +39,7 @@ protected:
     
 public:
     ULookingAtContentWidget();
+
     UFUNCTION(BlueprintCallable)
     void UpdateCurrentTarget(float DeltaSeconds, AActor* InTargetActor, const TScriptInterface<IHealth>& InTargetHealthComponent);
     

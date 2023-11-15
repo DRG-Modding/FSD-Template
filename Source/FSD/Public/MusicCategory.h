@@ -11,5 +11,6 @@ public:
     float FadeDuration;
     
     UMusicCategory();
+
 };
 

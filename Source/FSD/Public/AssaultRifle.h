@@ -23,7 +23,8 @@ protected:
     TSubclassOf<UStatusEffect> KillTriggeredStatusEffect;
     
 public:
-    AAssaultRifle();
+    AAssaultRifle(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnTimerElapsed();

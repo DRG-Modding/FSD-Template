@@ -8,3 +8,4 @@ UCollectableResourceData::UCollectableResourceData() {
     this->UseTerrainPlacement = false;
 }
 
+

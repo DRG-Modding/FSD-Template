@@ -4,6 +4,20 @@
 #include "NiagaraComponent.h"
 #include "Net/UnrealNetwork.h"
 
+ACoilgunWeaponTrail::ACoilgunWeaponTrail(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+    this->Root = (USceneComponent*)RootComponent;
+    this->Collision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Collision"));
+    this->Trail = CreateDefaultSubobject<UNiagaraComponent>(TEXT("TrailNiagara"));
+    this->ParticleTrailOffset = 0.00f;
+    this->TrailHalgLength = 0.00f;
+    this->SpawnFireTrail = false;
+    this->FireEffect = NULL;
+    this->ElectricEffect = NULL;
+    this->Collision->SetupAttachment(RootComponent);
+    this->Trail->SetupAttachment(RootComponent);
+}
+
 void ACoilgunWeaponTrail::OnRep_TrailHalfLength() {
 }
 
@@ -26,14 +40,4 @@ void ACoilgunWeaponTrail::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(ACoilgunWeaponTrail, SpawnFireTrail);
 }
 
-ACoilgunWeaponTrail::ACoilgunWeaponTrail() {
-    this->Root = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
-    this->Collision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Collision"));
-    this->Trail = CreateDefaultSubobject<UNiagaraComponent>(TEXT("TrailNiagara"));
-    this->ParticleTrailOffset = 0.00f;
-    this->TrailHalgLength = 0.00f;
-    this->SpawnFireTrail = false;
-    this->FireEffect = NULL;
-    this->ElectricEffect = NULL;
-}
 

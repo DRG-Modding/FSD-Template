@@ -12,5 +12,6 @@ public:
     FConvexNoiseProperties Noise;
     
     UConvexMeshWithCachedTree();
+
 };
 

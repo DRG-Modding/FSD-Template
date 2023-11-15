@@ -40,9 +40,10 @@ protected:
     FName BackFireSocket;
     
 public:
-    ARadialFireModule();
+    ARadialFireModule(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnFire();

@@ -1,6 +1,9 @@
 #include "HackingUsableComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UHackingUsableComponent::UHackingUsableComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UHackingUsableComponent::OnRep_HackingState(const FHackingUsableState& oldState) {
 }
 
@@ -26,6 +29,4 @@ void UHackingUsableComponent::GetLifetimeReplicatedProps(TArray<FLifetimePropert
     DOREPLIFETIME(UHackingUsableComponent, HackingState);
 }
 
-UHackingUsableComponent::UHackingUsableComponent() {
-}
 

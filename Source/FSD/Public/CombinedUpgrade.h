@@ -16,6 +16,7 @@ protected:
     
 public:
     UCombinedUpgrade();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UItemUpgrade*> GetUpgrades() const;
     

@@ -1,6 +1,7 @@
 #include "SeamlessTravelEventActivator.h"
 
-USeamlessTravelEventActivator::USeamlessTravelEventActivator() {
+USeamlessTravelEventActivator::USeamlessTravelEventActivator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->EventKey = NULL;
 }
+
 

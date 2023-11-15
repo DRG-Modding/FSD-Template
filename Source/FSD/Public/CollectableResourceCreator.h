@@ -8,5 +8,6 @@ class UCollectableResourceCreator : public UObject {
     GENERATED_BODY()
 public:
     UCollectableResourceCreator();
+
 };
 

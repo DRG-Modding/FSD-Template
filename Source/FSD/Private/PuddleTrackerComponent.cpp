@@ -1,5 +1,8 @@
 #include "PuddleTrackerComponent.h"
 
+UPuddleTrackerComponent::UPuddleTrackerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UPuddleTrackerComponent::OnPuddleDestroyed(AActor* DestroyedActor) {
 }
 
@@ -12,6 +15,4 @@ void UPuddleTrackerComponent::GetPuddleLocations(TArray<FVector>& Locations) {
 void UPuddleTrackerComponent::AddPuddle(AActor* puddle) {
 }
 
-UPuddleTrackerComponent::UPuddleTrackerComponent() {
-}
 

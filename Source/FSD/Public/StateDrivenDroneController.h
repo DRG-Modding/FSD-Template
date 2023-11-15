@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class AStateDrivenDroneController : public ADroneControllerBase {
     GENERATED_BODY()
 public:
-    AStateDrivenDroneController();
+    AStateDrivenDroneController(const FObjectInitializer& ObjectInitializer);
+
 };
 

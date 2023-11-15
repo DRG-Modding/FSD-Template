@@ -8,5 +8,6 @@ class UBuilderBase : public UObject {
     GENERATED_BODY()
 public:
     UBuilderBase();
+
 };
 

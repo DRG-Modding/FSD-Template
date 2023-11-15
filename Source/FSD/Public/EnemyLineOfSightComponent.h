@@ -33,7 +33,8 @@ protected:
     bool AutoSetupOwnerMesh;
     
 public:
-    UEnemyLineOfSightComponent();
+    UEnemyLineOfSightComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasLineOfSight() const;
     

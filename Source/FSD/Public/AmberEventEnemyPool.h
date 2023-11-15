@@ -23,5 +23,6 @@ public:
     int32 AmbersNeededOnePlayer;
     
     UAmberEventEnemyPool();
+
 };
 

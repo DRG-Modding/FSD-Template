@@ -28,6 +28,7 @@ public:
     FDeepCSGFloatTreePacked BSPTreePacked;
     
     UStaticMeshCarver();
+
     UFUNCTION(BlueprintCallable)
     void Generate();
     

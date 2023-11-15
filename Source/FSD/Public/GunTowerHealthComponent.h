@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UGunTowerHealthComponent : public UEnemyHealthComponent {
     GENERATED_BODY()
 public:
-    UGunTowerHealthComponent();
+    UGunTowerHealthComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

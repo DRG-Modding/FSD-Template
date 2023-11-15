@@ -5,3 +5,4 @@ UScalingMeshAfflictionEffect::UScalingMeshAfflictionEffect() {
     this->MaterialOverride = NULL;
 }
 
+

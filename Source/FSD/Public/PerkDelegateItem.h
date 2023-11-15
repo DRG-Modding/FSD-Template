@@ -27,5 +27,6 @@ public:
     FPerkIntDelegate OnChargesUsedChanged;
     
     UPerkDelegateItem();
+
 };
 

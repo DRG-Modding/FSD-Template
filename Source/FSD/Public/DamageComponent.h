@@ -125,7 +125,8 @@ protected:
     float MaxDamageRadius;
     
 public:
-    UDamageComponent();
+    UDamageComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void PreTestDamageConditions();
     

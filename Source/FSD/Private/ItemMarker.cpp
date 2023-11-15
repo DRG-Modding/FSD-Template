@@ -1,9 +1,10 @@
 #include "ItemMarker.h"
 
-
-
-AItemMarker::AItemMarker() {
+AItemMarker::AItemMarker(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bMarkerValid = true;
     this->bMarkerVisible = true;
 }
+
+
+
 

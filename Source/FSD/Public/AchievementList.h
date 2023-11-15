@@ -149,5 +149,6 @@ public:
     TSoftClassPtr<AActor> BarrelClass;
     
     UAchievementList();
+
 };
 

@@ -13,5 +13,6 @@ public:
     TArray<UUseConditionBase*> Conditions;
     
     UUseConditionSet();
+
 };
 

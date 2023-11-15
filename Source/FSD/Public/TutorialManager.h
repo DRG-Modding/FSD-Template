@@ -38,6 +38,7 @@ protected:
     TWeakObjectPtr<UTutorialComponent> ActiveTutorial;
     
 public:
-    ATutorialManager();
+    ATutorialManager(const FObjectInitializer& ObjectInitializer);
+
 };
 

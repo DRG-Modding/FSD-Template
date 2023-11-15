@@ -37,6 +37,7 @@ protected:
     
 public:
     UObjectiveWidget();
+
     UFUNCTION(BlueprintCallable)
     void SetText(const FText& InText, const FText& InCounterText, UTexture2D* InCounterIcon, bool InObjectiveCompleted);
     

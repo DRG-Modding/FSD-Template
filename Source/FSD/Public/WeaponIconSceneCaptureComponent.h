@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UIconGenerationCameraKey* CameraKey;
     
-    UWeaponIconSceneCaptureComponent();
+    UWeaponIconSceneCaptureComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

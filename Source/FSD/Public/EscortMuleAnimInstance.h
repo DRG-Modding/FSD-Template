@@ -27,6 +27,7 @@ protected:
     
 public:
     UEscortMuleAnimInstance();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnTookDamage(UHealthComponent* Health);
     

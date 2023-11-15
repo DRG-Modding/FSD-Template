@@ -24,9 +24,10 @@ protected:
     FQueuedMontage QueuedMontage;
     
 public:
-    AEnemyDeepPathfinderCharacter();
+    AEnemyDeepPathfinderCharacter(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void SwitchToDynamicBaseShader(UMaterialInterface* baseShader, UMeshComponent* MeshComponent) const;
@@ -34,7 +35,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_QueuedMontage();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 public:
     UFUNCTION(BlueprintCallable)

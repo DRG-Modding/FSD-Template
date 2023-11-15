@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDFOnionProperties Properties;
     
-    USDFOnionComponent();
+    USDFOnionComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -1,5 +1,6 @@
 #include "ResourceBasedObjective.h"
 
-UResourceBasedObjective::UResourceBasedObjective() {
+UResourceBasedObjective::UResourceBasedObjective(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

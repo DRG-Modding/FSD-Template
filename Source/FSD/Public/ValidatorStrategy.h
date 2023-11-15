@@ -8,5 +8,6 @@ class FSD_API UValidatorStrategy : public UObject {
     GENERATED_BODY()
 public:
     UValidatorStrategy();
+
 };
 

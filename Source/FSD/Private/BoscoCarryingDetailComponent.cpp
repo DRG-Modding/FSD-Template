@@ -1,5 +1,6 @@
 #include "BoscoCarryingDetailComponent.h"
 
-UBoscoCarryingDetailComponent::UBoscoCarryingDetailComponent() {
+UBoscoCarryingDetailComponent::UBoscoCarryingDetailComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

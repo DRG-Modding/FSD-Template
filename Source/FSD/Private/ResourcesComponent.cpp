@@ -1,6 +1,10 @@
 #include "ResourcesComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UResourcesComponent::UResourcesComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ResourceCap = -1.00f;
+}
+
 void UResourcesComponent::ResourceIncreased(UCappedResource* Resource, float Delta) {
 }
 
@@ -43,7 +47,4 @@ void UResourcesComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(UResourcesComponent, Resources);
 }
 
-UResourcesComponent::UResourcesComponent() {
-    this->ResourceCap = -1.00f;
-}
 

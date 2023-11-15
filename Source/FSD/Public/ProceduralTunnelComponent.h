@@ -24,6 +24,7 @@ protected:
     float DirtInfluencerRange;
     
 public:
-    UProceduralTunnelComponent();
+    UProceduralTunnelComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

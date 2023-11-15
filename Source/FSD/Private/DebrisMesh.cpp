@@ -6,3 +6,4 @@ UDebrisMesh::UDebrisMesh() {
     this->EndCullDistance = 5000.00f;
 }
 
+

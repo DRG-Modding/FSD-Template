@@ -27,5 +27,6 @@ public:
     float MeshScale;
     
     UTestAnimInstance();
+
 };
 

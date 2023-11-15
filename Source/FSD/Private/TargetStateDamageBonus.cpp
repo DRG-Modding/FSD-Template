@@ -6,3 +6,4 @@ UTargetStateDamageBonus::UTargetStateDamageBonus() {
     this->DamageClass = NULL;
 }
 
+

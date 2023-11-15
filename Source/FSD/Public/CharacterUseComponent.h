@@ -56,9 +56,10 @@ protected:
     UUsableComponentBase* HoveringUsable;
     
 public:
-    UCharacterUseComponent();
+    UCharacterUseComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetState(const FCharacterUseState& NewState);

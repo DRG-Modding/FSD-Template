@@ -1,10 +1,11 @@
 #include "CharacterSelectionSwitcher.h"
 
-
-
-
-
-
-ACharacterSelectionSwitcher::ACharacterSelectionSwitcher() {
+ACharacterSelectionSwitcher::ACharacterSelectionSwitcher(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
+
+
+
+
+
 

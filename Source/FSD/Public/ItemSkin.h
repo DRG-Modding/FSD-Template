@@ -56,6 +56,7 @@ protected:
     
 public:
     UItemSkin();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     bool Unlock(UObject* WorldContext, UItemID* ItemID, bool broadcast);
     
@@ -89,7 +90,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UMaterialInstanceDynamic* CreateIcon(UObject* Owner) const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

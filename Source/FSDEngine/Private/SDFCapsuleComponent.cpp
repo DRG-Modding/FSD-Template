@@ -1,5 +1,6 @@
 #include "SDFCapsuleComponent.h"
 
-USDFCapsuleComponent::USDFCapsuleComponent() {
+USDFCapsuleComponent::USDFCapsuleComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

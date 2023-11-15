@@ -8,5 +8,6 @@ class UItemAquisitionSource : public USavableDataAsset {
     GENERATED_BODY()
 public:
     UItemAquisitionSource();
+
 };
 

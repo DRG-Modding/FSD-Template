@@ -36,9 +36,10 @@ protected:
     bool bPipelineCompleted;
     
 public:
-    APipelineFinish();
+    APipelineFinish(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceivePipelineCompleted();

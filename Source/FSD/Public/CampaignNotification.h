@@ -23,5 +23,6 @@ public:
     bool bIsCampaignCompleted;
     
     UCampaignNotification();
+
 };
 

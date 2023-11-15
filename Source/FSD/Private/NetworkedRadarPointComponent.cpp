@@ -1,5 +1,6 @@
 #include "NetworkedRadarPointComponent.h"
 
-UNetworkedRadarPointComponent::UNetworkedRadarPointComponent() {
+UNetworkedRadarPointComponent::UNetworkedRadarPointComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

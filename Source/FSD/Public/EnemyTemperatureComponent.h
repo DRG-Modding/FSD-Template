@@ -70,7 +70,8 @@ protected:
     uint8 IceDetonationStack;
     
 public:
-    UEnemyTemperatureComponent();
+    UEnemyTemperatureComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void TimerCallback();

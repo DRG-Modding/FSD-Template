@@ -27,7 +27,8 @@ protected:
     UTextureRenderTarget2D* RenderTarget;
     
 public:
-    UShowroomManager();
+    UShowroomManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UShowroomController* GetController();
     

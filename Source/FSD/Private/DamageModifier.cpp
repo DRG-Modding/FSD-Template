@@ -4,3 +4,4 @@ UDamageModifier::UDamageModifier() {
     this->Condition = NULL;
 }
 
+

@@ -40,9 +40,10 @@ protected:
     bool Simulate_SpinBarrel;
     
 public:
-    ABeltDrivenWeapon();
+    ABeltDrivenWeapon(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_StopBarrel();

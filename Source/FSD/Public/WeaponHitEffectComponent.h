@@ -21,7 +21,8 @@ protected:
     TSubclassOf<AActor> ActorToSpawn;
     
 public:
-    UWeaponHitEffectComponent();
+    UWeaponHitEffectComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SpawnEffect(const FVector_NetQuantize& Location, const FRotator& Rotation);

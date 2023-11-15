@@ -7,9 +7,9 @@ enum class EEnemyHealthScaling : uint8 {
     SmallEnemy,
     LargeEnemy,
     ExtraLargeEnemy,
-    ExtraLargeEnemyB = 0x4,
+    ExtraLargeEnemyB = 4,
     ExtraLargeEnemyC,
     ExtraLargeEnemyD,
-    NoScaling = 0x3,
+    NoScaling = 3,
 };
 

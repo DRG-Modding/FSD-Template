@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UPLSEncounterComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPLSEncounterComponent();
+    UPLSEncounterComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

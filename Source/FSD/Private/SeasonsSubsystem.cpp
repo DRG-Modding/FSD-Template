@@ -1,5 +1,8 @@
 #include "SeasonsSubsystem.h"
 
+USeasonsSubsystem::USeasonsSubsystem() {
+}
+
 FTimespan USeasonsSubsystem::TimeToNewChallenge() {
     return FTimespan{};
 }
@@ -161,6 +164,4 @@ bool USeasonsSubsystem::BuyTreeNode(UObject* WorldContextObject, AFSDPlayerContr
     return false;
 }
 
-USeasonsSubsystem::USeasonsSubsystem() {
-}
 

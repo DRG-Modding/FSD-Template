@@ -6,3 +6,4 @@ UResourceSchematicItem::UResourceSchematicItem() {
     this->ResourceAmount = 0;
 }
 
+

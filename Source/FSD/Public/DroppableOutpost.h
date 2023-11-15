@@ -53,9 +53,10 @@ protected:
     float FreeFallSpeed;
     
 public:
-    ADroppableOutpost();
+    ADroppableOutpost(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void StartDrilling();
     

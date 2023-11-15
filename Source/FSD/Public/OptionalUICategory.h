@@ -25,6 +25,7 @@ protected:
     
 public:
     UOptionalUICategory();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void SetVisible(UObject* WorldContext, bool IsCategoryVisible);
     

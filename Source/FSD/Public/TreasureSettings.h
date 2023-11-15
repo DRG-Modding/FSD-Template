@@ -55,5 +55,6 @@ protected:
     
 public:
     UTreasureSettings();
+
 };
 

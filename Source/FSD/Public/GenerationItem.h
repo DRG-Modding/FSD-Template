@@ -15,6 +15,7 @@ protected:
     bool AddToLevel;
     
 public:
-    AGenerationItem();
+    AGenerationItem(const FObjectInitializer& ObjectInitializer);
+
 };
 

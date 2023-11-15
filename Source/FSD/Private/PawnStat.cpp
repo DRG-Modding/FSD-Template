@@ -6,3 +6,4 @@ UPawnStat::UPawnStat() {
     this->ValueModificationType = EPawnStatType::Multiplicative;
 }
 
+

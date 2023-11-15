@@ -1,6 +1,7 @@
 #include "DropRockCrackerPodsSpawner.h"
 
-ADropRockCrackerPodsSpawner::ADropRockCrackerPodsSpawner() {
+ADropRockCrackerPodsSpawner::ADropRockCrackerPodsSpawner(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->meteor = NULL;
 }
+
 

@@ -1,5 +1,17 @@
 #include "SimpleObjectInfoComponent.h"
 
+USimpleObjectInfoComponent::USimpleObjectInfoComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->LookAtShout = NULL;
+    this->bHasMissionControlLookAtShout = false;
+    this->MissionControlLookAtShout = NULL;
+    this->LookAtShoutOverride = NULL;
+    this->Icon = NULL;
+    this->IconOverride = NULL;
+    this->bIsPingableByLaserpointer = false;
+    this->ContextWidgetClass = NULL;
+    this->ContextWidget = NULL;
+}
+
 void USimpleObjectInfoComponent::SetInGameName_Implementation(const FString& GameName) {
 }
 
@@ -28,15 +40,4 @@ void USimpleObjectInfoComponent::ClearLookAtShoutOverride() {
 void USimpleObjectInfoComponent::AddComponentObjectInfo(USceneComponent* TargetComponent, const FSimpleObjectInfoData& Data) {
 }
 
-USimpleObjectInfoComponent::USimpleObjectInfoComponent() {
-    this->LookAtShout = NULL;
-    this->bHasMissionControlLookAtShout = false;
-    this->MissionControlLookAtShout = NULL;
-    this->LookAtShoutOverride = NULL;
-    this->Icon = NULL;
-    this->IconOverride = NULL;
-    this->bIsPingableByLaserpointer = false;
-    this->ContextWidgetClass = NULL;
-    this->ContextWidget = NULL;
-}
 

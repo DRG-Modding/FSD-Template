@@ -30,7 +30,8 @@ protected:
     float Radius;
     
 public:
-    AImpactIndicator();
+    AImpactIndicator(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetRadius(float NewRadius);
     

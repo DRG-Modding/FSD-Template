@@ -7,6 +7,7 @@ UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableCom
 class UGrabbedStateComponent : public UCharacterStateComponent {
     GENERATED_BODY()
 public:
-    UGrabbedStateComponent();
+    UGrabbedStateComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

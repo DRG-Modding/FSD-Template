@@ -17,6 +17,7 @@ protected:
     
 public:
     UCommnuityRewardSetup();
+
     UFUNCTION(BlueprintCallable)
     TMap<UResourceData*, int32> GetResourcesTierOnlyReward(int32 Tier);
     

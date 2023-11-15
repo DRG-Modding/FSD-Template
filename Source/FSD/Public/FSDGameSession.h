@@ -16,6 +16,7 @@ private:
     TArray<FUniqueNetIdRepl> BannedPlayers;
     
 public:
-    AFSDGameSession();
+    AFSDGameSession(const FObjectInitializer& ObjectInitializer);
+
 };
 

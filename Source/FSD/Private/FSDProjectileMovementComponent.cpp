@@ -1,6 +1,6 @@
 #include "FSDProjectileMovementComponent.h"
 
-UFSDProjectileMovementComponent::UFSDProjectileMovementComponent() {
+UFSDProjectileMovementComponent::UFSDProjectileMovementComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bShouldPenetrate = false;
     this->InvertIgnoreCollisionAgainst = false;
     this->AccelerationCurve = NULL;
@@ -8,4 +8,5 @@ UFSDProjectileMovementComponent::UFSDProjectileMovementComponent() {
     this->MaxPropulsionTime = 0.00f;
     this->bCancelPenetration = false;
 }
+
 

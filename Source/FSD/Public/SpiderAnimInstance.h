@@ -141,6 +141,7 @@ protected:
     
 public:
     USpiderAnimInstance();
+
     UFUNCTION(BlueprintCallable)
     void SetMeshScale(float NewScale);
     
@@ -168,7 +169,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsNotAirborne() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -28,7 +28,8 @@ protected:
     USkeletalMesh* WeaponMesh;
     
 public:
-    AVanityTestCharacter();
+    AVanityTestCharacter(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetupVanity();
     

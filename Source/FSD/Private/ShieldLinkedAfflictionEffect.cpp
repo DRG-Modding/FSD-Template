@@ -3,3 +3,4 @@
 UShieldLinkedAfflictionEffect::UShieldLinkedAfflictionEffect() {
 }
 
+

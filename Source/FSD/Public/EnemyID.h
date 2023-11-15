@@ -8,5 +8,6 @@ class FSD_API UEnemyID : public USavableDataAsset {
     GENERATED_BODY()
 public:
     UEnemyID();
+
 };
 

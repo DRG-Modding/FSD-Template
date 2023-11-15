@@ -4,7 +4,7 @@
 #include "Engine/DeveloperSettings.h"
 #include "FSDDebrisSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class UFSDDebrisSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -17,5 +17,6 @@ protected:
     
 public:
     UFSDDebrisSettings();
+
 };
 

@@ -16,5 +16,6 @@ public:
     UUseConditionCollection* Collection;
     
     UUseConditionGroup();
+
 };
 

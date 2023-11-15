@@ -4,6 +4,23 @@
 #include "EnemyHealthComponent.h"
 #include "Net/UnrealNetwork.h"
 
+ATowerModuleBase::ATowerModuleBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    this->Root = (USceneComponent*)RootComponent;
+    this->ModuleMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
+    this->ArmorPlates.AddDefaulted(3);
+    this->Health = CreateDefaultSubobject<UEnemyHealthComponent>(TEXT("Heath"));
+    this->DestroyedMesh = NULL;
+    this->deathSound = NULL;
+    this->deathParticles = NULL;
+    this->ArmorLaunchPower = 100.00f;
+    this->HideArmorTime = 0.00f;
+    this->ModuleRotationSpeed = 0.00f;
+    this->ConstantRotation = false;
+    this->State = EGuntowerModuleState::EDormant;
+    this->ModuleMesh->SetupAttachment(RootComponent);
+}
+
 void ATowerModuleBase::SetState(EGuntowerModuleState NewState) {
 }
 
@@ -21,18 +38,4 @@ void ATowerModuleBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(ATowerModuleBase, State);
 }
 
-ATowerModuleBase::ATowerModuleBase() {
-    this->Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-    this->ModuleMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
-    this->ArmorPlates.AddDefaulted(3);
-    this->Health = CreateDefaultSubobject<UEnemyHealthComponent>(TEXT("Heath"));
-    this->DestroyedMesh = NULL;
-    this->deathSound = NULL;
-    this->deathParticles = NULL;
-    this->ArmorLaunchPower = 100.00f;
-    this->HideArmorTime = 0.00f;
-    this->ModuleRotationSpeed = 0.00f;
-    this->ConstantRotation = false;
-    this->State = EGuntowerModuleState::EDormant;
-}
 

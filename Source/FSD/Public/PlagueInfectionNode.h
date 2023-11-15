@@ -91,9 +91,10 @@ protected:
     bool HasCleanPodBeenSpawned;
     
 public:
-    APlagueInfectionNode();
+    APlagueInfectionNode(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnWormSpawned(AActor* worm);

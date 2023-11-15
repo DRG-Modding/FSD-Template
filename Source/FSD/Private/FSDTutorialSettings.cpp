@@ -6,3 +6,4 @@ UFSDTutorialSettings::UFSDTutorialSettings() {
     this->RequiredCPVeterans = 0;
 }
 
+

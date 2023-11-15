@@ -1,5 +1,6 @@
 #include "CSGCircleDuplicatorComponent.h"
 
-UCSGCircleDuplicatorComponent::UCSGCircleDuplicatorComponent() {
+UCSGCircleDuplicatorComponent::UCSGCircleDuplicatorComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

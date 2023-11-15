@@ -8,5 +8,6 @@ class USoundClassManager : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
     USoundClassManager();
+
 };
 

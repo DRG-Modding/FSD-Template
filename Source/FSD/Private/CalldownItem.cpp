@@ -1,9 +1,6 @@
 #include "CalldownItem.h"
 
-void ACalldownItem::Server_Call_Resupply_Implementation(const FVector& Location) {
-}
-
-ACalldownItem::ACalldownItem() {
+ACalldownItem::ACalldownItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ItemPlacerClass = NULL;
     this->SupplyPodClass = NULL;
     this->ResouceRequired = NULL;
@@ -12,4 +9,8 @@ ACalldownItem::ACalldownItem() {
     this->CoolDown = 0.00f;
     this->CooldownRemaining = 0.00f;
 }
+
+void ACalldownItem::Server_Call_Resupply_Implementation(const FVector& Location) {
+}
+
 

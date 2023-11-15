@@ -1,5 +1,7 @@
 #include "FirstPersonPointLightComponent.h"
 
-UFirstPersonPointLightComponent::UFirstPersonPointLightComponent() {
+UFirstPersonPointLightComponent::UFirstPersonPointLightComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->CastShadows = false;
 }
+
 

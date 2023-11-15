@@ -20,5 +20,6 @@ public:
     USpecialEventSpawner* EventSpawner;
     
     USpecialEvent();
+
 };
 

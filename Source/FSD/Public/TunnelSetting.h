@@ -33,5 +33,6 @@ public:
     float Weight;
     
     UTunnelSetting();
+
 };
 

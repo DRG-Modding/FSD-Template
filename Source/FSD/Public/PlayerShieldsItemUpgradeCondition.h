@@ -14,5 +14,6 @@ protected:
     
 public:
     UPlayerShieldsItemUpgradeCondition();
+
 };
 

@@ -14,6 +14,7 @@ public:
     FDiscordSDKJoinRequest OnJoinRequest;
     
     UDiscordSDKInterface();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void RejectInvite(const FString& UserId);

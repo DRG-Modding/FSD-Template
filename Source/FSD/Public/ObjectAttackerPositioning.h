@@ -14,6 +14,7 @@ protected:
     UHealthComponentBase* Health;
     
 public:
-    UObjectAttackerPositioning();
+    UObjectAttackerPositioning(const FObjectInitializer& ObjectInitializer);
+
 };
 

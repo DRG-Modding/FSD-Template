@@ -27,6 +27,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 ChangeCount;
     
-    UCSGPreviewComponent();
+    UCSGPreviewComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -1,35 +1,5 @@
 #include "SpiderAnimInstance.h"
 
-void USpiderAnimInstance::SetMeshScale(float NewScale) {
-}
-
-void USpiderAnimInstance::SetDeathAnimationCategory(ESpiderDeathAnimationCategory Category) {
-}
-
-
-void USpiderAnimInstance::PlayForcedCycle(float Duration) {
-}
-
-bool USpiderAnimInstance::IsNotStrafing() const {
-    return false;
-}
-
-bool USpiderAnimInstance::IsNotStaggered() const {
-    return false;
-}
-
-bool USpiderAnimInstance::IsNotMoving() const {
-    return false;
-}
-
-bool USpiderAnimInstance::IsNotFrozen() const {
-    return false;
-}
-
-bool USpiderAnimInstance::IsNotAirborne() const {
-    return false;
-}
-
 USpiderAnimInstance::USpiderAnimInstance() {
     this->Speed = 0.00f;
     this->WalkCycleSpeed = 200.00f;
@@ -66,4 +36,35 @@ USpiderAnimInstance::USpiderAnimInstance() {
     this->IsInFakePhysics = false;
     this->DeathAnimationCategory = ESpiderDeathAnimationCategory::NoAnimation;
 }
+
+void USpiderAnimInstance::SetMeshScale(float NewScale) {
+}
+
+void USpiderAnimInstance::SetDeathAnimationCategory(ESpiderDeathAnimationCategory Category) {
+}
+
+
+void USpiderAnimInstance::PlayForcedCycle(float Duration) {
+}
+
+bool USpiderAnimInstance::IsNotStrafing() const {
+    return false;
+}
+
+bool USpiderAnimInstance::IsNotStaggered() const {
+    return false;
+}
+
+bool USpiderAnimInstance::IsNotMoving() const {
+    return false;
+}
+
+bool USpiderAnimInstance::IsNotFrozen() const {
+    return false;
+}
+
+bool USpiderAnimInstance::IsNotAirborne() const {
+    return false;
+}
+
 

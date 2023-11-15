@@ -1,7 +1,18 @@
 #include "PipelineFinish.h"
+#include "Components/SceneComponent.h"
 #include "Net/UnrealNetwork.h"
 #include "SingleUsableComponent.h"
 #include "TrackBuilderConnectPoint.h"
+
+APipelineFinish::APipelineFinish(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("DefaultSceneRoot"));
+    this->PipelineEndConnection = CreateDefaultSubobject<UTrackBuilderConnectPoint>(TEXT("TrackEndConnection"));
+    this->UsableOrderExtractor = CreateDefaultSubobject<USingleUsableComponent>(TEXT("UsableOrderExtractor"));
+    this->ExtractPodClass = NULL;
+    this->ExtractorPod = NULL;
+    this->bPipelineCompleted = false;
+    this->PipelineEndConnection->SetupAttachment(RootComponent);
+}
 
 
 
@@ -31,11 +42,4 @@ void APipelineFinish::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
     DOREPLIFETIME(APipelineFinish, bPipelineCompleted);
 }
 
-APipelineFinish::APipelineFinish() {
-    this->PipelineEndConnection = CreateDefaultSubobject<UTrackBuilderConnectPoint>(TEXT("TrackEndConnection"));
-    this->UsableOrderExtractor = CreateDefaultSubobject<USingleUsableComponent>(TEXT("UsableOrderExtractor"));
-    this->ExtractPodClass = NULL;
-    this->ExtractorPod = NULL;
-    this->bPipelineCompleted = false;
-}
 

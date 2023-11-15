@@ -13,6 +13,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Max;
     
-    ARandomSelectorItem();
+    ARandomSelectorItem(const FObjectInitializer& ObjectInitializer);
+
 };
 

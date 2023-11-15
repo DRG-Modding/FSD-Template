@@ -1,5 +1,18 @@
 #include "UGCSubsystem.h"
 
+UUGCSubsystem::UUGCSubsystem() {
+    this->forceNoMods = false;
+    this->noInternetAccess = false;
+    this->noModioUser = false;
+    this->IsJoining = false;
+    this->UGCRegistry = NULL;
+    this->UGCSettings = NULL;
+    this->UGCLatentActionManager = NULL;
+    this->ModioTermsAndConditionsAccepted = false;
+    this->IsModioModManagementEnabled = false;
+    this->IsLocalUserModsInstalled = false;
+}
+
 void UUGCSubsystem::SetPackagesAsRecentlyInstalled(TArray<UUGCPackage*> RecentMods) {
 }
 
@@ -88,16 +101,4 @@ void UUGCSubsystem::DisableModioModManagement() {
 void UUGCSubsystem::ApplyPendingMods(bool FromJoining) {
 }
 
-UUGCSubsystem::UUGCSubsystem() {
-    this->forceNoMods = false;
-    this->noInternetAccess = false;
-    this->noModioUser = false;
-    this->IsJoining = false;
-    this->UGCRegistry = NULL;
-    this->UGCSettings = NULL;
-    this->UGCLatentActionManager = NULL;
-    this->ModioTermsAndConditionsAccepted = false;
-    this->IsModioModManagementEnabled = false;
-    this->IsLocalUserModsInstalled = false;
-}
 

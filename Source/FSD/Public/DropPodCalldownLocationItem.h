@@ -15,6 +15,7 @@ protected:
     TSubclassOf<AActor> CalldownClass;
     
 public:
-    ADropPodCalldownLocationItem();
+    ADropPodCalldownLocationItem(const FObjectInitializer& ObjectInitializer);
+
 };
 

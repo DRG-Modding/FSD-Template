@@ -35,14 +35,15 @@ protected:
     TSubclassOf<AActor> WeaponPreviewClass;
     
 public:
-    AArmorPiece();
+    AArmorPiece(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TSubclassOf<AActor> GetWeaponViewClass() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static AArmorPiece* GetArmorPieceDefaultObject(TSubclassOf<AArmorPiece> armorPieceClass);
     
-    
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable)
     TSubclassOf<AItem> GetLoadoutItemClass() const override PURE_VIRTUAL(GetLoadoutItemClass, return NULL;);

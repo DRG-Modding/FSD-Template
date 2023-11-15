@@ -29,5 +29,6 @@ public:
     TSoftObjectPtr<UMaterialInterface> RenderMaterial;
     
     UTerrainMaterialCore();
+
 };
 

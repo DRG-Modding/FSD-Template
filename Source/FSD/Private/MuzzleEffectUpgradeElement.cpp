@@ -5,3 +5,4 @@ UMuzzleEffectUpgradeElement::UMuzzleEffectUpgradeElement() {
     this->TPMuzzleFlash = NULL;
 }
 
+

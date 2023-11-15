@@ -1,8 +1,10 @@
 #include "JetBootsBox.h"
 #include "TerrainPlacementComponent.h"
 
-AJetBootsBox::AJetBootsBox() {
-    this->terrainPlacement = CreateDefaultSubobject<UTerrainPlacementComponent>(TEXT("terrainPlacement"));
+AJetBootsBox::AJetBootsBox(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<UTerrainPlacementComponent>(TEXT("terrainPlacement"));
+    this->terrainPlacement = (UTerrainPlacementComponent*)RootComponent;
     this->SpecialEvent = NULL;
 }
+
 

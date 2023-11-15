@@ -14,5 +14,6 @@ public:
     bool InSpinRange;
     
     UShredderAnimInstance();
+
 };
 

@@ -26,6 +26,7 @@ protected:
     
 public:
     UVeinResourceData();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UTerrainMaterial* GetTerrainMaterial() const;
     

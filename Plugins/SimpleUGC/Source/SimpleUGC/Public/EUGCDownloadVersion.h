@@ -6,6 +6,6 @@ UENUM(BlueprintType)
 enum class EUGCDownloadVersion : uint8 {
     Optional,
     Required,
-    All = 0xFF,
+    All = 255,
 };
 

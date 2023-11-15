@@ -15,7 +15,8 @@ protected:
     float FleeRadius;
     
 public:
-    USalutePerkComponent();
+    USalutePerkComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnSalute();

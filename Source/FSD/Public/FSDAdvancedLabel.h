@@ -31,6 +31,7 @@ protected:
     
 public:
     UFSDAdvancedLabel();
+
     UFUNCTION(BlueprintCallable)
     void SetText(FText NewText, FText OverrideControllerText);
     

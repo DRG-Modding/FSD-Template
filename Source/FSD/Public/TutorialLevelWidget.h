@@ -16,6 +16,7 @@ protected:
     
 public:
     UTutorialLevelWidget();
+
     UFUNCTION(BlueprintCallable)
     void ShowTutorialWidget(TSubclassOf<UTutorialContentWidget> TutorialWidget, bool ignoreQueue);
     

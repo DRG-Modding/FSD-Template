@@ -7,3 +7,4 @@ UBomberAnimInstance::UBomberAnimInstance() {
     this->IsSpiraling = false;
 }
 
+

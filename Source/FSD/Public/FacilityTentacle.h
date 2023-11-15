@@ -35,9 +35,10 @@ protected:
     FTentacleTarget DesiredTarget;
     
 public:
-    AFacilityTentacle();
+    AFacilityTentacle(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void PlayHitReaction(float Amount);
@@ -55,7 +56,7 @@ public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     bool FindBurrowLocation(UDebrisPositioning* Debris, const FVector& Origin, float Radius, FVector& OutLocation);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

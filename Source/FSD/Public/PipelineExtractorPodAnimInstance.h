@@ -49,5 +49,6 @@ protected:
     
 public:
     UPipelineExtractorPodAnimInstance();
+
 };
 

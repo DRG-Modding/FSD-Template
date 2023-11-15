@@ -44,7 +44,8 @@ protected:
     float ExpensiveCarveNoise;
     
 public:
-    ATerrainModifyingProjectile();
+    ATerrainModifyingProjectile(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void Tick(float DeltaSeconds);
     

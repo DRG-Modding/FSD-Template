@@ -1,5 +1,6 @@
 #include "SDFRandomizeTransformComponent.h"
 
-USDFRandomizeTransformComponent::USDFRandomizeTransformComponent() {
+USDFRandomizeTransformComponent::USDFRandomizeTransformComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

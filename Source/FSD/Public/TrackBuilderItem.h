@@ -40,9 +40,10 @@ protected:
     bool bIsPlacingSegment;
     
 public:
-    ATrackBuilderItem();
+    ATrackBuilderItem(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void UpdatePlacement(const FTransform& InTransform, UTrackBuilderConnectPoint* InConnectPoint, bool bPlacementValid, bool InUpdateServer);
     
@@ -78,7 +79,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector AdjustInitialLocation(const FVector& Location) const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -26,5 +26,6 @@ public:
     float ScaleStretch;
     
     UVanityTattoo();
+
 };
 

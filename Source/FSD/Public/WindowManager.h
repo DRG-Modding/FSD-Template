@@ -37,7 +37,8 @@ protected:
     bool ResolutionDownscaleActive;
     
 public:
-    UWindowManager();
+    UWindowManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetSingletonWidgetVisibility(TSubclassOf<UUserWidget> WidgetClass, ESlateVisibility Visibility);
     

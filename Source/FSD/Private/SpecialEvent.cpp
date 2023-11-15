@@ -5,3 +5,4 @@ USpecialEvent::USpecialEvent() {
     this->EventSpawner = NULL;
 }
 
+

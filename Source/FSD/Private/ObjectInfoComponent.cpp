@@ -1,5 +1,8 @@
 #include "ObjectInfoComponent.h"
 
+UObjectInfoComponent::UObjectInfoComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 bool UObjectInfoComponent::HasMissionControlLookAtShout(const UPrimitiveComponent* TargetComponent) const {
     return false;
 }
@@ -36,6 +39,4 @@ UActorContextWidget* UObjectInfoComponent::GetContextWidget(APlayerController* I
     return NULL;
 }
 
-UObjectInfoComponent::UObjectInfoComponent() {
-}
 

@@ -1,8 +1,10 @@
 #include "SpawnActorGenerationItem.h"
 #include "Components/BoxComponent.h"
 
-ASpawnActorGenerationItem::ASpawnActorGenerationItem() {
+ASpawnActorGenerationItem::ASpawnActorGenerationItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("Root"));
     this->ActorToSpawn = NULL;
-    this->Box = CreateDefaultSubobject<UBoxComponent>(TEXT("Root"));
+    this->Box = (UBoxComponent*)RootComponent;
 }
+
 

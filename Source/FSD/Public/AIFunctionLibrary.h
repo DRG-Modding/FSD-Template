@@ -15,6 +15,7 @@ class UAIFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UAIFunctionLibrary();
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     static void SetAICanSense(bool canSense);
     

@@ -9,3 +9,4 @@ UAttachedParticlesAfflictionEffect::UAttachedParticlesAfflictionEffect() {
     this->UseBoneFilter = false;
 }
 
+

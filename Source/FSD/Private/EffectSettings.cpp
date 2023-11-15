@@ -4,3 +4,4 @@ UEffectSettings::UEffectSettings() {
     this->NiagaraParameterCollection = NULL;
 }
 
+

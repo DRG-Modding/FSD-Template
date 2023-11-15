@@ -1,19 +1,6 @@
 #include "GooGun.h"
 
-
-float AGooGun::GetOverChargeProgress() const {
-    return 0.0f;
-}
-
-bool AGooGun::GetIsCharging() {
-    return false;
-}
-
-float AGooGun::GetChargeProgress() const {
-    return 0.0f;
-}
-
-AGooGun::AGooGun() {
+AGooGun::AGooGun(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ChargeTime = 2.00f;
     this->ShotCostCharged = 10;
     this->ChargeThreshold = 0.20f;
@@ -31,4 +18,18 @@ AGooGun::AGooGun() {
     this->FP_ChargeupMontage = NULL;
     this->TP_ChargeupMontage = NULL;
 }
+
+
+float AGooGun::GetOverChargeProgress() const {
+    return 0.0f;
+}
+
+bool AGooGun::GetIsCharging() {
+    return false;
+}
+
+float AGooGun::GetChargeProgress() const {
+    return 0.0f;
+}
+
 

@@ -41,5 +41,6 @@ public:
     FFakeMoverTarget TargetInfluence;
     
     UFakeMoverSettings();
+
 };
 

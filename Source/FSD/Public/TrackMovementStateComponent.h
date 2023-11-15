@@ -91,9 +91,10 @@ protected:
     FPipelineMovementData TrackMovementData;
     
 public:
-    UTrackMovementStateComponent();
+    UTrackMovementStateComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerExitMode(EExitTrackMode eMode);

@@ -7,3 +7,4 @@ UChargedHitCountEffect::UChargedHitCountEffect() {
     this->DamageSound = NULL;
 }
 
+

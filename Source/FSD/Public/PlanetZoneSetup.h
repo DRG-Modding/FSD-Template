@@ -16,6 +16,7 @@ protected:
     
 public:
     UPlanetZoneSetup();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UPlanetZone* GetPlanetZoneForBiome(UBiome* Biome, int32& zoneIndex) const;
     

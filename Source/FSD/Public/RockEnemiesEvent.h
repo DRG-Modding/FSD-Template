@@ -51,7 +51,8 @@ protected:
     UEnemyGroupDescriptor* RockEnemies;
     
 public:
-    ARockEnemiesEvent();
+    ARockEnemiesEvent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void StopPowerupGeneration();

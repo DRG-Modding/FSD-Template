@@ -30,7 +30,8 @@ protected:
     float CarveNormalSqueeze;
     
 public:
-    UExplosionBaseComponent();
+    UExplosionBaseComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void DamageOnlyFromHit(const FHitResult& HitResult, UPARAM(Ref) UDamageComponent*& DamageComponent);
     

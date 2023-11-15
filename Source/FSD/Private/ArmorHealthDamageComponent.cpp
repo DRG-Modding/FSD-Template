@@ -1,6 +1,11 @@
 #include "ArmorHealthDamageComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UArmorHealthDamageComponent::UArmorHealthDamageComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RadialSocketDamageMultiplier = 1.00f;
+    this->AffectedByAmorBreak = true;
+}
+
 bool UArmorHealthDamageComponent::SetHealthOnBodypartItem(FName BoneName, float newHealth) {
     return false;
 }
@@ -30,8 +35,4 @@ void UArmorHealthDamageComponent::GetLifetimeReplicatedProps(TArray<FLifetimePro
     DOREPLIFETIME(UArmorHealthDamageComponent, ArmorDamageInfo);
 }
 
-UArmorHealthDamageComponent::UArmorHealthDamageComponent() {
-    this->RadialSocketDamageMultiplier = 1.00f;
-    this->AffectedByAmorBreak = true;
-}
 

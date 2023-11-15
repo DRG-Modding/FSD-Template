@@ -15,5 +15,6 @@ public:
     TArray<USDFBase*> Arguments;
     
     USDFIntersectOp();
+
 };
 

@@ -15,6 +15,7 @@ protected:
     int32 TracePartitions;
     
 public:
-    UAllPiercingHitscanComponent();
+    UAllPiercingHitscanComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

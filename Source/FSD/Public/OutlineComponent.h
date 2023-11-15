@@ -45,7 +45,8 @@ protected:
     TWeakObjectPtr<APlayerCharacter> Character;
     
 public:
-    UOutlineComponent();
+    UOutlineComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UnlockOutline();
     

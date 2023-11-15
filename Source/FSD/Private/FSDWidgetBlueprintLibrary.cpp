@@ -1,6 +1,9 @@
 #include "FSDWidgetBlueprintLibrary.h"
 #include "Templates/SubclassOf.h"
 
+UFSDWidgetBlueprintLibrary::UFSDWidgetBlueprintLibrary() {
+}
+
 void UFSDWidgetBlueprintLibrary::ToggleAnimationLooping(UObject* WorldContext, UWidgetAnimation* InAnimation, FWidgetAnimationSettings InSettings, bool InLoop, bool& OutPlayingChanged, bool& OutIsPlaying) {
 }
 
@@ -217,6 +220,4 @@ UWidget* UFSDWidgetBlueprintLibrary::AddChildToCanvasEx(UCanvasPanel* CanvasPane
     return NULL;
 }
 
-UFSDWidgetBlueprintLibrary::UFSDWidgetBlueprintLibrary() {
-}
 

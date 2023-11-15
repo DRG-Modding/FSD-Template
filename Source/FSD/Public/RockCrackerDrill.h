@@ -12,7 +12,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USingleUsableComponent* ConstructUsable;
     
-    ARockCrackerDrill();
+    ARockCrackerDrill(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetIsDrilling(bool isDrilling);
     

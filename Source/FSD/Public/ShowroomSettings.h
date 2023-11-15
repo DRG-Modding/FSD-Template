@@ -21,5 +21,6 @@ public:
     TSoftClassPtr<AShowroomStage> CharacterStage;
     
     UShowroomSettings();
+
 };
 

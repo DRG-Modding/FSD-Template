@@ -1,5 +1,13 @@
 #include "DeepDive.h"
 
+UDeepDive::UDeepDive() {
+    this->Biome = NULL;
+    this->MissionsCompleted = 0;
+    this->CurrentMissionIndex = 0;
+    this->Template = NULL;
+    this->BestTime = 0;
+}
+
 bool UDeepDive::IsCompleted() const {
     return false;
 }
@@ -12,11 +20,4 @@ FDeepDiveRewardItem UDeepDive::GetGivenRewardAtStage(int32 stageIndex) {
     return FDeepDiveRewardItem{};
 }
 
-UDeepDive::UDeepDive() {
-    this->Biome = NULL;
-    this->MissionsCompleted = 0;
-    this->CurrentMissionIndex = 0;
-    this->Template = NULL;
-    this->BestTime = 0;
-}
 

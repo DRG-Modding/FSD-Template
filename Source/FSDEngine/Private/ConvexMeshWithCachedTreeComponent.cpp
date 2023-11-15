@@ -1,5 +1,6 @@
 #include "ConvexMeshWithCachedTreeComponent.h"
 
-UConvexMeshWithCachedTreeComponent::UConvexMeshWithCachedTreeComponent() {
+UConvexMeshWithCachedTreeComponent::UConvexMeshWithCachedTreeComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

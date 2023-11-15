@@ -12,5 +12,6 @@ public:
     FCSGGridDuplicatorProperties Properties;
     
     UCSGGridDuplicator();
+
 };
 

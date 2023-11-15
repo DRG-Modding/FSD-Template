@@ -9,6 +9,7 @@ class URandIntervalFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     URandIntervalFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetFloatValue(const FRandInterval& RandInterval);
     

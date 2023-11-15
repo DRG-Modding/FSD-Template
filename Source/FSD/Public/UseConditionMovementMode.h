@@ -15,5 +15,6 @@ public:
     TArray<FMovementModeCombo> MovementModes;
     
     UUseConditionMovementMode();
+
 };
 

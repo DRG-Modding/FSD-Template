@@ -1,5 +1,11 @@
 #include "ShowroomManager.h"
 
+UShowroomManager::UShowroomManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->CurrentStage = NULL;
+    this->StageInstance = NULL;
+    this->RenderTarget = NULL;
+}
+
 UShowroomController* UShowroomManager::GetController() {
     return NULL;
 }
@@ -7,9 +13,4 @@ UShowroomController* UShowroomManager::GetController() {
 void UShowroomManager::ClearShowroom() {
 }
 
-UShowroomManager::UShowroomManager() {
-    this->CurrentStage = NULL;
-    this->StageInstance = NULL;
-    this->RenderTarget = NULL;
-}
 

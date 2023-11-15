@@ -33,9 +33,10 @@ protected:
     bool bIsOnFire;
     
 public:
-    UEnemyTemperatureReplicatorComponent();
+    UEnemyTemperatureReplicatorComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_TemperatureEffect();

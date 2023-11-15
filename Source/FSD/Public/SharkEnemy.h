@@ -156,9 +156,10 @@ protected:
     ESharkEnemyState State;
     
 public:
-    ASharkEnemy();
+    ASharkEnemy(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetVulnerable();
     

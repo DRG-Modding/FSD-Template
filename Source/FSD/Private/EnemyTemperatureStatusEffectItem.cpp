@@ -6,3 +6,4 @@ UEnemyTemperatureStatusEffectItem::UEnemyTemperatureStatusEffectItem() {
     this->TemperatureChangeScaleModifier = 1.00f;
 }
 
+

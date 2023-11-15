@@ -1,6 +1,7 @@
 #include "PickaxePartRewarder.h"
 
-UPickaxePartRewarder::UPickaxePartRewarder() {
+UPickaxePartRewarder::UPickaxePartRewarder(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->PickaxePart = NULL;
 }
+
 

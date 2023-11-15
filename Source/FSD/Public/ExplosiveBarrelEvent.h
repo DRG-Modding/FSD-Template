@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageComponent* EndDamage;
     
-    AExplosiveBarrelEvent();
+    AExplosiveBarrelEvent(const FObjectInitializer& ObjectInitializer);
+
 };
 

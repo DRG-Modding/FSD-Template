@@ -36,7 +36,8 @@ protected:
     bool bCheatObjectivesCompleted;
     
 public:
-    UObjectivesManager();
+    UObjectivesManager(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnObjectiveChanged(UObjective* obj);

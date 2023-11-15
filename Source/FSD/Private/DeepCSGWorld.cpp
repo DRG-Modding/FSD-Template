@@ -1,6 +1,29 @@
 #include "DeepCSGWorld.h"
+#include "Components/ArrowComponent.h"
 #include "AsyncPathRequests.h"
 #include "Templates/SubclassOf.h"
+
+ADeepCSGWorld::ADeepCSGWorld(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAlwaysRelevant = true;
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->RootComponent = CreateDefaultSubobject<UArrowComponent>(TEXT("FakeMoeventBase"));
+    this->MOMTerrrainMaterial = NULL;
+    this->NitraTerrrainMaterial = NULL;
+    this->GoldTerrainType = NULL;
+    this->MOMTerrainType = NULL;
+    this->RockTerrainType = NULL;
+    this->CrystalTerrainType = NULL;
+    this->EmptyTerrainType = NULL;
+    this->DirtTerrainType = NULL;
+    this->DefaultBurntTerrainType = NULL;
+    this->TestLevelCarver = NULL;
+    this->DebrisActorInstance = NULL;
+    this->DebrisActorIndex = 0;
+    this->ProceduralSetup = NULL;
+    this->AsyncPathRequests = CreateDefaultSubobject<UAsyncPathRequests>(TEXT("AsyncPathRequests"));
+}
 
 void ADeepCSGWorld::UnRegisterScannerComponent(UPrimitiveComponent* Component) {
 }
@@ -173,20 +196,4 @@ void ADeepCSGWorld::AttachActorToTerrain(AActor* Actor, FVector Pos) {
 void ADeepCSGWorld::ApplyBaseDebrisCarvers(const TArray<UDebrisBase*>& Carvers) {
 }
 
-ADeepCSGWorld::ADeepCSGWorld() {
-    this->MOMTerrrainMaterial = NULL;
-    this->NitraTerrrainMaterial = NULL;
-    this->GoldTerrainType = NULL;
-    this->MOMTerrainType = NULL;
-    this->RockTerrainType = NULL;
-    this->CrystalTerrainType = NULL;
-    this->EmptyTerrainType = NULL;
-    this->DirtTerrainType = NULL;
-    this->DefaultBurntTerrainType = NULL;
-    this->TestLevelCarver = NULL;
-    this->DebrisActorInstance = NULL;
-    this->DebrisActorIndex = 0;
-    this->ProceduralSetup = NULL;
-    this->AsyncPathRequests = CreateDefaultSubobject<UAsyncPathRequests>(TEXT("AsyncPathRequests"));
-}
 

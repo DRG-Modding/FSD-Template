@@ -18,7 +18,8 @@ protected:
     float OnKillFearRange;
     
 public:
-    ARevoler();
+    ARevoler(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnTargetKilled(AActor* Target, UFSDPhysicalMaterial* PhysMat, bool wasDirectHit);

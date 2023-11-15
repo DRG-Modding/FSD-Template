@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWarpedProperties Properties;
     
-    UCSGWarpedComponent();
+    UCSGWarpedComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

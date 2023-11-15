@@ -1,6 +1,47 @@
 #include "FSDSaveGame.h"
 #include "Templates/SubclassOf.h"
 
+UFSDSaveGame::UFSDSaveGame() {
+    this->VersionNumber = 0;
+    this->bMilestoneResetShown = false;
+    this->bYearTwoGiftClaimed = false;
+    this->SaveCreatedInPatch = 1;
+    this->PerkPoints = 0;
+    this->HasRecievedDiscordReward = false;
+    this->Faction = EFSDFaction::NoFaction;
+    this->Credits = 0;
+    this->LastBoughtDailyDealSeed = 0;
+    this->bIgnoreRandomLoadout = false;
+    this->LastCollectedCommunityRewardPeriodID = 0;
+    this->FirstRejoinAttempt = false;
+    this->HaveItemUpgradesBeenFixed = false;
+    this->bHasOpenedDeepDiveTerminal = false;
+    this->FirstSession = true;
+    this->HasCompletedTutorial = false;
+    this->HasPlayedTutorial = false;
+    this->ShowHowToRestartTutorialPrompt = false;
+    this->HasPlayedIntroMessage = false;
+    this->HasSentSteamInfo = false;
+    this->HasClaimedSteamGroupLoot = false;
+    this->IsBoscoAllowed = true;
+    this->HasJoinedXboxClub = false;
+    this->HasSeenAnalyticsPopUp = false;
+    this->AllowAnalyticsTracking = true;
+    this->AllowPersonalAnalyticsTracking = true;
+    this->IsModded = false;
+    this->Index = -1;
+    this->TotalPlayTimeSeconds = 0.00f;
+    this->userIdx = 0;
+    this->CurrLoadoutIdx = 0;
+    this->SaveToDiskCounter = 0;
+    this->BackupSaveIndex = 0;
+    this->ExternalBackupSaveIndex = 0;
+    this->NumberOfGamesPlayed = 0;
+    this->LastPlayedCharacter = NULL;
+    this->ShowInfoScreen = true;
+    this->FSDGameInstance = NULL;
+}
+
 bool UFSDSaveGame::TrySellResource(UResourceData* Resource, int32 Amount, int32& Price) {
     return false;
 }
@@ -341,44 +382,4 @@ int32 UFSDSaveGame::AddClassXP(UObject* WorldContext, UPlayerCharacterID* charac
     return 0;
 }
 
-UFSDSaveGame::UFSDSaveGame() {
-    this->VersionNumber = 0;
-    this->bMilestoneResetShown = false;
-    this->bYearTwoGiftClaimed = false;
-    this->SaveCreatedInPatch = 1;
-    this->PerkPoints = 0;
-    this->HasRecievedDiscordReward = false;
-    this->Faction = EFSDFaction::NoFaction;
-    this->Credits = 0;
-    this->LastBoughtDailyDealSeed = 0;
-    this->bIgnoreRandomLoadout = false;
-    this->LastCollectedCommunityRewardPeriodID = 0;
-    this->FirstRejoinAttempt = false;
-    this->HaveItemUpgradesBeenFixed = false;
-    this->bHasOpenedDeepDiveTerminal = false;
-    this->FirstSession = true;
-    this->HasCompletedTutorial = false;
-    this->HasPlayedTutorial = false;
-    this->ShowHowToRestartTutorialPrompt = false;
-    this->HasPlayedIntroMessage = false;
-    this->HasSentSteamInfo = false;
-    this->HasClaimedSteamGroupLoot = false;
-    this->IsBoscoAllowed = true;
-    this->HasJoinedXboxClub = false;
-    this->HasSeenAnalyticsPopUp = false;
-    this->AllowAnalyticsTracking = true;
-    this->AllowPersonalAnalyticsTracking = true;
-    this->IsModded = false;
-    this->Index = -1;
-    this->TotalPlayTimeSeconds = 0.00f;
-    this->userIdx = 0;
-    this->CurrLoadoutIdx = 0;
-    this->SaveToDiskCounter = 0;
-    this->BackupSaveIndex = 0;
-    this->ExternalBackupSaveIndex = 0;
-    this->NumberOfGamesPlayed = 0;
-    this->LastPlayedCharacter = NULL;
-    this->ShowInfoScreen = true;
-    this->FSDGameInstance = NULL;
-}
 
