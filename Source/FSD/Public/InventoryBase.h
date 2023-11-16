@@ -18,7 +18,7 @@ private:
     TArray<AActor*> ActorsNonSelectable;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_EquippedActor, meta=(AllowPrivateAccess=true))
-    FEquippedActorData EquippedActor;
+    FEquippedActorData ReplicatedEquippedActor;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* LastEquippedActors[2];

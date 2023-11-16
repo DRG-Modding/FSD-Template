@@ -61,7 +61,7 @@ void UGoogleAnalyticsWrapper::RecordGaChallengeReroll(int32 ChallengeIndex, USea
 void UGoogleAnalyticsWrapper::RecordExtraFailInfo(const FString& MissionName, const FString& Stage, const FString& ExtraText) {
 }
 
-void UGoogleAnalyticsWrapper::RecordCustomGAEvent(const FString& EventCategory, const FString& EventAction, const FString& EventLabel, const int32 EventValue, const FString& TrackingId) {
+void UGoogleAnalyticsWrapper::RecordCustomGAEvent(const FString& EventCategory, const FString& EventAction, const FString& EventLabel, const int32 EventValue, const FString& TrackingID) {
 }
 
 void UGoogleAnalyticsWrapper::RecordContinuousDamage(AActor* DamageCauser) {

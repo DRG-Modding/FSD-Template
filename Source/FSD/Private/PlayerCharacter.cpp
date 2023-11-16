@@ -148,9 +148,6 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer) 
     this->CanInstantRevive = false;
     this->HasInitializedPerks = false;
     this->CharacterVanity = CreateDefaultSubobject<UCharacterVanityComponent>(TEXT("CharacterVanity"));
-    this->FPMesh->SetupAttachment(FirstPersonRoot);
-    this->FirstPersonCamera->SetupAttachment(FPMesh);
-    this->FirstPersonRoot->SetupAttachment(RootComponent);
     this->ActorTracking->SetupAttachment(RootComponent);
     this->ThirdPersonSpringArm->SetupAttachment(RootComponent);
     this->ThirdPersonCamera->SetupAttachment(ThirdPersonSpringArm);
@@ -159,6 +156,9 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer) 
     this->FollowCamera->SetupAttachment(FollowSpringArm);
     this->DownCamera->SetupAttachment(RootComponent);
     this->WidgetInteraction->SetupAttachment(FirstPersonCamera);
+    this->FPMesh->SetupAttachment(FirstPersonRoot);
+    this->FirstPersonCamera->SetupAttachment(FPMesh);
+    this->FirstPersonRoot->SetupAttachment(RootComponent);
 }
 
 void APlayerCharacter::UseZipLine(AZipLineProjectile* ZipLine, const FVector& Start, const FVector& End) {

@@ -34,6 +34,9 @@ protected:
     float MaxForce;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool AlwaysShowAnimEffects;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVanityAnimEffect> VanityAnimEffects;
     
 public:

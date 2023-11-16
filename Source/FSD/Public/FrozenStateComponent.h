@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CharacterStateComponent.h"
+#include "CharacterBreakOutState.h"
 #include "RandRange.h"
 #include "FrozenStateComponent.generated.h"
 
@@ -8,13 +8,10 @@ class UFSDPhysicalMaterial;
 class USoundBase;
 
 UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
-class UFrozenStateComponent : public UCharacterStateComponent {
+class UFrozenStateComponent : public UCharacterBreakOutState {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FRandRange DeFrostAmount;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* AudioFreeFromIce;
     
@@ -28,14 +25,14 @@ protected:
     float SlowAnimationSpeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float HoldToBreakTime;
+    FRandRange DeFrostAmount;
     
 public:
     UFrozenStateComponent(const FObjectInitializer& ObjectInitializer);
 
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_ThawPlayer();
+    void Server_ThawPlayer(float Percent);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveOnDefrosting();

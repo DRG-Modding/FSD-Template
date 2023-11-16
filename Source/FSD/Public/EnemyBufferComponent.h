@@ -6,6 +6,7 @@
 #include "Templates/SubclassOf.h"
 #include "EnemyBufferComponent.generated.h"
 
+class AActor;
 class AFSDPawn;
 class UHealthComponentBase;
 class UParticleSystem;
@@ -40,6 +41,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagQuery BuffQuery;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<AActor> SubclassBuffQuery;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     TArray<AFSDPawn*> BuffTargets;

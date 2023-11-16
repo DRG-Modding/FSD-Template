@@ -5,6 +5,7 @@ UVanityAnimInstance::UVanityAnimInstance() {
     this->ArmorCoversBeard = false;
     this->ExternalForceMultiplier = 1.00f;
     this->MaxForce = 1000.00f;
+    this->AlwaysShowAnimEffects = false;
 }
 
 void UVanityAnimInstance::UpdateMeshes() {

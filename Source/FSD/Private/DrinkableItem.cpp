@@ -8,6 +8,9 @@ ADrinkableItem::ADrinkableItem(const FObjectInitializer& ObjectInitializer) : Su
 void ADrinkableItem::OnRep_DrinkableData() {
 }
 
+void ADrinkableItem::OnCameraModeChanged(ECharacterCameraMode NewCameraMode, ECharacterCameraMode OldCameraMode) {
+}
+
 void ADrinkableItem::Consume() {
 }
 

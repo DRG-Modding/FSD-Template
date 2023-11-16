@@ -40,6 +40,8 @@
 #include "VanityMasteryResult.h"
 #include "VanityMasterySave.h"
 #include "WatchedTutorial.h"
+#include "WeaponMaintenance.h"
+#include "WeaponMaintenanceChangedDelegate.h"
 #include "FSDSaveGame.generated.h"
 
 class AActor;
@@ -174,6 +176,12 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameDLCSave GameDLCSave;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FWeaponMaintenanceChanged OnWeaponMaintenanceChanged;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FWeaponMaintenance WeaponMaintenance;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

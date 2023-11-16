@@ -10,7 +10,7 @@ UItemData::UItemData() {
     this->RequiredCharacterLevel = 0;
 }
 
-UTexture2D* UItemData::GetPreviewImage() const {
+UTexture2D* UItemData::GetPreviewImage(UObject* WorldContext) const {
     return NULL;
 }
 

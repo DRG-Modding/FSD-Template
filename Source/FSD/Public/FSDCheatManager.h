@@ -266,6 +266,12 @@ public:
     void C_Windows_CloseAll() const;
     
     UFUNCTION(BlueprintCallable, Exec)
+    void C_WeaponMaintenance_Reset();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_WeaponMaintenance_AddXP(int32 XP);
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void C_VanityMasteryResetXP();
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -336,6 +342,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_ToggleCanShowBlood();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_TestSpecialEventChance();
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_StopMovement(bool shouldMove);
@@ -413,7 +422,16 @@ public:
     void C_Seasons_IncrementChallenge(int32 Index);
     
     UFUNCTION(BlueprintCallable, Exec)
+    void C_Seasons_CompleteSeasonAlmost();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_Seasons_CompleteSeason();
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void C_Seasons_CompleteScripChallenge(int32 Number);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_Seasons_ClearSeasonCompletedAnnounced();
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_Seasons_ClearChallenges();
@@ -549,6 +567,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_MissionMap_TestDistribution();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_MissionMap_SetSeed(int32 Seed);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_MissionMap_Rotate();

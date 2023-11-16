@@ -13,9 +13,9 @@ AParasiteEnemy::AParasiteEnemy(const FObjectInitializer& ObjectInitializer) : Su
     this->outline = CreateDefaultSubobject<UOutlineComponent>(TEXT("outline"));
     this->deathParticles = NULL;
     this->deathSound = NULL;
+    this->Mesh->SetupAttachment(RootComponent);
     this->Tentacles1->SetupAttachment(Mesh);
     this->Tentacles2->SetupAttachment(Mesh);
-    this->Mesh->SetupAttachment(RootComponent);
 }
 
 void AParasiteEnemy::OnSelfDeath(UHealthComponentBase* aHealthComponent) {

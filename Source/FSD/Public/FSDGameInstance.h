@@ -258,7 +258,10 @@ public:
     FBoscoChanged OnBoscoChanged;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool DEBUGSpawnRandomMissions;
+    bool DEBUGUseDebugSeedForMissions;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool DEBUGAutoRotateMissions;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 DEBUGFixedPLSSeed;
@@ -469,6 +472,9 @@ public:
     void UpdateGlobelMissionSeed();
     
     UFUNCTION(BlueprintCallable)
+    void UpdateDebugSeed();
+    
+    UFUNCTION(BlueprintCallable)
     void StopPhotographyInputProcessor();
     
     UFUNCTION(BlueprintCallable)
@@ -533,6 +539,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetEligableForRetirementAssignment(bool eligable);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetDebugSeed(int32 Seed);
     
     UFUNCTION(BlueprintCallable)
     void SetCharacterSelectionWorldVisible(bool V, ECharselectionCameraLocation cameraLocation, bool resetHud, ECharacterSelectorItemStatus itemStatus);
@@ -691,6 +700,9 @@ protected:
     TArray<FNetworkConnectionInfo> GetConnectionInfo();
     
 public:
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetCommonGlobalMissionSeed() const;
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     APlayerCharacter* GetCharacterSelectorCharacter();
     

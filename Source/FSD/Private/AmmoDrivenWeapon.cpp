@@ -46,6 +46,7 @@ AAmmoDrivenWeapon::AAmmoDrivenWeapon(const FObjectInitializer& ObjectInitializer
     this->ReloadDuration = 0.00f;
     this->AmmoCount = 0;
     this->ClipCount = 0;
+    this->ManualHeatReductionAmmo = 0;
     this->FireInputBufferTime = 0.00f;
     this->AutoReloadDuration = 0.00f;
     this->AutoReloadCompleteCue = NULL;
@@ -61,6 +62,9 @@ AAmmoDrivenWeapon::AAmmoDrivenWeapon(const FObjectInitializer& ObjectInitializer
     this->EndOfBurstRecoilMultiplier = 1.00f;
     this->HasAutomaticFire = false;
     this->IsFiring = false;
+    this->ManualHeatReductionOnReload = false;
+    this->MaxManualHeatReductionCharges = 0;
+    this->ManualHeatReductionValue = 0.00f;
     this->WeaponState = EAmmoWeaponState::Equipping;
 }
 
@@ -129,6 +133,7 @@ void AAmmoDrivenWeapon::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
     DOREPLIFETIME(AAmmoDrivenWeapon, TP_ReloadAnimation);
     DOREPLIFETIME(AAmmoDrivenWeapon, WPN_Reload);
     DOREPLIFETIME(AAmmoDrivenWeapon, ClipCount);
+    DOREPLIFETIME(AAmmoDrivenWeapon, ManualHeatReductionAmmo);
     DOREPLIFETIME(AAmmoDrivenWeapon, IsFiring);
 }
 

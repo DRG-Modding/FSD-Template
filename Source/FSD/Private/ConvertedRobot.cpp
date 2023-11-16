@@ -90,6 +90,8 @@ AConvertedRobot::AConvertedRobot(const FObjectInitializer& ObjectInitializer) : 
     this->IsDoingSpecialAttack = false;
     this->TurretRotation = NULL;
     this->CurrentTarget = NULL;
+    this->OuterShield->SetupAttachment(InnerShield);
+    this->PulsatingSoundComp->SetupAttachment(Mesh);
     this->TurretRoot->SetupAttachment(Mesh);
     this->TurretMesh->SetupAttachment(TurretRoot);
     this->MuzzleFlash->SetupAttachment(TurretMesh);
@@ -98,8 +100,6 @@ AConvertedRobot::AConvertedRobot(const FObjectInitializer& ObjectInitializer) : 
     this->LaserBeam->SetupAttachment(TurretMesh);
     this->ShieldRoot->SetupAttachment(Mesh);
     this->InnerShield->SetupAttachment(ShieldRoot);
-    this->OuterShield->SetupAttachment(InnerShield);
-    this->PulsatingSoundComp->SetupAttachment(Mesh);
 }
 
 void AConvertedRobot::UpdateGunsInsideTerrain() {

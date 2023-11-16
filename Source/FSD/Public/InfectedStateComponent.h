@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CharacterStateComponent.h"
+#include "CharacterBreakOutState.h"
 #include "RandRange.h"
 #include "InfectedStateComponent.generated.h"
 
@@ -10,7 +10,7 @@ class UPawnAffliction;
 class USoundBase;
 
 UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
-class UInfectedStateComponent : public UCharacterStateComponent {
+class UInfectedStateComponent : public UCharacterBreakOutState {
     GENERATED_BODY()
 public:
 protected:
@@ -37,9 +37,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BreakingFreeMontageDuration;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float HoldToBreakTime;
     
 public:
     UInfectedStateComponent(const FObjectInitializer& ObjectInitializer);

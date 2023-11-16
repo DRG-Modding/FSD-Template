@@ -82,6 +82,12 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetSentryGunOwner(APlayerCharacter* Character);
     
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetEMPIndicatorActive(bool Active);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetArcIndicatorActive(bool Active);
+    
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveOnStateChanged();

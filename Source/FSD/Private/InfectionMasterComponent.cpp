@@ -3,7 +3,7 @@
 
 UInfectionMasterComponent::UInfectionMasterComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->WeakpointPopSTE = NULL;
-    this->WeakpointPopSTERange = 300.00f;
+    this->WeakpointPopSTERange = 250.00f;
     this->InfectionPoints = 3;
     this->ExtraInfectionPointsWithMorePlayers = false;
     this->SpikeScale = 1.00f;

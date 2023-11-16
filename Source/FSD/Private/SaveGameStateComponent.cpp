@@ -48,12 +48,12 @@ void USaveGameStateComponent::OnRep_CharacterStats() {
 void USaveGameStateComponent::OnRep_ActiveCampaignMission() {
 }
 
-FCharacterProgress USaveGameStateComponent::GetCharacterStat(UPlayerCharacterID* characterID) {
-    return FCharacterProgress{};
+bool USaveGameStateComponent::IsActiveCampaignMission(UGeneratedMission* mission) const {
+    return false;
 }
 
-UGeneratedMission* USaveGameStateComponent::GetActiveCampaignMission() const {
-    return NULL;
+FCharacterProgress USaveGameStateComponent::GetCharacterStat(UPlayerCharacterID* characterID) {
+    return FCharacterProgress{};
 }
 
 void USaveGameStateComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

@@ -206,15 +206,19 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/FSDEditorTools/DRGAssetDefinitions/DRGAssetDefinitions.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/GeometryProcessing.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/FSDEditorTools/SkinEditor/SkinEditor.uplugin",
 			"Type": "UFS"
 		},
 		{
 			"Path": "$(ProjectDir)/Plugins/FSDTests/FSDTests.uplugin",
-			"Type": "UFS"
-		},
-		{
-			"Path": "$(ProjectDir)/Plugins/GoogleAnalytics/GoogleAnalytics.uplugin",
 			"Type": "UFS"
 		},
 		{
@@ -343,10 +347,6 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/MeshPainting/MeshPainting.uplugin",
-			"Type": "UFS"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/GeometryProcessing.uplugin",
 			"Type": "UFS"
 		},
 		{

@@ -6,10 +6,9 @@ UFrozenStateComponent::UFrozenStateComponent(const FObjectInitializer& ObjectIni
     this->IcePhysicalMaterial = NULL;
     this->DwarfFleshMaterial = NULL;
     this->SlowAnimationSpeed = 2.00f;
-    this->HoldToBreakTime = 0.25f;
 }
 
-void UFrozenStateComponent::Server_ThawPlayer_Implementation() {
+void UFrozenStateComponent::Server_ThawPlayer_Implementation(float Percent) {
 }
 
 

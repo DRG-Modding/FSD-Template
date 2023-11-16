@@ -9,10 +9,12 @@ ARecallableSentryGunItem::ARecallableSentryGunItem(const FObjectInitializer& Obj
     this->AmmoCapacity = CreateDefaultSubobject<UCapacityHoldingItemAggregator>(TEXT("AmmoCapacity"));
     this->ItemPlacer = CreateDefaultSubobject<UItemPlacerAggregator>(TEXT("ItemPlacer"));
     this->LoadoutClass = NULL;
+    this->SentryGunObjectClass = NULL;
     this->SupplyStatusWeight = 1.00f;
     this->SentryAngleRestriction = 0.00f;
     this->bIsUpgraded = false;
 }
+
 
 
 bool ARecallableSentryGunItem::HasAmmoLeft() {

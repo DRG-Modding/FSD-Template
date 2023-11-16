@@ -42,6 +42,9 @@ UFSDPhysicalMaterial* AProjectile::FindBoneIndexFromArmor(const FHitResult& HitR
     return NULL;
 }
 
+void AProjectile::DisableHoming() {
+}
+
 void AProjectile::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     

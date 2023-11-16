@@ -14,6 +14,10 @@ bool UObjectivesManager::HasRequiredSecondaryObjective() const {
     return false;
 }
 
+TArray<UObjective*> UObjectivesManager::GetSecondaryObjectives() const {
+    return TArray<UObjective*>();
+}
+
 UObjective* UObjectivesManager::GetSecondaryObjective() const {
     return NULL;
 }

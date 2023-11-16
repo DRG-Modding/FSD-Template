@@ -12,6 +12,10 @@ UGeneratedMission* UMissionGenerationManager::GetMissionFromSeeds(int32 GlobalSe
     return NULL;
 }
 
+TArray<UGeneratedMission*> UMissionGenerationManager::GetAvailableMissionsWithSeasonContentCheck(bool HasOptedOutOfSeasonContent) {
+    return TArray<UGeneratedMission*>();
+}
+
 TArray<UGeneratedMission*> UMissionGenerationManager::GetAvailableMissions() {
     return TArray<UGeneratedMission*>();
 }

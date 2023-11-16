@@ -9,6 +9,8 @@ enum class EAmmoDrivenWeapnUpgradeType : uint8 {
     RateOfFire,
     ReloadSpeed,
     RecoilMultiplier,
+    RecoilMultiplierV,
+    RecoilMultiplierH,
     BurstCount,
     BurstRateOfFire,
     ActivateBurstFireMode,
@@ -19,5 +21,6 @@ enum class EAmmoDrivenWeapnUpgradeType : uint8 {
     OverheatOnReload,
     ShotCost,
     CustomEvent1,
+    HeatReductionOnReload,
 };
 

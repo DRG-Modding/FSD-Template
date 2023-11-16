@@ -49,7 +49,7 @@ void UInventoryBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
     
     DOREPLIFETIME(UInventoryBase, ActorsSelectable);
     DOREPLIFETIME(UInventoryBase, ActorsNonSelectable);
-    DOREPLIFETIME(UInventoryBase, EquippedActor);
+    DOREPLIFETIME(UInventoryBase, ReplicatedEquippedActor);
 }
 
 

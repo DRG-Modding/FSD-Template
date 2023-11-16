@@ -11,5 +11,6 @@ enum class ECryoSprayUpgrades : uint8 {
     FrozenTargetsCanShatter,
     AoECold,
     LongReach,
+    SprayWidth,
 };
 

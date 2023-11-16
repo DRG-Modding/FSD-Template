@@ -7,6 +7,7 @@ UEnemyBufferComponent::UEnemyBufferComponent(const FObjectInitializer& ObjectIni
     this->ParticleTangentSize = 60.00f;
     this->BuffRadius = 500.00f;
     this->MaxBuffedTargets = 5;
+    this->SubclassBuffQuery = NULL;
 }
 
 void UEnemyBufferComponent::SetBuffingEnabled(bool Enabled) {

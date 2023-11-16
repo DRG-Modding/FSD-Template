@@ -20,7 +20,8 @@ UFSDGameInstance::UFSDGameInstance() {
     this->LoaderSequencePlaying = false;
     this->CharacterSelectionLastViewTarget = NULL;
     this->HasSeenInfoScreen = false;
-    this->DEBUGSpawnRandomMissions = false;
+    this->DEBUGUseDebugSeedForMissions = false;
+    this->DEBUGAutoRotateMissions = false;
     this->DEBUGFixedPLSSeed = -1;
     this->DEBUGSeedOverride = 1;
     this->CanPlayOnline = true;
@@ -71,6 +72,9 @@ UFSDGameInstance::UFSDGameInstance() {
 }
 
 void UFSDGameInstance::UpdateGlobelMissionSeed() {
+}
+
+void UFSDGameInstance::UpdateDebugSeed() {
 }
 
 void UFSDGameInstance::StopPhotographyInputProcessor() {
@@ -137,6 +141,9 @@ void UFSDGameInstance::SetGlobalMissionSeed(int32 Seed) {
 void UFSDGameInstance::SetFSDPassword(const FString& pw) {
 }
 
+
+void UFSDGameInstance::SetDebugSeed(int32 Seed) {
+}
 
 void UFSDGameInstance::SetCharacterSelectionWorldVisible(bool V, ECharselectionCameraLocation cameraLocation, bool resetHud, ECharacterSelectorItemStatus itemStatus) {
 }
@@ -313,6 +320,10 @@ FString UFSDGameInstance::GetDisconnectErrorCode() const {
 
 TArray<FNetworkConnectionInfo> UFSDGameInstance::GetConnectionInfo() {
     return TArray<FNetworkConnectionInfo>();
+}
+
+int32 UFSDGameInstance::GetCommonGlobalMissionSeed() const {
+    return 0;
 }
 
 APlayerCharacter* UFSDGameInstance::GetCharacterSelectorCharacter() {

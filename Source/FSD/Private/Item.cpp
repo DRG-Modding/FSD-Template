@@ -17,6 +17,7 @@ AItem::AItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitiali
     this->CameraShakeOnEquip = false;
     this->HeatCurve = NULL;
     this->ManualHeatPerUse = 0.00f;
+    this->HeatOnStartUse = 0.00f;
     this->CooldownRate = 1.00f;
     this->ManualCooldownDelay = -1.00f;
     this->UnjamDuration = 8.00f;

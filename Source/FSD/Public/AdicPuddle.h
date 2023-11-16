@@ -15,10 +15,13 @@ UCLASS(Blueprintable)
 class AAdicPuddle : public AActor {
     GENERATED_BODY()
 public:
-protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    TWeakObjectPtr<UPrimitiveComponent> TriggerCollider;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USphereComponent* SphereTrigger;
     
+protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* SpawnSound;
     
@@ -32,7 +35,6 @@ private:
 public:
     AAdicPuddle(const FObjectInitializer& ObjectInitializer);
 
-protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Receive_OnPlayerBeginOverlap(APlayerCharacter* Player);
     

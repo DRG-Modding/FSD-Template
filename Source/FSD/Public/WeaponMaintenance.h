@@ -1,17 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CustomMetric.generated.h"
+#include "WeaponMaintenanceEntry.h"
+#include "WeaponMaintenance.generated.h"
 
 USTRUCT(BlueprintType)
-struct FCustomMetric {
+struct FSD_API FWeaponMaintenance {
     GENERATED_BODY()
 public:
+protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 Index;
+    TArray<FWeaponMaintenanceEntry> Entries;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float Value;
+    int32 MaxLevel;
     
-    GOOGLEANALYTICS_API FCustomMetric();
+public:
+    FWeaponMaintenance();
 };
 

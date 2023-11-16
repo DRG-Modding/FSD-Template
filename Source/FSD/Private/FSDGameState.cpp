@@ -52,6 +52,7 @@ AFSDGameState::AFSDGameState(const FObjectInitializer& ObjectInitializer) : Supe
     this->AllDwarvesDown = false;
     this->missionAborted = false;
     this->CountdownRemaining = -1;
+    this->HostGlobalSeed = -1;
     this->CanCarryOverResources = true;
     this->CurrentPlayerSessionLeader = NULL;
 }
@@ -271,6 +272,7 @@ void AFSDGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
     DOREPLIFETIME(AFSDGameState, missionAborted);
     DOREPLIFETIME(AFSDGameState, CountdownRemaining);
     DOREPLIFETIME(AFSDGameState, countdownText);
+    DOREPLIFETIME(AFSDGameState, HostGlobalSeed);
 }
 
 

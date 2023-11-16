@@ -22,6 +22,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool HasSpecialEvent;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    bool WouldHaveSpecialEvent;
+    
     FSD_API FPlanetZoneItem();
 };
 

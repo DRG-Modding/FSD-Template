@@ -231,6 +231,12 @@ void UFSDCheatManager::C_Windows_PrintStack() const {
 void UFSDCheatManager::C_Windows_CloseAll() const {
 }
 
+void UFSDCheatManager::C_WeaponMaintenance_Reset() {
+}
+
+void UFSDCheatManager::C_WeaponMaintenance_AddXP(int32 XP) {
+}
+
 void UFSDCheatManager::C_VanityMasteryResetXP() {
 }
 
@@ -301,6 +307,9 @@ void UFSDCheatManager::C_ToggleFadingDebug() {
 }
 
 void UFSDCheatManager::C_ToggleCanShowBlood() {
+}
+
+void UFSDCheatManager::C_TestSpecialEventChance() {
 }
 
 void UFSDCheatManager::C_StopMovement(bool shouldMove) {
@@ -378,7 +387,16 @@ void UFSDCheatManager::C_Seasons_ResetPlagueHeartsCollected() {
 void UFSDCheatManager::C_Seasons_IncrementChallenge(int32 Index) {
 }
 
+void UFSDCheatManager::C_Seasons_CompleteSeasonAlmost() {
+}
+
+void UFSDCheatManager::C_Seasons_CompleteSeason() {
+}
+
 void UFSDCheatManager::C_Seasons_CompleteScripChallenge(int32 Number) {
+}
+
+void UFSDCheatManager::C_Seasons_ClearSeasonCompletedAnnounced() {
 }
 
 void UFSDCheatManager::C_Seasons_ClearChallenges() {
@@ -514,6 +532,9 @@ void UFSDCheatManager::C_PlayNewMusic(int32 songIndex) const {
 }
 
 void UFSDCheatManager::C_MissionMap_TestDistribution() {
+}
+
+void UFSDCheatManager::C_MissionMap_SetSeed(int32 Seed) {
 }
 
 void UFSDCheatManager::C_MissionMap_Rotate() {

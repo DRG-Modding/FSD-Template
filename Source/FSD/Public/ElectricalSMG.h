@@ -6,6 +6,7 @@
 #include "Templates/SubclassOf.h"
 #include "ElectricalSMG.generated.h"
 
+class ARedeployableSentryGun;
 class UFSDPhysicalMaterial;
 class UHealthComponentBase;
 class UParticleSystem;
@@ -18,6 +19,12 @@ class AElectricalSMG : public AAmmoDrivenWeapon {
     GENERATED_BODY()
 public:
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TArray<ARedeployableSentryGun*> SentriesWithActiveIndicators;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<ARedeployableSentryGun> SentryGunClass;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UStatusEffect> AoEStatusEffect;
     
@@ -32,6 +39,12 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AoEStatusEffectRange;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool TurretPlasmaLineEnabled;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool TurretEMPDischargeEnabled;
     
 public:
     AElectricalSMG(const FObjectInitializer& ObjectInitializer);

@@ -16,5 +16,6 @@ enum class ELineCutterProjectileUpgradeType : uint8 {
     RollUntilStop,
     Yawing,
     PlasmaTrail,
+    Homing,
 };
 

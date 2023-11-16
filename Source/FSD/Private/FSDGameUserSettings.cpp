@@ -26,6 +26,7 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->NvidiaDlssSharpness = 0.50f;
     this->FSDResolutionScale = 1.00f;
     this->ReflexMode = ENVidiaReflexMode::Disabled;
+    this->WeaponSpwayScale = 1.00f;
     this->soundClassCharacterVoices = NULL;
     this->soundClassMissionControl = NULL;
     this->soundClassMaster = NULL;
@@ -110,6 +111,9 @@ void UFSDGameUserSettings::ToggleModdingServerFilter(uint8 ServerFilter, bool En
 }
 
 void UFSDGameUserSettings::SetZiplineGunAutoSwitch(bool shouldAutoSwitch) {
+}
+
+void UFSDGameUserSettings::SetWeaponSwayScale(float Scale) {
 }
 
 void UFSDGameUserSettings::SetVSyncEnabledToBeApplied(bool bEnable) {
@@ -229,6 +233,9 @@ void UFSDGameUserSettings::SetMouseXSensitivity(float newSensitivity) {
 void UFSDGameUserSettings::SetModdingSortBy(uint8 SortField, bool SortAscending) {
 }
 
+void UFSDGameUserSettings::SetLensFlaresEnabled(bool Enabled) {
+}
+
 void UFSDGameUserSettings::SetJukeboxStreamerMode(bool InStreamerMode) {
 }
 
@@ -316,6 +323,9 @@ void UFSDGameUserSettings::SetCanShowBlood(bool bloodAllowed) {
 void UFSDGameUserSettings::SetCameraShakeScale(float NewCameraShakeScale) {
 }
 
+void UFSDGameUserSettings::SetBloomEnabled(bool Enabled) {
+}
+
 void UFSDGameUserSettings::SetAutoRefreshServerlist(bool Value) {
 }
 
@@ -400,6 +410,10 @@ bool UFSDGameUserSettings::HasAudioOutputDeviceChanged(FString& AudioDeviceChang
 
 bool UFSDGameUserSettings::GetZiplineGunAutoSwitch() const {
     return false;
+}
+
+float UFSDGameUserSettings::GetWeaponSwayScale() const {
+    return 0.0f;
 }
 
 bool UFSDGameUserSettings::GetVSyncEnabledToBeApplied() {
@@ -546,6 +560,10 @@ bool UFSDGameUserSettings::GetModdingServerFilterEnabled(uint8 ServerFilter) {
     return false;
 }
 
+bool UFSDGameUserSettings::GetLensFlaresEnabled() const {
+    return false;
+}
+
 bool UFSDGameUserSettings::GetIsDifficultySelected(UDifficultySetting* Difficulty) const {
     return false;
 }
@@ -660,6 +678,10 @@ bool UFSDGameUserSettings::GetChatEnabledOnController() const {
 
 float UFSDGameUserSettings::GetCameraShakeScale() const {
     return 0.0f;
+}
+
+bool UFSDGameUserSettings::GetBloomEnabled() const {
+    return false;
 }
 
 bool UFSDGameUserSettings::GetAvaliableAudioOutputDevices(UObject* WorldContextObject, TArray<FString>& AudioDevices) {

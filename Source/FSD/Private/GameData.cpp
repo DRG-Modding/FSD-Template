@@ -2,7 +2,9 @@
 #include "Templates/SubclassOf.h"
 
 UGameData::UGameData() {
+    this->KPI_Settings = NULL;
     this->PromotionRewardsSettings = NULL;
+    this->WeaponMaintenanceSettings = NULL;
     this->FsdEventsSettings = NULL;
     this->GameActivitySettings = NULL;
     this->DanceSettings = NULL;
@@ -70,6 +72,18 @@ UPlayerCharacterID* UGameData::GetPlayerCharacterID(const FGuid& ID) const {
     return NULL;
 }
 
+FGDPerks UGameData::GetPerkData() const {
+    return FGDPerks{};
+}
+
+FGDMissionStats UGameData::GetMissionStats() const {
+    return FGDMissionStats{};
+}
+
+FGDMilestones UGameData::GetMileStonesData() const {
+    return FGDMilestones{};
+}
+
 UInventoryList* UGameData::GetInventoryList(UPlayerCharacterID* characterID) const {
     return NULL;
 }
@@ -100,6 +114,10 @@ TArray<UHUDVisibilityGroup*> UGameData::GetAllVisibilityGroups() const {
 
 TArray<UMissionStat*> UGameData::GetAllMissionStats() const {
     return TArray<UMissionStat*>();
+}
+
+TArray<UMilestoneAsset*> UGameData::GetAllMilestones() const {
+    return TArray<UMilestoneAsset*>();
 }
 
 TArray<UMissionStat*> UGameData::GetAllInfirmaryStats() const {

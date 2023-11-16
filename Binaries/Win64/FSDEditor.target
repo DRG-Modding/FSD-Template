@@ -460,11 +460,35 @@
 			"Type": "SymbolFile"
 		},
 		{
-			"Path": "$(ProjectDir)/Plugins/GoogleAnalytics/Binaries/Win64/UE4Editor-GoogleAnalytics.dll",
+			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor-GeometricObjects.dll",
 			"Type": "DynamicLibrary"
 		},
 		{
-			"Path": "$(ProjectDir)/Plugins/GoogleAnalytics/Binaries/Win64/UE4Editor-GoogleAnalytics.pdb",
+			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor-GeometricObjects.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor-GeometryAlgorithms.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor-GeometryAlgorithms.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor-DynamicMesh.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor-DynamicMesh.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor-MeshConversion.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor-MeshConversion.pdb",
 			"Type": "SymbolFile"
 		},
 		{
@@ -1121,38 +1145,6 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/MeshPainting/Binaries/Win64/UE4Editor-MeshPaintingToolset.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor-GeometricObjects.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor-GeometricObjects.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor-GeometryAlgorithms.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor-GeometryAlgorithms.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor-DynamicMesh.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor-DynamicMesh.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor-MeshConversion.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor-MeshConversion.pdb",
 			"Type": "SymbolFile"
 		},
 		{
@@ -4564,7 +4556,7 @@
 			"Type": "RequiredResource"
 		},
 		{
-			"Path": "$(ProjectDir)/Plugins/GoogleAnalytics/Binaries/Win64/UE4Editor.modules",
+			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor.modules",
 			"Type": "RequiredResource"
 		},
 		{
@@ -4765,10 +4757,6 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/MeshPainting/Binaries/Win64/UE4Editor.modules",
-			"Type": "RequiredResource"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/Binaries/Win64/UE4Editor.modules",
 			"Type": "RequiredResource"
 		},
 		{
@@ -5046,15 +5034,19 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/FSDEditorTools/DRGAssetDefinitions/DRGAssetDefinitions.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/GeometryProcessing.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/FSDEditorTools/SkinEditor/SkinEditor.uplugin",
 			"Type": "UFS"
 		},
 		{
 			"Path": "$(ProjectDir)/Plugins/FSDTests/FSDTests.uplugin",
-			"Type": "UFS"
-		},
-		{
-			"Path": "$(ProjectDir)/Plugins/GoogleAnalytics/GoogleAnalytics.uplugin",
 			"Type": "UFS"
 		},
 		{
@@ -5255,10 +5247,6 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/MeshPainting/MeshPainting.uplugin",
-			"Type": "UFS"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Experimental/GeometryProcessing/GeometryProcessing.uplugin",
 			"Type": "UFS"
 		},
 		{

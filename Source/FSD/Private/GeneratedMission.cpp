@@ -13,6 +13,7 @@ UGeneratedMission::UGeneratedMission() {
     this->MissionDNA = NULL;
     this->MissionStructure = EMissionStructure::SingleMission;
     this->IsInSeasonEventZone = false;
+    this->WouldBeInSeasonEventZone = false;
     this->CanHaveMutators = false;
 }
 

@@ -9,7 +9,6 @@ UInfectedStateComponent::UInfectedStateComponent(const FObjectInitializer& Objec
     this->InfectedMontage = NULL;
     this->InfectedAndBreakingFreeMontage = NULL;
     this->BreakingFreeMontageDuration = 0.75f;
-    this->HoldToBreakTime = 0.25f;
 }
 
 void UInfectedStateComponent::Server_Breakout_Implementation() {

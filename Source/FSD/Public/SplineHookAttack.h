@@ -86,6 +86,9 @@ protected:
     float AquireLocationTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float OnSuccessCooldown;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ShowGrabArea;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -115,6 +118,10 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetHasAquiredTarget() const;
+    
+protected:
+    UFUNCTION(BlueprintCallable)
+    void ClearSuccessCooldown();
     
 };
 

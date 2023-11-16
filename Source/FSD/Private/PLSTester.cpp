@@ -5,6 +5,7 @@ APLSTester::APLSTester(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->MissionSeed = -1;
     this->GlobalSeed = -1;
     this->GlobalMissionIndex = 0;
+    this->OptOutOfSeasonContent = false;
     this->limitComplexity = NULL;
     this->limitDuration = NULL;
     this->Mutator = NULL;

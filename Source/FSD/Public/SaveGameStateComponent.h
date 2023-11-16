@@ -125,11 +125,11 @@ protected:
     void OnRep_ActiveCampaignMission();
     
 public:
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsActiveCampaignMission(UGeneratedMission* mission) const;
+    
     UFUNCTION(BlueprintCallable)
     FCharacterProgress GetCharacterStat(UPlayerCharacterID* characterID);
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    UGeneratedMission* GetActiveCampaignMission() const;
     
 };
 

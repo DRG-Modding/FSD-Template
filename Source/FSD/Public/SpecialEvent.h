@@ -19,6 +19,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USpecialEventSpawner* EventSpawner;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool IsPartOfCurrentSeason;
+    
     USpecialEvent();
 
 };

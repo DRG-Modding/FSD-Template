@@ -3,8 +3,8 @@
 UMissionFunctionLibrary::UMissionFunctionLibrary() {
 }
 
-int32 UMissionFunctionLibrary::GetGlobalMissionSeed() {
-    return 0;
+FDateTime UMissionFunctionLibrary::GetGlobalMissionBaseTime() {
+    return FDateTime{};
 }
 
 

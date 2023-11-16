@@ -7,6 +7,7 @@
 class AItem;
 class ARecallableSentryGun;
 class ARecallableSentryGunItem;
+class ARedeployableSentryGun;
 class UCapacityHoldingItemAggregator;
 class UItemPlacerAggregator;
 class UItemUpgrade;
@@ -25,6 +26,9 @@ public:
     FRecallableSentryGunSignature OnSelectedItemChanged;
     
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TArray<ARedeployableSentryGun*> SentriesWithActiveIndicators;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxSentryCount;
     
@@ -50,6 +54,9 @@ protected:
     TSubclassOf<AItem> LoadoutClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<ARedeployableSentryGun> SentryGunObjectClass;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SupplyStatusWeight;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -62,6 +69,9 @@ public:
     ARecallableSentryGunItem(const FObjectInitializer& ObjectInitializer);
 
 protected:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetArcIndicatorActive(bool Active);
+    
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveItemUpgraded();
     

@@ -12,9 +12,9 @@ AShowroomStage::AShowroomStage(const FObjectInitializer& ObjectInitializer) : Su
     this->MinPitch = 0.00f;
     this->MaxPitch = 0.00f;
     this->CameraFocusPoint = CreateDefaultSubobject<USceneComponent>(TEXT("CameraFocusPoint"));
-    this->CameraFocusPoint->SetupAttachment(RootComponent);
     this->ActiveCaptureComponent->SetupAttachment(CameraFocusPoint);
     this->SceneCapture->SetupAttachment(CameraFocusPoint);
+    this->CameraFocusPoint->SetupAttachment(RootComponent);
 }
 
 

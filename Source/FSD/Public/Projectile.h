@@ -70,5 +70,8 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UFSDPhysicalMaterial* FindBoneIndexFromArmor(const FHitResult& HitResult, int32& outBoneIndex) const;
     
+    UFUNCTION(BlueprintCallable)
+    void DisableHoming();
+    
 };
 

@@ -11,6 +11,7 @@ ALineCutterProjectile::ALineCutterProjectile(const FObjectInitializer& ObjectIni
     this->DestroyOnTerrainCollision = true;
     this->IsDead = false;
     this->bHasReversedDirection = false;
+    this->bIsHoming = false;
     this->FlyStraighTime = 0.20f;
     this->EletricDecalSize = EImpactDecalSize::Small;
     this->ImpactDecalSize = EImpactDecalSize::Small;

@@ -1,11 +1,14 @@
 #include "ElectricalSMG.h"
 
 AElectricalSMG::AElectricalSMG(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->SentryGunClass = NULL;
     this->AoEStatusEffect = NULL;
     this->AoEParticle = NULL;
     this->AoESound = NULL;
     this->AoEStatusEffectChance = 0.00f;
     this->AoEStatusEffectRange = 250.00f;
+    this->TurretPlasmaLineEnabled = false;
+    this->TurretEMPDischargeEnabled = false;
 }
 
 void AElectricalSMG::OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial) {

@@ -47,6 +47,9 @@ public:
     bool HasRequiredSecondaryObjective() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    TArray<UObjective*> GetSecondaryObjectives() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UObjective* GetSecondaryObjective() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

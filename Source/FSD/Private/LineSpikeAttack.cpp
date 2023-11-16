@@ -15,6 +15,7 @@ ULineSpikeAttack::ULineSpikeAttack(const FObjectInitializer& ObjectInitializer) 
     this->TentaclesBurried = false;
     this->MaxStepUpheight = 300.00f;
     this->firstSpikeDelay = 0.00f;
+    this->firstSpikeExtraDistance = 0.00f;
     this->MaxDistanceToGround = 0.00f;
     this->DistanceBetweenSpikes = 0.00f;
     this->TimeBetweenSpikes = 0.00f;

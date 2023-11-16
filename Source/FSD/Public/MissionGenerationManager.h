@@ -27,6 +27,9 @@ public:
     UGeneratedMission* GetMissionFromSeeds(int32 GlobalSeed, int32 MissionSeed);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    TArray<UGeneratedMission*> GetAvailableMissionsWithSeasonContentCheck(bool HasOptedOutOfSeasonContent);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UGeneratedMission*> GetAvailableMissions();
     
 };

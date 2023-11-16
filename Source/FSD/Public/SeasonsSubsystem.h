@@ -68,6 +68,12 @@ public:
     UFUNCTION(BlueprintCallable)
     FTimespan TimeToNewChallenge();
     
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void SetSeasonCompletedAnnounced(bool IsAnnounced) const;
+    
+    UFUNCTION(BlueprintCallable)
+    void SetHasOptedOutOfSeasonContent(bool hasOptedOut);
+    
     UFUNCTION(BlueprintCallable)
     void RerollChallenge(int32 Index);
     
@@ -94,11 +100,14 @@ public:
     UFUNCTION(BlueprintCallable)
     bool HasUnclaimedRewards(int32& Level);
     
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool HasOptedOutOfSeasonContent() const;
+    
     UFUNCTION(BlueprintCallable)
     bool HasClaimedLevelRewards(int32 startLevel, int32 numberOfLevels);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    bool HasClaimedAllRewards();
+    bool HasClaimedAllRewards() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetUnusedHearts();
@@ -126,6 +135,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     bool GetSeasonExpiryDate(FDateTime& ExpiryDate);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool GetSeasonCompletedAnnounced() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetSeasonBought(bool& isBought);
@@ -195,6 +207,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanRerollChallenge();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool CanOptOutOfSeasonContent() const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     bool BuyTreeNode(UObject* WorldContextObject, AFSDPlayerController* Player, int32 TreeOfVanityNodeID);

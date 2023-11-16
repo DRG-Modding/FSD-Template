@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ECharacterCameraMode.h"
 #include "ThrowableItem.h"
 #include "HolidayThrowableItem.generated.h"
 
@@ -9,5 +10,9 @@ class AHolidayThrowableItem : public AThrowableItem {
 public:
     AHolidayThrowableItem(const FObjectInitializer& ObjectInitializer);
 
+protected:
+    UFUNCTION(BlueprintCallable)
+    void CameraModeUpdated(ECharacterCameraMode NewCameraMode, ECharacterCameraMode OldCameraMode);
+    
 };
 

@@ -20,6 +20,7 @@ USplineHookAttack::USplineHookAttack(const FObjectInitializer& ObjectInitializer
     this->AttackDelay = 0.30f;
     this->LeadMultiplier = 1.00f;
     this->AquireLocationTime = 0.00f;
+    this->OnSuccessCooldown = 0.00f;
     this->ShowGrabArea = false;
     this->Lead = false;
     this->Using = false;
@@ -41,6 +42,9 @@ FVector USplineHookAttack::GetTargetDirection() const {
 
 bool USplineHookAttack::GetHasAquiredTarget() const {
     return false;
+}
+
+void USplineHookAttack::ClearSuccessCooldown() {
 }
 
 void USplineHookAttack::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
