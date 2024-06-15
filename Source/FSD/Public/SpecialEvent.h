@@ -4,6 +4,8 @@
 #include "SpecialEvent.generated.h"
 
 class UMissionTemplate;
+class UMutator;
+class USeason;
 class USpecialEventSpawner;
 
 UCLASS(Blueprintable)
@@ -16,11 +18,14 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UMissionTemplate*> BannedMissions;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<UMutator*> BannedMutators;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USpecialEventSpawner* EventSpawner;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool IsPartOfCurrentSeason;
+    TArray<USeason*> PartOfSeasons;
     
     USpecialEvent();
 

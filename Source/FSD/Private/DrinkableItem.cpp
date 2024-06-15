@@ -3,7 +3,10 @@
 
 ADrinkableItem::ADrinkableItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DrinkableData = NULL;
+    this->BarSlotIndex = -1;
 }
+
+
 
 void ADrinkableItem::OnRep_DrinkableData() {
 }
@@ -22,6 +25,7 @@ void ADrinkableItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
     DOREPLIFETIME(ADrinkableItem, DrinkableData);
+    DOREPLIFETIME(ADrinkableItem, BarSlotIndex);
 }
 
 

@@ -34,7 +34,7 @@ protected:
     void OnUsedBy(APlayerCharacter* User, EInputKeys Key);
     
     UFUNCTION(BlueprintCallable)
-    void OnShoutStarted(APlayerCharacter* Player, UAudioComponent* audio);
+    void OnShoutStarted(APlayerCharacter* Player, UAudioComponent* Audio);
     
     UFUNCTION(BlueprintCallable)
     void OnRep_PitchedUsers();

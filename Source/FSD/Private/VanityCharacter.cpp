@@ -11,11 +11,12 @@ AVanityCharacter::AVanityCharacter(const FObjectInitializer& ObjectInitializer) 
     this->BeardColor = NULL;
     this->DynamicBeardColor = NULL;
     this->Head = NULL;
-    this->EyeBrows = NULL;
+    this->Eyebrows = NULL;
     this->Sideburns = NULL;
     this->Moustache = NULL;
     this->Beard = NULL;
     this->Armor = NULL;
+    this->ArmorMeshType = EArmorMeshType::None;
     this->ArmorColor = NULL;
     this->Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("CharacterMesh0"));
     this->BodyMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("BodyMesh"));

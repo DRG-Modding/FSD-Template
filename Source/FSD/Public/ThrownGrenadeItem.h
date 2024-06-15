@@ -95,7 +95,7 @@ public:
     void Server_Resupply(float percentage);
     
     UFUNCTION(BlueprintCallable)
-    void ResupplyGrenadesAmount(const int32& Amount);
+    void ResupplyGrenadesAmount(const int32& amount);
     
     UFUNCTION(BlueprintCallable)
     void ResupplyGrenades(float percentage);

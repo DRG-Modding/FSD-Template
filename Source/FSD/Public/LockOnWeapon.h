@@ -81,6 +81,9 @@ protected:
     float MaxLockOnDuration;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float RateOfFireLockedOnModifier;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bLockOnControlsSentryGun;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -155,6 +158,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LockOnRecoilMult;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool FireOnRelease;
+    
 public:
     ALockOnWeapon(const FObjectInitializer& ObjectInitializer);
 
@@ -214,6 +220,9 @@ protected:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void MuzzleLerpToTarget(FVector TargetLocation);
+    
+    UFUNCTION(BlueprintCallable)
+    void FireWeapon(bool ResetUsing, bool Fire);
     
 };
 

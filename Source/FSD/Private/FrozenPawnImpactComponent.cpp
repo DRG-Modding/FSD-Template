@@ -4,7 +4,7 @@ UFrozenPawnImpactComponent::UFrozenPawnImpactComponent(const FObjectInitializer&
     this->FrozenMaterial = NULL;
     this->FrozenAsset = NULL;
     this->FrozenDeathSound = NULL;
-    this->FrozenDeathparticles = NULL;
+    this->FrozenDeathParticles = NULL;
 }
 
 void UFrozenPawnImpactComponent::TriggerFrozenRagdoll() {

@@ -305,7 +305,7 @@ public:
     void CreateGeneratedInfluenceSet();
     
     UFUNCTION(BlueprintCallable)
-    int32 ConnectRooms(UPARAM(Ref) FRoomNode& From, UPARAM(Ref) FRoomNode& To, bool hasDirt, UTunnelParameters* tunnelParameterOverride);
+    int32 ConnectRooms(UPARAM(Ref) FRoomNode& from, UPARAM(Ref) FRoomNode& to, bool hasDirt, UTunnelParameters* tunnelParameterOverride);
     
     UFUNCTION(BlueprintCallable)
     int32 ConnectRoomIds(int32 fromID, int32 toID, bool hasDirt, UTunnelParameters* tunnelParameterOverride);

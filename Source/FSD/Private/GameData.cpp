@@ -5,6 +5,7 @@ UGameData::UGameData() {
     this->KPI_Settings = NULL;
     this->PromotionRewardsSettings = NULL;
     this->WeaponMaintenanceSettings = NULL;
+    this->PropHuntSettings = NULL;
     this->FsdEventsSettings = NULL;
     this->GameActivitySettings = NULL;
     this->DanceSettings = NULL;
@@ -86,6 +87,10 @@ FGDMilestones UGameData::GetMileStonesData() const {
 
 UInventoryList* UGameData::GetInventoryList(UPlayerCharacterID* characterID) const {
     return NULL;
+}
+
+int32 UGameData::GetDifficultySettingIndex(const UDifficultySetting* InDifficulty) const {
+    return 0;
 }
 
 UDifficultySetting* UGameData::GetDifficultySetting(int32 Index) const {

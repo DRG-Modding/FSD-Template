@@ -93,7 +93,7 @@ protected:
     void ShowJumpBootsActivation();
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_TakeFallDamage(float Amount);
+    void Server_TakeFallDamage(float amount);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetJumpPressed(bool Pressed);

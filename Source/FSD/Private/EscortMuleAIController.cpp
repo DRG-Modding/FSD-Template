@@ -27,4 +27,7 @@ void AEscortMuleAIController::GetFullPath(TArray<FVector>& outPath) const {
 void AEscortMuleAIController::FindDozerPath(FVector StartPosition) {
 }
 
+void AEscortMuleAIController::CHEAT_SetDozerLastPathSegment() {
+}
+
 

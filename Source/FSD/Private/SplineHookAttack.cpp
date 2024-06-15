@@ -32,6 +32,9 @@ void USplineHookAttack::SetTailLight(UPointLightComponent* Light) {
 void USplineHookAttack::OnRep_Using() {
 }
 
+void USplineHookAttack::OnDamagedTarget(UHealthComponentBase* Health, float amount, UPrimitiveComponent* Component, UFSDPhysicalMaterial* PhysicalMaterial) {
+}
+
 FVector USplineHookAttack::GetTargetLocation() const {
     return FVector{};
 }

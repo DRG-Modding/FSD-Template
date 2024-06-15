@@ -4,7 +4,7 @@ UMissionStatsCollector::UMissionStatsCollector(const FObjectInitializer& ObjectI
     this->Character = NULL;
 }
 
-void UMissionStatsCollector::OnResourceIncremented(UCappedResource* Resource, float Amount) {
+void UMissionStatsCollector::OnResourceIncremented(UCappedResource* Resource, float amount) {
 }
 
 

@@ -27,6 +27,7 @@ ATeamTransport::ATeamTransport(const FObjectInitializer& ObjectInitializer) : Su
     this->TargetDepartureTime = 0.00f;
     this->TimeToDrop = 0.00f;
     this->ObjectivesManager = NULL;
+    this->ShouldAttachPlayers = true;
     this->AutoCarver->SetupAttachment(RootComponent);
 }
 
@@ -80,7 +81,8 @@ bool ATeamTransport::GetHasLanded() const {
 void ATeamTransport::ExitSpacerig() {
 }
 
-void ATeamTransport::DropToTarget(UObject* WorldContextObject, TSubclassOf<ATeamTransport> podClass, const FTransform& dropLocation, int32 DropDelay) {
+ATeamTransport* ATeamTransport::DropToTarget(UObject* WorldContextObject, TSubclassOf<ATeamTransport> podClass, const FTransform& dropLocation, int32 DropDelay) {
+    return NULL;
 }
 
 ATeamTransport* ATeamTransport::DropToMission(UObject* WorldContextObject, TSubclassOf<ATeamTransport> podClass, const FVector& Location) {

@@ -18,7 +18,7 @@ public:
     bool IsUnlocked() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    static bool IsDLCUnLocked(UDLCBase* dlc);
+    static bool IsDLCUnLocked(UDLCBase* DLC);
     
 };
 

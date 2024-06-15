@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "DetailedTagSet.h"
 #include "VanityFunctionLibrary.generated.h"
 
 class APlayerCharacter;
@@ -14,7 +15,7 @@ public:
     UVanityFunctionLibrary();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
-    static void RandomizeVanityLoadout(UObject* WorldContextObject, APlayerCharacter* Character);
+    static void RandomizeVanityLoadout(UObject* WorldContextObject, APlayerCharacter* Character, FDetailedTagSet Filter);
     
     UFUNCTION(BlueprintCallable)
     static void RandomizeAllRandomVanityLoadout(APlayerCharacter* currentCharacter);

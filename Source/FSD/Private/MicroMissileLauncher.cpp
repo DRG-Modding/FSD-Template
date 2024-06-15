@@ -1,4 +1,5 @@
 #include "MicroMissileLauncher.h"
+#include "Templates/SubclassOf.h"
 
 AMicroMissileLauncher::AMicroMissileLauncher(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ChargeTime = 2.00f;
@@ -17,6 +18,8 @@ AMicroMissileLauncher::AMicroMissileLauncher(const FObjectInitializer& ObjectIni
     this->WPN_Mag_Feed = NULL;
     this->WPN_Mag_And_Barrel_Feed = NULL;
     this->ChargedMissileFireSound = NULL;
+    this->TriggerClusterActive = false;
+    this->TriggerClusterHoldDuration = 0.50f;
 }
 
 void AMicroMissileLauncher::Server_SetIsCharging_Implementation(bool isCharging) {
@@ -25,12 +28,20 @@ void AMicroMissileLauncher::Server_SetIsCharging_Implementation(bool isCharging)
 void AMicroMissileLauncher::Server_SetChargedMissile_Implementation(bool isCharged) {
 }
 
+
 bool AMicroMissileLauncher::IsNextShotBuckShot() {
     return false;
 }
 
+AProjectile* AMicroMissileLauncher::GetFirstActiveProjectileOfType(TSubclassOf<AProjectile> Class) const {
+    return NULL;
+}
+
 int32 AMicroMissileLauncher::GetChargeCurrentFireCount() {
     return 0;
+}
+
+void AMicroMissileLauncher::GetActiveProjectiles(TArray<AProjectile*>& ActiveProjectiles) const {
 }
 
 void AMicroMissileLauncher::All_SetChargedMissile_Implementation(bool isCharged) {

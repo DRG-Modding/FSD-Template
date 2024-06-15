@@ -13,7 +13,7 @@ AGameStats::AGameStats(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->MissionHaz = 0;
 }
 
-void AGameStats::OnPlayerMinedGold(UCappedResource* Resource, float Amount) {
+void AGameStats::OnPlayerMinedGold(UCappedResource* Resource, float amount) {
 }
 
 void AGameStats::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

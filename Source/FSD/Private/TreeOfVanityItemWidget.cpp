@@ -2,6 +2,7 @@
 
 UTreeOfVanityItemWidget::UTreeOfVanityItemWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->Reward = NULL;
+    this->actualReward = NULL;
     this->bIsPrimaryReward = false;
     this->bIsStartingNode = false;
     this->NodeID = -1;

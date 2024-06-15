@@ -11,10 +11,10 @@ class UMuzzleEffectUpgradeElement : public UItemUpgradeElement {
 public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UFXSystemAsset* FPMuzzleFlash;
+    TSoftObjectPtr<UFXSystemAsset> FPMuzzleFlash;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UFXSystemAsset* TPMuzzleFlash;
+    TSoftObjectPtr<UFXSystemAsset> TPMuzzleFlash;
     
 public:
     UMuzzleEffectUpgradeElement();

@@ -20,19 +20,13 @@ UCLASS(Blueprintable)
 class ACrossbowProjectileStuck : public AFSDPhysicsActor {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    ECrossbowStuckType StuckProjectileEffect;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_BansheePulseEnabled, meta=(AllowPrivateAccess=true))
     bool BansheePulseEnabled;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
-    UCrossbowProjectileRecallable* RecallComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
-    UCrossbowStuckProjectileEffectBanshee* BansheeComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    ECrossbowStuckType StuckProjectileEffect;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsPlayingElectricRangeEffect;
     
@@ -44,6 +38,12 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USphereComponent* AttachmentRoot;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UCrossbowProjectileRecallable* RecallComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UCrossbowStuckProjectileEffectBanshee* BansheeComponent;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))

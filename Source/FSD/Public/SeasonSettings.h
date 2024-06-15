@@ -7,20 +7,19 @@
 class UCurveFloat;
 class UMissionStat;
 class USeason;
-class USeasonChallenge;
 
 UCLASS(Blueprintable)
 class USeasonSettings : public UDataAsset {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USeason* CurrentSeason;
+    TArray<USeason*> Seasons;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 CurrentSeasonIndex;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxActiveChallenges;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<USeasonChallenge*> SeasonChallenges;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 XPPerLevel;
@@ -34,9 +33,11 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SpecialChallengeChange;
     
+private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMissionStat* HeartsColledtedStat;
     
+public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FIntPoint SporeTowerPlagueGainRange;
     
@@ -48,5 +49,8 @@ public:
     
     USeasonSettings();
 
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    USeason* GetSeason(int32 Season) const;
+    
 };
 

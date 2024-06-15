@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "DelayedActorSwitchData.h"
 #include "EquippedActorData.h"
 #include "InventoryBase.generated.h"
 
@@ -20,8 +21,14 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_EquippedActor, meta=(AllowPrivateAccess=true))
     FEquippedActorData ReplicatedEquippedActor;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    FEquippedActorData EquippedActor;
+    
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* LastEquippedActors[2];
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    FDelayedActorSwitchData DelayedActorSwitchOldActor;
     
 public:
     UInventoryBase(const FObjectInitializer& ObjectInitializer);

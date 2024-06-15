@@ -1,10 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ResourceDelegateDelegate.h"
 #include "UsableComponentBase.h"
 #include "ResourceBank.generated.h"
 
 class AFSDGameState;
 class APlayerCharacter;
+class UResourceFilter;
 class USoundBase;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -25,7 +27,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     bool OpenForDeposit;
     
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FResourceDelegate OnResourceDeposited;
+    
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UResourceFilter* Filter;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AFSDGameState* GameState;
     
@@ -40,6 +48,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool AddToTeamInventory;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool PlayDepositShout;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* AudioBeginDepositing;

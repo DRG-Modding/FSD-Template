@@ -21,7 +21,7 @@ protected:
     UPawnAffliction* PawnAffliction;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FRandRange Amount;
+    FRandRange amount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IgnoreCanTakeDamage;

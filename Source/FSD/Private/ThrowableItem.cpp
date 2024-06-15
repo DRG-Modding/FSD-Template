@@ -17,10 +17,10 @@ AThrowableItem::AThrowableItem(const FObjectInitializer& ObjectInitializer) : Su
     this->LoadoutItem = NULL;
 }
 
-void AThrowableItem::Simulate_Throw_Implementation(TSubclassOf<AThrowableActor> ActorClass) {
+void AThrowableItem::Simulate_Throw_Implementation(TSubclassOf<AThrowableActor> actorClass) {
 }
 
-void AThrowableItem::Server_Throw_Implementation(TSubclassOf<AThrowableActor> ActorClass, const FVector& Location) {
+void AThrowableItem::Server_Throw_Implementation(TSubclassOf<AThrowableActor> actorClass, const FVector& Location) {
 }
 
 

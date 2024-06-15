@@ -11,7 +11,7 @@ class UTracerUpgradeElement : public UItemUpgradeElement {
 public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UFXSystemAsset* Tracer;
+    TSoftObjectPtr<UFXSystemAsset> Tracer;
     
 public:
     UTracerUpgradeElement();

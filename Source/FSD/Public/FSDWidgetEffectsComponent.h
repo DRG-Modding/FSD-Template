@@ -47,7 +47,7 @@ public:
     static void StartCounter(UObject* WorldContext, UObject* Owner, float Start, float End, float Duration, const FCustomCounterDelegate& OnCount, float StartDelay);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
-    static void PingWidget(UObject* WorldContext, UWidget* Widget, float Amount, float Duration, EPingType PingType, float StartDelay);
+    static void PingWidget(UObject* WorldContext, UWidget* Widget, float amount, float Duration, EPingType PingType, float StartDelay);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static void MoveWidget(UObject* WorldContext, UUserWidget* Widget, FVector2D Start, FVector2D End, float Duration, EMoveType MoveType, float StartDelay);

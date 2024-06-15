@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AmmoDrivenWeapon.h"
+#include "DelegateDelegate.h"
 #include "PlasmaCarbine.generated.h"
 
 class UAnimMontage;
@@ -40,10 +41,16 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimMontage* WPN_ItemReloadEndMontage;
     
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FDelegate OnReloadPressed;
+    
 public:
     APlasmaCarbine(const FObjectInitializer& ObjectInitializer);
 
 protected:
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_ReloadPressed();
+    
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void ApplyShieldDamage();
     

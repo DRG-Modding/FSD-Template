@@ -10,7 +10,7 @@ UHitReactionComponent::UHitReactionComponent(const FObjectInitializer& ObjectIni
 void UHitReactionComponent::PlayHitReaction() {
 }
 
-void UHitReactionComponent::OnDamageTaken(float Amount) {
+void UHitReactionComponent::OnDamageTaken(float amount) {
 }
 
 

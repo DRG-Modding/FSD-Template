@@ -5,20 +5,16 @@ ULightStrobingComponent::ULightStrobingComponent(const FObjectInitializer& Objec
     this->AutoSetup = true;
 }
 
-FLightStrobeChannel ULightStrobingComponent::GetChannel(int32 Index) {
-    return FLightStrobeChannel{};
+void ULightStrobingComponent::StopLoop(int32 Channel) {
 }
 
-void ULightStrobingComponent::AddStrobeChannel(const FLightStrobeChannel& Channel) {
+void ULightStrobingComponent::AddMesh(UMeshComponent* Mesh) {
 }
 
-void ULightStrobingComponent::AddMesh(UMeshComponent* Mesh, int32 Channel) {
+void ULightStrobingComponent::AddMaterial(UMaterialInstanceDynamic* Mid) {
 }
 
-void ULightStrobingComponent::AddMaterial(UMaterialInstanceDynamic* Mid, int32 Channel) {
-}
-
-void ULightStrobingComponent::AddLight(UPointLightComponent* Light, int32 Channel) {
+void ULightStrobingComponent::AddLight(UPointLightComponent* Light) {
 }
 
 

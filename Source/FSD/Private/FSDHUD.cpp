@@ -21,6 +21,7 @@ bool AFSDHUD::IsHUDVisibleFlagSet(EHUDVisibilityReason reason) const {
 }
 
 
+
 bool AFSDHUD::GetHUDVisible() const {
     return false;
 }

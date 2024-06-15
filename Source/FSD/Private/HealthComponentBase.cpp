@@ -30,7 +30,7 @@ bool UHealthComponentBase::IsAlive() const {
     return false;
 }
 
-float UHealthComponentBase::Heal(float Amount) {
+float UHealthComponentBase::Heal(float amount) {
     return 0.0f;
 }
 

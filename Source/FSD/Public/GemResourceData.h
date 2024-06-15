@@ -5,8 +5,8 @@
 #include "Templates/SubclassOf.h"
 #include "GemResourceData.generated.h"
 
+class AActor;
 class AFSDGameState;
-class AGem;
 class UDebrisBase;
 class UDebrisPositioning;
 class UGemResourceCreator;
@@ -35,13 +35,13 @@ protected:
     TArray<TSoftObjectPtr<UDebrisBase>> Debris;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<TSoftClassPtr<AGem>> GemClasses;
+    TArray<TSoftClassPtr<AActor>> GemClasses;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ImportantRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<TSubclassOf<AGem>> GemClassesLoaded;
+    TArray<TSubclassOf<AActor>> GemClassesLoaded;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UDebrisBase*> DebrisLoaded;

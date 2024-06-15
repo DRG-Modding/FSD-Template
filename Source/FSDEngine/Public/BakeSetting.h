@@ -17,7 +17,7 @@ public:
     float FloatValue;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FVector VectorValue;
+    FVector vectorValue;
     
     FBakeSetting();
 };

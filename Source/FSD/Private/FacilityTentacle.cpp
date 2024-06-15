@@ -8,7 +8,7 @@ AFacilityTentacle::AFacilityTentacle(const FObjectInitializer& ObjectInitializer
     this->HeadMesh = NULL;
 }
 
-void AFacilityTentacle::PlayHitReaction(float Amount) {
+void AFacilityTentacle::PlayHitReaction(float amount) {
 }
 
 

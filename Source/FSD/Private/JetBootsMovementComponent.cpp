@@ -3,20 +3,14 @@
 
 UJetBootsMovementComponent::UJetBootsMovementComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Settings = NULL;
-    this->UseSound = NULL;
-    this->DeactivatedSound = NULL;
-    this->OverHeatSound = NULL;
     this->UseAudioComponent = NULL;
     this->OverHeatAudioComponent = NULL;
     this->DeactivatedAudioComponent = NULL;
     this->TP_UseAudioComponent = NULL;
     this->TP_OverHeatAudioComponent = NULL;
     this->TP_DeactivatedAudioComponent = NULL;
-    this->FootParticles = NULL;
-    this->FootParticlesFP = NULL;
     this->FootSocketNameLeft = TEXT("Dwarf_LegLHeelSocket");
     this->FootSocketNameRight = TEXT("Dwarf_LegRHeelSocket");
-    this->FootAttachMesh = NULL;
     this->LFootAttachMeshComponent = NULL;
     this->RFootAttachMeshComponent = NULL;
     this->LeftFootParticles = NULL;
@@ -28,9 +22,9 @@ UJetBootsMovementComponent::UJetBootsMovementComponent(const FObjectInitializer&
     this->OverHeatAtPercent = 0.98f;
     this->AddPlayerAirVelocityToThrowFactor = 1.00f;
     this->CurrentJetFuel = 0.00f;
-    this->IsUsing = false;
+    this->isUsing = false;
     this->isFromTakeOff = false;
-    this->overHeated = false;
+    this->overheated = false;
 }
 
 void UJetBootsMovementComponent::Server_SetOverheated_Implementation(bool Current) {
@@ -83,9 +77,9 @@ void UJetBootsMovementComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProp
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
     DOREPLIFETIME(UJetBootsMovementComponent, CurrentJetFuel);
-    DOREPLIFETIME(UJetBootsMovementComponent, IsUsing);
+    DOREPLIFETIME(UJetBootsMovementComponent, isUsing);
     DOREPLIFETIME(UJetBootsMovementComponent, isFromTakeOff);
-    DOREPLIFETIME(UJetBootsMovementComponent, overHeated);
+    DOREPLIFETIME(UJetBootsMovementComponent, overheated);
 }
 
 

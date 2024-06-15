@@ -42,9 +42,9 @@ ALineCutterProjectile::ALineCutterProjectile(const FObjectInitializer& ObjectIni
     this->InitialHitDamageMultiplier = 5;
     this->InhibitImpactDecalsTime = 0.00f;
     this->MinTimeBetweenImpactDecals = 0.15f;
+    this->LineRoot->SetupAttachment(RootComponent);
     this->LeftHitParticles->SetupAttachment(RootComponent);
     this->RightHitParticles->SetupAttachment(RootComponent);
-    this->LineRoot->SetupAttachment(RootComponent);
 }
 
 void ALineCutterProjectile::UpdateBeamLocations() {

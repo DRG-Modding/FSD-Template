@@ -80,6 +80,7 @@ class AZipLineProjectile;
 class UActorTrackingComponent;
 class UAnimMontage;
 class UAudioComponent;
+class UBaseCritterDescriptor;
 class UCameraComponent;
 class UCappedResource;
 class UCharacterCameraController;
@@ -90,6 +91,7 @@ class UCharacterStateComponent;
 class UCharacterUseComponent;
 class UCharacterVanityComponent;
 class UCommunicationComponent;
+class UDialogDataAsset;
 class UEnemyDescriptor;
 class UFSDAchievement;
 class UFSDPhysicalMaterial;
@@ -308,7 +310,13 @@ public:
     FGameplayTagContainer GameplayTags;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<UJetBootsMovementComponent> JetBootsComponentSpawnable;
+    UDialogDataAsset* AttentionShoutOverride;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSoftClassPtr<UJetBootsMovementComponent> JetBootsComponentSpawnable;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSoftClassPtr<UJetBootsMovementComponent> JetBootsComponentMK2Spawnable;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UZipLineStateComponent* ZipLineStateComponent;
@@ -621,7 +629,7 @@ protected:
     bool HeadLightOn;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
-    bool IsUsing;
+    bool isUsing;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float JumpPressedTime;
@@ -634,6 +642,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool CanUseItem;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    bool CanUseLaserpointer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool CanChangeItems;
@@ -651,7 +662,7 @@ protected:
     bool InDanceRange;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_IsDancing, meta=(AllowPrivateAccess=true))
-    bool IsDancing;
+    bool isDancing;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float DanceStartTime;
@@ -660,7 +671,7 @@ protected:
     UFSDAchievement* HappyFeetAchievement;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_DanceMove, meta=(AllowPrivateAccess=true))
-    int32 DanceMove;
+    int32 danceMove;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ECharacterCameraMode CameraMode;
@@ -826,6 +837,14 @@ protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_TriggerDash();
     
+public:
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_TeleportToPlayer(APlayerCharacter* InPlayerToTeleport, int32 InTarget);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_TeleportPlayerTo(int32 InPlayerIndexToTeleport, APlayerCharacter* InTarget);
+    
+protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_StartSalute(UAnimMontage* startSalute);
     
@@ -834,12 +853,20 @@ public:
     void Server_SpawnEnemies(UEnemyDescriptor* descriptor, int32 Count);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_SpawnCritters(UBaseCritterDescriptor* descriptor, int32 Count);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_Shouted();
     
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetUsing(bool characterIsUsing);
     
+public:
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_SetStandingDown(bool standingDown);
+    
+protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetRunning(bool characterIsRunning);
     
@@ -859,6 +886,9 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_SetIsDancing(bool NewIsDancing, int32 NewDanceMove);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetDispenserReward(AEventRewardDispenser* Dispenser, USchematic* Reward);
     
 protected:
@@ -875,13 +905,31 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_ClearBiomeEffects();
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_CheatStartCountDown();
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_CheatSpawnDropPodOnSelf(float Delay);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_CheatRevive();
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_CheatPreventMeteors();
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_CheatKillAllNeutral();
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_CheatKillAllFriendly();
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_CheatKillAll();
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_CheatJetBoots_MK2();
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_CheatJetBoots();
@@ -893,7 +941,25 @@ public:
     void Server_CheatFlyMode(bool Active);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_CheatFlareInfiniteDuration(bool Enabled);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_CheatDestroyAllVanityCharacters();
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_CheatDebugFastMode(bool fast);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_CheatDancingCharacterOnSelf(int32 InDanceIndex);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_CheatClearAllDecalsAll();
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_CheatBreakAllEnemyArmor();
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_CheatAddAllResourcesToInventory(float amount);
     
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
@@ -1075,6 +1141,9 @@ public:
     float GetTimeSinceLastRevival() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool GetSuperRapidFireActive() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ECharacterState GetPreviousState() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -1203,6 +1272,9 @@ protected:
     void CheckWithoutAPaddleAchievement();
     
 public:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void Cheat_CreateCountdownHUD();
+    
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void ChangeState(ECharacterState NewState);
     
@@ -1239,6 +1311,18 @@ protected:
 public:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_ShowFieldMedicInstantReviveEffects();
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void All_CheatStartCountDown();
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void All_CheatSetDanceForVanityCharacter(int32 InDanceIndex);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void All_CheatDestroyAllVanityCharacters();
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void All_CheatClearAllDecalsAll();
     
     UFUNCTION(BlueprintCallable)
     void AddImpulseToActor(AFSDPhysicsActor* Target, FVector_NetQuantize Impulse, FVector_NetQuantize Location, FVector_NetQuantize AngularImpulse);

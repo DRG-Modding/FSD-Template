@@ -1,6 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "DifficultyMutatorItem.h"
+#include "GameDifficulty.h"
 #include "DifficultyManager.generated.h"
 
 class AFSDGameMode;
@@ -12,6 +14,9 @@ class UDifficultyManager : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UDifficultySetting* CurrentVeteranCompositionSource;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinModifierEnemyCount;
     
@@ -33,6 +38,9 @@ protected:
 public:
     UDifficultyManager(const FObjectInitializer& ObjectInitializer);
 
+    UFUNCTION(BlueprintCallable)
+    FGameDifficulty SelectGameDifficulty(int32 Index, TArray<FDifficultyMutatorItem> Mutators);
+    
     UFUNCTION(BlueprintCallable)
     UDifficultySetting* SelectDifficulty(int32 Index);
     
@@ -65,6 +73,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetEnemyCountModifier() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    FGameDifficulty GetCurrentGameDifficulty() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UDifficultySetting* GetCurrentDifficulty() const;

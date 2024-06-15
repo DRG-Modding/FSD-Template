@@ -49,7 +49,7 @@ AActor* ACaveLeech::GetCurrentTarget() {
 void ACaveLeech::Died(UHealthComponentBase* HealthComponent) {
 }
 
-void ACaveLeech::Damaged(float Amount) {
+void ACaveLeech::Damaged(float amount) {
 }
 
 

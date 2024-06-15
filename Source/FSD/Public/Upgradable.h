@@ -14,7 +14,7 @@ class IUpgradable : public IInterface {
     GENERATED_BODY()
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void Upgraded(const TArray<UItemUpgrade*>& upgrades);
+    void Upgraded(const TArray<UItemUpgrade*>& Upgrades);
     
 };
 

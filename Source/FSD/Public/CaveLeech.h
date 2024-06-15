@@ -122,7 +122,7 @@ protected:
     void Died(UHealthComponentBase* HealthComponent);
     
     UFUNCTION(BlueprintCallable)
-    void Damaged(float Amount);
+    void Damaged(float amount);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BP_OnStateChanged(ECaveLeechState NewState);

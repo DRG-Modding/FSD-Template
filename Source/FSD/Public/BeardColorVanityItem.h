@@ -11,19 +11,22 @@ class UBeardColorVanityItem : public UVanityItem {
 public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UMaterialInterface* HairColor;
+    TSoftObjectPtr<UMaterialInterface> HairColor;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UMaterialInterface* EyebrowColor;
+    TSoftObjectPtr<UMaterialInterface> EyebrowColor;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UMaterialInterface* MoustacheColor;
+    TSoftObjectPtr<UMaterialInterface> MoustacheColor;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UMaterialInterface* SideburnColor;
+    TSoftObjectPtr<UMaterialInterface> SideburnColor;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UMaterialInterface* BeardColor;
+    TSoftObjectPtr<UMaterialInterface> BeardColor;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSoftObjectPtr<UMaterialInterface> TransparentColor;
     
 public:
     UBeardColorVanityItem();

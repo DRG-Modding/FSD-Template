@@ -1,11 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/NetSerialization.h"
 #include "Engine/NetSerialization.h"
 #include "AmmoDrivenWeapon.h"
 #include "Templates/SubclassOf.h"
 #include "ElectricalSMG.generated.h"
 
+class AActor;
 class ARedeployableSentryGun;
 class UFSDPhysicalMaterial;
 class UHealthComponentBase;
@@ -19,9 +22,6 @@ class AElectricalSMG : public AAmmoDrivenWeapon {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<ARedeployableSentryGun*> SentriesWithActiveIndicators;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ARedeployableSentryGun> SentryGunClass;
     
@@ -43,15 +43,30 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool TurretPlasmaLineEnabled;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    float ElectrocutionChance;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool TurretEMPDischargeEnabled;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool ElectricfyPlatformsEnabled;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<UFSDPhysicalMaterial*> PlatformMaterials;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSoftClassPtr<AActor> ElectrifyPlatformsActorClass;
     
 public:
     AElectricalSMG(const FObjectInitializer& ObjectInitializer);
 
 protected:
     UFUNCTION(BlueprintCallable)
-    void OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial);
+    void OnTerrainHit(const FVector& Location, const FRotator& Rotation, UFSDPhysicalMaterial* PhysicalMaterial);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnTargetDamaged(UHealthComponentBase* Health, float amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial);
     
     UFUNCTION(BlueprintCallable)
     void OnStatusEffectPushed(UHealthComponentBase* Health);

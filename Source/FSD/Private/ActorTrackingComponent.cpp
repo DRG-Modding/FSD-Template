@@ -10,7 +10,7 @@ UActorTrackingComponent::UActorTrackingComponent(const FObjectInitializer& Objec
 void UActorTrackingComponent::ToggleIcon(bool Visible) {
 }
 
-void UActorTrackingComponent::ShowAlwaysOn() {
+void UActorTrackingComponent::ShowAlwaysOn(bool IsActive) {
 }
 
 void UActorTrackingComponent::OnHoldTAB(bool IsDown) {

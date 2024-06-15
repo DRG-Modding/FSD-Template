@@ -95,6 +95,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UObjectivesManager* ObjectivesManager;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool ShouldAttachPlayers;
+    
 public:
     ATeamTransport(const FObjectInitializer& ObjectInitializer);
 
@@ -180,7 +183,7 @@ public:
     void ExitSpacerig();
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
-    static void DropToTarget(UObject* WorldContextObject, TSubclassOf<ATeamTransport> podClass, const FTransform& dropLocation, int32 DropDelay);
+    static ATeamTransport* DropToTarget(UObject* WorldContextObject, TSubclassOf<ATeamTransport> podClass, const FTransform& dropLocation, int32 DropDelay);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static ATeamTransport* DropToMission(UObject* WorldContextObject, TSubclassOf<ATeamTransport> podClass, const FVector& Location);

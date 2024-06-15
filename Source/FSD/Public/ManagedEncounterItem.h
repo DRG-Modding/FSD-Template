@@ -12,7 +12,7 @@ public:
     UEnemyDescriptor* descriptor;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    int32 Amount;
+    int32 amount;
     
     FSD_API FManagedEncounterItem();
 };

@@ -65,7 +65,7 @@ public:
     static FString GetProjectVersion();
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
-    static int32 GetNumPlayers(UObject* WorldContext);
+    static int32 GetNumPlayers(UObject* WorldContext, bool onlyAlive);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     static int32 GetNumAdditionalPlayers(UObject* WorldContext);
@@ -99,6 +99,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static UGameData* GetFSDGameData();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static float GetFrameRateInHz(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static TScriptInterface<IMissionModeManager> GetDeepDiveManager(UObject* WorldContextObject);

@@ -23,6 +23,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ListenForDeath;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UHealthComponentBase* ParentHealth;
+    
 public:
     UImpactAudioComponent(const FObjectInitializer& ObjectInitializer);
 

@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
+#include "EOmmoranStage.h"
 #include "ShellCrackedSignatureDelegate.h"
 #include "EscortDestination.generated.h"
 
@@ -38,6 +39,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ShellThickness;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    TArray<EOmmoranStage> OmmoranStages;
+    
 public:
     AEscortDestination(const FObjectInitializer& ObjectInitializer);
 
@@ -56,6 +60,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     FVector GetClosestPointOnRadius(FVector CurrentLocation, int32 numberOfShellsCracked, FVector& dirFromCenter);
+    
+    UFUNCTION(BlueprintCallable)
+    void Cheat_OverrideStages(TArray<EOmmoranStage> newStages);
     
 };
 

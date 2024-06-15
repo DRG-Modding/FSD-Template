@@ -1,7 +1,7 @@
 #include "NotDLC.h"
 
 UNotDLC::UNotDLC() {
-    this->dlc = NULL;
+    this->DLC = NULL;
 }
 
 

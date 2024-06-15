@@ -7,6 +7,7 @@
 
 class AActor;
 class AFSDPlayerState;
+class AStickyFlame;
 class UStatusEffect;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
@@ -16,6 +17,9 @@ public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UStatusEffect> StatusEffect;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSoftClassPtr<AStickyFlame> ClassFilter;
     
 public:
     UStickyFlameStatusEffectUpgrade();

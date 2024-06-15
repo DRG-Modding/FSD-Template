@@ -8,6 +8,7 @@ UTerrainMaterial::UTerrainMaterial() {
     this->ExplosionProof = false;
     this->MeltsInFire = false;
     this->PlatformDissolvable = false;
+    this->Ephemeral = false;
     this->ResourceData = NULL;
     this->HitsNeededToMine = 2;
     this->PickAxeDigSize = 105.00f;

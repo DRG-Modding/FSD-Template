@@ -22,6 +22,9 @@ public:
     virtual USkeletalMeshComponent* GetSkeletalMesh() const PURE_VIRTUAL(GetSkeletalMesh, return NULL;);
     
     UFUNCTION(BlueprintCallable)
+    virtual FName GetCenterOfMassSocketName() const PURE_VIRTUAL(GetCenterOfMassSocketName, return NAME_None;);
+    
+    UFUNCTION(BlueprintCallable)
     virtual UAnimInstance* GetAnimInstance() const PURE_VIRTUAL(GetAnimInstance, return NULL;);
     
 };

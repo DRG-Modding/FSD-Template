@@ -6,6 +6,7 @@
 #include "EChatSenderType.h"
 #include "EGameOwnerStatus.h"
 #include "EnemyKilledSignatureDelegate.h"
+#include "EquippedVanity.h"
 #include "FractionLevelGeneratedDelegateDelegate.h"
 #include "LevelGenerationStateSignatureDelegate.h"
 #include "PlayerNameChangedSignatureDelegate.h"
@@ -25,7 +26,6 @@ class UPlayerRejoinState;
 class UPlayerResourceComponent;
 class UPlayerStatsComponent;
 class USaveGameStateComponent;
-class UVanityItem;
 
 UCLASS(Blueprintable)
 class FSD_API AFSDPlayerState : public APlayerState {
@@ -53,7 +53,7 @@ public:
     FEnemyKilledSignature OnEnemyKilledEvent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
-    TArray<UVanityItem*> LatestEquipedVanity;
+    FEquippedVanity LatestEquipedVanity;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_SelectedCharacter, meta=(AllowPrivateAccess=true))

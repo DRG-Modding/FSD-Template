@@ -1,11 +1,13 @@
 #include "UGCSettings.h"
 
 UUGCSettings::UUGCSettings() {
+    this->slot1.AddDefaulted(3);
     this->slot1Icon = 0;
-    this->slot2Icon = 9;
+    this->slot2Icon = 0;
     this->slot3Icon = 0;
+    this->slot4.AddDefaulted(4);
     this->slot4Icon = 0;
-    this->SelectedSlot = 3;
+    this->SelectedSlot = 1;
 }
 
 bool UUGCSettings::WriteToPlainText(const FString& Filename, const FString& TextContent, FText& OutError, bool Append) {

@@ -5,6 +5,5 @@ FFSDServerSearchOptions::FFSDServerSearchOptions() {
     this->SearchRegion = ESteamSearchRegion::Close;
     this->DeepDive = false;
     this->MissionSeed = 0;
-    this->GlobalMissionSeed = 0;
 }
 

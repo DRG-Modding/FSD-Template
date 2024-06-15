@@ -10,7 +10,7 @@ public:
     FText Description;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 Amount;
+    int32 amount;
     
     FSD_API FCreditsReward();
 };

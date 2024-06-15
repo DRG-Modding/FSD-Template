@@ -6,6 +6,7 @@ UENUM(BlueprintType)
 enum class UDLSSMode : uint8 {
     Off,
     Auto,
+    DLAA,
     UltraQuality,
     Quality,
     Balanced,

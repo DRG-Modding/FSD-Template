@@ -26,10 +26,10 @@ protected:
     TArray<FInputDirectionSet> DirectionSets;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USoundCue* SuccessSound;
+    TSoftObjectPtr<USoundCue> SuccessSound;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USoundCue* FailSound;
+    TSoftObjectPtr<USoundCue> FailSound;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ErrorGracePeriod;

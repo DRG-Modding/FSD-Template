@@ -33,7 +33,7 @@ public:
     void SetIsActive(bool aFlag);
     
     UFUNCTION(BlueprintCallable)
-    void OnDamage(float Amount);
+    void OnDamage(float amount);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetIsActive() const;

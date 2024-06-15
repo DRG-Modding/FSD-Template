@@ -34,6 +34,10 @@ ABoltActionWeapon::ABoltActionWeapon(const FObjectInitializer& ObjectInitializer
     this->ChargeAffectsDamage = false;
     this->Charging = false;
     this->ChargeProgress = 0.00f;
+    this->RateOfFireHipFireModifier = 1.00f;
+    this->ChargeSpeedModifier = 1.00f;
+    this->SuccesfullHipFireStackDuration = 2.00f;
+    this->SuccesfullAimedStackDuration = 2.00f;
 }
 
 void ABoltActionWeapon::SetOverheated(bool isOverheated) {
@@ -54,7 +58,7 @@ void ABoltActionWeapon::OnTimerElapsed() {
 void ABoltActionWeapon::OnTargetKilled(AActor* Target, UFSDPhysicalMaterial* PhysicalMaterial, bool wasDirectHit) {
 }
 
-void ABoltActionWeapon::OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial) {
+void ABoltActionWeapon::OnTargetDamaged(UHealthComponentBase* Health, float amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial) {
 }
 
 void ABoltActionWeapon::OnShotPowerSet() {
@@ -62,6 +66,9 @@ void ABoltActionWeapon::OnShotPowerSet() {
 
 
 void ABoltActionWeapon::Client_OnTargetKilled_Implementation(bool BoostReloadTime) {
+}
+
+void ABoltActionWeapon::Client_OnTargetDamaged_Implementation(float amount) {
 }
 
 void ABoltActionWeapon::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

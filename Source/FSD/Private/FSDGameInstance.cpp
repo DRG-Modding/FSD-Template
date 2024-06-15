@@ -270,10 +270,6 @@ TArray<FBlueprintSessionResult> UFSDGameInstance::GetServersFriendsArePlaying(TA
     return TArray<FBlueprintSessionResult>();
 }
 
-FString UFSDGameInstance::GetSeedString(UObject* WorldContextObject) {
-    return TEXT("");
-}
-
 int32 UFSDGameInstance::GetOverrideMaxPlayerCount() const {
     return 0;
 }
@@ -302,8 +298,8 @@ bool UFSDGameInstance::GetHasSeenInfoScreen() {
     return false;
 }
 
-int32 UFSDGameInstance::GetGlobalMissionSeed() const {
-    return 0;
+FGlobalMissionSeed UFSDGameInstance::GetGlobalMissionSeedNew() const {
+    return FGlobalMissionSeed{};
 }
 
 UGeneratedMission* UFSDGameInstance::GetGeneratedMission() const {
@@ -320,10 +316,6 @@ FString UFSDGameInstance::GetDisconnectErrorCode() const {
 
 TArray<FNetworkConnectionInfo> UFSDGameInstance::GetConnectionInfo() {
     return TArray<FNetworkConnectionInfo>();
-}
-
-int32 UFSDGameInstance::GetCommonGlobalMissionSeed() const {
-    return 0;
 }
 
 APlayerCharacter* UFSDGameInstance::GetCharacterSelectorCharacter() {

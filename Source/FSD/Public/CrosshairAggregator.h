@@ -28,8 +28,14 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UCustomAmmoCountWidget* CustomAmmoCounterWidget;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UCustomAmmoCountWidget* AdditionalAmmoCounterWidget;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UCustomAmmoCountWidget> CustomAmmoCounterType;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UCustomAmmoCountWidget> AdditionalAmmoCounterType;
     
 public:
     UCrosshairAggregator(const FObjectInitializer& ObjectInitializer);
@@ -41,7 +47,10 @@ public:
     UUserWidget* GetOrCreateCrosshair();
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
-    UCustomAmmoCountWidget* GetCustomAmmoCounterWidget(UObject* WorldContext, APlayerController* InOwner);
+    UCustomAmmoCountWidget* GetCustomAmmoCounterWidget(UObject* WorldContext, const APlayerController* InOwner);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
+    UCustomAmmoCountWidget* GetAdditionalAmmoCounterWidget(UObject* WorldContext, const APlayerController* InOwner);
     
 
     // Fix for true pure virtual functions not being implemented

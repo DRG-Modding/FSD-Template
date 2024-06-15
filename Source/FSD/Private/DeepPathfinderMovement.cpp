@@ -24,6 +24,7 @@ UDeepPathfinderMovement::UDeepPathfinderMovement(const FObjectInitializer& Objec
     this->AllowSlowTickRateWhenNotVisible = true;
     this->ForceAPathIfNoneFound = false;
     this->DrawServerPath = false;
+    this->IsStrafingOverride = false;
     this->CSGWorld = NULL;
     this->PathMovedDist = 0;
     this->LocalPathMovedDist = 0;
@@ -49,6 +50,7 @@ UDeepPathfinderMovement::UDeepPathfinderMovement(const FObjectInitializer& Objec
     this->DampOmega = 2.00f;
     this->UseMovementSpring = false;
     this->SnapToPathfinderOnFirstMove = true;
+    this->DisablePathfinderErrors = false;
     this->FakeSyncTime = 0.00f;
 }
 
@@ -119,11 +121,8 @@ bool UDeepPathfinderMovement::PathExistTo(const FVector& Dest) {
     return false;
 }
 
-bool UDeepPathfinderMovement::PathExistsBetween(const FVector& From, const FVector& To) {
+bool UDeepPathfinderMovement::PathExistsBetween(const FVector& from, const FVector& to) {
     return false;
-}
-
-void UDeepPathfinderMovement::OnRep_PathMovedDist(uint32 lastPathMovedDist) {
 }
 
 void UDeepPathfinderMovement::OnRep_Path(const FDeepRepPath& oldPath) {
@@ -198,6 +197,10 @@ bool UDeepPathfinderMovement::FindPointKeepingDistance(const FVector& Origin, fl
     return false;
 }
 
+bool UDeepPathfinderMovement::FindPointDiagonalTowardsTarget(const FVector& Origin, const FVector& Target, float dodgeAngle, float maxSampleDistance, float moveDistance, float RandomDeviation, FVector& outPos) {
+    return false;
+}
+
 FVector UDeepPathfinderMovement::FindPathfinderPointBelow(const FVector& Pos, float HeightOffset) {
     return FVector{};
 }
@@ -239,7 +242,7 @@ void UDeepPathfinderMovement::AddFakeMoverImpulse(const FVector& Impulse) {
 void UDeepPathfinderMovement::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
-    DOREPLIFETIME(UDeepPathfinderMovement, PathMovedDist);
+    DOREPLIFETIME(UDeepPathfinderMovement, IsStrafingOverride);
     DOREPLIFETIME(UDeepPathfinderMovement, Path);
     DOREPLIFETIME(UDeepPathfinderMovement, MoveSettings);
     DOREPLIFETIME(UDeepPathfinderMovement, TargetActor);

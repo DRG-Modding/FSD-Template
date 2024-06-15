@@ -61,6 +61,12 @@ protected:
     FTracerData TracerData;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool UsePriorityTargetTracerData;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FTracerData PriorityTargetTracerData;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* Tracer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -148,7 +154,7 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
-    void UseAmmo(int32 Amount);
+    void UseAmmo(int32 amount);
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

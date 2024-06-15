@@ -7,6 +7,17 @@ FVector UFSDMath::SphericalToCartesian(float Radius, float azimuth, float elecat
     return FVector{};
 }
 
+float UFSDMath::SignedAngleBetweenVectorsZUp(const FVector& v1, const FVector& v2) {
+    return 0.0f;
+}
+
+float UFSDMath::RoundToDecimalPlace(float Number, int32 decimalPlaces) {
+    return 0.0f;
+}
+
+void UFSDMath::RotateActorAroundOffset(AActor* Actor, FVector localSpaceOffset, FRotator Rotator) {
+}
+
 bool UFSDMath::PercentageCheck(float percentage) {
     return false;
 }
@@ -22,7 +33,15 @@ FVector UFSDMath::CubicInterpBlueprint(FVector p0, FVector tangent1, FVector p1,
     return FVector{};
 }
 
+FVector UFSDMath::ClampVectorToCone(FVector ToConstrain, FVector ConeDirection, float ConeAngle) {
+    return FVector{};
+}
+
 void UFSDMath::CartesianToSpherical(FVector Location, float& outAzimuth, float& outElevation, float& OutRadius) {
+}
+
+float UFSDMath::AngleBetweenVectors(const FVector& v1, const FVector& v2) {
+    return 0.0f;
 }
 
 

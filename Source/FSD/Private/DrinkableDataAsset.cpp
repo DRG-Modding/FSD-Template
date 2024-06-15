@@ -15,6 +15,7 @@ UDrinkableDataAsset::UDrinkableDataAsset() {
     this->OrderCheeringShout = NULL;
     this->DrinkSaluteShout = NULL;
     this->buff = NULL;
+    this->OneEffectComponentPerCharacter = false;
 }
 
 bool UDrinkableDataAsset::TryUnlockSpecialDrinks(UObject* WorldContext) {

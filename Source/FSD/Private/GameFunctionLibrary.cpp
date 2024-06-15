@@ -46,7 +46,7 @@ FString UGameFunctionLibrary::GetProjectVersion() {
     return TEXT("");
 }
 
-int32 UGameFunctionLibrary::GetNumPlayers(UObject* WorldContext) {
+int32 UGameFunctionLibrary::GetNumPlayers(UObject* WorldContext, bool onlyAlive) {
     return 0;
 }
 
@@ -92,6 +92,10 @@ UFSDGameInstance* UGameFunctionLibrary::GetFSDGameInstance(UObject* WorldContext
 
 UGameData* UGameFunctionLibrary::GetFSDGameData() {
     return NULL;
+}
+
+float UGameFunctionLibrary::GetFrameRateInHz(UObject* WorldContextObject) {
+    return 0.0f;
 }
 
 TScriptInterface<IMissionModeManager> UGameFunctionLibrary::GetDeepDiveManager(UObject* WorldContextObject) {

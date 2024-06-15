@@ -30,7 +30,7 @@ public:
     FItemUpgradeSignature OnEquipped;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    FItemUpgradeSignature OnUnequipped;
+    FItemUpgradeSignature OnUnEquipped;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

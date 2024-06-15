@@ -18,6 +18,9 @@ public:
     UFUNCTION(BlueprintCallable)
     static void OpenURLInSteamBrowser(const FString& URL);
     
+    UFUNCTION(BlueprintCallable)
+    static void OpenSteamSettings();
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsTextFilteringInitialized();
     

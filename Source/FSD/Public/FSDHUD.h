@@ -8,6 +8,7 @@ class AFSDHUD;
 class APlayerCameraDrone;
 class APlayerCharacter;
 class APlayerController;
+class UFSDMainHUDWidget;
 class URadarPointComponent;
 
 UCLASS(Blueprintable, NonTransient)
@@ -55,6 +56,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void HandleSeamlessTravel();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFSDMainHUDWidget* GetHUDWidget() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetHUDVisible() const;

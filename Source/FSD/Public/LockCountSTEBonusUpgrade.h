@@ -21,7 +21,7 @@ protected:
     bool UseTotalLockCount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float Amount;
+    float amount;
     
 public:
     ULockCountSTEBonusUpgrade();

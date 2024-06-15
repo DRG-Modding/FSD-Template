@@ -7,8 +7,10 @@
 #include "RequiredMissionItem.h"
 #include "GlobalMissionSetup.generated.h"
 
+class UMissionChallenge;
 class UMissionMutator;
 class UMissionNameBank;
+class UMissionStat;
 class UMissionWarning;
 class UPlanetZone;
 
@@ -47,6 +49,9 @@ public:
     float DoubleWarningChance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UMissionStat* DoubleWarningStat;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UMissionMutator*> Mutators;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -54,6 +59,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<UMissionWarning*, UMissionWarning*> IncompatibleWarnings;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<UMissionChallenge*> Challenges;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UPlanetZone*> PlanetZones;

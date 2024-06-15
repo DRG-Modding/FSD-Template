@@ -8,7 +8,7 @@ UInstancedMeshOnSpline::UInstancedMeshOnSpline(const FObjectInitializer& ObjectI
     this->Phase = 0.00f;
 }
 
-void UInstancedMeshOnSpline::SetSpeed(float newSpeed) {
+void UInstancedMeshOnSpline::SetSpeed(float NewSpeed) {
 }
 
 

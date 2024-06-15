@@ -28,7 +28,7 @@ protected:
     FGuid SavegameID;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UTexture2D* LargeImage;
+    TSoftObjectPtr<UTexture2D> LargeImage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText FormattedTitle;

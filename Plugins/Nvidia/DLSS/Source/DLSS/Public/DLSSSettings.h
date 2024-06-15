@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
+#include "EDLSSPreset.h"
 #include "DLSSSettings.generated.h"
 
 UCLASS(Blueprintable, DefaultConfig, Config=Engine)
@@ -42,6 +43,24 @@ public:
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bCustomDLSSBinaryExists;
+    
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bAllowOTAUpdate;
+    
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EDLSSPreset DLAAPreset;
+    
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EDLSSPreset DLSSQualityPreset;
+    
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EDLSSPreset DLSSBalancedPreset;
+    
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EDLSSPreset DLSSPerformancePreset;
+    
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EDLSSPreset DLSSUltraPerformancePreset;
     
     UDLSSSettings();
 

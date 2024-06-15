@@ -81,10 +81,10 @@ void ACrossbow::DestroyActor(AActor* Actor) {
 void ACrossbow::Client_RefillSpecialAmmo_Implementation(float percentage) {
 }
 
-void ACrossbow::Client_CallAddSpecialAmmo_Implementation(const int32& Amount) {
+void ACrossbow::Client_CallAddSpecialAmmo_Implementation(const int32& amount) {
 }
 
-void ACrossbow::Client_CallAddDefaultAmmo_Implementation(const int32& Amount) {
+void ACrossbow::Client_CallAddDefaultAmmo_Implementation(const int32& amount) {
 }
 
 void ACrossbow::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

@@ -1,6 +1,8 @@
 #include "SeasonsSubsystem.h"
 
 USeasonsSubsystem::USeasonsSubsystem() {
+    this->DesiredSeason = -1;
+    this->ActiveSeason = -1;
 }
 
 FTimespan USeasonsSubsystem::TimeToNewChallenge() {
@@ -10,7 +12,7 @@ FTimespan USeasonsSubsystem::TimeToNewChallenge() {
 void USeasonsSubsystem::SetSeasonCompletedAnnounced(bool IsAnnounced) const {
 }
 
-void USeasonsSubsystem::SetHasOptedOutOfSeasonContent(bool hasOptedOut) {
+void USeasonsSubsystem::SetActiveSeason(USeason* Season) {
 }
 
 void USeasonsSubsystem::RerollChallenge(int32 Index) {
@@ -40,10 +42,6 @@ bool USeasonsSubsystem::HasUnclaimedRewards(int32& Level) {
     return false;
 }
 
-bool USeasonsSubsystem::HasOptedOutOfSeasonContent() const {
-    return false;
-}
-
 bool USeasonsSubsystem::HasClaimedLevelRewards(int32 startLevel, int32 numberOfLevels) {
     return false;
 }
@@ -54,6 +52,14 @@ bool USeasonsSubsystem::HasClaimedAllRewards() const {
 
 int32 USeasonsSubsystem::GetUnusedHearts() {
     return 0;
+}
+
+UReward* USeasonsSubsystem::GetTreeOfVanityReward(UReward* currentReward) const {
+    return NULL;
+}
+
+UGameDLC* USeasonsSubsystem::GetStoreSeasonDLC(UObject* WorldContext) const {
+    return NULL;
 }
 
 int32 USeasonsSubsystem::GetSeasonXPFromMissionXP(AFSDPlayerState* PlayerState) {
@@ -123,6 +129,10 @@ FSeasonLevel USeasonsSubsystem::GetLevelReward(int32 Level) {
 void USeasonsSubsystem::GetLevelProgress(int32 Level, float& levelPercent) {
 }
 
+USeason* USeasonsSubsystem::GetCurrentSeason() const {
+    return NULL;
+}
+
 TArray<UDataAsset*> USeasonsSubsystem::GetAssetReferences(int32 ChallengeIndex, USeasonChallenge*& outChallenge) {
     return TArray<UDataAsset*>();
 }
@@ -131,23 +141,11 @@ TArray<FChallengeInfo> USeasonsSubsystem::GetActiveChallenges(bool canGenerateNe
     return TArray<FChallengeInfo>();
 }
 
-UTextureRenderTarget2D* USeasonsSubsystem::GenerateVanityRewardIcon(UVanityItem* Item, UPlayerCharacterID* Character, FTransform Offset, bool rebuildMesh, FVector2D Size) {
-    return NULL;
-}
-
-UTextureRenderTarget2D* USeasonsSubsystem::GenerateSkinRewardIcon(UItemSkin* Skin, UPlayerCharacterID* Character, bool bShowCloseUp, FTransform Offset, bool rebuildMesh, FVector2D Size) {
-    return NULL;
-}
-
-UTextureRenderTarget2D* USeasonsSubsystem::GeneratePickaxeRewardIcon(UPickaxePart* part, EPickaxePartLocation PickaxePartLocation, UPlayerCharacterID* Character, FTransform Offset, bool rebuildMesh, FVector2D Size) {
-    return NULL;
-}
-
 bool USeasonsSubsystem::ConvertHeartsToScrip(int32& scripGained) {
     return false;
 }
 
-void USeasonsSubsystem::CompleteSeasonEvent_Server(USeasonEventData* inEvent) {
+void USeasonsSubsystem::CompleteSeasonEvent_Server(USeasonEventData* InEvent) {
 }
 
 bool USeasonsSubsystem::ClaimScripChallenge() {
@@ -171,10 +169,6 @@ void USeasonsSubsystem::CHEAT_AddChallenge() {
 }
 
 bool USeasonsSubsystem::CanRerollChallenge() {
-    return false;
-}
-
-bool USeasonsSubsystem::CanOptOutOfSeasonContent() const {
     return false;
 }
 

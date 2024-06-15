@@ -6,6 +6,7 @@
 #include "DecalData.h"
 #include "CryosprayItem.generated.h"
 
+class AActor;
 class AProjectileBase;
 class UDamageComponent;
 class UFSDAudioComponent;
@@ -127,13 +128,16 @@ protected:
     float RePressureProgress;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<UItemUpgrade*> upgrades;
+    TArray<UItemUpgrade*> Upgrades;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool LongReachEnabled;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool AoEColdEnabled;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSet<AActor*> HitActorCache;
     
 public:
     ACryosprayItem(const FObjectInitializer& ObjectInitializer);
@@ -154,7 +158,7 @@ protected:
     void ReceiveRepressurisingChanged(bool Value);
     
     UFUNCTION(BlueprintCallable)
-    void OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial);
+    void OnTargetDamaged(UHealthComponentBase* Health, float amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial);
     
     UFUNCTION(BlueprintCallable)
     void OnRep_IsCharging(bool OldValue);

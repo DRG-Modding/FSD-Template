@@ -5,6 +5,7 @@ ABoscoController::ABoscoController(const FObjectInitializer& ObjectInitializer) 
     this->CheckOutOfTheWayInterval = 0.00f;
     this->DistCountAsSameHit = 10.00f;
     this->HearthstoneCrystalMaterial = NULL;
+    this->RiftCrystalMaterial = NULL;
     this->SearchForEnemiesInterval = 0.00f;
     this->SaluteDelay = 0.00f;
     this->SaluteCooldown = 0.00f;

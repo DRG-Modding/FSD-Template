@@ -1,7 +1,7 @@
 #include "SeasonSettings.h"
 
 USeasonSettings::USeasonSettings() {
-    this->CurrentSeason = NULL;
+    this->CurrentSeasonIndex = -1;
     this->MaxActiveChallenges = 0;
     this->XPPerLevel = 0;
     this->XPToPerforcemancePointsCurve = NULL;
@@ -10,6 +10,10 @@ USeasonSettings::USeasonSettings() {
     this->HeartsColledtedStat = NULL;
     this->HeartsPerScrip = 4;
     this->NumberOfScriptsFromPlague = 10;
+}
+
+USeason* USeasonSettings::GetSeason(int32 Season) const {
+    return NULL;
 }
 
 

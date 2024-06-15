@@ -8,7 +8,7 @@ UGatherGemsObjective::UGatherGemsObjective(const FObjectInitializer& ObjectIniti
     this->GemResource = NULL;
 }
 
-void UGatherGemsObjective::OnResourceChanged(UCappedResource* CappedResource, float Amount) {
+void UGatherGemsObjective::OnResourceChanged(UCappedResource* CappedResource, float amount) {
 }
 
 void UGatherGemsObjective::OnRep_GemsCollected(int32 prevAmount) {

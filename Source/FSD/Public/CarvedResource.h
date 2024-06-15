@@ -15,7 +15,7 @@ public:
     TArray<int32> PredeterminedRooms;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    int32 Amount;
+    int32 amount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float Overflow;

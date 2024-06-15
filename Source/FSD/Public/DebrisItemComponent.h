@@ -31,7 +31,7 @@ public:
     bool UseAmount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FIRandRange Amount;
+    FIRandRange amount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 AmountSearchMultiplier;

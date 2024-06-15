@@ -9,7 +9,7 @@ struct FActiveAudioItem {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
-    UAudioComponent* audio;
+    UAudioComponent* Audio;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float FadeoutDuration;

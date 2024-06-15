@@ -4,7 +4,7 @@
 #include "ScaledMeshAfflictionTypeItem.h"
 #include "AfflictionSettings.generated.h"
 
-class UFXSystemAsset;
+class UParticleSystem;
 class UPawnAffliction;
 class USoundCue;
 
@@ -21,10 +21,7 @@ private:
     
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USoundCue* BurningSound;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USoundCue* EletrocutedSound;
+    TSoftObjectPtr<USoundCue> BurningSound;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HeavyStaggerMinTime;
@@ -46,16 +43,16 @@ public:
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
-    TArray<UFXSystemAsset*> BurningParticles;
+    TArray<TSoftObjectPtr<UParticleSystem>> BurningParticles;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
-    TArray<UFXSystemAsset*> EletrocutedParticles;
+    TArray<TSoftObjectPtr<UParticleSystem>> EletrocutedParticles;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
-    TArray<UFXSystemAsset*> ExplodingParticles;
+    TArray<TSoftObjectPtr<UParticleSystem>> ExplodingParticles;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
-    TArray<USoundCue*> ExplodingSounds;
+    TArray<TSoftObjectPtr<USoundCue>> ExplodingSounds;
     
 public:
     UAfflictionSettings();

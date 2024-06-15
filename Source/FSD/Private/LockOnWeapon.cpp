@@ -15,6 +15,7 @@ ALockOnWeapon::ALockOnWeapon(const FObjectInitializer& ObjectInitializer) : Supe
     this->bPrioritizeLowHitPoint = false;
     this->bAlwaysHitTarget = false;
     this->MaxLockOnDuration = -1.00f;
+    this->RateOfFireLockedOnModifier = 1.00f;
     this->bLockOnControlsSentryGun = false;
     this->bSentryGunShootsOnLockedShot = false;
     this->TrackingWidgetClass = NULL;
@@ -39,6 +40,7 @@ ALockOnWeapon::ALockOnWeapon(const FObjectInitializer& ObjectInitializer) : Supe
     this->ChargeProgress = 0.00f;
     this->LastShotWasLockedOn = false;
     this->LockOnRecoilMult = 0.00f;
+    this->FireOnRelease = true;
 }
 
 void ALockOnWeapon::UpdateRifleEye() {
@@ -86,6 +88,9 @@ void ALockOnWeapon::OnHit(const FHitResult& Hit, bool alwaysPenetrate) {
 void ALockOnWeapon::OnAsyncFireComplete() {
 }
 
+
+void ALockOnWeapon::FireWeapon(bool ResetUsing, bool Fire) {
+}
 
 void ALockOnWeapon::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);

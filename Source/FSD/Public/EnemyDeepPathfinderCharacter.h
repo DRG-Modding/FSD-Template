@@ -28,10 +28,10 @@ public:
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void SwitchToDynamicBaseShader(UMaterialInterface* baseShader, UMeshComponent* MeshComponent) const;
     
+protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_QueuedMontage();
     
@@ -43,6 +43,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     USkeletalMeshComponent* GetSkeletalMesh() const override PURE_VIRTUAL(GetSkeletalMesh, return NULL;);
+    
+    UFUNCTION(BlueprintCallable)
+    FName GetCenterOfMassSocketName() const override PURE_VIRTUAL(GetCenterOfMassSocketName, return NAME_None;);
     
     UFUNCTION(BlueprintCallable)
     UAnimInstance* GetAnimInstance() const override PURE_VIRTUAL(GetAnimInstance, return NULL;);

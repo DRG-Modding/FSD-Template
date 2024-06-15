@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ItemUpgrade.h"
+#include "DamageBonusBaseUpgrade.h"
 #include "Templates/SubclassOf.h"
 #include "UpgradeValues.h"
 #include "DamageConversionUpgrade.generated.h"
@@ -8,10 +8,9 @@
 class AActor;
 class AFSDPlayerState;
 class UDamageClass;
-class UDamageCondition;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
-class UDamageConversionUpgrade : public UItemUpgrade {
+class UDamageConversionUpgrade : public UDamageBonusBaseUpgrade {
     GENERATED_BODY()
 public:
 protected:
@@ -26,9 +25,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> RequiredClass;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UDamageCondition* Condition;
     
 public:
     UDamageConversionUpgrade();

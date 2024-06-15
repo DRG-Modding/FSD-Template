@@ -2,12 +2,9 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "ChallengeInfo.h"
 #include "ClaimStatusChangedDelegate.h"
-#include "EPickaxePartLocation.h"
 #include "OnScripChallengeUpdatedDelegate.h"
 #include "OnTokensChangedSignatureDelegate.h"
 #include "OnVanityTreeResetDelegate.h"
@@ -19,16 +16,14 @@
 class AFSDPlayerController;
 class AFSDPlayerState;
 class UDataAsset;
-class UItemSkin;
+class UGameDLC;
 class UMissionStat;
 class UObject;
-class UPickaxePart;
-class UPlayerCharacterID;
+class UReward;
+class USeason;
 class USeasonChallenge;
 class USeasonEventData;
 class USpecialEvent;
-class UTextureRenderTarget2D;
-class UVanityItem;
 
 UCLASS(Blueprintable)
 class USeasonsSubsystem : public UGameInstanceSubsystem {
@@ -57,6 +52,12 @@ protected:
     FTimespan NewChallengeTimeSpan;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    int32 DesiredSeason;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    int32 ActiveSeason;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FSeasonMissionResult TempSeasonMissionResult;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -71,8 +72,8 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void SetSeasonCompletedAnnounced(bool IsAnnounced) const;
     
-    UFUNCTION(BlueprintCallable)
-    void SetHasOptedOutOfSeasonContent(bool hasOptedOut);
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
+    void SetActiveSeason(USeason* Season);
     
     UFUNCTION(BlueprintCallable)
     void RerollChallenge(int32 Index);
@@ -100,9 +101,6 @@ public:
     UFUNCTION(BlueprintCallable)
     bool HasUnclaimedRewards(int32& Level);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    bool HasOptedOutOfSeasonContent() const;
-    
     UFUNCTION(BlueprintCallable)
     bool HasClaimedLevelRewards(int32 startLevel, int32 numberOfLevels);
     
@@ -111,6 +109,12 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetUnusedHearts();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UReward* GetTreeOfVanityReward(UReward* currentReward) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
+    UGameDLC* GetStoreSeasonDLC(UObject* WorldContext) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetSeasonXPFromMissionXP(AFSDPlayerState* PlayerState);
@@ -166,6 +170,9 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetLevelProgress(int32 Level, float& levelPercent);
     
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    USeason* GetCurrentSeason() const;
+    
     UFUNCTION(BlueprintCallable)
     TArray<UDataAsset*> GetAssetReferences(int32 ChallengeIndex, USeasonChallenge*& outChallenge);
     
@@ -173,19 +180,10 @@ public:
     TArray<FChallengeInfo> GetActiveChallenges(bool canGenerateNewChallenge);
     
     UFUNCTION(BlueprintCallable)
-    UTextureRenderTarget2D* GenerateVanityRewardIcon(UVanityItem* Item, UPlayerCharacterID* Character, FTransform Offset, bool rebuildMesh, FVector2D Size);
-    
-    UFUNCTION(BlueprintCallable)
-    UTextureRenderTarget2D* GenerateSkinRewardIcon(UItemSkin* Skin, UPlayerCharacterID* Character, bool bShowCloseUp, FTransform Offset, bool rebuildMesh, FVector2D Size);
-    
-    UFUNCTION(BlueprintCallable)
-    UTextureRenderTarget2D* GeneratePickaxeRewardIcon(UPickaxePart* part, EPickaxePartLocation PickaxePartLocation, UPlayerCharacterID* Character, FTransform Offset, bool rebuildMesh, FVector2D Size);
-    
-    UFUNCTION(BlueprintCallable)
     bool ConvertHeartsToScrip(int32& scripGained);
     
     UFUNCTION(BlueprintCallable)
-    void CompleteSeasonEvent_Server(USeasonEventData* inEvent);
+    void CompleteSeasonEvent_Server(USeasonEventData* InEvent);
     
     UFUNCTION(BlueprintCallable)
     bool ClaimScripChallenge();
@@ -207,9 +205,6 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanRerollChallenge();
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    bool CanOptOutOfSeasonContent() const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     bool BuyTreeNode(UObject* WorldContextObject, AFSDPlayerController* Player, int32 TreeOfVanityNodeID);

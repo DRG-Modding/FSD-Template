@@ -9,6 +9,7 @@
 #include "SoundMixManagerComponent.h"
 #include "SpawnEffectsComponent.h"
 #include "TeamResourcesComponent.h"
+#include "Templates/SubclassOf.h"
 
 AFSDGameState::AFSDGameState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->CurrentLevel = -1;
@@ -37,7 +38,6 @@ AFSDGameState::AFSDGameState(const FObjectInitializer& ObjectInitializer) : Supe
     this->IsOnSpaceRig = false;
     this->PlayerMadeItToDropPod = true;
     this->objectivesCompleted = false;
-    this->CurrentDifficultySetting = NULL;
     this->RememberDifficulty = true;
     this->ProximityTracker = CreateDefaultSubobject<UPlayerProximityTracker>(TEXT("ProximityTracker"));
     this->ShowroomManager = CreateDefaultSubobject<UShowroomManager>(TEXT("ShowroomManager"));
@@ -52,7 +52,6 @@ AFSDGameState::AFSDGameState(const FObjectInitializer& ObjectInitializer) : Supe
     this->AllDwarvesDown = false;
     this->missionAborted = false;
     this->CountdownRemaining = -1;
-    this->HostGlobalSeed = -1;
     this->CanCarryOverResources = true;
     this->CurrentPlayerSessionLeader = NULL;
 }
@@ -200,10 +199,6 @@ TArray<FCreditsReward> AFSDGameState::GetMissionRewardCredits() const {
     return TArray<FCreditsReward>();
 }
 
-bool AFSDGameState::GetMissionCompletedCreditReward(bool Primary, int32& OutReward) const {
-    return false;
-}
-
 int32 AFSDGameState::GetGlobalMissionSeed() const {
     return 0;
 }
@@ -220,12 +215,24 @@ UDifficultyManager* AFSDGameState::GetDifficultyManager() const {
     return NULL;
 }
 
+FGameDifficulty AFSDGameState::GetCurrentGameDifficulty() const {
+    return FGameDifficulty{};
+}
+
+UDifficultySetting* AFSDGameState::GetCurrentDifficultySetting() const {
+    return NULL;
+}
+
 TMap<UResourceData*, float> AFSDGameState::GetCollectedResources() const {
     return TMap<UResourceData*, float>();
 }
 
 TArray<UFSDEvent*> AFSDGameState::GetActiveEventsFromMission() const {
     return TArray<UFSDEvent*>();
+}
+
+UObjective* AFSDGameState::FindObjective(TSubclassOf<UObjective> SubClass) const {
+    return NULL;
 }
 
 void AFSDGameState::ClientNewMessage_Implementation(const FFSDChatMessage& Msg) {
@@ -244,7 +251,7 @@ bool AFSDGameState::AllMissionEndResultsReceived() const {
 void AFSDGameState::All_SpawnScaledEffectAt_Implementation(FScaledEffect Effect, FVector_NetQuantize Location) {
 }
 
-void AFSDGameState::All_SpawnScaledEffectAndCueAt_Implementation(FScaledEffect Effect, USoundCue* audio, FVector_NetQuantize Location) {
+void AFSDGameState::All_SpawnScaledEffectAndCueAt_Implementation(FScaledEffect Effect, USoundCue* Audio, FVector_NetQuantize Location) {
 }
 
 void AFSDGameState::All_ServerQuit_Implementation() {

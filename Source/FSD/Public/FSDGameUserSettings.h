@@ -30,6 +30,7 @@
 #include "ModdingSettingsChangedDelegate.h"
 #include "ModdingUISettings.h"
 #include "StringConfigChangedDelegate.h"
+#include "UFSDStreamlineDLSSGMode.h"
 #include "FSDGameUserSettings.generated.h"
 
 class APlayerController;
@@ -159,6 +160,12 @@ public:
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WeaponSpwayScale;
     
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 RagdollQuality;
+    
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UFSDStreamlineDLSSGMode FrameGenerationMode;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     USoundClass* soundClassCharacterVoices;
     
@@ -242,6 +249,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool PhotosensitiveMode;
+    
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float OverlayIntensityScale;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ShowUIAnimations;
@@ -511,6 +521,9 @@ public:
     void SetReflexMode(ENVidiaReflexMode NewReflexMode);
     
     UFUNCTION(BlueprintCallable)
+    void SetRagdollQuality(int32 Value);
+    
+    UFUNCTION(BlueprintCallable)
     void SetPushToTalk(bool bEnable);
     
     UFUNCTION(BlueprintCallable)
@@ -524,6 +537,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void SetPhotosensitiveMode(bool modeOn);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetOverlayIntensityScale(float Scale);
     
     UFUNCTION(BlueprintCallable)
     void SetNvidiaDlssSharpness(float Sharpness);
@@ -581,6 +597,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void SetFullscreenModeToBeApplied(TEnumAsByte<EWindowMode::Type> InFullscreenMode);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetFrameGenerationMode(UFSDStreamlineDLSSGMode NewMode);
     
     UFUNCTION(BlueprintCallable)
     void SetFOV(float NewFOV);
@@ -681,6 +700,9 @@ public:
     void PostInitFSDUserSettings(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsVSyncSupported() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsVoiceChatEnabled() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -691,6 +713,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsManaulGraphicsModeAvailable();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsFrameGenerationSupported() const;
     
 protected:
     UFUNCTION(BlueprintCallable)
@@ -796,6 +821,12 @@ public:
     ENVidiaReflexMode GetReflexMode() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    float GetRagdollQualityDurationFactor() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetRagdollQuality() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetPushToTalk() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -809,6 +840,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetPhotosensitiveMode() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    float GetOverlayIntensityScale() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetNvidiaDlssSharpness() const;
@@ -868,6 +902,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static UFSDGameUserSettings* GetFSDGameUserSettings();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFSDStreamlineDLSSGMode GetFrameGenerationMode() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetFOV() const;

@@ -7,5 +7,7 @@ FCablePathSettings::FCablePathSettings() {
     this->MinStepSize = 0.00f;
     this->MaxStepSize = 0.00f;
     this->MaxNoiseY = 0.00f;
+    this->MinSurfaceHeight = 0.00f;
+    this->MaxSurfaceHeight = 0.00f;
 }
 

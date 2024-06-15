@@ -8,6 +8,7 @@
 #include "BobbingComponent.h"
 #include "BoscoAbillityComponent.h"
 #include "DamageComponent.h"
+#include "DroneMeleeTool.h"
 #include "DroneMiningToolBase.h"
 #include "DroneSkinnableComponent.h"
 #include "HealthComponent.h"
@@ -22,6 +23,7 @@ ABosco::ABosco(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitia
     this->Damage = CreateDefaultSubobject<UDamageComponent>(TEXT("Damage"));
     this->Senses = CreateDefaultSubobject<UPawnSensingComponent>(TEXT("Senses"));
     this->MiningTool = CreateDefaultSubobject<UDroneMiningToolBase>(TEXT("MiningTool"));
+    this->MeleeTool = CreateDefaultSubobject<UDroneMeleeTool>(TEXT("MeleeTool"));
     this->BobbingComponent = CreateDefaultSubobject<UBobbingComponent>(TEXT("BobbingComponent"));
     this->BoscoMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("BoscoMesh"));
     this->DroneHitScan = CreateDefaultSubobject<UHitscanComponent>(TEXT("BoscoHitscan"));
@@ -39,6 +41,7 @@ ABosco::ABosco(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitia
     this->PickupGemShout = NULL;
     this->ReviveThankShout = NULL;
     this->GeneralCallShout = NULL;
+    this->RiftCrystalShout = NULL;
     this->VacuumShout = NULL;
     this->MineResponse = NULL;
     this->CombatResponse = NULL;
@@ -89,6 +92,7 @@ ABosco::ABosco(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitia
     this->IsInRangeToMine = false;
     this->IsPreparedToMine = false;
     this->IsMining = false;
+    this->IsMelee = false;
     this->IsReviving = false;
     this->IsRotateMode = false;
     this->DroneController = NULL;
@@ -146,7 +150,7 @@ void ABosco::OnReadyToShoot() {
 void ABosco::OnNotReadyToShoot() {
 }
 
-void ABosco::OnHit(float Amount, float BaseAmount, const FDamageData& DamageData) {
+void ABosco::OnHit(float amount, float BaseAmount, const FDamageData& DamageData) {
 }
 
 void ABosco::OnGrabbedGem() {
@@ -191,6 +195,7 @@ void ABosco::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimePr
     DOREPLIFETIME(ABosco, IsInRangeToMine);
     DOREPLIFETIME(ABosco, IsPreparedToMine);
     DOREPLIFETIME(ABosco, IsMining);
+    DOREPLIFETIME(ABosco, IsMelee);
     DOREPLIFETIME(ABosco, IsReviving);
     DOREPLIFETIME(ABosco, IsRotateMode);
     DOREPLIFETIME(ABosco, CurrentState);

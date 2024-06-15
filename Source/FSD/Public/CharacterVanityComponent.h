@@ -58,9 +58,6 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UMaterialInterface*> CachedMaterials;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_DesireSleeveless, meta=(AllowPrivateAccess=true))
-    bool DesireSleevelessArmor;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TMap<EVanitySlot, USkeletalMeshComponent*> VanityMeshes;
     
@@ -78,7 +75,7 @@ public:
     void UpdateEquippedVanity(bool applyItems);
     
     UFUNCTION(BlueprintCallable)
-    void SetEquippedVanityInViewer(const TArray<UVanityItem*>& Vanity);
+    void SetEquippedVanityInViewer(const FEquippedVanity& equippedVanityItems);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void SetDesireSleevelessArmor(UObject* WorldContextObject, UPlayerCharacterID* Character, bool inDesireSleeveless);
@@ -88,9 +85,6 @@ protected:
     void Server_SetEquippedVanity(const FEquippedVanity& equippedItems);
     
 public:
-    UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_SetDesireSleevelessArmor(bool useSleeveless);
-    
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void RemoveMedicalGown();
     
@@ -103,9 +97,6 @@ public:
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_EquippedVanity();
-    
-    UFUNCTION(BlueprintCallable)
-    void OnRep_DesireSleeveless();
     
 public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintPure)

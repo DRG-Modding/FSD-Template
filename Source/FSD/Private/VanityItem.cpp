@@ -4,6 +4,9 @@ UVanityItem::UVanityItem() {
     this->Aquisition = NULL;
     this->EventSourceAsset = NULL;
     this->IconGenerationCameraKey = NULL;
+    this->SeasonalEventTag = NULL;
+    this->bIsFestiveItem = false;
+    this->bIsSeriousItem = false;
 }
 
 bool UVanityItem::RemoveFromOwned(UObject* WorldContext) {
@@ -26,6 +29,10 @@ bool UVanityItem::HasEventSource() const {
 }
 
 void UVanityItem::GiftItem(UObject* WorldContextObject, UPlayerCharacterID* characterID) {
+}
+
+FDetailedTagSet UVanityItem::GetVanityTags() const {
+    return FDetailedTagSet{};
 }
 
 EVanitySlot UVanityItem::GetVanitySlot() const {

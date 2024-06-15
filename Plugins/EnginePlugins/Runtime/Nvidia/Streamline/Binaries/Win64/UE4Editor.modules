@@ -1,0 +1,8 @@
+{
+	"BuildId": "17155196",
+	"Modules": 
+	{
+		"StreamlineBlueprint": "UE4Editor-StreamlineBlueprint.dll",
+		"StreamlineRHI": "UE4Editor-StreamlineRHI.dll"
+	}
+}

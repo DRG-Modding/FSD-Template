@@ -9,7 +9,7 @@ ADoubleDrillItem::ADoubleDrillItem(const FObjectInitializer& ObjectInitializer) 
     this->FP_Left_DrillParticles = CreateDefaultSubobject<UFirstPersonParticleSystemComponent>(TEXT("FP_Left_DrillParticles"));
     this->FP_Right_DrillParticles = CreateDefaultSubobject<UFirstPersonParticleSystemComponent>(TEXT("FP_Right_DrillParticles"));
     this->DamageComponent = CreateDefaultSubobject<UDamageComponent>(TEXT("Damage"));
-    this->AudioComponent = CreateDefaultSubobject<UFSDAudioComponent>(TEXT("audio"));
+    this->AudioComponent = CreateDefaultSubobject<UFSDAudioComponent>(TEXT("Audio"));
     this->Aggregator = CreateDefaultSubobject<UDoubleDrillAggregator>(TEXT("Aggregator"));
     this->FPMineMontage = NULL;
     this->TPMineMontage = NULL;

@@ -16,5 +16,7 @@ enum class EEnemyFamily : uint8 {
     Unknown,
     RivalTech,
     Lithophage,
+    Infector,
+    CoreSpawn,
 };
 

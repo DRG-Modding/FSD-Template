@@ -86,7 +86,7 @@ void ACoilGun::OnShieldBoostEnded() {
 void ACoilGun::OnEnemyKilled(AActor* Target, UFSDPhysicalMaterial* PhysicalMaterial, bool wasDirectHit) {
 }
 
-void ACoilGun::OnDamageTarget(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* Component, UFSDPhysicalMaterial* PhysicalMaterial) {
+void ACoilGun::OnDamageTarget(UHealthComponentBase* Health, float amount, UPrimitiveComponent* Component, UFSDPhysicalMaterial* PhysicalMaterial) {
 }
 
 void ACoilGun::OnCharacterShieldBroke(AActor* brokeChar) {

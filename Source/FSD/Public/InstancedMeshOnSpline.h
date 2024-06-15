@@ -35,7 +35,7 @@ public:
     UInstancedMeshOnSpline(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
-    void SetSpeed(float newSpeed);
+    void SetSpeed(float NewSpeed);
     
 };
 

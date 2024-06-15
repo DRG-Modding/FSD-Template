@@ -10,7 +10,7 @@ AExtractorItem::AExtractorItem(const FObjectInitializer& ObjectInitializer) : Su
     this->DroppedCollider = (UBoxComponent*)RootComponent;
     this->DroppedMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("DropppedMesh"));
     this->FP_DrillParticles = NULL;
-    this->AudioComponent = CreateDefaultSubobject<UFSDAudioComponent>(TEXT("audio"));
+    this->AudioComponent = CreateDefaultSubobject<UFSDAudioComponent>(TEXT("Audio"));
     this->SurfaceLight = CreateDefaultSubobject<UPointLightComponent>(TEXT("SurfaceLight"));
     this->MeltingParticles = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("MeltingEffect"));
     this->InvalidSurfaceParticles = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("InvalidSurfaceParticles"));
@@ -112,7 +112,7 @@ void AExtractorItem::All_SimulateDigBlock_Implementation(FVector_NetQuantize Pos
 void AExtractorItem::All_ChunkSplat_Implementation(AResourceChunk* chunk) {
 }
 
-void AExtractorItem::AddResource(float Amount) {
+void AExtractorItem::AddResource(float amount) {
 }
 
 void AExtractorItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

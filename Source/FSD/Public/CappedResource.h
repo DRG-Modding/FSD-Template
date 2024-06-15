@@ -48,7 +48,7 @@ public:
     float TransferAll(UCappedResource* Receiver);
     
     UFUNCTION(BlueprintCallable)
-    float Transfer(float Amount, UCappedResource* Receiver);
+    float Transfer(float amount, UCappedResource* Receiver);
     
 protected:
     UFUNCTION(BlueprintCallable)
@@ -80,10 +80,10 @@ public:
     float GetCapacityPct() const;
     
     UFUNCTION(BlueprintCallable)
-    float Deduct(float Amount);
+    float Deduct(float amount);
     
     UFUNCTION(BlueprintCallable)
-    float Add(float Amount);
+    float Add(float amount);
     
 };
 

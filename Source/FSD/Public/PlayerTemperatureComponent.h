@@ -120,7 +120,7 @@ public:
     float GetCurrentTemperatureNormalized() const;
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
-    void Defrost(float Amount);
+    void Defrost(float amount);
     
 };
 

@@ -40,7 +40,7 @@ AActor* UFacilityObjective::PlaceObjectInRoom(AProceduralSetup* Setup, const FRo
     return NULL;
 }
 
-void UFacilityObjective::OnResourceChanged(UCappedResource* Resource, float Amount) {
+void UFacilityObjective::OnResourceChanged(UCappedResource* Resource, float amount) {
 }
 
 void UFacilityObjective::OnRep_ObjectivesStage() {

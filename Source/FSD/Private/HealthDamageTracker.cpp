@@ -8,7 +8,7 @@ UHealthDamageTracker::UHealthDamageTracker(const FObjectInitializer& ObjectIniti
 void UHealthDamageTracker::ResetTrackedDamage() {
 }
 
-void UHealthDamageTracker::OnDamageTaken(float Amount) {
+void UHealthDamageTracker::OnDamageTaken(float amount) {
 }
 
 

@@ -73,11 +73,11 @@ APatrolBot::APatrolBot(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->FiringRockets = false;
     this->Alerted = false;
     this->CurrentTarget = NULL;
+    this->TearingGroundParticles->SetupAttachment(RootComponent);
     this->RollingAudio->SetupAttachment(Mesh);
     this->FlyingAudio->SetupAttachment(Mesh);
     this->CollisionSphere->SetupAttachment(Mesh);
     this->LaserBeam->SetupAttachment(Mesh);
-    this->TearingGroundParticles->SetupAttachment(RootComponent);
 }
 
 void APatrolBot::SetIsPatrolling(bool patroling) {

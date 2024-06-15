@@ -3,13 +3,16 @@
 USpawningBlueprintLibrary::USpawningBlueprintLibrary() {
 }
 
+void USpawningBlueprintLibrary::SpawnEnemyGroupDescriptorWithCallbackSpreadOut(UObject* WorldContextObject, UEnemyGroupDescriptor* descriptor, float Difficulty, TArray<FVector> Locations, bool Alert, DeepPathFinderSize pfSize, const FEnemySpawnedDelegate& Callback) {
+}
+
 void USpawningBlueprintLibrary::SpawnEnemyGroupDescriptorSpreadOut(UObject* WorldContextObject, UEnemyGroupDescriptor* descriptor, float Difficulty, const TArray<FVector>& Locations, bool Alert, DeepPathFinderSize pfSize) {
 }
 
 void USpawningBlueprintLibrary::SpawnEnemyGroupDescriptor(UObject* WorldContextObject, UEnemyGroupDescriptor* descriptor, float Difficulty, FVector Location, bool Alert, DeepPathFinderSize pfSize) {
 }
 
-void USpawningBlueprintLibrary::SpawnEnemiesFromPool(UObject* WorldContextObject, float Difficulty, const TArray<FVector>& Locations, bool Alert, bool isConstantPreassure) {
+void USpawningBlueprintLibrary::SpawnEnemiesFromPool(UObject* WorldContextObject, float Difficulty, const TArray<FVector>& Locations, TArray<UEnemyDescriptor*> BannedEnemies, bool Alert, bool isConstantPreassure) {
 }
 
 void USpawningBlueprintLibrary::SpawnEnemiesAtLocationWithCallback(UObject* WorldContextObject, UEnemyDescriptor* EnemyDescriptor, int32 Count, FVector Location, const FEnemySpawnedDelegate& Callback, bool Alert, bool scaleToDifficulty, DeepPathFinderSize pfSize) {

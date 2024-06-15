@@ -34,7 +34,7 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable)
-    void ShowAlwaysOn();
+    void ShowAlwaysOn(bool IsActive);
     
     UFUNCTION(BlueprintCallable)
     void OnHoldTAB(bool IsDown);

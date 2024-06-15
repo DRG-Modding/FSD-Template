@@ -189,6 +189,9 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void IsHittngEnemyChanged(bool isHittingEnemy);
     
+    UFUNCTION(BlueprintCallable, Client, Reliable)
+    void Client_AddAmmoOnKill();
+    
     UFUNCTION(BlueprintCallable)
     void ChargeUpComplete();
     

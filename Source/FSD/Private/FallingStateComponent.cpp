@@ -28,7 +28,7 @@ UFallingStateComponent::UFallingStateComponent(const FObjectInitializer& ObjectI
 }
 
 
-void UFallingStateComponent::Server_TakeFallDamage_Implementation(float Amount) {
+void UFallingStateComponent::Server_TakeFallDamage_Implementation(float amount) {
 }
 
 void UFallingStateComponent::Server_SetJumpPressed_Implementation(bool Pressed) {

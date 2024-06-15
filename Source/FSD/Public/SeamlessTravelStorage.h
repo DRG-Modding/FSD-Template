@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
+#include "GameDifficulty.h"
 #include "SeamlessTravelStorage.generated.h"
 
-class UDifficultySetting;
 class UPlayer;
 class UResourceData;
 class USeamlessTravelEventKey;
@@ -13,7 +13,7 @@ class USeamlessTravelStorage : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    UDifficultySetting* ChosenDifficulty;
+    FGameDifficulty ChosenDifficulty;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TMap<UPlayer*, bool> PlayerShouldStartInMedbay;

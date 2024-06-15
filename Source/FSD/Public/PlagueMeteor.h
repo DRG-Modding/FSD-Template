@@ -88,6 +88,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     TArray<ARockCrackerPod*> SpawnedPods;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    float SpawnedTime;
+    
 public:
     APlagueMeteor(const FObjectInitializer& ObjectInitializer);
 
@@ -156,7 +159,7 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable)
-    void DropRockCrackerPods(int32 Amount, float MinRadius, float maRadius, AProceduralSetup* Setup);
+    void DropRockCrackerPods(int32 amount, float MinRadius, float maRadius, AProceduralSetup* Setup);
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

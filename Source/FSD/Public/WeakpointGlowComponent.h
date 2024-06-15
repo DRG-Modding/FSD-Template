@@ -50,7 +50,7 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable)
-    void ShowBodypartHit(float Amount, float BaseAmount, const FDamageData& DamageData);
+    void ShowBodypartHit(float amount, float BaseAmount, const FDamageData& DamageData);
     
 public:
     UFUNCTION(BlueprintCallable)

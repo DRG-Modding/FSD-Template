@@ -3,7 +3,6 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "SchematicBlueprintLibrary.generated.h"
 
-class UItemSkinSchematicCollection;
 class UItemUpgrade;
 class UObject;
 class UPlayerCharacterID;
@@ -30,9 +29,6 @@ public:
     
     UFUNCTION(BlueprintCallable)
     static USchematicCategory* FindItemUpgradeSchematicCategory(UItemUpgrade* Upgrade);
-    
-    UFUNCTION(BlueprintCallable)
-    static void AddSkinSchematicCollectionToSettings(UItemSkinSchematicCollection* Collection);
     
 };
 

@@ -42,7 +42,7 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable)
-    void AddAmmo(int32 Amount);
+    void AddAmmo(int32 amount);
     
 
     // Fix for true pure virtual functions not being implemented

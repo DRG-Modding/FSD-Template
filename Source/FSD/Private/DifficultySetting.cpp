@@ -12,6 +12,7 @@ UDifficultySetting::UDifficultySetting() {
     this->SmallEnemyDamageResistance.AddDefaulted(4);
     this->EnemyDamageModifier.AddDefaulted(4);
     this->EnemyToEnemyDamageModifier = 1.00f;
+    this->SupportsHazardPlus = false;
     this->EnemyCountModifier.AddDefaulted(4);
     this->BossDifficultyScaler = 1.00f;
     this->PointExtractionScaler = 1.00f;

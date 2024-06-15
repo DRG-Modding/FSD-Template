@@ -24,6 +24,7 @@ APlagueMeteor::APlagueMeteor(const FObjectInitializer& ObjectInitializer) : Supe
     this->RockCrackerPod = NULL;
     this->RockCrackerIndicator = NULL;
     this->RockCrackerPodPositioning = NULL;
+    this->SpawnedTime = 0.00f;
     this->MeteorMesh->SetupAttachment(RootComponent);
     this->terrainPlacement->SetupAttachment(RootComponent);
 }
@@ -75,7 +76,7 @@ int32 APlagueMeteor::GetNumActivePods() const {
 
 
 
-void APlagueMeteor::DropRockCrackerPods(int32 Amount, float MinRadius, float maRadius, AProceduralSetup* Setup) {
+void APlagueMeteor::DropRockCrackerPods(int32 amount, float MinRadius, float maRadius, AProceduralSetup* Setup) {
 }
 
 
@@ -88,6 +89,7 @@ void APlagueMeteor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
     DOREPLIFETIME(APlagueMeteor, CrackStage);
     DOREPLIFETIME(APlagueMeteor, DropInfo);
     DOREPLIFETIME(APlagueMeteor, SpawnedPods);
+    DOREPLIFETIME(APlagueMeteor, SpawnedTime);
 }
 
 

@@ -4,6 +4,7 @@
 #include "UObject/NoExportTypes.h"
 #include "Engine/NetSerialization.h"
 #include "AmmoDrivenWeapon.h"
+#include "ChargeDelegateDelegate.h"
 #include "DecalData.h"
 #include "Templates/SubclassOf.h"
 #include "FlameThrowerItem.generated.h"
@@ -97,6 +98,9 @@ protected:
     float FlameIntensityPerSecond;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float DirectDamageTimeLimit;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UStatusEffect> OnFireStatusEffect;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -115,7 +119,7 @@ protected:
     UParticleSystem* MeltSteamParticle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<UItemUpgrade*> upgrades;
+    TArray<UItemUpgrade*> Upgrades;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool LongReachEnabled;
@@ -123,7 +127,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool AoEHeatEnabled;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float KilledTargetsExplosionChance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -141,6 +145,22 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UProjectileLauncherBaseComponent* ProjectileLancher;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FText FireProjectileHoldDescription;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float FireProjectileHoldDuration;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FChargeDelegate OnFireProjectileChargeBegin;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FChargeDelegate OnFireProjectileChargeEnd;
+    
+private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TMap<AActor*, float> ExplosionCandidates;
+    
 public:
     AFlameThrowerItem(const FObjectInitializer& ObjectInitializer);
 
@@ -149,16 +169,19 @@ protected:
     void TriggerAoEHeat();
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
+    void SetIsChargingForProjectile(bool isCharging);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerMeltIce(const TArray<FVector>& meltPoints);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerDoDamage(FVector_NetQuantize Start, FVector_NetQuantize End);
     
     UFUNCTION(BlueprintCallable)
-    void OnTargetKilled(AActor* Target, UFSDPhysicalMaterial* PhysMat, bool wasDirectHit);
+    void OnTargetKilled(UHealthComponentBase* Health);
     
     UFUNCTION(BlueprintCallable)
-    void OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial);
+    void OnTargetDamaged(UHealthComponentBase* Health, float amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_ShowTargetBurstIntoFire(FVector_NetQuantize Location, FRotator Rotation);

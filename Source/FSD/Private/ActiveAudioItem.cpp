@@ -1,7 +1,7 @@
 #include "ActiveAudioItem.h"
 
 FActiveAudioItem::FActiveAudioItem() {
-    this->audio = NULL;
+    this->Audio = NULL;
     this->FadeoutDuration = 0.00f;
 }
 

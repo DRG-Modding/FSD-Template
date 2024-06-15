@@ -9,6 +9,7 @@ UFSDPhysicalMaterial::UFSDPhysicalMaterial() {
     this->RepulsePlayerSound = NULL;
     this->RepulsePlayerParticle = NULL;
     this->ImpactParticles = NULL;
+    this->MeleeImpactParticles = NULL;
     this->ImpactMaterialOverride = NULL;
     this->ImpactSound = NULL;
     this->MeleeImpactSound = NULL;
@@ -19,9 +20,9 @@ UFSDPhysicalMaterial::UFSDPhysicalMaterial() {
     this->AllowFrozenBonus = true;
     this->IsSubhealthCollider = false;
     this->DamageMultiplier = 1.00f;
-    this->FootstepParticle = NULL;
+    this->FootStepParticle = NULL;
     this->FootstepMaterialOverride = NULL;
-    this->FootstepSound = NULL;
+    this->FootStepSound = NULL;
     this->ExtraFallVelocity = 0.00f;
     this->FallImpactEffect = NULL;
     this->FallImpactSound = NULL;

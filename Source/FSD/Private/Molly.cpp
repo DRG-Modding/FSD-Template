@@ -6,6 +6,7 @@
 AMolly::AMolly(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ResourceBank = CreateDefaultSubobject<UResourceBank>(TEXT("ResourceBank"));
     this->OutlineComponent = CreateDefaultSubobject<UOutlineComponent>(TEXT("OutlineComponent"));
+    this->ShowButtonDelay = 0.00f;
 }
 
 void AMolly::SetOpenForDeposit(bool Open) {

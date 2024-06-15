@@ -3,7 +3,7 @@
 
 UCaretakerActionComponent::UCaretakerActionComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->StartTickOnUse = false;
-    this->IsUsing = false;
+    this->isUsing = false;
 }
 
 void UCaretakerActionComponent::UseAction() {
@@ -32,7 +32,7 @@ bool UCaretakerActionComponent::CanUse_Implementation() const {
 void UCaretakerActionComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
-    DOREPLIFETIME(UCaretakerActionComponent, IsUsing);
+    DOREPLIFETIME(UCaretakerActionComponent, isUsing);
 }
 
 

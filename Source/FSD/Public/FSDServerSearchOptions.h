@@ -3,9 +3,11 @@
 #include "EGameType.h"
 #include "ESteamSearchRegion.h"
 #include "ESteamServerJoinStatus.h"
+#include "GlobalMissionSeed.h"
 #include "FSDServerSearchOptions.generated.h"
 
 class UDifficultySetting;
+class USeason;
 
 USTRUCT(BlueprintType)
 struct FFSDServerSearchOptions {
@@ -21,6 +23,9 @@ public:
     TArray<UDifficultySetting*> Difficulties;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<USeason*> Seasons;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool DeepDive;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -30,7 +35,7 @@ public:
     int32 MissionSeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 GlobalMissionSeed;
+    FGlobalMissionSeed GlobalMissionSeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<EGameType> GameTypes;

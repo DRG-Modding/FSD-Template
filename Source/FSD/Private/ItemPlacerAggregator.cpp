@@ -33,6 +33,10 @@ bool UItemPlacerAggregator::GetPlacement(FTransform& Placement) const {
     return false;
 }
 
+FHitResult UItemPlacerAggregator::GetLastHit() const {
+    return FHitResult{};
+}
+
 void UItemPlacerAggregator::ClearIgnoredActors() {
 }
 

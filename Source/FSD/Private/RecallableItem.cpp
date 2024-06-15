@@ -5,7 +5,10 @@ ARecallableItem::ARecallableItem(const FObjectInitializer& ObjectInitializer) : 
     this->ItemType = NULL;
 }
 
-void ARecallableItem::ServerSpawnItem_Implementation(const FVector& Location, const FRotator& Rotation) {
+void ARecallableItem::ServerSpawnItemAttached_Implementation(AActor* InAttachActor, UPrimitiveComponent* InAttachComponent, FName InAttachBoneName, const FVector& LocalLocation, const FRotator& LocalRotation) {
+}
+
+void ARecallableItem::ServerSpawnItem_Implementation(const FVector& WorldLocation, const FRotator& WorldRotation) {
 }
 
 

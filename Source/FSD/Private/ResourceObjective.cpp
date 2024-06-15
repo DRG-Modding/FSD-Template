@@ -10,7 +10,7 @@ UResourceObjective::UResourceObjective(const FObjectInitializer& ObjectInitializ
     this->CreditsRewardText = FText::FromString(TEXT("Morkite Collected"));
 }
 
-void UResourceObjective::OnResourceChanged(UCappedResource* CappedResource, float Amount) {
+void UResourceObjective::OnResourceChanged(UCappedResource* CappedResource, float amount) {
 }
 
 void UResourceObjective::OnRep_ResourcesCollected(float prevAmount) {

@@ -127,7 +127,7 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable)
-    void OnBladderDamage(float Amount);
+    void OnBladderDamage(float amount);
     
     UFUNCTION(BlueprintCallable)
     void OnArmorDestroyed(FName Name);

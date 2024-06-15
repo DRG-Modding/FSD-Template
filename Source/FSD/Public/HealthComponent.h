@@ -91,7 +91,7 @@ protected:
     
 public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
-    void HealArmor(float Amount);
+    void HealArmor(float amount);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasArmor() const;
@@ -113,7 +113,7 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable, Client, Unreliable)
-    void Client_ReceivedHit(float Amount, const FDamageData& DamageData, bool anyHealthLost);
+    void Client_ReceivedHit(float amount, const FDamageData& DamageData, bool anyHealthLost);
     
 };
 

@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "GlobalMissionSeed.h"
 #include "ActiveCampaingMission.generated.h"
 
 USTRUCT(BlueprintType)
@@ -10,7 +11,7 @@ public:
     bool HasMission;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    int32 GlobalSeed;
+    FGlobalMissionSeed GlobalSeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 MissionSeed;

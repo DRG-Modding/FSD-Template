@@ -34,6 +34,7 @@ class UOverlay;
 class UOverlaySlot;
 class UPanelWidget;
 class UProgressBar;
+class URetainerBox;
 class USizeBox;
 class USpacer;
 class UTextBlock;
@@ -168,6 +169,9 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static UFSDCheatManager* GetCheatManager(UObject* WorldContextObject);
     
+    UFUNCTION(BlueprintCallable)
+    static void FixupRetainerWidgetUpdateInEditor(const URetainerBox* InWidget);
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static UWidget* FindChildWidget(UPARAM(Ref) UPanelWidget*& ParentWidget, TSubclassOf<UUserWidget> WidgetClass, bool SearchChildren);
     
@@ -227,6 +231,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     static UWidget* AddChildToCanvasEx(UCanvasPanel* CanvasPanel, UWidget* Widget, FAnchors Anchors, FMargin Offsets, bool AutoSize, int32 Z_Order, UCanvasPanelSlot*& OutSlot, UCanvasPanel*& OutCanvasPanel);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
+    static UHorizontalBox* AddChildrenToHorizontalBox(UObject* WorldContext, UHorizontalBox* HorizontalBox, TArray<UWidget*> Children, bool ClearHorizontalBox, FMargin Padding, TEnumAsByte<EHorizontalAlignment> HorizontalAlignment, TEnumAsByte<EVerticalAlignment> VerticalAlignment, float FillFirst, float FillMiddle, float FillLast);
     
 };
 

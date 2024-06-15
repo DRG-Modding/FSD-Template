@@ -257,7 +257,7 @@ public:
     void All_ChunkSplat(AResourceChunk* chunk);
     
     UFUNCTION(BlueprintCallable)
-    void AddResource(float Amount);
+    void AddResource(float amount);
     
 
     // Fix for true pure virtual functions not being implemented

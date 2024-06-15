@@ -1,7 +1,7 @@
 #include "CleanupToolAnimInstance.h"
 
 UCleanupToolAnimInstance::UCleanupToolAnimInstance() {
-    this->IsUsing = false;
+    this->isUsing = false;
     this->CleaningTool = NULL;
 }
 

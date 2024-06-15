@@ -11,9 +11,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UGeneratedMission*> AvailableMissions;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    bool OptedOutOfSeasonContent;
-    
     FSD_API FGeneratedMissionGroup();
 };
 

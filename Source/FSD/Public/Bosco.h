@@ -33,6 +33,7 @@ class UBoscoAbillityComponent;
 class UBoscoProjectileAbillity;
 class UDamageComponent;
 class UDialogDataAsset;
+class UDroneMeleeTool;
 class UDroneMiningToolBase;
 class UDroneSkinnableComponent;
 class UHealthComponent;
@@ -74,6 +75,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDroneMiningToolBase* MiningTool;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UDroneMeleeTool* MeleeTool;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBobbingComponent* BobbingComponent;
@@ -125,6 +129,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDialogDataAsset* GeneralCallShout;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UDialogDataAsset* RiftCrystalShout;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDialogDataAsset* VacuumShout;
@@ -179,7 +186,7 @@ protected:
     float MiningBoosMultiplier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<UItemUpgrade*> upgrades;
+    TArray<UItemUpgrade*> Upgrades;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UBoscoProjectileAbillity* RocketAbillity;
@@ -308,6 +315,9 @@ protected:
     bool IsMining;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
+    bool IsMelee;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     bool IsReviving;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
@@ -380,7 +390,7 @@ protected:
     void OnNotReadyToShoot();
     
     UFUNCTION(BlueprintCallable)
-    void OnHit(float Amount, float BaseAmount, const FDamageData& DamageData);
+    void OnHit(float amount, float BaseAmount, const FDamageData& DamageData);
     
 public:
     UFUNCTION(BlueprintCallable)

@@ -11,7 +11,6 @@ UCharacterVanityComponent::UCharacterVanityComponent(const FObjectInitializer& O
     this->PreviewedItem = NULL;
     this->PreviewedArmorMaterial = NULL;
     this->SkinMaterial = NULL;
-    this->DesireSleevelessArmor = false;
 }
 
 void UCharacterVanityComponent::UpdateMeshes() {
@@ -20,16 +19,13 @@ void UCharacterVanityComponent::UpdateMeshes() {
 void UCharacterVanityComponent::UpdateEquippedVanity(bool applyItems) {
 }
 
-void UCharacterVanityComponent::SetEquippedVanityInViewer(const TArray<UVanityItem*>& Vanity) {
+void UCharacterVanityComponent::SetEquippedVanityInViewer(const FEquippedVanity& equippedVanityItems) {
 }
 
 void UCharacterVanityComponent::SetDesireSleevelessArmor(UObject* WorldContextObject, UPlayerCharacterID* Character, bool inDesireSleeveless) {
 }
 
 void UCharacterVanityComponent::Server_SetEquippedVanity_Implementation(const FEquippedVanity& equippedItems) {
-}
-
-void UCharacterVanityComponent::Server_SetDesireSleevelessArmor_Implementation(bool useSleeveless) {
 }
 
 void UCharacterVanityComponent::RemoveMedicalGown() {
@@ -44,9 +40,6 @@ bool UCharacterVanityComponent::Receive_GetDesireSleevelessArmor(UObject* WorldC
 }
 
 void UCharacterVanityComponent::OnRep_EquippedVanity() {
-}
-
-void UCharacterVanityComponent::OnRep_DesireSleeveless() {
 }
 
 bool UCharacterVanityComponent::HasSpawnedInMedbay() const {
@@ -84,7 +77,6 @@ void UCharacterVanityComponent::GetLifetimeReplicatedProps(TArray<FLifetimePrope
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
     DOREPLIFETIME(UCharacterVanityComponent, EquippedVanity);
-    DOREPLIFETIME(UCharacterVanityComponent, DesireSleevelessArmor);
 }
 
 

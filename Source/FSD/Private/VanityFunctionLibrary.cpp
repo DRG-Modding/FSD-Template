@@ -3,7 +3,7 @@
 UVanityFunctionLibrary::UVanityFunctionLibrary() {
 }
 
-void UVanityFunctionLibrary::RandomizeVanityLoadout(UObject* WorldContextObject, APlayerCharacter* Character) {
+void UVanityFunctionLibrary::RandomizeVanityLoadout(UObject* WorldContextObject, APlayerCharacter* Character, FDetailedTagSet Filter) {
 }
 
 void UVanityFunctionLibrary::RandomizeAllRandomVanityLoadout(APlayerCharacter* currentCharacter) {

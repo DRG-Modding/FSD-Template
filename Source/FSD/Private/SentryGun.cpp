@@ -12,6 +12,7 @@ ASentryGun::ASentryGun(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->ProjectileClass = NULL;
     this->ShootingSound = NULL;
     this->MuzzleFlash = NULL;
+    this->UsePriorityTargetTracerData = false;
     this->Tracer = NULL;
     this->MinTracerDistance = 100.00f;
     this->AngleRestriction = 0.00f;
@@ -36,7 +37,7 @@ ASentryGun::ASentryGun(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->SentryGunMesh->SetupAttachment(RootComponent);
 }
 
-void ASentryGun::UseAmmo(int32 Amount) {
+void ASentryGun::UseAmmo(int32 amount) {
 }
 
 

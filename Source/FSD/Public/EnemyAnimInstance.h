@@ -1,12 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Animation/AnimInstance.h"
 #include "AnimNotifyDelegateDelegate.h"
+#include "EndEffector.h"
 #include "IsAttackingChangedDelegateDelegate.h"
 #include "NameDelegateDelegate.h"
 #include "EnemyAnimInstance.generated.h"
 
 class UHealthComponentBase;
+class UIKComponent;
+class UPoseCorrectionComponent;
 class USkeletalMeshComponent;
 
 UCLASS(Blueprintable, NonTransient)
@@ -29,6 +34,21 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool IsAttacking;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FEndEffector> EndEffectors;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FVector BodyPoseCorrectionLocation;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FRotator BodyPoseCorrectionRotation;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float IKBlend;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    bool IKEnabled;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool IsAlive;
     
@@ -37,6 +57,12 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UHealthComponentBase* HealthComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UIKComponent* IKComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UPoseCorrectionComponent* PoseCorrectionComponent;
     
 public:
     UEnemyAnimInstance();
@@ -52,6 +78,12 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     USkeletalMeshComponent* GetSkeletalMesh() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    FEndEffector GetEndEffector1();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    FEndEffector GetEndEffector0();
     
 };
 

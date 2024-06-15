@@ -7,14 +7,14 @@ ARecallableActor::ARecallableActor(const FObjectInitializer& ObjectInitializer) 
     this->RelocateLandingHeight = 300.00f;
     this->RelocationMarkerType = NULL;
     this->State = ERecallableActorState::Idle;
-    this->RelocateLanded = false;
+    this->RelocateLanding = false;
     this->bInitialized = false;
 }
 
 void ARecallableActor::SetRecallTarget_Implementation(AActor* NewTarget) {
 }
 
-void ARecallableActor::Relocate_Implementation(FVector NewLocation, FRotator NewRotation) {
+void ARecallableActor::Relocate_Implementation(FVector NewLocation, FRotator NewRotation, AActor* NewAttachToActor, UPrimitiveComponent* NewAttachToComponent, FName NewAttachToBone) {
 }
 
 

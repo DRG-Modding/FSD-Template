@@ -6,6 +6,7 @@
 #include "CustomKeyBinding.h"
 #include "EConsoleGraphicsMode.h"
 #include "HUDElements.h"
+#include "UFSDStreamlineDLSSGMode.h"
 #include "ConsoleOptionsInSaveGame.generated.h"
 
 USTRUCT(BlueprintType)
@@ -65,6 +66,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool PhotosensitiveMode;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float OverlayIntensityScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bHoldToSprint;
@@ -158,6 +162,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float NvidiaDlssSharpness;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UFSDStreamlineDLSSGMode FrameGenerationMode;
     
     FSD_API FConsoleOptionsInSaveGame();
 };

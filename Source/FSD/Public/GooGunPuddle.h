@@ -39,6 +39,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float LifeTime;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsOnFire, meta=(AllowPrivateAccess=true))
+    bool IsOnFire;
+    
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool CollisionOnClients;
@@ -56,6 +59,9 @@ protected:
     void OnStatusEffectAdded(const FGooPuddleStatusEffectTrigger& Trigger);
     
     UFUNCTION(BlueprintCallable)
+    void OnRep_IsOnFire(bool Prev_IsOnFire);
+    
+    UFUNCTION(BlueprintCallable)
     void OnRep_ActiveStatusEffectTriggersMask(int32 PreviousMask);
     
     UFUNCTION(BlueprintCallable)
@@ -71,7 +77,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnGooIgnited();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void IgniteGoo();
     
     UFUNCTION(BlueprintCallable)

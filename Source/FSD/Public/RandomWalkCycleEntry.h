@@ -3,6 +3,8 @@
 #include "RandRange.h"
 #include "RandomWalkCycleEntry.generated.h"
 
+class UAnimSequence;
+
 USTRUCT(BlueprintType)
 struct FRandomWalkCycleEntry {
     GENERATED_BODY()
@@ -12,6 +14,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRandRange Duration;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UAnimSequence* Animation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CoolDown;

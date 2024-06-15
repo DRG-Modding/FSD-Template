@@ -392,16 +392,16 @@ public:
     UFSDSaveGame();
 
     UFUNCTION(BlueprintCallable)
-    bool TrySellResource(UResourceData* Resource, int32 Amount, int32& Price);
+    bool TrySellResource(UResourceData* Resource, int32 amount, int32& Price);
     
     UFUNCTION(BlueprintCallable)
     bool TryDeductResources(const TMap<UResourceData*, int32>& NewResources);
     
     UFUNCTION(BlueprintCallable)
-    bool TryDeductCredits(int32 Amount);
+    bool TryDeductCredits(int32 amount);
     
     UFUNCTION(BlueprintCallable)
-    bool TryBuyResource(UResourceData* Resource, int32 Amount, int32& Price);
+    bool TryBuyResource(UResourceData* Resource, int32 amount, int32& Price);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool ShouldDisplayFirstSchematicMessage() const;
@@ -518,7 +518,7 @@ public:
     bool HasSeenRetirementRewardScreen() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    bool HasCredits(int32 Amount) const;
+    bool HasCredits(int32 amount) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasCharacterRetired(UPlayerCharacterID* characterID) const;
@@ -565,10 +565,10 @@ public:
     static FString GetSaveSlotName(int32 NewUserIdx);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    int32 GetResourceSellingPrice(UResourceData* Resource, int32 Amount) const;
+    int32 GetResourceSellingPrice(UResourceData* Resource, int32 amount) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    int32 GetResourceBuyingPrice(UResourceData* Resource, int32 Amount) const;
+    int32 GetResourceBuyingPrice(UResourceData* Resource, int32 amount) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetResourceAmount(const UResourceData* Resource) const;
@@ -652,7 +652,7 @@ public:
     static bool DeleteFromDisk(UFSDGameInstance* GameInstance, const FString& slotName, int32 NewUserIdx);
     
     UFUNCTION(BlueprintCallable)
-    bool DeductPerkPoints(int32 Amount);
+    bool DeductPerkPoints(int32 amount);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void CheckPromotionAchievementProgress(UObject* WorldContext, bool IsRetroactive);
@@ -661,13 +661,13 @@ public:
     bool CanAfford(const TMap<UResourceData*, int32>& NewResources) const;
     
     UFUNCTION(BlueprintCallable)
-    void AddPerkPoints(int32 Amount);
+    void AddPerkPoints(int32 amount);
     
     UFUNCTION(BlueprintCallable)
     void AddGamePlayed();
     
     UFUNCTION(BlueprintCallable)
-    int32 AddCredits(int32 Amount);
+    int32 AddCredits(int32 amount);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     int32 AddClassXP(UObject* WorldContext, UPlayerCharacterID* characterID, int32 XP);

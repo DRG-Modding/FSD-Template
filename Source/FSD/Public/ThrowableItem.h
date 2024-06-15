@@ -54,7 +54,7 @@ protected:
     float CooldownLeft;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<UItemUpgrade*> upgrades;
+    TArray<UItemUpgrade*> Upgrades;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AItem> LoadoutItem;
@@ -69,10 +69,10 @@ public:
 
 protected:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
-    void Simulate_Throw(TSubclassOf<AThrowableActor> ActorClass);
+    void Simulate_Throw(TSubclassOf<AThrowableActor> actorClass);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_Throw(TSubclassOf<AThrowableActor> ActorClass, const FVector& Location);
+    void Server_Throw(TSubclassOf<AThrowableActor> actorClass, const FVector& Location);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveItemThrown(AThrowableActor* thrownActor);

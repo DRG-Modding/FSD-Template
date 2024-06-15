@@ -96,7 +96,7 @@ protected:
     void Server_SetEquippedPerks(const TArray<FSaveGameStatePerkItem>& perks);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_SetCredits(const int32 Amount);
+    void Server_SetCredits(const int32 amount);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetCharacterStats(const TArray<FCharacterProgress>& Stats);

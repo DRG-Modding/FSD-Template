@@ -182,10 +182,10 @@ private:
     void Client_RefillSpecialAmmo(float percentage);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
-    void Client_CallAddSpecialAmmo(const int32& Amount);
+    void Client_CallAddSpecialAmmo(const int32& amount);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
-    void Client_CallAddDefaultAmmo(const int32& Amount);
+    void Client_CallAddDefaultAmmo(const int32& amount);
     
 };
 

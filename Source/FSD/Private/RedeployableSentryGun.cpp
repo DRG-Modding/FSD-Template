@@ -30,7 +30,6 @@ void ARedeployableSentryGun::SetSentryGunOwner(APlayerCharacter* Character) {
 
 
 
-
 void ARedeployableSentryGun::OnRep_State(ERedeployableSentryGunState oldState) {
 }
 

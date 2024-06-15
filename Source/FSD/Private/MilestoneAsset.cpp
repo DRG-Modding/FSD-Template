@@ -1,7 +1,6 @@
 #include "MilestoneAsset.h"
 
 UMilestoneAsset::UMilestoneAsset() {
-    this->LargeImage = NULL;
     this->FormattedTitle = FText::FromString(TEXT("Parameters: {value} {float_value} {character}"));
     this->FormattedValueOffset = 0;
     this->CountValueAsTotal = false;

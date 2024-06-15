@@ -3,6 +3,7 @@
 #include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "FindSessionsCallbackProxy.h"
+#include "DifficultyMutatorItem.h"
 #include "EDisconnectReason.h"
 #include "EFSDMissionStatus.h"
 #include "EFSDNATType.h"
@@ -10,6 +11,7 @@
 #include "EServerDistance.h"
 #include "EServerSortOrder.h"
 #include "FriendInfo.h"
+#include "GlobalMissionSeed.h"
 #include "Templates/SubclassOf.h"
 #include "SessionHandling.generated.h"
 
@@ -151,6 +153,9 @@ public:
     static FString FSDGetServerID(const FBlueprintSessionResult& Result);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    static int32 FSDGetSeason(const FBlueprintSessionResult& Result);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<FString> FSDGetRequiredModsToDownload(const FBlueprintSessionResult& Result);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -181,13 +186,16 @@ public:
     static FString FSDGetHostUserID(const FBlueprintSessionResult& Result);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    static int32 FSDGetGlobalMissionSeed(const FBlueprintSessionResult& Result);
+    static FGlobalMissionSeed FSDGetGlobalMissionSeed(const FBlueprintSessionResult& Result);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static float FSDGetDistanceFloat(const FBlueprintSessionResult& Result);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static EServerDistance FSDGetDistance(const FBlueprintSessionResult& Result);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    static TArray<FDifficultyMutatorItem> FSDGetDifficultyModifiers(const FBlueprintSessionResult& Result);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static UDifficultySetting* FSDGetDifficulty(const FBlueprintSessionResult& Result);

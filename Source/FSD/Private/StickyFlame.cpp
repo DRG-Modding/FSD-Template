@@ -11,14 +11,14 @@ AStickyFlame::AStickyFlame(const FObjectInitializer& ObjectInitializer) : Super(
     (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
     this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
     this->FlameParticles = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("FlameParticles"));
-    this->audio = CreateDefaultSubobject<UAudioComponent>(TEXT("audio"));
+    this->Audio = CreateDefaultSubobject<UAudioComponent>(TEXT("Audio"));
     this->StatusTriggerComponent = CreateDefaultSubobject<UStatusEffectTriggerComponent>(TEXT("StatusEffectTrigger"));
     this->FlameLifetime = 0.00f;
     this->FlameExtinguishTime = 1.50f;
     this->AudioFadeOutTime = 0.00f;
     this->IsActive = true;
     this->FlameParticles->SetupAttachment(RootComponent);
-    this->audio->SetupAttachment(RootComponent);
+    this->Audio->SetupAttachment(RootComponent);
 }
 
 void AStickyFlame::OnRep_IsActive() {

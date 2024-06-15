@@ -1,32 +1,34 @@
 #include "FSDGameUserSettings.h"
 
 UFSDGameUserSettings::UFSDGameUserSettings() {
-    this->bUseVSync = true;
-    this->bJukeboxStreamerMode = true;
+    this->bJukeboxStreamerMode = false;
     this->bGraphicSettingsChanged = false;
-    this->ServerSearchRegion = 3;
+    this->CurrentUserSetSaveSlotName = TEXT("Unsandboxed");
+    this->ServerSearchRegion = 1;
     this->ServerSearchPasswordRequired = false;
-    this->volumeCharacterVoice = 99.17f;
-    this->volumeMissionControl = 101.09f;
-    this->volumeMaster = 37.16f;
-    this->volumeSFX = 99.43f;
-    this->volumeMusic = 107.30f;
-    this->CurrentAudioOutputDeviceId = TEXT("{0.0.0.00000000}.{e5f88e95-6344-4763-bd61-70b04ceb23f9}");
+    this->volumeCharacterVoice = 102.84f;
+    this->volumeMissionControl = 108.19f;
+    this->volumeMaster = 54.91f;
+    this->volumeSFX = 99.63f;
+    this->volumeMusic = 105.21f;
+    this->CurrentAudioOutputDeviceId = TEXT("{0.0.0.00000000}.{5a896360-b683-48b5-863d-10134f354c5c}");
     this->UseDefaultAudioOutputDevice = true;
-    this->Sharpening = 0.00f;
-    this->AntiAliasingType = 2;
+    this->Sharpening = 1.01f;
+    this->AntiAliasingType = 3;
     this->TemporalAAUpsamplingEnabled = false;
-    this->volumeVoice = 99.74f;
+    this->volumeVoice = 108.67f;
     this->UpscalingType = 0;
-    this->AmdFsrMode = 0;
+    this->AmdFsrMode = 1;
     this->AmdFsr2Mode = 2;
-    this->AmdFsrSharpness = 0.22f;
+    this->AmdFsrSharpness = 0.20f;
     this->AmdFsr2Sharpness = 0.20f;
     this->NvidiaDlssMode = UDLSSMode::Auto;
     this->NvidiaDlssSharpness = 0.50f;
     this->FSDResolutionScale = 1.00f;
-    this->ReflexMode = ENVidiaReflexMode::Disabled;
+    this->ReflexMode = ENVidiaReflexMode::Enabled;
     this->WeaponSpwayScale = 1.00f;
+    this->RagdollQuality = 2;
+    this->FrameGenerationMode = UFSDStreamlineDLSSGMode::Off;
     this->soundClassCharacterVoices = NULL;
     this->soundClassMissionControl = NULL;
     this->soundClassMaster = NULL;
@@ -37,35 +39,36 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->ChatFontSize = 14;
     this->bUseVoiceChat = true;
     this->bUsePushToTalk = true;
-    this->LocalGameServerName = TEXT("Verified Mods");
+    this->LocalGameServerName = TEXT("Zombies lobby");
     this->AppearOffline = false;
-    this->AutoRefreshServerlist = false;
-    this->MouseXSensitivity = 900.92f;
-    this->MouseYSensitivity = 600.00f;
+    this->AutoRefreshServerlist = true;
+    this->MouseXSensitivity = 602.77f;
+    this->MouseYSensitivity = 400.00f;
     this->UseSeperateSensetivity = false;
     this->InvertMouse = false;
-    this->InvertScroolWheel = false;
-    this->UseHoldToRun = false;
+    this->InvertScroolWheel = true;
+    this->UseHoldToRun = true;
     this->UseToggleLaserpointer = false;
-    this->FOV = 100.89f;
-    this->HeadbobbingScale = 0.00f;
-    this->CameraShakeScale = 25.00f;
+    this->FOV = 120.00f;
+    this->HeadbobbingScale = 100.00f;
+    this->CameraShakeScale = 50.38f;
     this->ChatFadeTime = 10.00f;
     this->UseStreamerProgram = false;
     this->SoundOnChatMessage = true;
     this->PhotosensitiveMode = false;
+    this->OverlayIntensityScale = 1.00f;
     this->ShowUIAnimations = true;
     this->UseProfanityFilter = false;
     this->ForceFeedbackScale = 1.00f;
     this->InvertFlightControls = false;
     this->EnableDx12ByDefault = false;
-    this->HDRColorGamma = 1.21f;
+    this->HDRColorGamma = 1.20f;
     this->ConsoleGraphicsMode = EConsoleGraphicsMode::Fidelity;
     this->StaticResoultionScale = 1.00f;
     this->UseManuelGrahpicsMode = false;
     this->DownedTurnDirection_Controller = 1.00f;
     this->DownedTurnDirection_Mouse = -1.00f;
-    this->UIDPIScale = 80.63f;
+    this->UIDPIScale = 100.64f;
     this->EnableCustomUIScale = false;
     this->CheckCursorOutOfBounds = false;
     this->VSyncToBeApplied = false;
@@ -81,16 +84,17 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->HasKeyboardBeenConnected = false;
     this->CurrentInputSource = EFSDInputSource::MouseAndKeyboard;
     this->RequestedInputSource = EFSDInputSource::None;
+    this->CustomKeyBindings.AddDefaulted(1);
     this->SwapControllerThumbsticks = false;
-    this->bTutorialHintsEnabled = false;
-    this->bShowSubtitles = false;
-    this->bShowFPS = true;
+    this->bTutorialHintsEnabled = true;
+    this->bShowSubtitles = true;
+    this->bShowFPS = false;
     this->ShowNetInfoLevel = 0;
     this->bCanShowBlood = true;
     this->PreventLatejoinCharacterDuplication = false;
     this->TranslatorDebugModeEnabled = false;
-    this->SelectedDifficultyLevels.AddDefaulted(10);
-    this->DifficultyLevelsAddedByDefault.AddDefaulted(10);
+    this->SelectedDifficultyLevels.AddDefaulted(7);
+    this->DifficultyLevelsAddedByDefault.AddDefaulted(9);
 }
 
 void UFSDGameUserSettings::UpdateVolumeSettings(USoundClass* CharacterVoices, USoundClass* MissionControl, USoundClass* Master, USoundClass* Music, USoundClass* SFX, USoundClass* UI, USoundClass* Voice) {
@@ -203,6 +207,9 @@ void UFSDGameUserSettings::SetScreenResolutionToBeApplied(FIntPoint Resolution) 
 void UFSDGameUserSettings::SetReflexMode(ENVidiaReflexMode NewReflexMode) {
 }
 
+void UFSDGameUserSettings::SetRagdollQuality(int32 Value) {
+}
+
 void UFSDGameUserSettings::SetPushToTalk(bool bEnable) {
 }
 
@@ -216,6 +223,9 @@ void UFSDGameUserSettings::SetPlaySoundOnChatMessage(bool playSoundOnMessage) {
 }
 
 void UFSDGameUserSettings::SetPhotosensitiveMode(bool modeOn) {
+}
+
+void UFSDGameUserSettings::SetOverlayIntensityScale(float Scale) {
 }
 
 void UFSDGameUserSettings::SetNvidiaDlssSharpness(float Sharpness) {
@@ -273,6 +283,9 @@ void UFSDGameUserSettings::SetGameServerName(const int32 localUserNum, const FSt
 }
 
 void UFSDGameUserSettings::SetFullscreenModeToBeApplied(TEnumAsByte<EWindowMode::Type> InFullscreenMode) {
+}
+
+void UFSDGameUserSettings::SetFrameGenerationMode(UFSDStreamlineDLSSGMode NewMode) {
 }
 
 void UFSDGameUserSettings::SetFOV(float NewFOV) {
@@ -373,6 +386,10 @@ void UFSDGameUserSettings::ResetControllerSettings() {
 void UFSDGameUserSettings::PostInitFSDUserSettings(UObject* WorldContextObject) {
 }
 
+bool UFSDGameUserSettings::IsVSyncSupported() const {
+    return false;
+}
+
 bool UFSDGameUserSettings::IsVoiceChatEnabled() const {
     return false;
 }
@@ -386,6 +403,10 @@ bool UFSDGameUserSettings::IsNvReflexAvailable() {
 }
 
 bool UFSDGameUserSettings::IsManaulGraphicsModeAvailable() {
+    return false;
+}
+
+bool UFSDGameUserSettings::IsFrameGenerationSupported() const {
     return false;
 }
 
@@ -520,6 +541,14 @@ ENVidiaReflexMode UFSDGameUserSettings::GetReflexMode() const {
     return ENVidiaReflexMode::Disabled;
 }
 
+float UFSDGameUserSettings::GetRagdollQualityDurationFactor() const {
+    return 0.0f;
+}
+
+int32 UFSDGameUserSettings::GetRagdollQuality() const {
+    return 0;
+}
+
 bool UFSDGameUserSettings::GetPushToTalk() const {
     return false;
 }
@@ -538,6 +567,10 @@ bool UFSDGameUserSettings::GetPlaySoundOnChatMessage() const {
 
 bool UFSDGameUserSettings::GetPhotosensitiveMode() const {
     return false;
+}
+
+float UFSDGameUserSettings::GetOverlayIntensityScale() const {
+    return 0.0f;
 }
 
 float UFSDGameUserSettings::GetNvidiaDlssSharpness() const {
@@ -614,6 +647,10 @@ TEnumAsByte<EWindowMode::Type> UFSDGameUserSettings::GetFullscreenModeToBeApplie
 
 UFSDGameUserSettings* UFSDGameUserSettings::GetFSDGameUserSettings() {
     return NULL;
+}
+
+UFSDStreamlineDLSSGMode UFSDGameUserSettings::GetFrameGenerationMode() const {
+    return UFSDStreamlineDLSSGMode::Off;
 }
 
 float UFSDGameUserSettings::GetFOV() const {

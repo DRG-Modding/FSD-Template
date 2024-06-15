@@ -16,7 +16,7 @@ void UPlayerInfectionComponent::Server_ClearInfection_Implementation() {
 void UPlayerInfectionComponent::OnRep_InfectionLevel(float oldLevel) {
 }
 
-void UPlayerInfectionComponent::IncreaseInfection(float Amount, AActor* Source) {
+void UPlayerInfectionComponent::IncreaseInfection(float amount, AActor* Source) {
 }
 
 void UPlayerInfectionComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

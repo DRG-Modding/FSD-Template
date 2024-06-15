@@ -8,7 +8,6 @@
 
 class UDataTable;
 class UItemID;
-class UItemSkinSchematicCollection;
 class UOverclockBank;
 class USchematic;
 class USchematicBank;
@@ -32,9 +31,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<UOverclockBank*> OverclockBanks;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSet<UItemSkinSchematicCollection*> SkinSchematicCollections;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<USchematicBankBase*> VanitySchematicBanks;

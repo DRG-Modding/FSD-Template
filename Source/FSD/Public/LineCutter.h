@@ -22,7 +22,7 @@ protected:
     bool ExplodeLastProjectileOnNextFireAttempt;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<UItemUpgrade*> upgrades;
+    TArray<UItemUpgrade*> Upgrades;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_LastProjectile, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<ALineCutterProjectile> LastProjectile;

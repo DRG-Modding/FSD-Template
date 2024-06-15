@@ -141,6 +141,9 @@ UFSDCheatManager* UFSDWidgetBlueprintLibrary::GetCheatManager(UObject* WorldCont
     return NULL;
 }
 
+void UFSDWidgetBlueprintLibrary::FixupRetainerWidgetUpdateInEditor(const URetainerBox* InWidget) {
+}
+
 UWidget* UFSDWidgetBlueprintLibrary::FindChildWidget(UPanelWidget*& ParentWidget, TSubclassOf<UUserWidget> WidgetClass, bool SearchChildren) {
     return NULL;
 }
@@ -217,6 +220,10 @@ UWidget* UFSDWidgetBlueprintLibrary::AddChildToHorizontalBoxEx(UHorizontalBox* H
 }
 
 UWidget* UFSDWidgetBlueprintLibrary::AddChildToCanvasEx(UCanvasPanel* CanvasPanel, UWidget* Widget, FAnchors Anchors, FMargin Offsets, bool AutoSize, int32 Z_Order, UCanvasPanelSlot*& OutSlot, UCanvasPanel*& OutCanvasPanel) {
+    return NULL;
+}
+
+UHorizontalBox* UFSDWidgetBlueprintLibrary::AddChildrenToHorizontalBox(UObject* WorldContext, UHorizontalBox* HorizontalBox, TArray<UWidget*> Children, bool ClearHorizontalBox, FMargin Padding, TEnumAsByte<EHorizontalAlignment> HorizontalAlignment, TEnumAsByte<EVerticalAlignment> VerticalAlignment, float FillFirst, float FillMiddle, float FillLast) {
     return NULL;
 }
 

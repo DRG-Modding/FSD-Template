@@ -32,7 +32,7 @@ protected:
     UStatusEffectsComponent* StatusEffects;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UEnemyTemperatureComponent* Temperature;
+    UEnemyTemperatureComponent* temperature;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagContainer GameplayTags;
@@ -45,6 +45,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool CanFlee;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    bool IsInRagdoll;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool FleeInsteadOfBackingOff;
@@ -63,6 +66,9 @@ public:
     UFUNCTION(BlueprintCallable)
     void UnFreeze();
     
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, NetMulticast, Unreliable)
+    void TriggerFadeRagdoll();
+    
     UFUNCTION(BlueprintCallable)
     void StopFleeing();
     
@@ -78,6 +84,9 @@ protected:
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnUnFrozen();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnTriggerFadeRagdoll();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnStoppedFleeing();

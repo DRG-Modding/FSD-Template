@@ -66,6 +66,9 @@ public:
     USkeletalMeshComponent* GetSkeletalMesh() const override PURE_VIRTUAL(GetSkeletalMesh, return NULL;);
     
     UFUNCTION(BlueprintCallable)
+    FName GetCenterOfMassSocketName() const override PURE_VIRTUAL(GetCenterOfMassSocketName, return NAME_None;);
+    
+    UFUNCTION(BlueprintCallable)
     UAnimInstance* GetAnimInstance() const override PURE_VIRTUAL(GetAnimInstance, return NULL;);
     
 };

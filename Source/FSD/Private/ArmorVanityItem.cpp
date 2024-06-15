@@ -8,18 +8,11 @@ UArmorVanityItem::UArmorVanityItem() {
     this->DefaultArmorMaterial = NULL;
 }
 
-void UArmorVanityItem::SetNewArmorType(UCharacterVanityComponent* Gear) {
-}
-
 void UArmorVanityItem::PreviewArmor(AFSDPlayerState* PlayerState, bool Show, bool useDefaultArmorMaterial) const {
 }
 
 bool UArmorVanityItem::HasSleevelessArmorType() const {
     return false;
-}
-
-EArmorMeshType UArmorVanityItem::GetFPMeshType() const {
-    return EArmorMeshType::None;
 }
 
 

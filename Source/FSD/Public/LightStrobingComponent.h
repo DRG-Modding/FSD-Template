@@ -26,19 +26,16 @@ public:
     ULightStrobingComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
-    FLightStrobeChannel GetChannel(int32 Index);
+    void StopLoop(int32 Channel);
     
     UFUNCTION(BlueprintCallable)
-    void AddStrobeChannel(const FLightStrobeChannel& Channel);
+    void AddMesh(UMeshComponent* Mesh);
     
     UFUNCTION(BlueprintCallable)
-    void AddMesh(UMeshComponent* Mesh, int32 Channel);
+    void AddMaterial(UMaterialInstanceDynamic* Mid);
     
     UFUNCTION(BlueprintCallable)
-    void AddMaterial(UMaterialInstanceDynamic* Mid, int32 Channel);
-    
-    UFUNCTION(BlueprintCallable)
-    void AddLight(UPointLightComponent* Light, int32 Channel);
+    void AddLight(UPointLightComponent* Light);
     
 };
 

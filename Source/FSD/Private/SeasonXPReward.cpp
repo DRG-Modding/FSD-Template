@@ -1,7 +1,7 @@
 #include "SeasonXPReward.h"
 
 USeasonXPReward::USeasonXPReward() {
-    this->Amount = 0;
+    this->amount = 0;
 }
 
 

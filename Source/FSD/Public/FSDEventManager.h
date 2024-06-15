@@ -5,6 +5,7 @@
 #include "BackendNotificationEvent.h"
 #include "EHolidayType.h"
 #include "FSDEventActivateChangedDelegate.h"
+#include "FSDEventWithEnd.h"
 #include "JettyBootEventSettings.h"
 #include "OnRequestSeasonEndTimeCompleteDelegate.h"
 #include "FSDEventManager.generated.h"
@@ -25,10 +26,10 @@ public:
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TSet<FName> PendingActiveEvents;
+    TArray<FFSDEventWithEnd> PendingActiveEvents;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TSet<FName> ActiveEvents;
+    TArray<FFSDEventWithEnd> ActiveEvents;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 NumFailedRequests;

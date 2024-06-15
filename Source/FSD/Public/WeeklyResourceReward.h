@@ -16,7 +16,7 @@ protected:
     int32 ResourceCount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FIRandRange Amount;
+    FIRandRange amount;
     
 public:
     UWeeklyResourceReward();

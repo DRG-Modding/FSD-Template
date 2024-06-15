@@ -8,7 +8,6 @@
 class AFSDPlayerState;
 class UAnimInstance;
 class UArmorMaterialVanityItem;
-class UCharacterVanityComponent;
 class UMaterialInterface;
 class USkeletalMesh;
 
@@ -50,19 +49,11 @@ protected:
 public:
     UArmorVanityItem();
 
-protected:
-    UFUNCTION(BlueprintCallable)
-    void SetNewArmorType(UCharacterVanityComponent* Gear);
-    
-public:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void PreviewArmor(AFSDPlayerState* PlayerState, bool Show, bool useDefaultArmorMaterial) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasSleevelessArmorType() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    EArmorMeshType GetFPMeshType() const;
     
 };
 

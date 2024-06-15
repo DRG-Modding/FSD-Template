@@ -17,6 +17,7 @@ FConsoleOptionsInSaveGame::FConsoleOptionsInSaveGame() {
     this->bShowSubtitles = false;
     this->InvertMouse = false;
     this->PhotosensitiveMode = false;
+    this->OverlayIntensityScale = 0.00f;
     this->bHoldToSprint = false;
     this->bToggleLaserPointer = false;
     this->bToggleTerrainScanner = false;
@@ -44,5 +45,6 @@ FConsoleOptionsInSaveGame::FConsoleOptionsInSaveGame() {
     this->AmdFsrSharpness = 0.00f;
     this->AmdFsr2Sharpness = 0.00f;
     this->NvidiaDlssSharpness = 0.00f;
+    this->FrameGenerationMode = UFSDStreamlineDLSSGMode::Off;
 }
 

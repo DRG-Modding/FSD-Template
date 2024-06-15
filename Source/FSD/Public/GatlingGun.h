@@ -65,7 +65,7 @@ protected:
     void OnRep_HotShellsTracerOn();
     
     UFUNCTION(BlueprintCallable)
-    void OnGatlingTemperatureChanged(float Temperature, bool isOverheated);
+    void OnGatlingTemperatureChanged(float temperature, bool isOverheated);
     
     UFUNCTION(BlueprintCallable)
     void OnEnemyKilled(AActor* Target, UFSDPhysicalMaterial* PhysMat, bool wasDirectHit);

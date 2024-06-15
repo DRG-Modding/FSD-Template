@@ -12,7 +12,7 @@ public:
     UResourceData* Resource;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float Amount;
+    float amount;
     
     FCraftingCost();
 };
