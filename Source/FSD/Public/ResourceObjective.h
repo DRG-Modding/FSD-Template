@@ -39,7 +39,7 @@ public:
 
 protected:
     UFUNCTION(BlueprintCallable)
-    void OnResourceChanged(UCappedResource* CappedResource, float Amount);
+    void OnResourceChanged(UCappedResource* CappedResource, float amount);
     
     UFUNCTION(BlueprintCallable)
     void OnRep_ResourcesCollected(float prevAmount);

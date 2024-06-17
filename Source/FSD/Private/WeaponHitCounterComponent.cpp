@@ -8,7 +8,7 @@ UWeaponHitCounterComponent::UWeaponHitCounterComponent(const FObjectInitializer&
 void UWeaponHitCounterComponent::Server_OnReloading_Implementation() {
 }
 
-void UWeaponHitCounterComponent::OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial) {
+void UWeaponHitCounterComponent::OnTargetDamaged(UHealthComponentBase* Health, float amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial) {
 }
 
 void UWeaponHitCounterComponent::OnStoppedUsing() {

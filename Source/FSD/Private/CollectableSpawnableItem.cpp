@@ -2,6 +2,6 @@
 
 FCollectableSpawnableItem::FCollectableSpawnableItem() {
     this->Resource = NULL;
-    this->Amount = 0;
+    this->amount = 0;
 }
 

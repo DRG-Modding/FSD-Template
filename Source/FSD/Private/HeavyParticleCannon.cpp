@@ -73,6 +73,9 @@ void AHeavyParticleCannon::OnRep_bIsBeamActive() {
 }
 
 
+void AHeavyParticleCannon::Client_AddAmmoOnKill_Implementation() {
+}
+
 void AHeavyParticleCannon::ChargeUpComplete() {
 }
 

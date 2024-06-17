@@ -2,6 +2,6 @@
 
 FGemResourceAmount::FGemResourceAmount() {
     this->GemCreator = NULL;
-    this->Amount = 0;
+    this->amount = 0;
 }
 

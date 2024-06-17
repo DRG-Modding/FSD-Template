@@ -9,7 +9,7 @@ void UFSDWidgetEffectsComponent::StartTextCounter(UObject* WorldContext, UTextBl
 void UFSDWidgetEffectsComponent::StartCounter(UObject* WorldContext, UObject* Owner, float Start, float End, float Duration, const FCustomCounterDelegate& OnCount, float StartDelay) {
 }
 
-void UFSDWidgetEffectsComponent::PingWidget(UObject* WorldContext, UWidget* Widget, float Amount, float Duration, EPingType PingType, float StartDelay) {
+void UFSDWidgetEffectsComponent::PingWidget(UObject* WorldContext, UWidget* Widget, float amount, float Duration, EPingType PingType, float StartDelay) {
 }
 
 void UFSDWidgetEffectsComponent::MoveWidget(UObject* WorldContext, UUserWidget* Widget, FVector2D Start, FVector2D End, float Duration, EMoveType MoveType, float StartDelay) {

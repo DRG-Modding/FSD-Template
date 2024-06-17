@@ -24,22 +24,26 @@ AItem::AItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitiali
     this->CurrentTemperature = 0.00f;
     this->AudioTemperature = NULL;
     this->AudioTemperatureFadeout = 0.00f;
-    this->TemperatureFloatParam = TEXT("Temperature");
+    this->TemperatureFloatParam = TEXT("temperature");
     this->TemperatureAudioComponent = NULL;
-    this->overHeated = false;
+    this->overheated = false;
     this->ShoutOverheated = NULL;
     this->bAimAssistEnabled = true;
     this->MovementRateWhileUsing = 1.00f;
     this->CanPlayLedgeClimbWhileUsing = true;
     this->CanInspectItem = true;
     this->CanSprintWithItem = true;
+    this->CanBeUsed = true;
     this->CustomIconWidget = NULL;
     this->AdvancedVibrationSendLevel = 1.00f;
     this->IsEquipped = false;
-    this->IsUsing = false;
+    this->isUsing = false;
 }
 
 void AItem::UpdateSkin() {
+}
+
+void AItem::StopUsing(bool Cancelled) {
 }
 
 UAudioComponent* AItem::SpawnSoundAttached(USoundBase* Sound, USceneComponent* AttachToComponent, float PriorityOverride, FName AttachPointName, FVector Location, FRotator Rotation, TEnumAsByte<EAttachLocation::Type> LocationType, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, USoundAttenuation* AttenuationSettings, USoundConcurrency* ConcurrencySettings, bool bAutoDestroy, bool SendVibration) {
@@ -135,8 +139,8 @@ FString AItem::GetAnalyticsItemCategory() const {
 void AItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
-    DOREPLIFETIME(AItem, overHeated);
-    DOREPLIFETIME(AItem, IsUsing);
+    DOREPLIFETIME(AItem, overheated);
+    DOREPLIFETIME(AItem, isUsing);
 }
 
 

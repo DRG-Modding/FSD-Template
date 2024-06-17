@@ -6,6 +6,7 @@
 #include "ResourceSpawner.h"
 #include "VanityMasterySettings.h"
 #include "VanitySlotCharacter.h"
+#include "VanityTagSettings.h"
 #include "VanitySettings.generated.h"
 
 class UDLCBase;
@@ -26,6 +27,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDLCBase* AlwaysLockedDLC;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FVanityTagSettings VanityTagSettings;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

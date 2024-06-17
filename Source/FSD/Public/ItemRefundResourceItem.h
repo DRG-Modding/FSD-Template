@@ -10,7 +10,7 @@ public:
     FString Name;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float Amount;
+    float amount;
     
     FSD_API FItemRefundResourceItem();
 };

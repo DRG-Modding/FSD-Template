@@ -9,7 +9,7 @@ AHeliumTank::AHeliumTank(const FObjectInitializer& ObjectInitializer) : Super(Ob
 void AHeliumTank::OnUsedBy(APlayerCharacter* User, EInputKeys Key) {
 }
 
-void AHeliumTank::OnShoutStarted(APlayerCharacter* Player, UAudioComponent* audio) {
+void AHeliumTank::OnShoutStarted(APlayerCharacter* Player, UAudioComponent* Audio) {
 }
 
 void AHeliumTank::OnRep_PitchedUsers() {

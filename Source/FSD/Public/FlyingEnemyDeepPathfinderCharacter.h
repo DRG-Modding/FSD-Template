@@ -27,7 +27,7 @@ protected:
     USoundCue* FrozenDeathSound;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UParticleSystem* FrozenDeathparticles;
+    UParticleSystem* FrozenDeathParticles;
     
 public:
     AFlyingEnemyDeepPathfinderCharacter(const FObjectInitializer& ObjectInitializer);

@@ -3,6 +3,7 @@
 #include "Blueprint/UserWidget.h"
 #include "FSDMainHUDWidget.generated.h"
 
+class UJetBootsFuelWidget;
 class URadarPointComponent;
 class UWidget;
 
@@ -23,6 +24,9 @@ protected:
     void OnRadarPointAdded(URadarPointComponent* Point);
     
 public:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UJetBootsFuelWidget* GetHudJetBootsFuelVertical() const;
+    
     UFUNCTION(BlueprintCallable)
     void AddRadarPoint(URadarPointComponent* Point);
     

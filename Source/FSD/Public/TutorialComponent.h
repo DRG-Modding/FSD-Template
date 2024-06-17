@@ -85,7 +85,7 @@ protected:
     void OnTutorialsReset();
     
     UFUNCTION(BlueprintCallable)
-    void OnManagerReady(ATutorialManager* manager);
+    void OnManagerReady(ATutorialManager* Manager);
     
     UFUNCTION(BlueprintCallable)
     void MarkTutorialWatched();

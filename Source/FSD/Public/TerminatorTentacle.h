@@ -60,7 +60,7 @@ public:
 
 protected:
     UFUNCTION(BlueprintCallable)
-    void PlayHitReaction(float Amount);
+    void PlayHitReaction(float amount);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnStateChanged(ETerminatorTentacleState NewState);

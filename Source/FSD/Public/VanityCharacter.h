@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "EArmorMeshType.h"
 #include "Templates/SubclassOf.h"
 #include "VanityCharacter.generated.h"
 
@@ -44,7 +45,7 @@ protected:
     UHeadVanityItem* Head;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UEyeBrowsVanityItem* EyeBrows;
+    UEyeBrowsVanityItem* Eyebrows;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USideburnsVanityItem* Sideburns;
@@ -57,6 +58,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UArmorVanityItem* Armor;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EArmorMeshType ArmorMeshType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UArmorMaterialVanityItem* ArmorColor;

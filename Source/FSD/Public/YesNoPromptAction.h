@@ -33,6 +33,9 @@ public:
     UYesNoPromptAction();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
+    static UYesNoPromptAction* PromptYesNoWidget(UObject* WorldContext, UYesNoPromptWidget* InPromptWidget, FText InTitle, FText InMessage);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     static UYesNoPromptAction* PromptYesNo(UObject* WorldContext, FYesNoPromptSettings Prompt);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))

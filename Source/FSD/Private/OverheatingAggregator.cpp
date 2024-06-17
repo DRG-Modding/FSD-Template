@@ -5,7 +5,7 @@ UOverheatingAggregator::UOverheatingAggregator(const FObjectInitializer& ObjectI
     this->HeatLossPerSecond = 10.00f;
     this->OverheatedDuration = 2.00f;
     this->bIsOverheated = false;
-    this->Temperature = 0.00f;
+    this->temperature = 0.00f;
 }
 
 void UOverheatingAggregator::Server_SetTemperature_Implementation(float NewTemperature) {
@@ -38,7 +38,7 @@ void UOverheatingAggregator::GetLifetimeReplicatedProps(TArray<FLifetimeProperty
     DOREPLIFETIME(UOverheatingAggregator, HeatLossPerSecond);
     DOREPLIFETIME(UOverheatingAggregator, OverheatedDuration);
     DOREPLIFETIME(UOverheatingAggregator, bIsOverheated);
-    DOREPLIFETIME(UOverheatingAggregator, Temperature);
+    DOREPLIFETIME(UOverheatingAggregator, temperature);
 }
 
 

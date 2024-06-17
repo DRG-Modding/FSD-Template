@@ -17,6 +17,8 @@ FGDResources::FGDResources() {
     this->EnorResource = NULL;
     this->BismorResource = NULL;
     this->OilShaleResource = NULL;
+    this->ErrorCubeResource = NULL;
+    this->CompressedGoldResource = NULL;
     this->Barly1 = NULL;
     this->Barly2 = NULL;
     this->Barly3 = NULL;

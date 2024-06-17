@@ -13,6 +13,9 @@ APlasmaCarbine::APlasmaCarbine(const FObjectInitializer& ObjectInitializer) : Su
     this->WPN_ItemReloadEndMontage = NULL;
 }
 
+void APlasmaCarbine::Server_ReloadPressed_Implementation() {
+}
+
 void APlasmaCarbine::ApplyShieldDamage_Implementation() {
 }
 

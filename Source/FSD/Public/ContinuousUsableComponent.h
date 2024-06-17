@@ -15,6 +15,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TimeBetweenTicks;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 userCount;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     bool Usable;
     
@@ -25,6 +28,9 @@ public:
 
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetCanUse(bool CanUse);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsBeingUsed() const;
     
 };
 

@@ -4,10 +4,10 @@
 UGeneratedMission::UGeneratedMission() {
     this->Biome = NULL;
     this->Seed = 0;
-    this->GlobalSeed = 0;
     this->Template = NULL;
     this->PrimaryObjective = NULL;
     this->MissionMutator = NULL;
+    this->MissionChallenge = NULL;
     this->ComplexityLimit = NULL;
     this->DurationLimit = NULL;
     this->MissionDNA = NULL;

@@ -6,9 +6,6 @@ UTrackMovementStateComponent::UTrackMovementStateComponent(const FObjectInitiali
     this->AudioStartComponent = NULL;
     this->AudioDuringComponent = NULL;
     this->AudioStopComponent = NULL;
-    this->AudioOnStart = NULL;
-    this->AudioOnDuring = NULL;
-    this->AudioOnStop = NULL;
     this->AudioOnFadeOut = 0.10f;
     this->StateUpdateShout = NULL;
     this->StateUpdateShoutFrequencySecsMin = 5.00f;

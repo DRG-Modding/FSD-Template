@@ -13,13 +13,19 @@ class UFrozenStateComponent : public UCharacterBreakOutState {
 public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USoundBase* AudioFreeFromIce;
+    TSoftObjectPtr<USoundBase> AudioFreeFromIce;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UFSDPhysicalMaterial* IcePhysicalMaterial;
+    TSoftObjectPtr<UFSDPhysicalMaterial> IcePhysicalMaterial;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UFSDPhysicalMaterial* DwarfFleshMaterial;
+    TSoftObjectPtr<UFSDPhysicalMaterial> DwarfFleshMaterial;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSoftObjectPtr<USoundBase> AudioFreezeStart;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSoftObjectPtr<USoundBase> AudioIceTap;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SlowAnimationSpeed;
@@ -36,6 +42,13 @@ protected:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveOnDefrosting();
+    
+public:
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    USoundBase* GetAudioIceTap() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    USoundBase* GetAudioFreezeStart() const;
     
 };
 

@@ -2,5 +2,6 @@
 
 FEquippedVanity::FEquippedVanity() {
     this->SelectedArmorMaterial = NULL;
+    this->UsingSlevedArmor = false;
 }
 

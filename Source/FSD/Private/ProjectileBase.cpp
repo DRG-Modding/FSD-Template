@@ -7,6 +7,7 @@ AProjectileBase::AProjectileBase(const FObjectInitializer& ObjectInitializer) : 
     const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
     (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
     this->RootComponent = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComponent"));
+    this->ApplyShotPower = false;
     this->IsSpawnedFromWeapon = false;
     this->Exploded = false;
     this->DoOnImpact = false;
@@ -70,6 +71,7 @@ bool AProjectileBase::HasImpactAuthority() const {
 float AProjectileBase::GetGameTimeSinceActivation() const {
     return 0.0f;
 }
+
 
 int32 AProjectileBase::GetBoneIndex() const {
     return 0;

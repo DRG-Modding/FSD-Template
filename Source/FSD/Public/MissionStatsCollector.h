@@ -19,7 +19,7 @@ public:
 
 protected:
     UFUNCTION(BlueprintCallable)
-    void OnResourceIncremented(UCappedResource* Resource, float Amount);
+    void OnResourceIncremented(UCappedResource* Resource, float amount);
     
 };
 

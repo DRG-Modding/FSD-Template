@@ -15,5 +15,6 @@ enum class EDroneAIState : uint8 {
     UseAbillity,
     Repairing,
     Cleaning,
+    Melee,
 };
 

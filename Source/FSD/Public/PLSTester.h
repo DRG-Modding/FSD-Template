@@ -1,11 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "GlobalMissionSeed.h"
 #include "Templates/SubclassOf.h"
 #include "PLSTester.generated.h"
 
 class UBiome;
+class UDifficultyMutatorSetupItem;
 class UDifficultySetting;
+class UMissionChallenge;
 class UMissionComplexity;
 class UMissionDuration;
 class UMissionMutator;
@@ -29,13 +32,10 @@ protected:
     int32 MissionSeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 GlobalSeed;
+    FGlobalMissionSeed GlobalSeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 GlobalMissionIndex;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool OptOutOfSeasonContent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMissionComplexity* limitComplexity;
@@ -48,6 +48,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UMissionWarning*> Warnings;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UMissionChallenge* Challenge;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UObjective>> SecondaryObjectives;
@@ -66,6 +69,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDifficultySetting* OverrideDifficulty;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TMap<UDifficultyMutatorSetupItem*, int32> Haz5Mutators;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SimulatePlayerCount;

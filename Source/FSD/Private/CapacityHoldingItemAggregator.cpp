@@ -22,7 +22,7 @@ void UCapacityHoldingItemAggregator::OnRep_MaxAmmo() {
 void UCapacityHoldingItemAggregator::OnRep_AmmoCount() {
 }
 
-void UCapacityHoldingItemAggregator::AddAmmo(int32 Amount) {
+void UCapacityHoldingItemAggregator::AddAmmo(int32 amount) {
 }
 
 void UCapacityHoldingItemAggregator::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

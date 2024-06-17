@@ -14,6 +14,7 @@ UStatusEffect::UStatusEffect() {
     this->RemoveOnDeath = true;
     this->RemoveOnTemperatureStateChange = false;
     this->AllowExternalSread = false;
+    this->RefreshDurationOnApplication = false;
 }
 
 bool UStatusEffect::ShouldInstantiate_Implementation() const {

@@ -26,6 +26,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_ProjectileImpact, meta=(AllowPrivateAccess=true))
     FProjectileImpact ProjectileImpact;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool ApplyShotPower;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     bool IsSpawnedFromWeapon;
     
@@ -138,6 +141,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetGameTimeSinceActivation() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UDamageComponent* GetDamageComponent();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetBoneIndex() const;

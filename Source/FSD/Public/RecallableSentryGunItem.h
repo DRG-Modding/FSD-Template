@@ -26,8 +26,8 @@ public:
     FRecallableSentryGunSignature OnSelectedItemChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<ARedeployableSentryGun*> SentriesWithActiveIndicators;
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TArray<TWeakObjectPtr<ARedeployableSentryGun>> SentriesWithActiveIndicators;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxSentryCount;
@@ -48,7 +48,7 @@ protected:
     UItemPlacerAggregator* ItemPlacer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<UItemUpgrade*> upgrades;
+    TArray<UItemUpgrade*> Upgrades;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AItem> LoadoutClass;

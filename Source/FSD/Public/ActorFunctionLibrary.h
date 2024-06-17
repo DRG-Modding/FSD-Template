@@ -97,6 +97,9 @@ public:
     static bool IsSingleplayer(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    static bool IsMovingPlatform(AActor* Actor);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsInRangeOfLocalPlayer(AActor* toActor, float MinDistance, float MaxDistance);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -211,7 +214,7 @@ public:
     static TArray<UMaterialInstanceDynamic*> CreateDynamicMaterialInstances(UMeshComponent* Mesh);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
-    static float AddHeroXP(UObject* WorldContextObject, UPlayerCharacterID* characterID, float Amount);
+    static float AddHeroXP(UObject* WorldContextObject, UPlayerCharacterID* characterID, float amount);
     
     UFUNCTION(BlueprintCallable)
     static void AddEnemyKill(APlayerCharacter* Instigator, UEnemyComponent* EnemyComponent, AFSDGameState* GameState);

@@ -150,7 +150,7 @@ protected:
     void RecordFailStage(bool muleDied, bool missionAborted);
     
     UFUNCTION(BlueprintCallable)
-    void OnResourceChanged(UCappedResource* CappedResource, float Amount);
+    void OnResourceChanged(UCappedResource* CappedResource, float amount);
     
     UFUNCTION(BlueprintCallable)
     void OnRep_FullCanisters();
@@ -174,7 +174,7 @@ protected:
     void OnHealthChanged(float Health);
     
     UFUNCTION(BlueprintCallable)
-    void OnFullCanistersChanged(int32 Amount);
+    void OnFullCanistersChanged(int32 amount);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnEscortMuleSpawnedEvent();

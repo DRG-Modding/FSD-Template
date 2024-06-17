@@ -9,8 +9,10 @@ class AActor;
 class AFSDAIController;
 class APawn;
 class APlayerCharacter;
+class ARessuplyPod;
 class UBaseCritterDescriptor;
 class UEnemyDescriptor;
+class UFSDEvent;
 class UItemID;
 class UObject;
 class UPlayerCharacterID;
@@ -45,6 +47,9 @@ protected:
 public:
     UFSDCheatManager();
 
+    UFUNCTION(BlueprintCallable)
+    void ToggleDebugEvent(UFSDEvent* InEvent);
+    
     UFUNCTION(BlueprintCallable)
     void SwitchCharacter(UPlayerCharacterID* characterID);
     
@@ -99,10 +104,10 @@ public:
     void R_RemoveCredits(int32 Number);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void R_RemoveCraftingResource(int32 Amount, int32 Type);
+    void R_RemoveCraftingResource(int32 amount, int32 Type);
     
-    UFUNCTION(BlueprintCallable, Exec)
-    void R_AddSeasonToken(int32 Number);
+    UFUNCTION(BlueprintCallable, Exec, meta=(WorldContext="WorldContextObject"))
+    void R_AddSeasonToken(UObject* WorldContextObject, int32 Number);
     
     UFUNCTION(BlueprintCallable, Exec)
     void R_AddResources_Player(float Number);
@@ -111,40 +116,40 @@ public:
     void R_AddResources(float Number);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void R_AddPerkPoints(int32 Amount);
+    void R_AddPerkPoints(int32 amount);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void R_AddNitra(float Amount);
+    void R_AddNitra(float amount);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void R_AddMorkite(float Amount);
+    void R_AddMorkite(float amount);
     
     UFUNCTION(BlueprintCallable, Exec)
     void R_AddMatrixCores(int32 Number);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void R_AddHollomite(float Amount);
+    void R_AddHollomite(float amount);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void R_AddGold(float Amount);
+    void R_AddGold(float amount);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void R_AddDystrum(float Amount);
+    void R_AddDystrum(float amount);
     
     UFUNCTION(BlueprintCallable, Exec)
     void R_AddCredits(int32 Number);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void R_AddCraftingResource(int32 Amount, int32 Type);
+    void R_AddCraftingResource(int32 amount, int32 Type);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void R_Add_Phazyonite(int32 Amount);
+    void R_Add_Phazyonite(int32 amount);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void R_Add_BitterGem(int32 Amount);
+    void R_Add_BitterGem(int32 amount);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void R_Add_Aquarq(int32 Amount);
+    void R_Add_Aquarq(int32 amount);
     
     UFUNCTION(BlueprintCallable)
     bool IsInGodMode();
@@ -154,6 +159,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsFastMovementActive() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void InstantDropResuppyPod(ARessuplyPod* pod);
     
 protected:
     UFUNCTION(BlueprintCallable)
@@ -215,13 +223,13 @@ public:
     static void Cheat_Schematic_ForgeAll(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
-    static void Cheat_Resources(UObject* WorldContextObject, float Amount);
+    static void Cheat_Resources(UObject* WorldContextObject, float amount);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_ResetEquippedUpgrades(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
-    static void Cheat_RemoveResources(UObject* WorldContextObject, int32 Amount);
+    static void Cheat_RemoveResources(UObject* WorldContextObject, int32 amount);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_PickAxeVanity_UnlockAll(UObject* WorldContextObject);
@@ -251,13 +259,13 @@ public:
     static void Cheat_Campaign_Advance(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
-    static void Cheat_AddXP(UObject* WorldContextObject, int32 Amount);
+    static void Cheat_AddXP(UObject* WorldContextObject, int32 amount);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
-    static void Cheat_AddPerkPoints(UObject* WorldContextObject, int32 Amount);
+    static void Cheat_AddPerkPoints(UObject* WorldContextObject, int32 amount);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
-    static void Cheat_AddCredits(UObject* WorldContextObject, int32 Amount);
+    static void Cheat_AddCredits(UObject* WorldContextObject, int32 amount);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_Windows_PrintStack() const;
@@ -347,7 +355,19 @@ public:
     void C_TestSpecialEventChance();
     
     UFUNCTION(BlueprintCallable, Exec)
+    void C_TeleportToPlayer(int32 InPlayerIndex);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_TeleportPlayerToMe(int32 InPlayerIndex);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_TeleportAllPlayersToMe();
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void C_StopMovement(bool shouldMove);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_StartCountDown();
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_SpawnScriptedWaveIndex(int32 Index);
@@ -362,7 +382,13 @@ public:
     void C_SpawnEvenRewarder();
     
     UFUNCTION(BlueprintCallable, Exec)
-    void C_SpawnBarrelOnPlayer(int32 Amount);
+    void C_SpawnDropPodOnSelf(float Delay);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_SpawnDancingCharacterOnSelf(int32 InDanceIndex);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_SpawnBarrelOnPlayer(int32 amount);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_SpawnAllParticles();
@@ -377,10 +403,19 @@ public:
     void C_SetTestingCharacter(UPlayerCharacterID* characterID);
     
     UFUNCTION(BlueprintCallable, Exec)
+    void C_SetSuperRapidFireEnabled(bool Enabled);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_SetStandingDown(bool standingDown);
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void C_SetSavedCheats();
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_SetPlayers(int32 Number);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_SetInWorldSubtitlesActive(bool Active);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_SetInstantUsables(bool Value);
@@ -398,13 +433,16 @@ public:
     void C_SetEnglish(int32 Val);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void C_SetDancing(bool shouldDance);
+    void C_SetDancing(bool shouldDance, int32 danceMove);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_SetAmmoCostEnabled(bool Enabled);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void C_Seasons_ResetXP();
+    void C_SetActorTrackingVisible(bool Visible);
+    
+    UFUNCTION(BlueprintCallable, Exec, meta=(WorldContext="WorldContextObject"))
+    static void C_Seasons_ResetXP(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_Seasons_ResetTreeOfVanity();
@@ -417,6 +455,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_Seasons_ResetPlagueHeartsCollected();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_Seasons_PrintScripProgress();
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_Seasons_IncrementChallenge(int32 Index);
@@ -439,8 +480,8 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void C_Seasons_ClearAllProgress();
     
-    UFUNCTION(BlueprintCallable, Exec)
-    void C_Seasons_AddXP(int32 Number);
+    UFUNCTION(BlueprintCallable, Exec, meta=(WorldContext="WorldContextObject"))
+    static void C_Seasons_AddXP(UObject* WorldContextObject, int32 Number);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_Seasons_AddHeartsCollecdted(int32 Number);
@@ -448,8 +489,8 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void C_Seasons_AddChallenge();
     
-    UFUNCTION(BlueprintCallable, Exec)
-    void C_ScoutFlareInfiniteDuration(bool Enabled);
+    UFUNCTION(BlueprintCallable, Exec, meta=(WorldContext="WorldContextObject"))
+    static void C_Season_SetActiveSeason(UObject* WorldContextObject, int32 Index);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_Schematics_UnlockAll();
@@ -541,6 +582,12 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void C_RecordMode();
     
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_PropHunt_Stop();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_PropHunt_Start(int32 InServerIndex);
+    
     UFUNCTION(BlueprintCallable)
     void C_Promotion_SetLevelSpecific(APlayerCharacter* onCharacter, int32 Number);
     
@@ -561,6 +608,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_PrintLoadout();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_PreventMeteors();
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_PlayNewMusic(int32 songIndex) const;
@@ -596,13 +646,16 @@ public:
     void C_MachineEvents_FinishCurrent();
     
     UFUNCTION(BlueprintCallable, Exec)
-    void C_LevelUpCharacter(int32 Amount);
+    void C_LevelUpCharacter(int32 amount);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_KillTeam();
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_KillPlayer();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_KillAllNeutral();
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_KillAllFriendly();
@@ -614,6 +667,9 @@ public:
     void C_JumpToNextRoom();
     
     UFUNCTION(BlueprintCallable, Exec)
+    void C_JetBoots_Enable_MK2();
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void C_JetBoots_Enable();
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -623,7 +679,7 @@ public:
     void C_Intoxication_Set(int32 Percent);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void C_IncrementAllMissionStats(int32 Amount);
+    void C_IncrementAllMissionStats(int32 amount);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_IncreasePlagueInfection(float Increment);
@@ -648,6 +704,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_ForceCrash();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_FlareInfiniteDuration(bool Enabled);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_FixedPLSSeed(int32 Seed);
@@ -686,6 +745,9 @@ public:
     void C_DisableBackendEvents();
     
     UFUNCTION(BlueprintCallable, Exec)
+    void C_DestroyAllDancingCharacters();
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void C_DeepDives_UnlockAll();
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -701,6 +763,9 @@ public:
     void C_DeepDives_List();
     
     UFUNCTION(BlueprintCallable, Exec)
+    void C_DebugTargetEnemySync(bool FindIt);
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void C_CompleteObjectives();
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -711,6 +776,12 @@ public:
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_ClearAllMilestones();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_ClearAllDecalsLocal();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_ClearAllDecalsAll();
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_Campaign_ResetProgress();
@@ -725,19 +796,31 @@ public:
     void C_Campaign_CompleteCurrent();
     
     UFUNCTION(BlueprintCallable, Exec)
+    void C_Campaign_CompleteAll();
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void C_Campaign_Advance();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_BreakAllEnemyArmor();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_BiomeEffectsEnabled(bool Enabled);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_AddXP(int32 Number);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void C_AddUncappedXP(int32 Amount);
+    void C_AddUncappedXP(int32 amount);
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_AddForgingXP(int32 Number);
     
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_AddAllResourcesToInventory(float amount);
+    
     UFUNCTION(BlueprintCallable)
-    void AddResourceToTeamDeposit(UResourceData* Resource, float Amount);
+    void AddResourceToTeamDeposit(UResourceData* Resource, float amount);
     
 };
 

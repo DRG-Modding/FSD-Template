@@ -7,7 +7,7 @@ struct FHeatSource {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float Temperature;
+    float temperature;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Intensity;

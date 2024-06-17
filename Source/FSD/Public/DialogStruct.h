@@ -16,7 +16,7 @@ public:
     FText Text;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSoftObjectPtr<USoundBase> audio;
+    TSoftObjectPtr<USoundBase> Audio;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EDialogRestriction Restriction;

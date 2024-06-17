@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ItemUpgradeElement.h"
-#include "Templates/SubclassOf.h"
 #include "ReplaceSkeletonMeshUpgradeElement.generated.h"
 
 class UAnimInstance;
@@ -13,13 +12,13 @@ class UReplaceSkeletonMeshUpgradeElement : public UItemUpgradeElement {
 public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USkeletalMesh* TargetMesh;
+    TSoftObjectPtr<USkeletalMesh> TargetMesh;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USkeletalMesh* ReplaceWithMesh;
+    TSoftObjectPtr<USkeletalMesh> ReplaceWithMesh;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<UAnimInstance> ReplaceWithAnimInstance;
+    TSoftClassPtr<UAnimInstance> ReplaceWithAnimInstance;
     
 public:
     UReplaceSkeletonMeshUpgradeElement();

@@ -105,16 +105,20 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
-    void ServerPlaceMarker(FVector Location, AActor* Actor, UPrimitiveComponent* Cmponent, UTerrainMaterial* TerrainMaterial, ELaserPointerMarkerType eMarkerType);
+    void ServerPlaceMarker(FVector Location, FVector Normal, AActor* Actor, UPrimitiveComponent* Cmponent, UTerrainMaterial* TerrainMaterial, ELaserPointerMarkerType eMarkerType);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_SecondaryUse();
+    void Server_SecondaryUse(FVector Location, FVector Normal, AActor* Actor, UPrimitiveComponent* Cmponent, UTerrainMaterial* TerrainMaterial);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnPointOfInterest(AActor* TargetActor, FVector TargetLocation, UTexture2D* TargetIcon);
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     void GetPointTransform(FTransform& PointTransform);
+    
+public:
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    FVector GetActiveMarkerLocation() const;
     
 };
 

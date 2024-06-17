@@ -28,7 +28,7 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable)
-    void OnDamageTaken(float Amount);
+    void OnDamageTaken(float amount);
     
 };
 

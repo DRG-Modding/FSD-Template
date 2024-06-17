@@ -3,6 +3,10 @@
 UYesNoPromptAction::UYesNoPromptAction() {
 }
 
+UYesNoPromptAction* UYesNoPromptAction::PromptYesNoWidget(UObject* WorldContext, UYesNoPromptWidget* InPromptWidget, FText InTitle, FText InMessage) {
+    return NULL;
+}
+
 UYesNoPromptAction* UYesNoPromptAction::PromptYesNo(UObject* WorldContext, FYesNoPromptSettings Prompt) {
     return NULL;
 }

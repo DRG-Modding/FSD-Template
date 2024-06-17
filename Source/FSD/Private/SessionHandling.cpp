@@ -160,6 +160,10 @@ FString USessionHandling::FSDGetServerID(const FBlueprintSessionResult& Result) 
     return TEXT("");
 }
 
+int32 USessionHandling::FSDGetSeason(const FBlueprintSessionResult& Result) {
+    return 0;
+}
+
 TArray<FString> USessionHandling::FSDGetRequiredModsToDownload(const FBlueprintSessionResult& Result) {
     return TArray<FString>();
 }
@@ -200,8 +204,8 @@ FString USessionHandling::FSDGetHostUserID(const FBlueprintSessionResult& Result
     return TEXT("");
 }
 
-int32 USessionHandling::FSDGetGlobalMissionSeed(const FBlueprintSessionResult& Result) {
-    return 0;
+FGlobalMissionSeed USessionHandling::FSDGetGlobalMissionSeed(const FBlueprintSessionResult& Result) {
+    return FGlobalMissionSeed{};
 }
 
 float USessionHandling::FSDGetDistanceFloat(const FBlueprintSessionResult& Result) {
@@ -210,6 +214,10 @@ float USessionHandling::FSDGetDistanceFloat(const FBlueprintSessionResult& Resul
 
 EServerDistance USessionHandling::FSDGetDistance(const FBlueprintSessionResult& Result) {
     return EServerDistance::Close;
+}
+
+TArray<FDifficultyMutatorItem> USessionHandling::FSDGetDifficultyModifiers(const FBlueprintSessionResult& Result) {
+    return TArray<FDifficultyMutatorItem>();
 }
 
 UDifficultySetting* USessionHandling::FSDGetDifficulty(const FBlueprintSessionResult& Result) {

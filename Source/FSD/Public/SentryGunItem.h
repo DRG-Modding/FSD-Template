@@ -11,7 +11,7 @@ class ASentryGunItem : public APlaceableItem {
 public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<UItemUpgrade*> upgrades;
+    TArray<UItemUpgrade*> Upgrades;
     
 public:
     ASentryGunItem(const FObjectInitializer& ObjectInitializer);

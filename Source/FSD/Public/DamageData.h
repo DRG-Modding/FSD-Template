@@ -26,6 +26,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float ArmorPenetration;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    bool IsFriendlyFire;
+    
     FSD_API FDamageData();
 };
 

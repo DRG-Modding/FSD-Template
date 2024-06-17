@@ -22,7 +22,7 @@ protected:
     UAnimationAsset* RetractAnimation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UAudioComponent* audio;
+    UAudioComponent* Audio;
     
 public:
     AExtruderPlant(const FObjectInitializer& ObjectInitializer);

@@ -2,6 +2,7 @@
 
 FFSDServerListEntryModel::FFSDServerListEntryModel() {
     this->DRG_GLOBALMISSION_SEED = 0;
+    this->DRG_SEASON = 0;
     this->DRG_MISSION_SEED = 0;
     this->DRG_DIFF = 0;
     this->DRG_GAMESTATE = 0;

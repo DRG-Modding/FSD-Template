@@ -83,9 +83,6 @@ public:
     void SetSentryGunOwner(APlayerCharacter* Character);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void SetEMPIndicatorActive(bool Active);
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetArcIndicatorActive(bool Active);
     
 protected:

@@ -10,7 +10,7 @@ class UHeatSourceStatusEffectItem : public UStatusEffectItem {
 public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float Temperature;
+    float temperature;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETemperatureIntensity Intensity;

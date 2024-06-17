@@ -19,6 +19,9 @@ public:
     UFSDEventCollection();
 
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    TArray<UFSDEvent*> GetEventsSorted() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UFSDEvent* FindEventHandler(const FName& EventName) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

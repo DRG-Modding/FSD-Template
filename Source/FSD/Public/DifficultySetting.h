@@ -58,6 +58,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float EnemyToEnemyDamageModifier;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool SupportsHazardPlus;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
     TArray<float> EnemyCountModifier;
     

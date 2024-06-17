@@ -87,7 +87,7 @@ public:
     bool IsAlive() const;
     
     UFUNCTION(BlueprintCallable)
-    float Heal(float Amount);
+    float Heal(float amount);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetShowHealthBar() const;

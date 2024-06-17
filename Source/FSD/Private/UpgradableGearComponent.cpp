@@ -2,6 +2,7 @@
 #include "Templates/SubclassOf.h"
 
 UUpgradableGearComponent::UUpgradableGearComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bUpgradesAddedToItem = false;
     this->ItemData = NULL;
     this->OverclockBank = NULL;
     this->IconLine = NULL;
@@ -11,7 +12,7 @@ UUpgradableGearComponent::UUpgradableGearComponent(const FObjectInitializer& Obj
     this->RequiredCharacterLevel = 0;
 }
 
-void UUpgradableGearComponent::SetGearStatText(FGearStatEntry& Entry, FText Text) {
+void UUpgradableGearComponent::SetGearStatText(FGearStatEntry& entry, FText Text) {
 }
 
 bool UUpgradableGearComponent::PurchaseUpgrade(UItemID* ItemID, UItemUpgrade* Upgrade, AFSDPlayerController* PlayerController, TSubclassOf<APlayerCharacter> previewedCharacter) {
@@ -26,7 +27,7 @@ bool UUpgradableGearComponent::PlayerOwnesUpgradeInAllTiers(TSubclassOf<AActor> 
     return false;
 }
 
-void UUpgradableGearComponent::MirrorUpgradePreviewStatus(FGearStatEntry& From, FGearStatEntry& To) {
+void UUpgradableGearComponent::MirrorUpgradePreviewStatus(FGearStatEntry& from, FGearStatEntry& to) {
 }
 
 bool UUpgradableGearComponent::IsUpgradeEquipped(TSubclassOf<AActor> itemClass, UItemUpgrade* Upgrade, AFSDPlayerState* Player) {
@@ -117,6 +118,10 @@ bool UUpgradableGearComponent::GetItemMasteryForLevel(UItemID* ItemID, int32 Lev
     return false;
 }
 
+bool UUpgradableGearComponent::GetIsItemUpgradeEquipped(AFSDPlayerState* Player, TSubclassOf<AActor> itemClass, UItemUpgrade* ItemUpgrade, UPlayerCharacterID* characterID) {
+    return false;
+}
+
 UTexture2D* UUpgradableGearComponent::GetIconLine() const {
     return NULL;
 }
@@ -129,11 +134,11 @@ UTexture2D* UUpgradableGearComponent::GetIconBG() {
     return NULL;
 }
 
-FText UUpgradableGearComponent::GetGearStatValue(FGearStatEntry& Entry) {
+FText UUpgradableGearComponent::GetGearStatValue(FGearStatEntry& entry) {
     return FText::GetEmpty();
 }
 
-TArray<FGearStatEntry> UUpgradableGearComponent::GetGearStats(AFSDPlayerState* PlayerState, TSubclassOf<AActor> ActorClass) {
+TArray<FGearStatEntry> UUpgradableGearComponent::GetGearStats(AFSDPlayerState* PlayerState, TSubclassOf<AActor> actorClass) {
     return TArray<FGearStatEntry>();
 }
 

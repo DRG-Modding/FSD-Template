@@ -8,8 +8,11 @@
 class AActor;
 class UAnimMontage;
 class UDamageComponent;
+class UFSDPhysicalMaterial;
+class UHealthComponentBase;
 class UHitReactionComponent;
 class UPointLightComponent;
+class UPrimitiveComponent;
 class USkeletalMeshComponent;
 class USoundCue;
 class USplineMeshComponent;
@@ -108,6 +111,9 @@ protected:
     
     UFUNCTION(BlueprintCallable)
     void OnRep_Using();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnDamagedTarget(UHealthComponentBase* Health, float amount, UPrimitiveComponent* Component, UFSDPhysicalMaterial* PhysicalMaterial);
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintPure)

@@ -194,6 +194,11 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnJumpEvent();
     
+protected:
+    UFUNCTION(BlueprintCallable)
+    void OnHit(float HitDamage, const FDamageData& DamageData, bool anyHealthLost);
+    
+public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnExitState(ESharkEnemyState NewState);
     
@@ -208,9 +213,6 @@ private:
     void OnDeath(UHealthComponentBase* aHealthComponent);
     
 protected:
-    UFUNCTION(BlueprintCallable)
-    void OnDamaged(float aAmount);
-    
     UFUNCTION(BlueprintCallable)
     void OnCollided(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     

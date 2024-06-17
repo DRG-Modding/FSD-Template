@@ -20,7 +20,4 @@ USchematicCategory* USchematicBlueprintLibrary::FindItemUpgradeSchematicCategory
     return NULL;
 }
 
-void USchematicBlueprintLibrary::AddSkinSchematicCollectionToSettings(UItemSkinSchematicCollection* Collection) {
-}
-
 

@@ -6,7 +6,7 @@ AExtruderPlant::AExtruderPlant(const FObjectInitializer& ObjectInitializer) : Su
     this->SkeletalMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
     this->ExtrudeAnimation = NULL;
     this->RetractAnimation = NULL;
-    this->audio = CreateDefaultSubobject<UAudioComponent>(TEXT("audio"));
+    this->Audio = CreateDefaultSubobject<UAudioComponent>(TEXT("Audio"));
 }
 
 

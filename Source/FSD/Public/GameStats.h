@@ -30,7 +30,7 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
-    void OnPlayerMinedGold(UCappedResource* Resource, float Amount);
+    void OnPlayerMinedGold(UCappedResource* Resource, float amount);
     
 };
 

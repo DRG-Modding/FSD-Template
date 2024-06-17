@@ -34,7 +34,7 @@ protected:
     USoundCue* FrozenDeathSound;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UParticleSystem* FrozenDeathparticles;
+    UParticleSystem* FrozenDeathParticles;
     
 public:
     UFrozenPawnImpactComponent(const FObjectInitializer& ObjectInitializer);

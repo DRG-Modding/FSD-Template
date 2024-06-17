@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "DelegateDelegate.h"
 #include "EOutline.h"
 #include "OutlineComponent.generated.h"
 
@@ -18,6 +19,9 @@ public:
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOutlineChanged OnOutlineChanged;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FDelegate OnPingedByLaserPointer;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

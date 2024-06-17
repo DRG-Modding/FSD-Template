@@ -23,14 +23,18 @@ void ALaserPointerItem::UnlockToMinersManual(UObject* WorldContextObject, FGuid 
 void ALaserPointerItem::ToggleLaserVisible_Implementation(bool aVisible) {
 }
 
-void ALaserPointerItem::ServerPlaceMarker_Implementation(FVector Location, AActor* Actor, UPrimitiveComponent* Cmponent, UTerrainMaterial* TerrainMaterial, ELaserPointerMarkerType eMarkerType) {
+void ALaserPointerItem::ServerPlaceMarker_Implementation(FVector Location, FVector Normal, AActor* Actor, UPrimitiveComponent* Cmponent, UTerrainMaterial* TerrainMaterial, ELaserPointerMarkerType eMarkerType) {
 }
 
-void ALaserPointerItem::Server_SecondaryUse_Implementation() {
+void ALaserPointerItem::Server_SecondaryUse_Implementation(FVector Location, FVector Normal, AActor* Actor, UPrimitiveComponent* Cmponent, UTerrainMaterial* TerrainMaterial) {
 }
 
 
 void ALaserPointerItem::GetPointTransform_Implementation(FTransform& PointTransform) {
+}
+
+FVector ALaserPointerItem::GetActiveMarkerLocation() const {
+    return FVector{};
 }
 
 

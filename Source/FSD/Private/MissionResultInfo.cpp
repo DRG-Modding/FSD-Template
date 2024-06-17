@@ -5,6 +5,7 @@ UMissionResultInfo::UMissionResultInfo() {
     this->MissionTime = 0.00f;
     this->MissionTotalHazBonus = 0.00f;
     this->MissionHazBonus = 0.00f;
+    this->HazPlusBonus = 0.00f;
     this->ComplexityBonus = 0.00f;
     this->ComplexityDots = 0;
     this->LenghtBonus = 0.00f;

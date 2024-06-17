@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EquippedVanity.h"
 #include "Templates/SubclassOf.h"
 #include "CharacterViewInfo.generated.h"
 
 class APlayerCharacter;
-class UVanityItem;
 class UVictoryPose;
 
 USTRUCT(BlueprintType)
@@ -15,7 +15,7 @@ public:
     TSubclassOf<APlayerCharacter> CharacterClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<UVanityItem*> EquippedVanity;
+    FEquippedVanity EquippedVanity;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool SurvivedInPod;

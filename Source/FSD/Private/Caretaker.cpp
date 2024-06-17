@@ -53,7 +53,7 @@ void ACaretaker::OnRep_CurrentStage() {
 
 
 
-void ACaretaker::OnDamageTaken(float Amount) {
+void ACaretaker::OnDamageTaken(float amount) {
 }
 
 bool ACaretaker::IsAwake() const {

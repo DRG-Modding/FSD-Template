@@ -43,8 +43,8 @@ ACryosprayItem::ACryosprayItem(const FObjectInitializer& ObjectInitializer) : Su
     this->RePressureProgress = 0.00f;
     this->LongReachEnabled = false;
     this->AoEColdEnabled = false;
-    this->ChargeUpAudioComponent->SetupAttachment(RootComponent);
     this->VelocityAudio->SetupAttachment(FPMesh);
+    this->ChargeUpAudioComponent->SetupAttachment(RootComponent);
 }
 
 void ACryosprayItem::ServerDoDamage_Implementation(FVector_NetQuantize Start, FVector_NetQuantize End, uint8 Power) {
@@ -57,7 +57,7 @@ void ACryosprayItem::Server_PreLaunchProjectile_Implementation() {
 }
 
 
-void ACryosprayItem::OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial) {
+void ACryosprayItem::OnTargetDamaged(UHealthComponentBase* Health, float amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial) {
 }
 
 void ACryosprayItem::OnRep_IsCharging(bool OldValue) {

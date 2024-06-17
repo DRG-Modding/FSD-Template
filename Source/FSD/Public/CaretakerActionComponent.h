@@ -14,7 +14,7 @@ protected:
     bool StartTickOnUse;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_IsUsing, meta=(AllowPrivateAccess=true))
-    bool IsUsing;
+    bool isUsing;
     
 public:
     UCaretakerActionComponent(const FObjectInitializer& ObjectInitializer);

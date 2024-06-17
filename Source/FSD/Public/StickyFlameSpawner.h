@@ -50,7 +50,6 @@ public:
     UFUNCTION(BlueprintCallable)
     bool TrySpawnStickyFlame(FVector Location, FVector Normal);
     
-protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerSpawnStickyFlame(FVector_NetQuantize Location, FVector_NetQuantizeNormal Normal);
     

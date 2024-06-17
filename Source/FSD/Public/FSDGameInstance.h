@@ -18,6 +18,7 @@
 #include "ForgingDoneDelegate.h"
 #include "GeneratedMissionSignatureDelegate.h"
 #include "GenericSignatureDelegate.h"
+#include "GlobalMissionSeed.h"
 #include "JoinSignatureDelegate.h"
 #include "MinersManualNotificationDelegate.h"
 #include "NetworkConnectionInfo.h"
@@ -659,9 +660,6 @@ public:
     UFUNCTION(BlueprintCallable)
     TArray<FBlueprintSessionResult> GetServersFriendsArePlaying(TArray<FBlueprintSessionResult> servers);
     
-    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
-    static FString GetSeedString(UObject* WorldContextObject);
-    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetOverrideMaxPlayerCount() const;
     
@@ -684,7 +682,7 @@ public:
     bool GetHasSeenInfoScreen();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    int32 GetGlobalMissionSeed() const;
+    FGlobalMissionSeed GetGlobalMissionSeedNew() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UGeneratedMission* GetGeneratedMission() const;
@@ -700,9 +698,6 @@ protected:
     TArray<FNetworkConnectionInfo> GetConnectionInfo();
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    int32 GetCommonGlobalMissionSeed() const;
-    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     APlayerCharacter* GetCharacterSelectorCharacter();
     

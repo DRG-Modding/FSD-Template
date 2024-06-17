@@ -7,5 +7,6 @@ enum class ECarveFilterType : uint8 {
     ReplaceAll,
     ReplaceEmpty,
     ReplaceSolid,
+    ReplaceEphemeral,
 };
 

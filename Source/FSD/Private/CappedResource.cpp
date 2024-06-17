@@ -13,7 +13,7 @@ float UCappedResource::TransferAll(UCappedResource* Receiver) {
     return 0.0f;
 }
 
-float UCappedResource::Transfer(float Amount, UCappedResource* Receiver) {
+float UCappedResource::Transfer(float amount, UCappedResource* Receiver) {
     return 0.0f;
 }
 
@@ -51,11 +51,11 @@ float UCappedResource::GetCapacityPct() const {
     return 0.0f;
 }
 
-float UCappedResource::Deduct(float Amount) {
+float UCappedResource::Deduct(float amount) {
     return 0.0f;
 }
 
-float UCappedResource::Add(float Amount) {
+float UCappedResource::Add(float amount) {
     return 0.0f;
 }
 

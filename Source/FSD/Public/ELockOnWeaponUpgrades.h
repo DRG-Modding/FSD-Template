@@ -18,5 +18,6 @@ enum class ELockOnWeaponUpgrades : uint8 {
     SentryGunShootsOnLockedShot,
     UseLockOnTargetStatusEffect,
     FearEnabled,
+    RateOfFireLockedOnModifier,
 };
 

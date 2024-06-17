@@ -30,7 +30,7 @@ void UFadeVisibilitySubSystem::FadeInMaterialByName(UMeshComponent*& Component, 
 void UFadeVisibilitySubSystem::FadeInMaterialByIndex(UMeshComponent*& Component, int32 MaterialIndex, FName ParameterName, float Duration) {
 }
 
-void UFadeVisibilitySubSystem::FadeInLight(ULightComponent*& Light, float Duration) {
+void UFadeVisibilitySubSystem::FadeInLight(ULightComponent*& Light, float Duration, float startIntensityAtPercent) {
 }
 
 

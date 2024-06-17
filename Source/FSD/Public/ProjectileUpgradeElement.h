@@ -11,7 +11,7 @@ class UProjectileUpgradeElement : public UItemUpgradeElement {
 public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UParticleSystem* NewTrailParticle;
+    TSoftObjectPtr<UParticleSystem> NewTrailParticle;
     
 public:
     UProjectileUpgradeElement();

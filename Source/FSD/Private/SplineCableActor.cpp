@@ -10,11 +10,15 @@ ASplineCableActor::ASplineCableActor(const FObjectInitializer& ObjectInitializer
     (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
     this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("DefaultSceneRoot"));
     this->PathSplineComponent = CreateDefaultSubobject<USplineComponent>(TEXT("PathSplineComponent"));
+    this->MeshForwardAxis = ESplineMeshAxis::Z;
     this->CableThickness = 0.25f;
     this->CarveRadius = 0;
+    this->CarveSurfaceOffset = 0.40f;
+    this->MaxAllowedPathDistance = -1.00f;
     this->MaterialIndex = 1;
     this->CableMeshInstance = NULL;
     this->bConnected = false;
+    this->ClearPointsWhenDone = true;
     this->PathSplineComponent->SetupAttachment(RootComponent);
 }
 

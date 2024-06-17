@@ -4,6 +4,7 @@
 #include "GameFramework/GameMode.h"
 #include "AllReadySignatureDelegate.h"
 #include "CallDonkeyDelegate.h"
+#include "DelegateDelegate.h"
 #include "ECriticalItemPass.h"
 #include "EPauseReason.h"
 #include "MatchStartedSignatureDelegate.h"
@@ -47,6 +48,9 @@ public:
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCallDonkey OnDonkeyCalled;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FDelegate OnDonkeyButtonPressed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool GenerationStarted;
@@ -101,6 +105,9 @@ protected:
     bool PreventAllLatejoin;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    bool AllowRejoin;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool PreventLateJoinOnMissionStart;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -138,6 +145,9 @@ protected:
     void SignalEndLevelToClients();
     
 public:
+    UFUNCTION(BlueprintCallable)
+    void SignalDonkeyPressed();
+    
     UFUNCTION(BlueprintCallable)
     void ResetDeaths();
     

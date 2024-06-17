@@ -5,7 +5,7 @@ ALoadoutItemProxy::ALoadoutItemProxy(const FObjectInitializer& ObjectInitializer
     this->AnimationSet = NULL;
 }
 
-TSubclassOf<AItem> ALoadoutItemProxy::GetLoadoutItemFromClass(TSubclassOf<AActor> ActorClass) {
+TSubclassOf<AItem> ALoadoutItemProxy::GetLoadoutItemFromClass(TSubclassOf<AActor> actorClass) {
     return NULL;
 }
 

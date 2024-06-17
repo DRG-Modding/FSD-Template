@@ -4,6 +4,7 @@
 #include "Engine/EngineTypes.h"
 #include "GameFramework/Pawn.h"
 #include "Templates/SubclassOf.h"
+#include "VectorDelegateDelegate.h"
 #include "PlayerCameraDrone.generated.h"
 
 class AActor;
@@ -17,6 +18,9 @@ UCLASS(Abstract, Blueprintable)
 class APlayerCameraDrone : public APawn {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FVectorDelegate OnMarkerPlaced;
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPawnMovementComponent* Movement;
@@ -159,6 +163,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void ClearFocusPoint();
     
+public:
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void All_BeginCountdown();
     

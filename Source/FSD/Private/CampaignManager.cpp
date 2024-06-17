@@ -46,11 +46,7 @@ TArray<TSubclassOf<UCampaign>> UCampaignManager::GetCompletedSideCampaigns(AFSDP
     return TArray<TSubclassOf<UCampaign>>();
 }
 
-UGeneratedMission* UCampaignManager::GetCampaingMissionFromSeeds(UObject* WorldContextObject, int32 GlobalSeed, int32 MissionSeed) const {
-    return NULL;
-}
-
-UGeneratedMission* UCampaignManager::GetCampaingMission(const TArray<UGeneratedMission*>& missions, int32 MissionSeed) const {
+UGeneratedMission* UCampaignManager::GetCampaingMission(const TArray<UGeneratedMission*>& missions, const FGlobalMissionSeed& GlobalSeed) const {
     return NULL;
 }
 

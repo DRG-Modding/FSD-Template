@@ -1,19 +1,14 @@
 #include "MissionGenerationManager.h"
 
 UMissionGenerationManager::UMissionGenerationManager() {
-    this->ResetSelectedMission = false;
 }
 
-TArray<UGeneratedMission*> UMissionGenerationManager::GetMissions(int32 Seed) {
+TArray<UGeneratedMission*> UMissionGenerationManager::GetMissions(const FGlobalMissionSeed& Seed) {
     return TArray<UGeneratedMission*>();
 }
 
-UGeneratedMission* UMissionGenerationManager::GetMissionFromSeeds(int32 GlobalSeed, int32 MissionSeed) {
+UGeneratedMission* UMissionGenerationManager::GetMissionFromSeeds(const FGlobalMissionSeed& GlobalSeed, int32 MissionSeed) {
     return NULL;
-}
-
-TArray<UGeneratedMission*> UMissionGenerationManager::GetAvailableMissionsWithSeasonContentCheck(bool HasOptedOutOfSeasonContent) {
-    return TArray<UGeneratedMission*>();
 }
 
 TArray<UGeneratedMission*> UMissionGenerationManager::GetAvailableMissions() {

@@ -81,15 +81,15 @@ void ASharkEnemy::OnNearTarget(UPrimitiveComponent* OverlappedComponent, AActor*
 
 
 
+void ASharkEnemy::OnHit(float HitDamage, const FDamageData& DamageData, bool anyHealthLost) {
+}
+
 
 
 void ASharkEnemy::OnDeathDetailed(UHealthComponent* aHealthComponent, float damageAmount, const FDamageData& DamageData, const TArray<UDamageTag*>& dTags) {
 }
 
 void ASharkEnemy::OnDeath(UHealthComponentBase* aHealthComponent) {
-}
-
-void ASharkEnemy::OnDamaged(float aAmount) {
 }
 
 void ASharkEnemy::OnCollided(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {

@@ -20,6 +20,12 @@ protected:
     TSoftClassPtr<URunningMissionBP> MissionBP;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool IsOptionalExtraObjectiveMandatory;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool OptionalExtraObjectiveIsRandom;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UObjective> OptionalExtraObjective;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

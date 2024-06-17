@@ -61,6 +61,7 @@ class UPlanetZoneSetup;
 class UPlayerCharacterID;
 class UProceduralSettings;
 class UPromotionRewardsSettings;
+class UPropHuntSettings;
 class USaveGameSettings;
 class USchematicSettings;
 class USeasonSettings;
@@ -93,6 +94,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWeaponMaintenanceSettings* WeaponMaintenanceSettings;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPropHuntSettings* PropHuntSettings;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -225,7 +229,7 @@ protected:
     FGDGameStatsTracking GameStatsTracking;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FGDAudio audio;
+    FGDAudio Audio;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGDDifficulty Difficulty;
@@ -295,6 +299,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UInventoryList* GetInventoryList(UPlayerCharacterID* characterID) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetDifficultySettingIndex(const UDifficultySetting* InDifficulty) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UDifficultySetting* GetDifficultySetting(int32 Index) const;

@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "DelegateEventDelegate.h"
+#include "Templates/SubclassOf.h"
 #include "ObjectivesManager.generated.h"
 
 class UObjective;
@@ -54,6 +55,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UObjective* GetPrimaryObjective() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UObjective* FindSecondaryObjective(TSubclassOf<UObjective> objectiveClass) const;
     
     UFUNCTION(BlueprintCallable)
     void ExitPodDescending();

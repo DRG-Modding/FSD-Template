@@ -43,7 +43,7 @@ public:
     static void FadeInMaterialByIndex(UMeshComponent*& Component, int32 MaterialIndex, FName ParameterName, float Duration);
     
     UFUNCTION(BlueprintCallable)
-    static void FadeInLight(ULightComponent*& Light, float Duration);
+    static void FadeInLight(ULightComponent*& Light, float Duration, float startIntensityAtPercent);
     
 };
 

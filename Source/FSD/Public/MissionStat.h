@@ -52,13 +52,13 @@ public:
     UMissionStat();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
-    float SetStatValue(UObject* WorldContext, APlayerCharacter* Character, float Amount);
+    float SetStatValue(UObject* WorldContext, APlayerCharacter* Character, float amount);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FText MissionStatToText(EMissionStatType StatType, float Value);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
-    static void Increment(UObject* WorldContext, UMissionStat* Stat, TSubclassOf<APlayerCharacter> CharacterClass, float Amount);
+    static void Increment(UObject* WorldContext, UMissionStat* Stat, TSubclassOf<APlayerCharacter> CharacterClass, float amount);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContext"))
     float GetStatMinCount(UObject* WorldContext);

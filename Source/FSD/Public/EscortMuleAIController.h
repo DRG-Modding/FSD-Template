@@ -63,6 +63,9 @@ public:
     UFUNCTION(BlueprintCallable)
     void FindDozerPath(FVector StartPosition);
     
+    UFUNCTION(BlueprintCallable)
+    void CHEAT_SetDozerLastPathSegment();
+    
 
     // Fix for true pure virtual functions not being implemented
 };

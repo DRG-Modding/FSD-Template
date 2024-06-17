@@ -82,6 +82,9 @@ public:
     TSoftClassPtr<UDrinkEffectComponent> DrinkEffect;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool OneEffectComponentPerCharacter;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<UResourceData*, int32> UnlockCost;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

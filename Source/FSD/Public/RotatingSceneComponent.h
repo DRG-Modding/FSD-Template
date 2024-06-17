@@ -31,5 +31,11 @@ protected:
 public:
     URotatingSceneComponent(const FObjectInitializer& ObjectInitializer);
 
+    UFUNCTION(BlueprintCallable)
+    void Stop();
+    
+    UFUNCTION(BlueprintCallable)
+    void Start();
+    
 };
 

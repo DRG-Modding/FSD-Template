@@ -31,7 +31,7 @@
 
 APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<UPlayerMovementComponent>(TEXT("CharMoveComp"))) {
     this->HeightenedSenseComponent = NULL;
-    this->JetBootsComponentSpawnable = NULL;
+    this->AttentionShoutOverride = NULL;
     this->ZipLineStateComponent = NULL;
     this->BoundPerkActivationW = NULL;
     this->PerkActivationTimer = -1.00f;
@@ -117,20 +117,21 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer) 
     this->bIsUsingPressed = false;
     this->UsingDelay = 0.00f;
     this->HeadLightOn = true;
-    this->IsUsing = false;
+    this->isUsing = false;
     this->JumpPressedTime = 0.00f;
     this->CanMove = true;
     this->CanAim = true;
     this->CanUseItem = true;
+    this->CanUseLaserpointer = true;
     this->CanChangeItems = true;
     this->CanMine = true;
     this->CanSalute = true;
     this->IsStandingDown = false;
     this->InDanceRange = false;
-    this->IsDancing = false;
+    this->isDancing = false;
     this->DanceStartTime = 0.00f;
     this->HappyFeetAchievement = NULL;
-    this->DanceMove = 0;
+    this->danceMove = 0;
     this->CameraMode = ECharacterCameraMode::FirstPerson;
     this->IsInCharacterSelectionWorld = false;
     this->bShouldSpawnAnimEffects = true;
@@ -148,6 +149,9 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer) 
     this->CanInstantRevive = false;
     this->HasInitializedPerks = false;
     this->CharacterVanity = CreateDefaultSubobject<UCharacterVanityComponent>(TEXT("CharacterVanity"));
+    this->FPMesh->SetupAttachment(FirstPersonRoot);
+    this->FirstPersonCamera->SetupAttachment(FPMesh);
+    this->FirstPersonRoot->SetupAttachment(RootComponent);
     this->ActorTracking->SetupAttachment(RootComponent);
     this->ThirdPersonSpringArm->SetupAttachment(RootComponent);
     this->ThirdPersonCamera->SetupAttachment(ThirdPersonSpringArm);
@@ -156,9 +160,6 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer) 
     this->FollowCamera->SetupAttachment(FollowSpringArm);
     this->DownCamera->SetupAttachment(RootComponent);
     this->WidgetInteraction->SetupAttachment(FirstPersonCamera);
-    this->FPMesh->SetupAttachment(FirstPersonRoot);
-    this->FirstPersonCamera->SetupAttachment(FPMesh);
-    this->FirstPersonRoot->SetupAttachment(RootComponent);
 }
 
 void APlayerCharacter::UseZipLine(AZipLineProjectile* ZipLine, const FVector& Start, const FVector& End) {
@@ -248,16 +249,28 @@ void APlayerCharacter::SetAttached(USceneComponent* AttachTo, bool DelayUntilLan
 void APlayerCharacter::Server_TriggerDash_Implementation() {
 }
 
+void APlayerCharacter::Server_TeleportToPlayer_Implementation(APlayerCharacter* InPlayerToTeleport, int32 InTarget) {
+}
+
+void APlayerCharacter::Server_TeleportPlayerTo_Implementation(int32 InPlayerIndexToTeleport, APlayerCharacter* InTarget) {
+}
+
 void APlayerCharacter::Server_StartSalute_Implementation(UAnimMontage* startSalute) {
 }
 
 void APlayerCharacter::Server_SpawnEnemies_Implementation(UEnemyDescriptor* descriptor, int32 Count) {
 }
 
+void APlayerCharacter::Server_SpawnCritters_Implementation(UBaseCritterDescriptor* descriptor, int32 Count) {
+}
+
 void APlayerCharacter::Server_Shouted_Implementation() {
 }
 
 void APlayerCharacter::Server_SetUsing_Implementation(bool characterIsUsing) {
+}
+
+void APlayerCharacter::Server_SetStandingDown_Implementation(bool standingDown) {
 }
 
 void APlayerCharacter::Server_SetRunning_Implementation(bool characterIsRunning) {
@@ -275,6 +288,9 @@ void APlayerCharacter::Server_SetIsPressingMovementInput_Implementation(bool aIs
 void APlayerCharacter::Server_SetIsJumpPressed_Implementation(bool InJumpPressed) {
 }
 
+void APlayerCharacter::Server_SetIsDancing_Implementation(bool NewIsDancing, int32 NewDanceMove) {
+}
+
 void APlayerCharacter::Server_SetDispenserReward_Implementation(AEventRewardDispenser* Dispenser, USchematic* Reward) {
 }
 
@@ -287,13 +303,31 @@ void APlayerCharacter::Server_InstantRevive_Implementation(APlayerCharacter* Rev
 void APlayerCharacter::Server_EscapeFromGrabber_Implementation() {
 }
 
+void APlayerCharacter::Server_ClearBiomeEffects_Implementation() {
+}
+
+void APlayerCharacter::Server_CheatStartCountDown_Implementation() {
+}
+
+void APlayerCharacter::Server_CheatSpawnDropPodOnSelf_Implementation(float Delay) {
+}
+
 void APlayerCharacter::Server_CheatRevive_Implementation() {
+}
+
+void APlayerCharacter::Server_CheatPreventMeteors_Implementation() {
+}
+
+void APlayerCharacter::Server_CheatKillAllNeutral_Implementation() {
 }
 
 void APlayerCharacter::Server_CheatKillAllFriendly_Implementation() {
 }
 
 void APlayerCharacter::Server_CheatKillAll_Implementation() {
+}
+
+void APlayerCharacter::Server_CheatJetBoots_MK2_Implementation() {
 }
 
 void APlayerCharacter::Server_CheatJetBoots_Implementation() {
@@ -305,7 +339,25 @@ void APlayerCharacter::Server_CheatGodMode_Implementation() {
 void APlayerCharacter::Server_CheatFlyMode_Implementation(bool Active) {
 }
 
+void APlayerCharacter::Server_CheatFlareInfiniteDuration_Implementation(bool Enabled) {
+}
+
+void APlayerCharacter::Server_CheatDestroyAllVanityCharacters_Implementation() {
+}
+
 void APlayerCharacter::Server_CheatDebugFastMode_Implementation(bool fast) {
+}
+
+void APlayerCharacter::Server_CheatDancingCharacterOnSelf_Implementation(int32 InDanceIndex) {
+}
+
+void APlayerCharacter::Server_CheatClearAllDecalsAll_Implementation() {
+}
+
+void APlayerCharacter::Server_CheatBreakAllEnemyArmor_Implementation() {
+}
+
+void APlayerCharacter::Server_CheatAddAllResourcesToInventory_Implementation(float amount) {
 }
 
 void APlayerCharacter::Server_CancelThrowingCarriable_Implementation() {
@@ -485,6 +537,10 @@ float APlayerCharacter::GetTimeSinceLastRevival() const {
     return 0.0f;
 }
 
+bool APlayerCharacter::GetSuperRapidFireActive() const {
+    return false;
+}
+
 ECharacterState APlayerCharacter::GetPreviousState() const {
     return ECharacterState::Walking;
 }
@@ -625,6 +681,7 @@ void APlayerCharacter::Client_ActivateTemporaryBuff_Implementation(UTemporaryBuf
 void APlayerCharacter::CheckWithoutAPaddleAchievement_Implementation() {
 }
 
+
 void APlayerCharacter::ChangeState(ECharacterState NewState) {
 }
 
@@ -655,6 +712,18 @@ void APlayerCharacter::All_ShowImpactEffects_Implementation(UParticleSystem* Par
 void APlayerCharacter::All_ShowFieldMedicInstantReviveEffects_Implementation() {
 }
 
+void APlayerCharacter::All_CheatStartCountDown_Implementation() {
+}
+
+void APlayerCharacter::All_CheatSetDanceForVanityCharacter_Implementation(int32 InDanceIndex) {
+}
+
+void APlayerCharacter::All_CheatDestroyAllVanityCharacters_Implementation() {
+}
+
+void APlayerCharacter::All_CheatClearAllDecalsAll_Implementation() {
+}
+
 void APlayerCharacter::AddImpulseToActor(AFSDPhysicsActor* Target, FVector_NetQuantize Impulse, FVector_NetQuantize Location, FVector_NetQuantize AngularImpulse) {
 }
 
@@ -677,10 +746,10 @@ void APlayerCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(APlayerCharacter, ActiveCharacterState);
     DOREPLIFETIME(APlayerCharacter, IsRunning);
     DOREPLIFETIME(APlayerCharacter, HeadLightOn);
-    DOREPLIFETIME(APlayerCharacter, IsUsing);
+    DOREPLIFETIME(APlayerCharacter, isUsing);
     DOREPLIFETIME(APlayerCharacter, IsStandingDown);
-    DOREPLIFETIME(APlayerCharacter, IsDancing);
-    DOREPLIFETIME(APlayerCharacter, DanceMove);
+    DOREPLIFETIME(APlayerCharacter, isDancing);
+    DOREPLIFETIME(APlayerCharacter, danceMove);
     DOREPLIFETIME(APlayerCharacter, PlayerIsLeavingInDroppod);
 }
 

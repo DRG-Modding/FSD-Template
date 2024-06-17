@@ -3,6 +3,7 @@
 #include "UObject/Object.h"
 #include "EMissionStructure.h"
 #include "GMMutatorItem.h"
+#include "GlobalMissionSeed.h"
 #include "ObjectiveMissionIcon.h"
 #include "Templates/SubclassOf.h"
 #include "GeneratedMission.generated.h"
@@ -12,6 +13,7 @@ class AProceduralSetup;
 class UBiome;
 class UGeneratedMission;
 class ULevelSequence;
+class UMissionChallenge;
 class UMissionComplexity;
 class UMissionDNA;
 class UMissionDuration;
@@ -33,7 +35,7 @@ protected:
     int32 Seed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    int32 GlobalSeed;
+    FGlobalMissionSeed GlobalSeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UMissionTemplate* Template;
@@ -55,6 +57,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UMissionMutator* MissionMutator;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UMissionChallenge* MissionChallenge;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UMissionComplexity* ComplexityLimit;

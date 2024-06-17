@@ -33,7 +33,7 @@ protected:
     FBoscoAbilityTarget Target;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<UItemUpgrade*> upgrades;
+    TArray<UItemUpgrade*> Upgrades;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TSubclassOf<AProjectileBase> ProjectileClass;

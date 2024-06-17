@@ -22,6 +22,7 @@ AFSDGameMode::AFSDGameMode(const FObjectInitializer& ObjectInitializer) : Super(
     this->FormationsManager = CreateDefaultSubobject<UFormationsManagerComponent>(TEXT("FormationsManager"));
     this->ContinueCountdown = 10.00f;
     this->PreventAllLatejoin = false;
+    this->AllowRejoin = false;
     this->PreventLateJoinOnMissionStart = false;
     this->PlayerSpawnHeightOffset = 75.00f;
     this->FriendlyFireGracePeriod = 240.00f;
@@ -36,6 +37,9 @@ void AFSDGameMode::StartGame() {
 
 
 void AFSDGameMode::SignalEndLevelToClients() {
+}
+
+void AFSDGameMode::SignalDonkeyPressed() {
 }
 
 void AFSDGameMode::ResetDeaths() {

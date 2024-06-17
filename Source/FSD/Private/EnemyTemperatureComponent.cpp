@@ -27,7 +27,7 @@ void UEnemyTemperatureComponent::TimerCallback() {
 void UEnemyTemperatureComponent::OnDeath(UHealthComponent* HealthComponent, float damageAmount, const FDamageData& DamageData, const TArray<UDamageTag*>& Tags) {
 }
 
-void UEnemyTemperatureComponent::DoTemperatureShock(UStatusEffectsComponent* Status) {
+void UEnemyTemperatureComponent::DoTemperatureShock(UStatusEffectsComponent* Status, AActor* Source) {
 }
 
 void UEnemyTemperatureComponent::All_IceDetonation_Implementation() {

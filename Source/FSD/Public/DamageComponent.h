@@ -83,6 +83,9 @@ protected:
     FGameplayTag FriendlyFireTag;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool CanHitSameTypeAsOwner;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool StaggerOnlyOnWeakpointHit;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

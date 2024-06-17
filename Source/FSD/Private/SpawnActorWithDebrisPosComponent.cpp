@@ -16,6 +16,10 @@ bool USpawnActorWithDebrisPosComponent::PlaceActors(int32 NumToSpawn, int32 NumT
     return false;
 }
 
+bool USpawnActorWithDebrisPosComponent::GetLocations(int32 NumToSpawn, int32 NumToSpawnMin, int32 NumAllowedChecks, TSubclassOf<AActor> SpawnedActorClass, AProceduralSetup* Setup, float Radius, UDebrisPositioning* DebrisPositioning, const TArray<FVector>& locationsToAvoid, UCurveFloat* AvoidCostCurve, TArray<FTransform>& OutLocations, FVector CustomLocation) {
+    return false;
+}
+
 void USpawnActorWithDebrisPosComponent::AddTerrainPlacement(AActor* Actor, AProceduralSetup* Setup) {
 }
 

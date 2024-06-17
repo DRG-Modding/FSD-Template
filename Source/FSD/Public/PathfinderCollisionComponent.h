@@ -16,10 +16,10 @@ public:
     
     UPathfinderCollisionComponent(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void DisablePFCollision();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void ActivatePFCollision();
     
 };

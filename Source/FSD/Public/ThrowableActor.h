@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "GameplayTagContainer.h"
 #include "ThrowableActor.generated.h"
 
 class APlayerCharacter;
@@ -16,6 +17,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_IsMoving, meta=(AllowPrivateAccess=true))
     bool IsMoving;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FGameplayTagContainer AttachToTags;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IgnoreFellOutOfWorld;

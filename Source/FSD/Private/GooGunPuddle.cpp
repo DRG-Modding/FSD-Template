@@ -15,6 +15,7 @@ AGooGunPuddle::AGooGunPuddle(const FObjectInitializer& ObjectInitializer) : Supe
     this->SpawnSound = NULL;
     this->ActiveStatusEffectTriggersMask = 0;
     this->LifeTime = 0.00f;
+    this->IsOnFire = false;
     this->CollisionOnClients = false;
     this->SphereTrigger->SetupAttachment(RootComponent);
 }
@@ -22,6 +23,9 @@ AGooGunPuddle::AGooGunPuddle(const FObjectInitializer& ObjectInitializer) : Supe
 void AGooGunPuddle::SetStatusEffect(TSubclassOf<UStatusEffect> NewStatusEffect) {
 }
 
+
+void AGooGunPuddle::OnRep_IsOnFire(bool Prev_IsOnFire) {
+}
 
 void AGooGunPuddle::OnRep_ActiveStatusEffectTriggersMask(int32 PreviousMask) {
 }
@@ -36,7 +40,7 @@ void AGooGunPuddle::OnHit(float Damage, const FDamageData& DamageData, bool anyH
 }
 
 
-void AGooGunPuddle::IgniteGoo_Implementation() {
+void AGooGunPuddle::IgniteGoo() {
 }
 
 void AGooGunPuddle::AddStatusEffect(TSubclassOf<UStatusEffect> NewStatusEffect) {
@@ -47,6 +51,7 @@ void AGooGunPuddle::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
     
     DOREPLIFETIME(AGooGunPuddle, ActiveStatusEffectTriggersMask);
     DOREPLIFETIME(AGooGunPuddle, LifeTime);
+    DOREPLIFETIME(AGooGunPuddle, IsOnFire);
 }
 
 

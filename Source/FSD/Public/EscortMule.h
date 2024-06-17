@@ -64,6 +64,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FTransform PreviousTransform;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool IsPathReady;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnObjectiveStateChanged, meta=(AllowPrivateAccess=true))
     EEscortMissionState State;
     
@@ -113,7 +116,7 @@ public:
 
 protected:
     UFUNCTION(BlueprintCallable)
-    bool TryHeal(APlayerCharacter* User, float Amount);
+    bool TryHeal(APlayerCharacter* User, float amount);
     
 public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
@@ -166,7 +169,13 @@ public:
     void ObjectiveStateChange(EEscortMissionState NewState);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool GetIsPathReady() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     EEscortExtractorState GetExtractorState(UInstantUsable* Usable) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    float GetDistanceToDoretta(FVector Location) const;
     
 protected:
     UFUNCTION(BlueprintCallable)

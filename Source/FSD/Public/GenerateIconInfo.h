@@ -42,6 +42,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool bShowCloseUp;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    FName CancelGroup;
+    
     FSD_API FGenerateIconInfo();
 };
 

@@ -42,7 +42,7 @@ UFSDSaveGame::UFSDSaveGame() {
     this->FSDGameInstance = NULL;
 }
 
-bool UFSDSaveGame::TrySellResource(UResourceData* Resource, int32 Amount, int32& Price) {
+bool UFSDSaveGame::TrySellResource(UResourceData* Resource, int32 amount, int32& Price) {
     return false;
 }
 
@@ -50,11 +50,11 @@ bool UFSDSaveGame::TryDeductResources(const TMap<UResourceData*, int32>& NewReso
     return false;
 }
 
-bool UFSDSaveGame::TryDeductCredits(int32 Amount) {
+bool UFSDSaveGame::TryDeductCredits(int32 amount) {
     return false;
 }
 
-bool UFSDSaveGame::TryBuyResource(UResourceData* Resource, int32 Amount, int32& Price) {
+bool UFSDSaveGame::TryBuyResource(UResourceData* Resource, int32 amount, int32& Price) {
     return false;
 }
 
@@ -183,7 +183,7 @@ bool UFSDSaveGame::HasSeenRetirementRewardScreen() const {
     return false;
 }
 
-bool UFSDSaveGame::HasCredits(int32 Amount) const {
+bool UFSDSaveGame::HasCredits(int32 amount) const {
     return false;
 }
 
@@ -243,11 +243,11 @@ FString UFSDSaveGame::GetSaveSlotName(int32 NewUserIdx) {
     return TEXT("");
 }
 
-int32 UFSDSaveGame::GetResourceSellingPrice(UResourceData* Resource, int32 Amount) const {
+int32 UFSDSaveGame::GetResourceSellingPrice(UResourceData* Resource, int32 amount) const {
     return 0;
 }
 
-int32 UFSDSaveGame::GetResourceBuyingPrice(UResourceData* Resource, int32 Amount) const {
+int32 UFSDSaveGame::GetResourceBuyingPrice(UResourceData* Resource, int32 amount) const {
     return 0;
 }
 
@@ -357,7 +357,7 @@ bool UFSDSaveGame::DeleteFromDisk(UFSDGameInstance* GameInstance, const FString&
     return false;
 }
 
-bool UFSDSaveGame::DeductPerkPoints(int32 Amount) {
+bool UFSDSaveGame::DeductPerkPoints(int32 amount) {
     return false;
 }
 
@@ -368,13 +368,13 @@ bool UFSDSaveGame::CanAfford(const TMap<UResourceData*, int32>& NewResources) co
     return false;
 }
 
-void UFSDSaveGame::AddPerkPoints(int32 Amount) {
+void UFSDSaveGame::AddPerkPoints(int32 amount) {
 }
 
 void UFSDSaveGame::AddGamePlayed() {
 }
 
-int32 UFSDSaveGame::AddCredits(int32 Amount) {
+int32 UFSDSaveGame::AddCredits(int32 amount) {
     return 0;
 }
 

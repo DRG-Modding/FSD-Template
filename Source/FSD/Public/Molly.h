@@ -27,6 +27,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UOutlineComponent* OutlineComponent;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float ShowButtonDelay;
+    
     UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDelegate OnReachedDropShip;
     

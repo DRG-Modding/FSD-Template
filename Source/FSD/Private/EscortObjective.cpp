@@ -45,7 +45,7 @@ void UEscortObjective::RegisterFuelCannister(AExtractorItem* extractor) {
 void UEscortObjective::RecordFailStage(bool muleDied, bool missionAborted) {
 }
 
-void UEscortObjective::OnResourceChanged(UCappedResource* CappedResource, float Amount) {
+void UEscortObjective::OnResourceChanged(UCappedResource* CappedResource, float amount) {
 }
 
 void UEscortObjective::OnRep_FullCanisters() {
@@ -67,7 +67,7 @@ void UEscortObjective::OnRep_AreasScanned(int32 prevAmount) {
 void UEscortObjective::OnHealthChanged(float Health) {
 }
 
-void UEscortObjective::OnFullCanistersChanged(int32 Amount) {
+void UEscortObjective::OnFullCanistersChanged(int32 amount) {
 }
 
 

@@ -140,7 +140,7 @@ public:
     AActor* PlaceObjectInRoom(AProceduralSetup* Setup, const FRoomNode& RoomNode, UDebrisPositioning* Positioning, TSubclassOf<AActor> placementActor, FRandomStream RandomStream, const bool checkImportantLocations);
     
     UFUNCTION(BlueprintCallable)
-    void OnResourceChanged(UCappedResource* Resource, float Amount);
+    void OnResourceChanged(UCappedResource* Resource, float amount);
     
 protected:
     UFUNCTION(BlueprintCallable)

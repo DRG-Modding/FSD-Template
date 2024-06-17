@@ -22,10 +22,22 @@ public:
     static UDLSSSupport QueryDLSSSupport();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    static UDLSSSupport QueryDLSSRRSupport();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsDLSSSupported();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    static bool IsDLSSRRSupported();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    static bool IsDLSSRREnabled();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsDLSSModeSupported(UDLSSMode DLSSMode);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    static bool IsDLSSEnabled();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsDLAAEnabled();
@@ -40,6 +52,9 @@ public:
     static void GetDLSSScreenPercentageRange(float& MinScreenPercentage, float& MaxScreenPercentage);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    static void GetDLSSRRMinimumDriverVersion(int32& MinDriverVersionMajor, int32& MinDriverVersionMinor);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static void GetDLSSModeInformation(UDLSSMode DLSSMode, FVector2D ScreenResolution, bool& bIsSupported, float& OptimalScreenPercentage, bool& bIsFixedScreenPercentage, float& MinScreenPercentage, float& MaxScreenPercentage, float& OptimalSharpness);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -50,6 +65,12 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static UDLSSMode GetDefaultDLSSMode();
+    
+    UFUNCTION(BlueprintCallable)
+    static void EnableDLSSRR(bool bEnabled);
+    
+    UFUNCTION(BlueprintCallable)
+    static void EnableDLSS(bool bEnabled);
     
     UFUNCTION(BlueprintCallable)
     static void EnableDLAA(bool bEnabled);

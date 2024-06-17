@@ -50,6 +50,9 @@ protected:
     UFXSystemAsset* ImpactParticles;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UFXSystemAsset* MeleeImpactParticles;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInstance* ImpactMaterialOverride;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -80,7 +83,7 @@ protected:
     float DamageMultiplier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UFXSystemAsset* FootstepParticle;
+    UFXSystemAsset* FootStepParticle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInstance* FootstepMaterialOverride;
@@ -92,7 +95,7 @@ protected:
     FDecalData RightFootprintDecal;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USoundCue* FootstepSound;
+    USoundCue* FootStepSound;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ExtraFallVelocity;

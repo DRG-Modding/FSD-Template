@@ -13,13 +13,13 @@ USTRUCT(BlueprintType)
 struct FLightStrobeChannel {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UPointLightComponent> Light;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UMaterialInstanceDynamic> Mid;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UMeshComponent> Mesh;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -41,13 +41,13 @@ public:
     FRuntimeFloatCurve StrobingCurve;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 Loops;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EStrobingMode Mode;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EStrobeMaterialMode MaterialMode;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 Loops;
     
     FSD_API FLightStrobeChannel();
 };

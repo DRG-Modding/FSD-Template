@@ -29,16 +29,19 @@ public:
     static bool IsEnemyAlertet(APawn* enemy);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    static APlayerCharacter* GetPlayerTarget(AActor* From, float MaxDistance, bool MustBeAlive, bool MustBeUnparalyzed, bool accountForAttackers, AActor* ignoreTarget, bool IsFlying);
+    static APlayerCharacter* GetPlayerTarget(AActor* from, float MaxDistance, bool MustBeAlive, bool MustBeUnparalyzed, bool accountForAttackers, AActor* ignoreTarget, bool IsFlying);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    static bool GetAttackableTargetsInRange(AActor* From, TArray<UAttackerPositioningComponent*>& outArray, float MaxDistance, bool MustBeAlive, bool MustBeUnparalyzed, bool accountForAttackers, AActor* ignoreTarget, bool IsFlying);
+    static bool GetAttackableTargetsInRange(AActor* from, TArray<UAttackerPositioningComponent*>& outArray, float MaxDistance, bool MustBeAlive, bool MustBeUnparalyzed, bool accountForAttackers, AActor* ignoreTarget, bool IsFlying);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    static UAttackerPositioningComponent* GetAttackableTarget(AActor* From, float MaxDistance, bool MustBeAlive, bool MustBeUnparalyzed, bool accountForAttackers, AActor* ignoreTarget, bool IsFlying);
+    static UAttackerPositioningComponent* GetAttackableTarget(AActor* from, float MaxDistance, bool MustBeAlive, bool MustBeUnparalyzed, bool accountForAttackers, AActor* ignoreTarget, bool IsFlying);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    static APlayerCharacter* ConsiderChangingTarget(APlayerCharacter* CurrentTarget, AActor* From, float MaxDistance, bool MustBeAlive, bool MustBeUnparalyzed, bool CurrentTargetMustBeAlive, bool IsFlying);
+    static APlayerCharacter* ConsiderChangingTarget_WithLineOfSight(APlayerCharacter* CurrentTarget, AActor* from, float MaxDistance, FName TraceSocketName, bool MustBeAlive, bool MustBeUnparalyzed, bool CurrentTargetMustBeAlive, bool IsFlying);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    static APlayerCharacter* ConsiderChangingTarget(APlayerCharacter* CurrentTarget, AActor* from, float MaxDistance, bool MustBeAlive, bool MustBeUnparalyzed, bool CurrentTargetMustBeAlive, bool IsFlying);
     
     UFUNCTION(BlueprintCallable)
     static void AlertEnemy(APawn* enemy);

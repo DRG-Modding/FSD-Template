@@ -3,13 +3,17 @@
 #include "TreasureRewarder.h"
 #include "SkinTreasureRewarder.generated.h"
 
+class UItemAquisitionSource;
 class UItemID;
 class UItemSkin;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class USkinTreasureRewarder : public UTreasureRewarder {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UItemAquisitionSource* AquisitionSource;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UItemSkin* GivenSkin;
     

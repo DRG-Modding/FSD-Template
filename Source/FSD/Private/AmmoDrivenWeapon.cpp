@@ -62,6 +62,7 @@ AAmmoDrivenWeapon::AAmmoDrivenWeapon(const FObjectInitializer& ObjectInitializer
     this->EndOfBurstRecoilMultiplier = 1.00f;
     this->HasAutomaticFire = false;
     this->IsFiring = false;
+    this->EjectCasingOnFire = true;
     this->ManualHeatReductionOnReload = false;
     this->MaxManualHeatReductionCharges = 0;
     this->ManualHeatReductionValue = 0.00f;
@@ -75,7 +76,7 @@ void AAmmoDrivenWeapon::UpdateHoldToFire() {
 void AAmmoDrivenWeapon::Server_StopReload_Implementation(float BlendOutTime) {
 }
 
-void AAmmoDrivenWeapon::Server_ReloadWeapon_Implementation() {
+void AAmmoDrivenWeapon::Server_ReloadWeapon_Implementation(float CurrentReloadDuration) {
 }
 
 void AAmmoDrivenWeapon::Server_PlayBurstFire_Implementation(uint8 shotCount) {
@@ -84,7 +85,7 @@ void AAmmoDrivenWeapon::Server_PlayBurstFire_Implementation(uint8 shotCount) {
 void AAmmoDrivenWeapon::Server_Gunsling_Implementation(uint8 Index) {
 }
 
-void AAmmoDrivenWeapon::ResupplyAmmo(int32 Amount) {
+void AAmmoDrivenWeapon::ResupplyAmmo(int32 amount) {
 }
 
 
@@ -100,6 +101,9 @@ void AAmmoDrivenWeapon::OnWeaponFired(const FVector& Location) {
 void AAmmoDrivenWeapon::OnRicochet(const FVector& Origin, const FVector& Location, const FVector& Normal) {
 }
 
+void AAmmoDrivenWeapon::OnRep_ManualHeatReductionAmmo() const {
+}
+
 void AAmmoDrivenWeapon::OnRep_IsFiring() {
 }
 
@@ -110,6 +114,9 @@ bool AAmmoDrivenWeapon::IsClipFull() const {
 void AAmmoDrivenWeapon::InstantlyReload() {
 }
 
+void AAmmoDrivenWeapon::EjectCasing() {
+}
+
 
 void AAmmoDrivenWeapon::Client_RefillAmmo_Implementation(float percentage) {
 }
@@ -117,7 +124,7 @@ void AAmmoDrivenWeapon::Client_RefillAmmo_Implementation(float percentage) {
 void AAmmoDrivenWeapon::All_StopReload_Implementation(float BlendOutTime) {
 }
 
-void AAmmoDrivenWeapon::All_StartReload_Implementation() {
+void AAmmoDrivenWeapon::All_StartReload_Implementation(float CurrentReloadDuration) {
 }
 
 void AAmmoDrivenWeapon::All_PlayBurstFire_Implementation(uint8 shotCount) {

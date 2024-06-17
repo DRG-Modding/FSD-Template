@@ -8,10 +8,13 @@ UGatheItemsObjective::UGatheItemsObjective(const FObjectInitializer& ObjectIniti
     this->ItemResource = NULL;
 }
 
-void UGatheItemsObjective::OnResourceChanged(UCappedResource* CappedResource, float Amount) {
+void UGatheItemsObjective::OnResourceChanged(UCappedResource* CappedResource, float amount) {
 }
 
 void UGatheItemsObjective::OnRep_ItemsCollected(int32 prevAmount) {
+}
+
+void UGatheItemsObjective::AddItemCollected(int32 Count) {
 }
 
 void UGatheItemsObjective::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

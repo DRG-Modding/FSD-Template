@@ -1,11 +1,14 @@
 #include "FSDReverbVolume.h"
-#include "Components/SphereComponent.h"
+#include "Components/BoxComponent.h"
 
 AFSDReverbVolume::AFSDReverbVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    this->RootComponent = CreateDefaultSubobject<USphereComponent>(TEXT("Collision"));
-    this->Collision = (USphereComponent*)RootComponent;
+    this->RootComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("Collision"));
+    this->BoxCollision = (UBoxComponent*)RootComponent;
     this->Reverb = NULL;
-    this->Priority = 0.00f;
+    this->SoundMix = NULL;
+    this->Ambient = NULL;
+    this->AmbientInstance = NULL;
+    this->Priority = 100.00f;
 }
 
 

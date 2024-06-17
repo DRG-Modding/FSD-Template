@@ -17,6 +17,7 @@ class UCurveFloat;
 class UParticleSystem;
 class UParticleSystemComponent;
 class UPlayerDamageTakenMutator;
+class USharedHealthMutator;
 class UStatusEffect;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -98,6 +99,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float IronWillTimeToActivate;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    USharedHealthMutator* SharedHealthMutator;
     
 public:
     UPlayerHealthComponent(const FObjectInitializer& ObjectInitializer);

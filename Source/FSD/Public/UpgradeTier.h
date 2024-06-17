@@ -9,7 +9,7 @@ struct FUpgradeTier {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<UItemUpgrade*> upgrades;
+    TArray<UItemUpgrade*> Upgrades;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 RequiredCharacterLevel;

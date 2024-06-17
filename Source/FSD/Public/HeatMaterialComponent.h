@@ -24,7 +24,7 @@ public:
 
 protected:
     UFUNCTION(BlueprintCallable)
-    void OnTemperatureChanged(float Temperature, bool overHeated);
+    void OnTemperatureChanged(float temperature, bool overheated);
     
 public:
     UFUNCTION(BlueprintCallable)

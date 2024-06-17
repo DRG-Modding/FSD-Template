@@ -13,7 +13,7 @@ ATerminatorTentacle::ATerminatorTentacle(const FObjectInitializer& ObjectInitial
     this->GrabberComponent = CreateDefaultSubobject<UGrabberComponent>(TEXT("Grabber"));
 }
 
-void ATerminatorTentacle::PlayHitReaction(float Amount) {
+void ATerminatorTentacle::PlayHitReaction(float amount) {
 }
 
 

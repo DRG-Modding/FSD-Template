@@ -21,7 +21,7 @@ void USaveGameStateComponent::Server_SetLoadout_Implementation(const FItemLoadou
 void USaveGameStateComponent::Server_SetEquippedPerks_Implementation(const TArray<FSaveGameStatePerkItem>& perks) {
 }
 
-void USaveGameStateComponent::Server_SetCredits_Implementation(const int32 Amount) {
+void USaveGameStateComponent::Server_SetCredits_Implementation(const int32 amount) {
 }
 
 void USaveGameStateComponent::Server_SetCharacterStats_Implementation(const TArray<FCharacterProgress>& Stats) {

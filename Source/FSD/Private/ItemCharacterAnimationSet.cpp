@@ -42,6 +42,8 @@ UItemCharacterAnimationSet::UItemCharacterAnimationSet() {
     this->TP_Revived = NULL;
     this->TP_Downed = NULL;
     this->TP_Downed_Loop = NULL;
+    this->FP_Salute = NULL;
+    this->TP_Salute = NULL;
     this->CameraOffset = 0.00f;
     this->ParentSet = NULL;
 }

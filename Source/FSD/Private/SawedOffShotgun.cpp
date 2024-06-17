@@ -10,8 +10,6 @@ ASawedOffShotgun::ASawedOffShotgun(const FObjectInitializer& ObjectInitializer) 
     this->ShotgunJumpForce = 4000.00f;
     this->ShockwaveEnabled = false;
     this->ShockWaveDistance = 250.00f;
-    this->ShockWaveRadius = 100.00f;
-    this->ShockWaveLength = 200.00f;
 }
 
 void ASawedOffShotgun::SetShockWaveDamageComponent(UDamageComponent* Component) {

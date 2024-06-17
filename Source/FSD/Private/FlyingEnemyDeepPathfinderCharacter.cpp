@@ -4,7 +4,7 @@ AFlyingEnemyDeepPathfinderCharacter::AFlyingEnemyDeepPathfinderCharacter(const F
     this->FrozenMaterial = NULL;
     this->FrozenAsset = NULL;
     this->FrozenDeathSound = NULL;
-    this->FrozenDeathparticles = NULL;
+    this->FrozenDeathParticles = NULL;
 }
 
 void AFlyingEnemyDeepPathfinderCharacter::TriggerFrozenRagdoll() {

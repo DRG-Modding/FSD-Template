@@ -13,7 +13,7 @@ USimpleHealthComponent::USimpleHealthComponent(const FObjectInitializer& ObjectI
 void USimpleHealthComponent::OnRep_Damage(float oldDamage) {
 }
 
-float USimpleHealthComponent::HealFromDeath(float Amount) {
+float USimpleHealthComponent::HealFromDeath(float amount) {
     return 0.0f;
 }
 

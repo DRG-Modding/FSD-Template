@@ -14,6 +14,7 @@ UDamageComponent::UDamageComponent(const FObjectInitializer& ObjectInitializer) 
     this->FrozenDamageBonusScale = 1.00f;
     this->FriendlyFireModifier = 1.00f;
     this->SelfFriendlyFireMultiplier = 1.00f;
+    this->CanHitSameTypeAsOwner = true;
     this->StaggerOnlyOnWeakpointHit = false;
     this->StaggerChance = 0.00f;
     this->StaggerDuration = 1.50f;

@@ -9,6 +9,8 @@ UEnemySpawnManager::UEnemySpawnManager(const FObjectInitializer& ObjectInitializ
     this->MaxDistanceBeforeCleanup = 0.00f;
     this->ProceduralSetup = NULL;
     this->bDestroyingAllEnemies = false;
+    this->EliteMutator = NULL;
+    this->DifficultyManager = NULL;
 }
 
 void UEnemySpawnManager::SpawnerDestroyed(APawn* Actor) {

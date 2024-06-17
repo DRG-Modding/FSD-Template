@@ -67,7 +67,7 @@ public:
     void SendEndMissionResult(const FEndMissionResult& Result);
     
     UFUNCTION(BlueprintCallable)
-    void OnResourceMined(UCappedResource* Resource, float Amount);
+    void OnResourceMined(UCappedResource* Resource, float amount);
     
 protected:
     UFUNCTION(BlueprintCallable)

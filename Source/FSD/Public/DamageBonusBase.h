@@ -13,6 +13,9 @@ class UDamageBonusBase : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool UseBaseDamage;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDamageCondition* Condition;
     

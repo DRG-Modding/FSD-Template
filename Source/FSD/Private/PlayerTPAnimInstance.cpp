@@ -19,9 +19,9 @@ UPlayerTPAnimInstance::UPlayerTPAnimInstance() {
     this->TurnProgress = 0.00f;
     this->HasPickedUpItem = false;
     this->IsLyingDownNoTransition = false;
-    this->DanceMove = 0;
+    this->danceMove = 0;
     this->DanceSequence = NULL;
-    this->IsDancing = false;
+    this->isDancing = false;
     this->PickedUpItemBlend = 0.00f;
     this->AttachedBodyTurnFactor = 0.50f;
     this->AttachedHeadTurnFactor = 0.50f;

@@ -5,6 +5,7 @@ UImpactAudioComponent::UImpactAudioComponent(const FObjectInitializer& ObjectIni
     this->AudioParameterSpeed = TEXT("Impact_Speed");
     this->DecelerationThreshold = 40.00f;
     this->ListenForDeath = true;
+    this->ParentHealth = NULL;
 }
 
 void UImpactAudioComponent::OnOwnerDeath(UHealthComponentBase* HealthComponent) {

@@ -11,6 +11,9 @@ class ADrinkableActor : public AActor {
     GENERATED_BODY()
 public:
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_BarSlotIndex, meta=(AllowPrivateAccess=true))
+    int32 BarSlotIndex;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_DrinkableData, meta=(AllowPrivateAccess=true))
     UDrinkableDataAsset* DrinkableData;
     
@@ -25,6 +28,9 @@ public:
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnRep_DrinkableData();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnRep_BarSlotIndex();
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

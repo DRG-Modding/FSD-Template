@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "DelegateDelegate.h"
 #include "OnStartBurningDelegate.h"
 #include "TemperatureComponent.h"
 #include "ObjectTemperatureComponent.generated.h"
@@ -14,11 +15,17 @@ public:
     FOnStartBurning OnStartBurning;
     
 protected:
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FDelegate OnFrozenServer;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TemperatureChangeScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BurnTemperature;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float FreezeTemperature;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DouseFireTemperature;

@@ -1,4 +1,5 @@
 #include "ObjectivesManager.h"
+#include "Templates/SubclassOf.h"
 
 UObjectivesManager::UObjectivesManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Objective = NULL;
@@ -23,6 +24,10 @@ UObjective* UObjectivesManager::GetSecondaryObjective() const {
 }
 
 UObjective* UObjectivesManager::GetPrimaryObjective() const {
+    return NULL;
+}
+
+UObjective* UObjectivesManager::FindSecondaryObjective(TSubclassOf<UObjective> objectiveClass) const {
     return NULL;
 }
 

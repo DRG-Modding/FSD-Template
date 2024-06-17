@@ -24,7 +24,7 @@ public:
 
 protected:
     UFUNCTION(BlueprintCallable)
-    void OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial);
+    void OnTargetDamaged(UHealthComponentBase* Health, float amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial);
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

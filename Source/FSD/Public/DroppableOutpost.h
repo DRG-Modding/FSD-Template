@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "GameFramework/Actor.h"
 #include "EDroppableOutpostState.h"
+#include "TaggedActor.h"
 #include "Templates/SubclassOf.h"
 #include "DroppableOutpost.generated.h"
 
@@ -12,7 +12,7 @@ class UCurveFloat;
 class UObject;
 
 UCLASS(Blueprintable)
-class FSD_API ADroppableOutpost : public AActor {
+class FSD_API ADroppableOutpost : public ATaggedActor {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

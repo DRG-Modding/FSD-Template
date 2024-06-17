@@ -14,14 +14,17 @@
 #include "EnemyKilledDelegateDelegate.h"
 #include "FSDChatMessage.h"
 #include "FSDLocalizedChatMessage.h"
+#include "GameDifficulty.h"
 #include "GameEventCompletedDelegateDelegate.h"
 #include "GeneratedMissionSeed.h"
+#include "GlobalMissionSeed.h"
 #include "Int32DelegateEventDelegate.h"
 #include "ObjectivesDelegateDelegate.h"
 #include "PlayerCharacterDelegateDelegate.h"
 #include "PlayerDelegateDelegate.h"
 #include "ReplicatedObjectives.h"
 #include "ScaledEffect.h"
+#include "Templates/SubclassOf.h"
 #include "FSDGameState.generated.h"
 
 class ADeepCSGWorld;
@@ -234,7 +237,7 @@ protected:
     bool objectivesCompleted;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CurrentDifficultySetting, meta=(AllowPrivateAccess=true))
-    UDifficultySetting* CurrentDifficultySetting;
+    FGameDifficulty CurrentDifficultySetting;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool RememberDifficulty;
@@ -282,7 +285,7 @@ protected:
     FText countdownText;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
-    int32 HostGlobalSeed;
+    FGlobalMissionSeed HostGlobalSeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool CanCarryOverResources;
@@ -437,9 +440,6 @@ public:
     TArray<FCreditsReward> GetMissionRewardCredits() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    bool GetMissionCompletedCreditReward(bool Primary, int32& OutReward) const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetGlobalMissionSeed() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -452,10 +452,19 @@ public:
     UDifficultyManager* GetDifficultyManager() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    FGameDifficulty GetCurrentGameDifficulty() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UDifficultySetting* GetCurrentDifficultySetting() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TMap<UResourceData*, float> GetCollectedResources() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UFSDEvent*> GetActiveEventsFromMission() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    UObjective* FindObjective(TSubclassOf<UObjective> SubClass) const;
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void ClientNewMessage(const FFSDChatMessage& Msg);
@@ -473,7 +482,7 @@ public:
     void All_SpawnScaledEffectAt(FScaledEffect Effect, FVector_NetQuantize Location);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
-    void All_SpawnScaledEffectAndCueAt(FScaledEffect Effect, USoundCue* audio, FVector_NetQuantize Location);
+    void All_SpawnScaledEffectAndCueAt(FScaledEffect Effect, USoundCue* Audio, FVector_NetQuantize Location);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void All_ServerQuit();

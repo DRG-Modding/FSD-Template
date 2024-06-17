@@ -74,10 +74,6 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Plugins/Runtime/WebBrowserWidget/WebBrowserWidget.uplugin",
-			"Type": "UFS"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/Media/MfMedia/MfMedia.uplugin",
 			"Type": "UFS"
 		},
@@ -170,10 +166,6 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Plugins/Runtime/Nvidia/Reflex/Reflex.uplugin",
-			"Type": "UFS"
-		},
-		{
 			"Path": "$(ProjectDir)/Plugins/DSTelemetry/DSTelemetry.uplugin",
 			"Type": "UFS"
 		},
@@ -191,6 +183,10 @@
 		},
 		{
 			"Path": "$(ProjectDir)/Plugins/DiscordSDK/DiscordSDK.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/EnginePlugins/Runtime/Nvidia/Streamline/Streamline.uplugin",
 			"Type": "UFS"
 		},
 		{
@@ -1642,10 +1638,6 @@
 			"Type": "DebugNonUFS"
 		},
 		{
-			"Path": "$(EngineDir)/Binaries/Win64/UnrealCEFSubProcess.exe",
-			"Type": "NonUFS"
-		},
-		{
 			"Path": "$(EngineDir)/Binaries/ThirdParty/Steamworks/Steamv151/Win64/steam_api64.dll",
 			"Type": "NonUFS"
 		},
@@ -1759,274 +1751,6 @@
 		},
 		{
 			"Path": "$(EngineDir)/Binaries/ThirdParty/Windows/XAudio2_9/x64/xaudio2_9redist.dll",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/chrome_elf.dll",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/d3dcompiler_43.dll",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/d3dcompiler_47.dll",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/libcef.dll",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/libEGL.dll",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/libGLESv2.dll",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/icudtl.dat",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/natives_blob.bin",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/snapshot_blob.bin",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/cef.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/cef_100_percent.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/cef_200_percent.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/cef_extensions.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/devtools_resources.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/am.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/ar.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/bg.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/bn.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/ca.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/cs.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/da.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/de.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/el.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/en-GB.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/en-US.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/es-419.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/es.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/et.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/fa.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/fi.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/fil.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/fr.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/gu.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/he.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/hi.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/hr.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/hu.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/id.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/it.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/ja.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/kn.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/ko.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/lt.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/lv.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/ml.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/mr.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/ms.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/nb.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/nl.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/pl.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/pt-BR.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/pt-PT.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/ro.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/ru.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/sk.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/sl.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/sr.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/sv.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/sw.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/ta.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/te.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/th.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/tr.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/uk.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/vi.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/zh-CN.pak",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/CEF3/Win64/Resources/locales/zh-TW.pak",
 			"Type": "NonUFS"
 		}
 	],

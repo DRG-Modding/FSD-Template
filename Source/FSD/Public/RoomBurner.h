@@ -4,16 +4,20 @@
 #include "GameplayTagContainer.h"
 #include "ERoomMirror.h"
 #include "ERoomMirroringSupport.h"
+#include "Templates/SubclassOf.h"
 #include "RoomBurner.generated.h"
 
 class ADeepCSGWorld;
 class AProceduralSetup;
 class UBiome;
+class UDifficultyMutatorSetupItem;
 class UDifficultySetting;
 class UEnemyDescriptor;
+class UMissionChallenge;
 class UMissionMutator;
 class UMissionTemplate;
 class UMissionWarning;
+class UObjective;
 class URoomGenerator;
 class USpecialEvent;
 
@@ -53,6 +57,9 @@ protected:
     UDifficultySetting* Difficulty;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TMap<UDifficultyMutatorSetupItem*, int32> Haz5Mutators;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ForcePlayerCount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -68,16 +75,16 @@ protected:
     bool SpawnEncounters;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UEnemyDescriptor* TestEnemy;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 TestEnemyCount;
+    TMap<UEnemyDescriptor*, int32> TestEnemies;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMissionMutator* TestMutator;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UMissionWarning*> TestWarnings;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UMissionChallenge* TestChallenge;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USpecialEvent* TestSpecialEvent;
@@ -90,6 +97,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMissionTemplate* CustomMissionTemplate;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UObjective> TestObjective;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ADeepCSGWorld* CSGWorld;

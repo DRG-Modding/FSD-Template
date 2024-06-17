@@ -4,14 +4,14 @@
 
 ACrossbowProjectileStuck::ACrossbowProjectileStuck(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RootComponent = CreateDefaultSubobject<USphereComponent>(TEXT("Root"));
-    this->BansheePulseEnabled = false;
-    this->RecallComponent = NULL;
-    this->BansheeComponent = NULL;
     this->StuckProjectileEffect = ECrossbowStuckType::Default;
+    this->BansheePulseEnabled = false;
     this->IsPlayingElectricRangeEffect = true;
     this->AppliedEffect = NULL;
     this->StatusEffectTime = 0.00f;
     this->AttachmentRoot = (USphereComponent*)RootComponent;
+    this->RecallComponent = NULL;
+    this->BansheeComponent = NULL;
     this->BansheePulseComponent = NULL;
     this->LaserCollider = NULL;
     this->BaseProjectile = NULL;

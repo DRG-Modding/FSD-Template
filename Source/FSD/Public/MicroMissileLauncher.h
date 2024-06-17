@@ -2,8 +2,10 @@
 #include "CoreMinimal.h"
 #include "AmmoDrivenWeapon.h"
 #include "EMicroMissileLauncherFireMode.h"
+#include "Templates/SubclassOf.h"
 #include "MicroMissileLauncher.generated.h"
 
+class AProjectile;
 class UAnimMontage;
 class USoundCue;
 
@@ -71,6 +73,15 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* ChargedMissileFireSound;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool TriggerClusterActive;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float TriggerClusterHoldDuration;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FText TriggerClusterHoldDescription;
+    
 public:
     AMicroMissileLauncher(const FObjectInitializer& ObjectInitializer);
 
@@ -81,14 +92,25 @@ protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetChargedMissile(bool isCharged);
     
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnTriggerCluster();
+    
 public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsNextShotBuckShot();
     
+protected:
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    AProjectile* GetFirstActiveProjectileOfType(TSubclassOf<AProjectile> Class) const;
+    
+public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetChargeCurrentFireCount();
     
 protected:
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    void GetActiveProjectiles(TArray<AProjectile*>& ActiveProjectiles) const;
+    
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void All_SetChargedMissile(bool isCharged);
     

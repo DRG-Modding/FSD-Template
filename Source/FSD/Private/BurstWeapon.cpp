@@ -6,7 +6,7 @@ ABurstWeapon::ABurstWeapon(const FObjectInitializer& ObjectInitializer) : Super(
     this->BurstFireBonusDamage = CreateDefaultSubobject<UDamageComponent>(TEXT("BurstFireDamageBonus"));
 }
 
-void ABurstWeapon::OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial) {
+void ABurstWeapon::OnTargetDamaged(UHealthComponentBase* Health, float amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial) {
 }
 
 

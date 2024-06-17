@@ -1,10 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EMissionStructure.h"
+#include "GlobalMissionSeed.h"
 #include "GeneratedMissionSeed.generated.h"
 
 class UBiome;
 class UFSDEvent;
+class UMissionChallenge;
 class UMissionComplexity;
 class UMissionDuration;
 class UMissionMutator;
@@ -19,7 +21,7 @@ public:
     int32 Seed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    int32 GlobalSeed;
+    FGlobalMissionSeed GlobalSeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UBiome* Biome;
@@ -35,6 +37,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UMissionMutator* Mutator;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UMissionChallenge* Challenge;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UMissionWarning*> Warnings;

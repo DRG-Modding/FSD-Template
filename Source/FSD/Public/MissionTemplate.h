@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "GlobalMissionSeed.h"
 #include "ObjectiveMissionIcon.h"
 #include "ResourceSpawner.h"
 #include "SavableDataAsset.h"
@@ -13,7 +14,9 @@ class AProceduralSetup;
 class UBiome;
 class UDebrisActorComponent;
 class UFSDSaveGame;
+class UGemResourceData;
 class UGeneratedMission;
+class UMissionChallenge;
 class UMissionComplexity;
 class UMissionDNA;
 class UMissionDuration;
@@ -146,7 +149,7 @@ public:
     UTexture2D* GetMissionButtonImage() const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
-    UGeneratedMission* GenerateMission(const UObject* WorldContextObject, UBiome* Biome, int32 Seed, int32 GlobalSeed, int32 missionIndex, UMissionComplexity* limitComplexity, UMissionDuration* limitDuration, UMissionMutator* Mutator, TArray<UMissionWarning*> Warnings, TArray<TSubclassOf<UObjective>> forceSecondary);
+    UGeneratedMission* GenerateMission(const UObject* WorldContextObject, UBiome* Biome, int32 Seed, const FGlobalMissionSeed& GlobalSeed, UMissionComplexity* limitComplexity, UMissionDuration* limitDuration, UMissionMutator* Mutator, TArray<UMissionWarning*> Warnings, UMissionChallenge* Challenge, TArray<TSubclassOf<UObjective>> forceSecondary, UGemResourceData* forcedGem);
     
 };
 

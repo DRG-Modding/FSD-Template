@@ -4,6 +4,7 @@
 #include "EyeBrowsVanityItem.generated.h"
 
 class USkeletalMesh;
+class UTagVanityEyebrows;
 class UVanityAnimInstance;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -16,6 +17,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftClassPtr<UVanityAnimInstance> AnimInstance;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSet<UTagVanityEyebrows*> VanityTags;
     
 public:
     UEyeBrowsVanityItem();

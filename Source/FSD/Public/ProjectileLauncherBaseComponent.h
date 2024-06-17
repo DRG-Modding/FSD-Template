@@ -53,7 +53,7 @@ protected:
     void Server_StopFire();
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_Fire(FVector Origin, FVector_NetQuantizeNormal Direction, FVector_NetQuantizeNormal initialBonusVelocity, AProjectileBase* DormentProjectile, bool notifyClients);
+    void Server_Fire(FTransform Transform, FVector_NetQuantizeNormal initialBonusVelocity, AProjectileBase* DormentProjectile, bool notifyClients);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_ShowHit();

@@ -25,10 +25,10 @@ protected:
 public:
     UDrinkEffectComponent(const FObjectInitializer& ObjectInitializer);
 
-protected:
     UFUNCTION(BlueprintCallable)
     void StopEffect();
     
+protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnStopEffect();
     

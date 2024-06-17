@@ -10,7 +10,7 @@ struct FGrabAvoidClassEntry {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<AActor> ActorClass;
+    TSubclassOf<AActor> actorClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DistanceToKeep;

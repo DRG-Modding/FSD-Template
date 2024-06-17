@@ -14,5 +14,7 @@ enum class EBoltActionRifleUpgrades : uint8 {
     KillReloadTimeBoost,
     AimedShotWeakpointDamageBonusMultiplier,
     AimedShotAmmoCost,
+    RateOfFireHipFireModifier,
+    ChargeSpeedModifier,
 };
 

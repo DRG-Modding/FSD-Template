@@ -13,7 +13,7 @@ bool UWeakpointGlowComponent::StopLoopingGlow(int32 aGlowID, bool aFade) {
     return false;
 }
 
-void UWeakpointGlowComponent::ShowBodypartHit(float Amount, float BaseAmount, const FDamageData& DamageData) {
+void UWeakpointGlowComponent::ShowBodypartHit(float amount, float BaseAmount, const FDamageData& DamageData) {
 }
 
 void UWeakpointGlowComponent::SetUpWeakPointGlowOnMeshByBone(USkeletalMeshComponent*& Mesh, int32 MaterialIndex, FName Bone, UHealthComponentBase* HealthComponent) {

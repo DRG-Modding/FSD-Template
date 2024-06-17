@@ -142,7 +142,7 @@ int32 AProceduralSetup::CreateItemDepths() {
 void AProceduralSetup::CreateGeneratedInfluenceSet() {
 }
 
-int32 AProceduralSetup::ConnectRooms(FRoomNode& From, FRoomNode& To, bool hasDirt, UTunnelParameters* tunnelParameterOverride) {
+int32 AProceduralSetup::ConnectRooms(FRoomNode& from, FRoomNode& to, bool hasDirt, UTunnelParameters* tunnelParameterOverride) {
     return 0;
 }
 

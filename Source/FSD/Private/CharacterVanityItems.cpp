@@ -1,13 +1,6 @@
 #include "CharacterVanityItems.h"
 
 UCharacterVanityItems::UCharacterVanityItems() {
-    this->HeadSchematicBank = NULL;
-    this->BeardSchematicBank = NULL;
-    this->EyebrowSchematicBank = NULL;
-    this->MoustacheSchematicBank = NULL;
-    this->SideburnSchematicBank = NULL;
-    this->BeardMaterialSchematicBank = NULL;
-    this->SkinMaterialSchematicBank = NULL;
     this->OwningCharacter = NULL;
 }
 
@@ -36,6 +29,10 @@ TArray<UVanityItem*> UCharacterVanityItems::GetItems(EVanitySlot Slot, bool only
 
 UVanityItem* UCharacterVanityItems::GetDefaultVanityItem(UObject* WorldContext, EVanitySlot Slot, UPlayerCharacterID* characterID) {
     return NULL;
+}
+
+bool UCharacterVanityItems::DoesVanitySlotAllowStyleTags(EVanitySlot Slot) {
+    return false;
 }
 
 

@@ -23,8 +23,8 @@ USpiderAnimInstance::USpiderAnimInstance() {
     this->IsStaggered = false;
     this->StaggerStrength = 1.00f;
     this->IsAirborne = false;
-    this->FootstepParticle = NULL;
-    this->FootstepSound = NULL;
+    this->FootStepParticle = NULL;
+    this->FootStepSound = NULL;
     this->FootStepParticleCullDistance = 1000.00f;
     this->RandomWalkCycleIndex = 0;
     this->TurnToIdle = false;
@@ -33,6 +33,7 @@ USpiderAnimInstance::USpiderAnimInstance() {
     this->TurnToWalk = false;
     this->WalkToTurnRight = false;
     this->WalkToTurnLeft = false;
+    this->ExclusiveTurnStateMode = false;
     this->IsInFakePhysics = false;
     this->DeathAnimationCategory = ESpiderDeathAnimationCategory::NoAnimation;
 }

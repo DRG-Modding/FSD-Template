@@ -22,6 +22,7 @@ UPlayerHealthComponent::UPlayerHealthComponent(const FObjectInitializer& ObjectI
     this->IronWillStatusEffect = NULL;
     this->IronWillActive = false;
     this->IronWillTimeToActivate = 0.00f;
+    this->SharedHealthMutator = NULL;
 }
 
 UStatusEffect* UPlayerHealthComponent::SetIronWillStatusEffect(TSubclassOf<UStatusEffect> steClass) {

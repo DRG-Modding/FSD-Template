@@ -1,6 +1,7 @@
 #include "FSDPlayerController.h"
 #include "FSDCheatManager.h"
 #include "FSDWidgetEffectsComponent.h"
+#include "Net/UnrealNetwork.h"
 #include "PerkUsageComponent.h"
 #include "Templates/SubclassOf.h"
 #include "TerrainLatejoinComponent.h"
@@ -8,6 +9,10 @@
 AFSDPlayerController::AFSDPlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->CheatClass = UFSDCheatManager::StaticClass();
     this->ClickEventKeys.AddDefaulted(1);
+    this->DebugEnemy = NULL;
+    this->DebugEnemySpeed = -1.00f;
+    this->DebugEnemySpeedMod = -1.00f;
+    this->DebugEnemyLast = NULL;
     this->PerkUsageComponent = CreateDefaultSubobject<UPerkUsageComponent>(TEXT("PerkUsageCompent"));
     this->LateJoinComponent = CreateDefaultSubobject<UTerrainLatejoinComponent>(TEXT("TerrainLateJoin"));
     this->IsOnSpaceRig = false;
@@ -61,6 +66,9 @@ void AFSDPlayerController::Server_SetGenerationDone_Implementation() {
 void AFSDPlayerController::Server_SetExtraEndScreenTime_Implementation(float extraTime) {
 }
 
+void AFSDPlayerController::Server_SetDebugEnemy_Implementation(ADeepPathfinderCharacter* NewDebugEnemy) {
+}
+
 void AFSDPlayerController::Server_SetControllerReady_Implementation() {
 }
 
@@ -93,6 +101,9 @@ void AFSDPlayerController::OnSaveGameCreditsChanged(int32 Credits) {
 }
 
 void AFSDPlayerController::OnSaveGameCharacterProgressChanged(TSubclassOf<APlayerCharacter> CharacterClass, int32 Level, float Progress) {
+}
+
+void AFSDPlayerController::OnRep_DebugEnemyLocation() {
 }
 
 void AFSDPlayerController::OnPlayerStateSelectedCharacterChanged(TSubclassOf<APlayerCharacter> CharacterClass) {
@@ -145,10 +156,19 @@ void AFSDPlayerController::Client_CollectVanityItem_Implementation(UTreasureRewa
 void AFSDPlayerController::Client_CollectTreasureVictoryPose_Implementation(UTreasureRewarder* rewarder, UVictoryPose* targetPose, UPlayerCharacterID* targetCharacter) {
 }
 
-void AFSDPlayerController::Client_CollectTreasureSkin_Implementation(UTreasureRewarder* rewarder, UItemSkin* targetSkin, UItemID* targetItem) {
+void AFSDPlayerController::Client_CollectTreasureSkin_Implementation(USkinTreasureRewarder* rewarder, UItemSkin* targetSkin, UItemID* targetItem) {
 }
 
 void AFSDPlayerController::Client_CollectPickaxePart_Implementation(const UTreasureRewarder* rewarder, UPickaxePart* targetPart) {
+}
+
+void AFSDPlayerController::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    
+    DOREPLIFETIME(AFSDPlayerController, DebugEnemy);
+    DOREPLIFETIME(AFSDPlayerController, DebugEnemyLocation);
+    DOREPLIFETIME(AFSDPlayerController, DebugEnemySpeed);
+    DOREPLIFETIME(AFSDPlayerController, DebugEnemySpeedMod);
 }
 
 

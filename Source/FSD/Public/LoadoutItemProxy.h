@@ -23,7 +23,7 @@ public:
     ALoadoutItemProxy(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
-    static TSubclassOf<AItem> GetLoadoutItemFromClass(TSubclassOf<AActor> ActorClass);
+    static TSubclassOf<AItem> GetLoadoutItemFromClass(TSubclassOf<AActor> actorClass);
     
 };
 

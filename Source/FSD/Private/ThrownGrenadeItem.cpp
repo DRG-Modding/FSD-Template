@@ -31,7 +31,7 @@ void AThrownGrenadeItem::Server_SetState_Implementation(EThrownGrenadeItemState 
 void AThrownGrenadeItem::Server_Resupply_Implementation(float percentage) {
 }
 
-void AThrownGrenadeItem::ResupplyGrenadesAmount(const int32& Amount) {
+void AThrownGrenadeItem::ResupplyGrenadesAmount(const int32& amount) {
 }
 
 void AThrownGrenadeItem::ResupplyGrenades(float percentage) {

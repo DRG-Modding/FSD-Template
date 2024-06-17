@@ -24,7 +24,7 @@ void AGatlingGun::Server_SetHotShellsOn_Implementation(bool hotShellsIsOn) {
 void AGatlingGun::OnRep_HotShellsTracerOn() {
 }
 
-void AGatlingGun::OnGatlingTemperatureChanged(float Temperature, bool isOverheated) {
+void AGatlingGun::OnGatlingTemperatureChanged(float temperature, bool isOverheated) {
 }
 
 void AGatlingGun::OnEnemyKilled(AActor* Target, UFSDPhysicalMaterial* PhysMat, bool wasDirectHit) {

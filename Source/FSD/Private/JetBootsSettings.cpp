@@ -3,7 +3,8 @@
 UJetBootsSettings::UJetBootsSettings() {
     this->JetForce = 1750.00f;
     this->AirControlSpeed = 0.15f;
-    this->MaxAirSpeed = 10.00f;
+    this->MaxAirSpeedZ = 1100.00f;
+    this->MaxCustomMovementSpeed = 0.05f;
     this->MaxJetFuel = 50.00f;
     this->JetFuelCost = 20.00f;
     this->JetFuelRechargeRate = 30.00f;

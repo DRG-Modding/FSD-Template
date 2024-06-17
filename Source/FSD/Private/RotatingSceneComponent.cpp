@@ -8,4 +8,10 @@ URotatingSceneComponent::URotatingSceneComponent(const FObjectInitializer& Objec
     this->TeleportMode = ETeleportType::None;
 }
 
+void URotatingSceneComponent::Stop() {
+}
+
+void URotatingSceneComponent::Start() {
+}
+
 

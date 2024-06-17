@@ -26,10 +26,14 @@ FVector AEscortDestination::GetClosestPointOnRadius(FVector CurrentLocation, int
     return FVector{};
 }
 
+void AEscortDestination::Cheat_OverrideStages(TArray<EOmmoranStage> newStages) {
+}
+
 void AEscortDestination::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
     DOREPLIFETIME(AEscortDestination, SecondsToDestroyHeartstone);
+    DOREPLIFETIME(AEscortDestination, OmmoranStages);
 }
 
 

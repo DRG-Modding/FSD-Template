@@ -3,6 +3,7 @@
 #include "Aquisitionable.h"
 #include "Craftable.h"
 #include "CraftingCost.h"
+#include "DetailedTagSet.h"
 #include "EVanitySlot.h"
 #include "RefundableInterface.h"
 #include "SavablePrimaryDataAsset.h"
@@ -16,6 +17,7 @@ class UIconGenerationCameraKey;
 class UItemAquisitionBase;
 class UObject;
 class UPlayerCharacterID;
+class UTagVanitySeasonalEvent;
 class UTexture;
 class UVanityEventSourceDataAsset;
 
@@ -43,6 +45,15 @@ protected:
     UIconGenerationCameraKey* IconGenerationCameraKey;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UTagVanitySeasonalEvent* SeasonalEventTag;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsFestiveItem;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsSeriousItem;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<UPlayerCharacterID*> RestrictToCharacters;
     
 public:
@@ -65,6 +76,9 @@ public:
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     void GiftItem(UObject* WorldContextObject, UPlayerCharacterID* characterID);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    FDetailedTagSet GetVanityTags() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     EVanitySlot GetVanitySlot() const;

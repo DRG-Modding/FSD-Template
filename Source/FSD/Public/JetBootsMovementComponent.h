@@ -36,13 +36,13 @@ protected:
     UJetBootsSettings* Settings;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USoundCue* UseSound;
+    TSoftObjectPtr<USoundCue> UseSound;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USoundCue* DeactivatedSound;
+    TSoftObjectPtr<USoundCue> DeactivatedSound;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USoundCue* OverHeatSound;
+    TSoftObjectPtr<USoundCue> OverHeatSound;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UAudioComponent* UseAudioComponent;
@@ -63,10 +63,10 @@ protected:
     UAudioComponent* TP_DeactivatedAudioComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UNiagaraSystem* FootParticles;
+    TSoftObjectPtr<UNiagaraSystem> FootParticles;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UFXSystemAsset* FootParticlesFP;
+    TSoftObjectPtr<UFXSystemAsset> FootParticlesFP;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName FootSocketNameLeft;
@@ -75,7 +75,7 @@ protected:
     FName FootSocketNameRight;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USkeletalMesh* FootAttachMesh;
+    TSoftObjectPtr<USkeletalMesh> FootAttachMesh;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* LFootAttachMeshComponent;
@@ -111,13 +111,13 @@ protected:
     float CurrentJetFuel;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsUsing, meta=(AllowPrivateAccess=true))
-    bool IsUsing;
+    bool isUsing;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     bool isFromTakeOff;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_OverHeated, meta=(AllowPrivateAccess=true))
-    bool overHeated;
+    bool overheated;
     
 public:
     UJetBootsMovementComponent(const FObjectInitializer& ObjectInitializer);
@@ -142,7 +142,7 @@ public:
     void Receive_OnTakeOffLocal();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void Receive_OnOverheatedChanged(bool NewOverHeated);
+    void Receive_OnOverheatedChanged(bool NewOverheated);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Receive_OnDestroy();

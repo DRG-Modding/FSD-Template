@@ -10,7 +10,7 @@ bool UDLCBase::IsUnlocked() const {
     return false;
 }
 
-bool UDLCBase::IsDLCUnLocked(UDLCBase* dlc) {
+bool UDLCBase::IsDLCUnLocked(UDLCBase* DLC) {
     return false;
 }
 

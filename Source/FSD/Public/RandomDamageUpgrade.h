@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ItemUpgrade.h"
+#include "DamageBonusBaseUpgrade.h"
 #include "RandRange.h"
 #include "Templates/SubclassOf.h"
 #include "UpgradeValues.h"
@@ -10,7 +10,7 @@ class AActor;
 class AFSDPlayerState;
 
 UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
-class URandomDamageUpgrade : public UItemUpgrade {
+class URandomDamageUpgrade : public UDamageBonusBaseUpgrade {
     GENERATED_BODY()
 public:
 protected:

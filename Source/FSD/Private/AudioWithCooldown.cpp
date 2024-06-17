@@ -1,7 +1,7 @@
 #include "AudioWithCooldown.h"
 
 FAudioWithCooldown::FAudioWithCooldown() {
-    this->audio = NULL;
+    this->Audio = NULL;
     this->CoolDown = 0.00f;
 }
 

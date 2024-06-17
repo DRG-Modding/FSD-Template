@@ -20,7 +20,7 @@ void UPlayerStatsComponent::SendMissionAnalytics(bool trackMorkite) {
 void UPlayerStatsComponent::SendEndMissionResult_Implementation(const FEndMissionResult& Result) {
 }
 
-void UPlayerStatsComponent::OnResourceMined(UCappedResource* Resource, float Amount) {
+void UPlayerStatsComponent::OnResourceMined(UCappedResource* Resource, float amount) {
 }
 
 void UPlayerStatsComponent::OnRep_EndMissionResult() {

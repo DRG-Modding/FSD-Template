@@ -18,7 +18,7 @@ protected:
     UParticleSystemComponent* FlameParticles;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UAudioComponent* audio;
+    UAudioComponent* Audio;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UStatusEffectTriggerComponent* StatusTriggerComponent;

@@ -8,7 +8,7 @@ ABasicPistol::ABasicPistol(const FObjectInitializer& ObjectInitializer) : Super(
     this->ConsecutiveHitsMaxBonus = 6.00f;
 }
 
-void ABasicPistol::OnTargetDamaged(UHealthComponentBase* Health, float Amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial) {
+void ABasicPistol::OnTargetDamaged(UHealthComponentBase* Health, float amount, UPrimitiveComponent* HitComponent, UFSDPhysicalMaterial* PhysicalMaterial) {
 }
 
 void ABasicPistol::OnHit(const FHitResult& HitResult, bool isAlwaysPenetrated) {

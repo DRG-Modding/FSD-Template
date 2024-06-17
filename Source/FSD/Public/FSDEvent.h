@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
 #include "ClaimableRewardView.h"
 #include "EHolidayType.h"
@@ -38,6 +39,12 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName EventName;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FText EventDisplayText;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UTexture2D* EventThumbnail;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EHolidayType EventType;
@@ -95,6 +102,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FJettyBootEventSettings JettyBootSettings;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    FDateTime EventEndTimeLocal;
     
 public:
     UFSDEvent();

@@ -55,7 +55,7 @@ protected:
     
 public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
-    void IncreaseInfection(float Amount, AActor* Source);
+    void IncreaseInfection(float amount, AActor* Source);
     
 };
 

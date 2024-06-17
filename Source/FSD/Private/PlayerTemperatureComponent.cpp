@@ -53,7 +53,7 @@ float UPlayerTemperatureComponent::GetCurrentTemperatureNormalized() const {
     return 0.0f;
 }
 
-void UPlayerTemperatureComponent::Defrost(float Amount) {
+void UPlayerTemperatureComponent::Defrost(float amount) {
 }
 
 void UPlayerTemperatureComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

@@ -9,6 +9,7 @@
 
 class AActor;
 class ARecallableActor;
+class UPrimitiveComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ARecallableItem : public AAnimatedItem, public IUpgradable {
@@ -28,7 +29,10 @@ public:
 
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
-    void ServerSpawnItem(const FVector& Location, const FRotator& Rotation);
+    void ServerSpawnItemAttached(AActor* InAttachActor, UPrimitiveComponent* InAttachComponent, FName InAttachBoneName, const FVector& LocalLocation, const FRotator& LocalRotation);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void ServerSpawnItem(const FVector& WorldLocation, const FRotator& WorldRotation);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveOnItemSpawned(ARecallableActor* Item);

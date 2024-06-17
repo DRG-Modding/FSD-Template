@@ -40,6 +40,13 @@ UCLASS(Abstract, Blueprintable)
 class FSD_API AItem : public AActor, public ISaveGameIDInterface, public ISkinnable, public IItemIDInterface, public ILoadoutItem, public IPlaySoundInterface {
     GENERATED_BODY()
 public:
+    DECLARE_DYNAMIC_MULTICAST_DELEGATE(FItemAddedToInventory);
+    
+protected:
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FItemAddedToInventory OnItemAddedToInventory;
+    
+public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector FPCameraOffset;
     
@@ -50,7 +57,7 @@ public:
     FDelegate OnEqipped;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FDelegate OnUnequipped;
+    FDelegate OnUnEquipped;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -111,7 +118,7 @@ protected:
     UAudioComponent* TemperatureAudioComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
-    bool overHeated;
+    bool overheated;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDialogDataAsset* ShoutOverheated;
@@ -132,6 +139,9 @@ protected:
     bool CanSprintWithItem;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool CanBeUsed;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UItemsBarIcon> CustomIconWidget;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -141,7 +151,7 @@ protected:
     bool IsEquipped;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_IsUsing, meta=(AllowPrivateAccess=true))
-    bool IsUsing;
+    bool isUsing;
     
 public:
     AItem(const FObjectInitializer& ObjectInitializer);
@@ -150,6 +160,9 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void UpdateSkin();
+    
+    UFUNCTION(BlueprintCallable)
+    void StopUsing(bool Cancelled);
     
     UFUNCTION(BlueprintCallable)
     UAudioComponent* SpawnSoundAttached(USoundBase* Sound, USceneComponent* AttachToComponent, float PriorityOverride, FName AttachPointName, FVector Location, FRotator Rotation, TEnumAsByte<EAttachLocation::Type> LocationType, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, USoundAttenuation* AttenuationSettings, USoundConcurrency* ConcurrencySettings, bool bAutoDestroy, bool SendVibration);
@@ -204,7 +217,7 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnTemperatureChanged(float Temperature, bool NewOverHeated);
+    void OnTemperatureChanged(float temperature, bool NewOverheated);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnSkinChanged(USkinEffect* Skin);

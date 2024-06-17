@@ -3,6 +3,7 @@
 #include "UObject/NoExportTypes.h"
 #include "UObject/Object.h"
 #include "ECampaignType.h"
+#include "GlobalMissionSeed.h"
 #include "Templates/SubclassOf.h"
 #include "CampaignManager.generated.h"
 
@@ -94,11 +95,8 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<TSubclassOf<UCampaign>> GetCompletedSideCampaigns(AFSDPlayerController* Player) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
-    UGeneratedMission* GetCampaingMissionFromSeeds(UObject* WorldContextObject, int32 GlobalSeed, int32 MissionSeed) const;
-    
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    UGeneratedMission* GetCampaingMission(const TArray<UGeneratedMission*>& missions, int32 MissionSeed) const;
+    UGeneratedMission* GetCampaingMission(const TArray<UGeneratedMission*>& missions, const FGlobalMissionSeed& GlobalSeed) const;
     
     UFUNCTION(BlueprintCallable)
     void CompleteCampaignWithNoMissions(TSubclassOf<UCampaign> campaignClass, UFSDSaveGame* SaveGame);

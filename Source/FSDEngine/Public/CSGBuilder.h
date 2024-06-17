@@ -20,9 +20,6 @@ public:
     TArray<UTerrainMaterialCore*> UsedMaterials;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    UCSGBase* CurrentRoot;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UCSGBase* CurrentPreviewRoot;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

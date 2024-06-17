@@ -2,6 +2,7 @@
 
 UFSDEvent::UFSDEvent() {
     this->EnableDangerousSaveGameIDEditing = false;
+    this->EventThumbnail = NULL;
     this->EventType = EHolidayType::None;
     this->bFreeBeerEvent = false;
     this->bFreeBeerConfettiVisible = true;

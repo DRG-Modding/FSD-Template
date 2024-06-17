@@ -10,6 +10,9 @@ bool UFSDSteamUtils::PlayerIsFollowingUsOnSteam() {
 void UFSDSteamUtils::OpenURLInSteamBrowser(const FString& URL) {
 }
 
+void UFSDSteamUtils::OpenSteamSettings() {
+}
+
 bool UFSDSteamUtils::IsTextFilteringInitialized() {
     return false;
 }

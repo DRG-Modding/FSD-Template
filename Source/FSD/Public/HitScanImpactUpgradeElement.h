@@ -12,10 +12,10 @@ class UHitScanImpactUpgradeElement : public UItemUpgradeElement {
 public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UFXSystemAsset* ImpactParticle;
+    TSoftObjectPtr<UFXSystemAsset> ImpactParticle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USoundCue* ImpactSound;
+    TSoftObjectPtr<USoundCue> ImpactSound;
     
 public:
     UHitScanImpactUpgradeElement();

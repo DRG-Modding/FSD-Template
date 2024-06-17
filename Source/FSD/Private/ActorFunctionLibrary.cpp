@@ -67,6 +67,10 @@ bool UActorFunctionLibrary::IsSingleplayer(UObject* WorldContextObject) {
     return false;
 }
 
+bool UActorFunctionLibrary::IsMovingPlatform(AActor* Actor) {
+    return false;
+}
+
 bool UActorFunctionLibrary::IsInRangeOfLocalPlayer(AActor* toActor, float MinDistance, float MaxDistance) {
     return false;
 }
@@ -214,7 +218,7 @@ TArray<UMaterialInstanceDynamic*> UActorFunctionLibrary::CreateDynamicMaterialIn
     return TArray<UMaterialInstanceDynamic*>();
 }
 
-float UActorFunctionLibrary::AddHeroXP(UObject* WorldContextObject, UPlayerCharacterID* characterID, float Amount) {
+float UActorFunctionLibrary::AddHeroXP(UObject* WorldContextObject, UPlayerCharacterID* characterID, float amount) {
     return 0.0f;
 }
 

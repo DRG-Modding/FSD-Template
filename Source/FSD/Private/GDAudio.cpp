@@ -1,7 +1,6 @@
 #include "GDAudio.h"
 
 FGDAudio::FGDAudio() {
-    this->ReverbActor = NULL;
     this->DynamicReverbClass = NULL;
     this->SmallCaveRadius = 0.00f;
     this->MediumCaveRadius = 0.00f;

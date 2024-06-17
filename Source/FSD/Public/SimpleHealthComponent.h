@@ -54,7 +54,7 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable)
-    float HealFromDeath(float Amount);
+    float HealFromDeath(float amount);
     
 };
 

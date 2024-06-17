@@ -9,7 +9,7 @@ UInDangerComponent::UInDangerComponent(const FObjectInitializer& ObjectInitializ
 void UInDangerComponent::SetIsActive(bool aFlag) {
 }
 
-void UInDangerComponent::OnDamage(float Amount) {
+void UInDangerComponent::OnDamage(float amount) {
 }
 
 bool UInDangerComponent::GetIsActive() const {

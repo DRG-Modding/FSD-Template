@@ -2,10 +2,10 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/DeveloperSettings.h"
+#include "GameDifficulty.h"
 #include "MissionHazardSetting.h"
 #include "FSDMissionSettings.generated.h"
 
-class UDifficultySetting;
 class UGeneratedMission;
 class UObject;
 
@@ -26,8 +26,11 @@ protected:
 public:
     UFSDMissionSettings();
 
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    static float GetTotalHazPlusBonus(const FGameDifficulty& Difficulty);
+    
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
-    static float GetTotalHazardBonus(UObject* WorldContextObject, UGeneratedMission* mission, UDifficultySetting* DifficultySetting);
+    static float GetTotalHazardBonus(UObject* WorldContextObject, UGeneratedMission* mission, const FGameDifficulty& Difficulty);
     
 };
 

@@ -2,7 +2,6 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "DeepPathfinderCharacter.h"
 #include "ERecallableActorState.h"
 #include "ReturnedSignatureDelegate.h"
@@ -12,6 +11,7 @@
 
 class AActor;
 class ARecallableActor;
+class UPrimitiveComponent;
 
 UCLASS(Abstract, Blueprintable)
 class ARecallableActor : public ADeepPathfinderCharacter, public IUpgradable {
@@ -48,10 +48,7 @@ protected:
     ERecallableActorState State;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    FTransform RelocateTransform;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    bool RelocateLanded;
+    bool RelocateLanding;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AActor> RelocationMarker;
@@ -68,7 +65,7 @@ public:
     void SetRecallTarget(AActor* NewTarget);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Relocate(FVector NewLocation, FRotator NewRotation);
+    void Relocate(FVector NewLocation, FRotator NewRotation, AActor* NewAttachToActor, UPrimitiveComponent* NewAttachToComponent, FName NewAttachToBone);
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

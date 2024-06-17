@@ -14,6 +14,8 @@
 class AActor;
 class APawn;
 class AProceduralSetup;
+class UDifficultyManager;
+class UEliteEnemiesMutator;
 class UEnemyDescriptor;
 class UHealthComponentBase;
 class USpawnEffectsComponent;
@@ -83,6 +85,13 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool bDestroyingAllEnemies;
+    
+private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UEliteEnemiesMutator* EliteMutator;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UDifficultyManager* DifficultyManager;
     
 public:
     UEnemySpawnManager(const FObjectInitializer& ObjectInitializer);

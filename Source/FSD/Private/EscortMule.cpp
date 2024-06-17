@@ -12,6 +12,7 @@ AEscortMule::AEscortMule(const FObjectInitializer& ObjectInitializer) : Super(Ob
     this->HealthComponent = CreateDefaultSubobject<UFriendlyHealthComponent>(TEXT("HealthComponent2"));
     this->ObjectInfo = CreateDefaultSubobject<USimpleObjectInfoComponent>(TEXT("ObjectInfo"));
     this->ResourceBank = CreateDefaultSubobject<URestrictedResourceBank>(TEXT("RestrictedResourceBank"));
+    this->IsPathReady = false;
     this->State = EEscortMissionState::InGarage;
     this->EscortObjective = NULL;
     this->SpeedModifier = 1.00f;
@@ -26,7 +27,7 @@ AEscortMule::AEscortMule(const FObjectInitializer& ObjectInitializer) : Super(Ob
     this->Mesh->SetupAttachment(RootComponent);
 }
 
-bool AEscortMule::TryHeal(APlayerCharacter* User, float Amount) {
+bool AEscortMule::TryHeal(APlayerCharacter* User, float amount) {
     return false;
 }
 
@@ -65,9 +66,14 @@ void AEscortMule::OnRep_ExtractorSlots() {
 void AEscortMule::ObjectiveStateChange(EEscortMissionState NewState) {
 }
 
+bool AEscortMule::GetIsPathReady() const {
+    return false;
+}
+
 EEscortExtractorState AEscortMule::GetExtractorState(UInstantUsable* Usable) const {
     return EEscortExtractorState::ReadyToGrab;
 }
+
 
 void AEscortMule::ActivateMule() {
 }

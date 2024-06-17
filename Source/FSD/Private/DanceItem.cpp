@@ -1,7 +1,7 @@
 #include "DanceItem.h"
 
 FDanceItem::FDanceItem() {
-    this->DanceMove = NULL;
+    this->danceMove = NULL;
     this->DanceMoveWithBeer = NULL;
 }
 

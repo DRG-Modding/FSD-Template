@@ -3,7 +3,6 @@
 #include "Templates/SubclassOf.h"
 #include "GDAudio.generated.h"
 
-class AFSDReverbVolume;
 class UDynamicReverbComponent;
 class USoundAttenuation;
 
@@ -13,9 +12,6 @@ struct FGDAudio {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<USoundAttenuation> FirstPersonHitscanAttenuationOverride;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<AFSDReverbVolume> ReverbActor;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UDynamicReverbComponent> DynamicReverbClass;
