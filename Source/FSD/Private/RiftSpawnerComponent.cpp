@@ -2,14 +2,14 @@
 #include "Net/UnrealNetwork.h"
 
 URiftSpawnerComponent::URiftSpawnerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    this->DisallowSpawning = false;
+    this->RiftClass = NULL;
     this->Positioning = NULL;
     this->SpawnInterval = 0.00f;
     this->SpawnDeviation = 0.00f;
     this->InitialSpawnDelay = 0.00f;
-    this->SpawnOneAtATime = false;
     this->AmountToSpawn = 0;
-    this->RiftClass = NULL;
+    this->SpawnOneAtATime = false;
+    this->DisallowSpawning = false;
 }
 
 void URiftSpawnerComponent::StopSpawning() {

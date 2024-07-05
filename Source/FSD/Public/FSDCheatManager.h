@@ -220,6 +220,9 @@ public:
     static void Cheat_Schematic_GiveRandom(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static void Cheat_Schematic_ForgeAll_Owned(UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void Cheat_Schematic_ForgeAll(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
@@ -499,6 +502,9 @@ public:
     void C_Schematics_ResetAll();
     
     UFUNCTION(BlueprintCallable, Exec)
+    void C_Schematics_ForgeAll_Owned();
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void C_Schematics_ForgeAll();
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -569,6 +575,12 @@ public:
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_RemoveAllWidgets();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_Remove_WeaponSkinsFromCrate_Framwork();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void C_Remove_VictoryPose();
     
     UFUNCTION(BlueprintCallable, Exec)
     void C_RefreshDailyDeal(int32 Seed);

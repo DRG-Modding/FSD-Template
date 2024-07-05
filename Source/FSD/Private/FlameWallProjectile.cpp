@@ -7,6 +7,7 @@ AFlameWallProjectile::AFlameWallProjectile(const FObjectInitializer& ObjectIniti
     this->SegmentCount = 0;
     this->WallWidth = 250.00f;
     this->WallDepth = 250.00f;
+    this->SegmentDropSpacingMultiplier = 1.50f;
     this->ImpactClass = NULL;
     this->OnlyImpactActorOnce = true;
     this->StickyFlameSpawner = NULL;

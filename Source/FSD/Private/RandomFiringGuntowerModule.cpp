@@ -29,15 +29,15 @@ ARandomFiringGuntowerModule::ARandomFiringGuntowerModule(const FObjectInitialize
     this->PlatformDissolveRadius = 100.00f;
     this->PlatformDissolveSqueeze = 3.00f;
     this->IsAttacking = false;
+    this->FrontBottomLaserMuzzle->SetupAttachment(ModuleMesh);
+    this->BackTopLaserMuzzle->SetupAttachment(ModuleMesh);
+    this->BackBottomLaserMuzzle->SetupAttachment(ModuleMesh);
+    this->LaserSound->SetupAttachment(ModuleMesh);
     this->LaserFrontTop->SetupAttachment(ModuleMesh);
     this->LaserFrontBottom->SetupAttachment(ModuleMesh);
     this->LaserBackTop->SetupAttachment(ModuleMesh);
     this->LaserBackBottom->SetupAttachment(ModuleMesh);
     this->FrontTopLaserMuzzle->SetupAttachment(ModuleMesh);
-    this->FrontBottomLaserMuzzle->SetupAttachment(ModuleMesh);
-    this->BackTopLaserMuzzle->SetupAttachment(ModuleMesh);
-    this->BackBottomLaserMuzzle->SetupAttachment(ModuleMesh);
-    this->LaserSound->SetupAttachment(ModuleMesh);
 }
 
 void ARandomFiringGuntowerModule::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

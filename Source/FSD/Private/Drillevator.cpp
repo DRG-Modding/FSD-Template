@@ -9,6 +9,7 @@ ADrillevator::ADrillevator(const FObjectInitializer& ObjectInitializer) : Super(
     this->State = EDrillevatorState::Deactivated;
     this->MovementEnabled = false;
     this->TargetDepth = 0.00f;
+    this->NotifyDistFromTargetDepth = 0.00f;
     this->MovementSpeed = 0.00f;
     this->ServerDepth = 0.00f;
     this->HeatMaterialSlot = TEXT("HeatMaterial");
@@ -38,6 +39,7 @@ void ADrillevator::OnRep_ServerDepth() {
 
 void ADrillevator::OnRep_MovementEnabled(bool OldMovementEnabled) {
 }
+
 
 
 

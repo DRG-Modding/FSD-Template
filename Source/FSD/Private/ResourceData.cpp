@@ -10,6 +10,7 @@ UResourceData::UResourceData() {
     this->ForceShowOnEndScreen = false;
     this->AffectedByMutators = true;
     this->ScaleToMissionLength = true;
+    this->AutoDepositOnDisconnect = false;
     this->ScaleToHazardLevel = true;
     this->ShowSeparatelyInEndScreen = false;
     this->IsWholeNumberResource = false;

@@ -21,10 +21,10 @@ public:
     UKeepInsideWorld(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, meta=(WorldContext="WorldContextObject"))
-    static void UnregisterForKeepInsideWorld(UObject* WorldContextObject, AActor* Actor);
+    static void UnregisterForKeepInsideWorld(UObject* WorldContextObject, AActor*& Actor);
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, meta=(WorldContext="WorldContextObject"))
-    static void RegisterForKeepInsideWorld(UObject* WorldContextObject, AActor* Actor);
+    static void RegisterForKeepInsideWorld(UObject* WorldContextObject, AActor*& Actor);
     
 };
 

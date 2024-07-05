@@ -821,7 +821,7 @@ public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetInCharacterSelectionWorld();
     
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(BlueprintCallable)
     void SetHeadLight(bool On);
     
     UFUNCTION(BlueprintCallable)
@@ -887,6 +887,9 @@ protected:
 public:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetIsDancing(bool NewIsDancing, int32 NewDanceMove);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_SetHeadLight(bool On);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetDispenserReward(AEventRewardDispenser* Dispenser, USchematic* Reward);

@@ -3,8 +3,8 @@
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
+#include "GameFramework/Pawn.h"
 #include "Curves/CurveFloat.h"
 #include "Engine/NetSerialization.h"
 #include "GameplayTagContainer.h"
@@ -18,6 +18,7 @@
 #include "Templates/SubclassOf.h"
 #include "RiftCrystal.generated.h"
 
+class AActor;
 class AGem;
 class UAudioComponent;
 class UCapsuleComponent;
@@ -45,7 +46,7 @@ class USpawnActorWithDebrisPosComponent;
 class UTerrainDetectComponent;
 
 UCLASS(Blueprintable)
-class FSD_API ARiftCrystal : public AActor, public IGameplayTagAssetInterface, public IBossFightInterface {
+class FSD_API ARiftCrystal : public APawn, public IGameplayTagAssetInterface, public IBossFightInterface {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -269,11 +270,11 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReplaceCrystal(FTransform SpawnTransform);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-	void Receive_ExitedState(ERiftCrystalState NewState);
+	//UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void Receive_ExitedState(TEnumAsByte<ERiftCrystalState> NewState);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-	void Receive_EnteredState(ERiftCrystalState NewState);
+	//UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void Receive_EnteredState(TEnumAsByte<ERiftCrystalState> NewState);
     
 protected:
     UFUNCTION(BlueprintCallable)

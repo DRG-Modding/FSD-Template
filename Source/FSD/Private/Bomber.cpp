@@ -28,9 +28,9 @@ ABomber::ABomber(const FObjectInitializer& ObjectInitializer) : Super(ObjectInit
     this->IsLeftDestroyed = false;
     this->dropAcid = false;
     this->NoDeathSpiral = false;
+    this->AcidEmitterRight->SetupAttachment(Mesh);
     this->GooSoundComponent->SetupAttachment(Mesh);
     this->AcidEmitterLeft->SetupAttachment(Mesh);
-    this->AcidEmitterRight->SetupAttachment(Mesh);
 }
 
 void ABomber::StopSpinAndDie() {

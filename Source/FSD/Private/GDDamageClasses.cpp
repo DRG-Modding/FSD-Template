@@ -11,6 +11,7 @@ FGDDamageClasses::FGDDamageClasses() {
     this->Explosive = NULL;
     this->Cold = NULL;
     this->Ice = NULL;
+    this->Freezing = NULL;
     this->Corrosive = NULL;
     this->Infectious = NULL;
 }

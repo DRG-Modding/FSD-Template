@@ -251,6 +251,9 @@ public:
     bool PhotosensitiveMode;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool TinnitusProtection;
+    
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OverlayIntensityScale;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -425,7 +428,7 @@ public:
     bool ToggleShowUpgradeExtraDetails();
     
     UFUNCTION(BlueprintCallable)
-    void ToggleModdingServerFilter(uint8 ServerFilter, bool Enable);
+    void ToggleModdingServerFilter(uint8 ServerFilter, bool enable);
     
     UFUNCTION(BlueprintCallable)
     void SetZiplineGunAutoSwitch(bool shouldAutoSwitch);
@@ -480,6 +483,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void SetTurn180Mode(ETurn180Mode InMode);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetTinnitusProtection(bool enable);
     
     UFUNCTION(BlueprintCallable)
     void SetTemporalAAUpscalingEnabled(bool bEnable);
@@ -786,6 +792,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ETurn180Mode GetTurn180Mode() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool GetTinnitusProtection() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetTemporalAAUpscalingEnabled() const;

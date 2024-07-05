@@ -234,7 +234,7 @@ void APlayerCharacter::SetInsideShieldGenerator(AShieldGeneratorActor* Shield) {
 void APlayerCharacter::SetInCharacterSelectionWorld() {
 }
 
-void APlayerCharacter::SetHeadLight_Implementation(bool On) {
+void APlayerCharacter::SetHeadLight(bool On) {
 }
 
 void APlayerCharacter::SetFallbackPhysicalMaterial(UFSDPhysicalMaterial* PhysMat) {
@@ -289,6 +289,9 @@ void APlayerCharacter::Server_SetIsJumpPressed_Implementation(bool InJumpPressed
 }
 
 void APlayerCharacter::Server_SetIsDancing_Implementation(bool NewIsDancing, int32 NewDanceMove) {
+}
+
+void APlayerCharacter::Server_SetHeadLight_Implementation(bool On) {
 }
 
 void APlayerCharacter::Server_SetDispenserReward_Implementation(AEventRewardDispenser* Dispenser, USchematic* Reward) {

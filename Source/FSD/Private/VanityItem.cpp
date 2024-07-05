@@ -39,6 +39,10 @@ EVanitySlot UVanityItem::GetVanitySlot() const {
     return EVanitySlot::Head;
 }
 
+TSet<UPlayerCharacterID*> UVanityItem::GetRestrictedCharacters() const {
+    return TSet<UPlayerCharacterID*>();
+}
+
 TArray<FCraftingCost> UVanityItem::GetResourceCost() const {
     return TArray<FCraftingCost>();
 }

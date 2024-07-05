@@ -21,6 +21,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float TargetDepth;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float NotifyDistFromTargetDepth;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float MovementSpeed;
     
@@ -77,6 +80,9 @@ protected:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnEnterState(EDrillevatorState NewState);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnCloseToTargetDepth();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsAtTargetDepth() const;

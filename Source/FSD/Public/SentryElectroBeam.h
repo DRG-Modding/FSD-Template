@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ElectroBeam.h"
+#include "RecalculatedElectroBeam.h"
 #include "SentryElectroBeam.generated.h"
 
 class ARedeployableSentryGun;
 
 UCLASS(Blueprintable)
-class ASentryElectroBeam : public AElectroBeam {
+class ASentryElectroBeam : public ARecalculatedElectroBeam {
     GENERATED_BODY()
 public:
 protected:

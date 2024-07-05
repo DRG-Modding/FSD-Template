@@ -34,8 +34,5 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnPlayerRegistered(APlayerCharacter* Player);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void All_TryAddPingUIComponent(APlayerCharacter* Player);
-    
 };
 

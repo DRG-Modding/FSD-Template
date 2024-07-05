@@ -8,6 +8,8 @@
 #include "TerrainPlacementComponent.generated.h"
 
 class AProceduralSetup;
+class UHealthComponentBase;
+class UWorld;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FSD_API UTerrainPlacementComponent : public USceneComponent {
@@ -25,11 +27,30 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 BlockerIDHack;
     
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UWorld* BlockerWorld;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool RemoveBlockerOnBeingMatch;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool RemoveBlockerOnDeath;
+    
+public:
     UTerrainPlacementComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
     void RemoveBlockers();
     
+protected:
+    UFUNCTION(BlueprintCallable)
+    void OnActorDeath(UHealthComponentBase* Health);
+    
+    UFUNCTION(BlueprintCallable)
+    void MatchStarted();
+    
+public:
     UFUNCTION(BlueprintCallable)
     void AddBlockers(AProceduralSetup* ProceduralSetup, const FTransform& Transform);
     

@@ -15,12 +15,12 @@ ALockOnBeam::ALockOnBeam(const FObjectInitializer& ObjectInitializer) : Super(Ob
     this->BlockedBeamMaterial = NULL;
     this->SeekerMaterial = NULL;
     this->BeamThicknessScale = 1.00f;
+    this->PreviewLocationComponent->SetupAttachment(RootComponent);
     this->BeamSpline->SetupAttachment(RootComponent);
     this->BeamMeshComponent01->SetupAttachment(BeamSpline);
     this->BeamMeshComponent02->SetupAttachment(BeamSpline);
     this->BeamMeshComponent03->SetupAttachment(BeamSpline);
     this->BlockedNodeComponent->SetupAttachment(BeamSpline);
-    this->PreviewLocationComponent->SetupAttachment(RootComponent);
 }
 
 

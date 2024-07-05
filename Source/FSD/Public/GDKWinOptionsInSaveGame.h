@@ -69,6 +69,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UseDefaultAudioOutputDevice;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 RagdollQuality;
+    
     FSD_API FGDKWinOptionsInSaveGame();
 };
 

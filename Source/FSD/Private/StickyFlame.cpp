@@ -10,6 +10,7 @@ AStickyFlame::AStickyFlame(const FObjectInitializer& ObjectInitializer) : Super(
     const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
     (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
     this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+    this->Root = (USceneComponent*)RootComponent;
     this->FlameParticles = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("FlameParticles"));
     this->Audio = CreateDefaultSubobject<UAudioComponent>(TEXT("Audio"));
     this->StatusTriggerComponent = CreateDefaultSubobject<UStatusEffectTriggerComponent>(TEXT("StatusEffectTrigger"));

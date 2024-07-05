@@ -20,5 +20,6 @@ FGDKWinOptionsInSaveGame::FGDKWinOptionsInSaveGame() {
     this->ViewDistanceQuality = 0;
     this->PreventLatejoinCharacterDuplication = false;
     this->UseDefaultAudioOutputDevice = false;
+    this->RagdollQuality = 0;
 }
 

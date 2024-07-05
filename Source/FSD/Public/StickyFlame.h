@@ -7,6 +7,7 @@
 
 class UAudioComponent;
 class UParticleSystemComponent;
+class USceneComponent;
 class UStatusEffectTriggerComponent;
 
 UCLASS(Blueprintable)
@@ -14,6 +15,9 @@ class AStickyFlame : public AActor {
     GENERATED_BODY()
 public:
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    USceneComponent* Root;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* FlameParticles;
     

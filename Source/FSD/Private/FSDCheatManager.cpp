@@ -183,6 +183,9 @@ void UFSDCheatManager::Cheat_Schematic_ResetAll(UObject* WorldContextObject) {
 void UFSDCheatManager::Cheat_Schematic_GiveRandom(UObject* WorldContextObject) {
 }
 
+void UFSDCheatManager::Cheat_Schematic_ForgeAll_Owned(UObject* WorldContextObject) {
+}
+
 void UFSDCheatManager::Cheat_Schematic_ForgeAll(UObject* WorldContextObject) {
 }
 
@@ -462,6 +465,9 @@ void UFSDCheatManager::C_Schematics_UnlockAll() {
 void UFSDCheatManager::C_Schematics_ResetAll() {
 }
 
+void UFSDCheatManager::C_Schematics_ForgeAll_Owned() {
+}
+
 void UFSDCheatManager::C_Schematics_ForgeAll() {
 }
 
@@ -532,6 +538,12 @@ void UFSDCheatManager::C_RemovePlayerRanks(int32 Number) {
 }
 
 void UFSDCheatManager::C_RemoveAllWidgets() {
+}
+
+void UFSDCheatManager::C_Remove_WeaponSkinsFromCrate_Framwork() {
+}
+
+void UFSDCheatManager::C_Remove_VictoryPose() {
 }
 
 void UFSDCheatManager::C_RefreshDailyDeal(int32 Seed) {

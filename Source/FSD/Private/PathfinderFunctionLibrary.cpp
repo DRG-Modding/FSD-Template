@@ -3,7 +3,7 @@
 UPathfinderFunctionLibrary::UPathfinderFunctionLibrary() {
 }
 
-FVector UPathfinderFunctionLibrary::SnapToGrid(UObject* WorldContextObject, const FVector& Origin, DeepPathFinderType PathType, DeepPathFinderSize PathSize, float maxSnapDistance) {
+FVector UPathfinderFunctionLibrary::SnapToGrid(UObject* WorldContextObject, const FVector& Origin, DeepPathFinderType PathType, DeepPathFinderSize PathSize, bool& success, float maxSnapDistance) {
     return FVector{};
 }
 

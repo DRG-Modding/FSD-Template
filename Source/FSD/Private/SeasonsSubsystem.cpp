@@ -3,6 +3,7 @@
 USeasonsSubsystem::USeasonsSubsystem() {
     this->DesiredSeason = -1;
     this->ActiveSeason = -1;
+    this->TrackedScripChallenge = NULL;
 }
 
 FTimespan USeasonsSubsystem::TimeToNewChallenge() {

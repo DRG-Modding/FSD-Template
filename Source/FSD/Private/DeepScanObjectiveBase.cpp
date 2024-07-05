@@ -9,9 +9,6 @@ UDeepScanObjectiveBase::UDeepScanObjectiveBase(const FObjectInitializer& ObjectI
 void UDeepScanObjectiveBase::OnPlayerRegistered(APlayerCharacter* Player) {
 }
 
-void UDeepScanObjectiveBase::All_TryAddPingUIComponent_Implementation(APlayerCharacter* Player) {
-}
-
 void UDeepScanObjectiveBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     

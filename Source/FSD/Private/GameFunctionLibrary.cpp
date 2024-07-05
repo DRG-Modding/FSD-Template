@@ -6,7 +6,7 @@ UGameFunctionLibrary::UGameFunctionLibrary() {
 void UGameFunctionLibrary::SpawnOrUpdateAudio2D(UObject* WorldContext, UAudioComponent*& AudioComponent, USoundBase* Sound, float VolumeMultiplier, float PitchMultiplier, FName FloatParamName, float FloatParam) {
 }
 
-void UGameFunctionLibrary::SetUsePushToTalk(bool Enable) {
+void UGameFunctionLibrary::SetUsePushToTalk(bool enable) {
 }
 
 void UGameFunctionLibrary::SetGlobalGravityZ(UObject* WorldContextObject, float GravityZ) {

@@ -43,6 +43,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UStatusEffect>> EffectsToApply;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TSet<AActor*> HitActors;
+    
 public:
     ACoilgunWeaponTrail(const FObjectInitializer& ObjectInitializer);
 

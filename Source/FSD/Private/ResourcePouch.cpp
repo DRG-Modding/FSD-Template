@@ -6,6 +6,9 @@ AResourcePouch::AResourcePouch(const FObjectInitializer& ObjectInitializer) : Su
     this->ImpactGroundSound = NULL;
 }
 
+void AResourcePouch::SetResources(UResourcesComponent* Resources) {
+}
+
 void AResourcePouch::ActorWasHit(AActor* SelfActor, AActor* OtherActor, FVector NormalImpulse, const FHitResult& Hit) {
 }
 

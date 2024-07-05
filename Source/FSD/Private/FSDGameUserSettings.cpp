@@ -1,31 +1,31 @@
 #include "FSDGameUserSettings.h"
 
 UFSDGameUserSettings::UFSDGameUserSettings() {
-    this->bJukeboxStreamerMode = false;
+    this->bUseVSync = true;
+    this->bJukeboxStreamerMode = true;
     this->bGraphicSettingsChanged = false;
-    this->CurrentUserSetSaveSlotName = TEXT("Unsandboxed");
-    this->ServerSearchRegion = 1;
+    this->ServerSearchRegion = 0;
     this->ServerSearchPasswordRequired = false;
-    this->volumeCharacterVoice = 102.84f;
-    this->volumeMissionControl = 108.19f;
-    this->volumeMaster = 54.91f;
-    this->volumeSFX = 99.63f;
-    this->volumeMusic = 105.21f;
-    this->CurrentAudioOutputDeviceId = TEXT("{0.0.0.00000000}.{5a896360-b683-48b5-863d-10134f354c5c}");
+    this->volumeCharacterVoice = 99.17f;
+    this->volumeMissionControl = 120.78f;
+    this->volumeMaster = 35.57f;
+    this->volumeSFX = 98.76f;
+    this->volumeMusic = 0.10f;
+    this->CurrentAudioOutputDeviceId = TEXT("0.0.0.00000000.e5f88e95-6344-4763-bd61-70b04ceb23f9");
     this->UseDefaultAudioOutputDevice = true;
-    this->Sharpening = 1.01f;
-    this->AntiAliasingType = 3;
+    this->Sharpening = 0.00f;
+    this->AntiAliasingType = 2;
     this->TemporalAAUpsamplingEnabled = false;
-    this->volumeVoice = 108.67f;
+    this->volumeVoice = 99.74f;
     this->UpscalingType = 0;
-    this->AmdFsrMode = 1;
+    this->AmdFsrMode = 0;
     this->AmdFsr2Mode = 2;
-    this->AmdFsrSharpness = 0.20f;
+    this->AmdFsrSharpness = 0.22f;
     this->AmdFsr2Sharpness = 0.20f;
     this->NvidiaDlssMode = UDLSSMode::Auto;
     this->NvidiaDlssSharpness = 0.50f;
     this->FSDResolutionScale = 1.00f;
-    this->ReflexMode = ENVidiaReflexMode::Enabled;
+    this->ReflexMode = ENVidiaReflexMode::Disabled;
     this->WeaponSpwayScale = 1.00f;
     this->RagdollQuality = 2;
     this->FrameGenerationMode = UFSDStreamlineDLSSGMode::Off;
@@ -39,36 +39,37 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->ChatFontSize = 14;
     this->bUseVoiceChat = true;
     this->bUsePushToTalk = true;
-    this->LocalGameServerName = TEXT("Zombies lobby");
+    this->LocalGameServerName = TEXT("rusty bois only");
     this->AppearOffline = false;
-    this->AutoRefreshServerlist = true;
-    this->MouseXSensitivity = 602.77f;
-    this->MouseYSensitivity = 400.00f;
+    this->AutoRefreshServerlist = false;
+    this->MouseXSensitivity = 900.92f;
+    this->MouseYSensitivity = 600.00f;
     this->UseSeperateSensetivity = false;
     this->InvertMouse = false;
-    this->InvertScroolWheel = true;
-    this->UseHoldToRun = true;
+    this->InvertScroolWheel = false;
+    this->UseHoldToRun = false;
     this->UseToggleLaserpointer = false;
-    this->FOV = 120.00f;
-    this->HeadbobbingScale = 100.00f;
-    this->CameraShakeScale = 50.38f;
+    this->FOV = 100.89f;
+    this->HeadbobbingScale = 0.00f;
+    this->CameraShakeScale = 51.77f;
     this->ChatFadeTime = 10.00f;
     this->UseStreamerProgram = false;
     this->SoundOnChatMessage = true;
     this->PhotosensitiveMode = false;
+    this->TinnitusProtection = false;
     this->OverlayIntensityScale = 1.00f;
     this->ShowUIAnimations = true;
     this->UseProfanityFilter = false;
     this->ForceFeedbackScale = 1.00f;
     this->InvertFlightControls = false;
     this->EnableDx12ByDefault = false;
-    this->HDRColorGamma = 1.20f;
+    this->HDRColorGamma = 1.21f;
     this->ConsoleGraphicsMode = EConsoleGraphicsMode::Fidelity;
     this->StaticResoultionScale = 1.00f;
     this->UseManuelGrahpicsMode = false;
     this->DownedTurnDirection_Controller = 1.00f;
     this->DownedTurnDirection_Mouse = -1.00f;
-    this->UIDPIScale = 100.64f;
+    this->UIDPIScale = 80.63f;
     this->EnableCustomUIScale = false;
     this->CheckCursorOutOfBounds = false;
     this->VSyncToBeApplied = false;
@@ -84,17 +85,16 @@ UFSDGameUserSettings::UFSDGameUserSettings() {
     this->HasKeyboardBeenConnected = false;
     this->CurrentInputSource = EFSDInputSource::MouseAndKeyboard;
     this->RequestedInputSource = EFSDInputSource::None;
-    this->CustomKeyBindings.AddDefaulted(1);
     this->SwapControllerThumbsticks = false;
-    this->bTutorialHintsEnabled = true;
-    this->bShowSubtitles = true;
-    this->bShowFPS = false;
+    this->bTutorialHintsEnabled = false;
+    this->bShowSubtitles = false;
+    this->bShowFPS = true;
     this->ShowNetInfoLevel = 0;
     this->bCanShowBlood = true;
     this->PreventLatejoinCharacterDuplication = false;
     this->TranslatorDebugModeEnabled = false;
-    this->SelectedDifficultyLevels.AddDefaulted(7);
-    this->DifficultyLevelsAddedByDefault.AddDefaulted(9);
+    this->SelectedDifficultyLevels.AddDefaulted(10);
+    this->DifficultyLevelsAddedByDefault.AddDefaulted(10);
 }
 
 void UFSDGameUserSettings::UpdateVolumeSettings(USoundClass* CharacterVoices, USoundClass* MissionControl, USoundClass* Master, USoundClass* Music, USoundClass* SFX, USoundClass* UI, USoundClass* Voice) {
@@ -111,7 +111,7 @@ bool UFSDGameUserSettings::ToggleShowUpgradeExtraDetails() {
     return false;
 }
 
-void UFSDGameUserSettings::ToggleModdingServerFilter(uint8 ServerFilter, bool Enable) {
+void UFSDGameUserSettings::ToggleModdingServerFilter(uint8 ServerFilter, bool enable) {
 }
 
 void UFSDGameUserSettings::SetZiplineGunAutoSwitch(bool shouldAutoSwitch) {
@@ -166,6 +166,9 @@ void UFSDGameUserSettings::SetTutorialHintsEnabled(bool Enabled) {
 }
 
 void UFSDGameUserSettings::SetTurn180Mode(ETurn180Mode InMode) {
+}
+
+void UFSDGameUserSettings::SetTinnitusProtection(bool enable) {
 }
 
 void UFSDGameUserSettings::SetTemporalAAUpscalingEnabled(bool bEnable) {
@@ -495,6 +498,10 @@ bool UFSDGameUserSettings::GetTutorialHintsEnabled() const {
 
 ETurn180Mode UFSDGameUserSettings::GetTurn180Mode() const {
     return ETurn180Mode::PressRun;
+}
+
+bool UFSDGameUserSettings::GetTinnitusProtection() const {
+    return false;
 }
 
 bool UFSDGameUserSettings::GetTemporalAAUpscalingEnabled() const {

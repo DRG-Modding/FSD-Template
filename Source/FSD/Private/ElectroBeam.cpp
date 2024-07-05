@@ -7,6 +7,8 @@
 AElectroBeam::AElectroBeam(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RootComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("collider"));
     this->collider = (UCapsuleComponent*)RootComponent;
+    this->SourceComponent = NULL;
+    this->TargetComponent = NULL;
     this->DelaySource = NULL;
     this->DelayTarget = NULL;
     this->BeamEffect = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("BeamEffect"));
@@ -21,10 +23,10 @@ AElectroBeam::AElectroBeam(const FObjectInitializer& ObjectInitializer) : Super(
     this->ZappSound->SetupAttachment(RootComponent);
 }
 
-void AElectroBeam::SetTarget(USceneComponent* TargetPoint) {
+void AElectroBeam::SetTargetComponent(USceneComponent* TargetPoint) {
 }
 
-void AElectroBeam::SetSource(USceneComponent* SourcePoint) {
+void AElectroBeam::SetSourceComponent(USceneComponent* SourcePoint) {
 }
 
 void AElectroBeam::SetParents(AActor* firstParent, AActor* secondParent) {
@@ -33,10 +35,10 @@ void AElectroBeam::SetParents(AActor* firstParent, AActor* secondParent) {
 void AElectroBeam::RecalculateBeam() {
 }
 
-void AElectroBeam::OnRep_TargetLocation() {
+void AElectroBeam::OnRep_TargetComponent() {
 }
 
-void AElectroBeam::OnRep_SourceLocation() {
+void AElectroBeam::OnRep_SourceComponent() {
 }
 
 void AElectroBeam::OnRep_Flag() {
@@ -57,20 +59,14 @@ UAudioComponent* AElectroBeam::GetAudio() {
     return NULL;
 }
 
-void AElectroBeam::DelayedSetTarget(USceneComponent* TargetPoint) {
-}
-
-void AElectroBeam::DelayedSetSource(USceneComponent* SourcePoint) {
-}
-
 void AElectroBeam::DeactivateCollisionAndEffect() {
 }
 
 void AElectroBeam::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
-    DOREPLIFETIME(AElectroBeam, SourceLocation);
-    DOREPLIFETIME(AElectroBeam, TargetLocation);
+    DOREPLIFETIME(AElectroBeam, SourceComponent);
+    DOREPLIFETIME(AElectroBeam, TargetComponent);
     DOREPLIFETIME(AElectroBeam, IsLit);
 }
 

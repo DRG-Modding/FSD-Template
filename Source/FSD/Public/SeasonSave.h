@@ -9,7 +9,10 @@ struct FSeasonSave {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool HasFixedUpRewardsRemovedInSeasonFive;
+    int32 SchematicsFixedUpInSeasonFive;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool HasFixedUpRewardsRemovedInSeasonFiveV2;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool HasFixedUpSeason3EventScripClaimed;

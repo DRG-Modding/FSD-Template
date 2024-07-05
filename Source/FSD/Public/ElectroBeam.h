@@ -2,7 +2,6 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
-#include "Engine/NetSerialization.h"
 #include "Templates/SubclassOf.h"
 #include "ElectroBeam.generated.h"
 
@@ -17,6 +16,7 @@ UCLASS(Abstract, Blueprintable)
 class AElectroBeam : public AActor {
     GENERATED_BODY()
 public:
+protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCapsuleComponent* collider;
     
@@ -26,11 +26,17 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector LocationOffset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_SourceLocation, meta=(AllowPrivateAccess=true))
-    FVector_NetQuantize SourceLocation;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    FVector SourceLocation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_TargetLocation, meta=(AllowPrivateAccess=true))
-    FVector_NetQuantize TargetLocation;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    FVector TargetLocation;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, ReplicatedUsing=OnRep_SourceComponent, meta=(AllowPrivateAccess=true))
+    USceneComponent* SourceComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, ReplicatedUsing=OnRep_TargetComponent, meta=(AllowPrivateAccess=true))
+    USceneComponent* TargetComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     USceneComponent* DelaySource;
@@ -62,8 +68,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ShouldFlicker;
     
-private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Flag, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_Flag, meta=(AllowPrivateAccess=true))
     bool IsLit;
     
 public:
@@ -72,11 +77,12 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
-    void SetTarget(USceneComponent* TargetPoint);
+    void SetTargetComponent(USceneComponent* TargetPoint);
     
     UFUNCTION(BlueprintCallable)
-    void SetSource(USceneComponent* SourcePoint);
+    void SetSourceComponent(USceneComponent* SourcePoint);
     
+protected:
     UFUNCTION(BlueprintCallable)
     void SetParents(AActor* firstParent, AActor* secondParent);
     
@@ -84,16 +90,14 @@ public:
     void RecalculateBeam();
     
     UFUNCTION(BlueprintCallable)
-    void OnRep_TargetLocation();
+    void OnRep_TargetComponent();
     
     UFUNCTION(BlueprintCallable)
-    void OnRep_SourceLocation();
+    void OnRep_SourceComponent();
     
-private:
     UFUNCTION(BlueprintCallable)
     void OnRep_Flag();
     
-public:
     UFUNCTION(BlueprintCallable)
     void OnParentDeath(UHealthComponentBase* HealthComponent);
     
@@ -105,12 +109,6 @@ public:
     
     UFUNCTION(BlueprintCallable)
     UAudioComponent* GetAudio();
-    
-    UFUNCTION(BlueprintCallable)
-    void DelayedSetTarget(USceneComponent* TargetPoint);
-    
-    UFUNCTION(BlueprintCallable)
-    void DelayedSetSource(USceneComponent* SourcePoint);
     
     UFUNCTION(BlueprintCallable)
     void DeactivateCollisionAndEffect();

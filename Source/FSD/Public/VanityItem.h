@@ -84,6 +84,9 @@ public:
     EVanitySlot GetVanitySlot() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    TSet<UPlayerCharacterID*> GetRestrictedCharacters() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<FCraftingCost> GetResourceCost() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

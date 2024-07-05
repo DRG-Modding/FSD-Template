@@ -15,10 +15,10 @@ ADualAnimatedItem::ADualAnimatedItem(const FObjectInitializer& ObjectInitializer
     this->TP_EquipAnimation = NULL;
     this->EquipDuration = 0.25f;
     this->CharacterAnimationSet = NULL;
+    this->TPLMesh->SetupAttachment(RootComponent);
     this->FPRMesh->SetupAttachment(RootComponent);
     this->FPLMesh->SetupAttachment(RootComponent);
     this->TPRMesh->SetupAttachment(RootComponent);
-    this->TPLMesh->SetupAttachment(RootComponent);
 }
 
 USkeletalMeshComponent* ADualAnimatedItem::GetRItemMesh() const {
